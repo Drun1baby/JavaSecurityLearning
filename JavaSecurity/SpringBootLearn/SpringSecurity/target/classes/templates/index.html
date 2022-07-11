@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5"
+>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>首页</title>
+    <!--semantic-ui-->
+    <link href="https://cdn.bootcss.com/semantic-ui/2.4.1/semantic.min.css" rel="stylesheet">
+    <link th:href="@{/qinjiang/css/qinstyle.css}" rel="stylesheet">
+</head>
+<body>
+
+<!--主容器-->
+<div class="ui container">
+
+    <div class="ui segment" id="index-header-nav" th:fragment="nav-menu">
+        <div class="ui secondary menu">
+            <a class="item"  th:href="@{/index}">首页</a>
+
+            <!--登录注销-->
+            <div class="right menu">
+                <div sec:authorize="isAuthenticated()">
+                    <a class="item" th:href="@{/logout}">
+                        <i class="address card icon"></i> 注销
+                    </a>
+                </div>
+                <!--未登录-->
+                <div sec:authorize="!isAuthenticated()">
+                    <a class="item" th:href="@{/toLogin}">
+                        <i class="address card icon"></i> 登录
+                    </a>
+                </div>
+                <div sec:authorize="isAuthenticated()">
+                    <a class="item">
+                        <i class="address card icon"></i>
+                        用户名：<span sec:authentication="principal.username"></span>
+                        角色：<span sec:authentication="principal.authorities"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- sec:authorize="hasRole('vip1')" -->
+    <div class="column" sec:authorize="hasRole('vip1')">
+        <div class="ui raised segment">
+            <div class="ui">
+                <div class="content">
+                    <h5 class="content">Level 1</h5>
+                    <hr>
+                    <div><a th:href="@{/level1/1}"><i class="bullhorn icon"></i> Level-1-1</a></div>
+                    <div><a th:href="@{/level1/2}"><i class="bullhorn icon"></i> Level-1-2</a></div>
+                    <div><a th:href="@{/level1/3}"><i class="bullhorn icon"></i> Level-1-3</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="column" sec:authorize="hasRole('vip2')">
+        <div class="ui raised segment">
+            <div class="ui">
+                <div class="content">
+                    <h5 class="content">Level 2</h5>
+                    <hr>
+                    <div><a th:href="@{/level2/1}"><i class="bullhorn icon"></i> Level-2-1</a></div>
+                    <div><a th:href="@{/level2/2}"><i class="bullhorn icon"></i> Level-2-2</a></div>
+                    <div><a th:href="@{/level2/3}"><i class="bullhorn icon"></i> Level-2-3</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="column" sec:authorize="hasRole('vip3')">
+        <div class="ui raised segment">
+            <div class="ui">
+                <div class="content">
+                    <h5 class="content">Level 3</h5>
+                    <hr>
+                    <div><a th:href="@{/level3/1}"><i class="bullhorn icon"></i> Level-3-1</a></div>
+                    <div><a th:href="@{/level3/2}"><i class="bullhorn icon"></i> Level-3-2</a></div>
+                    <div><a th:href="@{/level3/3}"><i class="bullhorn icon"></i> Level-3-3</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script th:src="@{/qinjiang/js/jquery-3.1.1.min.js}"></script>
+<script th:src="@{/qinjiang/js/semantic.min.js}"></script>
+
+</body>
+</html>

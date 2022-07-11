@@ -1,0 +1,10 @@
+body{
+    min-width: 1150px;
+    overflow: auto;
+}
+#index-header-nav{
+    font-size: 0px;
+}
+#blog-lable>a{
+    margin: 1px;
+}

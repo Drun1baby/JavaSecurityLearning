@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>登录</title>
+    <!--semantic-ui-->
+    <link href="https://cdn.bootcss.com/semantic-ui/2.4.1/semantic.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!--主容器-->
+<div class="ui container">
+
+    <div class="ui segment">
+
+        <div style="text-align: center">
+            <h1 class="header">登录</h1>
+        </div>
+
+        <div class="ui placeholder segment">
+            <div class="ui column very relaxed stackable grid">
+                <div class="column">
+                    <div class="ui form">
+                        <form th:action="@{/login}" method="post">
+                            <div class="field">
+                                <label>Username</label>
+                                <div class="ui left icon input">
+                                    <input type="text" placeholder="Username" name="username">
+                                    <i class="user icon"></i>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label>Password</label>
+                                <div class="ui left icon input">
+                                    <input type="password" name="password">
+                                    <i class="lock icon"></i>
+                                </div>
+                            </div>
+                            <input type="checkbox" name="remember"> 记住我
+                            <input type="submit" class="ui blue submit button"/>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center">
+            <div class="ui label">
+                </i>注册
+            </div>
+            <br><br>
+            <small>blog.kuangstudy.com</small>
+        </div>
+        <div class="ui segment" style="text-align: center">
+            <h3>Spring Security Study by 秦疆</h3>
+        </div>
+    </div>
+
+
+</div>
+
+<script th:src="@{/qinjiang/js/jquery-3.1.1.min.js}"></script>
+<script th:src="@{/qinjiang/js/semantic.min.js}"></script>
+
+</body>
+</html>
