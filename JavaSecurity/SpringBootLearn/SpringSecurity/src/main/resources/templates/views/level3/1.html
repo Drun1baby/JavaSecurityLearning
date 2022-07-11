@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>首页</title>
+    <!--semantic-ui-->
+    <link href="https://cdn.bootcss.com/semantic-ui/2.4.1/semantic.min.css" rel="stylesheet">
+    <link th:href="@{/qinjiang/css/qinstyle.css}" rel="stylesheet">
+</head>
+<body>
+
+<!--主容器-->
+<div class="ui container">
+
+    <div th:replace="~{index::nav-menu}"></div>
+
+    <div class="ui segment" style="text-align: center">
+        <h3>Level-3-1</h3>
+    </div>
+
+</div>
+
+
+<script th:src="@{/qinjiang/js/jquery-3.1.1.min.js}"></script>
+<script th:src="@{/qinjiang/js/semantic.min.js}"></script>
+
+</body>
+</html>
