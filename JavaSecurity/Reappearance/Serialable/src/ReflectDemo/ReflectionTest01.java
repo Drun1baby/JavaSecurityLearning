@@ -1,6 +1,10 @@
 package src.ReflectDemo;
 
 
+import sun.reflect.Reflection;
+
+import java.lang.reflect.Method;
+
 // 三种获取类的方法
 public class ReflectionTest01 {
     public static void main(String[] args) throws Exception{
@@ -8,13 +12,18 @@ public class ReflectionTest01 {
         Class c1 = Person.class;
         System.out.println(c1.getName());
 
+        Class m1 = Reflection.class;
+        System.out.println(m1.getName());
+
         // 实例化对象的 getClass() 方法
         Person person = new Person();
         Class c2 = person.getClass();
         System.out.println(c2.getName());
 
         // Class.forName(String className): 动态加载类
-        Class c3 = Class.forName("src.Person");
+        Class c3 = Class.forName("src.ReflectDemo.Person");
+        Method method = c3.getDeclaredMethod("sleep", int.class);
+        method.setAccessible(true);
         System.out.println(c3.getName());
 
         //Person person = new Person();

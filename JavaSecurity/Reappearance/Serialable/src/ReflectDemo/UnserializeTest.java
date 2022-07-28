@@ -12,6 +12,6 @@ public class UnserializeTest {
     }
 
     public static void main(String[] args) throws Exception{
-        unserialize("ser.bin");
+        System.out.println(unserialize("ser.bin"));
     }
 }
