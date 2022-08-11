@@ -17,6 +17,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.text.ParseException;
 
+// 利用 Gadget 链子绕过高版本 jdk
 public class JNDIGadgetServer {
     private static final String LDAP_BASE = "dc=example,dc=com";
     public static void main (String[] args) {

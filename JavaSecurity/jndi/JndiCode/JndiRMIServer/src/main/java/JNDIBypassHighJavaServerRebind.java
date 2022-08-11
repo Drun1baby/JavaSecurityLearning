@@ -3,6 +3,8 @@ import org.apache.naming.ResourceRef;
 import javax.naming.InitialContext;
 import javax.naming.StringRefAddr;
 
+// JNDI 高版本 jdk 绕过服务端，用 rebind 的方式
+// 上面两种都属于本地命令执行
 public class JNDIBypassHighJavaServerRebind {
     public static void main(String[] args) throws Exception{
 

