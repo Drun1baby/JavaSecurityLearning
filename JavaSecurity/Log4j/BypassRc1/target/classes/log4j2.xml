@@ -1,0 +1,13 @@
+<configuration status="OFF" monitorInterval="30">
+    <appenders>
+        <console name="CONSOLE-APPENDER" target="SYSTEM_OUT">
+            <PatternLayout pattern="%m{lookups}%n"/>
+        </console>
+    </appenders>
+
+    <loggers>
+        <root level="error">
+            <appender-ref ref="CONSOLE-APPENDER"/>
+        </root>
+    </loggers>
+</configuration>

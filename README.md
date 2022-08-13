@@ -71,7 +71,7 @@ CC 链部分结束，进入 shiro 部分，shiro 之前我们已经走过开发�
 
 - [Shiro550流程分析](https://drun1baby.github.io/2022/07/10/Java反序列化Shiro篇01-Shiro550流程分析/)
 
-Shiro 221 的可能后续会学习吧，现在先不学习。
+Shiro 721 的可能后续会学习吧，现在先不学习。
 
 
 
