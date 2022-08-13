@@ -109,7 +109,7 @@ LDAP 是包含在 JNDI 里面的
 
 ## Log4j2
 
-
+- [Log4j2复现](https://drun1baby.github.io/2022/08/09/Log4j2复现/)
 
 ## Weblogic
 

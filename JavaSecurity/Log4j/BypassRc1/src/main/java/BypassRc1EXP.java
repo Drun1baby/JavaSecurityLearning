@@ -8,7 +8,7 @@ import org.apache.logging.log4j.core.pattern.MessagePatternConverter;
 
 import java.util.function.LongFunction;
 
-// 绕过 rc1 的 EXP，Windows 无法触发
+// 鸡肋绕过 rc1 的 EXP，Windows 无法触发
 public class BypassRc1EXP {
     public static void main(String[] args) {
         Logger logger = LogManager.getLogger(LongFunction.class);
