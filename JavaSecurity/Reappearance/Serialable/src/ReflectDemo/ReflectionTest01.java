@@ -17,7 +17,7 @@ public class ReflectionTest01 {
 
         // 实例化对象的 getClass() 方法
         Person person = new Person();
-        Class c2 = person.getClass();
+        Class c2 = person.getClass();  // c2 对应 .class
         System.out.println(c2.getName());
 
         // Class.forName(String className): 动态加载类

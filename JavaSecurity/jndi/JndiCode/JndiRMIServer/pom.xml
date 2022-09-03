@@ -35,6 +35,12 @@
             <artifactId>commons-collections</artifactId>
             <version>3.2.1</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.xbean/xbean-reflect -->
+        <dependency>
+            <groupId>org.apache.xbean</groupId>
+            <artifactId>xbean-reflect</artifactId>
+            <version>4.18</version>
+        </dependency>
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>

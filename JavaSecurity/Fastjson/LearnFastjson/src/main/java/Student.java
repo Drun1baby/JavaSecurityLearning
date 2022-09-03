@@ -36,8 +36,8 @@ public class Student {
     }
 
     public Properties getProperties() throws Exception{
-        System.out.println("getProperties");
-        Runtime.getRuntime().exec("calc");
-        return properties;
+            System.out.println("getProperties");
+            Runtime.getRuntime().exec("calc");
+            return properties;
     }
 }

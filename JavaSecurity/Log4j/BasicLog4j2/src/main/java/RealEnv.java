@@ -11,6 +11,10 @@ public class RealEnv {
         if (username != null) {
             logger.info("User {} login in!", username);
         }
+
+        // mybatis 读取数据库
+        // Servlet
+
         else {
             logger.error("User {} not exists", username);
         }

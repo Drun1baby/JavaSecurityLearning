@@ -1,7 +1,7 @@
 spring:
   datasource:
     username: root
-    password: 
+    password:
     #?serverTimezone=UTC解决时区的报错
     url: jdbc:mysql://localhost/mybatis?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
     driver-class-name: com.mysql.cj.jdbc.Driver
