@@ -10,7 +10,7 @@ public class VictimServer {
         }
 
         public String hello() throws RemoteException {
-            System.out.println("调用了hello方法");
+            System.out.println("调用了 hello 方法");
             return "Hello world";
         }
 
