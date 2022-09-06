@@ -7,7 +7,7 @@ import java.net.URLClassLoader;
 public class JarRce {
     public static void main(String[] args) throws Exception{
         URLClassLoader urlClassLoader = new URLClassLoader(new URL[]{new URL("jar:file:///E:\\Calc.jar!/")});
-        Class calc = urlClassLoader.loadClass("src.DynamicClassLoader.URLClassLoader.Calc");
+        Class calc = urlClassLoader.loadClass("Calc");
         calc.newInstance();
 
     }

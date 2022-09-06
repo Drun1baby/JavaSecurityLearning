@@ -8,7 +8,7 @@ public class FileRce {
     public static void main(String[] args) throws Exception {
         URLClassLoader urlClassLoader = new URLClassLoader
                 (new URL[]{new URL("file:///E:\\")});
-        Class calc = urlClassLoader.loadClass("src.DynamicClassLoader.URLClassLoader.Calc");
+        Class calc = urlClassLoader.loadClass("Calc");
         calc.newInstance();
     }
 }

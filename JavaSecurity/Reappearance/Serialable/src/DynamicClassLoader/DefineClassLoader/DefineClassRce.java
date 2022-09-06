@@ -11,7 +11,7 @@ public class DefineClassRce {
         Method method = ClassLoader.class.getDeclaredMethod("defineClass", String.class, byte[].class, int.class, int.class);
         method.setAccessible(true);
         byte[] code = Files.readAllBytes(Paths.get("E:\\Calc.class"));  // 字节码的数组
-        Class c = (Class) method.invoke(classLoader, "src.DynamicClassLoader.URLClassLoader.Calc", code, 0, code.length);
+        Class c = (Class) method.invoke(classLoader, "Calc", code, 0, code.length);
         c.newInstance();
     }
 }
