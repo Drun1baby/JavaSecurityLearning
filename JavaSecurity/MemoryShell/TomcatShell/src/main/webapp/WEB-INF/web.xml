@@ -11,7 +11,7 @@
 
     <servlet>
         <servlet-name>ServletTest</servlet-name>
-        <servlet-class>tomcatShell.Servlet.ServletShell</servlet-class>
+        <servlet-class>tomcatShell.Servlet.ValveShell_Servlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
