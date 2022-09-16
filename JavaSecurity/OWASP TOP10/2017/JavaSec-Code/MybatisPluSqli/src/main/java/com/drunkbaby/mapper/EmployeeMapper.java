@@ -11,6 +11,4 @@ import java.util.List;
 
 @Repository
 public interface EmployeeMapper extends BaseMapper<Employee> {
-
-    List<Employee> selectByName(@Param("name") String name);
 }

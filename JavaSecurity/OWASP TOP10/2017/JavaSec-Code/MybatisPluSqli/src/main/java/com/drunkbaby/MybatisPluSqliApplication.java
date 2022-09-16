@@ -6,10 +6,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 @MapperScan("com.drunkbaby.mapper")
-public class JavaSecCodeApplication {
+public class MybatisPluSqliApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(JavaSecCodeApplication.class, args);
+        SpringApplication.run(MybatisPluSqliApplication.class, args);
     }
 
 }
