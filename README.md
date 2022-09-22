@@ -1,5 +1,5 @@
 # JavaSecurityLearning
-记录一下 Java 安全学习历程，也有参考 Y4tacker 师傅的https://github.com/Y4tacker/JavaSec
+记录一下 Java 安全学习历程，也有参考 Y4tacker 师傅的学习笔记 https://github.com/Y4tacker/JavaSec
 
 > 也在整理自己的 Java 学习路线，学了也有一会儿了，总结出一点小心得
 
@@ -100,15 +100,15 @@ LDAP 是包含在 JNDI 里面的
 - [FastJson基础](https://drun1baby.github.io/2022/08/04/Java反序列化Fastjson篇01-Fastjson基础/)
 - [Fastjson-1.2.24版本漏洞分析](https://drun1baby.github.io/2022/08/06/Java反序列化Fastjson篇02-Fastjson-1-2-24版本漏洞分析/)
 - [Fastjson篇03-Fastjson各版本绕过分析](https://drun1baby.github.io/2022/08/08/Java反序列化Fastjson篇03-Fastjson各版本绕过分析/)
-- 
+- [Java反序列化Fastjson篇04-Fastjson1.2.62-1.2.68版本反序列化漏洞](https://drun1baby.github.io/2022/08/13/Java反序列化Fastjson篇04-Fastjson1-2-62-1-2-68版本反序列化漏洞/)
 
 
 
-后续还没想好，也还没学到，初定会先 log4j2 ---> jackson 然后内存马
+值得一提的是，2022 蓝帽杯初赛有一道 fastjson 1.2.68 的题目，师傅们可以去我的仓库中，到本地复现。[CTFReposityStore](https://github.com/Drun1baby/CTFReposityStore)
 
 ## Log4j2
 
-- [Log4j2复现](https://drun1baby.github.io/2022/08/09/Log4j2复现/)
+- [Log4j2 复现](https://drun1baby.github.io/2022/08/09/Log4j2复现/)
 
 
 
@@ -120,11 +120,11 @@ LDAP 是包含在 JNDI 里面的
 
 
 
-## Weblogic
+## Weblogic 
 
 
 
-## EL 表达式
+## EL 表达式注入
 
 
 
@@ -146,10 +146,16 @@ LDAP 是包含在 JNDI 里面的
 
 
 
+关于内存马的环境搭建可以看我这一篇文章：[Servlet 项目搭建](https://drun1baby.github.io/2022/08/22/Servlet-项目搭建/)
+
+
+
 - [Java反序列化之内存马系列 01-基础内容学习](https://drun1baby.github.io/2022/08/19/Java内存马系列-01-基础内容学习/)
 - [Java内存马系列-02-内存马介绍](https://drun1baby.github.io/2022/08/21/Java内存马系列-02-内存马介绍/)
 - [Java内存马系列-03-Tomcat 之 Filter 型内存马](https://drun1baby.github.io/2022/08/22/Java内存马系列-03-Tomcat-之-Filter-型内存马/)
 - [Java内存马系列-04-Tomcat 之 Listener 型内存马](https://drun1baby.github.io/2022/08/27/Java内存马系列-04-Tomcat-之-Listener-型内存马/)
+- [Java内存马系列-05-Tomcat 之 Servlet 型内存马](https://drun1baby.github.io/2022/09/04/Java内存马系列-05-Tomcat-之-Servlet-型内存马/)
+- [Java内存马系列-06-Tomcat 之 Valve 型内存马 | 芜风 (drun1baby.github.io)](https://drun1baby.github.io/2022/09/07/Java内存马系列-06-Tomcat-之-Valve-型内存马/)
 
 
 
@@ -161,5 +167,5 @@ LDAP 是包含在 JNDI 里面的
 
 最近学下来，感觉先学完 WebGoat，然后跟着复现一些漏洞吧，比如 RuoYi 的一些漏洞，前期先看其他师傅的文章跟着复现，后续可以自己审计一些代码。
 
-
+详细的**代码审计的文章**与资料，欢迎师傅们进到 [Java Owasp Top10 审计](https://github.com/Drun1baby/JavaSecurityLearning/tree/main/JavaSecurity/OWASP TOP10)，项目中查看。这个项目是我参考于 joychou93 师傅写的 `java-sec-code` 项目的，并且自己加上了一些理解
 

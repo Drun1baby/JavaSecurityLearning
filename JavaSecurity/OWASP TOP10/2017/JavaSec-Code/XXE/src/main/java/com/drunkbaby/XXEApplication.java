@@ -1,14 +1,12 @@
 package com.drunkbaby;
 
-import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MybatisPluSqliApplication {
+public class XXEApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(MybatisPluSqliApplication.class, args);
+        SpringApplication.run(XXEApplication.class, args);
     }
-
 }

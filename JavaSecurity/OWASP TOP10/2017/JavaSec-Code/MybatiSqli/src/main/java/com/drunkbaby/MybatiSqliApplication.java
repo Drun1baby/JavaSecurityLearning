@@ -5,10 +5,11 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MybatisPluSqliApplication {
+@MapperScan("com.drunkbaby.mapper")
+public class MybatiSqliApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(MybatisPluSqliApplication.class, args);
+        SpringApplication.run(MybatiSqliApplication.class, args);
     }
 
 }
