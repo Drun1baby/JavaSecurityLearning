@@ -6,4 +6,7 @@
     <bean id="user" class="dao.User">
         <property name="name" value="Drunkbaby"/>
     </bean>
+
+    <alias name="user" alias="user2"/>
+
 </beans>
