@@ -47,5 +47,8 @@
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.tomcat:tomcat-util:8.5.81" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.tomcat:tomcat-util-scan:8.5.81" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.tomcat:tomcat-jaspic-api:8.5.81" level="project" />
+    <orderEntry type="library" name="Maven: de.odysseus.juel:juel-api:2.2.7" level="project" />
+    <orderEntry type="library" name="Maven: de.odysseus.juel:juel-spi:2.2.7" level="project" />
+    <orderEntry type="library" name="Maven: de.odysseus.juel:juel-impl:2.2.7" level="project" />
   </component>
 </module>

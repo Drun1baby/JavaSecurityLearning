@@ -5,15 +5,21 @@
 
 ## 先从开发学起
 
-推荐的是这些
+推荐的是这些：
 
 先学 Springboot[【狂神说Java】SpringBoot最新教程IDEA版通俗易懂](https://www.bilibili.com/video/BV1PE411i7CV)，前面部分是 Thymeleaf 模板引擎的开发，后面是一些组件的基本使用，很基础。
+
+
 
 学一下 vue：[尚硅谷Vue2.0+Vue3.0全套教程丨vuejs从入门到精通](https://www.bilibili.com/video/BV1Zy4y1K7SH?spm_id_from=333.788.top_right_bar_window_custom_collection.content.click)
 
 学完这两个之后可以自己过一个小项目[【实战】基于SpringBoot+Vue开发的前后端分离博客项目完整教学](https://www.bilibili.com/video/BV1PQ4y1P7hZ?vd_source=a4eba559e280bf2f1aec770f740d0645)
 
+
+
 - 学完这些内容最多花费两个月时间。
+
+
 
 如果中途有什么看不懂的，也可以推荐看 Java 基础，哪块不懂看哪块，二倍速走起看[【狂神说Java】Java零基础学习视频通俗易懂](https://www.bilibili.com/video/BV12J41137hu?spm_id_from=333.337.search-card.all.click)
 
@@ -114,12 +120,6 @@ LDAP 是包含在 JNDI 里面的
 
 这些学完之后可以学一下内存马，Weblogic，Tomcat 和 Spring 开发；这里先学 Spring 开发。 
 
-
-
-好久不更新，现在是 2022.9.3；觉得应该先去走一下内存马的模块了，所以开发先放一放，后续因为一些个人原因，可能会跟着学习一个 WebSocket + Servlet 的项目学习。
-
-
-
 ## Weblogic 
 
 
@@ -155,7 +155,7 @@ LDAP 是包含在 JNDI 里面的
 - [Java内存马系列-03-Tomcat 之 Filter 型内存马](https://drun1baby.github.io/2022/08/22/Java内存马系列-03-Tomcat-之-Filter-型内存马/)
 - [Java内存马系列-04-Tomcat 之 Listener 型内存马](https://drun1baby.github.io/2022/08/27/Java内存马系列-04-Tomcat-之-Listener-型内存马/)
 - [Java内存马系列-05-Tomcat 之 Servlet 型内存马](https://drun1baby.github.io/2022/09/04/Java内存马系列-05-Tomcat-之-Servlet-型内存马/)
-- [Java内存马系列-06-Tomcat 之 Valve 型内存马 | 芜风 (drun1baby.github.io)](https://drun1baby.github.io/2022/09/07/Java内存马系列-06-Tomcat-之-Valve-型内存马/)
+- [Java内存马系列-06-Tomcat 之 Valve 型内存马](https://drun1baby.github.io/2022/09/07/Java内存马系列-06-Tomcat-之-Valve-型内存马/)
 
 
 

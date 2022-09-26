@@ -1,9 +1,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
-    <title>EL 表达式</title>
+    <title>禁用 EL 表达式</title>
   </head>
   <body>
-        ${brands}
+  <%@ page isELIgnored="true" %>
+  ${pageContext.request.queryString}
   </body>
 </html>
