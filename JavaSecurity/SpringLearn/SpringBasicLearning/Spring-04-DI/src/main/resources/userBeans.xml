@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="user" class="com.drunkbaby.dao.User">
-        <property name="name" value="Drunkbaby"/>
-    </bean>
+    <bean id="user" class="com.drunkbaby.pojo.User" p:name="Drunkbaby" p:age="20" />
 
-    <alias name="user" alias="user2"/>
+    <bean id="user2" class="com.drunkbaby.pojo.User" c:name="Drunkbaby" c:age="20" />
 
 </beans>

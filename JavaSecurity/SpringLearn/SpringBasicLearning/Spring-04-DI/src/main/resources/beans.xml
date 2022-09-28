@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="addr" class="com.drunkbaby.pojo.Address">
+        <property name="address" value="China"/>
+    </bean>
+
+    <bean id="student" class="com.drunkbaby.pojo.Student">
+        <property name="name" value="Drunkbaby"/>
+        <property name="address" ref="addr"/>
+        <property name="books">
+            <array>
+                <value>西游记</value>
+                <value>三国演义</value>
+                <value>红楼梦</value>
+            </array>
+        </property>
+
+        <property name="hobbies">
+            <list>
+                <value>唱</value>
+                <value>跳</value>
+                <value>rap</value>
+                <value>篮球</value>
+            </list>
+        </property>
+        <!--map键值对注入 -->
+        <property name="card">
+            <map>
+                <entry key="username" value="root" />
+                <entry key="password" value="root" />
+            </map>
+        </property>
+        <!--set(可去重)注入 -->
+        <property name="games">
+            <set>
+                <value>Drunkbaby</value>
+                <value>lol</value>
+                <value>Drink</value>
+            </set>
+        </property>
+        <!--空指针null注入 -->
+        <property name="wife">
+            <null></null>
+        </property>
+        <!--properties常量注入 -->
+        <property name="info">
+            <props>
+                <prop key="id">20200802</prop>
+                <prop key="name">cbh</prop>
+            </props>
+        </property>
+    </bean>
+
+</beans>

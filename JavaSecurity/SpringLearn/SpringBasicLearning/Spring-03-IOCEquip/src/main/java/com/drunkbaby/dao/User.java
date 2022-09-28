@@ -1,4 +1,4 @@
-package dao;
+package com.drunkbaby.dao;
 
 public class User {
     private String name;

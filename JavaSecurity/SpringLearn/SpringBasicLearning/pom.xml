@@ -12,6 +12,11 @@
         <module>IoC_Learn</module>
         <module>Spring-02-HelloSpring</module>
         <module>Spring-03-IOCEquip</module>
+        <module>Spring-04-DI</module>
+        <module>Spring-05-AutoWired</module>
+        <module>Spring-06-Annotation</module>
+        <module>Spring-06-Annotation</module>
+        <module>Spring-07-APPConfig</module>
     </modules>
 
     <dependencies>
