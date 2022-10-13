@@ -1,4 +1,7 @@
 # JavaSecurityLearning
+
+可能写的有点乱，但基本是形成了一个路线形式的文章，后续可能会把排版优化一下哈哈哈
+
 记录一下 Java 安全学习历程，也有参考 Y4tacker 师傅的学习笔记 https://github.com/Y4tacker/JavaSec
 
 > 也在整理自己的 Java 学习路线，学了也有一会儿了，总结出一点小心得
@@ -28,18 +31,14 @@
 可以看b站白日梦组长的视频，讲的非常好
 
 - [Java反序列化漏洞专题-基础篇(21/09/05更新类加载部分)](https://www.bilibili.com/video/BV16h411z7o9?spm_id_from=333.788.top_right_bar_window_custom_collection.content.click)
-
 - [Java-IO流](https://drun1baby.github.io/2022/05/30/Java-IO流/)
-
 - [反射](https://drun1baby.github.io/2022/05/20/Java反序列化基础篇-02-Java反射与URLDNS链分析/)
-
 - [JDK动态代理](https://drun1baby.github.io/2022/06/01/Java反序列化基础篇-04-JDK动态代理/)
-
 - [反序列化概念与利用](https://drun1baby.github.io/2022/05/17/Java反序列化基础篇-01-反序列化概念与利用/)
-
 - [URLDNS链分析](https://drun1baby.github.io/2022/05/20/Java反序列化基础篇-02-Java反射与URLDNS链分析/)
-
 - [类的动态加载](https://drun1baby.github.io/2022/06/03/Java反序列化基础篇-05-类的动态加载/)
+- [反弹shell学习 ———— 这里主要是为了 yso 的使用](https://drun1baby.github.io/2022/07/20/反弹shell学习/)
+- [Java 反弹 shell 与 Runtime.getRuntime().exec() 的故事](https://drun1baby.github.io/2022/10/12/Java-反弹-shell-与-Runtime-getRuntime-exec-的故事/)
 
 一开始学还是会有点懵的，学到后面自然而然就会了
 
@@ -120,13 +119,19 @@ LDAP 是包含在 JNDI 里面的
 
 这些学完之后可以学一下内存马，Weblogic，Tomcat 和 Spring 开发；这里先学 Spring 开发。 
 
+[Spring开发学习](https://drun1baby.github.io/2022/08/18/Spring开发学习/)
+
 ## Weblogic 
+
+emmm 懒癌犯了，晚点再看
 
 
 
 ## EL 表达式注入
 
+- [Java 之 SpEL 表达式注入](https://drun1baby.github.io/2022/09/23/Java-之-SpEL-表达式注入/)
 
+- [Java 之 EL 表达式注入](https://drun1baby.github.io/2022/09/23/Java-之-EL-表达式注入/)
 
 ## 内存马
 
@@ -168,4 +173,40 @@ LDAP 是包含在 JNDI 里面的
 最近学下来，感觉先学完 WebGoat，然后跟着复现一些漏洞吧，比如 RuoYi 的一些漏洞，前期先看其他师傅的文章跟着复现，后续可以自己审计一些代码。
 
 详细的**代码审计的文章**与资料，欢迎师傅们进到 [Java Owasp Top10 审计](https://github.com/Drun1baby/JavaSecurityLearning/tree/main/JavaSecurity/OWASP TOP10)，项目中查看。这个项目是我参考于 joychou93 师傅写的 `java-sec-code` 项目的，并且自己加上了一些理解
+
+
+
+**更新于 2022.10.13**
+
+现在一些基础的东西已经没问题了，如果在把上述内容都学完之后，谈一谈我认为蛮重要的几个点吧。
+
+
+
+- 要温故而知新，像 CC 链这种 EXP，能手写尽量手写，其他的链子也是，要有独立分析的能力
+- 对于 Java 代码审计也是，需要有独立分析的能力，学会总结审计方法
+- 最近自己也在刷力扣，还是想保证一些编程手感，并且为日后的手撕代码做准备。
+
+
+
+## 在学完上述内容之后该学什么
+
+> 我认为还是应该查漏补缺，下面会放一些我觉得蛮有意思的东西供师傅们学习
+
+
+
+[Java反序列化之C3P0链](https://drun1baby.github.io/2022/10/06/Java反序列化之C3P0链/)
+
+[Java OWASP 中的 XXE 代码审计](https://drun1baby.github.io/2022/09/16/Java-OWASP-中的-XXE-代码审计/)
+
+[Java OWASP 中的 SQL 注入代码审计](https://drun1baby.github.io/2022/09/14/Java-OWASP-中的-SQL-注入代码审计/)
+
+[Java 代码审计之华夏 ERP CMS v2.3](https://drun1baby.github.io/2022/09/30/Java-代码审计之华夏-ERP-CMS-V2.3/)
+
+
+
+在进行代码审计的时候，多想一想有漏洞的代码是为什么产生的，最好是自己手写一遍有漏洞的代码，并且进行修复。
+
+
+
+在审计 CMS 的时候，审计出漏洞之后，不光是要明白怎么打，更要明白如何修复。
 
