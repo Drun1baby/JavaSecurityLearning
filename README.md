@@ -202,6 +202,16 @@ emmm 懒癌犯了，晚点再看
 
 [Java 代码审计之华夏 ERP CMS v2.3](https://drun1baby.github.io/2022/09/30/Java-代码审计之华夏-ERP-CMS-V2.3/)
 
+[Java反序列化之 SnakeYaml 链](https://drun1baby.github.io/2022/10/16/Java反序列化之-SnakeYaml-链/)
+
+因为 SnakeYaml 的链子和 Fastjson 特别像，所以又复习了一遍 Fastjson 的源码
+
+[Java反序列化Fastjson篇05-写给自己看的一些源码深入分析](https://drun1baby.github.io/2022/10/19/Java反序列化Fastjson篇05-写给自己看的一些源码深入分析/)
+
+
+
+
+
 
 
 在进行代码审计的时候，多想一想有漏洞的代码是为什么产生的，最好是自己手写一遍有漏洞的代码，并且进行修复。

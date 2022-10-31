@@ -1,11 +1,11 @@
-package src.ReflectDemo;
+package src.ReflectDemo.SeralizeDemo;
 
 import java.lang.reflect.Method;
 
 // 获取类中的方法
 public class ReflectionTest02 {
     public static void main(String[] args) throws Exception{
-        Class c1 = Class.forName("src.ReflectDemo.Person");// 创建 Class 对象
+        Class c1 = Class.forName("src.ReflectDemo.SeralizeDemo.Person");// 创建 Class 对象
         Method[] methods1 = c1.getDeclaredMethods();// 获取所有该类中的所有方法
         Method[] methods2 = c1.getMethods();// 获取所有的 public 方法，包括类自身声明的 public 方法，父类中的  、实现的接口方法
 

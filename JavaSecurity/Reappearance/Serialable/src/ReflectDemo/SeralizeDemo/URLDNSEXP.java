@@ -1,4 +1,4 @@
-package src.ReflectDemo;
+package src.ReflectDemo.SeralizeDemo;
 
 import java.io.*;
 import java.lang.reflect.Field;

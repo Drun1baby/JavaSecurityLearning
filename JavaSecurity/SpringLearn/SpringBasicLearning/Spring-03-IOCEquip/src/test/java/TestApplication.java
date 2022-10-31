@@ -10,7 +10,7 @@ public class TestApplication {
         ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
         //在执行getBean的时候, user已经创建好了 , 通过无参构造
         User user = (User) context.getBean("user");
-        //调用对象的方法 .
+        //调用对象的方法
         user.show();
     }
 }

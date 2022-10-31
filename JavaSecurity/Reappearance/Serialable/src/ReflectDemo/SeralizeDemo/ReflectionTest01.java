@@ -1,4 +1,4 @@
-package src.ReflectDemo;
+package src.ReflectDemo.SeralizeDemo;
 
 
 import sun.reflect.Reflection;
@@ -21,7 +21,7 @@ public class ReflectionTest01 {
         System.out.println(c2.getName());
 
         // Class.forName(String className): 动态加载类
-        Class c3 = Class.forName("src.ReflectDemo.Person");
+        Class c3 = Class.forName("src.ReflectDemo.SeralizeDemo.Person");
         Method method = c3.getDeclaredMethod("sleep", int.class);
         method.setAccessible(true);
         System.out.println(c3.getName());

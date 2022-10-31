@@ -1,7 +1,6 @@
-package src.ReflectDemo;
+package src.ReflectDemo.SeralizeDemo;
 
 import java.lang.reflect.Field;
-import java.lang.reflect.Method;
 
 // 实例化与修改属性
 public class ReflectionTest05 {

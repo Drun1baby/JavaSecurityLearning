@@ -1,12 +1,11 @@
-package src.ReflectDemo;
+package src.ReflectDemo.SeralizeDemo;
 
-import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
 
 // invoke 触发被修改的方法
 public class ReflectionTest06 {
     public static void main(String[] args) throws Exception {
-        Class c = Class.forName("src.ReflectDemo.Person");
+        Class c = Class.forName("src.ReflectDemo.SeralizeDemo.Person");
         Object m = c.newInstance();
         // newInstance() 与 invoke() 一起使用
         Method method = c.getMethod("reflect");

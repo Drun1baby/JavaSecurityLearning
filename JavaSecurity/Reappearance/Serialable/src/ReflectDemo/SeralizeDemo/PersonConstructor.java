@@ -1,4 +1,4 @@
-package src.ReflectDemo;
+package src.ReflectDemo.SeralizeDemo;
 
 
 public class PersonConstructor {

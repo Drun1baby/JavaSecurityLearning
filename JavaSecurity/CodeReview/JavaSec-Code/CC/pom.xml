@@ -9,6 +9,26 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-collections4</artifactId>
+            <version>4.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.javassist</groupId>
+            <artifactId>javassist</artifactId>
+            <version>3.27.0-GA</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.jboss.classpool</groupId>
+            <artifactId>jboss-classpool</artifactId>
+            <version>1.0.0.GA</version>
+        </dependency>
+    </dependencies>
+
     <artifactId>CC</artifactId>
 
     <properties>

@@ -1,8 +1,7 @@
 import base64
+file = open("ser.bin","rb")
 
-# base64 encode EXP, easy to attack
-temp_file = open("ser.bin", "rb+")
-f = temp_file.read()
-result = base64.b64encode(f)
-
-print(result)
+now = file.read()
+ba = base64.b64encode(now)
+print(ba)
+file.close()

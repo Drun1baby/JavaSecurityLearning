@@ -1,11 +1,11 @@
-package src.ReflectDemo;
+package src.ReflectDemo.SeralizeDemo;
 
 import java.lang.reflect.Constructor;
 
 // 获取构造函数
 public class ReflectionTest03 {
     public static void main(String[] args) throws Exception{
-        Class c1 = Class.forName("src.ReflectDemo.PersonConstructor");
+        Class c1 = Class.forName("src.ReflectDemo.SeralizeDemo.PersonConstructor");
         Constructor[] constructors1 = c1.getDeclaredConstructors();
         Constructor[] constructors2 = c1.getConstructors();
         for (Constructor c : constructors1){

@@ -9,7 +9,7 @@
         <module>XXE</module>
         <module>SpEL</module>
         <module>SSRF</module>
-        <module>OtherVuls</module>
+        <module>CC</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -59,30 +59,10 @@
             <version>2.9.1</version>
         </dependency>
 
-        <!-- HttpClient SSRF -->
-        <dependency>
-            <groupId>commons-httpclient</groupId>
-            <artifactId>commons-httpclient</artifactId>
-            <version>3.1</version>
-        </dependency>
-
-        <!-- SSRF -->
-        <dependency>
-            <groupId>commons-io</groupId>
-            <artifactId>commons-io</artifactId>
-            <version>2.5</version>
-        </dependency>
-
         <dependency>
             <groupId>commons-collections</groupId>
             <artifactId>commons-collections</artifactId>
-            <version>3.1</version>
-        </dependency>
-
-        <dependency>
-            <groupId>commons-lang</groupId>
-            <artifactId>commons-lang</artifactId>
-            <version>2.4</version>
+            <version>3.2.1</version>
         </dependency>
 
     </dependencies>

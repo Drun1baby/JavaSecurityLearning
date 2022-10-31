@@ -3,7 +3,10 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="user" class="dao.User">
+    <bean id="user" class="com.drunkbaby.dao.User">
         <property name="name" value="Drunkbaby"/>
     </bean>
+
+    <alias name="user" alias="user2"/>
+
 </beans>

