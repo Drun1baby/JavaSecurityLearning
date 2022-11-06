@@ -208,7 +208,11 @@ emmm 懒癌犯了，晚点再看
 
 [Java反序列化Fastjson篇05-写给自己看的一些源码深入分析](https://drun1baby.github.io/2022/10/19/Java反序列化Fastjson篇05-写给自己看的一些源码深入分析/)
 
+懒癌终于不犯了，开始学习 Struts2 系列漏洞，这一块是没有必要特别去学开发的，因为 Struts2 的应用已经太少太少了。
 
+[Java Struts2 学习与环境搭建](https://drun1baby.github.io/2022/11/02/Java-Struts2-学习与环境搭建/)
+
+[Java Struts2 系列 S2-001](https://drun1baby.github.io/2022/10/27/Java-Struts2-系列-S2-001/)
 
 
 

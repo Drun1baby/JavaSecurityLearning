@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Licensed to the Apache Software Foundation (ASF) under one or more
+  contributor license agreements.  See the NOTICE file distributed with
+  this work for additional information regarding copyright ownership.
+  The ASF licenses this file to You under the Apache License, Version 2.0
+  (the "License"); you may not use this file except in compliance with
+  the License.  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<!--
+  - This is the Cocoon web-app configurations file
+  -
+  - $Id$
+  -->
+<web-app version="2.4"
+         xmlns="http://java.sun.com/xml/ns/j2ee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+
+  <!-- Servlet Filters ================================================ -->
+
+  <!--
+    - Declare a filter for multipart MIME handling
+    -->
+  <filter>
+    <description>Multipart MIME handling filter for Cocoon</description>
+    <display-name>Cocoon multipart filter</display-name>
+    <filter-name>CocoonMultipartFilter</filter-name>
+    <filter-class>org.apache.cocoon.servlet.multipart.MultipartFilter</filter-class>
+  </filter>
+
+  <!--
+    - Declare a filter for debugging incoming request
+    -->
+  <filter>
+    <description>Log debug information about each request</description>
+    <display-name>Cocoon debug filter</display-name>
+    <filter-name>CocoonDebugFilter</filter-name>
+    <filter-class>org.apache.cocoon.servlet.DebugFilter</filter-class>
+  </filter>
+
+  <!-- Filter mappings ================================================ -->
+
+  <!--
+    - Use the Cocoon multipart filter together with the Cocoon demo webapp
+    -->
+  <filter-mapping>
+    <filter-name>CocoonMultipartFilter</filter-name>
+    <servlet-name>Cocoon</servlet-name>
+  </filter-mapping>
+  <filter-mapping>
+    <filter-name>CocoonMultipartFilter</filter-name>
+    <servlet-name>DispatcherServlet</servlet-name>
+  </filter-mapping>
+
+  <!--
+    - Use the Cocoon debug filter together with the Cocoon demo webapp
+  <filter-mapping>
+    <filter-name>CocoonDebugFilter</filter-name>
+    <servlet-name>Cocoon</servlet-name>
+  </filter-mapping>
+    -->
+
+  <!-- Servlet Context Listener ======================================= -->
+
+  <!--
+    - Declare Spring context listener which sets up the Spring Application Context
+    - containing all Cocoon components (and user defined beans as well).
+    -->
+  <listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+
+  <!--
+    - Declare Spring request listener which sets up the required RequestAttributes
+    - to support Springs and Cocoon custom bean scopes like the request scope or the
+    - session scope.
+    -->
+  <listener>
+    <listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
+  </listener>
+
+  <!-- Servlet Configuration ========================================== -->
+
+  <!--
+    - Servlet that dispatches requests to the Spring managed block servlets
+    -->
+  <servlet>
+    <description>Cocoon blocks dispatcher</description>
+    <display-name>DispatcherServlet</display-name>
+    <servlet-name>DispatcherServlet</servlet-name>
+    <servlet-class>org.apache.cocoon.servletservice.DispatcherServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+
+  <!-- URL space mappings ============================================= -->
+
+  <!--
+    - Cocoon handles all the URL space assigned to the webapp using its sitemap.
+    - It is recommended to leave it unchanged. Under some circumstances though
+    - (like integration with proprietary webapps or servlets) you might have
+    - to change this parameter.
+    -->
+  <servlet-mapping>
+    <servlet-name>DispatcherServlet</servlet-name>
+    <url-pattern>/*</url-pattern>
+  </servlet-mapping>
+
+</web-app>
+        

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <package name="S2-001" extends="struts-default">
+        <action name="login" class="com.drunkbaby.action.LoginAction">
+            <result name="success">welcome.jsp</result>
+            <result name="error">index.jsp</result>
+        </action>
+    </package>
+</struts>
