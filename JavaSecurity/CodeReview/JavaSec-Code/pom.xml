@@ -10,6 +10,7 @@
         <module>SpEL</module>
         <module>SSRF</module>
         <module>CC</module>
+        <module>SSTI</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

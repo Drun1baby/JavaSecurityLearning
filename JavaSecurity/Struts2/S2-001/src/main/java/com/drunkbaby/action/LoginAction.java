@@ -1,6 +1,8 @@
 package com.drunkbaby.action;
 
 import com.opensymphony.xwork2.ActionSupport;
+import com.opensymphony.xwork2.util.TextParseUtil;
+import org.apache.struts2.views.jsp.ComponentTagSupport;
 
 public class LoginAction extends ActionSupport{
     private String username = null;
