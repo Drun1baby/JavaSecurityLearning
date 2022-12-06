@@ -1,0 +1,2520 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+	"struts-config_1_1.dtd">
+<struts-config>
+  <form-beans>
+    <form-bean name="genericTableForm"
+      type="org.apache.struts.action.DynaActionForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="running" type="java.lang.Boolean" />
+      <form-property name="contents" type="java.util.Collection" />
+      <form-property name="chosenContents" type="java.util.Collection" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="tablePreferences"
+        type="com.bea.console.cvo.preferences.TablePreferences" />
+    </form-bean>
+    <form-bean name="serverMonitoringJobsForm"
+      type="org.apache.struts.action.DynaActionForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="running" type="java.lang.Boolean" />
+      <form-property name="contents" type="java.util.Collection" />
+      <form-property name="chosenContents" type="java.util.Collection" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="tablePreferences"
+        type="com.bea.console.cvo.preferences.TablePreferences" />
+    </form-bean>
+    <form-bean name="domainHealthTableForm"
+      type="org.apache.struts.action.DynaActionForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="contents" type="java.util.Collection" />
+      <form-property name="chosenContents" type="java.util.Collection" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="tablePreferences"
+        type="com.bea.console.cvo.preferences.TablePreferences" />
+      <form-property name="chosenhealthfilter" type="java.lang.String" />
+    </form-bean>
+    <form-bean name="notesForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="interfaceClassName" type="java.lang.String" />
+      <form-property name="notes" type="com.bea.console.cvo.NotesBean" />
+    </form-bean>
+    <form-bean name="genericPolicyEditorForm"
+      type="org.apache.struts.action.DynaActionForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="predicateContents" type="java.util.Collection" />
+      <form-property name="policyNode"
+        type="com.bea.console.utils.security.policy.PolicyNode" />
+      <form-property name="methodListContents" type="java.util.Collection" />
+      <form-property name="inheritedPolicyContents" type="java.util.Collection" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+    </form-bean>
+    <form-bean name="targetDeployForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="targetDeploy" type="com.bea.console.cvo.TargetBean" />
+    </form-bean>
+    <form-bean name="capacityConfigForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="capacityConfig"
+        type="com.bea.console.cvo.core.work.CapacityConfigBean" />
+    </form-bean>
+    <form-bean name="clusterConfigGeneralForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="clusterConfigGeneral"
+        type="com.bea.console.cvo.core.cluster.ClusterConfigGeneralBean" />
+    </form-bean>
+    <form-bean name="clusterConfigMulticastForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="clusterConfigMulticast"
+        type="com.bea.console.cvo.core.cluster.ClusterConfigMulticastBean" />
+    </form-bean>
+    <form-bean name="clusterConfigHealthForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="clusterConfigHealth"
+        type="com.bea.console.cvo.core.cluster.ClusterConfigHealthBean" />
+    </form-bean>
+    <form-bean name="clusterConfigReplicationForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="clusterConfigReplication"
+        type="com.bea.console.cvo.core.cluster.ClusterConfigReplicationBean" />
+    </form-bean>
+    <form-bean name="clusterConfigMigrationForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="clusterConfigMigration"
+        type="com.bea.console.cvo.core.cluster.ClusterConfigMigrationBean" />
+    </form-bean>
+    <form-bean name="clusterConfigSchedulerForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="clusterConfigScheduler"
+        type="com.bea.console.cvo.core.cluster.ClusterConfigSchedulerBean" />
+    </form-bean>
+    <form-bean name="clusterConfigOverloadForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="clusterConfigOverload"
+        type="com.bea.console.cvo.core.cluster.ClusterConfigOverloadBean" />
+    </form-bean>
+    <form-bean name="clusterConfigServersForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="contents" type="java.util.Collection" />
+      <form-property name="chosenContents" type="[Ljava.lang.String;" />
+    </form-bean>
+    <form-bean name="clusterConfigHttpForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="clusterConfigHttp"
+        type="com.bea.console.cvo.core.cluster.ClusterConfigHttpBean" />
+    </form-bean>
+    <form-bean name="clusterMonitorSummaryForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="unicast" type="java.lang.Boolean" />
+      <form-property name="contents" type="java.util.Collection" />
+      <form-property name="chosenContents" type="[Ljava.lang.String;" />
+      <form-property name="tablePreferences"
+        type="com.bea.console.cvo.preferences.TablePreferences" />
+    </form-bean>
+    <form-bean name="clusterMonitorFailoverForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="replicationEnabled" type="java.lang.Boolean" />
+      <form-property name="clusterMonitorFailover"
+        type="com.bea.console.cvo.core.cluster.ClusterMonitorFailoverBean" />
+      <form-property name="contents" type="java.util.Collection" />
+      <form-property name="chosenContents" type="java.util.Collection" />
+    </form-bean>
+    <form-bean name="contextRequestClassConfigForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="contextRequestClassConfig"
+        type="com.bea.console.cvo.core.work.ContextRequestClassConfigBean" />
+      <form-property name="contents" type="java.util.Collection" />
+      <form-property name="chosenContents" type="java.util.Collection" />
+      <form-property name="tablePreferences"
+        type="com.bea.console.cvo.preferences.TablePreferences" />
+    </form-bean>
+    <form-bean name="contextCaseConfigForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="contextCaseConfig"
+        type="com.bea.console.cvo.core.work.ContextCaseConfigBean" />
+    </form-bean>
+    <form-bean name="domainConfigGeneralForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="domainConfigGeneral"
+        type="com.bea.console.cvo.core.domain.DomainConfigGeneralBean" />
+    </form-bean>
+    <form-bean name="domainConfigJtaForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="domainConfigJta"
+        type="com.bea.console.cvo.core.domain.DomainConfigJtaBean" />
+    </form-bean>
+    <form-bean name="domainConfigJpaForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="domainConfigJpa"
+        type="com.bea.console.cvo.core.domain.DomainConfigJpaBean" />
+    </form-bean>
+    <form-bean name="domainConfigEJBForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="domainConfigEJB"
+        type="com.bea.console.cvo.core.domain.DomainConfigEJBBean" />
+    </form-bean>
+    <form-bean name="domainConfigWebAppForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="domainConfigWebApp"
+        type="com.bea.console.cvo.core.domain.DomainConfigWebAppBean" />
+    </form-bean>
+    <form-bean name="domainConfigLoggingForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="domainConfigLogging"
+        type="com.bea.console.cvo.core.domain.DomainConfigLoggingBean" />
+    </form-bean>
+    <form-bean name="domainUnlockUserForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="domainUnlockUser"
+        type="com.bea.console.cvo.core.domain.UnlockUserBean" />
+    </form-bean>
+    <form-bean name="foreignJNDIProviderConfigForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="configBean"
+        type="com.bea.console.cvo.core.jndi.ForeignJNDIProviderConfigBean" />
+    </form-bean>
+    <form-bean name="foreignJNDILinkConfigForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="configBean"
+        type="com.bea.console.cvo.core.jndi.ForeignJNDILinkConfigBean" />
+    </form-bean>
+    <form-bean name="executeQueueConfigForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="executeQueueConfig"
+        type="com.bea.console.cvo.core.queues.ExecuteQueueConfigBean" />
+    </form-bean>
+    <form-bean name="executeQueueMonitorForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="executeQueueMonitor"
+        type="com.bea.console.cvo.core.queues.ExecuteQueueMonitorBean" />
+    </form-bean>
+    <form-bean name="fairShareRequestClassConfigForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="fairShareRequestClassConfig"
+        type="com.bea.console.cvo.core.work.FairShareRequestClassConfigBean" />
+    </form-bean>
+    <form-bean name="machineConfigGeneralForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="machineConfigGeneral"
+        type="com.bea.console.cvo.core.machine.MachineConfigGeneralBean" />
+    </form-bean>
+    <form-bean name="unixMachineConfigGeneralForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="unixMachineConfigGeneral"
+        type="com.bea.console.cvo.core.machine.UnixMachineConfigGeneralBean" />
+    </form-bean>
+    <form-bean name="machineConfigNodemanagerForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="machineConfigNodemanager"
+        type="com.bea.console.cvo.core.machine.MachineConfigNodemanagerBean" />
+    </form-bean>
+    <form-bean name="machineConfigServersForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="contents" type="java.util.Collection" />
+      <form-property name="chosenContents" type="[Ljava.lang.String;" />
+    </form-bean>
+    <form-bean name="machineMonitorNodemanagerStatusForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="machineMonitorNodemanagerStatus"
+        type="com.bea.console.cvo.core.machine.MachineMonitorNodemanagerstatusBean" />
+    </form-bean>
+    <form-bean name="workManagerConfigForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="workManagerConfig"
+        type="com.bea.console.cvo.core.work.WorkManagerConfigBean" />
+    </form-bean>
+    <form-bean name="maxThreadsConstraintConfigForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="maxThreadsConstraintConfig"
+        type="com.bea.console.cvo.core.work.MaxThreadsConstraintConfigBean" />
+    </form-bean>
+    <form-bean name="migratableTargetConfigForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="migratableTargetConfig"
+        type="com.bea.console.cvo.core.migration.MigratableTargetConfigBean" />
+    </form-bean>
+    <form-bean name="singletonServiceConfigForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="singletonServiceConfig"
+        type="com.bea.console.cvo.core.singletonservice.SingletonServiceConfigBean" />
+    </form-bean>
+    <form-bean name="minThreadsConstraintConfigForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="minThreadsConstraintConfig"
+        type="com.bea.console.cvo.core.work.MinThreadsConstraintConfigBean" />
+    </form-bean>
+    <form-bean name="serverChannelConfigForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="serverChannelConfig"
+        type="com.bea.console.cvo.core.server.ServerChannelConfigBean" />
+    </form-bean>
+    <form-bean name="responseTimeRequestClassConfigForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="responseTimeRequestClassConfig"
+        type="com.bea.console.cvo.core.work.ResponseTimeRequestClassConfigBean" />
+    </form-bean>
+    <form-bean name="serverConfigGeneralForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="serverConfigGeneral"
+        type="com.bea.console.cvo.core.server.ServerConfigGeneralBean" />
+    </form-bean>
+    <form-bean name="serverConfigClusterForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="serverConfigCluster"
+        type="com.bea.console.cvo.core.server.ServerConfigClusterBean" />
+    </form-bean>
+    <form-bean name="serverConfigServicesForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="serverConfigServices"
+        type="com.bea.console.cvo.core.server.ServerConfigServicesBean" />
+    </form-bean>
+    <form-bean name="serverConfigKeystoreForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="serverConfigKeystore"
+        type="com.bea.console.cvo.core.server.ServerConfigKeystoreBean" />
+    </form-bean>
+    <form-bean name="serverConfigSSLForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="serverConfigSSL"
+        type="com.bea.console.cvo.core.server.ServerConfigSSLBean" />
+    </form-bean>
+    <form-bean name="serverConfigFederationServicesDestinationSiteForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="serverConfigFederationServicesDestinationSite"
+        type="com.bea.console.cvo.core.server.ServerConfigFederationServicesDestinationSiteBean" />
+    </form-bean>
+    <form-bean name="serverConfigFederationServicesSourceSiteForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="serverConfigFederationServicesSourceSite"
+        type="com.bea.console.cvo.core.server.ServerConfigFederationServicesSourceSiteBean" />
+    </form-bean>
+    <form-bean name="serverConfigFederationServicesSAML20GeneralForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="cvo"
+        type="com.bea.console.cvo.core.server.ServerConfigFederationServicesSAML20GeneralBean" />
+    </form-bean>
+    <form-bean name="serverConfigFederationServicesSAML20IdentityProviderForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="cvo"
+        type="com.bea.console.cvo.core.server.ServerConfigFederationServicesSAML20IdentityProviderBean" />
+    </form-bean>
+    <form-bean name="serverConfigFederationServicesSAML20ServiceProviderForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="cvo"
+        type="com.bea.console.cvo.core.server.ServerConfigFederationServicesSAML20ServiceProviderBean" />
+    </form-bean>
+    <form-bean name="serverConfigMigrationForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="serverConfigMigration"
+        type="com.bea.console.cvo.core.server.ServerConfigMigrationBean" />
+    </form-bean>
+    <form-bean name="serverConfigDeploymentForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="serverConfigDeployment"
+        type="com.bea.console.cvo.core.server.ServerConfigDeploymentBean" />
+    </form-bean>
+    <form-bean name="serverConfigTuningForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="serverConfigTuning"
+        type="com.bea.console.cvo.core.server.ServerConfigTuningBean" />
+    </form-bean>
+    <form-bean name="serverConfigOverloadForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="serverConfigOverload"
+        type="com.bea.console.cvo.core.server.ServerConfigOverloadBean" />
+    </form-bean>
+    <form-bean name="serverConfigHealthmonitoringForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="serverConfigHealthmonitoring"
+        type="com.bea.console.cvo.core.server.ServerConfigHealthmonitoringBean" />
+    </form-bean>
+    <form-bean name="serverConfigServerstartForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="serverConfigServerstart"
+        type="com.bea.console.cvo.core.server.ServerConfigServerstartBean" />
+    </form-bean>
+    <form-bean name="serverControlStartstopForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="serverControlStartstop"
+        type="com.bea.console.cvo.core.server.ServerControlStartstopBean" />
+      <form-property name="contents" type="java.util.Collection" />
+      <form-property name="chosenContents" type="java.util.Collection" />
+    </form-bean>
+    <form-bean name="serverConfigWebServicesBufferingForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="cvo"
+        type="com.bea.console.cvo.core.server.ServerConfigWebServicesBufferingBean" />
+    </form-bean>
+    <form-bean name="serverConfigWebServicesReliabilityForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="cvo"
+        type="com.bea.console.cvo.core.server.ServerConfigWebServicesReliabilityBean" />
+    </form-bean>
+    <form-bean name="serverConfigWebServicesLogicalStoreForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="cvo"
+        type="com.bea.console.cvo.core.server.ServerConfigWebServicesLogicalStoreBean" />
+    </form-bean>
+    <form-bean name="serverControlMigrationForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="serverControlMigration"
+        type="com.bea.console.cvo.core.server.ServerControlMigrationBean" />
+    </form-bean>
+    <form-bean name="serverLoggingGeneralForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="serverLoggingGeneral"
+        type="com.bea.console.cvo.core.server.ServerLoggingGeneralBean" />
+    </form-bean>
+    <form-bean name="serverLoggingHttpForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="serverLoggingHttp"
+        type="com.bea.console.cvo.core.server.ServerLoggingHttpBean" />
+    </form-bean>
+    <form-bean name="serverLoggingDataSourceForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="serverLoggingDataSource"
+        type="com.bea.console.cvo.core.server.ServerLoggingDataSourceBean" />
+    </form-bean>
+    <form-bean name="serverMonitoringGeneralForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="serverMonitoringGeneral"
+        type="com.bea.console.cvo.core.server.ServerMonitoringGeneralBean" />
+    </form-bean>
+    <form-bean name="serverMonitoringHealthForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="serverHealth"
+        type="com.bea.console.cvo.HealthStateBean" />
+      <form-property name="contents" type="java.util.Collection" />
+    </form-bean>
+    <form-bean name="serverMonitoringPerformanceForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="serverMonitoringPerformance"
+        type="com.bea.console.cvo.core.server.ServerMonitoringPerformanceBean" />
+    </form-bean>
+    <form-bean name="serverMonitoringQueuesForm"
+      type="org.apache.struts.action.DynaActionForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="threadPools" type="java.util.Collection" />
+      <form-property name="threads" type="java.util.Collection" />
+      <form-property name="queues" type="java.util.Collection" />
+      <form-property name="chosenContents" type="java.util.Collection" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="tablePreferences"
+        type="com.bea.console.cvo.preferences.TablePreferences" />
+    </form-bean>
+    <form-bean name="serverMonitoringWorkloadForm"
+      type="org.apache.struts.action.DynaActionForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="workManagers" type="java.util.Collection" />
+      <form-property name="requestClasses" type="java.util.Collection" />
+      <form-property name="minThreadsConstraints" type="java.util.Collection" />
+      <form-property name="maxThreadsConstraints" type="java.util.Collection" />
+      <form-property name="tablePreferences"
+        type="com.bea.console.cvo.preferences.TablePreferences" />
+    </form-bean>
+    <form-bean name="serverMonitoringSecurityForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="serverMonitoringSecurity"
+        type="com.bea.console.cvo.core.server.ServerMonitoringSecurityBean" />
+    </form-bean>
+    <form-bean name="serverMonitoringJmsForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="serverMonitoringJms"
+        type="com.bea.console.cvo.core.server.ServerMonitoringJmsBean" />
+    </form-bean>
+    <form-bean name="serverMonitoringJtaForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="serverMonitoringJta"
+        type="com.bea.console.cvo.core.server.ServerMonitoringJtaBean" />
+    </form-bean>
+    <form-bean name="serverProtocolsGeneralForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="serverProtocolsGeneral"
+        type="com.bea.console.cvo.core.server.ServerProtocolsGeneralBean" />
+    </form-bean>
+    <form-bean name="serverProtocolsHttpForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="serverProtocolsHttp"
+        type="com.bea.console.cvo.core.server.ServerProtocolsHttpBean" />
+    </form-bean>
+    <form-bean name="serverProtocolsJcomForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="serverProtocolsJcom"
+        type="com.bea.console.cvo.core.server.ServerProtocolsJcomBean" />
+    </form-bean>
+    <form-bean name="serverProtocolsIiopForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="serverProtocolsIiop"
+        type="com.bea.console.cvo.core.server.ServerProtocolsIiopBean" />
+    </form-bean>
+    <form-bean name="serverServicesJMSForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="modules" type="java.util.Collection" />
+      <form-property name="servers" type="java.util.Collection" />
+      <form-property name="chosenContents" type="java.util.Collection" />
+    </form-bean>
+    <form-bean name="serverServicesSNMPForm"
+      type="org.apache.struts.action.DynaActionForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="monitors" type="java.util.Collection" />
+      <form-property name="logfilters" type="java.util.Collection" />
+      <form-property name="attributechanges" type="java.util.Collection" />
+      <form-property name="chosenContents" type="java.util.Collection" />
+      <form-property name="tablePreferences"
+        type="com.bea.console.cvo.preferences.TablePreferences" />
+    </form-bean>
+    <form-bean name="taskSummaryForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="taskSummary"
+        type="com.bea.console.cvo.core.tasks.TaskSummaryBean" />
+    </form-bean>
+    <form-bean name="serviceMigrationTaskSummaryForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="cvo"
+        type="com.bea.console.cvo.core.tasks.ServiceMigrationTaskSummaryBean" />
+    </form-bean>
+    <form-bean name="shutdownClassConfigForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="shutdownClassConfig"
+        type="com.bea.console.cvo.core.classes.ShutdownClassConfigBean" />
+    </form-bean>
+    <form-bean name="startupClassConfigForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="startupClassConfig"
+        type="com.bea.console.cvo.core.classes.StartupClassConfigBean" />
+    </form-bean>
+    <form-bean name="virtualHostConfigGeneralForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="virtualHostConfigGeneral"
+        type="com.bea.console.cvo.core.virtualhost.VirtualHostConfigGeneralBean" />
+    </form-bean>
+    <form-bean name="virtualHostConfigLoggingForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="virtualHostConfigLogging"
+        type="com.bea.console.cvo.core.virtualhost.VirtualHostConfigLoggingBean" />
+    </form-bean>
+    <form-bean name="virtualHostConfigHttpForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="virtualHostConfigHttp"
+        type="com.bea.console.cvo.core.virtualhost.VirtualHostConfigHttpBean" />
+    </form-bean>
+    <form-bean name="xmlEntityCacheConfigForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="xmlEntityCache"
+        type="com.bea.console.cvo.xmlregistry.XMLEntityCacheConfigBean" />
+    </form-bean>
+    <form-bean name="xmlEntitySpecRegistryEntryConfigForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="xmlEntitySpecRegistryEntryConfig"
+        type="com.bea.console.cvo.xmlregistry.XMLEntitySpecRegistryEntryConfigBean" />
+    </form-bean>
+    <form-bean name="xmlParserSelectRegistryEntryConfigForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="xmlParserSelectRegistryEntryConfig"
+        type="com.bea.console.cvo.xmlregistry.XMLParserSelectRegistryEntryConfigBean" />
+    </form-bean>
+    <form-bean name="xmlRegistryConfigForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="xmlRegistryConfig"
+        type="com.bea.console.cvo.xmlregistry.XMLRegistryConfigBean" />
+    </form-bean>
+    <form-bean name="xmlRegistryTargetdeployForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="xmlRegistryTargetdeploy"
+        type="com.bea.console.cvo.TargetBean" />
+    </form-bean>
+    <form-bean name="xmlRegistryContentsParserSelectForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="contents" type="java.util.Collection" />
+      <form-property name="chosenContents" type="[Ljava.lang.String;" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+    </form-bean>
+    <form-bean name="xmlRegistryContentsEntitySpecForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="contents" type="java.util.Collection" />
+      <form-property name="chosenContents" type="[Ljava.lang.String;" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+    </form-bean>
+    <form-bean name="jndiBindingForm"
+      type="org.apache.struts.action.DynaActionForm">
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="context" type="java.lang.String" />
+      <form-property name="binding" type="java.lang.String" />
+      <form-property name="boundObject"
+        type="com.bea.console.cvo.jndi.JNDIBoundObject" />
+    </form-bean>
+    <form-bean name="ServerDebugTableForm"
+      type="org.apache.struts.action.DynaActionForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="contents" type="java.util.Collection" />
+      <form-property name="chosenContents" type="java.util.Collection" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="tablePreferences"
+        type="com.bea.console.cvo.preferences.TablePreferences" />
+    </form-bean>
+    <form-bean name="customizedForm"
+      type="com.bea.console.actionforms.CustomizerForm">
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="tablePrefererences"
+        type="com.bea.console.cvo.preferences.TablePreferences" />
+    </form-bean>
+  </form-beans>
+  <!-- Global Exception Handlers for this module -->
+  <global-exceptions>
+    <exception key="global" type="java.lang.Exception"
+      handler="com.bea.console.utils.UnexpectedExceptionHandler" />
+  </global-exceptions>
+  <global-forwards>
+    <forward name="providerchanged" contextRelative="true"
+      path="/jsp/security/ProviderChanged.jsp" />
+    <forward name="serverrestartrequired" contextRelative="true"
+      path="/jsp/security/ServerRestartRequired.jsp" />
+    <forward name="samlidentityasserterv2notcreated" contextRelative="true"
+      path="/jsp/security/SAMLIdentityAsserterV2NotCreated.jsp" />
+    <forward name="samlcredentialmapperv2notcreated" contextRelative="true"
+      path="/jsp/security/SAMLCredentialMapperV2NotCreated.jsp" />
+  </global-forwards>
+  <action-mappings>
+    <action path="/CoreNotes" type="com.bea.console.actions.NotesAction"
+      name="notesForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/CoreNotesForm.jsp" />
+    </action>
+    <action path="/CoreNotesUpdated"
+      type="com.bea.console.actions.NotesUpdatedAction" name="notesForm"
+      scope="request" validate="false" input="success">
+      <forward name="success" path="/CoreNotes.do" />
+    </action>
+    <action path="/JNDIContextTableAction" scope="request"
+      type="com.bea.console.actions.jndi.JNDIContextTableAction"
+      name="genericTableForm">
+      <forward name="success" contextRelative="true"
+        path="/jsp/jndi/jndicontext.jsp" />
+    </action>
+    <action path="/JNDIBindingAction" scope="request"
+      type="com.bea.console.actions.jndi.JNDIBindingAction"
+      name="jndiBindingForm">
+      <forward name="success" contextRelative="true"
+        path="/jsp/jndi/jndibinding.jsp" />
+    </action>
+    <action path="/TablePreferencesUpdatedAction"
+      type="com.bea.console.actions.preferences.TablePreferencesUpdatedAction"
+      scope="request" validate="false" name="customizedForm">
+    </action>
+    <action path="/CoreClassDeploymentTable"
+      type="com.bea.console.actions.core.classes.ClassDeploymentTableAction"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/classes/ClassDeploymentTable.jsp" />
+    </action>
+    <action path="/CoreClusterClusterConfigGeneral"
+      type="com.bea.console.actions.core.cluster.ClusterConfigGeneralAction"
+      name="clusterConfigGeneralForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/cluster/ClusterConfigGeneralForm.jsp" />
+    </action>
+    <action path="/CoreClusterClusterConfigGeneralUpdated"
+      type="com.bea.console.actions.core.cluster.ClusterConfigGeneralUpdatedAction"
+      name="clusterConfigGeneralForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/CoreClusterClusterConfigGeneral.do" />
+    </action>
+    <action path="/CoreClusterClusterConfigMulticast"
+      type="com.bea.console.actions.core.cluster.ClusterConfigMulticastAction"
+      name="clusterConfigMulticastForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/cluster/ClusterConfigMulticastForm.jsp" />
+    </action>
+    <action path="/CoreClusterClusterConfigMulticastUpdated"
+      type="com.bea.console.actions.core.cluster.ClusterConfigMulticastUpdatedAction"
+      name="clusterConfigMulticastForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/CoreClusterClusterConfigMulticast.do" />
+    </action>
+    <action path="/ClusterConfigHealth"
+      type="com.bea.console.actions.core.cluster.ClusterConfigHealthAction"
+      name="clusterConfigHealthForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/cluster/ClusterConfigHealth.jsp" />
+    </action>
+    <action path="/ClusterConfigHealthUpdated"
+      type="com.bea.console.actions.core.cluster.ClusterConfigHealthUpdatedAction"
+      name="clusterConfigHealthForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/ClusterConfigHealth.do" />
+    </action>
+    <action path="/ClusterConfigReplication"
+      type="com.bea.console.actions.core.cluster.ClusterConfigReplicationAction"
+      name="clusterConfigReplicationForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/cluster/ClusterConfigReplication.jsp" />
+    </action>
+    <action path="/ClusterConfigReplicationUpdated"
+      type="com.bea.console.actions.core.cluster.ClusterConfigReplicationUpdatedAction"
+      name="clusterConfigReplicationForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/ClusterConfigReplication.do" />
+    </action>
+    <action path="/ClusterConfigMigration"
+      type="com.bea.console.actions.core.cluster.ClusterConfigMigrationAction"
+      name="clusterConfigMigrationForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/cluster/ClusterConfigMigration.jsp" />
+    </action>
+    <action path="/ClusterConfigMigrationUpdated"
+      type="com.bea.console.actions.core.cluster.ClusterConfigMigrationUpdatedAction"
+      name="clusterConfigMigrationForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/ClusterConfigMigration.do" />
+    </action>
+    <action path="/ClusterConfigScheduler"
+      type="com.bea.console.actions.core.cluster.ClusterConfigSchedulerAction"
+      name="clusterConfigSchedulerForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/cluster/ClusterConfigScheduler.jsp" />
+    </action>
+    <action path="/ClusterConfigSchedulerUpdated"
+      type="com.bea.console.actions.core.cluster.ClusterConfigSchedulerUpdatedAction"
+      name="clusterConfigSchedulerForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/ClusterConfigScheduler.do" />
+    </action>
+    <action path="/ClusterConfigOverload"
+      type="com.bea.console.actions.core.cluster.ClusterConfigOverloadAction"
+      name="clusterConfigOverloadForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/cluster/ClusterConfigOverload.jsp" />
+    </action>
+    <action path="/ClusterConfigOverloadUpdated"
+      type="com.bea.console.actions.core.cluster.ClusterConfigOverloadUpdatedAction"
+      name="clusterConfigOverloadForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/ClusterConfigOverload.do" />
+    </action>
+    <action path="/CoreClusterClusterConfigServers"
+      type="com.bea.console.actions.core.cluster.ClusterConfigServersAction"
+      name="clusterConfigServersForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/cluster/ClusterConfigServersForm.jsp" />
+    </action>
+    <action path="/CoreClusterClusterConfigSingletonServices"
+      type="com.bea.console.actions.core.singletonservice.SingletonServiceTableAction"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/cluster/ClusterConfigSingletonServices.jsp" />
+    </action>
+    <action path="/ClusterConfigHttp"
+      type="com.bea.console.actions.core.cluster.ClusterConfigHttpAction"
+      name="clusterConfigHttpForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/cluster/ClusterConfigHttpForm.jsp" />
+    </action>
+    <action path="/ClusterConfigHttpUpdated"
+      type="com.bea.console.actions.core.cluster.ClusterConfigHttpUpdatedAction"
+      name="clusterConfigHttpForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/ClusterConfigHttp.do" />
+    </action>
+    <action path="/ClusterMonitorHealth"
+      type="com.bea.console.actions.core.cluster.ClusterMonitorHealthAction"
+      name="genericTableForm" scope="session" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/cluster/ClusterMonitorHealthForm.jsp" />
+    </action>
+    <action path="/ClusterMonitorSummary"
+      type="com.bea.console.actions.core.cluster.ClusterMonitorSummaryAction"
+      name="clusterMonitorSummaryForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/cluster/ClusterMonitorSummary.jsp" />
+    </action>
+    <action path="/ClusterMonitorFailover"
+      type="com.bea.console.actions.core.cluster.ClusterMonitorFailoverAction"
+      name="clusterMonitorFailoverForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/cluster/ClusterMonitorFailover.jsp" />
+    </action>
+    <action path="/ClusterControlServers"
+      type="com.bea.console.actions.core.cluster.ServerControlAction"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/cluster/ClusterControlServers.jsp" />
+    </action>
+    <action path="/ClusterControlSingletonServiceMigration"
+      type="com.bea.console.actions.core.singletonservice.SingletonServiceTableAction"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/cluster/ClusterControlSingletonServiceMigration.jsp" />
+    </action>
+    <action path="/ClusterDeployments"
+      type="com.bea.console.actions.core.cluster.ClusterDeploymentsAction"
+      name="genericTableForm" scope="session" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/cluster/ClusterDeployments.jsp" />
+    </action>
+    <action path="/ClusterServicesClasses"
+      type="com.bea.console.actions.core.cluster.ClusterServicesClassesAction"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/cluster/ClusterServicesClasses.jsp" />
+    </action>
+    <action path="/ClusterServicesFileT3"
+      type="com.bea.console.actions.core.cluster.ClusterServicesFileT3Action"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/cluster/ClusterServicesFileT3.jsp" />
+    </action>
+    <action path="/ClusterServicesJDBC"
+      type="com.bea.console.actions.core.cluster.ClusterServicesJDBCAction"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/cluster/ClusterServicesJDBC.jsp" />
+    </action>
+    <action path="/ClusterServicesJMS"
+      type="com.bea.console.actions.core.cluster.ClusterServicesJMSAction"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/cluster/ClusterServicesJMS.jsp" />
+    </action>
+    <action path="/ClusterServicesMessagingBridge"
+      type="com.bea.console.actions.core.cluster.ClusterServicesMessagingBridgeAction"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/cluster/ClusterServicesMessagingBridge.jsp" />
+    </action>
+    <action path="/ClusterServicesMail"
+      type="com.bea.console.actions.core.cluster.ClusterServicesMailAction"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/cluster/ClusterServicesMail.jsp" />
+    </action>
+    <action path="/ClusterServicesWorkManager"
+      type="com.bea.console.actions.core.cluster.ClusterServicesWorkManagerAction"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/cluster/ClusterServicesWorkManager.jsp" />
+    </action>
+    <action path="/CoreClusterClusterTable"
+      type="com.bea.console.actions.core.cluster.ClusterTableAction"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/cluster/ClusterTable.jsp" />
+    </action>
+    <action path="/DomainConfigGeneral"
+      type="com.bea.console.actions.core.domain.DomainConfigGeneralAction"
+      name="domainConfigGeneralForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/domain/DomainConfigGeneralForm.jsp" />
+    </action>
+    <action path="/DomainConfigGeneralUpdated"
+      type="com.bea.console.actions.core.domain.DomainConfigGeneralUpdatedAction"
+      name="domainConfigGeneralForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/DomainConfigGeneral.do" />
+    </action>
+    <action path="/DomainConfigJta"
+      type="com.bea.console.actions.core.domain.DomainConfigJtaAction"
+      name="domainConfigJtaForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/domain/DomainConfigJtaForm.jsp" />
+    </action>
+    <action path="/DomainConfigJtaUpdated"
+      type="com.bea.console.actions.core.domain.DomainConfigJtaUpdatedAction"
+      name="domainConfigJtaForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/DomainConfigJta.do" />
+    </action>
+    <action path="/DomainConfigJpa"
+      type="com.bea.console.actions.core.domain.DomainConfigJpa"
+      name="domainConfigJpaForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/domain/DomainConfigJpa.jsp" />
+    </action>
+    <action path="/DomainConfigJpaUpdated"
+      type="com.bea.console.actions.core.domain.DomainConfigJpaUpdated"
+      name="domainConfigJpaForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/DomainConfigJpa.do" />
+    </action>
+    <action path="/DomainConfigEJB"
+      type="com.bea.console.actions.core.domain.DomainConfigEJBAction"
+      name="domainConfigEJBForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/domain/DomainConfigEJB.jsp" />
+    </action>
+    <action path="/DomainConfigEJBUpdated"
+      type="com.bea.console.actions.core.domain.DomainConfigEJBUpdatedAction"
+      name="domainConfigEJBForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/DomainConfigEJB.do" />
+    </action>
+    <action path="/DomainConfigWebApp"
+      type="com.bea.console.actions.core.domain.DomainConfigWebAppAction"
+      name="domainConfigWebAppForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/domain/DomainConfigWebApp.jsp" />
+    </action>
+    <action path="/DomainConfigWebAppUpdated"
+      type="com.bea.console.actions.core.domain.DomainConfigWebAppUpdatedAction"
+      name="domainConfigWebAppForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/DomainConfigWebApp.do" />
+    </action>
+    <action path="/DomainConfigLogging"
+      type="com.bea.console.actions.core.domain.DomainConfigLoggingAction"
+      name="domainConfigLoggingForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/domain/DomainConfigLoggingForm.jsp" />
+    </action>
+    <action path="/DomainConfigLoggingUpdated"
+      type="com.bea.console.actions.core.domain.DomainConfigLoggingUpdatedAction"
+      name="domainConfigLoggingForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/DomainConfigLogging.do" />
+    </action>
+    <action path="/DomainMonitorServers"
+      type="com.bea.console.actions.core.server.ServerTableAction"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/domain/DomainMonitorServers.jsp" />
+    </action>
+    <action path="/DomainMonitorClusters"
+      type="com.bea.console.actions.core.cluster.ClusterTableAction"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/domain/DomainMonitorClusters.jsp" />
+    </action>
+    <action path="/DomainMonitorMigration"
+      type="com.bea.console.actions.core.domain.DomainMonitorMigrationAction"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/domain/DomainMonitorMigration.jsp" />
+    </action>
+    <action path="/DomainMonitorHealth"
+      type="com.bea.console.actions.core.domain.DomainMonitorHealthAction"
+      name="domainHealthTableForm" scope="session" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/domain/DomainMonitorHealthForm.jsp" />
+    </action>
+    <action path="/DomainControl"
+      type="com.bea.console.actions.core.server.ServerTableAction"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/domain/DomainControl.jsp" />
+    </action>
+    <action path="/DomainControlSystemResources"
+      type="com.bea.console.actions.core.domain.DomainControlSystemResourceTableAction"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/domain/DomainControlSystemResourceTable.jsp" />
+    </action>
+    <action path="/DomainUnlockUser"
+      type="com.bea.console.actions.core.domain.UnlockUserAction"
+      name="domainUnlockUserForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/domain/DomainUnlockUser.jsp" />
+    </action>
+    <action path="/DomainUnlockUserUpdated"
+      type="com.bea.console.actions.core.domain.UnlockUserUpdatedAction"
+      name="domainUnlockUserForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/DomainUnlockUser.do" />
+    </action>
+    <action path="/CoreDomainConfigLogFilterTable"
+      type="com.bea.console.actions.core.domain.DomainConfigLogFilterTableAction"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/domain/DomainConfigLogFilterTable.jsp" />
+    </action>
+    <action path="/ServerExecuteQueueConfig"
+      type="com.bea.console.actions.core.queues.ExecuteQueueConfigAction"
+      name="executeQueueConfigForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/queues/ExecuteQueueConfig.jsp" />
+    </action>
+    <action path="/ServerExecuteQueueConfigUpdated"
+      type="com.bea.console.actions.core.queues.ExecuteQueueConfigUpdatedAction"
+      name="executeQueueConfigForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/ServerExecuteQueueConfig.do" />
+    </action>
+    <action path="/ServerExecuteQueueMonitorOverview"
+      type="com.bea.console.actions.core.queues.ExecuteQueueMonitorOverviewAction"
+      name="executeQueueMonitorForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/queues/ExecuteQueueMonitorOverview.jsp" />
+    </action>
+    <action path="/ServerExecuteQueueMonitorThreads"
+      type="com.bea.console.actions.core.queues.ExecuteQueueMonitorThreadsAction"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/queues/ExecuteQueueMonitorThreads.jsp" />
+    </action>
+    <action path="/CoreExecuteQueueDispatcher"
+      type="com.bea.console.actions.core.queues.ExecuteQueueDispatcherAction"
+      name="genericTableForm" scope="request" validate="false">
+    </action>
+    <action path="/CoreMachineMachineConfigGeneral"
+      type="com.bea.console.actions.core.machine.MachineConfigGeneralAction"
+      name="machineConfigGeneralForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/machine/MachineConfigGeneralForm.jsp" />
+      <forward name="doUnixMachine"
+        path="/CoreMachineUnixMachineConfigGeneral.do" />
+    </action>
+    <action path="/CoreMachineMachineConfigGeneralUpdated"
+      type="com.bea.console.actions.core.machine.MachineConfigGeneralUpdatedAction"
+      name="machineConfigGeneralForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/CoreMachineMachineConfigGeneral.do" />
+    </action>
+    <action path="/CoreMachineMachineConfigNodemanager"
+      type="com.bea.console.actions.core.machine.MachineConfigNodemanagerAction"
+      name="machineConfigNodemanagerForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/machine/MachineConfigNodemanagerForm.jsp" />
+    </action>
+    <action path="/CoreMachineMachineConfigNodemanagerUpdated"
+      type="com.bea.console.actions.core.machine.MachineConfigNodemanagerUpdatedAction"
+      name="machineConfigNodemanagerForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/CoreMachineMachineConfigNodemanager.do" />
+    </action>
+    <action path="/CoreMachineMachineConfigVirtualManager"
+      type="com.bea.console.actions.core.machine.MachineConfigNodemanagerAction"
+      name="machineConfigNodemanagerForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/machine/MachineConfigVirtualManager.jsp" />
+    </action>
+    <action path="/CoreMachineMachineConfigVirtualManagerUpdated"
+      type="com.bea.console.actions.core.machine.MachineConfigNodemanagerUpdatedAction"
+      name="machineConfigNodemanagerForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/CoreMachineMachineConfigVirtualManager.do" />
+    </action>
+    <action path="/CoreMachineMachineConfigServers"
+      type="com.bea.console.actions.core.machine.MachineConfigServersAction"
+      name="machineConfigServersForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/machine/MachineConfigServersForm.jsp" />
+    </action>
+    <action path="/CoreMachineMachineMonitorNodemanagerStatus"
+      type="com.bea.console.actions.core.machine.MachineMonitorNodemanagerstatusAction"
+      name="machineMonitorNodemanagerStatusForm" scope="request"
+      validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/machine/MachineMonitorNodemanagerstatusForm.jsp" />
+    </action>
+    <action path="/CoreMachineMachineMonitorNodemanagerLog"
+      type="com.bea.console.actions.core.machine.MachineMonitorNodemanagerLogAction"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="stopped" contextRelative="true"
+        path="/jsp/core/machine/MachineMonitorNodemanagerLogStopped.jsp" />
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/machine/MachineMonitorNodemanagerLogForm.jsp" />
+    </action>
+    <action path="/CoreMachineMachineTable"
+      type="com.bea.console.actions.core.machine.MachineTableAction"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/machine/MachineTable.jsp" />
+    </action>
+    <action path="/MigratableTargetConfigGeneral"
+      type="com.bea.console.actions.core.migration.MigratableTargetConfigGeneralAction"
+      name="migratableTargetConfigForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/migration/MigratableTargetConfigGeneral.jsp" />
+    </action>
+    <action path="/MigratableTargetConfigGeneralUpdated"
+      type="com.bea.console.actions.core.migration.MigratableTargetConfigGeneralUpdatedAction"
+      name="migratableTargetConfigForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/MigratableTargetConfigGeneral.do" />
+    </action>
+    <action path="/MigratableTargetConfigMigration"
+      type="com.bea.console.actions.core.migration.MigratableTargetConfigMigrationAction"
+      name="migratableTargetConfigForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/migration/MigratableTargetConfigMigration.jsp" />
+    </action>
+    <action path="/MigratableTargetConfigMigrationUpdated"
+      type="com.bea.console.actions.core.migration.MigratableTargetConfigMigrationUpdatedAction"
+      name="migratableTargetConfigForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/MigratableTargetConfigMigration.do" />
+    </action>
+    <action path="/MigratableTargetControlMigration"
+      type="com.bea.console.actions.core.migration.MigratableTargetTableAction"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/migration/MigratableTargetControlMigration.jsp" />
+    </action>
+    <action path="/MigratableTargetsConfigTable"
+      type="com.bea.console.actions.core.migration.MigratableTargetTableAction"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/migration/MigratableTargetsConfigTable.jsp" />
+    </action>
+    <action path="/MigratableTargetsControlMigrationTable"
+      type="com.bea.console.actions.core.migration.MigratableTargetTableAction"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/migration/MigratableTargetsControlMigrationTable.jsp" />
+    </action>
+    <action path="/ServerChannelConfigGeneral"
+      type="com.bea.console.actions.core.server.ChannelConfigGeneralAction"
+      name="serverChannelConfigForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/ChannelConfigGeneral.jsp" />
+    </action>
+    <action path="/ServerChannelConfigGeneralUpdated"
+      type="com.bea.console.actions.core.server.ChannelConfigGeneralUpdatedAction"
+      name="serverChannelConfigForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/ServerChannelConfigGeneral.do" />
+    </action>
+    <action path="/ServerChannelConfigSecurity"
+      type="com.bea.console.actions.core.server.ChannelConfigSecurityAction"
+      name="serverChannelConfigForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/ChannelConfigSecurity.jsp" />
+    </action>
+    <action path="/ServerChannelConfigSecurityUpdated"
+      type="com.bea.console.actions.core.server.ChannelConfigSecurityUpdatedAction"
+      name="serverChannelConfigForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/ServerChannelConfigSecurity.do" />
+    </action>
+    <action path="/ServerChannelMonitorOverview"
+      type="com.bea.console.actions.core.server.ChannelMonitorOverviewAction"
+      name="genericTableForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/ChannelMonitorOverview.jsp" />
+    </action>
+    <action path="/ServerChannelMonitorConnections"
+      type="com.bea.console.actions.core.server.ChannelMonitorConnectionsAction"
+      name="genericTableForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/ChannelMonitorConnections.jsp" />
+    </action>
+    <action path="/CoreServerServerConfigGeneral"
+      type="com.bea.console.actions.core.server.ServerConfigGeneralAction"
+      name="serverConfigGeneralForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/ServerConfigGeneralForm.jsp" />
+    </action>
+    <action path="/CoreServerServerConfigGeneralUpdated"
+      type="com.bea.console.actions.core.server.ServerConfigGeneralUpdatedAction"
+      name="serverConfigGeneralForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/CoreServerServerConfigGeneral.do" />
+    </action>
+    <action path="/CoreServerServerConfigCluster"
+      type="com.bea.console.actions.core.server.ServerConfigClusterAction"
+      name="serverConfigClusterForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/ServerConfigClusterForm.jsp" />
+    </action>
+    <action path="/CoreServerServerConfigClusterUpdated"
+      type="com.bea.console.actions.core.server.ServerConfigClusterUpdatedAction"
+      name="serverConfigClusterForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/CoreServerServerConfigCluster.do" />
+    </action>
+    <action path="/ServerConfigQueues"
+      type="com.bea.console.actions.core.server.ServerConfigQueuesAction"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/ServerConfigQueues.jsp" />
+    </action>
+    <action path="/ServerConfigServices"
+      type="com.bea.console.actions.core.server.ServerConfigServicesAction"
+      name="serverConfigServicesForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/ServerConfigServices.jsp" />
+    </action>
+    <action path="/ServerConfigServicesUpdated"
+      type="com.bea.console.actions.core.server.ServerConfigServicesUpdatedAction"
+      name="serverConfigServicesForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/ServerConfigServices.do" />
+    </action>
+    <action path="/CoreServerServerConfigKeystore"
+      type="com.bea.console.actions.core.server.ServerConfigKeystoreAction"
+      name="serverConfigKeystoreForm" scope="request" validate="false">
+      <forward name="CustomCustom" contextRelative="true"
+        path="/jsp/core/server/KeyStore_CustomCustom.jsp" />
+      <forward name="CustomJavaStandard" contextRelative="true"
+        path="/jsp/core/server/KeyStore_CustomJavaStandard.jsp" />
+      <forward name="CustomCommandLine" contextRelative="true"
+        path="/jsp/core/server/KeyStore_CustomCommandLine.jsp" />
+      <forward name="DemoDemo" contextRelative="true"
+        path="/jsp/core/server/KeyStore_DemoDemo.jsp" />
+    </action>
+    <action path="/CoreServerServerConfigKeystoreChange"
+      type="com.bea.console.actions.core.server.ServerConfigKeystoreChangeAction"
+      name="serverConfigKeystoreForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/KeyStore.jsp" />
+    </action>
+    <action path="/CoreServerServerConfigSSL"
+      type="com.bea.console.actions.core.server.ServerConfigSSLAction"
+      name="serverConfigSSLForm" scope="request" validate="false">
+      <forward name="CustomCustom" contextRelative="true"
+        path="/jsp/core/server/SSL_CustomCustom.jsp" />
+      <forward name="CustomJavaStandard" contextRelative="true"
+        path="/jsp/core/server/SSL_CustomJavaStandard.jsp" />
+      <forward name="CustomCommandLine" contextRelative="true"
+        path="/jsp/core/server/SSL_CustomCommandLine.jsp" />
+      <forward name="DemoDemo" contextRelative="true"
+        path="/jsp/core/server/SSL_DemoDemo.jsp" />
+      <forward name="pre71" contextRelative="true"
+        path="/jsp/core/server/SSL_Pre71.jsp" />
+    </action>
+    <action path="/CoreServerServerConfigSSLTrustLocationChange"
+      type="com.bea.console.actions.core.server.ServerConfigSSLTrustLocationChangeAction"
+      name="serverConfigSSLForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/SSL_TrustLocations.jsp" />
+    </action>
+    <action path="/CoreServerConfigFederationServicesSourceSite"
+      type="com.bea.console.actions.core.server.ServerConfigFederationServicesSourceSiteAction"
+      name="serverConfigFederationServicesSourceSiteForm" scope="request"
+      validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/FederationServicesSourceSite.jsp" />
+    </action>
+    <action path="/CoreServerConfigFederationServicesSourceSiteUpdated"
+      type="com.bea.console.actions.core.server.ServerConfigFederationServicesSourceSiteUpdatedAction"
+      name="serverConfigFederationServicesSourceSiteForm" scope="request"
+      validate="false" input="success">
+      <forward name="success"
+        path="/CoreServerConfigFederationServicesSourceSite.do" />
+    </action>
+    <action path="/CoreServerConfigFederationServicesDestinationSite"
+      type="com.bea.console.actions.core.server.ServerConfigFederationServicesDestinationSiteAction"
+      name="serverConfigFederationServicesDestinationSiteForm" scope="request"
+      validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/FederationServicesDestinationSite.jsp" />
+    </action>
+    <action path="/CoreServerConfigFederationServicesDestinationSiteUpdated"
+      type="com.bea.console.actions.core.server.ServerConfigFederationServicesDestinationSiteUpdatedAction"
+      name="serverConfigFederationServicesDestinationSiteForm" scope="request"
+      validate="false" input="success">
+      <forward name="success"
+        path="/CoreServerConfigFederationServicesDestinationSite.do" />
+    </action>
+    <action path="/CoreServerConfigFederationServicesSAML20General"
+      type="com.bea.console.actions.core.server.ServerConfigFederationServicesSAML20GeneralAction"
+      name="serverConfigFederationServicesSAML20GeneralForm" scope="request"
+      validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/FederationServicesSAML20General.jsp" />
+      <forward name="missingprereq" contextRelative="true"
+        path="/jsp/core/server/FederationServicesSAML20GeneralMissingPrereq.jsp" />
+    </action>
+    <action path="/CoreServerConfigFederationServicesSAML20GeneralUpdated"
+      type="com.bea.console.actions.core.server.ServerConfigFederationServicesSAML20GeneralUpdatedAction"
+      name="serverConfigFederationServicesSAML20GeneralForm" scope="request"
+      validate="false" input="success">
+      <forward name="success"
+        path="/CoreServerConfigFederationServicesSAML20General.do" />
+    </action>
+    <action path="/CoreServerConfigFederationServicesSAML20IdentityProvider"
+      type="com.bea.console.actions.core.server.ServerConfigFederationServicesSAML20IdentityProviderAction"
+      name="serverConfigFederationServicesSAML20IdentityProviderForm"
+      scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/FederationServicesSAML20IdentityProvider.jsp" />
+      <forward name="missingprereq" contextRelative="true"
+        path="/jsp/core/server/FederationServicesSAML20IdentityProviderMissingPrereq.jsp" />
+    </action>
+    <action
+      path="/CoreServerConfigFederationServicesSAML20IdentityProviderUpdated"
+      type="com.bea.console.actions.core.server.ServerConfigFederationServicesSAML20IdentityProviderUpdatedAction"
+      name="serverConfigFederationServicesSAML20IdentityProviderForm"
+      scope="request" validate="false" input="success">
+      <forward name="success"
+        path="/CoreServerConfigFederationServicesSAML20IdentityProvider.do" />
+    </action>
+    <action path="/CoreServerConfigFederationServicesSAML20ServiceProvider"
+      type="com.bea.console.actions.core.server.ServerConfigFederationServicesSAML20ServiceProviderAction"
+      name="serverConfigFederationServicesSAML20ServiceProviderForm"
+      scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/FederationServicesSAML20ServiceProvider.jsp" />
+      <forward name="missingprereq" contextRelative="true"
+        path="/jsp/core/server/FederationServicesSAML20ServiceProviderMissingPrereq.jsp" />
+    </action>
+    <action
+      path="/CoreServerConfigFederationServicesSAML20ServiceProviderUpdated"
+      type="com.bea.console.actions.core.server.ServerConfigFederationServicesSAML20ServiceProviderUpdatedAction"
+      name="serverConfigFederationServicesSAML20ServiceProviderForm"
+      scope="request" validate="false" input="success">
+      <forward name="success"
+        path="/CoreServerConfigFederationServicesSAML20ServiceProvider.do" />
+    </action>
+    <action path="/CoreServerServerConfigKeystoreUpdated"
+      type="com.bea.console.actions.core.server.ServerConfigKeystoreUpdatedAction"
+      name="serverConfigKeystoreForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/CoreServerServerConfigKeystore.do" />
+      <forward name="retry" path="/CoreServerServerConfigKeystore.do" />
+    </action>
+    <action path="/CoreServerServerConfigSSLUpdated"
+      type="com.bea.console.actions.core.server.ServerConfigSSLUpdatedAction"
+      name="serverConfigSSLForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/CoreServerServerConfigSSL.do" />
+      <forward name="retry" path="/CoreServerServerConfigSSL.do" />
+    </action>
+    <action path="/ServerConfigMigration"
+      type="com.bea.console.actions.core.server.ServerConfigMigrationAction"
+      name="serverConfigMigrationForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/ServerConfigMigration.jsp" />
+      <forward name="notclustermember" contextRelative="true"
+        path="/jsp/core/server/ServerConfigMigrationNotCluster.jsp" />
+    </action>
+    <action path="/ServerConfigMigrationUpdated"
+      type="com.bea.console.actions.core.server.ServerConfigMigrationUpdatedAction"
+      name="serverConfigMigrationForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/ServerConfigMigration.do" />
+    </action>
+    <action path="/CoreServerServerConfigDeployment"
+      type="com.bea.console.actions.core.server.ServerConfigDeploymentAction"
+      name="serverConfigDeploymentForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/ServerConfigDeploymentForm.jsp" />
+    </action>
+    <action path="/CoreServerServerConfigDeploymentUpdated"
+      type="com.bea.console.actions.core.server.ServerConfigDeploymentUpdatedAction"
+      name="serverConfigDeploymentForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/CoreServerServerConfigDeployment.do" />
+    </action>
+    <action path="/CoreServerServerConfigTuning"
+      type="com.bea.console.actions.core.server.ServerConfigTuningAction"
+      name="serverConfigTuningForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/ServerConfigTuningForm.jsp" />
+    </action>
+    <action path="/CoreServerServerConfigTuningUpdated"
+      type="com.bea.console.actions.core.server.ServerConfigTuningUpdatedAction"
+      name="serverConfigTuningForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/CoreServerServerConfigTuning.do" />
+    </action>
+    <action path="/ServerConfigOverload"
+      type="com.bea.console.actions.core.server.ServerConfigOverloadAction"
+      name="serverConfigOverloadForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/ServerConfigOverload.jsp" />
+    </action>
+    <action path="/ServerConfigOverloadUpdated"
+      type="com.bea.console.actions.core.server.ServerConfigOverloadUpdatedAction"
+      name="serverConfigOverloadForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/ServerConfigOverload.do" />
+    </action>
+    <action path="/CoreServerServerConfigHealthmonitoring"
+      type="com.bea.console.actions.core.server.ServerConfigHealthmonitoringAction"
+      name="serverConfigHealthmonitoringForm" scope="request"
+      validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/ServerConfigHealthmonitoringForm.jsp" />
+    </action>
+    <action path="/CoreServerServerConfigHealthmonitoringUpdated"
+      type="com.bea.console.actions.core.server.ServerConfigHealthmonitoringUpdatedAction"
+      name="serverConfigHealthmonitoringForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/CoreServerServerConfigHealthmonitoring.do" />
+    </action>
+    <action path="/CoreServerServerConfigServerstart"
+      type="com.bea.console.actions.core.server.ServerConfigServerstartAction"
+      name="serverConfigServerstartForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/ServerConfigServerstartForm.jsp" />
+    </action>
+    <action path="/CoreServerServerConfigServerstartUpdated"
+      type="com.bea.console.actions.core.server.ServerConfigServerstartUpdatedAction"
+      name="serverConfigServerstartForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/CoreServerServerConfigServerstart.do" />
+    </action>
+    <action path="/CoreServerServerControlStartstop"
+      type="com.bea.console.actions.core.server.ServerControlStartstopAction"
+      name="serverControlStartstopForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/ServerControlStartstopForm.jsp" />
+    </action>
+    <action path="/CoreServerServerControlStartstopUpdated"
+      type="com.bea.console.actions.core.server.ServerControlStartstopUpdatedAction"
+      name="serverControlStartstopForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/CoreServerServerControlStartstop.do" />
+    </action>
+    <action path="/CoreServerServerControlRemotestartoutput"
+      type="com.bea.console.actions.core.tasks.ServerLifeCycleTaskLogAction"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/ServerControlRemotestartoutputForm.jsp" />
+    </action>
+    <action path="/CoreServerConfigWebServicesBuffering"
+      type="com.bea.console.actions.core.server.ServerConfigWebServicesBufferingAction"
+      name="serverConfigWebServicesBufferingForm"
+      scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/WebServicesBuffering.jsp" />
+    </action>
+    <action
+      path="/CoreServerConfigWebServicesBufferingUpdated"
+      type="com.bea.console.actions.core.server.ServerConfigWebServicesBufferingUpdatedAction"
+      name="serverConfigWebServicesBufferingForm"
+      scope="request" validate="false" input="success">
+      <forward name="success"
+        path="/CoreServerConfigWebServicesBuffering.do" />
+    </action>
+    <action path="/CoreServerConfigWebServicesReliability"
+      type="com.bea.console.actions.core.server.ServerConfigWebServicesReliabilityAction"
+      name="serverConfigWebServicesReliabilityForm"
+      scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/WebServicesReliability.jsp" />
+    </action>
+    <action
+      path="/CoreServerConfigWebServicesReliabilityUpdated"
+      type="com.bea.console.actions.core.server.ServerConfigWebServicesReliabilityUpdatedAction"
+      name="serverConfigWebServicesReliabilityForm"
+      scope="request" validate="false" input="success">
+      <forward name="success"
+        path="/CoreServerConfigWebServicesReliability.do" />
+    </action>
+    <action path="/CoreServerWebServicesLogicalStoresTable"
+      type="com.bea.console.actions.core.server.ServerWebServicesLogicalStoresTableAction"
+      name="genericTableForm" scope="session" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/WebServicesLogicalStoresTable.jsp" />
+    </action>
+    <action path="/CoreServerConfigWebServicesLogicalStore"
+      type="com.bea.console.actions.core.server.ServerConfigWebServicesLogicalStoreAction"
+      name="serverConfigWebServicesLogicalStoreForm"
+      scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/WebServicesLogicalStore.jsp" />
+    </action>
+    <action
+      path="/CoreServerConfigWebServicesLogicalStoreUpdated"
+      type="com.bea.console.actions.core.server.ServerConfigWebServicesLogicalStoreUpdatedAction"
+      name="serverConfigWebServicesLogicalStoreForm"
+      scope="request" validate="false" input="success">
+      <forward name="success"
+        path="/CoreServerConfigWebServicesLogicalStore.do" />
+    </action>
+    <action path="/ServerControlMigration"
+      type="com.bea.console.actions.core.server.ServerControlMigrationAction"
+      name="serverControlMigrationForm" scope="request" validate="false">
+      <forward name="notclustermember" contextRelative="true"
+        path="/jsp/core/server/ServerControlMigrationNotCluster.jsp" />
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/ServerControlMigration.jsp" />
+    </action>
+    <action path="/ServerControlMigrationUpdated"
+      type="com.bea.console.actions.core.server.ServerControlMigrationUpdatedAction"
+      name="serverControlMigrationForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/ServerControlMigration.do" />
+    </action>
+    <action path="/ServerControlJobs"
+      type="com.bea.console.actions.core.server.ServerMonitoringJobs"
+      name="serverMonitoringJobsForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/ServerControlJobs.jsp" />
+    </action>
+    <action path="/ServerDeployments"
+      type="com.bea.console.actions.core.server.ServerDeploymentsAction"
+      name="genericTableForm" scope="session" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/ServerDeployments.jsp" />
+    </action>
+    <action path="/ServerDebug"
+      type="com.bea.console.actions.core.server.ServerDebugAction"
+      name="ServerDebugTableForm" scope="session" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/ServerDebug.jsp" />
+    </action>
+    <action path="/CoreServerServerLoggingGeneral"
+      type="com.bea.console.actions.core.server.ServerLoggingGeneralAction"
+      name="serverLoggingGeneralForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/ServerLoggingGeneralForm.jsp" />
+    </action>
+    <action path="/CoreServerServerLoggingGeneralUpdated"
+      type="com.bea.console.actions.core.server.ServerLoggingGeneralUpdatedAction"
+      name="serverLoggingGeneralForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/CoreServerServerLoggingGeneral.do" />
+    </action>
+    <action path="/CoreServerServerLoggingHttp"
+      type="com.bea.console.actions.core.server.ServerLoggingHttpAction"
+      name="serverLoggingHttpForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/ServerLoggingHttpForm.jsp" />
+    </action>
+    <action path="/CoreServerServerLoggingHttpUpdated"
+      type="com.bea.console.actions.core.server.ServerLoggingHttpUpdatedAction"
+      name="serverLoggingHttpForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/CoreServerServerLoggingHttp.do" />
+    </action>
+    <action path="/CoreServerServerLoggingDataSource"
+      type="com.bea.console.actions.core.server.ServerLoggingDataSourceAction"
+      name="serverLoggingDataSourceForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/ServerLoggingDataSourceForm.jsp" />
+    </action>
+    <action path="/CoreServerServerLoggingDataSourceUpdated"
+      type="com.bea.console.actions.core.server.ServerLoggingDataSourceUpdatedAction"
+      name="serverLoggingDataSourceForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/CoreServerServerLoggingDataSource.do" />
+    </action>
+    <action path="/CoreServerServerMonitoringGeneral"
+      type="com.bea.console.actions.core.server.ServerMonitoringGeneralAction"
+      name="serverMonitoringGeneralForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/ServerMonitoringGeneralForm.jsp" />
+    </action>
+    <action path="/ServerMonitoringHealth"
+      type="com.bea.console.actions.core.server.ServerMonitoringHealthAction"
+      name="serverMonitoringHealthForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/ServerMonitoringHealthForm.jsp" />
+    </action>
+    <action path="/ServerMonitoringChannels"
+      type="com.bea.console.actions.core.server.ServerMonitoringChannelsAction"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/ServerMonitoringChannels.jsp" />
+    </action>
+    <action path="/CoreServerServerMonitoringPerformance"
+      type="com.bea.console.actions.core.server.ServerMonitoringPerformanceAction"
+      name="serverMonitoringPerformanceForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/ServerMonitoringPerformanceForm.jsp" />
+    </action>
+    <action path="/ServerMonitoringQueues"
+      type="com.bea.console.actions.core.server.ServerMonitoringQueuesAction"
+      name="serverMonitoringQueuesForm" scope="request" validate="false">
+      <forward name="successThreads" contextRelative="true"
+        path="/jsp/core/server/ServerMonitoringThreads.jsp" />
+      <forward name="successQueues" contextRelative="true"
+        path="/jsp/core/server/ServerMonitoringQueues.jsp" />
+    </action>
+    <action path="/ServerMonitoringTimers"
+      type="com.bea.console.actions.core.server.ServerMonitoringTimersAction"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/ServerMonitoringTimers.jsp" />
+    </action>
+    <action path="/ServerMonitoringJobs"
+      type="com.bea.console.actions.core.server.ServerMonitoringJobs"
+      name="serverMonitoringJobsForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/ServerMonitoringJobs.jsp" />
+    </action>
+    <action path="/ServerMonitoringWorkload"
+      type="com.bea.console.actions.core.server.ServerMonitoringWorkloadAction"
+      name="serverMonitoringWorkloadForm" scope="request" validate="false">
+      <forward name="stopped" contextRelative="true"
+        path="/jsp/core/server/ServerMonitoringWorkloadStopped.jsp" />
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/ServerMonitoringWorkload.jsp" />
+    </action>
+    <action path="/CoreServerServerMonitoringSecurity"
+      type="com.bea.console.actions.core.server.ServerMonitoringSecurityAction"
+      name="serverMonitoringSecurityForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/ServerMonitoringSecurityForm.jsp" />
+    </action>
+    <action path="/CoreServerServerMonitoringJms"
+      type="com.bea.console.actions.core.server.ServerMonitoringJmsAction"
+      name="serverMonitoringJmsForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/ServerMonitoringJmsForm.jsp" />
+    </action>
+    <action path="/CoreServerServerMonitoringSaf"
+      type="com.bea.console.actions.core.server.ServerMonitoringSafAction"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/ServerMonitoringSafForm.jsp" />
+    </action>
+    <action path="/CoreServerServerMonitoringJdbc"
+      type="com.bea.console.actions.core.server.ServerMonitoringJdbcAction"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/ServerMonitoringJdbcForm.jsp" />
+    </action>
+    <action path="/ServerMonitoringJta"
+      type="com.bea.console.actions.core.server.ServerMonitoringJtaAction"
+      name="serverMonitoringJtaForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/ServerMonitoringJtaForm.jsp" />
+    </action>
+    <action path="/ServerMonitoringJtaSummary"
+      type="com.bea.console.actions.core.server.ServerMonitoringJtaSummaryAction"
+      name="serverMonitoringJtaForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/JtaSummary.jsp" />
+    </action>
+    <action path="/ServerMonitoringTransactionLogStore"
+      type="com.bea.console.actions.core.server.ServerMonitoringTransactionLogStoreAction"
+      scope="request" validate="false" name="genericTableForm">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/ServerMonitoringTransactionLogStore.jsp" />
+    </action>
+    <action path="/ServerMonitoringTransactionLogStoreConnections"
+      type="com.bea.console.actions.core.server.ServerMonitoringTransactionLogStoreConnections"
+      scope="request" validate="false" name="genericTableForm">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/ServerMonitoringTransactionLogStoreConnectionsForm.jsp" />
+    </action>
+    <action path="/ServerMonitoringJtaNonXAResources"
+      type="com.bea.console.actions.core.server.ServerMonitoringJtaNonXAResourcesAction"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/JtaNonXAResources.jsp" />
+    </action>
+    <action path="/ServerMonitoringJtaTransactionNames"
+      type="com.bea.console.actions.core.server.ServerMonitoringJtaTransactionNamesAction"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/JtaTransactionNames.jsp" />
+    </action>
+    <action path="/ServerMonitoringJtaTransactions"
+      type="com.bea.console.actions.core.server.ServerMonitoringJtaTransactionsAction"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/JtaTransactions.jsp" />
+    </action>
+    <action path="/ServerMonitoringJtaResources"
+      type="com.bea.console.actions.core.server.ServerMonitoringJtaResourcesAction"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/JtaResources.jsp" />
+    </action>
+    <action path="/ServerMonitoringJtaRecovery"
+      type="com.bea.console.actions.core.server.ServerMonitoringJtaRecoveryAction"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/JtaRecovery.jsp" />
+    </action>
+    <action path="/ServerMonitoringDefaultStore"
+      type="com.bea.console.actions.core.server.ServerMonitoringDefaultStoreAction"
+      scope="request" validate="false" name="genericTableForm">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/ServerMonitoringDefaultStore.jsp" />
+    </action>
+    <action path="/ServerMonitoringDefaultStoreConnections"
+      type="com.bea.console.actions.core.server.ServerMonitoringDefaultStoreConnections"
+      scope="request" validate="false" name="genericTableForm">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/ServerMonitoringDefaultStoreConnectionsForm.jsp" />
+    </action>
+    <action path="/CoreServerServerProtocolsGeneral"
+      type="com.bea.console.actions.core.server.ServerProtocolsGeneralAction"
+      name="serverProtocolsGeneralForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/ServerProtocolsGeneralForm.jsp" />
+    </action>
+    <action path="/CoreServerServerProtocolsGeneralUpdated"
+      type="com.bea.console.actions.core.server.ServerProtocolsGeneralUpdatedAction"
+      name="serverProtocolsGeneralForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/CoreServerServerProtocolsGeneral.do" />
+    </action>
+    <action path="/CoreServerServerProtocolsHttp"
+      type="com.bea.console.actions.core.server.ServerProtocolsHttpAction"
+      name="serverProtocolsHttpForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/ServerProtocolsHttpForm.jsp" />
+    </action>
+    <action path="/CoreServerServerProtocolsHttpUpdated"
+      type="com.bea.console.actions.core.server.ServerProtocolsHttpUpdatedAction"
+      name="serverProtocolsHttpForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/CoreServerServerProtocolsHttp.do" />
+    </action>
+    <action path="/CoreServerServerProtocolsJcom"
+      type="com.bea.console.actions.core.server.ServerProtocolsJcomAction"
+      name="serverProtocolsJcomForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/ServerProtocolsJcomForm.jsp" />
+    </action>
+    <action path="/CoreServerServerProtocolsJcomUpdated"
+      type="com.bea.console.actions.core.server.ServerProtocolsJcomUpdatedAction"
+      name="serverProtocolsJcomForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/CoreServerServerProtocolsJcom.do" />
+    </action>
+    <action path="/CoreServerServerProtocolsIiop"
+      type="com.bea.console.actions.core.server.ServerProtocolsIiopAction"
+      name="serverProtocolsIiopForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/ServerProtocolsIiopForm.jsp" />
+    </action>
+    <action path="/CoreServerServerProtocolsIiopUpdated"
+      type="com.bea.console.actions.core.server.ServerProtocolsIiopUpdatedAction"
+      name="serverProtocolsIiopForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/CoreServerServerProtocolsIiop.do" />
+    </action>
+    <action path="/ServerProtocolsChannels"
+      type="com.bea.console.actions.core.server.ServerProtocolsChannelsAction"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/ServerProtocolsChannelsForm.jsp" />
+    </action>
+    <action path="/ServerServicesClasses"
+      type="com.bea.console.actions.core.server.ServerServicesClassesAction"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/ServerServicesClasses.jsp" />
+    </action>
+    <action path="/ServerServicesJDBC"
+      type="com.bea.console.actions.core.server.ServerServicesJdbcAction"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/ServerServicesJDBC.jsp" />
+    </action>
+    <action path="/ServerServicesJMS"
+      type="com.bea.console.actions.core.server.ServerServicesJmsAction"
+      name="serverServicesJMSForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/ServerServicesJmsForm.jsp" />
+    </action>
+    <action path="/ServerServicesWorkManager"
+      type="com.bea.console.actions.core.server.ServerServicesWorkManagerAction"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/ServerServicesWorkManager.jsp" />
+    </action>
+    <action path="/ServerServicesMessagingBridge"
+      type="com.bea.console.actions.core.server.ServerServicesBridgeAction"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/ServerServicesBridgeForm.jsp" />
+    </action>
+    <action path="/ServerServicesSNMP"
+      type="com.bea.console.actions.core.server.ServerServicesSNMPAction"
+      name="serverServicesSNMPForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/ServerServicesSNMP.jsp" />
+    </action>
+    <action path="/ServerServicesXML"
+      type="com.bea.console.actions.core.server.ServerServicesXmlAction"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/ServerServicesXmlForm.jsp" />
+    </action>
+    <action path="/ServerServicesMail"
+      type="com.bea.console.actions.core.server.ServerServicesMailAction"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/ServerServicesMailForm.jsp" />
+    </action>
+    <action path="/ServerServicesFileT3"
+      type="com.bea.console.actions.core.server.ServerServicesFilet3Action"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/ServerServicesFilet3Form.jsp" />
+    </action>
+    <action path="/CoreServersConfigTable"
+      type="com.bea.console.actions.core.server.ServerTableAction"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/ServersConfigTable.jsp" />
+    </action>
+    <action path="/CoreServersControlTable"
+      type="com.bea.console.actions.core.server.ServerTableAction"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/ServersControlTable.jsp" />
+    </action>
+    <action path="/CoreServerThreadStackDump"
+      type="com.bea.console.actions.core.server.ThreadStackDumpAction"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/ThreadStackDump.jsp" />
+    </action>
+    <action path="/SingletonServiceConfigGeneral"
+      type="com.bea.console.actions.core.singletonservice.SingletonServiceConfigGeneralAction"
+      name="singletonServiceConfigForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/singletonservice/SingletonServiceConfigGeneral.jsp" />
+    </action>
+    <action path="/SingletonServiceConfigGeneralUpdated"
+      type="com.bea.console.actions.core.singletonservice.SingletonServiceConfigGeneralUpdatedAction"
+      name="singletonServiceConfigForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/SingletonServiceConfigGeneral.do" />
+    </action>
+    <action path="/SingletonServiceConfigMigration"
+      type="com.bea.console.actions.core.singletonservice.SingletonServiceConfigMigrationAction"
+      name="singletonServiceConfigForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/singletonservice/SingletonServiceConfigMigration.jsp" />
+    </action>
+    <action path="/SingletonServiceConfigMigrationUpdated"
+      type="com.bea.console.actions.core.singletonservice.SingletonServiceConfigMigrationUpdatedAction"
+      name="singletonServiceConfigForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/SingletonServiceConfigMigration.do" />
+    </action>
+    <action path="/SingletonServiceControlMigration"
+      type="com.bea.console.actions.core.singletonservice.SingletonServiceTableAction"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/singletonservice/SingletonServiceControlMigration.jsp" />
+    </action>
+    <action path="/CoreClassesShutdownClassConfig"
+      type="com.bea.console.actions.core.classes.ShutdownClassConfigAction"
+      name="shutdownClassConfigForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/classes/ShutdownClassConfigForm.jsp" />
+    </action>
+    <action path="/CoreClassesShutdownClassConfigUpdated"
+      type="com.bea.console.actions.core.classes.ShutdownClassConfigUpdatedAction"
+      name="shutdownClassConfigForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/CoreClassesShutdownClassConfig.do" />
+    </action>
+    <action path="/CoreClassesShutdownClassTargetdeploy"
+      type="com.bea.console.actions.TargetDeployAction" name="targetDeployForm"
+      scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/classes/ShutdownClassTargetdeployForm.jsp" />
+    </action>
+    <action path="/CoreClassesShutdownClassTargetdeployUpdated"
+      type="com.bea.console.actions.TargetDeployUpdatedAction"
+      name="targetDeployForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/CoreClassesShutdownClassTargetdeploy.do" />
+    </action>
+    <action path="/CoreClassesStartupClassConfig"
+      type="com.bea.console.actions.core.classes.StartupClassConfigAction"
+      name="startupClassConfigForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/classes/StartupClassConfigForm.jsp" />
+    </action>
+    <action path="/CoreClassesStartupClassConfigUpdated"
+      type="com.bea.console.actions.core.classes.StartupClassConfigUpdatedAction"
+      name="startupClassConfigForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/CoreClassesStartupClassConfig.do" />
+    </action>
+    <action path="/CoreClassesStartupClassTargetdeploy"
+      type="com.bea.console.actions.TargetDeployAction" name="targetDeployForm"
+      scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/classes/StartupClassTargetdeployForm.jsp" />
+    </action>
+    <action path="/CoreClassesStartupClassTargetdeployUpdated"
+      type="com.bea.console.actions.TargetDeployUpdatedAction"
+      name="targetDeployForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/CoreClassesStartupClassTargetdeploy.do" />
+    </action>
+    <action path="/CoreTasksTaskTable"
+      type="com.bea.console.actions.core.tasks.TaskTableAction"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/tasks/TaskTable.jsp" />
+    </action>
+    <action path="/CoreTasksTaskDispatcher"
+      type="com.bea.console.actions.core.tasks.TaskDispatcherAction"
+      name="genericTableForm" scope="request" validate="false">
+    </action>
+    <action path="/ActivationTaskSummary"
+      type="com.bea.console.actions.core.tasks.ActivationTaskSummaryAction"
+      name="taskSummaryForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/tasks/ActivationTaskSummary.jsp" />
+    </action>
+    <action path="/DefaultTaskSummary"
+      type="com.bea.console.actions.core.tasks.DefaultTaskSummaryAction"
+      name="taskSummaryForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/tasks/DefaultTaskSummary.jsp" />
+    </action>
+    <action path="/DeploymentTaskSummary"
+      type="com.bea.console.actions.core.tasks.DeploymentTaskSummaryAction"
+      name="taskSummaryForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/tasks/DeploymentTaskSummary.jsp" />
+    </action>
+    <action path="/DeploymentTaskTargets"
+      type="com.bea.console.actions.core.tasks.DeploymentTaskTargetsAction"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/tasks/DeploymentTaskTargets.jsp" />
+    </action>
+    <action path="/NoTask"
+      type="com.bea.console.actions.core.tasks.NoTaskAction"
+      name="taskSummaryForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/tasks/NoTask.jsp" />
+    </action>
+    <action path="/ServerLifeCycleTaskSummary"
+      type="com.bea.console.actions.core.tasks.ServerLifeCycleTaskSummaryAction"
+      name="taskSummaryForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/tasks/ServerLifeCycleTaskSummary.jsp" />
+    </action>
+    <action path="/ServiceMigrationTaskSummary"
+      type="com.bea.console.actions.core.tasks.ServiceMigrationTaskSummary"
+      name="serviceMigrationTaskSummaryForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/tasks/ServiceMigrationTaskSummary.jsp" />
+    </action>
+    <action path="/ServerLifeCycleTaskLog"
+      type="com.bea.console.actions.core.tasks.ServerLifeCycleTaskLogAction"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/tasks/ServerLifeCycleTaskLog.jsp" />
+    </action>
+    <action path="/CoreMachineUnixMachineConfigGeneral"
+      type="com.bea.console.actions.core.machine.UnixMachineConfigGeneralAction"
+      name="unixMachineConfigGeneralForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/machine/UnixMachineConfigGeneralForm.jsp" />
+    </action>
+    <action path="/CoreMachineUnixMachineConfigGeneralUpdated"
+      type="com.bea.console.actions.core.machine.UnixMachineConfigGeneralUpdatedAction"
+      name="unixMachineConfigGeneralForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/CoreMachineUnixMachineConfigGeneral.do" />
+    </action>
+    <action path="/CoreVirtualhostVirtualHostConfigGeneral"
+      type="com.bea.console.actions.core.virtualhost.VirtualHostConfigGeneralAction"
+      name="virtualHostConfigGeneralForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/virtualhost/VirtualHostConfigGeneralForm.jsp" />
+    </action>
+    <action path="/CoreVirtualhostVirtualHostConfigGeneralUpdated"
+      type="com.bea.console.actions.core.virtualhost.VirtualHostConfigGeneralUpdatedAction"
+      name="virtualHostConfigGeneralForm" scope="request" validate="false"
+      input="success">
+      <forward name="success"
+        path="/CoreVirtualhostVirtualHostConfigGeneral.do" />
+    </action>
+    <action path="/CoreVirtualhostVirtualHostConfigLogging"
+      type="com.bea.console.actions.core.virtualhost.VirtualHostConfigLoggingAction"
+      name="virtualHostConfigLoggingForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/virtualhost/VirtualHostConfigLoggingForm.jsp" />
+    </action>
+    <action path="/CoreVirtualhostVirtualHostConfigLoggingUpdated"
+      type="com.bea.console.actions.core.virtualhost.VirtualHostConfigLoggingUpdatedAction"
+      name="virtualHostConfigLoggingForm" scope="request" validate="false"
+      input="success">
+      <forward name="success"
+        path="/CoreVirtualhostVirtualHostConfigLogging.do" />
+    </action>
+    <action path="/CoreVirtualhostVirtualHostConfigHttp"
+      type="com.bea.console.actions.core.virtualhost.VirtualHostConfigHttpAction"
+      name="virtualHostConfigHttpForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/virtualhost/VirtualHostConfigHttpForm.jsp" />
+    </action>
+    <action path="/CoreVirtualhostVirtualHostConfigHttpUpdated"
+      type="com.bea.console.actions.core.virtualhost.VirtualHostConfigHttpUpdatedAction"
+      name="virtualHostConfigHttpForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/CoreVirtualhostVirtualHostConfigHttp.do" />
+    </action>
+    <action path="/CoreVirtualhostVirtualHostTargetdeploy"
+      type="com.bea.console.actions.TargetDeployAction" name="targetDeployForm"
+      scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/virtualhost/VirtualHostTargetdeployForm.jsp" />
+    </action>
+    <action path="/CoreVirtualhostVirtualHostTargetdeployUpdated"
+      type="com.bea.console.actions.TargetDeployUpdatedAction"
+      name="targetDeployForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/CoreVirtualhostVirtualHostTargetdeploy.do" />
+    </action>
+    <action path="/CoreVirtualhostVirtualHostTable"
+      type="com.bea.console.actions.core.virtualhost.VirtualHostTableAction"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/virtualhost/VirtualHostTable.jsp" />
+    </action>
+    <action path="/XMLEntityCacheTable"
+      type="com.bea.console.actions.xmlregistry.XMLEntityCacheTableAction"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/xmlregistry/XMLEntityCacheTable.jsp" />
+    </action>
+    <action path="/XMLEntityCacheConfig"
+      type="com.bea.console.actions.xmlregistry.XMLEntityCacheConfigAction"
+      name="xmlEntityCacheConfigForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/xmlregistry/XMLEntityCacheConfig.jsp" />
+    </action>
+    <action path="/XMLEntityCacheConfigUpdated"
+      type="com.bea.console.actions.xmlregistry.XMLEntityCacheConfigUpdatedAction"
+      name="xmlEntityCacheConfigForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/XMLEntityCacheConfig.do" />
+    </action>
+    <action path="/XMLEntityCacheMonitorCurrent"
+      type="com.bea.console.actions.xmlregistry.XMLEntityCacheMonitorCurrentAction"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/xmlregistry/XMLEntityCacheMonitorCurrent.jsp" />
+    </action>
+    <action path="/XMLEntityCacheMonitorCumulative"
+      type="com.bea.console.actions.xmlregistry.XMLEntityCacheMonitorCumulativeAction"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/xmlregistry/XMLEntityCacheMonitorCumulative.jsp" />
+    </action>
+    <action path="/XMLEntityCacheMonitorHistorical"
+      type="com.bea.console.actions.xmlregistry.XMLEntityCacheMonitorHistoricalAction"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/xmlregistry/XMLEntityCacheMonitorHistorical.jsp" />
+    </action>
+    <action path="/XmlregistryXMLEntitySpecRegistryEntryConfig"
+      type="com.bea.console.actions.xmlregistry.XMLEntitySpecRegistryEntryConfigAction"
+      name="xmlEntitySpecRegistryEntryConfigForm" scope="request"
+      validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/xmlregistry/XMLEntitySpecRegistryEntryConfigForm.jsp" />
+    </action>
+    <action path="/XmlregistryXMLEntitySpecRegistryEntryConfigUpdated"
+      type="com.bea.console.actions.xmlregistry.XMLEntitySpecRegistryEntryConfigUpdatedAction"
+      name="xmlEntitySpecRegistryEntryConfigForm" scope="request"
+      validate="false" input="success">
+      <forward name="success"
+        path="/XmlregistryXMLEntitySpecRegistryEntryConfig.do" />
+    </action>
+    <action path="/XmlregistryXMLParserSelectRegistryEntryConfig"
+      type="com.bea.console.actions.xmlregistry.XMLParserSelectRegistryEntryConfigAction"
+      name="xmlParserSelectRegistryEntryConfigForm" scope="request"
+      validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/xmlregistry/XMLParserSelectRegistryEntryConfigForm.jsp" />
+    </action>
+    <action path="/XmlregistryXMLParserSelectRegistryEntryConfigUpdated"
+      type="com.bea.console.actions.xmlregistry.XMLParserSelectRegistryEntryConfigUpdatedAction"
+      name="xmlParserSelectRegistryEntryConfigForm" scope="request"
+      validate="false" input="success">
+      <forward name="success"
+        path="/XmlregistryXMLParserSelectRegistryEntryConfig.do" />
+    </action>
+    <action path="/XmlregistryXMLRegistryConfig"
+      type="com.bea.console.actions.xmlregistry.XMLRegistryConfigAction"
+      name="xmlRegistryConfigForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/xmlregistry/XMLRegistryConfigForm.jsp" />
+    </action>
+    <action path="/XmlregistryXMLRegistryConfigUpdated"
+      type="com.bea.console.actions.xmlregistry.XMLRegistryConfigUpdatedAction"
+      name="xmlRegistryConfigForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/XmlregistryXMLRegistryConfig.do" />
+    </action>
+    <action path="/XmlregistryXMLRegistryTargetdeploy"
+      type="com.bea.console.actions.xmlregistry.XMLRegistryTargetdeployAction"
+      name="xmlRegistryTargetdeployForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/xmlregistry/XMLRegistryTargetdeployForm.jsp" />
+    </action>
+    <action path="/XmlregistryXMLRegistryTargetdeployUpdated"
+      type="com.bea.console.actions.xmlregistry.XMLRegistryTargetdeployUpdatedAction"
+      name="xmlRegistryTargetdeployForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/XmlregistryXMLRegistryTargetdeploy.do" />
+    </action>
+    <action path="/XmlregistryXMLRegistryContentsParserSelect"
+      type="com.bea.console.actions.xmlregistry.XMLRegistryContentsParserSelectAction"
+      name="xmlRegistryContentsParserSelectForm" scope="request"
+      validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/xmlregistry/XMLRegistryContentsParserSelectForm.jsp" />
+    </action>
+    <action path="/XmlregistryXMLRegistryContentsEntitySpec"
+      type="com.bea.console.actions.xmlregistry.XMLRegistryContentsEntitySpecAction"
+      name="xmlRegistryContentsEntitySpecForm" scope="request"
+      validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/xmlregistry/XMLRegistryContentsEntitySpecForm.jsp" />
+    </action>
+    <action path="/XmlregistryXMLRegistryTable"
+      type="com.bea.console.actions.xmlregistry.XMLRegistryTableAction"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/xmlregistry/XMLRegistryTable.jsp" />
+    </action>
+    <!-- role and policy editing for servers -->
+    <action path="/CoreServerServerRolesTable"
+      type="com.bea.console.actions.core.server.ServerRolesTableAction"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/server/ServerRolesTable.jsp" />
+    </action>
+    <action path="/CoreWorkCapacityConfig"
+      type="com.bea.console.actions.core.work.CapacityConfigAction"
+      name="capacityConfigForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/work/CapacityConfigForm.jsp" />
+    </action>
+    <action path="/CoreWorkCapacityConfigUpdated"
+      type="com.bea.console.actions.core.work.CapacityConfigUpdatedAction"
+      name="capacityConfigForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/CoreWorkCapacityConfig.do" />
+    </action>
+    <action path="/CoreWorkCapacityTargetDeploy"
+      type="com.bea.console.actions.TargetDeployAction" name="targetDeployForm"
+      scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/work/CapacityTargetDeployForm.jsp" />
+    </action>
+    <action path="/CoreWorkCapacityTargetDeployUpdated"
+      type="com.bea.console.actions.TargetDeployUpdatedAction"
+      name="targetDeployForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/CoreWorkCapacityTargetDeploy.do" />
+    </action>
+    <action path="/CoreWorkContextRequestClassConfig"
+      type="com.bea.console.actions.core.work.ContextRequestClassConfigAction"
+      name="contextRequestClassConfigForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/work/ContextRequestClassConfigForm.jsp" />
+    </action>
+    <action path="/CoreWorkContextRequestClassConfigUpdated"
+      type="com.bea.console.actions.core.work.ContextRequestClassConfigUpdatedAction"
+      name="contextRequestClassConfigForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/CoreWorkContextRequestClassConfig.do" />
+    </action>
+    <action path="/CoreWorkContextRequestClassTargetDeploy"
+      type="com.bea.console.actions.TargetDeployAction" name="targetDeployForm"
+      scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/work/ContextRequestClassTargetDeployForm.jsp" />
+    </action>
+    <action path="/CoreWorkContextRequestClassTargetDeployUpdated"
+      type="com.bea.console.actions.TargetDeployUpdatedAction"
+      name="targetDeployForm" scope="request" validate="false"
+      input="success">
+      <forward name="success"
+        path="/CoreWorkContextRequestClassTargetDeploy.do" />
+    </action>
+    <action path="/CoreWorkContextCaseConfig"
+      type="com.bea.console.actions.core.work.ContextCaseConfigAction"
+      name="contextCaseConfigForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/work/ContextCaseConfigForm.jsp" />
+    </action>
+    <action path="/CoreWorkContextCaseConfigUpdated"
+      type="com.bea.console.actions.core.work.ContextCaseConfigUpdatedAction"
+      name="contextCaseConfigForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/CoreWorkContextCaseConfig.do" />
+    </action>
+    <action path="/CoreWorkFairShareRequestClassConfig"
+      type="com.bea.console.actions.core.work.FairShareRequestClassConfigAction"
+      name="fairShareRequestClassConfigForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/work/FairShareRequestClassConfigForm.jsp" />
+    </action>
+    <action path="/CoreWorkFairShareRequestClassConfigUpdated"
+      type="com.bea.console.actions.core.work.FairShareRequestClassConfigUpdatedAction"
+      name="fairShareRequestClassConfigForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/CoreWorkFairShareRequestClassConfig.do" />
+    </action>
+    <action path="/CoreWorkFairShareRequestClassTargetDeploy"
+      type="com.bea.console.actions.TargetDeployAction" name="targetDeployForm"
+      scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/work/FairShareRequestClassTargetDeployForm.jsp" />
+    </action>
+    <action path="/CoreWorkFairShareRequestClassTargetDeployUpdated"
+      type="com.bea.console.actions.TargetDeployUpdatedAction"
+      name="targetDeployForm" scope="request" validate="false"
+      input="success">
+      <forward name="success"
+        path="/CoreWorkFairShareRequestClassTargetDeploy.do" />
+    </action>
+    <action path="/CoreWorkWorkManagerConfig"
+      type="com.bea.console.actions.core.work.WorkManagerConfigAction"
+      name="workManagerConfigForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/work/WorkManagerConfigForm.jsp" />
+    </action>
+    <action path="/CoreWorkWorkManagerConfigUpdated"
+      type="com.bea.console.actions.core.work.WorkManagerConfigUpdatedAction"
+      name="workManagerConfigForm" scope="request" validate="false"
+      input="success">
+      <forward name="retry" path="/CoreWorkWorkManagerConfig.do" />
+      <forward name="success" path="/CoreWorkWorkManagerConfig.do" />
+    </action>
+    <action path="/CoreWorkWorkManagerTargetDeploy"
+      type="com.bea.console.actions.TargetDeployAction" name="targetDeployForm"
+      scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/work/WorkManagerTargetDeployForm.jsp" />
+    </action>
+    <action path="/CoreWorkWorkManagerTargetDeployUpdated"
+      type="com.bea.console.actions.TargetDeployUpdatedAction"
+      name="targetDeployForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/CoreWorkWorkManagerTargetDeploy.do" />
+    </action>
+    <action path="/CoreWorkManagerRuntimeDispatcher"
+      type="com.bea.console.actions.core.work.WorkManagerRuntimeDispatcherAction"
+      name="genericTableForm" scope="request" validate="false">
+    </action>
+    <action path="/CoreWorkMaxThreadsConstraintConfig"
+      type="com.bea.console.actions.core.work.MaxThreadsConstraintConfigAction"
+      name="maxThreadsConstraintConfigForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/work/MaxThreadsConstraintConfigForm.jsp" />
+    </action>
+    <action path="/CoreWorkMaxThreadsConstraintConfigUpdated"
+      type="com.bea.console.actions.core.work.MaxThreadsConstraintConfigUpdatedAction"
+      name="maxThreadsConstraintConfigForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/CoreWorkMaxThreadsConstraintConfig.do" />
+    </action>
+    <action path="/CoreWorkMaxThreadsConstraintTargetDeploy"
+      type="com.bea.console.actions.TargetDeployAction" name="targetDeployForm"
+      scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/work/MaxThreadsConstraintTargetDeployForm.jsp" />
+    </action>
+    <action path="/CoreWorkMaxThreadsConstraintTargetDeployUpdated"
+      type="com.bea.console.actions.TargetDeployUpdatedAction"
+      name="targetDeployForm" scope="request" validate="false"
+      input="success">
+      <forward name="success"
+        path="/CoreWorkMaxThreadsConstraintTargetDeploy.do" />
+    </action>
+    <action path="/CoreWorkMinThreadsConstraintConfig"
+      type="com.bea.console.actions.core.work.MinThreadsConstraintConfigAction"
+      name="minThreadsConstraintConfigForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/work/MinThreadsConstraintConfigForm.jsp" />
+    </action>
+    <action path="/CoreWorkMinThreadsConstraintConfigUpdated"
+      type="com.bea.console.actions.core.work.MinThreadsConstraintConfigUpdatedAction"
+      name="minThreadsConstraintConfigForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/CoreWorkMinThreadsConstraintConfig.do" />
+    </action>
+    <action path="/CoreWorkMinThreadsConstraintTargetDeploy"
+      type="com.bea.console.actions.TargetDeployAction" name="targetDeployForm"
+      scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/work/MinThreadsConstraintTargetDeployForm.jsp" />
+    </action>
+    <action path="/CoreWorkMinThreadsConstraintTargetDeployUpdated"
+      type="com.bea.console.actions.TargetDeployUpdatedAction"
+      name="targetDeployForm" scope="request" validate="false"
+      input="success">
+      <forward name="success"
+        path="/CoreWorkMinThreadsConstraintTargetDeploy.do" />
+    </action>
+    <action path="/CoreWorkManagerTable"
+      type="com.bea.console.actions.core.work.WorkManagerTableAction"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/work/WorkManagerTable.jsp" />
+    </action>
+    <action path="/CoreWorkResponseTimeRequestClassConfig"
+      type="com.bea.console.actions.core.work.ResponseTimeRequestClassConfigAction"
+      name="responseTimeRequestClassConfigForm" scope="request"
+      validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/work/ResponseTimeRequestClassConfigForm.jsp" />
+    </action>
+    <action path="/CoreWorkResponseTimeRequestClassConfigUpdated"
+      type="com.bea.console.actions.core.work.ResponseTimeRequestClassConfigUpdatedAction"
+      name="responseTimeRequestClassConfigForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/CoreWorkResponseTimeRequestClassConfig.do" />
+    </action>
+    <action path="/CoreWorkResponseTimeRequestClassTargetDeploy"
+      type="com.bea.console.actions.TargetDeployAction" name="targetDeployForm"
+      scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/work/ResponseTimeRequestClassTargetDeployForm.jsp" />
+    </action>
+    <action path="/CoreWorkResponseTimeRequestClassTargetDeployUpdated"
+      type="com.bea.console.actions.TargetDeployUpdatedAction"
+      name="targetDeployForm" scope="request" validate="false"
+      input="success">
+      <forward name="success"
+        path="/CoreWorkResponseTimeRequestClassTargetDeploy.do" />
+    </action>
+    <action path="/JNDIBindingSecurityRolesTable"
+      type="com.bea.console.actions.jndi.JNDIBindingSecurityRolesTableAction"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/jndi/JNDIBindingRolesTable.jsp" />
+    </action>
+    <action path="/JNDIContextSecurityRolesTable"
+      type="com.bea.console.actions.jndi.JNDIContextSecurityRolesTableAction"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/jndi/JNDIContextRolesTable.jsp" />
+    </action>
+    <action path="/JNDIContentSecurityRolesTable"
+      type="com.bea.console.actions.jndi.JNDIContentSecurityRolesTableAction"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/jndi/JNDIContentRolesTable.jsp" />
+    </action>
+    <action path="/ForeignJNDIProviderConfigGeneral"
+      type="com.bea.console.actions.core.jndi.ForeignJNDIProviderConfigGeneralAction"
+      name="foreignJNDIProviderConfigForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/jndi/ForeignJNDIProviderConfigGeneral.jsp" />
+    </action>
+    <action path="/ForeignJNDIProviderConfigGeneralUpdated"
+      type="com.bea.console.actions.core.jndi.ForeignJNDIProviderConfigGeneralUpdatedAction"
+      name="foreignJNDIProviderConfigForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/ForeignJNDIProviderConfigGeneral.do" />
+    </action>
+    <action path="/ForeignJNDIProviderConfigLinks"
+      type="com.bea.console.actions.core.jndi.ForeignJNDIProviderConfigLinksAction"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/jndi/ForeignJNDIProviderConfigLinks.jsp" />
+    </action>
+    <action path="/ForeignJNDIProviderTargetdeploy"
+      type="com.bea.console.actions.TargetDeployAction" name="targetDeployForm"
+      scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/jndi/ForeignJNDIProviderTargetdeployForm.jsp" />
+    </action>
+    <action path="/ForeignJNDIProviderTargetdeployUpdated"
+      type="com.bea.console.actions.TargetDeployUpdatedAction"
+      name="targetDeployForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/ForeignJNDIProviderTargetdeploy.do" />
+    </action>
+    <action path="/ForeignJNDIProviderTable"
+      type="com.bea.console.actions.core.jndi.ForeignJNDIProviderTableAction"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/jndi/ForeignJNDIProviderTable.jsp" />
+    </action>
+    <action path="/ForeignJNDILinkConfig"
+      type="com.bea.console.actions.core.jndi.ForeignJNDILinkConfigAction"
+      name="foreignJNDILinkConfigForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/core/jndi/ForeignJNDILinkConfig.jsp" />
+    </action>
+    <action path="/ForeignJNDILinkConfigUpdated"
+      type="com.bea.console.actions.core.jndi.ForeignJNDILinkConfigUpdatedAction"
+      name="foreignJNDILinkConfigForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/ForeignJNDILinkConfig.do" />
+    </action>
+  </action-mappings>
+  <controller
+    processorClass="com.bea.console.internal.ConsolePageFlowRequestProcessor">
+    <set-property property="nocache" value="true" />
+    <set-property property="contentType" value="text/html;charset=UTF-8" />
+  </controller>
+  <message-resources factory="com.bea.console.utils.ConsoleMessageResourcesFactory"  null="false" parameter="core" key="core"/>
+</struts-config>

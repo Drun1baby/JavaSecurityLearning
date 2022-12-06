@@ -1,0 +1,807 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portal:root xmlns:netuix="http://www.bea.com/servers/netuix/xsd/controls/netuix/1.0.0"
+             xmlns:html="http://www.w3.org/1999/xhtml-netuix-modified/1.0.0"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:portal="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0"
+             xsi:schemaLocation="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0 portal-support-1_0_0.xsd">
+<!--
+    Definition file for the pages for interacting with security
+    realm configurations in WebLogic Server.
+
+    Copyright (c) 2004,2011, Oracle and/or its affiliates. All rights reserved.
+-->
+  <netuix:book markupName="book" definitionLabel="SecurityRealm" title="book.title"
+               presentationClass="invisible">
+    <netuix:content>
+      <netuix:book markupName="book" definitionLabel="SecurityRealmBook" title="book.title"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="SecurityRealmPages" title="not.used"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:book markupName="book" definitionLabel="SecurityRealmGeneralBook"
+                               title="SecurityRealmBook"
+                               hidden="true">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+                  <!-- Definition for the config tab -->
+                  <netuix:book markupName="book" definitionLabel="SecurityRealmConfigPages"
+                                   title="tab.config.label">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                        <netuix:content>
+                      <!-- Definition for the general tab -->
+                      <netuix:page markupName="page" definitionLabel="RealmgeneralTabPage"
+                                       presentationClass="page-content"
+                                       title="tab.general.label">
+                            <netuix:meta name="helpid" content="Security.security.realm.realmgeneral.title;security"/>
+                            <netuix:meta name="breadcrumb-context" content="handle"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="SecurityRealmRealmGeneralPortlet">
+                                    <netuix:strutsContent module="/security" action="SecurityRealmRealmGeneral"
+                                                          refreshAction="SecurityRealmRealmGeneral"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the security store tab -->
+                      <netuix:page markupName="page" definitionLabel="RealmsecuritystoreTabPage"
+                                       presentationClass="page-content"
+                                       title="tab.securitystore.label">
+                            <netuix:meta name="helpid"
+                                         content="Security.security.realm.realmsecuritystore.title;security"/>
+                            <netuix:meta name="breadcrumb-context" content="handle"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="SecurityRealmRealmSecurityStorePortlet">
+                                    <netuix:strutsContent module="/security" action="SecurityRealmRealmSecurityStore"
+                                                          refreshAction="SecurityRealmRealmSecurityStore"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the userlockout tab -->
+                      <netuix:page markupName="page" definitionLabel="RealmuserlockoutTabPage"
+                                       presentationClass="page-content"
+                                       title="tab.userlockout.label">
+                            <netuix:meta name="helpid" content="Security.security.realm.realmuserlockout.title;security"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="SecurityRealmRealmUserlockoutPortlet">
+                                    <netuix:strutsContent module="/security" action="SecurityRealmRealmUserlockout"
+                                                          refreshAction="SecurityRealmRealmUserlockout"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the Performance tab -->
+                      <netuix:page markupName="page" definitionLabel="RealmPerformanceTabPage"
+                                       presentationClass="page-content"
+                                       title="tab.performance.label">
+                            <netuix:meta name="helpid" content="Security.security.realm.performance.title;security"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="SecurityRealPerformancePortlet">
+                                    <netuix:strutsContent module="/security" action="SecurityRealmPerformance"
+                                                          refreshAction="SecurityRealmPerformance"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                        </netuix:content>
+                      </netuix:book>
+                      <!-- Definition for the user management parent tab -->
+                  <netuix:book markupName="book" definitionLabel="RealmUserManagementTabPage"
+                                   title="tab.usersandgroups.label">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                        <netuix:content>
+                      <!-- Definition for the "users" sub tab -->
+                      <netuix:page markupName="page" definitionLabel="RealmUserManagementUserTabPage"
+                                       presentationClass="page-table"
+                                       title="tab.UserManagementUsers.label">
+                            <netuix:meta name="helpid" content="Security.security.realm.usertable.title;security"/>
+                            <netuix:meta name="breadcrumb" content="tab.usersandgroups.label"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="SecurityRealmRealmUserManagementUsersPortlet">
+                                    <netuix:strutsContent module="/security" action="SecurityRealmRealmUserManagementUsers"
+                                                          refreshAction="SecurityRealmRealmUserManagementUsers"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- definition for the groups sub tab -->
+                      <netuix:page markupName="page" definitionLabel="RealmUserManagementGroupTabPage"
+                                       presentationClass="page-table"
+                                       title="tab.UserManagementGroups.label">
+                            <netuix:meta name="helpid" content="Security.security.realm.grouptable.title;security"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="SecurityRealmRealmUserManagementGroupsPortlet">
+                                    <netuix:strutsContent module="/security" action="SecurityRealmRealmUserManagementGroups"
+                                                          refreshAction="SecurityRealmRealmUserManagementGroups"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                        </netuix:content>
+                      </netuix:book>
+                      <!-- Role and Policies Management -->
+                  <netuix:book markupName="book" definitionLabel="RealmRolesAndPoliciesTabPage"
+                                   title="tab.rolesandpolicies.label">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                        <netuix:content>
+                      <!-- Definition for the "Global Roles" sub tab -->
+                      <netuix:page markupName="page" definitionLabel="RealmGlobalRolesTabPage"
+                                       presentationClass="page-table"
+                                       title="tab.realm.roles.label">
+                            <netuix:meta name="helpid" content="Security.security.globalrole.table.title;security"/>
+                            <netuix:meta name="breadcrumb" content="tab.realm.roles.label;key"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="SecurityRealmGlobalRolesPortlet">
+                                    <netuix:strutsContent module="/security" action="SecurityRealmGlobalRolesTable"
+                                                          refreshAction="SecurityRealmGlobalRolesTable"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+
+                          <!-- Definition for the "Global policies" sub tab -->
+                      <netuix:page markupName="page" definitionLabel="RealmGlobalPoliciesTabPage"
+                                       presentationClass="page-table"
+                                       title="tab.realm.policies.label">
+                            <netuix:meta name="helpid" content="Security.security.globalpolicy.table.title;security"/>
+                            <netuix:meta name="breadcrumb" content="tab.realm.policies.label;key"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="SecurityRealmGlobalPoliciesPortlet">
+                                    <netuix:strutsContent module="/security" action="SecurityRealmGlobalPoliciesTable"
+                                                          refreshAction="SecurityRealmGlobalPoliciesTable"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                        </netuix:content>
+                      </netuix:book>
+
+                      <!-- Global Credential Mappings -->
+                  <netuix:book markupName="book" definitionLabel="RealmGlobalCredentialMappingBook"
+                                   title="tab.credentialmapping.label">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                        <netuix:content>
+                      <!-- Definition for the UserPassword tab -->
+                      <netuix:page markupName="page"
+                                       definitionLabel="RealmGlobalCredentialMappingUserPasswordTabPage"
+                                       presentationClass="page-table"
+                                       title="tab.default.label">
+                            <netuix:meta name="helpid"
+                                         content="Security.security.globalcredentialmapping.userpassword.table.title;security"/>
+                            <netuix:meta name="breadcrumb" content="tab.credentialmapping.label"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="RealmGlobalCredentialMappingUserPasswordPortlet">
+                                    <netuix:strutsContent module="/security"
+                                                          action="SecurityRealmGlobalCredentialMappingUserPasswordTable"
+                                                          refreshAction="SecurityRealmGlobalCredentialMappingUserPasswordTable"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- definition for the PKI tab -->
+                      <netuix:page markupName="page" definitionLabel="RealmGlobalCredentialMappingPKITabPage"
+                                       presentationClass="page-table"
+                                       title="tab.pki.label">
+                            <netuix:meta name="helpid"
+                                         content="Security.security.globalcredentialmapping.pki.table.title;security"/>
+                            <netuix:meta name="breadcrumb" content="tab.credentialmapping.label"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="RealmGlobalCredentialMappingPKIPortlet">
+                                    <netuix:strutsContent module="/security" action="SecurityRealmGlobalCredentialMappingPKITable"
+                                                          refreshAction="SecurityRealmGlobalCredentialMappingPKITable"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                        </netuix:content>
+                      </netuix:book>
+
+                      <!-- Definition for the providers tab -->
+                  <netuix:book markupName="book" definitionLabel="RealmprovidersTabPage"
+                                   title="tab.providers.label">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                        <netuix:content>
+                      <!-- Definition for the authentication providers tab -->
+                      <netuix:page markupName="page" definitionLabel="RealmauthenticatorTabPage"
+                                       presentationClass="page-table"
+                                       title="tab.authentication.label">
+                            <netuix:meta name="helpid"
+                                         content="Security.security.providers.authenticationprovider.title;security"/>
+                            <netuix:meta name="breadcrumb" content="tab.providers.label"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="SecurityRealmAuthenticationProviderTablePortlet">
+                                    <netuix:strutsContent module="/security" action="SecurityRealmAuthenticationProviderTable"
+                                                          refreshAction="SecurityRealmAuthenticationProviderTable"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the authorization providers tab -->
+                      <!-- Definition for the password validators tab -->
+                      <netuix:page markupName="page" definitionLabel="RealmPasswordValidatorTabPage"
+                                       presentationClass="page-table"
+                                       title="tab.passwordvalidation.label">
+                            <netuix:meta name="helpid"
+                                         content="Security.security.providers.passwordvalidator.title;security"/>
+                            <netuix:meta name="breadcrumb" content="tab.providers.label"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="SecurityRealmPasswordValidatorTablePortlet">
+                                    <netuix:strutsContent module="/security" action="SecurityRealmPasswordValidatorTable"
+                                                          refreshAction="SecurityRealmPasswordValidatorTable"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the password validators providers tab -->
+                      <netuix:page markupName="page" definitionLabel="RealmauthorizerTabPage"
+                                       presentationClass="page-table"
+                                       title="tab.authorization.label">
+                            <netuix:meta name="helpid" content="Security.security.providers.authorizer.title;security"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="SecurityRealmAuthorizationProviderTablePortlet">
+                                    <netuix:strutsContent module="/security" action="SecurityRealmAuthorizationProviderTable"
+                                                          refreshAction="SecurityRealmAuthorizationProviderTable"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the adjudication providers tab -->
+                      <netuix:page markupName="page" definitionLabel="RealmadjudicatorTabPage"
+                                       presentationClass="page-table"
+                                       title="tab.adjudication.label">
+                            <netuix:meta name="helpid" content="Security.security.providers.adjudicator.title;security"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="SecurityRealmAdjudicationProviderTablePortlet">
+                                    <netuix:strutsContent module="/security" action="SecurityRealmAdjudicationProviderTable"
+                                                          refreshAction="SecurityRealmAdjudicationProviderTable"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- definition for the role mapping provider's page -->
+                      <netuix:page markupName="page" definitionLabel="RealmRoleMappingTabPage"
+                                       presentationClass="page-table"
+                                       title="tab.rolemapping.label">
+                            <netuix:meta name="helpid" content="Security.security.providers.rolemapping.title;security"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="SecurityRealmRoleMappingProviderPortlet">
+                                    <netuix:strutsContent module="/security" action="SecurityRealmRoleMappingProviderTable"
+                                                          refreshAction="SecurityRealmRoleMappingProviderTable"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the auditing providers tab -->
+                      <netuix:page markupName="page" definitionLabel="RealmauditorTabPage"
+                                       presentationClass="page-table"
+                                       title="tab.auditing.label">
+                            <netuix:meta name="helpid"
+                                         content="Security.security.providers.auditingprovidertable.title;security"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="SecurityRealmAuditingProvidersTablePortlet">
+                                    <netuix:strutsContent module="/security" action="SecurityRealmAuditingProviderTable"
+                                                          refreshAction="SecurityRealmAuditingProviderTable"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the credential mapping providers tab -->
+                      <netuix:page markupName="page" definitionLabel="RealmcredmapTabPage"
+                                       presentationClass="page-table"
+                                       title="tab.credentialmappingproviders.label">
+                            <netuix:meta name="helpid"
+                                         content="Security.security.providers.credentialmappingprovider.title;security"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="SecurityRealmCredentialMappingProvidersTablePortlet">
+                                    <netuix:strutsContent module="/security" action="SecurityRealmCredentialMappingProviderTable"
+                                                          refreshAction="SecurityRealmCredentialMappingProviderTable"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the cert path provider's table page -->
+                      <netuix:page markupName="page" definitionLabel="RealmCertPathTabPage"
+                                       presentationClass="page-table"
+                                       title="tab.certpathprovider.label">
+                            <netuix:meta name="helpid"
+                                         content="Security.security.providers.certpathprovidertable.title;security"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="SecurityRealmCertPathProvidersTablePortlet">
+                                    <netuix:strutsContent module="/security" action="SecurityRealmCertPathProviderTable"
+                                                          refreshAction="SecurityRealmCertPathProviderTable"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the keystore providers tab -->
+                      <netuix:page markupName="page" definitionLabel="RealmkeystoreTabPage"
+                                       presentationClass="page-table"
+                                       title="tab.keystore.label">
+                            <netuix:meta name="helpid"
+                                         content="Security.security.providers.keystoreprovider.title;security"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="SecurityRealmKeystoreProvidersTablePortlet">
+                                    <netuix:strutsContent module="/security" action="SecurityRealmKeystoreProviderTable"
+                                                          refreshAction="SecurityRealmKeystoreProviderTable"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                        </netuix:content>
+                      </netuix:book>
+                      <!-- Definition of the Migration tab -->
+                  <netuix:book markupName="book" definitionLabel="RealmmigrationTabPage"
+                                   title="tab.migration.label">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                        <netuix:content>
+                      <!-- Definition for the Migration/Import tab -->
+                      <netuix:page markupName="page" definitionLabel="RealmimportTabPage"
+                                       presentationClass="page-content"
+                                       title="tab.import.label">
+                            <netuix:meta name="helpid" content="Security.security.realm.migrationimport.title;security"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="SecurityRealmMigrationImportPortlet">
+                                    <netuix:strutsContent module="/security" action="SecurityRealmRealmMigrationImport"
+                                                          refreshAction="SecurityRealmRealmMigrationImport"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the Migration/Export tab -->
+                      <netuix:page markupName="page" definitionLabel="RealmexportTabPage"
+                                       presentationClass="page-content"
+                                       title="tab.export.label">
+                            <netuix:meta name="helpid" content="Security.security.realm.migrationexport.title;security"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="SecurityRealmMigrationExportPortlet">
+                                    <netuix:strutsContent module="/security" action="SecurityRealmRealmMigrationExport"
+                                                          refreshAction="SecurityRealmRealmMigrationExport"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                        </netuix:content>
+                      </netuix:book>
+                    </netuix:content>
+                  </netuix:book>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Realm table page -->
+  <netuix:book definitionLabel="SecurityRealmTableBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="security.realm.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="SecurityRealmRealmTablePage"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-table">
+            <netuix:meta name="helpid" content="Security.security.realm.realmtable.title;security"/>
+            <netuix:meta name="breadcrumb" content="security.realm.title"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="SecurityRealmRealmTablePortlet">
+                    <netuix:strutsContent module="/security" action="SecurityRealmRealmTable"
+                                          refreshAction="SecurityRealmRealmTable"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <netuix:book definitionLabel="SecurityCreateRealmBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.create.realm.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <!-- Definition for the Realm creation assistant page -->
+    <netuix:content>
+          <netuix:page markupName="page" definitionLabel="SecurityRealmCreateRealm" title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="Security.security.realm.createrealm.page.title;security"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="SecurityRealmCreateRealmPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/security/realm/createrealm/CreateRealm.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <netuix:book definitionLabel="SecurityDeleteRealmBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.delete.realm.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <!-- Definition for the Realm deletion assistant page -->
+    <netuix:content>
+          <netuix:page markupName="page" definitionLabel="SecurityRealmDeleteRealm" title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="Security.security.realm.deleterealm.title;security"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="SecurityRealmDeleteRealmPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/security/realm/deleterealm/DeleteRealm.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- definiton for the roles pages -->
+  <netuix:book definitionLabel="SecurityRealmRolesBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.realm.roles.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="SecurityRealmRolesTabPage" title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid" content="Security.security.role.editrole.title;security"/>
+            <netuix:meta name="breadcrumb" content="assistant.realm.roles.title"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="SecurityRealmRolePortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/security/realm/roles/edit/EditRealmRole.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- definition for the create realm roles assistant -->
+  <netuix:book definitionLabel="SecurityRealmCreateRolesBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.realm.roles.create.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="SecurityRealmCreateRolesPage"
+                       title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid" content="Security.security.role.createrole.title;security"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="SecurityRealmCreateRolesPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/security/realm/roles/create/CreateRealmRole.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- definition for the delete realm roles assistant -->
+  <netuix:book definitionLabel="SecurityRealmDeleteRolesBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.realm.roles.delete.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="SecurityRealmDeleteRolesPage"
+                       title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid" content="Security.realm.roles.delete.page.title;security"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="SecurityRealmDeleteRolesPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/security/realm/roles/delete/DeleteRealmRole.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <netuix:book markupName="book" definitionLabel="GlobalRolePolicyTabPage"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="tab.globalroles.label"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+      <!-- Definition for the "Global Roles" table -->
+      <netuix:page markupName="page" definitionLabel="RealmRolesTabPage" title="not.used"
+                       presentationClass="page-table">
+            <netuix:meta name="helpid" content="Security.security.realm.roles.table.title;security"/>
+            <netuix:meta name="breadcrumb" content="tab.globalroles.label"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="SecurityRealmRolesPortlet">
+                    <netuix:strutsContent module="/security" action="SecurityRealmRolesTable"
+                                          refreshAction="SecurityRealmRolesTable"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+
+        </netuix:content>
+      </netuix:book>
+
+      <netuix:book definitionLabel="GlobalUserPasswordCreateBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.create.securitycredential.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar>
+    </netuix:titlebar>
+        <!-- Definition for the Global User Password Credential creation assistant page -->
+    <netuix:content>
+          <netuix:page markupName="page" definitionLabel="GlobalUserPasswordCreatePage"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid"
+                         content="Security.security.globalcredential.userpassword.create.title;security"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="GlobalUserPasswordCreatePortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/security/credentials/userpassword/create/CreateCredential.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <netuix:book definitionLabel="GlobalUserPasswordEditBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.edit.securitycredential.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar>
+    </netuix:titlebar>
+        <!-- Definition for the Global User Password Credential edit assistant page -->
+    <netuix:content>
+          <netuix:page markupName="page" definitionLabel="GlobalUserPasswordEditPage" title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid"
+                         content="Security.security.globalcredential.userpassword.edit.title;security"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="GlobalUserPasswordEditPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/security/credentials/userpassword/edit/EditCredentialMapping.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <netuix:book definitionLabel="GlobalUserPasswordDeleteBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.delete.securitycredential.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar>
+    </netuix:titlebar>
+        <!-- Definition for the Global User Password Credential deletion assistant page -->
+    <netuix:content>
+          <netuix:page markupName="page" definitionLabel="GlobalUserPasswordDeletePage"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid"
+                         content="Security.security.globalcredentialmapping.deletecredential.title;security"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="GlobalUserPasswordDeletePortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/security/credentials/userpassword/delete/DeleteCredentialMapping.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+
+      <netuix:book definitionLabel="GlobalPKICreateBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.create.securitycredential.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar>
+    </netuix:titlebar>
+        <!-- Definition for the Global PKI Credential creation assistant page -->
+    <netuix:content>
+          <netuix:page markupName="page" definitionLabel="GlobalPKICreatePage" title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid"
+                         content="Security.security.globalcredential.pki.create.title;security"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="GlobalPKICreatePortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/security/credentials/pki/create/CreateCredential.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <netuix:book definitionLabel="GlobalPKIEditBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.edit.securitycredential.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar>
+    </netuix:titlebar>
+        <!-- Definition for the Global PKI Credential edit assistant page -->
+    <netuix:content>
+          <netuix:page markupName="page" definitionLabel="GlobalPKIEditPage" title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid"
+                         content="Security.security.globalcredential.pki.edit.title;security"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="GlobalPKIEditPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/security/credentials/pki/edit/EditCredentialMapping.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <netuix:book definitionLabel="GlobalPKIDeleteBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.delete.securitycredential.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar>
+    </netuix:titlebar>
+        <!-- Definition for the Global PKI Credential deletion assistant page -->
+    <netuix:content>
+          <netuix:page markupName="page" definitionLabel="GlobalPKIDeletePage" title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid"
+                         content="Security.security.globalcredentialmapping.deletecredential.title;security"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="GlobalPKIDeletePortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/security/credentials/pki/delete/DeleteCredentialMapping.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+    </netuix:content>
+  </netuix:book>
+
+</portal:root>

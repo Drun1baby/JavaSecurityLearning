@@ -1,0 +1,1334 @@
+<JDBC-Drivers>
+  <!-- This xml file contains meta information regarding JDBC Driver's and making connections to the DBMS.  
+       It is designed to hold information so that UI can gather information from a user and configure
+       The Driver classname, The Driver URL and the driver Properties to make a connection to the DBMS 
+       
+       This XML entry is a required peice of data that could be required in the URL or in the properties object
+
+       <Attribute Name="attributename" DisplayName="displayname" PropertyName="propertyname" Required="false" DefaultValue="defaultvalue" InURL="false"/>
+       
+       There are 5 well known property names:
+       DbmsHost
+       DbmsPort
+       DbmsName
+       DbmsUsername
+       DbmsPassword
+
+       Properties that don't match the well know ones above, will be passed as name=value pairs to either
+       the URL or the properties object (based on InURL=false or true.  
+       
+       <Attribute Name="DbType" DisplayName="Database Type" PropertyName="IFORMIX_DB_TYPE" Required="true" DefaultValue="normal" InURL="false" Description="Idicate your DB type">
+       Then the UI would prompt:
+       Please Enter
+       Database Type : normal
+       This is required to Indicate your DB type.
+       And after the user providing it the UI would stuff it into the JDBCDriverInfo object and the JDBCURLHelper would do the right thing with it
+       stick it in the URL or in the properties object
+
+   Author Copyright @ 2010, Oracle and/or its affiliates. All rights reserved.
+   -->
+  <Driver 
+    Database="Adabas for z/OS"
+    Vendor="NEON" 
+    Type="Type 2" 
+    DatabaseVersion="Any"
+    ForXA="false"
+    ClassName="com.neon.jdbc.Driver"
+    URLHelperClassname="weblogic.jdbc.utils.NeonJDBCDriverURLHelper"
+    TestSql="call shadow_adabas('select * from employees')">
+        <Attribute Name="DbmsName" Required="false" InURL="false" Description="Unused"/>
+        <Attribute Name="DbmsHost" Required="false" InURL="false"/>
+        <Attribute Name="DbmsPort" Required="false" InURL="false"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="true"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="false"/>
+        <Attribute Name="DataSource" Required="true" InURL="true" Description="DataSource name"/>
+    </Driver>
+  <Driver 
+    Database="Cache" 
+    Vendor="Intersystems" 
+    Type="Type 4"
+    DatabaseVersion="Any"
+    ForXA="false"
+    ClassName="com.intersys.jdbc.CacheDriver"
+    URLHelperClassname="weblogic.jdbc.utils.CacheSysJDBC4DriverURLHelper"
+    TestSql=" ">
+        <Attribute Name="DbmsName" Required="true" InURL="true"/>
+        <Attribute Name="DbmsHost" Required="true" InURL="true"/>
+        <Attribute Name="DbmsPort" Required="true" InURL="true" DefaultValue="1972"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="false"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="false"/>
+  </Driver>
+  <Driver 
+    Database="CICS/TS for z/OS"
+    Vendor="NEON" 
+    Type="Type 2" 
+    DatabaseVersion="Any"
+    ForXA="false"
+    ClassName="com.neon.jdbc.Driver"
+    URLHelperClassname="weblogic.jdbc.utils.NeonJDBCDriverURLHelper"
+    TestSql="">
+        <Attribute Name="DbmsName" Required="false" InURL="false" Description="Unused"/>
+        <Attribute Name="DbmsHost" Required="false" InURL="false"/>
+        <Attribute Name="DbmsPort" Required="false" InURL="false"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="true"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="false"/>
+        <Attribute Name="DataSource" Required="true" InURL="true" Description="DataSource name"/>
+    </Driver>
+
+  <Driver 
+    Database="Cloudscape" 
+    Vendor="IBM" 
+    Type="Type 4"
+    DatabaseVersion="5.X"
+    ForXA="false"
+    ClassName="COM.cloudscape.core.JDBCDriver"
+    URLHelperClassname="weblogic.jdbc.utils.CloudscapeJDBC4DriverURLHelper"
+    TestSql="SELECT 1">
+        <Attribute Name="DbmsName" Required="true" InURL="true"/>
+        <Attribute Name="DbmsHost" Required="true" InURL="false"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="false"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="false"/>
+  </Driver>
+
+   
+  <Driver 
+    Database="DB2" 
+    Vendor="Oracle" 
+    Type="Type 4"
+    Cert="true"
+    DatabaseVersion="7.X and later"
+    ForXA="false"
+    ClassName="weblogic.jdbc.db2.DB2Driver"
+    URLHelperClassname="weblogic.jdbc.utils.WLDB2JDBC4DriverURLHelper"
+    TestSql="SELECT COUNT(*) FROM SYSIBM.SYSTABLES">
+        <Attribute Name="DbmsName" Required="true" InURL="false"/>
+        <Attribute Name="DbmsHost" Required="true" InURL="true"/>
+        <Attribute Name="DbmsPort" Required="true" InURL="true" DefaultValue="50000"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="false"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="false"/>
+  </Driver>
+  <Driver 
+    Database="DB2" 
+    Vendor="Oracle" 
+    Type="Type 4"
+    Cert="true"
+    DatabaseVersion="7.X and later"
+    ForXA="true"
+    ClassName="weblogic.jdbcx.db2.DB2DataSource"
+    URLHelperClassname="weblogic.jdbc.utils.WLDB2JDBC4DriverURLHelper"
+    TestSql="SELECT COUNT(*) FROM SYSIBM.SYSTABLES">
+        <Attribute Name="DbmsName" Required="true" InURL="false"/>
+        <Attribute Name="DbmsHost" Required="true" InURL="true"/>
+        <Attribute Name="DbmsPort" Required="true" InURL="true" DefaultValue="50000"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="false"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="false"/>
+  </Driver>
+
+  <!-- Need %DB2_ROOT%/Sqllib/java/db2java.zip in CLASSPATH for DB2 -->
+  <!-- Need %DB2_ROOT%/bin in PATH for DB2 -->
+  <Driver 
+    Database="DB2" 
+    Vendor="IBM" 
+    Type="Type 2"
+    DatabaseVersion="7.X and later"
+    ForXA="false"
+    ClassName="COM.ibm.db2.jdbc.app.DB2Driver"
+    URLHelperClassname="weblogic.jdbc.utils.DB2JDBC2DriverURLHelper"
+    TestSql="SELECT COUNT(*) FROM SYSIBM.SYSTABLES">
+        <Attribute Name="DbmsName" Required="true" InURL="true"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="false"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="false"/>
+    </Driver>
+   
+  <Driver 
+    Database="DB2" 
+    Vendor="DataDirect" 
+    Type="Type 4"
+    DatabaseVersion="7.X and later"
+    ForXA="false"
+    ClassName="com.ddtek.jdbc.db2.DB2Driver"
+    URLHelperClassname="weblogic.jdbc.utils.DDDB2JDBC4DriverURLHelper"
+    TestSql="SELECT COUNT(*) FROM SYSIBM.SYSTABLES">
+        <Attribute Name="DbmsName" Required="true" InURL="false"/>
+        <Attribute Name="DbmsHost" Required="true" InURL="true"/>
+        <Attribute Name="DbmsPort" Required="true" InURL="true" DefaultValue="50000"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="false"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="false"/>
+  </Driver>
+  <Driver 
+    Database="DB2" 
+    Vendor="DataDirect" 
+    Type="Type 4"
+    DatabaseVersion="8.X and later"
+    ForXA="true"
+    ClassName="com.ddtek.jdbcx.db2.DB2DataSource"
+    URLHelperClassname="weblogic.jdbc.utils.DDDB2JDBC4DriverURLHelper"
+    TestSql="SELECT COUNT(*) FROM SYSIBM.SYSTABLES">
+        <Attribute Name="DbmsName" Required="true" InURL="false"/>
+        <Attribute Name="DbmsHost" Required="true" InURL="true"/>
+        <Attribute Name="DbmsPort" Required="true" InURL="true" DefaultValue="50000"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="false"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="false"/>
+  </Driver>
+
+  <Driver 
+    Database="DB2"
+    Vendor="IBM" 
+    Type="Type 2"
+    DatabaseVersion="7.X and later"
+    ForXA="true"
+    ClassName="COM.ibm.db2.jdbc.DB2XADataSource"
+    URLHelperClassname="weblogic.jdbc.utils.DB2JDBC2DriverURLHelper"
+    TestSql="SELECT COUNT(*) FROM SYSIBM.SYSTABLES">
+        <Attribute Name="DbmsName" Required="true" InURL="true"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="false"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="false"/>
+    </Driver>
+
+  <!-- Need db2jcc.jar in CLASSPATH for DB2 -->
+  <!-- This doesn't seem to work yet -->
+  <Driver 
+    Database="DB2" 
+    Vendor="IBM" 
+    Type="Type 4"
+    DatabaseVersion="8.X and later"
+    ForXA="false"
+    ClassName="com.ibm.db2.jcc.DB2Driver"
+    URLHelperClassname="weblogic.jdbc.utils.DB2JDBC4DriverURLHelper"
+    TestSql="SELECT COUNT(*) FROM SYSIBM.SYSTABLES"
+    Description="for JDBC and SQLJ;">
+        <Attribute Name="DbmsName" Required="true" InURL="true"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="false"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="false"/>
+    </Driver>
+  <Driver 
+    Database="DB2" 
+    Vendor="IBM" 
+    Type="Type 4"
+    DatabaseVersion="8.X and later"
+    ForXA="true"
+    ClassName="com.ibm.db2.jcc.DB2XADataSource"
+    URLHelperClassname="weblogic.jdbc.utils.DB2JDBC4DriverURLHelper"
+    TestSql="SELECT COUNT(*) FROM SYSIBM.SYSTABLES"
+    Description="for JDBC and SQLJ;">
+        <Attribute Name="DbmsName" Required="true" InURL="true"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="false"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="false"/>
+    </Driver>
+  <Driver 
+    Database="DB2 for z/OS"
+    Vendor="NEON" 
+    Type="Type 2" 
+    DatabaseVersion="Any"
+    ForXA="false"
+    ClassName="com.neon.jdbc.Driver"
+    URLHelperClassname="weblogic.jdbc.utils.NeonJDBCDriverURLHelper"
+    TestSql="SELECT COUNT(*) FROM SYSIBM.SYSTABLES">
+        <Attribute Name="DbmsName" Required="false" InURL="false" Description="Unused"/>
+        <Attribute Name="DbmsHost" Required="false" InURL="false"/>
+        <Attribute Name="DbmsPort" Required="false" InURL="false"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="true"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="false"/>
+        <Attribute Name="DataSource" Required="true" InURL="true" Description="DataSource name"/>
+    </Driver>
+  <Driver 
+    Database="DB2 for i5/OS" 
+    Vendor="JTOpen" 
+    Type="Type 4"
+    DatabaseVersion="8.X and later"
+    ForXA="false"
+    ClassName="com.ibm.as400.access.AS400JDBCDriver"
+    URLHelperClassname="weblogic.jdbc.utils.JTOpenDB2JDBC4DriverURLHelper"
+    TestSql="SELECT COUNT(*) FROM SYSIBM.SYSTABLES"
+    Description="IBM Toolkit for Java;">
+        <Attribute Name="DbmsName" Required="true" InURL="false"/>
+        <Attribute Name="DbmsHost" Required="true" InURL="true"/>
+        <Attribute Name="DbmsPort" Required="true" InURL="true"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="false"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="false"/>
+  </Driver>
+  <Driver 
+    Database="DB2 for i5/OS" 
+    Vendor="JTOpen" 
+    Type="Type 4"
+    DatabaseVersion="8.X and later"
+    ForXA="true"
+    ClassName="com.ibm.as400.access.AS400JDBCXADataSource"
+    URLHelperClassname="weblogic.jdbc.utils.JTOpenDB2JDBC4DriverURLHelper"
+    TestSql="SELECT COUNT(*) FROM SYSIBM.SYSTABLES"
+    Description="IBM Toolkit for Java;">
+        <Attribute Name="DbmsName" Required="true" InURL="false"/>
+        <Attribute Name="DbmsHost" Required="true" InURL="true"/>
+        <Attribute Name="DbmsPort" Required="true" InURL="true"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="false"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="false"/>
+  </Driver>
+  <Driver 
+    Database="Derby" 
+    Vendor="Derby" 
+    Type="Type 4"
+    DatabaseVersion="Any"
+    ForXA="false"
+    ClassName="org.apache.derby.jdbc.ClientDriver"
+    URLHelperClassname="weblogic.jdbc.utils.DerbyJDBCDriverURLHelper"
+    TestSql="SELECT 1 FROM SYS.SYSTABLES">
+        <Attribute Name="DbmsHost" Required="true" InURL="true"/>
+        <Attribute Name="DbmsPort" Required="true" InURL="true" DefaultValue="1527"/>
+        <Attribute Name="DbmsName" Required="true" InURL="true"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="false"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="false"/>
+  </Driver>
+  <Driver 
+    Database="Derby" 
+    Vendor="Derby" 
+    Type="Type 4"
+    DatabaseVersion="Any"
+    ForXA="true"
+    ClassName="org.apache.derby.jdbc.ClientDataSource"
+    URLHelperClassname="weblogic.jdbc.utils.DerbyJDBCDriverURLHelper"
+    TestSql="SELECT 1 FROM SYS.SYSTABLES">
+        <Attribute Name="DbmsHost" Required="true" InURL="true"/>
+        <Attribute Name="DbmsPort" Required="true" InURL="true" DefaultValue="1527"/>
+        <Attribute Name="DbmsName" Required="true" InURL="true"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="false"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="false"/>
+  </Driver>
+  <Driver 
+    Database="Derby" 
+    Vendor="Derby" 
+    Type="Type 4"
+    DatabaseVersion="Any"
+    ForXA="true"
+    ClassName="org.apache.derby.jdbc.ClientXADataSource"
+    URLHelperClassname="weblogic.jdbc.utils.DerbyJDBCDriverURLHelper"
+    TestSql="SELECT 1 FROM SYS.SYSTABLES">
+        <Attribute Name="DbmsHost" Required="true" InURL="true"/>
+        <Attribute Name="DbmsPort" Required="true" InURL="true" DefaultValue="1527"/>
+        <Attribute Name="DbmsName" Required="true" InURL="true"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="false"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="false"/>
+  </Driver>
+  <Driver 
+    Database="EnterpriseDB" 
+    Vendor="EnterpriseDB" 
+    Type="Type 4"
+    DatabaseVersion="Any"
+    ForXA="false"
+    ClassName="com.edb.Driver"
+    URLHelperClassname="weblogic.jdbc.utils.EDBJDBCDriverURLHelper"
+    TestSql="SELECT 1 FROM pg_database">
+        <Attribute Name="DbmsHost" Required="true" InURL="true"/>
+        <Attribute Name="DbmsPort" Required="true" InURL="true" DefaultValue="5444"/>
+        <Attribute Name="DbmsName" Required="true" InURL="true"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="false"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="false"/>
+  </Driver>
+  <Driver 
+    Database="FirstSQL" 
+    Vendor="FirstSQL" 
+    Type="Type 4"
+    DatabaseVersion="Any"
+    ForXA="false"
+    ClassName="COM.FirstSQL.Dbcp.DbcpDriver"
+    URLHelperClassname="weblogic.jdbc.utils.FirstSQLJDBC4DriverURLHelper"
+    TestSql="SELECT 1">
+        <Attribute Name="DbmsHost" Required="true" InURL="true"/>
+        <Attribute Name="DbmsPort" Required="true" InURL="true" DefaultValue="8000"/>
+        <Attribute Name="DbmsName" Required="true" InURL="true"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="false"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="false"/>
+  </Driver>
+  <Driver 
+    Database="FirstSQL" 
+    Vendor="FirstSQL" 
+    Type="Type 4"
+    DatabaseVersion="Any"
+    ForXA="true"
+    ClassName="COM.FirstSQL.Dbcp.DbcpXADataSource"
+    URLHelperClassname="weblogic.jdbc.utils.FirstSQLJDBC4DriverURLHelper"
+    TestSql="SELECT 1">
+        <Attribute Name="DbmsHost" Required="true" InURL="true"/>
+        <Attribute Name="DbmsPort" Required="true" InURL="true" DefaultValue="8000"/>
+        <Attribute Name="DbmsName" Required="true" InURL="true"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="false"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="false"/>
+  </Driver>
+  <Driver 
+    Database="IMS/DB for z/OS"
+    Vendor="NEON" 
+    Type="Type 2" 
+    DatabaseVersion="Any"
+    ForXA="false"
+    ClassName="com.neon.jdbc.Driver"
+    URLHelperClassname="weblogic.jdbc.utils.NeonJDBCDriverURLHelper"
+    TestSql="">
+        <Attribute Name="DbmsName" Required="false" InURL="false" Description="Unused"/>
+        <Attribute Name="DbmsHost" Required="false" InURL="false"/>
+        <Attribute Name="DbmsPort" Required="false" InURL="false"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="true"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="false"/>
+        <Attribute Name="DataSource" Required="true" InURL="true" Description="DataSource name"/>
+    </Driver>
+  <Driver 
+    Database="IMS/TM for z/OS"
+    Vendor="NEON" 
+    Type="Type 2" 
+    DatabaseVersion="Any"
+    ForXA="false"
+    ClassName="com.neon.jdbc.Driver"
+    URLHelperClassname="weblogic.jdbc.utils.NeonJDBCDriverURLHelper"
+    TestSql="call shadow_ims('otm','/dis','cctl')">
+        <Attribute Name="DbmsName" Required="false" InURL="false" Description="Unused"/>
+        <Attribute Name="DbmsHost" Required="false" InURL="false"/>
+        <Attribute Name="DbmsPort" Required="false" InURL="false"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="true"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="false"/>
+        <Attribute Name="DataSource" Required="true" InURL="true" Description="DataSource name"/>
+    </Driver>
+  <Driver 
+    Database="Informix" 
+    Vendor="Oracle" 
+    Type="Type 4"
+    DatabaseVersion="9.2 and later"
+    ForXA="false"
+    Cert="true"
+    ClassName="weblogic.jdbc.informix.InformixDriver"
+    URLHelperClassname="weblogic.jdbc.utils.WLInformixJDBC4DriverURLHelper"
+    TestSql="SELECT COUNT(*) FROM SYSTABLES">
+        <Attribute Name="DbmsName" Required="true" InURL="true"/>
+        <Attribute Name="DbmsHost" Required="true" InURL="true"/>
+        <Attribute Name="DbmsPort" Required="true" InURL="true" DefaultValue="1543"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="true"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="true"/>
+        <Attribute Name="InformixServer" Required="true" InURL="true"/>
+  </Driver>
+  <Driver 
+    Database="Informix" 
+    Vendor="Oracle" 
+    Type="Type 4"
+    DatabaseVersion="9.2 and later"
+    ForXA="true"
+    Cert="true"
+    ClassName="weblogic.jdbcx.informix.InformixDataSource"
+    URLHelperClassname="weblogic.jdbc.utils.WLInformixJDBC4DriverURLHelper"
+    TestSql="SELECT COUNT(*) FROM SYSTABLES">
+        <Attribute Name="DbmsName" Required="true" InURL="true"/>
+        <Attribute Name="DbmsHost" Required="true" InURL="true"/>
+        <Attribute Name="DbmsPort" Required="true" InURL="true" DefaultValue="1543"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="true"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="true"/>
+        <Attribute Name="InformixServer" Required="true" InURL="true"/>
+  </Driver>
+   
+  <Driver 
+    Database="Informix" 
+    Vendor="DataDirect" 
+    Type="Type 4"
+    DatabaseVersion="9.2 and later"
+    ForXA="false"
+    ClassName="com.ddtek.jdbc.informix.InformixDriver"
+    URLHelperClassname="weblogic.jdbc.utils.DDInformixJDBC4DriverURLHelper"
+    TestSql="SELECT COUNT(*) FROM SYSTABLES">
+        <Attribute Name="DbmsName" Required="true" InURL="true"/>
+        <Attribute Name="DbmsHost" Required="true" InURL="true"/>
+        <Attribute Name="DbmsPort" Required="true" InURL="true" DefaultValue="1543"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="true"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="true"/>
+        <Attribute Name="InformixServer" Required="true" InURL="true"/>
+  </Driver>
+  <Driver 
+    Database="Informix" 
+    Vendor="DataDirect" 
+    Type="Type 4"
+    DatabaseVersion="9.2 and later"
+    ForXA="true"
+    ClassName="com.ddtek.jdbcx.informix.InformixDataSource"
+    URLHelperClassname="weblogic.jdbc.utils.DDInformixJDBC4DriverURLHelper"
+    TestSql="SELECT COUNT(*) FROM SYSTABLES">
+        <Attribute Name="DbmsName" Required="true" InURL="true"/>
+        <Attribute Name="DbmsHost" Required="true" InURL="true"/>
+        <Attribute Name="DbmsPort" Required="true" InURL="true" DefaultValue="1543"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="true"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="true"/>
+        <Attribute Name="InformixServer" Required="true" InURL="true"/>
+  </Driver>
+  <Driver 
+    Database="Informix" 
+    Vendor="IBM" 
+    Type="Type 4" 
+    DatabaseVersion="Any"
+    ForXA="false"
+    ClassName="com.informix.jdbc.IfxDriver"
+    URLHelperClassname="weblogic.jdbc.utils.InformixJDBC4DriverURLHelper"
+    TestSql="SELECT COUNT(*) FROM SYSTABLES">
+        <Attribute Name="DbmsName" Required="true" InURL="true"/>
+        <Attribute Name="DbmsHost" Required="true" InURL="true"/>
+        <Attribute Name="DbmsPort" Required="true" InURL="true" DefaultValue="1543"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="false"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="true"/>
+        <Attribute Name="InformixServer" Required="true" InURL="false"/>
+    </Driver>
+  <Driver 
+    Database="Informix" 
+    Vendor="IBM" 
+    Type="Type 4" 
+    DatabaseVersion="Any"
+    ForXA="true"
+    ClassName="com.informix.jdbcx.IfxXADataSource"
+    URLHelperClassname="weblogic.jdbc.utils.InformixJDBC4DriverURLHelper"
+    TestSql="SELECT COUNT(*) FROM SYSTABLES">
+        <Attribute Name="DbmsName" Required="true" InURL="true"/>
+        <Attribute Name="DbmsHost" Required="true" InURL="true"/>
+        <Attribute Name="DbmsPort" Required="true" InURL="true" DefaultValue="1543"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="false"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="true"/>
+        <Attribute Name="InformixServer" Required="true" InURL="false"/>
+    </Driver>
+
+  <Driver 
+    Database="Ingres" 
+    Vendor="Ingres" 
+    Type="Type 4"
+    DatabaseVersion="Any"
+    ForXA="false"
+    ClassName="ca.ingres.jdbc.IngresDriver"
+    URLHelperClassname="weblogic.jdbc.utils.IngresJDBC4DriverURLHelper"
+    TestSql="SELECT 1 FROM iitables">
+        <Attribute Name="DbmsHost" Required="true" InURL="true"/>
+        <Attribute Name="DbmsPort" Required="true" InURL="true" DefaultValue="21071"/>
+        <Attribute Name="DbmsName" Required="true" InURL="true"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="true"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="true"/>
+  </Driver>
+  <Driver 
+    Database="Ingres" 
+    Vendor="Ingres" 
+    Type="Type 4"
+    DatabaseVersion="Any"
+    ForXA="true"
+    ClassName="ca.ingres.jdbc.IngresXADataSource"
+    URLHelperClassname="weblogic.jdbc.utils.IngresJDBC4DriverURLHelper"
+    TestSql="SELECT 1 FROM iitables">
+        <Attribute Name="DbmsHost" Required="true" InURL="true"/>
+        <Attribute Name="DbmsPort" Required="true" InURL="true" DefaultValue="21071"/>
+        <Attribute Name="DbmsName" Required="true" InURL="true"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="true"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="true"/>
+  </Driver>
+  <Driver 
+    Database="MaxDB" 
+    Vendor="MaxDB" 
+    Type="Type 4"
+    DatabaseVersion="Any"
+    ForXA="false"
+    ClassName="com.sap.dbtech.jdbc.DriverSapDB"
+    URLHelperClassname="weblogic.jdbc.utils.MaxDBJDBC4DriverURLHelper"
+    TestSql="SELECT 1 FROM DOMAIN.TABLES">
+        <Attribute Name="DbmsName" Required="true" InURL="true"/>
+        <Attribute Name="DbmsHost" Required="true" InURL="true"/>
+        <Attribute Name="DbmsPort" Required="true" InURL="true" DefaultValue="7210"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="false"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="false"/>
+  </Driver>
+  <Driver 
+    Database="MS SQL Server" 
+    Vendor="Oracle" 
+    Type="Type 4"
+    DatabaseVersion="7.0 and later"
+    ForXA="false"
+    Cert="true"
+    ClassName="weblogic.jdbc.sqlserver.SQLServerDriver"
+    URLHelperClassname="weblogic.jdbc.utils.WLDDMSSQLJDBC4DriverURLHelper"
+    TestSql="SELECT 1">
+        <Attribute Name="DbmsName" Required="false" InURL="false"/>
+        <Attribute Name="DbmsHost" Required="true" InURL="true"/>
+        <Attribute Name="DbmsPort" Required="true" InURL="true" DefaultValue="1433"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="false"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="false"/>
+  </Driver>
+  <Driver 
+    Database="MS SQL Server" 
+    Vendor="Oracle" 
+    Type="Type 4"
+    DatabaseVersion="7.0 and later"
+    ForXA="true"
+    Cert="true"
+    ClassName="weblogic.jdbcx.sqlserver.SQLServerDataSource"
+    URLHelperClassname="weblogic.jdbc.utils.WLDDMSSQLJDBC4DriverURLHelper"
+    TestSql="SELECT 1">
+        <Attribute Name="DbmsName" Required="false" InURL="false"/>
+        <Attribute Name="DbmsHost" Required="true" InURL="true"/>
+        <Attribute Name="DbmsPort" Required="true" InURL="true" DefaultValue="1433"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="false"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="false"/>
+  </Driver>
+
+  <Driver 
+    Database="MS SQL Server" 
+    Vendor="DataDirect" 
+    Type="Type 4"
+    DatabaseVersion="7.0 and later"
+    ForXA="false"
+    ClassName="com.ddtek.jdbc.sqlserver.SQLServerDriver"
+    URLHelperClassname="weblogic.jdbc.utils.DDMSSQLJDBC4DriverURLHelper"
+    TestSql="SELECT 1">
+        <Attribute Name="DbmsName" Required="false" InURL="false"/>
+        <Attribute Name="DbmsHost" Required="true" InURL="true"/>
+        <Attribute Name="DbmsPort" Required="true" InURL="true" DefaultValue="1433"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="false"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="false"/>
+  </Driver>
+  <Driver 
+    Database="MS SQL Server" 
+    Vendor="DataDirect" 
+    Type="Type 4"
+    DatabaseVersion="7.0 and later"
+    ForXA="true"
+    ClassName="com.ddtek.jdbcx.sqlserver.SQLServerDataSource"
+    URLHelperClassname="weblogic.jdbc.utils.DDMSSQLJDBC4DriverURLHelper"
+    TestSql="SELECT 1">
+        <Attribute Name="DbmsName" Required="false" InURL="false"/>
+        <Attribute Name="DbmsHost" Required="true" InURL="true"/>
+        <Attribute Name="DbmsPort" Required="true" InURL="true" DefaultValue="1433"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="false"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="false"/>
+  </Driver>
+
+  <Driver 
+    Database="MS SQL Server" 
+    Vendor="I-NET" 
+    Type="Type 4"
+    DatabaseVersion="7.0 and later"
+    ForXA="false"
+    ClassName="com.inet.tds.TdsDriver"
+    URLHelperClassname="weblogic.jdbc.utils.InetMSSQLJDBC4DriverURLHelper"
+    TestSql="SELECT 1">
+        <Attribute Name="DbmsName" Required="false" InURL="true"/>
+        <Attribute Name="DbmsHost" Required="true" InURL="true"/>
+        <Attribute Name="DbmsPort" Required="true" InURL="true" DefaultValue="1433"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="false"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="false"/>
+  </Driver>
+
+  <Driver 
+    Database="MS SQL Server" 
+    Vendor="J-NetDirect" 
+    Type="Type 4"
+    DatabaseVersion="7.0 and later"
+    ForXA="false"
+    ClassName="com.jnetdirect.jsql.JSQLDriver"
+    URLHelperClassname="weblogic.jdbc.utils.JnetDirectJDBC4DriverURLHelper"
+    TestSql="SELECT 1">
+        <Attribute Name="DbmsName" Required="false" InURL="true"/>
+        <Attribute Name="DbmsHost" Required="true" InURL="true"/>
+        <Attribute Name="DbmsPort" Required="true" InURL="true" DefaultValue="1433"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="false"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="false"/>
+  </Driver>
+  <Driver 
+    Database="MS SQL Server" 
+    Vendor="J-NetDirect" 
+    Type="Type 4"
+    DatabaseVersion="7.0 and later"
+    ForXA="true"
+    ClassName="com.jnetdirect.jsql.JSQLXADataSource"
+    URLHelperClassname="weblogic.jdbc.utils.JnetDirectJDBC4DriverURLHelper"
+    TestSql="SELECT 1">
+        <Attribute Name="DbmsName" Required="false" InURL="false"/>
+        <Attribute Name="DbmsHost" Required="true" InURL="true"/>
+        <Attribute Name="DbmsPort" Required="true" InURL="true" DefaultValue="1433"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="false"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="false"/>
+  </Driver>
+
+  <Driver 
+    Database="MS SQL Server" 
+    Vendor="Microsoft" 
+    Type="Type 4"
+    DatabaseVersion="2000 and later"
+    ForXA="false"
+    ClassName="com.microsoft.jdbc.sqlserver.SQLServerDriver"
+    URLHelperClassname="weblogic.jdbc.utils.MSSQLJDBC4DriverURLHelper"
+    TestSql="SELECT 1">
+        <Attribute Name="DbmsName" Required="false" InURL="true"/>
+        <Attribute Name="DbmsHost" Required="true" InURL="true"/>
+        <Attribute Name="DbmsPort" Required="true" InURL="true" DefaultValue="1433"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="false"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="false"/>
+  </Driver>
+
+  <Driver 
+    Database="MS SQL Server" 
+    Vendor="Microsoft" 
+    Type="Type 4"
+    DatabaseVersion="2000 and later"
+    ForXA="true"
+    ClassName="com.microsoft.jdbcx.sqlserver.SQLServerDataSource"
+    URLHelperClassname="weblogic.jdbc.utils.MSSQLJDBC4DriverURLHelper"
+    TestSql="SELECT 1">
+        <Attribute Name="DbmsName" Required="false" InURL="false"/>
+        <Attribute Name="DbmsHost" Required="true" InURL="false"/>
+        <Attribute Name="DbmsPort" Required="true" InURL="false" DefaultValue="1433"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="false"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="false"/>
+    </Driver>
+  <Driver 
+    Database="MS SQL Server" 
+    Vendor="Microsoft" 
+    Type="Type 4"
+    DatabaseVersion="2005 and later"
+    ForXA="false"
+    ClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver"
+    URLHelperClassname="weblogic.jdbc.utils.MSSQL2005JDBC4DriverURLHelper"
+    TestSql="SELECT 1">
+        <Attribute Name="DbmsName" Required="false" InURL="true"/>
+        <Attribute Name="DbmsHost" Required="true" InURL="true"/>
+        <Attribute Name="DbmsPort" Required="true" InURL="true" DefaultValue="1433"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="false"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="false"/>
+  </Driver>
+
+  <Driver 
+    Database="MS SQL Server" 
+    Vendor="Microsoft" 
+    Type="Type 4"
+    DatabaseVersion="2005 and later"
+    ForXA="true"
+    ClassName="com.microsoft.sqlserver.jdbc.SQLServerXADataSource"
+    URLHelperClassname="weblogic.jdbc.utils.MSSQL2005JDBC4DriverURLHelper"
+    TestSql="SELECT 1">
+        <Attribute Name="DbmsName" Required="false" InURL="false"/>
+        <Attribute Name="DbmsHost" Required="true" InURL="false"/>
+        <Attribute Name="DbmsPort" Required="true" InURL="false" DefaultValue="1433"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="false"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="false"/>
+    </Driver>
+
+  <Driver 
+    Database="MySQL" 
+    Vendor="MySQL" 
+    Type="Type 4"
+    DatabaseVersion="using org.gjt.mm.mysql.Driver"
+    ForXA="false"
+    ClassName="org.gjt.mm.mysql.Driver"
+    URLHelperClassname="weblogic.jdbc.utils.MySQLJDBC4DriverURLHelper"
+    TestSql="SELECT 1">
+        <Attribute Name="DbmsName" Required="true" InURL="true"/>
+        <Attribute Name="DbmsHost" Required="true" InURL="true"/>
+        <Attribute Name="DbmsPort" Required="true" InURL="true" DefaultValue="3306"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="false"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="false"/>
+  </Driver>
+  <Driver 
+    Database="MySQL" 
+    Vendor="MySQL" 
+    Type="Type 4"
+    DatabaseVersion="using com.mysql.jdbc.Driver"
+    ForXA="false"
+    ClassName="com.mysql.jdbc.Driver"
+    URLHelperClassname="weblogic.jdbc.utils.MySQLJDBC4DriverURLHelper"
+    TestSql="SELECT 1">
+        <Attribute Name="DbmsName" Required="true" InURL="true"/>
+        <Attribute Name="DbmsHost" Required="true" InURL="true"/>
+        <Attribute Name="DbmsPort" Required="true" InURL="true" DefaultValue="3306"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="false"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="false"/>
+  </Driver>
+
+  <!-- Undefined:  TestSql       -->
+  
+  <Driver 
+    Database="Oracle" 
+    Vendor="DataDirect" 
+    Type="Type 4"
+    DatabaseVersion="9.0.1 and later"
+    ForXA="false"
+    ClassName="com.ddtek.jdbc.oracle.OracleDriver"
+    URLHelperClassname="weblogic.jdbc.utils.DDOracleJDBC4DriverURLHelper"
+    TestSql="SELECT 1 FROM DUAL">
+        <Attribute Name="DbmsName" Required="true" InURL="false"/>
+        <Attribute Name="DbmsHost" Required="true" InURL="true"/>
+        <Attribute Name="DbmsPort" Required="true" InURL="true" DefaultValue="1521"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="false"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="false"/>
+  </Driver>
+  <Driver 
+    Database="Oracle" 
+    Vendor="DataDirect" 
+    Type="Type 4"
+    DatabaseVersion="9.0.1 and later"
+    ForXA="true"
+    ClassName="com.ddtek.jdbcx.oracle.OracleDataSource"
+    URLHelperClassname="weblogic.jdbc.utils.DDOracleJDBC4DriverURLHelper"
+    TestSql="SELECT 1 FROM DUAL">
+        <Attribute Name="DbmsName" Required="true" InURL="false"/>
+        <Attribute Name="DbmsHost" Required="true" InURL="true"/>
+        <Attribute Name="DbmsPort" Required="true" InURL="true" DefaultValue="1521"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="false"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="false"/>
+  </Driver>
+
+  
+  <Driver 
+    Database="Oracle" 
+    Vendor="Oracle" 
+    Type="Thin" 
+    DatabaseVersion="9.0.1 and later"
+    ForXA="false"
+    Cert="true"
+    ClassName="oracle.jdbc.OracleDriver"
+    URLHelperClassname="weblogic.jdbc.utils.OracleJDBC4DriverURLHelper$ServiceHelper"
+    TestSql="SELECT 1 FROM DUAL"
+    Description="for Service connections;">
+        <Attribute Name="DbmsName" Required="true" InURL="true"/>
+        <Attribute Name="DbmsHost" Required="true" InURL="true"/>
+        <Attribute Name="DbmsPort" Required="true" InURL="true" DefaultValue="1521"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="false"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="false"/>
+  </Driver>
+
+  <Driver 
+    Database="Oracle" 
+    Vendor="Oracle" 
+    Type="Thin" 
+    DatabaseVersion="9.0.1 and later"
+    ForXA="true"
+    Cert="true"
+    ClassName="oracle.jdbc.xa.client.OracleXADataSource"
+    URLHelperClassname="weblogic.jdbc.utils.OracleJDBC4DriverURLHelper$ServiceHelper"
+    TestSql="SELECT 1 FROM DUAL"
+    Description="for Service connections;">
+        <Attribute Name="DbmsName" Required="true" InURL="true"/>
+        <Attribute Name="DbmsHost" Required="true" InURL="true"/>
+        <Attribute Name="DbmsPort" Required="true" InURL="true" DefaultValue="1521"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="false"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="false"/>
+  </Driver>
+
+  <Driver 
+    Database="Oracle" 
+    Vendor="Oracle" 
+    Type="Thin" 
+    DatabaseVersion="9.0.1 and later"
+    ForXA="false"
+    Cert="true"
+    ClassName="oracle.jdbc.OracleDriver"
+    URLHelperClassname="weblogic.jdbc.utils.OracleJDBC4DriverURLHelper$SIDHelper"
+    TestSql="SELECT 1 FROM DUAL"
+    Description="for Instance connections;">
+        <Attribute Name="DbmsName" Required="true" InURL="true"/>
+        <Attribute Name="DbmsHost" Required="true" InURL="true"/>
+        <Attribute Name="DbmsPort" Required="true" InURL="true" DefaultValue="1521"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="false"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="false"/>
+  </Driver>
+
+  <Driver 
+    Database="Oracle" 
+    Vendor="Oracle" 
+    Type="Thin" 
+    DatabaseVersion="9.0.1 and later"
+    ForXA="true"
+    Cert="true"
+    ClassName="oracle.jdbc.xa.client.OracleXADataSource"
+    URLHelperClassname="weblogic.jdbc.utils.OracleJDBC4DriverURLHelper$SIDHelper"
+    TestSql="SELECT 1 FROM DUAL"
+    Description="for Instance connections;">
+        <Attribute Name="DbmsName" Required="true" InURL="true"/>
+        <Attribute Name="DbmsHost" Required="true" InURL="true"/>
+        <Attribute Name="DbmsPort" Required="true" InURL="true" DefaultValue="1521"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="false"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="false"/>
+  </Driver>
+
+  <Driver 
+    Database="Oracle" 
+    Vendor="Oracle" 
+    Type="Thin" 
+    DatabaseVersion="10 and later"
+    ForXA="false"
+    Cert="true"
+    ClassName="oracle.jdbc.OracleDriver"
+    URLHelperClassname="weblogic.jdbc.utils.OracleRACJDBC4DriverURLHelper"
+    TestSql="SELECT 1 FROM DUAL"
+    Description="for RAC Service-Instance connections;">
+        <Attribute Name="DbmsName" Required="true" InURL="true"/>
+        <Attribute Name="DbmsHost" Required="true" InURL="true"/>
+        <Attribute Name="DbmsPort" Required="true" InURL="true" DefaultValue="1521"/>
+        <Attribute Name="Protocol" Required="true" InURL="true" DefaultValue="TCP"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="false"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="false"/>
+        <Attribute Name="ServiceName" Required="true" InURL="true"/>
+  </Driver>
+
+  <Driver 
+    Database="Oracle" 
+    Vendor="Oracle" 
+    Type="Thin" 
+    DatabaseVersion="10 and later"
+    ForXA="true"
+    Cert="true"
+    ClassName="oracle.jdbc.xa.client.OracleXADataSource"
+    URLHelperClassname="weblogic.jdbc.utils.OracleRACJDBC4DriverURLHelper"
+    TestSql="SELECT 1 FROM DUAL"
+    Description="for RAC Service-Instance connections;">
+        <Attribute Name="DbmsName" Required="true" InURL="true"/>
+        <Attribute Name="DbmsHost" Required="true" InURL="true"/>
+        <Attribute Name="DbmsPort" Required="true" InURL="true" DefaultValue="1521"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="false"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="false"/>
+        <Attribute Name="ServiceName" Required="true" InURL="true"/>
+  </Driver>
+  <Driver 
+    Database="Oracle BI Server"
+    Vendor="Oracle BI Server" 
+    Type="Type 4" 
+    DatabaseVersion="Any"
+    ForXA="false"
+    Cert="true"
+    ClassName="oracle.bi.jdbc.AnaJdbcDriver"
+    URLHelperClassname="weblogic.jdbc.utils.OracleBIServerURLHelper"
+    TestSql="{call NQSGetSQLCatalogs()}"
+    >
+        <Attribute Name="DbmsUsername" Required="true" InURL="false"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="false"/>
+        <Attribute Name="Catalog" Required="false" InURL="true" DefaultValue="False"/>
+        <Attribute Name="Ssl" Required="false" InURL="true" DefaultValue="False"/>
+        <Attribute Name="SslKeyStoreFileName" Required="false" InURL="true"/>
+        <Attribute Name="SslKeyStorePassword" Required="false" InURL="true"/>
+        <Attribute Name="TrustAnyServer" Required="false" InURL="true" DefaultValue="False"/>
+        <Attribute Name="TrustStoreFileName" Required="false" InURL="true"/>
+        <Attribute Name="TrustStorePassword" Required="false" InURL="true"/>
+        <Attribute Name="LogLevel" Required="false" InURL="true"/>
+        <Attribute Name="LogFilePath" Required="false" InURL="true"/>
+        <Attribute Name="PrimaryCcs" Required="false" InURL="true" DefaultValue="localhost"/>
+        <Attribute Name="PrimaryCcsPort" Required="false" InURL="true" DefaultValue="9706"/>
+        <Attribute Name="SecondaryCcs" Required="false" InURL="true" DefaultValue="localhost"/>
+        <Attribute Name="SecondaryCcsPort" Required="false" InURL="true" DefaultValue="9706"/>
+        <Attribute Name="ServerHost" Required="false" InURL="true" DefaultValue="localhost"/>
+        <Attribute Name="ServerPort" Required="false" InURL="true" DefaultValue="9703"/>
+  </Driver>
+<!-- Remove replay driver from list
+  <Driver 
+    Database="Oracle" 
+    Vendor="Oracle" 
+    Type="Thin" 
+    DatabaseVersion="11 and later"
+    ForXA="false"
+    Cert="true"
+    ClassName="oracle.jdbc.replay.OracleDataSourceImpl"
+    URLHelperClassname="weblogic.jdbc.utils.OracleJDBC4DescriptorURLHelper"
+    TestSql="SELECT 1 FROM DUAL"
+    Description="for GridLink Application Continuity Connections;">
+        <Attribute Name="DbmsUsername" Required="true" InURL="false"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="false"/>
+        <Attribute Name="ServiceName" Required="true" InURL="true"/>
+        <Attribute Name="Protocol" Required="true" InURL="true" DefaultValue="TCP"/>
+  </Driver>
+-->
+
+  <Driver 
+    Database="Oracle" 
+    Vendor="Oracle" 
+    Type="Thin" 
+    DatabaseVersion="11 and later"
+    ForXA="false"
+    Cert="true"
+    ClassName="oracle.jdbc.OracleDriver"
+    URLHelperClassname="weblogic.jdbc.utils.OracleJDBC4DescriptorURLHelper"
+    TestSql="SELECT 1 FROM DUAL"
+    Description="for GridLink Connections;">
+        <Attribute Name="DbmsUsername" Required="true" InURL="false"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="false"/>
+        <Attribute Name="ServiceName" Required="true" InURL="true"/>
+        <Attribute Name="Protocol" Required="true" InURL="true" DefaultValue="TCP"/>
+  </Driver>
+
+  <Driver 
+    Database="Oracle" 
+    Vendor="Oracle" 
+    Type="Thin" 
+    DatabaseVersion="11 and later"
+    ForXA="true"
+    Cert="true"
+    ClassName="oracle.jdbc.xa.client.OracleXADataSource"
+    URLHelperClassname="weblogic.jdbc.utils.OracleJDBC4DescriptorURLHelper"
+    TestSql="SELECT 1 FROM DUAL"
+    Description="for GridLink Connections">
+        <Attribute Name="DbmsUsername" Required="true" InURL="false"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="false"/>
+        <Attribute Name="ServiceName" Required="true" InURL="true"/>
+        <Attribute Name="Protocol" Required="true" InURL="true" DefaultValue="TCP"/>
+  </Driver>  
+
+  <!-- Remove OCI driver from JDBC driver list
+  <Driver 
+    Database="Oracle" 
+    Vendor="Oracle" 
+    Type="OCI" 
+    DatabaseVersion="9.0.1 and later"
+    ForXA="false"
+    ClassName="oracle.jdbc.OracleDriver"
+    URLHelperClassname="weblogic.jdbc.utils.OracleJDBCDriverURLHelper"
+    TestSql="SELECT 1 FROM DUAL">
+        <Attribute Name="DbmsName" Required="true" InURL="true"/>
+        <Attribute Name="DbmsHost" Required="false" InURL="false"/>
+        <Attribute Name="DbmsPort" Required="false" InURL="false"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="false"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="false"/>
+  </Driver>
+
+  <Driver 
+    Database="Oracle" 
+    Vendor="Oracle" 
+    Type="OCI" 
+    DatabaseVersion="9.0.1 and later"
+    ForXA="true"
+    ClassName="oracle.jdbc.xa.client.OracleXADataSource"
+    URLHelperClassname="weblogic.jdbc.utils.OracleJDBCDriverURLHelper"
+    TestSql="SELECT 1 FROM DUAL">
+        <Attribute Name="DbmsName" Required="true" InURL="true"/>
+        <Attribute Name="DbmsHost" Required="false" InURL="false"/>
+        <Attribute Name="DbmsPort" Required="false" InURL="false"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="false"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="false"/>
+  </Driver>
+  -->
+
+  <Driver 
+    Database="PointBase" 
+    Vendor="PointBase" 
+    Type="Type 4" 
+    DatabaseVersion="4.X and later"
+    ForXA="true"
+    Cert="true"
+    ClassName="com.pointbase.xa.xaDataSource"
+    URLHelperClassname="weblogic.jdbc.utils.PointBaseJDBC4DriverURLHelper"
+    TestSql="SELECT COUNT(*) FROM SYSTABLES">
+        <Attribute Name="DbmsName" Required="true" InURL="true"/>
+        <Attribute Name="DbmsHost" Required="true" InURL="true" DefaultValue="localhost"/>
+        <Attribute Name="DbmsPort" Required="true" InURL="true" DefaultValue="9092"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="false"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="false"/>
+    </Driver>
+
+  <Driver 
+    Database="PointBase" 
+    Vendor="PointBase" 
+    Type="Type 4" 
+    DatabaseVersion="4.X and later"
+    ForXA="false"
+    Cert="true"
+    ClassName="com.pointbase.jdbc.jdbcUniversalDriver"
+    URLHelperClassname="weblogic.jdbc.utils.PointBaseJDBC4DriverURLHelper"
+    TestSql="SELECT COUNT(*) FROM SYSTABLES">
+        <Attribute Name="DbmsName" Required="true" InURL="true"/>
+        <Attribute Name="DbmsHost" Required="true" InURL="true" DefaultValue="localhost"/>
+        <Attribute Name="DbmsPort" Required="true" InURL="true" DefaultValue="9092"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="false"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="false"/>
+    </Driver>
+  <Driver 
+    Database="PostgreSQL"
+    Vendor="PostgreSQL" 
+    Type="Type 4"
+    DatabaseVersion="Any"
+    ForXA="false"
+    ClassName="org.postgresql.Driver"
+    URLHelperClassname="weblogic.jdbc.utils.PostgreSQLJDBC4DriverURLHelper"
+    TestSql="SELECT 1">
+        <Attribute Name="DbmsName" Required="true" InURL="true"/>
+        <Attribute Name="DbmsHost" Required="true" InURL="true"/>
+        <Attribute Name="DbmsPort" Required="true" InURL="true" DefaultValue="5432"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="false"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="false"/>
+  </Driver>
+
+
+  <Driver 
+    Database="Progress" 
+    Vendor="Progress" 
+    Type="Type 4"
+    DatabaseVersion="Any"
+    ForXA="false"
+    ClassName="com.progress.sql.jdbc.JdbcProgressDriver"
+    URLHelperClassname="weblogic.jdbc.utils.ProgressJDBC4DriverURLHelper"
+    TestSql="SELECT COUNT(*) FROM SYSTABLES">
+        <Attribute Name="DbmsName" Required="true" InURL="true"/>
+        <Attribute Name="DbmsHost" Required="true" InURL="true"/>
+        <Attribute Name="DbmsPort" Required="true" InURL="true" DefaultValue="1433"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="false"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="false"/>
+  </Driver>
+
+  <Driver 
+    Database="Sybase" 
+    Vendor="Oracle" 
+    Type="Type 4"
+    Cert="true"
+    DatabaseVersion="11.X and later"
+    ForXA="false"
+    ClassName="weblogic.jdbc.sybase.SybaseDriver"
+    URLHelperClassname="weblogic.jdbc.utils.WLSybaseJDBC4DriverURLHelper"
+    TestSql="SELECT 1">
+        <Attribute Name="DbmsName" Required="false" InURL="false"/>
+        <Attribute Name="DbmsHost" Required="true" InURL="true"/>
+        <Attribute Name="DbmsPort" Required="true" InURL="true"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="false"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="false"/>
+  </Driver>
+  <Driver 
+    Database="Sybase" 
+    Vendor="Oracle" 
+    Type="Type 4"
+    Cert="true"
+    DatabaseVersion="11.X and later"
+    ForXA="true"
+    ClassName="weblogic.jdbcx.sybase.SybaseDataSource"
+    URLHelperClassname="weblogic.jdbc.utils.WLSybaseJDBC4DriverURLHelper"
+    TestSql="SELECT 1">
+        <Attribute Name="DbmsName" Required="false" InURL="false"/>
+        <Attribute Name="DbmsHost" Required="true" InURL="true"/>
+        <Attribute Name="DbmsPort" Required="true" InURL="true"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="false"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="false"/>
+  </Driver>
+
+  <Driver 
+    Database="Sybase" 
+    Vendor="DataDirect" 
+    Type="Type 4"
+    DatabaseVersion="11.X and later"
+    ForXA="false"
+    ClassName="com.ddtek.jdbc.sybase.SybaseDriver"
+    URLHelperClassname="weblogic.jdbc.utils.DDSybaseJDBC4DriverURLHelper"
+    TestSql="SELECT 1">
+        <Attribute Name="DbmsName" Required="true" InURL="false"/>
+        <Attribute Name="DbmsHost" Required="true" InURL="true"/>
+        <Attribute Name="DbmsPort" Required="true" InURL="true"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="false"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="false"/>
+  </Driver>
+  <Driver 
+    Database="Sybase" 
+    Vendor="DataDirect" 
+    Type="Type 4"
+    DatabaseVersion="11.X and later"
+    ForXA="true"
+    ClassName="com.ddtek.jdbcx.sybase.SybaseDataSource"
+    URLHelperClassname="weblogic.jdbc.utils.DDSybaseJDBC4DriverURLHelper"
+    TestSql="SELECT 1">
+        <Attribute Name="DbmsName" Required="true" InURL="false"/>
+        <Attribute Name="DbmsHost" Required="true" InURL="true"/>
+        <Attribute Name="DbmsPort" Required="true" InURL="true"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="false"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="false"/>
+  </Driver>
+
+  <!-- 3rdparty/jconnect/jConnect.jar -->
+  <Driver 
+    Database="Sybase" 
+    Vendor="Sybase" 
+    Type="Type 4"
+    DatabaseVersion="4.1" 
+    ForXA="false"
+    ClassName="com.sybase.jdbc.SybDriver"
+    URLHelperClassname="weblogic.jdbc.utils.SybaseJDBC4DriverURLHelper"
+    TestSql="SELECT 1">
+        <Attribute Name="DbmsName" Required="false" InURL="true"/>
+        <Attribute Name="DbmsHost" Required="true" InURL="true"/>
+        <Attribute Name="DbmsPort" Required="true" InURL="true"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="false"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="false"/>
+    </Driver>
+
+  <!-- 3rdparty/jconnect/jConnect-5_5/classes/jconn2.jar -->
+  <Driver 
+    Database="Sybase" 
+    Vendor="Sybase" 
+    Type="Type 4"
+    DatabaseVersion="5.X" 
+    ForXA="false"
+    ClassName="com.sybase.jdbc2.jdbc.SybDriver"
+    URLHelperClassname="weblogic.jdbc.utils.SybaseJDBC4DriverURLHelper"
+    TestSql="SELECT 1">
+        <Attribute Name="DbmsName" Required="false" InURL="true"/>
+        <Attribute Name="DbmsHost" Required="true" InURL="true"/>
+        <Attribute Name="DbmsPort" Required="true" InURL="true"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="false"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="false"/>
+    </Driver>
+  <!-- 3rdparty/jconnect/jConnect-5_5/classes/jconn2.jar -->
+  <Driver 
+    Database="Sybase" 
+    Vendor="Sybase" 
+    Type="Type 4"
+    DatabaseVersion="5.X" 
+    ForXA="true"
+    ClassName="com.sybase.jdbc2.jdbc.SybXADataSource"
+    URLHelperClassname="weblogic.jdbc.utils.SybaseJDBC4DriverURLHelper"
+    TestSql="SELECT 1">
+        <Attribute Name="DbmsName" Required="false" InURL="true"/>
+        <Attribute Name="DbmsHost" Required="true" InURL="true"/>
+        <Attribute Name="DbmsPort" Required="true" InURL="true"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="false"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="false"/>
+    </Driver>
+  <!-- 3rdparty/jconnect/jConnect-6_0/classes/jconn3.jar -->
+  <Driver 
+    Database="Sybase" 
+    Vendor="Sybase" 
+    Type="Type 4"
+    DatabaseVersion="6.X" 
+    ForXA="false"
+    ClassName="com.sybase.jdbc3.jdbc.SybDriver"
+    URLHelperClassname="weblogic.jdbc.utils.SybaseJDBC4DriverURLHelper"
+    TestSql="SELECT 1">
+        <Attribute Name="DbmsName" Required="false" InURL="true"/>
+        <Attribute Name="DbmsHost" Required="true" InURL="true"/>
+        <Attribute Name="DbmsPort" Required="true" InURL="true"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="false"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="false"/>
+    </Driver>
+  <!-- 3rdparty/jconnect/jConnect-6_0/classes/jconn3.jar -->
+  <Driver 
+    Database="Sybase" 
+    Vendor="Sybase" 
+    Type="Type 4"
+    DatabaseVersion="6.X" 
+    ForXA="true"
+    ClassName="com.sybase.jdbc3.jdbc.SybXADataSource"
+    URLHelperClassname="weblogic.jdbc.utils.SybaseJDBC4DriverURLHelper"
+    TestSql="SELECT 1">
+        <Attribute Name="DbmsName" Required="false" InURL="true"/>
+        <Attribute Name="DbmsHost" Required="true" InURL="true"/>
+        <Attribute Name="DbmsPort" Required="true" InURL="true"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="false"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="false"/>
+    </Driver>
+  <Driver 
+    Database="Oracle TimesTen Direct Connection" 
+    Vendor="Oracle TimesTen Direct Connection" 
+    Type="Type 4"
+    DatabaseVersion="Any" 
+    ForXA="false"
+    ClassName="com.timesten.jdbc.ObservableConnectionDS"
+    URLHelperClassname="weblogic.jdbc.utils.TimesTenDirectJDBC4DriverURLHelper"
+    TestSql="SELECT 1 from DUAL">
+        <Attribute Name="DbmsHost" Required="false" InURL="false"/>
+        <Attribute Name="DbmsPort" Required="false" InURL="false"/>
+        <Attribute Name="DbmsName" Required="true" InURL="true"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="false"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="false"/>
+    </Driver>
+  <Driver 
+    Database="Oracle TimesTen Direct Connection"
+    Vendor="Oracle TimesTen Direct Connection"
+    Type="Type 4"
+    DatabaseVersion="Any" 
+    ForXA="true"
+    ClassName="com.timesten.jdbc.xa.TimesTenXADataSource"
+    URLHelperClassname="weblogic.jdbc.utils.TimesTenDirectJDBC4DriverURLHelper"
+    TestSql="SELECT 1 from DUAL">
+        <Attribute Name="DbmsHost" Required="false" InURL="false"/>
+        <Attribute Name="DbmsPort" Required="false" InURL="false"/>
+        <Attribute Name="DbmsName" Required="true" InURL="true"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="false"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="false"/>
+    </Driver>
+  <Driver 
+    Database="Oracle TimesTen Client Connection"
+    Vendor="Oracle TimesTen Client Connection"
+    Type="Type 4"
+    DatabaseVersion="Any" 
+    ForXA="false"
+    ClassName="com.timesten.jdbc.ObservableConnectionDS"
+    URLHelperClassname="weblogic.jdbc.utils.TimesTenClientJDBC4DriverURLHelper"
+    TestSql="SELECT 1 from DUAL">
+        <Attribute Name="DbmsHost" Required="false" InURL="false"/>
+        <Attribute Name="DbmsPort" Required="false" InURL="false"/>
+        <Attribute Name="DbmsName" Required="true" InURL="true"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="false"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="false"/>
+    </Driver>
+  <Driver 
+    Database="Oracle TimesTen Client Connection"
+    Vendor="Oracle TimesTen Client Connection"
+    Type="Type 4"
+    DatabaseVersion="Any" 
+    ForXA="true"
+    ClassName="com.timesten.jdbc.xa.TimesTenXADataSource"
+    URLHelperClassname="weblogic.jdbc.utils.TimesTenClientJDBC4DriverURLHelper"
+    TestSql="SELECT 1 from DUAL">
+        <Attribute Name="DbmsHost" Required="false" InURL="false"/>
+        <Attribute Name="DbmsPort" Required="false" InURL="false"/>
+        <Attribute Name="DbmsName" Required="true" InURL="true"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="false"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="false"/>
+    </Driver>
+  <Driver 
+    Database="VSAM for z/OS"
+    Vendor="NEON" 
+    Type="Type 2" 
+    DatabaseVersion="Any"
+    ForXA="false"
+    ClassName="com.neon.jdbc.Driver"
+    URLHelperClassname="weblogic.jdbc.utils.NeonJDBCDriverURLHelper"
+    TestSql="">
+        <Attribute Name="DbmsName" Required="false" InURL="false" Description="Unused"/>
+        <Attribute Name="DbmsHost" Required="false" InURL="false"/>
+        <Attribute Name="DbmsPort" Required="false" InURL="false"/>
+        <Attribute Name="DbmsUsername" Required="true" InURL="true"/>
+        <Attribute Name="DbmsPassword" Required="true" InURL="false"/>
+        <Attribute Name="DataSource" Required="true" InURL="true" Description="DataSource name"/>
+    </Driver>
+
+<!-- Not done - probably not too popular:
+
+url=jdbc:firebirdsql:basehost/3050:/utils/firebird/bin/samplebase.gdb
+driver=org.firebirdsql.jdbc.FBDriver
+props=user=sysdba;password=masterkey
+
+url=jdbc:as400:RARMS
+driver=com.ibm.as400.access.AS400JDBCDriver,\
+props=libraries=A4LIB;user=INTERNETDB;password=DBFIRST;lob threshold=1048578;extendeddynamic=true;package=WEBL51;package library=A4LIB
+
+
+intersolv driver for Sybase
+URL: jdbc:sequelink://xxxxxx:4005/[Sybase] 
+Driver Class Name: intersolv.jdbc.sequelink.SequeLinkDriver
+Properties: Database=xxxxx user=xxxxx password=val
+
+
+AS400 Information:
+http://www-919.ibm.com/servers/eserver/iseries/developer/jdbc/Faqs/JDBCFAQ.html
+
+Native driver:
+driver="com.ibm.db2.jdbc.app.DB2Driver"
+url="jdbc:db2:dbname"
+properties="user=u;password=p;naming=system" naming=sql
+
+Toolkit driver:
+driver="com.ibm.as400.access.AS400JDBCDriver"
+url="jdbc:as400://host"
+properties="user=u;password=p;naming=system" naming=sql
+
+DB2 on OS390:
+    <JDBCConnectionPool DriverName="COM.IBM.db2.jdbc.DB2XADataSource"
+        Name="IBM-db2-xa"
+        Password="MYPASSWORD"
+        Properties="user=USERNAME;DatabaseName=DATABASE"
+        Targets="MYSERVER"
+        TestTableName="SQL SELECT COUNT(*) FROM SYSIBM.SYSTABLES"
+        URL="jdbc:db2:DATABASE"/>
+
+    <JDBCConnectionPool DriverName="COM.IBM.db2.jdbc.app.DB2Driver"
+        Name="IBM-db2"
+        Password="MYPASSWORD"
+        Properties="user=USERNAME;DatabaseName=DATABASE"
+        Targets="MYSERVER"
+        TestTableName="SQL SELECT COUNT(*) FROM SYSIBM.SYSTABLES"
+        URL="jdbc:db2:DATABASE"/>
+
+-->
+</JDBC-Drivers>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p:window xmlns:p="http://www.bea.com/servers/portal/framework/laf/1.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.bea.com/servers/portal/framework/laf/1.0.0 laf-window-1_0_0.xsd">
+  <!-- 
+  The Help Content portal is fundamental to the console help therefore it makes
+  the ideal place to include application wide CSS and JavaScript resources.
+  Any css or js resources that are used by the help viewer's content portlet should be added here.
+  -->
+  <p:render-dependencies>
+    <p:html>
+      <!-- the path-element should be relative to the webapp's root. Uncomment the p:links tag and
+           make changes to path-element and add more link tags as needed -->
+      <p:links>
+        <p:search-path>
+          <p:path-element>en-us</p:path-element>
+        </p:search-path>
+        <p:link rel="stylesheet" type="text/css" href="wls.css"/>
+        <p:link rel="stylesheet" type="text/css" href="wls-console-help.css"/>
+      </p:links>
+
+      <!-- the path-element should be relative to the webapp's root. Uncomment the p:scripts tag and
+           make changes to path-element and add more script tags as needed -->
+      <p:scripts>
+        <p:search-path>
+          <p:path-element>en-us</p:path-element>
+        </p:search-path>
+        <p:script src="CookieClass.js" type="text/javascript"/>
+	 <p:script src="displayContent.js" type="text/javascript"/>
+	<p:script src="topicInfo.js" type="text/javascript"/>
+      </p:scripts>
+    </p:html>
+  </p:render-dependencies>
+</p:window>

@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<WL5G3N0:definitions name="AsyncResponseServiceSoap12Definitions" targetNamespace="http://www.bea.com/async/AsyncResponseServiceSoap12" xmlns="" xmlns:WL5G3N0="http://schemas.xmlsoap.org/wsdl/" xmlns:WL5G3N1="http://www.bea.com/async/AsyncResponseServiceSoap12" xmlns:WL5G3N2="http://schemas.xmlsoap.org/wsdl/soap12/">
+  <WL5G3N0:types>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.bea.com/async/AsyncResponseServiceSoap12" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="onAsyncDelivery">
+        <xs:complexType>
+          <xs:sequence/>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </WL5G3N0:types>
+  <WL5G3N0:message name="onAsyncDelivery">
+    <WL5G3N0:part element="WL5G3N1:onAsyncDelivery" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:portType name="AsyncResponseServiceSoap12PortType">
+    <WL5G3N0:operation name="onAsyncDelivery" parameterOrder="parameters">
+      <WL5G3N0:input message="WL5G3N1:onAsyncDelivery"/>
+    </WL5G3N0:operation>
+  </WL5G3N0:portType>
+  <WL5G3N0:binding name="AsyncResponseServiceSoap12SoapBindinghttps" type="WL5G3N1:AsyncResponseServiceSoap12PortType">
+    <WL5G3N2:binding style="document" transport="http://schemas.xmlsoap.org/soap/https"/>
+    <WL5G3N0:operation name="onAsyncDelivery">
+      <WL5G3N2:operation style="document"/>
+      <WL5G3N0:input>
+        <WL5G3N2:body parts="parameters" use="literal"/>
+      </WL5G3N0:input>
+    </WL5G3N0:operation>
+  </WL5G3N0:binding>
+  <WL5G3N0:binding name="AsyncResponseServiceSoap12SoapBindinghttp" type="WL5G3N1:AsyncResponseServiceSoap12PortType">
+    <WL5G3N2:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <WL5G3N0:operation name="onAsyncDelivery">
+      <WL5G3N2:operation style="document"/>
+      <WL5G3N0:input>
+        <WL5G3N2:body parts="parameters" use="literal"/>
+      </WL5G3N0:input>
+    </WL5G3N0:operation>
+  </WL5G3N0:binding>
+  <WL5G3N0:binding name="AsyncResponseServiceSoap12SoapBindingjms" type="WL5G3N1:AsyncResponseServiceSoap12PortType">
+    <WL5G3N2:binding style="document" transport="http://www.openuri.org/2002/04/soap/jms/"/>
+    <WL5G3N0:operation name="onAsyncDelivery">
+      <WL5G3N2:operation style="document"/>
+      <WL5G3N0:input>
+        <WL5G3N2:body parts="parameters" use="literal"/>
+      </WL5G3N0:input>
+    </WL5G3N0:operation>
+  </WL5G3N0:binding>
+  <WL5G3N0:service name="AsyncResponseServiceSoap12">
+    <WL5G3N0:port binding="WL5G3N1:AsyncResponseServiceSoap12SoapBindinghttps" name="AsyncResponseServiceSoap12Https">
+      <WL5G3N2:address location="https://localhost:7002/_async/AsyncResponseServiceSoap12Https"/>
+    </WL5G3N0:port>
+    <WL5G3N0:port binding="WL5G3N1:AsyncResponseServiceSoap12SoapBindinghttp" name="AsyncResponseServiceSoap12">
+      <WL5G3N2:address location="http://localhost:7001/_async/AsyncResponseServiceSoap12"/>
+    </WL5G3N0:port>
+    <WL5G3N0:port binding="WL5G3N1:AsyncResponseServiceSoap12SoapBindingjms" name="AsyncResponseServiceSoap12Jms">
+      <WL5G3N2:address location="jms://localhost:7001/_async/AsyncResponseServiceSoap12Jms"/>
+    </WL5G3N0:port>
+  </WL5G3N0:service>
+</WL5G3N0:definitions>

@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portal:root xmlns:netuix="http://www.bea.com/servers/netuix/xsd/controls/netuix/1.0.0"
+             xmlns:html="http://www.w3.org/1999/xhtml-netuix-modified/1.0.0"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:portal="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0"
+             xsi:schemaLocation="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0 portal-support-1_0_0.xsd">
+<!-- 
+    Definition file for the pages in the jms.session subsystem
+    of the WebLogic Server administration console
+    
+    Copyright (c) 2004,2009, Oracle and/or its affiliates. All rights reserved.
+-->
+  <netuix:book definitionLabel="JmsSession" title="book.title" markupName="book"
+               presentationClass="invisible">
+    <netuix:content>
+      <netuix:book definitionLabel="JmsSessionBook" title="book.title" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="JmsSessionPages" title="not.used"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:book markupName="book" definitionLabel="JmsSessionTabsBook"
+                               title="JmsSessionTabsBook">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+                  <!-- Definition for the config tab -->
+                  <netuix:page markupName="page" definitionLabel="JMSSessionPoolconfigTabPage"
+                                   presentationClass="page-content"
+                                   title="tab.config.label">
+                        <netuix:meta name="helpid" content="JMS.jms.session.jmssessionpoolconfig.title;jms"/>
+                        <netuix:meta name="configuration-page" content="JMSSessionPool"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                              <netuix:portlet definitionLabel="JmsSessionJMSSessionPoolConfigPortlet">
+                                <netuix:strutsContent module="/jms" action="JmsSessionJMSSessionPoolConfig"
+                                                      refreshAction="JmsSessionJMSSessionPoolConfig"/>
+                              </netuix:portlet>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+
+                      <!-- Definition for the connection consumers tab -->
+                  <netuix:page markupName="page" definitionLabel="JMSSessionPoolConsumersTabPage"
+                                   presentationClass="page-content"
+                                   title="tab.connectionconsumers.label">
+                        <netuix:meta name="helpid" content="JMS.jms.session.jmsconnectionconsumertable.title;jms"/>
+                        <netuix:meta name="breadcrumb" content="tab.connectionconsumers.label"/>
+                        <netuix:meta name="configuration-page" content="JMSSessionPool"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                              <netuix:portlet definitionLabel="JMSConnectionConsumerTablePortlet">
+                                <netuix:strutsContent module="/jms" action="JMSConnectionConsumerTable"
+                                                      refreshAction="JMSConnectionConsumerTable"/>
+                              </netuix:portlet>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+
+                      <!-- Definition for the notes tab -->
+                  <netuix:page markupName="page" definitionLabel="JMSSessionPoolnotesTabPage"
+                                   title="tab.notes.label">
+                        <netuix:meta name="helpid" content="JMS.jms.session.jmssessionpoolnotes.title;jms"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="JmsSessionJMSSessionPoolNotesPortlet"
+                                                      contentUri="/PortalConfig/jms/JMSMBeanNotes.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                    </netuix:content>
+                  </netuix:book>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+          <!-- Definition for the JMSSessionRuntime table page -->
+      <netuix:page markupName="page" definitionLabel="JmsSessionJMSSessionRuntimeTablePage"
+                       title="not.used"
+                       hidden="true"
+                       backingFile="com.bea.console.utils.GeneralBackingFile"
+                       threadsafe="true">
+            <netuix:meta name="helpid" content="JMS.jms.session.jmssessionruntimetable.title;jms"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="JmsSessionJMSSessionRuntimeTablePortlet">
+                    <netuix:strutsContent module="/jms" action="JmsSessionJMSSessionRuntimeTable"
+                                          refreshAction="JmsSessionJMSSessionRuntimeTable"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+
+      <!-- JMS Connection Consumer Config Book -->
+
+ <netuix:book definitionLabel="JmsConnectionConsumerBook" title="book.title"
+                   markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="JmsConnectionConsumerPages" title="not.used"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:book markupName="book" definitionLabel="JmsConnectionConsumerCreateBook"
+                               title="JmsConnectionConsumerCreateBook">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+                  <!-- Definition for the config tab -->
+                  <netuix:page markupName="page" definitionLabel="JMSConnectionConsumerconfigTabPage"
+                                   presentationClass="page-content"
+                                   title="tab.config.label">
+                        <netuix:meta name="helpid" content="JMS.jms.session.jmsconnectionconsumerconfig.title;jms"/>
+                        <netuix:meta name="configuration-page" content="JMSConnectionConsumer"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                              <netuix:portlet definitionLabel="JMSConnectionConsumerConfigPortlet">
+                                <netuix:strutsContent module="/jms" action="JMSConnectionConsumerConfigAction"
+                                                      refreshAction="JMSConnectionConsumerConfigAction"/>
+                              </netuix:portlet>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+
+                      <!-- Definition for the monitoring tab -->
+                  <netuix:page markupName="page" definitionLabel="JMSConnectionConsumerRuntimeTabPage"
+                                   presentationClass="page-content"
+                                   title="tab.monitor.label">
+                        <netuix:meta name="helpid" content="JMS.jms.session.jmsconnectionconsumerruntime.title;jms"/>
+                        <netuix:meta name="configuration-page" content="JMSConnectionConsumer"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                              <netuix:portlet definitionLabel="JMSConnectionConsumerRuntimePortlet">
+                                <netuix:strutsContent module="/jms" action="JMSConnectionConsumerRuntimeTable"
+                                                      refreshAction="JMSConnectionConsumerRuntimeTable"/>
+                              </netuix:portlet>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+
+                      <!-- Definition for the notes tab -->
+                  <netuix:page markupName="page" definitionLabel="JMSConnectionConsumernotesTabPage"
+                                   title="tab.notes.label">
+                        <netuix:meta name="helpid" content="JMS.jms.session.jmsconnectionconsumernotes.title;jms"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="JMSConnectionConsumerNotesPortlet"
+                                                      contentUri="/PortalConfig/jms/JMSMBeanNotes.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                    </netuix:content>
+                  </netuix:book>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+
+        </netuix:content>
+      </netuix:book>
+
+      <!-- Definition for the JMSSessionPool creation assistant page -->
+  <netuix:book definitionLabel="JmsSessionCreateJMSSessionPoolBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.create.jmssessionpool.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="JmsSessionCreateJMSSessionPool"
+                       title="not.used"
+                       hidden="true">
+            <netuix:meta name="helpid" content="JMS.jms.session.createjmssessionpool.title;jms"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="JmsSessionCreateJMSSessionPoolPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/jms/session/createjmssessionpool/Flow.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the JMSSessionPool deletion assistant page -->
+  <netuix:book definitionLabel="JmsSessionDeleteJMSSessionPoolBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.delete.jmssessionpool.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="JmsSessionDeleteJMSSessionPool"
+                       title="not.used"
+                       hidden="true">
+            <netuix:meta name="helpid" content="JMS.jms.session.deletejmssessionpool.title;jms"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="JmsSessionDeleteJMSSessionPoolPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/jms/session/deletejmssessionpool/DeleteJMSSessionPool.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- Definition for the JMSConnectionConsumer creation assistant page -->
+  <netuix:book definitionLabel="JmsSessionCreateJMSConsumerBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.create.jmsconnectionconsumer.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="JmsSessionCreateJMSConnectionConsumer"
+                       title="not.used"
+                       hidden="true">
+            <netuix:meta name="helpid" content="JMS.jms.session.createconnectionconsumer.title;jms"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="JmsSessionCreateJMSConnectionConsumerPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/jms/session/consumer/create/CreateConsumer.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- Definition for the JMSConnectionConsumer deletion assistant page -->
+  <netuix:book definitionLabel="JmsSessionDeleteJMSConsumerBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.delete.jmsconnectionconsumer.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="JmsSessionDeleteJMSConnectionConsumer"
+                       title="not.used"
+                       hidden="true">
+            <netuix:meta name="helpid" content="JMS.jms.session.deleteconnectionconsumer.title;jms"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="JmsSessionDeleteJMSConnectionConsumerPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/jms/session/consumer/delete/DeleteConsumer.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+    </netuix:content>
+  </netuix:book>
+
+</portal:root>

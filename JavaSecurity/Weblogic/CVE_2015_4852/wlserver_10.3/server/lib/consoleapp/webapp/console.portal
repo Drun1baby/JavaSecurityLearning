@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portal:root xmlns:html="http://www.w3.org/1999/xhtml-netuix-modified/1.0.0"
+             xmlns:netuix="http://www.bea.com/servers/netuix/xsd/controls/netuix/1.0.0"
+             xmlns:portal="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0 portal-support-1_0_0.xsd">
+<!--
+    Overall portal definition file for the WebLogic Server
+	administration console.
+
+    Copyright (c) 2003,2009, Oracle and/or its affiliates. All rights reserved.
+-->
+  <netuix:desktop encoding="UTF-8" title="Oracle WebLogic Server Administration Console"
+                  definitionLabel="defaultDesktopLabel"
+                  treeOptimizationEnabled="true"
+                  markupName="desktop"
+                  markupType="Desktop"
+                  threadsafe="true">
+    <netuix:lookAndFeel definitionLabel="wlsconsoleLookAndFeel" markupName="wlsconsoleLookAndFeel"
+                        markupType="LookAndFeel"
+                        skeleton="wlsconsole"
+                        skin="wlsconsole"
+                        title="WLSConsole">
+      <netuix:titlebarButtonOrder>
+        <netuix:otherButtons/>
+        <netuix:namedButton name="float"/>
+        <netuix:namedButton name="edit"/>
+        <netuix:namedButton name="help"/>
+        <netuix:namedButton name="minimized"/>
+        <netuix:namedButton name="maximized"/>
+        <netuix:namedButton name="delete"/>
+      </netuix:titlebarButtonOrder>
+    </netuix:lookAndFeel>
+    <netuix:shell markupName="headerFooter" markupType="Shell">
+      <netuix:head/>
+      <netuix:body>
+        <netuix:header/>
+        <!-- The overall book, containing all our pages and portlets -->
+        <netuix:book defaultPage="Home" definitionLabel="Home" markupName="book" markupType="Book"
+                     title="Main Page Book"
+                     backingFile="com.bea.console.utils.MasterControlProgram"
+                     threadsafe="true">
+          <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+          <netuix:meta name="helpid" content="Home.home.homepage.title;global"/>
+          <netuix:content>
+            <netuix:page definitionLabel="page" markupName="page" markupType="Page"
+                         title="bea.console.tab">
+              <netuix:meta name="helpid" content="Home.home.homepage.title;global"/>
+              <netuix:content>
+                <netuix:layout type="twocol" markupName="twoColumnLayout" markupType="Layout">
+                  <netuix:placeholder presentationId="console-content-col" markupName="content-col"
+                                      markupType="Placeholder"
+                                      usingFlow="false"
+                                      title="dynamic">
+                    <!-- The Toolbar page -->
+                    <netuix:book markupName="book" markupType="Book" presentationClass="none" definitionLabel="ToolbarBook" title="ToolbarBook">
+                      <netuix:content>
+                        <netuix:page definitionLabel="ToolbarPage" markupName="page" markupType="Page" title="not.used">
+                          <netuix:content>
+                            <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                              <netuix:placeholder presentationId="console-content-col" markupName="content-col" markupType="Placeholder" usingFlow="false" title="fixed">
+                                <netuix:portletInstance contentUri="/PortalConfig/contentheader/ContentHeader_toolbar.portlet"
+                                            markupType="Portlet"
+                                            title="Toolbar"
+                                            instanceLabel="portlet_toolbar"/>
+                              </netuix:placeholder>
+                            </netuix:layout>
+                          </netuix:content>
+                        </netuix:page>
+                      </netuix:content>
+                    </netuix:book>
+                    <!-- The LocationContext page -->
+                    <netuix:book markupName="book" markupType="Book" presentationClass="none" definitionLabel="LocationContextBook" title="LocationContextBook">
+                      <netuix:content>
+                        <netuix:page definitionLabel="LocationContextPage" markupName="page" markupType="Page" title="not.used">
+                          <netuix:content>
+                            <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                              <netuix:placeholder presentationId="console-content-col" markupName="content-col" markupType="Placeholder" usingFlow="false" title="fixed">
+                                <netuix:portletInstance contentUri="/PortalConfig/contentheader/ContentHeader_breadcrumbs.portlet"
+                                            markupType="Portlet"
+                                            title="History"
+                                            instanceLabel="portlet_history"/>
+                              </netuix:placeholder>
+                            </netuix:layout>
+                          </netuix:content>
+                        </netuix:page>
+                      </netuix:content>
+                    </netuix:book>
+                    <!-- The WorkpaceMessages page -->
+                    <netuix:book markupName="book" markupType="Book" presentationClass="none" definitionLabel="WorkpaceMessagesBook" title="WorkpaceMessagesBook">
+                      <netuix:content>
+                        <netuix:page definitionLabel="WorkpaceMessagesPage" markupName="page" markupType="Page" title="not.used">
+                          <netuix:content>
+                            <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                              <netuix:placeholder presentationId="console-content-col" markupName="content-col" markupType="Placeholder" usingFlow="false" title="fixed">
+                                <netuix:portletInstance contentUri="/PortalConfig/contentheader/ContentHeader_messages.portlet"
+                                            instanceLabel="portlet_messages"
+                                            markupType="Portlet"
+                                            title="workspacemessages"/>
+                              </netuix:placeholder>
+                            </netuix:layout>
+                          </netuix:content>
+                        </netuix:page>
+                      </netuix:content>
+                    </netuix:book>
+                      <!-- The contents book -->
+                      <netuix:book definitionLabel="ContentBook" markupName="book" markupType="Book"
+                                 title="Contents"
+                                 presentationClass="none"
+                                 presentationId="console-content-area">
+                        <netuix:content>
+                          <!-- Core -->
+                          <netuix:pageContent contentUri="/PortalConfig/home/HomePage.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/changemgmt/ChangeManagement.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/summary/Summary.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/core/domain/CoreDomain.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/core/cluster/CoreCluster.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/security/compatibility/SecurityCompatibilityExtension.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/security/providers/SecurityProviders.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/core/classes/CoreClasses.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/core/machine/CoreMachine.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/core/server/CoreServer.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/core/logfilter/CoreLogfilter.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/core/virtualhost/CoreVirtualhost.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/core/jndi/ForeignJNDI.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/core/migration/CoreMigration.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/core/singletonservice/SingletonService.book"/>
+                          <!-- Deployments -->
+                          <netuix:pageContent contentUri="/PortalConfig/app/App.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/ejb/Ejb.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/connector/Connector.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/library/Library.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/webapp/Webapp.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/webservice/WebService.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/webservice/preDiablo/WebService.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/webservice/webservicesecurity/WebServiceSecurity.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/webservice/webservicesecurity/credentialprovider/CredentialProvider.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/webservice/webservicesecurity/tokenhandler/TokenHandler.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/sca/SCA.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/core/work/CoreWork.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/persistence/Persistence.book"/>
+                          <!-- Resources -->
+                          <netuix:pageContent contentUri="/PortalConfig/bridge/Bridge.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/jdbc/application/datasources/JdbcDataSource.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/jdbc/application/virtualdatasources/JdbcVirtualDataSource.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/jdbc/datasourcefactory/DataSourceFactory.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/jdbc/datasources/JdbcDatasources.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/jdbc/virtualdatasources/JDBCVirtualDataSources.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/filet3/Filet3.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/jms/foreignjms/JmsForeignjms.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/jms/bridgedestination/JmsBridgedestination.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/jms/connection/JmsConnection.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/jms/consumer/JmsConsumer.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/jms/destinations/JmsDestinations.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/jms/distributeddestinations/JmsDistributeddestinations.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/jms/subscribers/JmsSubscribers.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/jms/uniformdistdestination/subscribers/JmsUniformDistributedTopicDurableSubscribers.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/jms/stores/JmsStores.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/jms/producer/JmsProducer.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/jms/server/JmsServer.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/jms/session/JmsSession.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/jms/templates/JmsTemplates.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/jms/safagent/SAFAgent.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/jms/errorhandling/ErrorHandling.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/jms/remotesafcontext/RemoteSAFContext.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/jms/message/JMSMessage.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/jms/modules/JMSModules.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/jms/modules/system/JMSSystemModules.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/jms/quota/JMSQuota.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/jms/safdestination/SAFDestination.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/jms/uniformdistdestination/UniformDistDestination.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/jms/pathservice/PathService.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/security/workcontext/workcontext.book"/>
+                          <!-- Jcom -->
+                          <netuix:pageContent contentUri="/PortalConfig/jcom/jcom.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/jolt/Jolt.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/mail/Mail.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/snmp/attribute/SnmpAttribute.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/snmp/monitors/SnmpMonitors.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/snmp/logfilter/SnmpLogfilter.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/snmp/proxy/SnmpProxy.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/snmp/traps/SnmpTraps.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/snmp/Snmp.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/wtc/Wtc.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/xmlregistry/Xmlregistry.book"/>
+                          <!-- Security -->
+                          <netuix:pageContent contentUri="/PortalConfig/security/realm/SecurityRealm.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/security/policies/SecurityPolicy.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/security/group/SecurityGroup.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/security/users/SecurityUsers.book"/>
+                          <!-- Diagnostics -->
+                          <netuix:pageContent contentUri="/PortalConfig/diagnostics/Diagnostics.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/diagnostics/image/Image.book"/>
+                          <netuix:pageContent contentUri="/PortalConfig/diagnostics/archive/Archive.book"/>
+                          <!-- Tasks -->
+                          <netuix:pageContent contentUri="/PortalConfig/core/tasks/CoreTasks.book"/>
+                          <!-- Preferences -->
+                          <netuix:pageContent contentUri="/PortalConfig/preferences/Preferences.book"/>
+                          <!-- Search -->
+                          <netuix:pageContent contentUri="/PortalConfig/mbeansearch/MBeanSearch.book"/>
+                          <!-- General Stuff -->
+                          <netuix:pageContent contentUri="/PortalConfig/General.book"/>
+                        </netuix:content>
+                      </netuix:book>
+                  </netuix:placeholder>
+                  <netuix:placeholder presentationId="console-nav-col" markupName="nav-col" markupType="Placeholder"
+                                      usingFlow="false"
+                                      title="fixed">
+                    <!-- The Change Manager page -->
+                    <netuix:book markupName="book" markupType="Book" presentationClass="none" definitionLabel="ChangeManagerBook" title="ChangeManagerBook">
+                      <netuix:content>
+                        <netuix:page definitionLabel="ChangeManagerPage" markupName="page" markupType="Page" title="not.used">
+                          <netuix:content>
+                            <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                              <netuix:placeholder presentationId="console-nav-col" markupName="nav-col" markupType="Placeholder" usingFlow="false" title="fixed">
+                                <netuix:portletInstance contentUri="/PortalConfig/changemgmt/ChangeManager.portlet"
+                                     instanceLabel="ChangeManagerPortlet" markupType="Portlet" title="portlet.changecenter.title"/>
+                              </netuix:placeholder>
+                            </netuix:layout>
+                          </netuix:content>
+                        </netuix:page>
+                      </netuix:content>
+                    </netuix:book>
+                    <!-- The Navigation Tree page -->
+                    <netuix:book markupName="book" markupType="Book" presentationClass="none" definitionLabel="NavigationBook" title="NavigationBook">
+                      <netuix:content>
+                        <netuix:page definitionLabel="NavigationPage" markupName="page" markupType="Page" title="not.used">
+                          <netuix:content>
+                            <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                              <netuix:placeholder presentationId="console-nav-col" markupName="nav-col" markupType="Placeholder" usingFlow="false" title="fixed">
+                                <netuix:portletInstance contentUri="/PortalConfig/navtree/navtree.portlet" instanceLabel="NavTree"
+                                     markupType="Portlet" title="portlet.domainstructure.title"/>
+                              </netuix:placeholder>
+                            </netuix:layout>
+                          </netuix:content>
+                        </netuix:page>
+                      </netuix:content>
+                    </netuix:book>
+                    <!-- The QuickHelp page -->
+                    <netuix:book markupName="book" markupType="Book" presentationClass="none" definitionLabel="QuickLinksBook" title="QuickLinksBook">
+                      <netuix:content>
+                        <netuix:page definitionLabel="QuickLinksPage" markupName="page" markupType="Page" title="not.used">
+                          <netuix:content>
+                            <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                              <netuix:placeholder presentationId="console-nav-col" markupName="nav-col" markupType="Placeholder" usingFlow="false" title="fixed">
+                                <netuix:portletInstance contentUri="/PortalConfig/quicklinks/QuickLinks.portlet" markupType="Portlet"
+                                     instanceLabel="QuickLinks" title="portlet.quickhelp.title"/>
+                              </netuix:placeholder>
+                            </netuix:layout>
+                          </netuix:content>
+                        </netuix:page>
+                      </netuix:content>
+                    </netuix:book>
+                    <!-- The System Status page -->
+                    <netuix:book markupName="book" markupType="Book" presentationClass="none" definitionLabel="SystemStatusBook" title="SystemStatusBook">
+                      <netuix:content>
+                        <netuix:page definitionLabel="SystemStatusPage" markupName="page" markupType="Page" title="not.used">
+                          <netuix:content>
+                            <netuix:layout type="no" markupType="Layout" markupName="NoLayout">
+                              <netuix:placeholder presentationId="console-nav-col" markupName="nav-col" markupType="Placeholder" usingFlow="false" title="fixed">
+                                <netuix:portletInstance contentUri="/PortalConfig/status/SystemStatus.portlet"
+                                     instanceLabel="SystemStatus" markupType="Portlet" title="portlet.systemstatus.title"/>
+                              </netuix:placeholder>
+                            </netuix:layout>
+                          </netuix:content>
+                        </netuix:page>
+                      </netuix:content>
+                    </netuix:book>
+                  </netuix:placeholder>
+
+                </netuix:layout>
+              </netuix:content>
+            </netuix:page>
+          </netuix:content>
+        </netuix:book>
+        <netuix:footer/>
+      </netuix:body>
+    </netuix:shell>
+  </netuix:desktop>
+</portal:root>

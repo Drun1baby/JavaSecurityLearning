@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portal:root xmlns:netuix="http://www.bea.com/servers/netuix/xsd/controls/netuix/1.0.0"
+             xmlns:html="http://www.w3.org/1999/xhtml-netuix-modified/1.0.0"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:portal="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0"
+             xsi:schemaLocation="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0 portal-support-1_0_0.xsd">
+<!-- 
+    Definition file for the proxy pages in the snmp subsystem
+    of the WebLogic Server administration console
+    
+    Copyright (c) 2004,2009, Oracle and/or its affiliates. All rights reserved.
+-->
+  <netuix:book definitionLabel="SnmpProxy" title="book.title" markupName="book"
+               presentationClass="invisible">
+    <netuix:content>
+      <netuix:book definitionLabel="SnmpProxyBook" title="book.title" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="SnmpProxyPages" title="not.used"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:book markupName="book" definitionLabel="SnmpProxyTabsBook" title="SnmpProxyTabsBook">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+                  <!-- Definition for the general tab -->
+                  <netuix:page markupName="page" definitionLabel="SNMPProxyGeneralTabPage"
+                                   presentationClass="page-content"
+                                   title="tab.general.label">
+                        <netuix:meta name="helpid" content="SNMP.snmp.snmpproxygeneral.title;snmp"/>
+                        <netuix:meta name="breadcrumb-context" content="handle"/>
+                        <netuix:meta name="configuration-page" content="SNMPProxy"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                              <netuix:portlet definitionLabel="SNMPProxyGeneralPortlet">
+                                <netuix:strutsContent module="/snmp" action="SnmpProxySNMPProxyGeneral"
+                                                      refreshAction="SnmpProxySNMPProxyGeneral"/>
+                              </netuix:portlet>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the notes tab -->
+                  <netuix:page markupName="page" definitionLabel="SNMPProxyNotesPage"
+                                   presentationClass="page-content"
+                                   title="tab.notes.label">
+                        <netuix:meta name="helpid" content="SNMP.snmp.snmpproxynotes.title;snmp"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="SNMPProxyNotesPortlet"
+                                                      contentUri="/PortalConfig/snmp/SNMPNotes.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                    </netuix:content>
+                  </netuix:book>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the SNMPProxy creation assistant page -->
+  <netuix:book definitionLabel="SNMPProxyCreate" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.create.snmp.proxy.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="SnmpProxyCreateSNMPProxy" title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="SNMP.createsnmpproxy.page.title;snmp"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="SnmpProxyCreateSNMPProxyPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/snmp/proxy/createsnmpproxy/CreateSNMPProxy.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the SNMPProxy deletion assistant page -->
+  <netuix:book definitionLabel="SNMPProxyDelete" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="snmp.proxies.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="SnmpProxyDeleteSNMPProxy" title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="SNMP.snmp.deletesnmpproxy.page.title;snmp"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="SnmpProxyDeleteSNMPProxyPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/snmp/proxy/deletesnmpproxy/DeleteSNMPProxy.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+    </netuix:content>
+  </netuix:book>
+
+</portal:root>

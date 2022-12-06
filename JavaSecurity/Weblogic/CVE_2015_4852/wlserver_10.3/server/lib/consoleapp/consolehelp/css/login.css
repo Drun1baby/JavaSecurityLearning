@@ -1,0 +1,145 @@
+/*
+    Styles for the login page and other standalone pages (pages outside the
+    control of Portal)
+*/
+
+/* a few things from the L&F layout.css */
+.float-container {
+    overflow: hidden;
+    width: 100%;
+}
+/* end copied from layout.css */
+
+#outer {
+    width: 630px;
+    margin: 0px auto;
+}
+
+#content {
+    padding: 10px 0px 10px 275px;
+    height: 540px;
+    background: #fcfcfc no-repeat scroll left bottom;
+}
+
+#logo {
+    margin-top: 140px;
+}
+
+#header {
+    margin-top: 60px;
+}
+
+#login {
+}
+
+#bea-logo {
+    width: 74px;
+    height: 50px;
+    padding: 12px 25px;
+}
+
+#console-title {
+    width: 200px;
+    height: 50px;
+    padding-bottom: 12px;
+}
+
+#console-title2 {
+    width: 400px;
+    height: 34px;
+    padding-bottom: 20px;
+}
+
+.input-row, .button-row {
+    overflow: hidden;
+    width: 100%;
+}
+
+.message-row, .input-row {
+    padding-top: 4px;
+}
+
+#message .message-row {
+    padding: 4px 8px;
+}
+
+.button-row {
+    padding-top: 12px;
+}
+
+#loginData {
+    padding: 8px;
+    margin: 0px;
+}
+
+.content {
+    padding: 8px;
+}
+
+.input-row label {
+    width: 8em;
+    float: left;
+    font-weight: bold;
+}
+
+.input-row .ctrl {
+    width: 10em;
+    float: left;
+}
+
+.button-row .ctrl{
+    float: right;
+}
+
+input, select, textarea {
+    margin: 2px;
+}
+
+.textinput {
+    background-color: #E7EFFC; 
+    border: 1px solid #19355E;
+    padding: 2px;
+}
+
+#j_username, #j_password {
+    width: 10em;
+}
+
+.formButton, .formButton:active {
+    padding: 2px 8px;
+    border: 2px double #999;
+    border-top-color: #ccc;
+    border-left-color: #ccc;
+    background: #2785E5 url(../images/buttons_bg.gif) no-repeat 0px 0px;
+    color: #fff;
+    cursor:pointer;
+    cursor:hand;
+    height: 2.2em;
+    font-size: 1.0em;
+    text-align: center;
+    vertical-align: middle;
+    overflow: visible; /* keeps IE from making buttons too wide */
+}
+
+.formButton:hover {
+    background: #248CFC url(../images/buttons_bg.gif) no-repeat -300px 0px;
+}
+
+.formButton-disabled {
+    padding: 2px 8px;
+    border: 2px double #999;
+    border-top-color: #ccc;
+    border-left-color: #ccc;
+    background: #E3E3E3 url(../images/buttons_bg.gif) repeat-x -1201px 0px;
+    color: #999999;
+    height: 2.2em;
+    font-size: 1.0em;
+    text-align: center;
+    vertical-align: middle;
+    overflow: visible; /* keeps IE from making buttons too wide */
+}
+
+.loginFailed {
+    color: #AD0E25;
+}
+

@@ -1,0 +1,257 @@
+dn: dc=@domain@
+objectclass: top
+objectclass: domain
+dc: @domain@
+
+dn: ou=@realm@,dc=@domain@
+objectclass: top
+objectclass: organizationalUnit
+ou: @realm@
+
+dn: ou=ERole,ou=@realm@,dc=@domain@
+objectclass: top
+objectclass: organizationalUnit
+ou: ERole
+
+dn: ou=EResource,ou=@realm@,dc=@domain@
+objectclass: top
+objectclass: organizationalUnit
+ou: EResource
+
+dn: ou=EPredicate,ou=@realm@,dc=@domain@
+objectclass: top
+objectclass: organizationalUnit
+ou: EPredicate
+
+dn: ou=EProfile,ou=@realm@,dc=@domain@
+objectclass: top
+objectclass: organizationalUnit
+ou: EProfile
+
+dn: ou=EProfileDefinition,ou=@realm@,dc=@domain@
+objectclass: top
+objectclass: organizationalUnit
+ou: EProfileDefinition
+
+dn: ou=EProfileInstance,ou=@realm@,dc=@domain@
+objectclass: top
+objectclass: organizationalUnit
+ou: EProfileInstance
+
+dn: cn=type@E@Fwebservices@G,ou=EResource,ou=@realm@,dc=@domain@
+objectclass: top
+objectclass: EResource
+cn: type@E@Fwebservices@G
+EExpr:: Z2V2ZXJ5b25lCg==
+
+dn: cn=type@E@Fadm@G@M@Ocategory@EConfiguration,ou=EResource,ou=@realm@,dc=@domain@
+objectclass: top
+objectclass: EResource
+cn: type@E@Fadm@G@M@Ocategory@EConfiguration
+EExpr:: fARyQWRtaW4KckRlcGxveWVyCnJPcGVyYXRvcgpyTW9uaXRvcgo=
+
+dn: cn=type@E@Fadm@G@M@Ocategory@EFileDownload,ou=EResource,ou=@realm@,dc=@domain@
+objectclass: top
+objectclass: EResource
+cn: type@E@Fadm@G@M@Ocategory@EFileDownload
+EExpr:: fAJyQWRtaW4Kck9wZXJhdG9yCg==
+
+dn: cn=type@E@Fadm@G@M@Ocategory@EFileUpload,ou=EResource,ou=@realm@,dc=@domain@
+objectclass: top
+objectclass: EResource
+cn: type@E@Fadm@G@M@Ocategory@EFileUpload
+EExpr:: fAJyQWRtaW4KckRlcGxveWVyCg==
+
+dn: cn=type@E@Fadm@G@M@Ocategory@EViewLog,ou=EResource,ou=@realm@,dc=@domain@
+objectclass: top
+objectclass: EResource
+cn: type@E@Fadm@G@M@Ocategory@EViewLog
+EExpr:: fARyQWRtaW4KckRlcGxveWVyCnJPcGVyYXRvcgpyTW9uaXRvcgo=
+
+dn: cn=type@E@Fadm@G@M@Ocategory@ECrossDomain,ou=EResource,ou=@realm@,dc=@domain@
+objectclass: top
+objectclass: EResource
+cn: type@E@Fadm@G@M@Ocategory@ECrossDomain
+EExpr:: fAJyQWRtaW4KckNyb3NzRG9tYWluQ29ubmVjdG9yCg==
+
+dn: cn=type@E@Fadm@G@M@Ocategory@EAdminChannel,ou=EResource,ou=@realm@,dc=@domain@
+objectclass: top
+objectclass: EResource
+cn: type@E@Fadm@G@M@Ocategory@EAdminChannel
+EExpr:: fAZyQWRtaW4KckRlcGxveWVyCnJPcGVyYXRvcgpyTW9uaXRvcgpyQXBwVGVzdGVyCnJBZG1pbkNoYW5uZWxVc2VyCg==
+
+dn: cn=type@E@Feis@G,ou=EResource,ou=@realm@,dc=@domain@
+objectclass: top
+objectclass: EResource
+cn: type@E@Feis@G
+EExpr:: Z2V2ZXJ5b25lCg==
+
+dn: cn=type@E@Fejb@G,ou=EResource,ou=@realm@,dc=@domain@
+objectclass: top
+objectclass: EResource
+cn: type@E@Fejb@G
+EExpr:: Z2V2ZXJ5b25lCg==
+
+dn: cn=type@E@Furl@G,ou=EResource,ou=@realm@,dc=@domain@
+objectclass: top
+objectclass: EResource
+cn: type@E@Furl@G
+EExpr:: Z2V2ZXJ5b25lCg==
+
+dn: cn=type@E@Fjndi@G@M@Oapplication@E@M@Opath@E{weblogic}@M@Oaction@Emodify,ou=EResource,ou=@realm@,dc=@domain@
+objectclass: top
+objectclass: EResource
+cn: type@E@Fjndi@G@M@Oapplication@E@M@Opath@E{weblogic}@M@Oaction@Emodify
+EExpr:: fANyQWRtaW4KckRlcGxveWVyCnJPcGVyYXRvcgo=
+
+dn: cn=type@E@Fjndi@G@M@Oapplication@E@M@Opath@E{weblogic}@M@Oaction@Elist,ou=EResource,ou=@realm@,dc=@domain@
+objectclass: top
+objectclass: EResource
+cn: type@E@Fjndi@G@M@Oapplication@E@M@Opath@E{weblogic}@M@Oaction@Elist
+EExpr:: fANyQWRtaW4KckRlcGxveWVyCnJNb25pdG9yCg==
+
+dn: cn=type@E@Fjndi@G@M@Oapplication@E@M@Opath@E{javax}@M@Oaction@Emodify,ou=EResource,ou=@realm@,dc=@domain@
+objectclass: top
+objectclass: EResource
+cn: type@E@Fjndi@G@M@Oapplication@E@M@Opath@E{javax}@M@Oaction@Emodify
+EExpr:: fANyQWRtaW4KckRlcGxveWVyCnJPcGVyYXRvcgo=
+
+dn: cn=type@E@Fjndi@G@M@Oapplication@E@M@Opath@E{javax}@M@Oaction@Elist,ou=EResource,ou=@realm@,dc=@domain@
+objectclass: top
+objectclass: EResource
+cn: type@E@Fjndi@G@M@Oapplication@E@M@Opath@E{javax}@M@Oaction@Elist
+EExpr:: fANyQWRtaW4KckRlcGxveWVyCnJNb25pdG9yCg==
+
+dn: cn=type@E@Fjndi@G@M@Oapplication@E@M@Opath@E{weblogic@Mmanagement@Mmbeanservers}@M@Oaction@Elookup,ou=EResource,ou=@realm@,dc=@domain@
+objectclass: top
+objectclass: EResource
+cn: type@E@Fjndi@G@M@Oapplication@E@M@Opath@E{weblogic@Mmanagement@Mmbeanservers}@M@Oaction@Elookup
+EExpr:: Z3VzZXJzCg==
+
+dn: cn=type@E@Fjndi@G@M@Oapplication@E@M@Opath@E{java@Mcomp@Mjmx}@M@Oaction@Elookup,ou=EResource,ou=@realm@,dc=@domain@
+objectclass: top
+objectclass: EResource
+cn: type@E@Fjndi@G@M@Oapplication@E@M@Opath@E{java@Mcomp@Mjmx}@M@Oaction@Elookup
+EExpr:: Z3VzZXJzCg==
+
+dn: cn=type@E@Fworkcontext@G,ou=EResource,ou=@realm@,dc=@domain@
+objectclass: top
+objectclass: EResource
+cn: type@E@Fworkcontext@G
+EExpr:: Z2V2ZXJ5b25lCg==
+
+dn: cn=type@E@Fcontrol@G,ou=EResource,ou=@realm@,dc=@domain@
+objectclass: top
+objectclass: EResource
+cn: type@E@Fcontrol@G
+EExpr:: Z2V2ZXJ5b25lCg==
+
+dn: cn=weblogic.entitlement.rules.TimePredicate,ou=EPredicate,ou=@realm@,dc=@domain@
+objectclass: top
+objectclass: EPredicate
+cn: weblogic.entitlement.rules.TimePredicate
+
+dn: cn=weblogic.entitlement.rules.InDevelopmentMode,ou=EPredicate,ou=@realm@,dc=@domain@
+objectclass: top
+objectclass: EPredicate
+cn: weblogic.entitlement.rules.InDevelopmentMode
+
+dn: cn=weblogic.entitlement.rules.UncheckedPolicy,ou=EPredicate,ou=@realm@,dc=@domain@
+objectclass: top
+objectclass: EPredicate
+cn: weblogic.entitlement.rules.UncheckedPolicy
+
+dn: cn=weblogic.entitlement.rules.ExcludedPolicy,ou=EPredicate,ou=@realm@,dc=@domain@
+objectclass: top
+objectclass: EPredicate
+cn: weblogic.entitlement.rules.ExcludedPolicy
+
+dn: cn=weblogic.security.utils.SignaturePredicate,ou=EPredicate,ou=@realm@,dc=@domain@
+objectclass: top
+objectclass: EPredicate
+cn: weblogic.security.utils.SignaturePredicate
+
+dn: cn=weblogic.entitlement.rules.SignaturePredicate,ou=EPredicate,ou=@realm@,dc=@domain@
+objectclass: top
+objectclass: EPredicate
+cn: weblogic.entitlement.rules.SignaturePredicate
+
+dn: cn=weblogic.entitlement.rules.ContextElementIsSet,ou=EPredicate,ou=@realm@,dc=@domain@
+objectclass: top
+objectclass: EPredicate
+cn: weblogic.entitlement.rules.ContextElementIsSet
+
+dn: cn=weblogic.entitlement.rules.ContextElementNumberEquals,ou=EPredicate,ou=@realm@,dc=@domain@
+objectclass: top
+objectclass: EPredicate
+cn: weblogic.entitlement.rules.ContextElementNumberEquals
+
+dn: cn=weblogic.entitlement.rules.ContextElementNumberGreater,ou=EPredicate,ou=@realm@,dc=@domain@
+objectclass: top
+objectclass: EPredicate
+cn: weblogic.entitlement.rules.ContextElementNumberGreater
+
+dn: cn=weblogic.entitlement.rules.ContextElementNumberLess,ou=EPredicate,ou=@realm@,dc=@domain@
+objectclass: top
+objectclass: EPredicate
+cn: weblogic.entitlement.rules.ContextElementNumberLess
+
+dn: cn=weblogic.entitlement.rules.ContextElementStringEquals,ou=EPredicate,ou=@realm@,dc=@domain@
+objectclass: top
+objectclass: EPredicate
+cn: weblogic.entitlement.rules.ContextElementStringEquals
+
+dn: cn=weblogic.entitlement.rules.HttpRequestAttrIsSet,ou=EPredicate,ou=@realm@,dc=@domain@
+objectclass: top
+objectclass: EPredicate
+cn: weblogic.entitlement.rules.HttpRequestAttrIsSet
+
+dn: cn=weblogic.entitlement.rules.HttpRequestAttrNumberEquals,ou=EPredicate,ou=@realm@,dc=@domain@
+objectclass: top
+objectclass: EPredicate
+cn: weblogic.entitlement.rules.HttpRequestAttrNumberEquals
+
+dn: cn=weblogic.entitlement.rules.HttpRequestAttrNumberGreater,ou=EPredicate,ou=@realm@,dc=@domain@
+objectclass: top
+objectclass: EPredicate
+cn: weblogic.entitlement.rules.HttpRequestAttrNumberGreater
+
+dn: cn=weblogic.entitlement.rules.HttpRequestAttrNumberLess,ou=EPredicate,ou=@realm@,dc=@domain@
+objectclass: top
+objectclass: EPredicate
+cn: weblogic.entitlement.rules.HttpRequestAttrNumberLess
+
+dn: cn=weblogic.entitlement.rules.HttpRequestAttrStringEquals,ou=EPredicate,ou=@realm@,dc=@domain@
+objectclass: top
+objectclass: EPredicate
+cn: weblogic.entitlement.rules.HttpRequestAttrStringEquals
+
+dn: cn=weblogic.entitlement.rules.After,ou=EPredicate,ou=@realm@,dc=@domain@
+objectclass: top
+objectclass: EPredicate
+cn: weblogic.entitlement.rules.After
+
+dn: cn=weblogic.entitlement.rules.Before,ou=EPredicate,ou=@realm@,dc=@domain@
+objectclass: top
+objectclass: EPredicate
+cn: weblogic.entitlement.rules.Before
+
+dn: cn=weblogic.entitlement.rules.IsDayOfWeek,ou=EPredicate,ou=@realm@,dc=@domain@
+objectclass: top
+objectclass: EPredicate
+cn: weblogic.entitlement.rules.IsDayOfWeek
+
+dn: cn=weblogic.entitlement.rules.IsDayOfMonth,ou=EPredicate,ou=@realm@,dc=@domain@
+objectclass: top
+objectclass: EPredicate
+cn: weblogic.entitlement.rules.IsDayOfMonth
+
+dn: cn=weblogic.entitlement.rules.AfterDayOfMonth,ou=EPredicate,ou=@realm@,dc=@domain@
+objectclass: top
+objectclass: EPredicate
+cn: weblogic.entitlement.rules.AfterDayOfMonth
+
+dn: cn=weblogic.entitlement.rules.BeforeDayOfMonth,ou=EPredicate,ou=@realm@,dc=@domain@
+objectclass: top
+objectclass: EPredicate
+cn: weblogic.entitlement.rules.BeforeDayOfMonth

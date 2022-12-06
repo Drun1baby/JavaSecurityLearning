@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portal:root xmlns:netuix="http://www.bea.com/servers/netuix/xsd/controls/netuix/1.0.0"
+             xmlns:html="http://www.w3.org/1999/xhtml-netuix-modified/1.0.0"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:portal="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0"
+             xsi:schemaLocation="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0 portal-support-1_0_0.xsd">
+<!-- Definition file for the pages in the diagnostics.image subsystem 
+     of the WebLogic Server administration console
+     Copyright (c) 2003,2011, Oracle and/or its affiliates. All rights reserved.  -->
+    <!-- Definition for the Image table page -->
+    <netuix:book definitionLabel="DiagnosticImage" localizationBundle="global" markupName="book"
+               presentationClass="invisible"
+               title="diagnosticimagetable.title">
+      <netuix:content>
+    <!-- Definition for the Image table page -->
+    <netuix:book definitionLabel="DiagnosticImageBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="diagnosticimagetable.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar>
+    </netuix:titlebar>
+       <netuix:content>
+            <netuix:page definitionLabel="DiagnosticsImageTablePage" markupName="page" title="not.used"
+                       hidden="true"
+                       presentationClass="page-table">
+                <netuix:meta name="helpid"
+                         content="Diagnostics.diagnostics.image.imagetable.title;diagnostics"/>
+                <netuix:content>
+                    <netuix:layout type="no" markupName="NoLayout">
+                        <netuix:placeholder usingFlow="false" markupName="ph1">
+                            <netuix:portlet definitionLabel="DiagnosticsImageTablePortlet">
+                    <netuix:strutsContent module="/diagnostics" action="ImageTable" refreshAction="ImageTable"/>
+                  </netuix:portlet>
+                        </netuix:placeholder>
+                    </netuix:layout>
+                </netuix:content>
+            </netuix:page>
+       </netuix:content>
+      </netuix:book>
+
+
+
+      <netuix:book definitionLabel="DiagnosticsImageConfigBook" title="book.title"
+                   markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="DiagnosticsImageConfigPage" title="not.used"
+                       hidden="true">
+            <netuix:meta name="helpid"
+                         content="Diagnostics.diagnostics.image.imageconfig.title;diagnostics"/>
+            <netuix:meta name="breadcrumb-context" content="handle"/>  
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:book markupName="book" definitionLabel="DiagnosticsImageConfigPageBook"
+                               title="DiagnosticsImageConfigBook">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+                      <netuix:page markupName="page" definitionLabel="DiagnosticsImageConfigTabPage"
+                                   presentationClass="page-content"
+                                   title="tab.config.label">
+
+                        <netuix:content>
+                          <netuix:layout type="no" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupName="ph1">
+
+                              <netuix:portlet definitionLabel="DiagnosticsImageConfigPortlet">
+                                <netuix:strutsContent module="/diagnostics" action="ImageConfig" refreshAction="ImageConfig"/>
+                              </netuix:portlet>
+
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                    </netuix:content>
+                  </netuix:book>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+    
+   
+
+      <!-- Definition for the Image capture assistant page -->
+    <netuix:book definitionLabel="DiagnosticsCaptureImageBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.capture.diagnosticimage.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar>
+        </netuix:titlebar>
+        <netuix:content>
+          <netuix:page definitionLabel="DiagnosticsCaptureImage" markupName="page" title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid"
+                         content="Diagnostics.diagnostics.image.captureimage.title;diagnostics"/>
+            <netuix:content>
+                <netuix:layout type="no" markupName="NoLayout">
+                    <netuix:placeholder usingFlow="false" markupName="ph1">
+                        <netuix:portlet definitionLabel="DiagnosticsCaptureImagePortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/diagnostics/image/captureimage/CaptureImage.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                    </netuix:placeholder>
+                </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+     </netuix:book>
+
+    </netuix:content>
+  </netuix:book>
+
+</portal:root>

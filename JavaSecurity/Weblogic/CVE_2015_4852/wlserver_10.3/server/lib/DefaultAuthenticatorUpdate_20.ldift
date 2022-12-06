@@ -1,0 +1,7 @@
+dn: cn=AppTesters,ou=groups,ou=@realm@,dc=@domain@
+memberURL: ldap:///ou=groups,ou=@realm@,dc=@domain@??sub?(&(objectclass=person)(wlsMemberOf=cn=AppTesters,ou=groups,ou=@realm@,dc=@domain@))
+description: AppTesters can test applications that are in admin mode
+objectclass: top
+objectclass: groupOfUniqueNames
+objectclass: groupOfURLs
+cn: AppTesters

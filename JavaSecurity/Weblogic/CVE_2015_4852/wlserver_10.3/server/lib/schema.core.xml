@@ -1,0 +1,2994 @@
+<dsml:dsml xmlns:dsml="http://www.dsml.org/DSML">
+  <dsml:directory-schema>
+   <dsml:class
+         id="top"
+         type="abstract">
+     <dsml:name>top</dsml:name>
+     <dsml:description></dsml:description>
+     <dsml:object-identifier>2.5.6.0</dsml:object-identifier>
+     <dsml:attribute ref="#objectClass" required="true"/>
+     <dsml:attribute ref="#createTimestamp" required="false"/>
+     <dsml:attribute ref="#creatorsName" required="false"/>
+     <dsml:attribute ref="#modifyTimestamp" required="false"/>
+     <dsml:attribute ref="#modifiersName" required="false"/>
+     <dsml:attribute ref="#orclguid" required="false"/>
+   </dsml:class>
+   <dsml:attribute-type id="orclguid">
+       <dsml:name>orclguid</dsml:name>
+       <dsml:object-identifier>2.16.840.1.113894.1.1.37</dsml:object-identifier>
+       <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+       <dsml:equality>caseIgnoreMatch</dsml:equality>
+       <dsml:substring>caseIgnoreSubstringsMatch</dsml:substring>
+       <dsml:single-value>true</dsml:single-value>
+       <dsml:user-modification>false</dsml:user-modification>
+   </dsml:attribute-type>
+   
+   <dsml:class
+         id="alias"
+         type="structural"
+         superior="#top">
+     <dsml:name>alias</dsml:name>
+     <dsml:description></dsml:description>
+     <dsml:object-identifier>2.5.6.1</dsml:object-identifier>
+     <dsml:attribute ref="#aliasedObjectName" required="true"/>
+   </dsml:class>
+   <dsml:class
+         id="country"
+         type="structural"
+         superior="#top">
+     <dsml:name>country</dsml:name>
+     <dsml:description></dsml:description>
+     <dsml:object-identifier>2.5.6.2</dsml:object-identifier>
+     <dsml:attribute ref="#c" required="true"/>
+     <dsml:attribute ref="#searchGuide" required="false"/>
+     <dsml:attribute ref="#description" required="false"/>
+   </dsml:class>
+   <dsml:class
+         id="locality"
+         type="structural"
+         superior="#top">
+     <dsml:name>locality</dsml:name>
+     <dsml:description></dsml:description>
+     <dsml:object-identifier>2.5.6.3</dsml:object-identifier>
+     <dsml:attribute ref="#c" required="true"/>
+     <dsml:attribute ref="#street" required="false"/>
+     <dsml:attribute ref="#seeAlso" required="false"/>
+     <dsml:attribute ref="#searchGuide" required="false"/>
+     <dsml:attribute ref="#st" required="false"/>
+     <dsml:attribute ref="#l" required="false"/>
+     <dsml:attribute ref="#description" required="false"/>
+   </dsml:class>
+   <dsml:class
+         id="organization"
+         type="structural"
+         superior="#top">
+     <dsml:name>organization</dsml:name>
+     <dsml:description></dsml:description>
+     <dsml:object-identifier>2.5.6.4</dsml:object-identifier>
+     <dsml:attribute ref="#o" required="true"/>
+     <dsml:attribute ref="#userPassword" required="false"/>
+     <dsml:attribute ref="#searchGuide" required="false"/>
+     <dsml:attribute ref="#seeAlso" required="false"/>
+     <dsml:attribute ref="#businessCategory" required="false"/>
+     <dsml:attribute ref="#x121Address" required="false"/>
+     <dsml:attribute ref="#registeredAddress" required="false"/>
+     <dsml:attribute ref="#destinationIndicator" required="false"/>
+     <dsml:attribute ref="#preferredDeliveryMethod" required="false"/>
+     <dsml:attribute ref="#telexNumber" required="false"/>
+     <dsml:attribute ref="#teletexTerminalIdentifier" required="false"/>
+     <dsml:attribute ref="#telephoneNumber" required="false"/>
+     <dsml:attribute ref="#internationaliSDNNumber" required="false"/>
+     <dsml:attribute ref="#facsimileTelephoneNumber" required="false"/>
+     <dsml:attribute ref="#street" required="false"/>
+     <dsml:attribute ref="#postOfficeBox" required="false"/>
+     <dsml:attribute ref="#postalCode" required="false"/>
+     <dsml:attribute ref="#postalAddress" required="false"/>
+     <dsml:attribute ref="#physicalDeliveryOfficeName" required="false"/>
+     <dsml:attribute ref="#st" required="false"/>
+     <dsml:attribute ref="#l" required="false"/>
+     <dsml:attribute ref="#description" required="false"/>
+   </dsml:class>
+   <dsml:class
+         id="organizationalUnit"
+         type="structural"
+         superior="#top">
+     <dsml:name>organizationalUnit</dsml:name>
+     <dsml:description></dsml:description>
+     <dsml:object-identifier>2.5.6.5</dsml:object-identifier>
+     <dsml:attribute ref="#ou" required="true"/>
+     <dsml:attribute ref="#userPassword" required="false"/>
+     <dsml:attribute ref="#searchGuide" required="false"/>
+     <dsml:attribute ref="#seeAlso" required="false"/>
+     <dsml:attribute ref="#businessCategory" required="false"/>
+     <dsml:attribute ref="#x121Address" required="false"/>
+     <dsml:attribute ref="#registeredAddress" required="false"/>
+     <dsml:attribute ref="#destinationIndicator" required="false"/>
+     <dsml:attribute ref="#preferredDeliveryMethod" required="false"/>
+     <dsml:attribute ref="#telexNumber" required="false"/>
+     <dsml:attribute ref="#teletexTerminalIdentifier" required="false"/>
+     <dsml:attribute ref="#telephoneNumber" required="false"/>
+     <dsml:attribute ref="#internationaliSDNNumber" required="false"/>
+     <dsml:attribute ref="#facsimileTelephoneNumber" required="false"/>
+     <dsml:attribute ref="#street" required="false"/>
+     <dsml:attribute ref="#postOfficeBox" required="false"/>
+     <dsml:attribute ref="#postalCode" required="false"/>
+     <dsml:attribute ref="#postalAddress" required="false"/>
+     <dsml:attribute ref="#physicalDeliveryOfficeName" required="false"/>
+     <dsml:attribute ref="#st" required="false"/>
+     <dsml:attribute ref="#l" required="false"/>
+     <dsml:attribute ref="#description" required="false"/>
+   </dsml:class>
+   <dsml:class
+         id="person"
+         type="structural"
+         superior="#top">
+     <dsml:name>person</dsml:name>
+     <dsml:description></dsml:description>
+     <dsml:object-identifier>2.5.6.6</dsml:object-identifier>
+     <dsml:attribute ref="#sn" required="true"/>
+     <dsml:attribute ref="#cn" required="true"/>
+     <dsml:attribute ref="#userPassword" required="false"/>
+     <dsml:attribute ref="#telephoneNumber" required="false"/>
+     <dsml:attribute ref="#seeAlso" required="false"/>
+     <dsml:attribute ref="#description" required="false"/>
+   </dsml:class>
+   <dsml:class
+         id="organizationalPerson"
+         type="structural"
+         superior="#person">
+     <dsml:name>organizationalPerson</dsml:name>
+     <dsml:description></dsml:description>
+     <dsml:object-identifier>2.5.6.7</dsml:object-identifier>
+     <dsml:attribute ref="#sn" required="true"/>
+     <dsml:attribute ref="#cn" required="true"/>
+     <dsml:attribute ref="#userPassword" required="false"/>
+     <dsml:attribute ref="#telephoneNumber" required="false"/>
+     <dsml:attribute ref="#seeAlso" required="false"/>
+     <dsml:attribute ref="#description" required="false"/>
+     <dsml:attribute ref="#facsimileTelephoneNumber" required="false"/>
+     <dsml:attribute ref="#l" required="false"/>
+     <dsml:attribute ref="#ou" required="false"/>
+     <dsml:attribute ref="#postalAddress" required="false"/>
+     <dsml:attribute ref="#title" required="false"/>
+   </dsml:class>
+   <dsml:class
+         id="organizationalRole"
+         type="structural"
+         superior="#top">
+     <dsml:name>organizationalRole</dsml:name>
+     <dsml:description></dsml:description>
+     <dsml:object-identifier>2.5.6.8</dsml:object-identifier>
+     <dsml:attribute ref="#cn" required="true"/>
+     <dsml:attribute ref="#x121Address" required="false"/>
+     <dsml:attribute ref="#registeredAddress" required="false"/>
+     <dsml:attribute ref="#destinationIndicator" required="false"/>
+     <dsml:attribute ref="#preferredDeliveryMethod" required="false"/>
+     <dsml:attribute ref="#telexNumber" required="false"/>
+     <dsml:attribute ref="#teletexTerminalIdentifier" required="false"/>
+     <dsml:attribute ref="#telephoneNumber" required="false"/>
+     <dsml:attribute ref="#internationaliSDNNumber" required="false"/>
+     <dsml:attribute ref="#facsimileTelephoneNumber" required="false"/>
+     <dsml:attribute ref="#seeAlso" required="false"/>
+     <dsml:attribute ref="#roleOccupant" required="false"/>
+     <dsml:attribute ref="#preferredDeliveryMethod" required="false"/>
+     <dsml:attribute ref="#street" required="false"/>
+     <dsml:attribute ref="#postOfficeBox" required="false"/>
+     <dsml:attribute ref="#postalCode" required="false"/>
+     <dsml:attribute ref="#postalAddress" required="false"/>
+     <dsml:attribute ref="#physicalDeliveryOfficeName" required="false"/>
+     <dsml:attribute ref="#ou" required="false"/>
+     <dsml:attribute ref="#st" required="false"/>
+     <dsml:attribute ref="#l" required="false"/>
+     <dsml:attribute ref="#description" required="false"/>
+   </dsml:class>
+   <dsml:class
+         id="groupOfNames"
+         type="structural"
+         superior="#top">
+     <dsml:name>groupOfNames</dsml:name>
+     <dsml:description></dsml:description>
+     <dsml:object-identifier>2.5.6.9</dsml:object-identifier>
+     <dsml:attribute ref="#member" required="true"/>
+     <dsml:attribute ref="#cn" required="true"/>
+     <dsml:attribute ref="#businessCategory" required="false"/>
+     <dsml:attribute ref="#seeAlso" required="false"/>
+     <dsml:attribute ref="#owner" required="false"/>
+     <dsml:attribute ref="#ou" required="false"/>
+     <dsml:attribute ref="#o" required="false"/>
+     <dsml:attribute ref="#description" required="false"/>
+   </dsml:class>
+   <dsml:class
+         id="residentialPerson"
+         type="structural"
+         superior="#person">
+     <dsml:name>residentialPerson</dsml:name>
+     <dsml:description></dsml:description>
+     <dsml:object-identifier>2.5.6.10</dsml:object-identifier>
+     <dsml:attribute ref="#l" required="true"/>
+     <dsml:attribute ref="#businessCategory" required="false"/>
+     <dsml:attribute ref="#x121Address" required="false"/>
+     <dsml:attribute ref="#registeredAddress" required="false"/>
+     <dsml:attribute ref="#destinationIndicator" required="false"/>
+     <dsml:attribute ref="#preferredDeliveryMethod" required="false"/>
+     <dsml:attribute ref="#telexNumber" required="false"/>
+     <dsml:attribute ref="#teletexTerminalIdentifier" required="false"/>
+     <dsml:attribute ref="#telephoneNumber" required="false"/>
+     <dsml:attribute ref="#internationaliSDNNumber" required="false"/>
+     <dsml:attribute ref="#facsimileTelephoneNumber" required="false"/>
+     <dsml:attribute ref="#preferredDeliveryMethod" required="false"/>
+     <dsml:attribute ref="#street" required="false"/>
+     <dsml:attribute ref="#postOfficeBox" required="false"/>
+     <dsml:attribute ref="#postalCode" required="false"/>
+     <dsml:attribute ref="#postalAddress" required="false"/>
+     <dsml:attribute ref="#physicalDeliveryOfficeName" required="false"/>
+     <dsml:attribute ref="#st" required="false"/>
+     <dsml:attribute ref="#l" required="false"/>
+   </dsml:class>
+   <dsml:class
+         id="applicationProcess"
+         type="structural"
+         superior="#top">
+     <dsml:name>applicationProcess</dsml:name>
+     <dsml:description></dsml:description>
+     <dsml:object-identifier>2.5.6.11</dsml:object-identifier>
+     <dsml:attribute ref="#cn" required="true"/>
+     <dsml:attribute ref="#seeAlso" required="false"/>
+     <dsml:attribute ref="#ou" required="false"/>
+     <dsml:attribute ref="#l" required="false"/>
+     <dsml:attribute ref="#description" required="false"/>
+   </dsml:class>
+   <dsml:class
+         id="applicationEntity"
+         type="structural"
+         superior="#top">
+     <dsml:name>applicationEntity</dsml:name>
+     <dsml:description></dsml:description>
+     <dsml:object-identifier>2.5.6.12</dsml:object-identifier>
+     <dsml:attribute ref="#presentationAddress" required="true"/>
+     <dsml:attribute ref="#cn" required="true"/>
+     <dsml:attribute ref="#supportedApplicationContext" required="false"/>
+     <dsml:attribute ref="#seeAlso" required="false"/>
+     <dsml:attribute ref="#ou" required="false"/>
+     <dsml:attribute ref="#o" required="false"/>
+     <dsml:attribute ref="#l" required="false"/>
+     <dsml:attribute ref="#description" required="false"/>
+   </dsml:class>
+   <dsml:class
+         id="dSA"
+         type="structural"
+         superior="#applicationEntity">
+     <dsml:name>dSA</dsml:name>
+     <dsml:description></dsml:description>
+     <dsml:object-identifier>2.5.6.13</dsml:object-identifier>
+     <dsml:attribute ref="#presentationAddress" required="true"/>
+     <dsml:attribute ref="#cn" required="true"/>
+     <dsml:attribute ref="#knowledgeInformation" required="false"/>
+   </dsml:class>
+   <dsml:class
+         id="device"
+         type="structural"
+         superior="#top">
+     <dsml:name>device</dsml:name>
+     <dsml:description></dsml:description>
+     <dsml:object-identifier>2.5.6.14</dsml:object-identifier>
+     <dsml:attribute ref="#cn" required="true"/>
+     <dsml:attribute ref="#serialNumber" required="false"/>
+     <dsml:attribute ref="#seeAlso" required="false"/>
+     <dsml:attribute ref="#owner" required="false"/>
+     <dsml:attribute ref="#ou" required="false"/>
+     <dsml:attribute ref="#o" required="false"/>
+     <dsml:attribute ref="#l" required="false"/>
+     <dsml:attribute ref="#description" required="false"/>
+   </dsml:class>
+   <dsml:class
+         id="strongAuthenticationUser"
+         type="auxiliary"
+         superior="#top">
+     <dsml:name>strongAuthenticationUser</dsml:name>
+     <dsml:description></dsml:description>
+     <dsml:object-identifier>2.5.6.15</dsml:object-identifier>
+     <dsml:attribute ref="#userCertificate" required="true"/>
+     <dsml:attribute ref="#serialNumber" required="false"/>
+     <dsml:attribute ref="#seeAlso" required="false"/>
+     <dsml:attribute ref="#owner" required="false"/>
+     <dsml:attribute ref="#ou" required="false"/>
+     <dsml:attribute ref="#o" required="false"/>
+     <dsml:attribute ref="#l" required="false"/>
+     <dsml:attribute ref="#description" required="false"/>
+   </dsml:class>
+   <dsml:class
+         id="certificationAuthority"
+         type="auxiliary"
+         superior="#top">
+     <dsml:name>certificationAuthority</dsml:name>
+     <dsml:description></dsml:description>
+     <dsml:object-identifier>2.5.6.16</dsml:object-identifier>
+     <dsml:attribute ref="#authorityRevocationList" required="true"/>
+     <dsml:attribute ref="#certificateRevocationList" required="true"/>
+     <dsml:attribute ref="#cACertificate" required="true"/>
+     <dsml:attribute ref="#crossCertificatePair" required="false"/>
+   </dsml:class>
+   <dsml:class
+         id="groupOfUniqueNames"
+         type="structural"
+         superior="#top">
+     <dsml:name>groupOfUniqueNames</dsml:name>
+     <dsml:description></dsml:description>
+     <dsml:object-identifier>2.5.6.17</dsml:object-identifier>
+     <dsml:attribute ref="#uniqueMember" required="false"/>
+     <dsml:attribute ref="#cn" required="true"/>
+     <dsml:attribute ref="#businessCategory" required="false"/>
+     <dsml:attribute ref="#seeAlso" required="false"/>
+     <dsml:attribute ref="#owner" required="false"/>
+     <dsml:attribute ref="#ou" required="false"/>
+     <dsml:attribute ref="#o" required="false"/>
+     <dsml:attribute ref="#description" required="false"/>
+   </dsml:class>
+   <dsml:class
+         id="groupOfURLs"
+	 type="structural"
+	 superior="#top">
+     <dsml:name>groupOfURLs</dsml:name>
+     <dsml:description>Dynamically Defined Group</dsml:description>
+     <dsml:object-identifier>2.16.840.1.113730.3.2.33</dsml:object-identifier>
+     <dsml:attribute ref="#cn" required="true"/>
+     <dsml:attribute ref="#memberURL" required="false"/>
+     <dsml:attribute ref="#businessCategory" required="false"/>
+     <dsml:attribute ref="#description" required="false"/>
+     <dsml:attribute ref="#o" required="false"/>
+     <dsml:attribute ref="#ou" required="false"/>
+     <dsml:attribute ref="#owner" required="false"/>
+     <dsml:attribute ref="#seeAlso" required="false"/>
+   </dsml:class>
+   <dsml:class
+         id="userSecurityInformation"
+         type="auxiliary"
+         superior="#top">
+     <dsml:name>userSecurityInformation</dsml:name>
+     <dsml:description></dsml:description>
+     <dsml:object-identifier>2.5.6.18</dsml:object-identifier>
+     <dsml:attribute ref="#uniqueMember" required="true"/>
+     <dsml:attribute ref="#cn" required="true"/>
+     <dsml:attribute ref="#supportedAlgorithms" required="false"/>
+   </dsml:class>
+   <dsml:class
+         id="certificationAuthority-V2"
+         type="auxiliary">
+     <dsml:name>certificationAuthority-V2</dsml:name>
+     <dsml:description></dsml:description>
+     <dsml:object-identifier>2.5.6.16.2</dsml:object-identifier>
+     <dsml:attribute ref="#uniqueMember" required="true"/>
+     <dsml:attribute ref="#cn" required="true"/>
+     <dsml:attribute ref="#deltaRevocationList" required="false"/>
+   </dsml:class>
+   <dsml:class
+         id="cRLDistributionPoint"
+         type="structural"
+         superior="#top">
+     <dsml:name>cRLDistributionPoint</dsml:name>
+     <dsml:description></dsml:description>
+     <dsml:object-identifier>2.5.6.19</dsml:object-identifier>
+     <dsml:attribute ref="#cn" required="true"/>
+     <dsml:attribute ref="#certificateRevocationList" required="false"/>
+     <dsml:attribute ref="#authorityRevocationList" required="false"/>
+     <dsml:attribute ref="#deltaRevocationList" required="false"/>
+   </dsml:class>
+   <dsml:class
+         id="dmd"
+         type="structural"
+         superior="#top">
+     <dsml:name>dmd</dsml:name>
+     <dsml:description></dsml:description>
+     <dsml:object-identifier>2.5.6.20</dsml:object-identifier>
+     <dsml:attribute ref="#dmdName" required="true"/>
+     <dsml:attribute ref="#certificateRevocationList" required="false"/>
+     <dsml:attribute ref="#authorityRevocationList" required="false"/>
+     <dsml:attribute ref="#deltaRevocationList" required="false"/>
+   </dsml:class>
+   <dsml:class
+         id="extensibleObject"
+         type="auxiliary"
+         superior="#top">
+     <dsml:name>extensibleObject</dsml:name>
+     <dsml:description>The extensibleObject object class, if present in an entry, permits that entry to optionally hold any attribute.  The MAY attribute list of this class is implicitly the set of all attributes.  </dsml:description>
+     <dsml:object-identifier>1.3.6.1.4.1.1466.101.120.111</dsml:object-identifier>
+   </dsml:class>
+   <dsml:class
+         id="subschema"
+         type="auxiliary">
+     <dsml:name>subschema</dsml:name>
+     <dsml:description>This object class is used in the subschema entry. </dsml:description>
+     <dsml:object-identifier>2.5.20.1</dsml:object-identifier>
+     <dsml:attribute ref="#dITStructureRules" required="false"/>
+     <dsml:attribute ref="#nameForms" required="false"/>
+     <dsml:attribute ref="#ditContentRules" required="false"/>
+     <dsml:attribute ref="#objectClasses" required="false"/>
+     <dsml:attribute ref="#attributeTypes" required="false"/>
+     <dsml:attribute ref="#matchingRules" required="false"/>
+     <dsml:attribute ref="#matchingRuleUse" required="false"/>
+   </dsml:class>
+   <dsml:class
+         id="dcObject"
+         type="auxiliary"
+         superior="#top">
+   <dsml:name>dcObject</dsml:name>
+   <dsml:object-identifier>1.3.6.1.4.1.1466.344</dsml:object-identifier>
+   <dsml:attribute ref="#dc" required="true"/>
+  </dsml:class>
+   <dsml:class
+         id="domain"
+         type="structural"
+         superior="#top">
+   <dsml:name>domain</dsml:name>
+   <dsml:object-identifier>0.9.2342.19200300.100.4.13</dsml:object-identifier>
+   <dsml:attribute ref="#dc" required="true"/>
+   <dsml:attribute ref="#userPassword" required="false"/>
+   <dsml:attribute ref="#searchGuide" required="false"/>
+   <dsml:attribute ref="#seeAlso" required="false"/>
+   <dsml:attribute ref="#businessCategory" required="false"/>
+   <dsml:attribute ref="#x121Address" required="false"/>
+   <dsml:attribute ref="#registeredAddress" required="false"/>
+   <dsml:attribute ref="#destinationIndicator" required="false"/>
+   <dsml:attribute ref="#preferredDeliveryMethod" required="false"/>
+   <dsml:attribute ref="#telexNumber" required="false"/>
+   <dsml:attribute ref="#teletexTerminalIdentifier" required="false"/>
+   <dsml:attribute ref="#telephoneNumber" required="false"/>
+   <dsml:attribute ref="#internationaliSDNNumber" required="false"/>
+   <dsml:attribute ref="#facsimileTelephoneNumber" required="false"/>
+   <dsml:attribute ref="#street" required="false"/>
+   <dsml:attribute ref="#postOfficeBox" required="false"/>
+   <dsml:attribute ref="#postalCode" required="false"/>
+   <dsml:attribute ref="#postalAddress" required="false"/>
+   <dsml:attribute ref="#physicalDeliveryOfficeName" required="false"/>
+   <dsml:attribute ref="#st" required="false"/>
+   <dsml:attribute ref="#l" required="false"/>
+   <dsml:attribute ref="#description" required="false"/>
+   <dsml:attribute ref="#o" required="false"/>
+   <dsml:attribute ref="#associatedName" required="false"/>
+  </dsml:class>
+   <dsml:class
+         id="pkiUser"
+         type="auxiliary"
+         superior="#top">
+   <dsml:name>pkiUser</dsml:name>
+   <dsml:object-identifier>2.5.6.21</dsml:object-identifier>
+   <dsml:attribute ref="#userCertificate" required="false"/>
+  </dsml:class>
+   <dsml:class
+         id="pkiCA"
+         type="auxiliary"
+         superior="#top">
+   <dsml:name>pkiCA</dsml:name>
+   <dsml:object-identifier>2.5.6.22</dsml:object-identifier>
+   <dsml:attribute ref="#cACertificate" required="false"/>
+   <dsml:attribute ref="#certificateRevocationList" required="false"/>
+   <dsml:attribute ref="#authorityRevocationList" required="false"/>
+   <dsml:attribute ref="#crossCertificatePair" required="false"/>
+  </dsml:class>
+   <dsml:class
+         id="cRLDistributionPoint"
+         type="structural"
+         superior="#top">
+   <dsml:name>cRLDistributionPoint</dsml:name>
+   <dsml:object-identifier>2.5.6.19</dsml:object-identifier>
+   <dsml:attribute ref="#cn" required="true"/>
+   <dsml:attribute ref="#certificateRevocationList" required="false"/>
+   <dsml:attribute ref="#authorityRevocationList" required="false"/>
+   <dsml:attribute ref="#deltaRevocationList" required="false"/>
+  </dsml:class>
+   <dsml:class
+         id="deltaCRL"
+         type="auxiliary"
+         superior="#top">
+   <dsml:name>deltaCRL</dsml:name>
+   <dsml:object-identifier>2.5.6.23</dsml:object-identifier>
+   <dsml:attribute ref="#cn" required="true"/>
+   <dsml:attribute ref="#deltaRevocationList" required="false"/>
+  </dsml:class>
+   <dsml:class
+         id="resourceMap"
+         type="structural"
+         superior="#top">
+   <dsml:name>resourceMap</dsml:name>
+   <dsml:object-identifier>1.3.6.1.4.1.4602.4.1</dsml:object-identifier>
+   <dsml:attribute ref="#cn" required="true"/>
+   <dsml:attribute ref="#principalName" required="true"/>
+   <dsml:attribute ref="#resourceName" required="false"/>
+   <dsml:attribute ref="#applicationName" required="false"/>
+   <dsml:attribute ref="#moduleName" required="false"/>
+   <dsml:attribute ref="#credentialMapRef" required="true"/>
+   <dsml:attribute ref="#wlsCreatorInfo" required="false"/>
+   <dsml:attribute ref="#wlsCollectionName" required="false"/>
+  </dsml:class>
+   <dsml:class
+         id="credentialMap"
+         type="abstract"
+         superior="#top">
+   <dsml:name>credentialMap</dsml:name>
+   <dsml:object-identifier>1.3.6.1.4.1.4602.4.2</dsml:object-identifier>
+   <dsml:attribute ref="#cn" required="true"/>
+   <dsml:attribute ref="#resourceName" required="false"/>
+   <dsml:attribute ref="#applicationName" required="false"/>
+   <dsml:attribute ref="#moduleName" required="false"/>
+   <dsml:attribute ref="#wlsCreatorInfo" required="false"/>
+   <dsml:attribute ref="#wlsCollectionName" required="false"/>
+  </dsml:class>
+   <dsml:class
+         id="passwordCredentialMap"
+         type="structural"
+         superior="#credentialMap">
+   <dsml:name>passwordCredentialMap</dsml:name>
+   <dsml:object-identifier>1.3.6.1.4.1.4602.4.3</dsml:object-identifier>
+   <dsml:attribute ref="#principalName" required="true"/>
+   <dsml:attribute ref="#principalPassword" required="true"/>
+  </dsml:class>
+
+   <dsml:class id="credential" type="structural" superior="#top">
+     <dsml:name>credential</dsml:name>
+     <dsml:object-identifier>1.3.6.1.4.1.4602.3.2.10</dsml:object-identifier>
+     <dsml:attribute ref="#credentialName" required="true"/>
+   </dsml:class>
+  
+   <dsml:class id="passwordCredential" type="structural" superior="#credential">
+     <dsml:name>passwordCredential</dsml:name>
+     <dsml:object-identifier>1.3.6.1.4.1.4602.3.2.11</dsml:object-identifier>
+     <dsml:attribute ref="#principalPassword" required="true"/>
+   </dsml:class>
+    
+   <dsml:class id="userPasswordCredential" type="structural" superior="#credential">
+     <dsml:name>userPasswordCredential</dsml:name>
+     <dsml:object-identifier>1.3.6.1.4.1.4602.3.2.12</dsml:object-identifier>
+     <dsml:attribute ref="#principalName" required="true"/>
+     <dsml:attribute ref="#principalPassword" required="true"/>
+   </dsml:class>
+   
+   <dsml:class
+               id="pkiResourceMap"
+               type="structural"
+               superior="#top">
+         <dsml:name>pkiResourceMap</dsml:name>
+         <dsml:object-identifier>1.3.6.1.4.1.4602.3.2.14</dsml:object-identifier>
+         <dsml:attribute ref="#cn" required="true"/>
+         <dsml:attribute ref="#resourceName" required="true"/>
+         <dsml:attribute ref="#principalName" required="true"/>
+         <dsml:attribute ref="#principalNameIsUser" required="true"/>
+         <dsml:attribute ref="#credentialAction" required="false"/>
+         <dsml:attribute ref="#keystoreAliasName" required="true"/>
+         <dsml:attribute ref="#keystoreAliasPassword" required="false"/>
+         <dsml:attribute ref="#wlsCreatorInfo" required="false"/>
+         <dsml:attribute ref="#wlsCollectionName" required="false"/>
+   </dsml:class>
+   
+   <dsml:attribute-type id="credentialName">
+     <dsml:name>credentialName</dsml:name>
+     <dsml:description>This is the credentialName attribute, which contains a name of a credential object. </dsml:description>
+     <dsml:object-identifier>1.3.6.1.4.1.4602.3.2.13</dsml:object-identifier>
+	 <dsml:syntax bounds="32768">1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+     <dsml:equality>caseExactMatch</dsml:equality>
+     <dsml:ordering>generalizedTimeOrderingMatch</dsml:ordering>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="principalName">
+        <dsml:name>principalName</dsml:name>
+        <dsml:description>This attribute is used to hold the principal name for which the mapping applies</dsml:description>
+        <dsml:object-identifier>1.3.6.1.4.1.4602.4.4</dsml:object-identifier>
+        <dsml:syntax bounds="32768">1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+        <dsml:equality>caseExactMatch</dsml:equality>
+        <dsml:ordering>generalizedTimeOrderingMatch</dsml:ordering>
+    </dsml:attribute-type>
+   <dsml:attribute-type id="objectClass">
+     <dsml:name>objectClass</dsml:name>
+     <dsml:description>The values of the objectClass attribute describe the kind of object which an entry represents.  The objectClass attribute is present in every entry, with at least two values.  One of the values is either "top" or "alias". </dsml:description>
+     <dsml:object-identifier>2.5.4.0</dsml:object-identifier>
+     <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.38</dsml:syntax>
+     <dsml:equality>objectIdentifierMatch</dsml:equality>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="aliasedObjectName">
+     <dsml:name>aliasedObjectName</dsml:name>
+     <dsml:description>The aliasedObjectName attribute is used by the directory service if the entry containing this attribute is an alias. </dsml:description>
+     <dsml:object-identifier>2.5.4.1</dsml:object-identifier>
+     <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.12</dsml:syntax>
+     <dsml:single-value>true</dsml:single-value>
+     <dsml:equality>distinguishedNameMatch</dsml:equality>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="knowledgeInformation">
+     <dsml:name>knowledgeInformation</dsml:name>
+     <dsml:description>This attribute is no longer used. </dsml:description>
+     <dsml:object-identifier>2.5.4.2</dsml:object-identifier>
+     <dsml:syntax bounds="32768">1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+     <dsml:equality>caseIgnoreMatch</dsml:equality>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="cn" superior="#name">
+     <dsml:name>cn</dsml:name>
+     <dsml:description>This is the X.500 commonName attribute, which contains a name of an object.  If the object corresponds to a person, it is typically the person's full name. </dsml:description>
+     <dsml:object-identifier>2.5.4.3</dsml:object-identifier>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="sn" superior="#name">
+     <dsml:name>sn</dsml:name>
+     <dsml:description>This is the X.500 surname attribute, which contains the family name of a person. </dsml:description>
+     <dsml:object-identifier>2.5.4.4</dsml:object-identifier>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="serialNumber">
+     <dsml:name>serialNumber</dsml:name>
+     <dsml:description>This attribute contains the serial number of a device. </dsml:description>
+     <dsml:object-identifier>2.5.4.5</dsml:object-identifier>
+     <dsml:syntax bounds="64">1.3.6.1.4.1.1466.115.121.1.44</dsml:syntax>
+     <dsml:substring>caseIgnoreSubstringsMatch</dsml:substring>
+     <dsml:equality>caseIgnoreMatch</dsml:equality>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="c" superior="#name">
+     <dsml:name>c</dsml:name>
+     <dsml:description>This attribute contains a two-letter ISO 3166 country code (countryName). </dsml:description>
+     <dsml:object-identifier>2.5.4.6</dsml:object-identifier>
+     <dsml:single-value>true</dsml:single-value>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="l" superior="#name">
+     <dsml:name>l</dsml:name>
+     <dsml:description>This attribute contains the name of a locality, such as a city, county or other geographic region (localityName). </dsml:description>
+     <dsml:object-identifier>2.5.4.7</dsml:object-identifier>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="st" superior="#name">
+     <dsml:name>st</dsml:name>
+     <dsml:description>This attribute contains the full name of a state or province (stateOrProvinceName). </dsml:description>
+     <dsml:object-identifier>2.5.4.8</dsml:object-identifier>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="street">
+     <dsml:name>street</dsml:name>
+     <dsml:description>This attribute contains the physical address of the object to which the entry corresponds, such as an address for package delivery (streetAddress). </dsml:description>
+     <dsml:object-identifier>2.5.4.9</dsml:object-identifier>
+     <dsml:syntax bounds="128">1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+     <dsml:substring>caseIgnoreSubstringsMatch</dsml:substring>
+     <dsml:equality>caseIgnoreMatch</dsml:equality>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="o" superior="#name">
+     <dsml:name>o</dsml:name>
+     <dsml:description>This attribute contains the name of an organization (organizationName). </dsml:description>
+     <dsml:object-identifier>2.5.4.10</dsml:object-identifier>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="ou" superior="#name">
+     <dsml:name>ou</dsml:name>
+     <dsml:description>This attribute contains the name of an organizational unit (organizationalUnitName). </dsml:description>
+     <dsml:object-identifier>2.5.4.11</dsml:object-identifier>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="title" superior="#name">
+     <dsml:name>title</dsml:name>
+     <dsml:description>This attribute contains the title, such as "Vice President", of a person in their organizational context.  The "personalTitle" attribute would be used for a person's title independent of their job function. </dsml:description>
+     <dsml:object-identifier>2.5.4.12</dsml:object-identifier>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="description">
+     <dsml:name>description</dsml:name>
+     <dsml:description>This attribute contains a human-readable description of the object. </dsml:description>
+     <dsml:object-identifier>2.5.4.13</dsml:object-identifier>
+     <dsml:syntax bounds="1024">1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+     <dsml:substring>caseIgnoreSubstringsMatch</dsml:substring>
+     <dsml:equality>caseIgnoreMatch</dsml:equality>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="searchGuide">
+     <dsml:name>searchGuide</dsml:name>
+     <dsml:description>This attribute is for use by X.500 clients in constructing search filters. It is obsoleted by enhancedSearchGuide, described below in 5.48. </dsml:description>
+     <dsml:object-identifier>2.5.4.14</dsml:object-identifier>
+     <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.25</dsml:syntax>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="businessCategory">
+     <dsml:name>businessCategory</dsml:name>
+     <dsml:description>This attribute describes the kind of business performed by an organization. </dsml:description>
+     <dsml:object-identifier>2.5.4.15</dsml:object-identifier>
+     <dsml:syntax bounds="128">1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+     <dsml:substring>caseIgnoreSubstringsMatch</dsml:substring>
+     <dsml:equality>caseIgnoreMatch</dsml:equality>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="postalAddress">
+     <dsml:name>postalAddress</dsml:name>
+     <dsml:object-identifier>2.5.4.16</dsml:object-identifier>
+     <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.41</dsml:syntax>
+     <dsml:substring>caseIgnoreListSubstringsMatch</dsml:substring>
+     <dsml:equality>caseIgnoreListMatch</dsml:equality>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="postalCode">
+     <dsml:name>postalCode</dsml:name>
+     <dsml:object-identifier>2.5.4.17</dsml:object-identifier>
+     <dsml:syntax bounds="40">1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+     <dsml:substring>caseIgnoreSubstringsMatch</dsml:substring>
+     <dsml:equality>caseIgnoreMatch</dsml:equality>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="postOfficeBox">
+     <dsml:name>postOfficeBox</dsml:name>
+     <dsml:object-identifier>2.5.4.18</dsml:object-identifier>
+     <dsml:syntax bounds="40">1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+     <dsml:substring>caseIgnoreSubstringsMatch</dsml:substring>
+     <dsml:equality>caseIgnoreMatch</dsml:equality>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="physicalDeliveryOfficeName">
+     <dsml:name>physicalDeliveryOfficeName</dsml:name>
+     <dsml:object-identifier>2.5.4.19</dsml:object-identifier>
+     <dsml:syntax bounds="128">1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+     <dsml:substring>caseIgnoreSubstringsMatch</dsml:substring>
+     <dsml:equality>caseIgnoreMatch</dsml:equality>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="telephoneNumber">
+     <dsml:name>telephoneNumber</dsml:name>
+     <dsml:object-identifier>2.5.4.20</dsml:object-identifier>
+     <dsml:syntax bounds="32">1.3.6.1.4.1.1466.115.121.1.50</dsml:syntax>
+     <dsml:substring>telephoneNumberSubstringsMatch</dsml:substring>
+     <dsml:equality>telephoneNumberMatch</dsml:equality>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="telexNumber">
+     <dsml:name>telexNumber</dsml:name>
+     <dsml:object-identifier>2.5.4.21</dsml:object-identifier>
+     <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.52</dsml:syntax>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="teletexTerminalIdentifier">
+     <dsml:name>teletexTerminalIdentifier</dsml:name>
+     <dsml:object-identifier>2.5.4.22</dsml:object-identifier>
+     <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.51</dsml:syntax>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="facsimileTelephoneNumber">
+     <dsml:name>facsimileTelephoneNumber</dsml:name>
+     <dsml:object-identifier>2.5.4.23</dsml:object-identifier>
+     <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.22</dsml:syntax>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="x121Address">
+     <dsml:name>x121Address</dsml:name>
+     <dsml:object-identifier>2.5.4.24</dsml:object-identifier>
+     <dsml:syntax bounds="15">1.3.6.1.4.1.1466.115.121.1.36</dsml:syntax>
+     <dsml:substring>numericStringSubstringsMatch</dsml:substring>
+     <dsml:equality>numericStringMatch</dsml:equality>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="internationaliSDNNumber">
+     <dsml:name>internationaliSDNNumber</dsml:name>
+     <dsml:object-identifier>2.5.4.25</dsml:object-identifier>
+     <dsml:syntax bounds="16">1.3.6.1.4.1.1466.115.121.1.36</dsml:syntax>
+     <dsml:substring>numericStringSubstringsMatch</dsml:substring>
+     <dsml:equality>numericStringMatch</dsml:equality>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="registeredAddress" superior="#postalAddress">
+     <dsml:name>registeredAddress</dsml:name>
+     <dsml:description>This attribute holds a postal address suitable for reception of telegrams or expedited documents, where it is necessary to have the recipient accept delivery. </dsml:description>
+     <dsml:object-identifier>2.5.4.26</dsml:object-identifier>
+     <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.41</dsml:syntax>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="destinationIndicator">
+     <dsml:name>destinationIndicator</dsml:name>
+     <dsml:description>This attribute is used for the telegram service. </dsml:description>
+     <dsml:object-identifier>2.5.4.27</dsml:object-identifier>
+     <dsml:syntax bounds="128">1.3.6.1.4.1.1466.115.121.1.44</dsml:syntax>
+     <dsml:substring>caseIgnoreSubstringsMatch</dsml:substring>
+     <dsml:equality>caseIgnoreMatch</dsml:equality>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="preferredDeliveryMethod">
+     <dsml:name>preferredDeliveryMethod</dsml:name>
+     <dsml:object-identifier>2.5.4.28</dsml:object-identifier>
+     <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.14</dsml:syntax>
+     <dsml:single-value>true</dsml:single-value>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="presentationAddress">
+     <dsml:name>presentationAddress</dsml:name>
+     <dsml:description>This attribute contains an OSI presentation address. </dsml:description>
+     <dsml:object-identifier>2.5.4.29</dsml:object-identifier>
+     <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.43</dsml:syntax>
+     <dsml:single-value>true</dsml:single-value>
+     <dsml:equality>presentationAddressMatch</dsml:equality>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="supportedApplicationContext">
+     <dsml:name>supportedApplicationContext</dsml:name>
+     <dsml:description>This attribute contains the identifiers of OSI application contexts. </dsml:description>
+     <dsml:object-identifier>2.5.4.30</dsml:object-identifier>
+     <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.38</dsml:syntax>
+     <dsml:equality>objectIdentifierMatch</dsml:equality>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="member" superior="#distinguishedName">
+     <dsml:name>member</dsml:name>
+     <dsml:object-identifier>2.5.4.31</dsml:object-identifier>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="owner" superior="#distinguishedName">
+     <dsml:name>owner</dsml:name>
+     <dsml:object-identifier>2.5.4.32</dsml:object-identifier>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="roleOccupant" superior="#distinguishedName">
+     <dsml:name>roleOccupant</dsml:name>
+     <dsml:object-identifier>2.5.4.33</dsml:object-identifier>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="seeAlso" superior="#distinguishedName">
+     <dsml:name>seeAlso</dsml:name>
+     <dsml:object-identifier>2.5.4.34</dsml:object-identifier>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="userPassword">
+     <dsml:name>userPassword</dsml:name>
+     <dsml:object-identifier>2.5.4.35</dsml:object-identifier>
+     <dsml:syntax bounds="128">1.3.6.1.4.1.1466.115.121.1.40</dsml:syntax>
+     <dsml:equality>octetStringMatch</dsml:equality>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="userCertificate">
+     <dsml:name>userCertificate</dsml:name>
+     <dsml:description>This attribute is to be stored and requested in the binary form, as 'userCertificate;binary'. </dsml:description>
+     <dsml:object-identifier>2.5.4.36</dsml:object-identifier>
+     <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.8</dsml:syntax>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="cACertificate">
+     <dsml:name>cACertificate</dsml:name>
+     <dsml:description>This attribute is to be stored and requested in the binary form, as 'cACertificate;binary'.  </dsml:description>
+     <dsml:object-identifier>2.5.4.37</dsml:object-identifier>
+     <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.8</dsml:syntax>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="authorityRevocationList">
+     <dsml:name>authorityRevocationList</dsml:name>
+     <dsml:description>This attribute is to be stored and requested in the binary form, as 'authorityRevocationList;binary'. </dsml:description>
+     <dsml:object-identifier>2.5.4.38</dsml:object-identifier>
+     <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.9</dsml:syntax>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="certificateRevocationList">
+     <dsml:name>certificateRevocationList</dsml:name>
+     <dsml:description>This attribute is to be stored and requested in the binary form, as 'certificateRevocationList;binary'. </dsml:description>
+     <dsml:object-identifier>2.5.4.39</dsml:object-identifier>
+     <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.9</dsml:syntax>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="crossCertificatePair">
+     <dsml:name>crossCertificatePair</dsml:name>
+     <dsml:description>This attribute is to be stored and requested in the binary form, as 'crossCertificatePair;binary'. </dsml:description>
+     <dsml:object-identifier>2.5.4.40</dsml:object-identifier>
+     <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.10</dsml:syntax>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="name">
+     <dsml:name>name</dsml:name>
+     <dsml:description>The name attribute type is the attribute supertype from which string attribute types typically used for naming may be formed.  It is unlikely that values of this type itself will occur in an entry. LDAP server implementations which do not support attribute subtyping need not recognize this attribute in requests.   Client implementations MUST NOT assume that LDAP servers are capable of performing attribute subtyping. </dsml:description>
+     <dsml:object-identifier>2.5.4.41</dsml:object-identifier>
+     <dsml:syntax bounds="32768">1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+     <dsml:substring>caseIgnoreSubstringsMatch</dsml:substring>
+     <dsml:equality>caseIgnoreMatch</dsml:equality>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="givenName" superior="#name">
+     <dsml:name>givenName</dsml:name>
+     <dsml:description>The givenName attribute is used to hold the part of a person's name which is not their surname nor middle name. </dsml:description>
+     <dsml:object-identifier>2.5.4.42</dsml:object-identifier>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="initials" superior="#name">
+     <dsml:name>initials</dsml:name>
+     <dsml:description>The initials attribute contains the initials of some or all of an individuals names, but not the surname(s). </dsml:description>
+     <dsml:object-identifier>2.5.4.43</dsml:object-identifier>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="generationQualifier" superior="#name">
+     <dsml:name>generationQualifier</dsml:name>
+     <dsml:description>The generationQualifier attribute contains the part of the name which typically is the suffix, as in "IIIrd". </dsml:description>
+     <dsml:object-identifier>2.5.4.44</dsml:object-identifier>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="x500UniqueIdentifier">
+     <dsml:name>x500UniqueIdentifier</dsml:name>
+     <dsml:description>The x500UniqueIdentifier attribute is used to distinguish between objects when a distinguished name has been reused.  This is a different attribute type from both the "uid" and "uniqueIdentifier" types. </dsml:description>
+     <dsml:object-identifier>2.5.4.45</dsml:object-identifier>
+     <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.6</dsml:syntax>
+     <dsml:equality>bitStringMatch</dsml:equality>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="dnQualifier">
+     <dsml:name>dnQualifier</dsml:name>
+     <dsml:description>The dnQualifier attribute type specifies disambiguating information to add to the relative distinguished name of an entry.  It is intended for use when merging data from multiple sources in order to prevent conflicts between entries which would otherwise have the same name. It is recommended that the value of the dnQualifier attribute be the same for all entries from a particular source. </dsml:description>
+     <dsml:object-identifier>2.5.4.46</dsml:object-identifier>
+     <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.44</dsml:syntax>
+     <dsml:substring>caseIgnoreSubstringsMatch</dsml:substring>
+     <dsml:equality>caseIgnoreMatch</dsml:equality>
+     <dsml:ordering>caseIgnoreOrderingMatch</dsml:ordering>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="enhancedSearchGuide">
+     <dsml:name>enhancedSearchGuide</dsml:name>
+     <dsml:description>This attribute is for use by X.500 clients in constructing search filters. </dsml:description>
+     <dsml:object-identifier>2.5.4.47</dsml:object-identifier>
+     <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.21</dsml:syntax>
+     <dsml:ordering>caseIgnoreOrderingMatch</dsml:ordering>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="protocolInformation">
+     <dsml:name>protocolInformation</dsml:name>
+     <dsml:description>This attribute is used in conjunction with the presentationAddress attribute, to provide additional information to the OSI network service. </dsml:description>
+     <dsml:object-identifier>2.5.4.48</dsml:object-identifier>
+     <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.42</dsml:syntax>
+     <dsml:equality>protocolInformationMatch</dsml:equality>
+     <dsml:ordering>caseIgnoreOrderingMatch</dsml:ordering>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="distinguishedName">
+     <dsml:name>distinguishedName</dsml:name>
+     <dsml:description>This attribute type is not used as the name of the object itself, but it is instead a base type from which attributes with DN syntax inherit. It is unlikely that values of this type itself will occur in an entry.  LDAP server implementations which do not support attribute subtyping need not recognize this attribute in requests.   Client implementations MUST NOT assume that LDAP servers are capable of performing attribute subtyping. </dsml:description>
+     <dsml:object-identifier>2.5.4.49</dsml:object-identifier>
+     <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.12</dsml:syntax>
+     <dsml:equality>distinguishedNameMatch</dsml:equality>
+     <dsml:ordering>caseIgnoreOrderingMatch</dsml:ordering>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="uniqueMember">
+     <dsml:name>uniqueMember</dsml:name>
+     <dsml:object-identifier>2.5.4.50</dsml:object-identifier>
+     <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.34</dsml:syntax>
+     <dsml:equality>uniqueMemberMatch</dsml:equality>
+     <dsml:ordering>caseIgnoreOrderingMatch</dsml:ordering>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="houseIdentifier">
+     <dsml:name>houseIdentifier</dsml:name>
+     <dsml:description>This attribute is used to identify a building within a location. </dsml:description>
+     <dsml:object-identifier>2.5.4.51</dsml:object-identifier>
+     <dsml:syntax bounds="32768">1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+     <dsml:substring>caseIgnoreSubstringsMatch</dsml:substring>
+     <dsml:equality>caseIgnoreMatch</dsml:equality>
+     <dsml:ordering>caseIgnoreOrderingMatch</dsml:ordering>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="supportedAlgorithms">
+     <dsml:name>supportedAlgorithms</dsml:name>
+     <dsml:description>This attribute is to be stored and requested in the binary form, as 'supportedAlgorithms;binary'. </dsml:description>
+     <dsml:object-identifier>2.5.4.52</dsml:object-identifier>
+     <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.49</dsml:syntax>
+     <dsml:ordering>caseIgnoreOrderingMatch</dsml:ordering>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="deltaRevocationList">
+     <dsml:name>deltaRevocationList</dsml:name>
+     <dsml:description>This attribute is to be stored and requested in the binary form, as 'deltaRevocationList;binary'. </dsml:description>
+     <dsml:object-identifier>2.5.4.53</dsml:object-identifier>
+     <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.9</dsml:syntax>
+     <dsml:ordering>caseIgnoreOrderingMatch</dsml:ordering>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="dmdName" superior="#name">
+     <dsml:name>dmdName</dsml:name>
+     <dsml:description>The value of this attribute specifies a directory management domain (DMD), the administrative authority which operates the directory server. </dsml:description>
+     <dsml:object-identifier>2.5.4.54</dsml:object-identifier>
+     <dsml:ordering>caseIgnoreOrderingMatch</dsml:ordering>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="createTimestamp">
+     <dsml:name>createTimestamp</dsml:name>
+     <dsml:description>This attribute SHOULD appear in entries which were created using the Add operation. </dsml:description>
+     <dsml:object-identifier>2.5.18.1</dsml:object-identifier>
+     <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.24</dsml:syntax>
+     <dsml:single-value>true</dsml:single-value>
+     <dsml:user-modification>false</dsml:user-modification>
+     <dsml:equality>generalizedTimeMatch</dsml:equality>
+     <dsml:ordering>generalizedTimeOrderingMatch</dsml:ordering>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="modifyTimestamp">
+     <dsml:name>modifyTimestamp</dsml:name>
+     <dsml:description>This attribute SHOULD appear in entries which have been modified using the Modify operation. </dsml:description>
+     <dsml:object-identifier>2.5.18.2</dsml:object-identifier>
+     <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.24</dsml:syntax>
+     <dsml:single-value>true</dsml:single-value>
+     <dsml:user-modification>false</dsml:user-modification>
+     <dsml:equality>generalizedTimeMatch</dsml:equality>
+     <dsml:ordering>generalizedTimeOrderingMatch</dsml:ordering>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="creatorsName">
+     <dsml:name>creatorsName</dsml:name>
+     <dsml:description>This attribute SHOULD appear in entries which were created using the Add operation. </dsml:description>
+     <dsml:object-identifier>2.5.18.3</dsml:object-identifier>
+     <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.12</dsml:syntax>
+     <dsml:single-value>true</dsml:single-value>
+     <dsml:user-modification>false</dsml:user-modification>
+     <dsml:equality>distinguishedNameMatch</dsml:equality>
+     <dsml:ordering>generalizedTimeOrderingMatch</dsml:ordering>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="modifiersName">
+     <dsml:name>modifiersName</dsml:name>
+     <dsml:description>This attribute SHOULD appear in entries which have been modified using the Modify operation. </dsml:description>
+     <dsml:object-identifier>2.5.18.4</dsml:object-identifier>
+     <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.12</dsml:syntax>
+     <dsml:single-value>true</dsml:single-value>
+     <dsml:user-modification>false</dsml:user-modification>
+     <dsml:equality>distinguishedNameMatch</dsml:equality>
+     <dsml:ordering>generalizedTimeOrderingMatch</dsml:ordering>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="subschemaSubentry">
+     <dsml:name>subschemaSubentry</dsml:name>
+     <dsml:description>The value of this attribute is the name of a subschema entry (or subentry if the server is based on X.500(93)) in which the server makes available attributes specifying the schema. </dsml:description>
+     <dsml:object-identifier>2.5.18.10</dsml:object-identifier>
+     <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.12</dsml:syntax>
+     <dsml:single-value>true</dsml:single-value>
+     <dsml:user-modification>false</dsml:user-modification>
+     <dsml:equality>distinguishedNameMatch</dsml:equality>
+     <dsml:ordering>generalizedTimeOrderingMatch</dsml:ordering>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="attributeTypes">
+     <dsml:name>attributeTypes</dsml:name>
+     <dsml:description>This attribute is typically located in the subschema entry. </dsml:description>
+     <dsml:object-identifier>2.5.21.5</dsml:object-identifier>
+     <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.3</dsml:syntax>
+     <dsml:equality>objectIdentifierFirstComponentMatch</dsml:equality>
+     <dsml:ordering>generalizedTimeOrderingMatch</dsml:ordering>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="objectClasses">
+     <dsml:name>objectClasses</dsml:name>
+     <dsml:description>This attribute is typically located in the subschema entry. </dsml:description>
+     <dsml:object-identifier>2.5.21.6</dsml:object-identifier>
+     <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.37</dsml:syntax>
+     <dsml:equality>objectIdentifierFirstComponentMatch</dsml:equality>
+     <dsml:ordering>generalizedTimeOrderingMatch</dsml:ordering>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="matchingRules">
+     <dsml:name>matchingRules</dsml:name>
+     <dsml:description>This attribute is typically located in the subschema entry. </dsml:description>
+     <dsml:object-identifier>2.5.21.4</dsml:object-identifier>
+     <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.30</dsml:syntax>
+     <dsml:equality>objectIdentifierFirstComponentMatch</dsml:equality>
+     <dsml:ordering>generalizedTimeOrderingMatch</dsml:ordering>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="matchingRuleUse">
+     <dsml:name>matchingRuleUse</dsml:name>
+     <dsml:description>This attribute is typically located in the subschema entry. </dsml:description>
+     <dsml:object-identifier>2.5.21.8</dsml:object-identifier>
+     <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.31</dsml:syntax>
+     <dsml:equality>objectIdentifierFirstComponentMatch</dsml:equality>
+     <dsml:ordering>generalizedTimeOrderingMatch</dsml:ordering>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="namingContexts">
+     <dsml:name>namingContexts</dsml:name>
+     <dsml:description>The values of this attribute correspond to naming contexts which this server masters or shadows.  If the server does not master any information (e.g. it is an LDAP gateway to a public X.500 directory) this attribute will be absent.  If the server believes it contains the entire directory, the attribute will have a single value, and that value will be the empty string (indicating the null DN of the root). This attribute will allow a client to choose suitable base objects for searching when it has contacted a server. </dsml:description>
+     <dsml:object-identifier>1.3.6.1.4.1.1466.101.120.5</dsml:object-identifier>
+     <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.12</dsml:syntax>
+     <dsml:ordering>generalizedTimeOrderingMatch</dsml:ordering>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="altServer">
+     <dsml:name>altServer</dsml:name>
+     <dsml:description>The values of this attribute are URLs of other servers which may be contacted when this server becomes unavailable.  If the server does not know of any other servers which could be used this attribute will be absent. Clients may cache this information in case their preferred LDAP server later becomes unavailable. </dsml:description>
+     <dsml:object-identifier>1.3.6.1.4.1.1466.101.120.6</dsml:object-identifier>
+     <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.26</dsml:syntax>
+     <dsml:ordering>generalizedTimeOrderingMatch</dsml:ordering>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="supportedExtension">
+     <dsml:name>supportedExtension</dsml:name>
+     <dsml:description>The values of this attribute are OBJECT IDENTIFIERs identifying the supported extended operations which the server supports. If the server does not support any extensions this attribute will be absent.  </dsml:description>
+     <dsml:object-identifier>1.3.6.1.4.1.1466.101.120.7</dsml:object-identifier>
+     <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.38</dsml:syntax>
+     <dsml:ordering>generalizedTimeOrderingMatch</dsml:ordering>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="supportedControl">
+     <dsml:name>supportedControl</dsml:name>
+     <dsml:description>The values of this attribute are the OBJECT IDENTIFIERs identifying controls which the server supports.  If the server does not support any controls, this attribute will be absent. </dsml:description>
+     <dsml:object-identifier>1.3.6.1.4.1.1466.101.120.13</dsml:object-identifier>
+     <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.38</dsml:syntax>
+     <dsml:ordering>generalizedTimeOrderingMatch</dsml:ordering>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="supportedSASLMechanisms">
+     <dsml:name>supportedSASLMechanisms</dsml:name>
+     <dsml:description>The values of this attribute are the names of supported SASL mechanisms which the server supports.  If the server does not support any mechanisms this attribute will be absent. </dsml:description>
+     <dsml:object-identifier>1.3.6.1.4.1.1466.101.120.14</dsml:object-identifier>
+     <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+     <dsml:ordering>generalizedTimeOrderingMatch</dsml:ordering>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="supportedLDAPVersion">
+     <dsml:name>supportedLDAPVersion</dsml:name>
+     <dsml:description>The values of this attribute are the versions of the LDAP protocol which the server implements. </dsml:description>
+     <dsml:object-identifier>1.3.6.1.4.1.1466.101.120.15</dsml:object-identifier>
+     <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.27</dsml:syntax>
+     <dsml:ordering>generalizedTimeOrderingMatch</dsml:ordering>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="ldapSyntaxes">
+     <dsml:name>ldapSyntaxes</dsml:name>
+     <dsml:description>Servers MAY use this attribute to list the syntaxes which are implemented.  Each value corresponds to one syntax. </dsml:description>
+     <dsml:object-identifier>1.3.6.1.4.1.1466.101.120.16</dsml:object-identifier>
+     <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.54</dsml:syntax>
+     <dsml:equality>objectIdentifierFirstComponentMatch</dsml:equality>
+     <dsml:ordering>generalizedTimeOrderingMatch</dsml:ordering>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="dITStructureRules">
+     <dsml:name>dITStructureRules</dsml:name>
+     <dsml:object-identifier>2.5.21.1</dsml:object-identifier>
+     <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.17</dsml:syntax>
+     <dsml:equality>integerFirstComponentMatch</dsml:equality>
+     <dsml:ordering>generalizedTimeOrderingMatch</dsml:ordering>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="nameForms">
+     <dsml:name>nameForms</dsml:name>
+     <dsml:object-identifier>2.5.21.7</dsml:object-identifier>
+     <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.35</dsml:syntax>
+     <dsml:equality>objectIdentifierFirstComponentMatch</dsml:equality>
+     <dsml:ordering>generalizedTimeOrderingMatch</dsml:ordering>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="dITContentRules">
+     <dsml:name>dITContentRules</dsml:name>
+     <dsml:object-identifier>2.5.21.2</dsml:object-identifier>
+     <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.16</dsml:syntax>
+     <dsml:equality>objectIdentifierFirstComponentMatch</dsml:equality>
+     <dsml:ordering>generalizedTimeOrderingMatch</dsml:ordering>
+   </dsml:attribute-type>
+   <dsml:class
+         id="inetOrgPerson"
+         type="structural"
+         superior="#organizationalPerson">
+   <dsml:name>inetOrgPerson</dsml:name>
+   <dsml:object-identifier>2.16.840.1.113730.3.2.2</dsml:object-identifier>
+   <dsml:attribute ref="#audio" required="false"/>
+   <dsml:attribute ref="#businessCategory" required="false"/>
+   <dsml:attribute ref="#carLicense" required="false"/>
+   <dsml:attribute ref="#departmentNumber" required="false"/>
+   <dsml:attribute ref="#displayName" required="false"/>
+   <dsml:attribute ref="#employeeNumber" required="false"/>
+   <dsml:attribute ref="#employeeType" required="false"/>
+   <dsml:attribute ref="#givenName" required="false"/>
+   <dsml:attribute ref="#homePhone" required="false"/>
+   <dsml:attribute ref="#homePostalAddress" required="false"/>
+   <dsml:attribute ref="#initials" required="false"/>
+   <dsml:attribute ref="#jpegPhoto" required="false"/>
+   <dsml:attribute ref="#labeledURI" required="false"/>
+   <dsml:attribute ref="#mail" required="false"/>
+   <dsml:attribute ref="#manager" required="false"/>
+   <dsml:attribute ref="#mobile" required="false"/>
+   <dsml:attribute ref="#o" required="false"/>
+   <dsml:attribute ref="#pager" required="false"/>
+   <dsml:attribute ref="#photo" required="false"/>
+   <dsml:attribute ref="#roomNumber" required="false"/>
+   <dsml:attribute ref="#secretary" required="false"/>
+   <dsml:attribute ref="#uid" required="false"/>
+   <dsml:attribute ref="#userCertificate" required="false"/>
+   <dsml:attribute ref="#x500uniqueIdentifier" required="false"/>
+   <dsml:attribute ref="#preferredLanguage" required="false"/>
+   <dsml:attribute ref="#userSMIMECertificate" required="false"/>
+   <dsml:attribute ref="#userPKCS12" required="false"/>
+   <dsml:attribute ref="#c" required="false"/>
+   <dsml:attribute ref="#st" required="false"/>
+   <dsml:attribute ref="#street" required="false"/>
+   <dsml:attribute ref="#postofficebox" required="false"/>
+   </dsml:class>
+    <dsml:attribute-type id="carLicense">
+      <dsml:name>carLicense</dsml:name>
+      <dsml:object-identifier>2.16.840.1.113730.3.1.1</dsml:object-identifier>
+      <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+      <dsml:equality>caseIgnoreMatch</dsml:equality>
+      <dsml:substring>caseIgnoreSubstringsMatch</dsml:substring>
+      <dsml:single-value>true</dsml:single-value>
+    </dsml:attribute-type>
+    <dsml:attribute-type id="departmentNumber">
+      <dsml:name>departmentNumber</dsml:name>
+      <dsml:object-identifier>2.16.840.1.113730.3.1.2</dsml:object-identifier>
+      <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+      <dsml:equality>caseIgnoreMatch</dsml:equality>
+      <dsml:substring>caseIgnoreSubstringsMatch</dsml:substring>
+      <dsml:single-value>true</dsml:single-value>
+    </dsml:attribute-type>
+    <dsml:attribute-type id="displayName">
+      <dsml:name>displayName</dsml:name>
+      <dsml:object-identifier>2.16.840.1.113730.3.1.241</dsml:object-identifier>
+      <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+      <dsml:equality>caseIgnoreMatch</dsml:equality>
+      <dsml:substring>caseIgnoreSubstringsMatch</dsml:substring>
+    </dsml:attribute-type>
+    <dsml:attribute-type id="employeeNumber">
+      <dsml:name>employeeNumber</dsml:name>
+      <dsml:object-identifier>2.16.840.1.113730.3.1.3</dsml:object-identifier>
+      <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+      <dsml:equality>caseIgnoreMatch</dsml:equality>
+      <dsml:substring>caseIgnoreSubstringsMatch</dsml:substring>
+    </dsml:attribute-type>
+    <dsml:attribute-type id="employeeType">
+      <dsml:name>employeeType</dsml:name>
+      <dsml:object-identifier>2.16.840.1.113730.3.1.4</dsml:object-identifier>
+      <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+      <dsml:equality>caseIgnoreMatch</dsml:equality>
+      <dsml:substring>caseIgnoreSubstringsMatch</dsml:substring>
+      <dsml:single-value>true</dsml:single-value>
+    </dsml:attribute-type>
+    <dsml:attribute-type id="jpegPhoto">
+      <dsml:name>jpegPhoto</dsml:name>
+      <dsml:object-identifier>0.9.2342.19200300.100.1.60</dsml:object-identifier>
+      <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.28</dsml:syntax>
+      <dsml:single-value>true</dsml:single-value>
+    </dsml:attribute-type>
+    <dsml:attribute-type id="preferredLanguage">
+      <dsml:name>preferredLanguage</dsml:name>
+      <dsml:object-identifier>2.16.840.1.113730.3.1.39</dsml:object-identifier>
+      <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+      <dsml:equality>caseIgnoreMatch</dsml:equality>
+      <dsml:substring>caseIgnoreSubstringsMatch</dsml:substring>
+    </dsml:attribute-type>
+    <dsml:attribute-type id="userSMIMECertificate">
+      <dsml:name>userSMIMECertificate</dsml:name>
+      <dsml:object-identifier>2.16.840.1.113730.3.1.40</dsml:object-identifier>
+      <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.5</dsml:syntax>
+      <dsml:single-value>true</dsml:single-value>
+    </dsml:attribute-type>
+    <dsml:attribute-type id="memberURL">
+      <dsml:name>memberURL</dsml:name>
+      <dsml:object-identifier>2.16.840.1.113730.3.1.198</dsml:object-identifier>
+      <dsml:syntax bound="32700">1.3.6.1.4.1.1466.115.121.1.26</dsml:syntax>
+      <dsml:equality>caseExactMatch</dsml:equality>
+    </dsml:attribute-type>
+    <dsml:attribute-type id="credentialMapRef">
+     <dsml:name>credentialMapRef</dsml:name>
+     <dsml:description>This attribute is used to hold the dn string for the credential to which a mapping applies</dsml:description>
+     <dsml:object-identifier>1.3.6.1.4.1.4602.4.5</dsml:object-identifier>
+     <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.12</dsml:syntax>
+     <dsml:equality>distinguishedNameMatch</dsml:equality>
+     <dsml:ordering>caseIgnoreOrderingMatch</dsml:ordering>
+    </dsml:attribute-type>
+    <dsml:attribute-type id="principalPassword">
+     <dsml:name>principalPassword</dsml:name>
+     <dsml:description>This attribute is used to hold the eis password for a user-password credential</dsml:description>
+     <dsml:object-identifier>1.3.6.1.4.1.4602.4.6</dsml:object-identifier>
+     <dsml:syntax bounds="128">1.3.6.1.4.1.1466.115.121.1.40</dsml:syntax>
+     <dsml:equality>octetStringMatch</dsml:equality>
+    </dsml:attribute-type>
+    <dsml:attribute-type id="resourceName">
+     <dsml:name>resourceName</dsml:name>
+     <dsml:description>This attribute is used to hold the resource name for which the mapping applies</dsml:description>
+     <dsml:object-identifier>1.3.6.1.4.1.4602.1.1</dsml:object-identifier>
+     <dsml:syntax bounds="32768">1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+     <dsml:equality>caseExactMatch</dsml:equality>
+     <dsml:ordering>generalizedTimeOrderingMatch</dsml:ordering>
+    </dsml:attribute-type>
+    <dsml:attribute-type id="applicationName">
+     <dsml:name>applicationName</dsml:name>
+     <dsml:description>This attribute is used to hold the application-name for the resource to which a mapping applies</dsml:description>
+     <dsml:object-identifier>1.3.6.1.4.1.4602.1.2</dsml:object-identifier>
+    </dsml:attribute-type>
+    <dsml:attribute-type id="moduleName">
+     <dsml:name>resourceName</dsml:name>
+     <dsml:description>This attribute is used to hold the module name for which the mapping applies</dsml:description>
+     <dsml:object-identifier>1.3.6.1.4.1.4602.1.3</dsml:object-identifier>
+    </dsml:attribute-type>
+    <dsml:attribute-type id="dc">
+      <dsml:name>dc</dsml:name>
+      <dsml:object-identifier>0.9.2342.19200300.100.1.25</dsml:object-identifier>
+      <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.26</dsml:syntax>
+      <dsml:equality>caseIgnoreIA5Match</dsml:equality>
+      <dsml:substring>caseIgnoreIA5SubstringsMatch</dsml:substring>
+    </dsml:attribute-type>
+   <dsml:class
+         id="wlsUser"
+         type="auxiliary"
+         superior="#top">
+     <dsml:name>wlsUser</dsml:name>
+     <dsml:description>This auxiliary class allows WLS to use dynamic groups by adding WLS specific attributes to inetOrgPerson objects.</dsml:description>
+     <dsml:object-identifier>1.3.6.1.4.1.4602.3.2.1</dsml:object-identifier>
+     <dsml:attribute ref="#wlsMemberOf" required="false"/>
+	 <dsml:attribute ref="#orclTimeZone" required="false"/>
+	 <dsml:attribute ref="#im" required="false"/>
+   </dsml:class>
+   <dsml:attribute-type id="orclTimeZone">
+     <dsml:name>orclTimeZone</dsml:name>
+     <dsml:description>This attribute contains time zone ID of user. </dsml:description>
+     <dsml:object-identifier>1.3.6.1.4.1.4602.3.2.33</dsml:object-identifier>
+	 <dsml:equality>caseIgnoreMatch</dsml:equality>
+     <dsml:substring>caseIgnoreSubstringsMatch</dsml:substring>
+     <dsml:single-value>true</dsml:single-value>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="im">
+     <dsml:name>im</dsml:name>
+     <dsml:description>This attribute contains IM address of user. </dsml:description>
+     <dsml:object-identifier>1.3.6.1.4.1.4602.3.2.34</dsml:object-identifier>
+	 <dsml:equality>caseIgnoreMatch</dsml:equality>
+     <dsml:substring>caseIgnoreSubstringsMatch</dsml:substring>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="wlsMemberOf">
+     <dsml:name>wlsMemberOf</dsml:name>
+     <dsml:description>This attribute contains the distinguised names of groups to which the user belongs.</dsml:description>
+     <dsml:object-identifier>1.3.6.1.4.1.4602.3.2.2</dsml:object-identifier>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="wlsCreatorInfo" superior="#name">
+     <dsml:name>wlsCreatorInfo</dsml:name>
+     <dsml:description>This attribute contains the component that created or deployed this policy, role, or credential map. </dsml:description>
+     <dsml:object-identifier>1.3.6.1.4.1.4602.3.2.3</dsml:object-identifier>
+   </dsml:attribute-type>
+   <dsml:class
+         id="EResource"
+         type="structural"
+         superior="#top">
+      <dsml:name>EResource</dsml:name>
+      <dsml:description>This is for WLS to define Dynamic Authorization / Entitlement Policy for a given Resource.</dsml:description>
+      <dsml:object-identifier>2.5.6.24</dsml:object-identifier>
+	<dsml:attribute ref="#cn" required="true"/>
+      <dsml:attribute ref="#EExpr" required="false"/>
+      <dsml:attribute ref="#wlsCreatorInfo" required="false"/>
+      <dsml:attribute ref="#wlsCollectionName" required="false"/>
+   </dsml:class>
+   <dsml:class
+         id="ERole"
+         type="structural"
+         superior="#top">
+      <dsml:name>ERole</dsml:name>
+      <dsml:description>This is for WLS to define Dynamic ROLE Policy Definition.</dsml:description>
+      <dsml:object-identifier>2.5.6.25</dsml:object-identifier>
+	<dsml:attribute ref="#cn" required="true"/>
+      <dsml:attribute ref="#EExpr" required="false"/>
+      <dsml:attribute ref="#wlsCreatorInfo" required="false"/>
+      <dsml:attribute ref="#EAux" required="false"/>
+      <dsml:attribute ref="#wlsCollectionName" required="false"/>
+   </dsml:class>
+   <dsml:class
+         id="EPredicate"
+         type="structural"
+         superior="#top">
+      <dsml:name>EPredicate</dsml:name>
+      <dsml:description>This is for WLS to register PREDICATE -- java class name.</dsml:description>
+      <dsml:object-identifier>2.5.6.26</dsml:object-identifier>
+	<dsml:attribute ref="#cn" required="true"/>
+   </dsml:class>
+   <dsml:class
+         id="EProfile"
+         type="structural"
+         superior="#top">
+      <dsml:name>EProfile</dsml:name>
+      <dsml:description>This is for WLS to define user profile.</dsml:description>
+      <dsml:object-identifier>2.5.6.27</dsml:object-identifier>
+	<dsml:attribute ref="#cn" required="true"/>
+      <dsml:attribute ref="#EPfID" required="false"/>
+   </dsml:class>
+   <dsml:class
+         id="EProperty"
+         type="structural"
+         superior="#top">
+      <dsml:name>EProperty</dsml:name>
+      <dsml:description>This holds the user profile's property.</dsml:description>
+      <dsml:object-identifier>2.5.6.28</dsml:object-identifier>
+	<dsml:attribute ref="#cn" required="true"/>
+      <dsml:attribute ref="#EPfType" required="false"/>
+      <dsml:attribute ref="#EPfValid" required="false"/>
+      <dsml:attribute ref="#EPfValue" required="false"/>
+   </dsml:class>
+   <dsml:attribute-type id="EExpr">
+      <dsml:name>EExpr</dsml:name>
+      <dsml:description>This attribute holds the Policy Definition in binary form.</dsml:description>
+      <dsml:object-identifier>2.5.4.55</dsml:object-identifier>
+      <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.9</dsml:syntax>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="EPfID">
+      <dsml:name>EPfID</dsml:name>
+      <dsml:description>This attribute holds the Profile Instance ID.</dsml:description>
+      <dsml:object-identifier>2.5.4.56</dsml:object-identifier>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="EPfType">
+      <dsml:name>EPfType</dsml:name>
+      <dsml:description>This attribute holds the Profile's Property type.</dsml:description>
+      <dsml:object-identifier>2.5.4.57</dsml:object-identifier>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="EPfValid">
+      <dsml:name>EPfValid</dsml:name>
+      <dsml:description>This attribute holds the Valid Value(s) of Profile Property.</dsml:description>
+      <dsml:object-identifier>2.5.4.58</dsml:object-identifier>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="EAux">
+      <dsml:name>EAux</dsml:name>
+      <dsml:description>This attribute holds the Policy Expression in string form.</dsml:description>
+      <dsml:object-identifier>1.3.6.1.4.1.4602.3.2.4</dsml:object-identifier>
+      <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.9</dsml:syntax>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="EPfValue">
+      <dsml:name>EPfValue</dsml:name>
+      <dsml:description>This attribute holds the VALUE (or default value) of Profile Property.</dsml:description>
+      <dsml:object-identifier>2.5.4.59</dsml:object-identifier>
+   </dsml:attribute-type>
+
+   <dsml:class id="wlsCertRegEntry" superior="#top" type="structural">
+      <dsml:name>wlsCertRegEntry</dsml:name>
+      <dsml:description>This class holds an entry in the certificate registry.</dsml:description>
+      <dsml:object-identifier>1.3.6.1.4.1.4602.3.2.5</dsml:object-identifier>
+      <dsml:attribute ref="#cn"                             required="true"/> <!-- alias.toLowerCase() -->
+      <dsml:attribute ref="#wlsCertRegSubjectDN"            required="true"/>
+      <dsml:attribute ref="#wlsCertRegIssuerDN"             required="true"/>
+      <dsml:attribute ref="#wlsCertRegSerialNumber"         required="true"/>
+      <dsml:attribute ref="#wlsCertRegSubjectKeyIdentifier" required="false"/>
+      <dsml:attribute ref="#userCertificate"                required="true"/>
+   </dsml:class>
+   <dsml:attribute-type id="wlsCertRegSubjectDN">
+      <dsml:name>wlsCertRegSubjectDN</dsml:name>
+      <dsml:description>
+        This required attribute holds a string containing the subject DN of a certificate registered
+        in the certificate registry in RFC2253 format, sorted alphabetically by type.
+      </dsml:description>
+      <dsml:object-identifier>1.3.6.1.4.1.4602.3.2.6</dsml:object-identifier>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="wlsCertRegIssuerDN">
+      <dsml:name>wlsCertRegIssuerDN</dsml:name>
+      <dsml:description>
+        This required attribute holds a string containing the issuer DN of a certificate registered
+        in the certificate registry in RFC2253 format, sorted alphabetically by type.
+      </dsml:description>
+      <dsml:object-identifier>1.3.6.1.4.1.4602.3.2.7</dsml:object-identifier>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="wlsCertRegSerialNumber">
+      <dsml:name>wlsCertRegSerialNumber</dsml:name>
+      <dsml:description>
+        This required attribute holds a string containing the serial number of a certificate registered
+        in the certificate registry in RFC2253 format, sorted alphabetically by type.
+        A string was used instead of an int since serial numbers are big integers.
+      </dsml:description>
+      <dsml:object-identifier>1.3.6.1.4.1.4602.3.2.8</dsml:object-identifier>
+   </dsml:attribute-type>
+   <dsml:attribute-type id="wlsCertRegSubjectKeyIdentifier">
+      <dsml:name>wlsCertRegSerialNumber</dsml:name>
+      <dsml:description>
+        This optional attribute holds a base64 encoded byte array containing the
+        subject key identifier of a certificate registered in the certificate registry.
+      </dsml:description>
+      <dsml:object-identifier>1.3.6.1.4.1.4602.3.2.9</dsml:object-identifier>
+   </dsml:attribute-type>
+
+   <dsml:class id="uddi-Business-Entity" superior="#top" type="structural">
+      <dsml:name>uddi-Business-Entity</dsml:name>
+      <dsml:description>Business Entity object</dsml:description>
+      <dsml:object-identifier>208.185.55.117.2.0</dsml:object-identifier>
+      <dsml:attribute ref="#uddi-Business-Key" required="true"/>
+      <dsml:attribute ref="#uddi-Entity-Name" required="true"/>
+      <dsml:attribute ref="#uddi-isHidden" required="true"/>
+      <dsml:attribute ref="#uddi-Authorized-Name" required="true"/>
+      <dsml:attribute ref="#uddi-Name-Soundex" required="false"/>
+      <dsml:attribute ref="#uddi-Operator" required="false"/>
+      <dsml:attribute ref="#uddi-Description" required="false"/>
+      <dsml:attribute ref="#uddi-Ref-Identifier-Bag" required="false"/>
+      <dsml:attribute ref="#uddi-Ref-Category-Bag" required="false"/>
+   </dsml:class>
+
+   <dsml:class 
+         id="uddi-Business-Service" 
+         superior="#top" 
+         type="structural">
+      <dsml:name>uddi-Business-Service</dsml:name>
+      <dsml:description>Business Service object</dsml:description>
+      <dsml:object-identifier>208.185.55.117.2.1</dsml:object-identifier>
+      <dsml:attribute ref="#uddi-Service-Key" required="true"/>
+      <dsml:attribute ref="#uddi-Service-Name" required="true"/>
+      <dsml:attribute ref="#uddi-isHidden" required="true"/>
+      <dsml:attribute ref="#uddi-Name-Soundex" required="false"/>
+      <dsml:attribute ref="#uddi-Description" required="false"/>
+      <dsml:attribute ref="#uddi-Ref-Category-Bag" required="false"/>
+   </dsml:class>
+
+   <dsml:class 
+         id="uddi-Binding-Template" 
+         superior="#TOP" 
+         type="structural">
+      <dsml:name>uddi-Binding-Template</dsml:name>
+      <dsml:description>Binding Template object</dsml:description>
+      <dsml:object-identifier>208.185.55.117.2.2</dsml:object-identifier>
+      <dsml:attribute ref="#uddi-Binding-Key" required="true"/>
+      <dsml:attribute ref="#uddi-Access-Point" required="false"/>
+      <dsml:attribute ref="#uddi-Hosting-Redirector" required="false"/>
+      <dsml:attribute ref="#uddi-isHidden" required="true"/>
+      <dsml:attribute ref="#uddi-Description" required="false"/>
+   </dsml:class>
+
+   <dsml:class 
+         id="uddi-tModel" 
+         superior="#TOP" 
+         type="structural">
+      <dsml:name>uddi-tModel</dsml:name>
+      <dsml:description>tModel object</dsml:description>
+      <dsml:object-identifier>208.185.55.117.2.3</dsml:object-identifier>
+      <dsml:attribute ref="#uddi-tModel-Key" required="true"/>
+      <dsml:attribute ref="#uddi-tModel-Name" required="true"/>
+      <dsml:attribute ref="#uddi-isHidden" required="true"/>
+      <dsml:attribute ref="#uddi-Authorized-Name" required="true"/>
+      <dsml:attribute ref="#uddi-Name-Soundex" required="false"/>
+      <dsml:attribute ref="#uddi-Operator" required="false"/>
+      <dsml:attribute ref="#uddi-Description" required="false"/>
+      <dsml:attribute ref="#uddi-Ref-Identifier-Bag" required="false"/>
+      <dsml:attribute ref="#uddi-Ref-Category-Bag" required="false"/>
+      <dsml:attribute ref="#uddi-tModel-origin" required="false"/>
+      <dsml:attribute ref="#uddi-tModel-type" required="false"/>
+      <dsml:attribute ref="#uddi-tModel-checked" required="false"/>
+   </dsml:class>
+
+   <dsml:class 
+         id="uddi-Publisher-Assertion" 
+         superior="#TOP" 
+         type="structural">
+      <dsml:name>uddi-Publisher-Assertion</dsml:name>
+      <dsml:description>Publisher Assertion object</dsml:description>
+      <dsml:object-identifier>208.185.55.117.2.4</dsml:object-identifier>
+      <dsml:attribute ref="#uddi-Publisher-Assertions-ID" required="true"/>
+      <dsml:attribute ref="#uddi-From-Key" required="true"/>
+      <dsml:attribute ref="#uddi-To-Key" required="true"/>
+      <dsml:attribute ref="#uddi-Ref-Keyed-Reference" required="true"/>
+   </dsml:class>
+
+   <dsml:class 
+         id="uddi-Discovery-URL" 
+         superior="#TOP" 
+         type="structural">
+      <dsml:name>uddi-Discovery-URL</dsml:name>
+      <dsml:description>Discovery URL</dsml:description>
+      <dsml:object-identifier>208.185.55.117.2.5</dsml:object-identifier>
+      <dsml:attribute ref="#uddi-Discovery-URL-ID" required="true"/>
+      <dsml:attribute ref="#uddi-Use-Type" required="true"/>
+      <dsml:attribute ref="#uddi-URL" required="true"/>
+   </dsml:class>
+
+   <dsml:class 
+         id="uddi-Contact" 
+         superior="#TOP" 
+         type="structural">
+      <dsml:name>uddi-Contact</dsml:name>
+      <dsml:description>Contact Information</dsml:description>
+      <dsml:object-identifier>208.185.55.117.2.6</dsml:object-identifier>
+      <dsml:attribute ref="#uddi-Contact-ID" required="true"/>
+      <dsml:attribute ref="#uddi-Person-Name" required="true"/>
+      <dsml:attribute ref="#uddi-Use-Type" required="false"/>
+      <dsml:attribute ref="#uddi-Description" required="false"/>
+      <dsml:attribute ref="#uddi-Phone" required="false"/>
+      <dsml:attribute ref="#uddi-Email" required="false"/>
+   </dsml:class>
+
+   <dsml:class 
+         id="uddi-Address" 
+         superior="#TOP" 
+         type="structural">
+      <dsml:name>uddi-Address</dsml:name>
+      <dsml:description>Address information for a contact entry</dsml:description>
+      <dsml:object-identifier>208.185.55.117.2.7</dsml:object-identifier>
+      <dsml:attribute ref="#uddi-Address-ID" required="true"/>
+      <dsml:attribute ref="#uddi-Use-Type" required="false"/>
+      <dsml:attribute ref="#uddi-Sort-Code" required="false"/>
+      <dsml:attribute ref="#uddi-Address-tModel-Key" required="false"/>
+      <dsml:attribute ref="#uddi-Address-Line" required="false"/>
+   </dsml:class>
+
+   <dsml:class 
+         id="uddi-Keyed-Reference" 
+         superior="#TOP" 
+         type="structural">
+      <dsml:name>uddi-Keyed-Reference</dsml:name>
+      <dsml:description>KeyedReference</dsml:description>
+      <dsml:object-identifier>208.185.55.117.2.8</dsml:object-identifier>
+      <dsml:attribute ref="#uddi-Keyed-Reference-ID" required="true"/>
+      <dsml:attribute ref="#uddi-Keyed-Reference-TModel-Key" required="false"/>
+      <dsml:attribute ref="#uddi-Key-Value" required="true"/>
+      <dsml:attribute ref="#uddi-Key-Name" required="false"/>
+   </dsml:class>
+
+   <dsml:class 
+         id="uddi-tModel-Instance-Info" 
+         superior="#TOP" 
+         type="structural">
+      <dsml:name>uddi-tModel-Instance-Info</dsml:name>
+      <dsml:description>tModelInstanceInfo</dsml:description>
+      <dsml:object-identifier>208.185.55.117.2.9</dsml:object-identifier>
+      <dsml:attribute ref="#uddi-tModel-Instance-Info-ID" required="true"/>
+      <dsml:attribute ref="#uddi-tMII-TModel-Key" required="true"/>
+      <dsml:attribute ref="#uddi-Description" required="false"/>
+   </dsml:class>
+
+   <dsml:class 
+         id="uddi-Instance-Details" 
+         superior="#TOP" 
+         type="structural">
+      <dsml:name>uddi-Instance-Details</dsml:name>
+      <dsml:description>instanceDetails</dsml:description>
+      <dsml:object-identifier>208.185.55.117.2.10</dsml:object-identifier>
+      <dsml:attribute ref="#uddi-Instance-Details-ID" required="true"/>
+      <dsml:attribute ref="#uddi-Description" required="false"/>
+      <dsml:attribute ref="#uddi-Instance-Parms" required="false"/>
+   </dsml:class>
+
+   <dsml:class 
+         id="uddi-Overview-Doc" 
+         superior="#TOP" 
+         type="structural">
+      <dsml:name>uddi-Overview-Doc</dsml:name>
+      <dsml:description>overviewDoc</dsml:description>
+      <dsml:object-identifier>208.185.55.117.2.11</dsml:object-identifier>
+      <dsml:attribute ref="#uddi-Overview-Doc-ID" required="true"/>
+      <dsml:attribute ref="#uddi-Description" required="false"/>
+      <dsml:attribute ref="#uddi-Overview-URL" required="false"/>
+   </dsml:class>
+
+   <dsml:class 
+         id="uddi-Ref-Object" 
+         superior="#TOP" 
+         type="structural">
+      <dsml:name>uddi-Ref-Object</dsml:name>
+      <dsml:description>an object class conatins a reference to another entry</dsml:description>
+      <dsml:object-identifier>208.185.55.117.2.12</dsml:object-identifier>
+      <dsml:attribute ref="#uddi-Ref-Attribute" required="true"/>
+   </dsml:class>
+
+   <dsml:class 
+         id="uddi-Ref-Auxiliary-Object" 
+         superior="#TOP" 
+         type="auxiliary">
+      <dsml:name>uddi-Ref-Auxiliary-Object</dsml:name>
+      <dsml:description>an auxiliary type object used in another structural class to hold a reference to a third entry</dsml:description>
+      <dsml:object-identifier>208.185.55.117.2.13</dsml:object-identifier>
+      <dsml:attribute ref="#uddi-Ref-Attribute" required="true"/>
+   </dsml:class>
+
+   <dsml:class 
+         id="uddi-ou-container" 
+         superior="#organizationalunit" 
+         type="structural">
+      <dsml:name>uddi-ou-container</dsml:name>
+      <dsml:description>an organizational unit with uddi attributes</dsml:description>
+      <dsml:object-identifier>208.185.55.117.2.14</dsml:object-identifier>
+      <dsml:attribute ref="#uddi-next-id" required="false"/>
+      <dsml:attribute ref="#uddi-var" required="false"/>
+   </dsml:class>
+
+   <dsml:class 
+         id="uddi-User" 
+         superior="#inetOrgPerson" 
+         type="structural">
+      <dsml:name>uddi-User</dsml:name>
+      <dsml:description>A User with UDDI attributes</dsml:description>
+      <dsml:object-identifier>11827.0001.2.15</dsml:object-identifier>
+      <dsml:attribute ref="#uid" required="true"/>
+      <dsml:attribute ref="#uddi-user-language" required="true"/>
+      <dsml:attribute ref="#uddi-user-quota-entity" required="true"/>
+      <dsml:attribute ref="#uddi-user-quota-service" required="true"/>
+      <dsml:attribute ref="#uddi-user-quota-binding" required="true"/>
+      <dsml:attribute ref="#uddi-user-quota-tmodel" required="true"/>
+      <dsml:attribute ref="#uddi-user-quota-assertion" required="true"/>
+      <dsml:attribute ref="#uddi-user-quota-messagesize" required="true"/>
+   </dsml:class>
+
+   <dsml:attribute-type id="uddi-Business-Key" single-value="true">
+      <dsml:name>uddi-Business-Key</dsml:name>
+      <dsml:description>Business Key</dsml:description>
+      <dsml:object-identifier>208.185.55.117.1.0</dsml:object-identifier>
+      <dsml:syntax bound="41">acumen defined</dsml:syntax>
+   </dsml:attribute-type>
+
+
+   <dsml:attribute-type id="uddi-user-language" single-value="true">
+      <dsml:name>uddi-user-language</dsml:name>
+      <dsml:description>User language</dsml:description>
+      <dsml:object-identifier>11827.0001.1.60</dsml:object-identifier>
+      <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+   </dsml:attribute-type>
+
+   <dsml:attribute-type id="uddi-user-quota-entity" single-value="true">
+      <dsml:name>uddi-user-quota-entity</dsml:name>
+      <dsml:description>User entity quota</dsml:description>
+      <dsml:object-identifier>11827.0001.1.54</dsml:object-identifier>
+      <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.27</dsml:syntax>
+   </dsml:attribute-type>
+
+   <dsml:attribute-type id="uddi-user-quota-service" single-value="true">
+      <dsml:name>uddi-user-quota-service</dsml:name>
+      <dsml:description>User service quota</dsml:description>
+      <dsml:object-identifier>11827.0001.1.55</dsml:object-identifier>
+      <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.27</dsml:syntax>
+   </dsml:attribute-type>
+
+   <dsml:attribute-type id="uddi-user-quota-binding" single-value="true">
+      <dsml:name>uddi-user-quota-binding</dsml:name>
+      <dsml:description>User binding quota</dsml:description>
+      <dsml:object-identifier>11827.0001.1.56</dsml:object-identifier>
+      <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.27</dsml:syntax>
+   </dsml:attribute-type>
+
+   <dsml:attribute-type id="uddi-user-quota-tmodel" single-value="true">
+      <dsml:name>uddi-user-quota-tmodel</dsml:name>
+      <dsml:description>User tmodel quota</dsml:description>
+      <dsml:object-identifier>11827.0001.1.57</dsml:object-identifier>
+      <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.27</dsml:syntax>
+   </dsml:attribute-type>
+
+   <dsml:attribute-type id="uddi-user-quota-assertion" single-value="true">
+      <dsml:name>uddi-user-quota-assertion</dsml:name>
+      <dsml:description>User publisher asserion quota</dsml:description>
+      <dsml:object-identifier>11827.0001.1.58</dsml:object-identifier>
+      <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.27</dsml:syntax>
+   </dsml:attribute-type>
+
+   <dsml:attribute-type id="uddi-user-quota-messagesize" single-value="true">
+      <dsml:name>uddi-user-quota-messagesize</dsml:name>
+      <dsml:description>User message size quota</dsml:description>
+      <dsml:object-identifier>11827.0001.1.59</dsml:object-identifier>
+      <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.27</dsml:syntax>
+   </dsml:attribute-type>
+
+
+   <dsml:attribute-type id="uddi-tModel-origin" single-value="true">
+      <dsml:name>uddi-tModel-origin</dsml:name>
+      <dsml:description>tModel origin</dsml:description>
+      <dsml:object-identifier>11827.0001.1.51</dsml:object-identifier>
+      <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+   </dsml:attribute-type>
+
+   <dsml:attribute-type id="uddi-tModel-type" single-value="true">
+      <dsml:name>uddi-tModel-type</dsml:name>
+      <dsml:description>tModel type</dsml:description>
+      <dsml:object-identifier>11827.0001.1.52</dsml:object-identifier>
+      <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+   </dsml:attribute-type>
+
+   <dsml:attribute-type id="uddi-tModel-checked" single-value="true">
+      <dsml:name>uddi-tModel-checked</dsml:name>
+      <dsml:description>tModel checked or not</dsml:description>
+      <dsml:object-identifier>11827.0001.1.53</dsml:object-identifier>
+      <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+   </dsml:attribute-type>
+
+
+
+
+
+
+
+
+   <dsml:attribute-type id="uddi-Authorized-Name">
+      <dsml:name>uddi-Authorized-Name</dsml:name>
+      <dsml:description>Authorized Name for publisher of data</dsml:description>
+      <dsml:object-identifier>208.185.55.117.1.1</dsml:object-identifier>
+      <dsml:syntax bound="255">acumen defined</dsml:syntax>
+   </dsml:attribute-type>
+
+   <dsml:attribute-type id="uddi-Operator">
+      <dsml:name>uddi-Operator</dsml:name>
+      <dsml:description>Name of UDDI Registry Operator</dsml:description>
+      <dsml:object-identifier>208.185.55.117.1.2</dsml:object-identifier>
+      <dsml:syntax bound="255">acumen defined</dsml:syntax>
+   </dsml:attribute-type>
+
+   <dsml:attribute-type id="uddi-Name">
+      <dsml:name>uddi-Name</dsml:name>
+      <dsml:description>Business Entity Name</dsml:description>
+      <dsml:object-identifier>208.185.55.117.1.3</dsml:object-identifier>
+      <dsml:syntax bound="255">acumen defined</dsml:syntax>
+   </dsml:attribute-type>
+
+   <dsml:attribute-type id="uddi-Name-Soundex">
+      <dsml:name>uddi-Name-Soundex</dsml:name>
+      <dsml:description>Name in soundex format</dsml:description>
+      <dsml:object-identifier>208.185.55.117.1.3</dsml:object-identifier>
+      <dsml:syntax bound="255">acumen defined</dsml:syntax>
+   </dsml:attribute-type>
+
+   <dsml:attribute-type id="uddi-Description">
+      <dsml:name>uddi-Description</dsml:name>
+      <dsml:description>Description of Business Entity</dsml:description>
+      <dsml:object-identifier>208.185.55.117.1.4</dsml:object-identifier>
+      <dsml:syntax bound="255">acumen defined</dsml:syntax>
+   </dsml:attribute-type>
+
+   <dsml:attribute-type id="uddi-Use-Type">
+      <dsml:name>uddi-Use-Type</dsml:name>
+      <dsml:description>Name of convention that the referenced document follows</dsml:description>
+      <dsml:object-identifier>208.185.55.117.1.7</dsml:object-identifier>
+      <dsml:syntax bound="255">acumen defined</dsml:syntax>
+   </dsml:attribute-type>
+
+   <dsml:attribute-type id="uddi-URL">
+      <dsml:name>uddi-URL</dsml:name>
+      <dsml:description>URL</dsml:description>
+      <dsml:object-identifier>208.185.55.117.1.8</dsml:object-identifier>
+      <dsml:syntax bound="255">acumen defined</dsml:syntax>
+   </dsml:attribute-type>
+
+   <dsml:attribute-type id="uddi-Person-Name">
+      <dsml:name>uddi-Person-Name</dsml:name>
+      <dsml:description>Name of Contact Person</dsml:description>
+      <dsml:object-identifier>208.185.55.117.1.9</dsml:object-identifier>
+      <dsml:syntax bound="255">acumen defined</dsml:syntax>
+   </dsml:attribute-type>
+
+   <dsml:attribute-type id="uddi-Phone">
+      <dsml:name>uddi-Phone</dsml:name>
+      <dsml:description>Telephone Number</dsml:description>
+      <dsml:object-identifier>208.185.55.117.1.10</dsml:object-identifier>
+      <dsml:syntax bound="50">acumen defined</dsml:syntax>
+   </dsml:attribute-type>
+
+   <dsml:attribute-type id="uddi-Email">
+      <dsml:name>uddi-Email</dsml:name>
+      <dsml:description>Email address</dsml:description>
+      <dsml:object-identifier>208.185.55.117.1.11</dsml:object-identifier>
+      <dsml:syntax bound="255">acumen defined</dsml:syntax>
+   </dsml:attribute-type>
+
+   <dsml:attribute-type id="uddi-Sort-Code">
+      <dsml:name>uddi-Sort-Code</dsml:name>
+      <dsml:description>Code to sort addresses</dsml:description>
+      <dsml:object-identifier>208.185.55.117.1.12</dsml:object-identifier>
+      <dsml:syntax bound="10">acumen defined</dsml:syntax>
+   </dsml:attribute-type>
+
+   <dsml:attribute-type id="uddi-tModel-Key" single-value="true">
+      <dsml:name>uddi-tModel-Key</dsml:name>
+      <dsml:description>Key to reference a tModel entry</dsml:description>
+      <dsml:object-identifier>208.185.55.117.1.13</dsml:object-identifier>
+      <dsml:syntax bound="255">acumen defined</dsml:syntax>
+   </dsml:attribute-type>
+
+   <dsml:attribute-type id="uddi-Address-Line">
+      <dsml:name>uddi-Address-Line</dsml:name>
+      <dsml:description>Actual address lines in free form text</dsml:description>
+      <dsml:object-identifier>208.185.55.117.1.14</dsml:object-identifier>
+      <dsml:syntax bound="80">acumen defined</dsml:syntax>
+   </dsml:attribute-type>
+
+   <dsml:attribute-type id="uddi-Service-Key" single-value="true">
+      <dsml:name>uddi-Service-Key</dsml:name>
+      <dsml:description>Service Key</dsml:description>
+      <dsml:object-identifier>208.185.55.117.1.15</dsml:object-identifier>
+      <dsml:syntax bound="41">acumen defined</dsml:syntax>
+   </dsml:attribute-type>
+
+   <dsml:attribute-type id="uddi-Service-Name">
+      <dsml:name>uddi-Service-Name</dsml:name>
+      <dsml:description>Service Name</dsml:description>
+      <dsml:object-identifier>208.185.55.117.1.16</dsml:object-identifier>
+      <dsml:syntax bound="255">acumen defined</dsml:syntax>
+   </dsml:attribute-type>
+
+   <dsml:attribute-type id="uddi-Binding-Key" single-value="true">
+      <dsml:name>uddi-Binding-Key</dsml:name>
+      <dsml:description>Binding Key</dsml:description>
+      <dsml:object-identifier>208.185.55.117.1.17</dsml:object-identifier>
+      <dsml:syntax bound="41">acumen defined</dsml:syntax>
+   </dsml:attribute-type>
+
+   <dsml:attribute-type id="uddi-Access-Point">
+      <dsml:name>uddi-Access-Point</dsml:name>
+      <dsml:description>A text field to convey the entry point address for calling a web service</dsml:description>
+      <dsml:object-identifier>208.185.55.117.1.18</dsml:object-identifier>
+      <dsml:syntax bound="255">acumen defined</dsml:syntax>
+   </dsml:attribute-type>
+
+   <dsml:attribute-type id="uddi-Hosting-Redirector" single-value="true">
+      <dsml:name>uddi-Hosting-Redirector</dsml:name>
+      <dsml:description>Provides a Binding Key attribute to redirect reference to a different binding template</dsml:description>
+      <dsml:object-identifier>208.185.55.117.1.19</dsml:object-identifier>
+      <dsml:syntax bound="41">acumen defined</dsml:syntax>
+   </dsml:attribute-type>
+
+   <dsml:attribute-type id="uddi-Instance-Parms">
+      <dsml:name>uddi-Instance-Parms</dsml:name>
+      <dsml:description>Parameters to use a specific facet of a bindingTemplate description</dsml:description>
+      <dsml:object-identifier>208.185.55.117.1.20</dsml:object-identifier>
+      <dsml:syntax bound="255">acumen defined</dsml:syntax>
+   </dsml:attribute-type>
+
+   <dsml:attribute-type id="uddi-Overview-URL">
+      <dsml:name>uddi-Overview-URL</dsml:name>
+      <dsml:description>URL reference to a long form of an overview document</dsml:description>
+      <dsml:object-identifier>208.185.55.117.1.21</dsml:object-identifier>
+      <dsml:syntax bound="255">acumen defined</dsml:syntax>
+   </dsml:attribute-type>
+
+   <dsml:attribute-type id="uddi-From-Key" single-value="true">
+      <dsml:name>uddi-From-Key</dsml:name>
+      <dsml:description>Unique key reference to first businessEntity assertion is made for</dsml:description>
+      <dsml:object-identifier>208.185.55.117.1.22</dsml:object-identifier>
+      <dsml:syntax bound="41">acumen defined</dsml:syntax>
+   </dsml:attribute-type>
+
+   <dsml:attribute-type id="uddi-To-Key" single-value="true">
+      <dsml:name>uddi-To-Key</dsml:name>
+      <dsml:description>Unique key reference to second businessEntity assertion is made for</dsml:description>
+      <dsml:object-identifier>208.185.55.117.1.23</dsml:object-identifier>
+      <dsml:syntax bound="41">acumen defined</dsml:syntax>
+   </dsml:attribute-type>
+
+   <dsml:attribute-type id="uddi-Key-Name">
+      <dsml:name>uddi-Key-Name</dsml:name>
+      <dsml:description>An attribute of the KeyedReference structure</dsml:description>
+      <dsml:object-identifier>208.185.55.117.1.24</dsml:object-identifier>
+      <dsml:syntax bound="255">acumen defined</dsml:syntax>
+   </dsml:attribute-type>
+
+   <dsml:attribute-type id="uddi-Key-Value">
+      <dsml:name>uddi-Key-Value</dsml:name>
+      <dsml:description>An attribute of the KeyedReference structure</dsml:description>
+      <dsml:object-identifier>208.185.55.117.1.25</dsml:object-identifier>
+      <dsml:syntax bound="255">acumen defined</dsml:syntax>
+   </dsml:attribute-type>
+
+   <dsml:attribute-type id="uddi-Auth-Info">
+      <dsml:name>uddi-Auth-Info</dsml:name>
+      <dsml:description>Authorization information</dsml:description>
+      <dsml:object-identifier>208.185.55.117.1.26</dsml:object-identifier>
+      <dsml:syntax bound="4096">acumen defined</dsml:syntax>
+   </dsml:attribute-type>
+
+   <dsml:attribute-type id="uddi-Key-Type">
+      <dsml:name>uddi-Key-Type</dsml:name>
+      <dsml:description>?????????????????????????????</dsml:description>
+      <dsml:object-identifier>208.185.55.117.1.27</dsml:object-identifier>
+      <dsml:syntax bound="16">acumen defined</dsml:syntax>
+   </dsml:attribute-type>
+
+   <dsml:attribute-type id="uddi-Upload-Register">
+      <dsml:name>uddi-Upload-Register</dsml:name>
+      <dsml:description>?????????????????????????????</dsml:description>
+      <dsml:object-identifier>208.185.55.117.1.28</dsml:object-identifier>
+      <dsml:syntax bound="255">acumen defined</dsml:syntax>
+   </dsml:attribute-type>
+
+   <dsml:attribute-type id="uddi-URL-Type">
+      <dsml:name>uddi-URL-Type</dsml:name>
+      <dsml:description>?????????????????????????????</dsml:description>
+      <dsml:object-identifier>208.185.55.117.1.29</dsml:object-identifier>
+      <dsml:syntax bound="16">acumen defined</dsml:syntax>
+   </dsml:attribute-type>
+
+   <dsml:attribute-type id="uddi-Ref-Keyed-Reference">
+      <dsml:name>uddi-Ref-Keyed-Reference</dsml:name>
+      <dsml:description>reference to a keyedReference entry</dsml:description>
+      <dsml:object-identifier>208.185.55.117.1.30</dsml:object-identifier>
+      <dsml:syntax bound="255">acumen defined</dsml:syntax>
+   </dsml:attribute-type>
+
+   <dsml:attribute-type id="uddi-Ref-Category-Bag">
+      <dsml:name>uddi-Ref-Category-Bag</dsml:name>
+      <dsml:description>reference to a categoryBag entry</dsml:description>
+      <dsml:object-identifier>208.185.55.117.1.31</dsml:object-identifier>
+      <dsml:syntax bound="255">acumen defined</dsml:syntax>
+   </dsml:attribute-type>
+
+   <dsml:attribute-type id="uddi-Ref-Identifier-Bag">
+      <dsml:name>uddi-Ref-Identifier-Bag</dsml:name>
+      <dsml:description>reference to a identifierBag entry</dsml:description>
+      <dsml:object-identifier>208.185.55.117.1.32</dsml:object-identifier>
+      <dsml:syntax bound="255">acumen defined</dsml:syntax>
+   </dsml:attribute-type>
+
+   <dsml:attribute-type id="uddi-Ref-TModel" single-value="true">
+      <dsml:name>uddi-Ref-TModel</dsml:name>
+      <dsml:description>reference to a TModel entry</dsml:description>
+      <dsml:object-identifier>208.185.55.117.1.33</dsml:object-identifier>
+      <dsml:syntax bound="255">acumen defined</dsml:syntax>
+   </dsml:attribute-type>
+
+   <dsml:attribute-type id="uddi-Contact-ID" single-value="true">
+      <dsml:name>uddi-Contact-ID</dsml:name>
+      <dsml:description>Unique ID which will serve as the Distinguished Name of each entry</dsml:description>
+      <dsml:object-identifier>208.185.55.117.1.34</dsml:object-identifier>
+      <dsml:syntax bound="16">acumen defined</dsml:syntax>
+   </dsml:attribute-type>
+
+   <dsml:attribute-type id="uddi-Discovery-URL-ID" single-value="true">
+      <dsml:name>uddi-Discovery-URL-ID</dsml:name>
+      <dsml:description>Unique ID which will serve as the Distinguished Name of each entry</dsml:description>
+      <dsml:object-identifier>208.185.55.117.1.35</dsml:object-identifier>
+      <dsml:syntax bound="16">acumen defined</dsml:syntax>
+   </dsml:attribute-type>
+
+   <dsml:attribute-type id="uddi-Address-ID" single-value="true">
+      <dsml:name>uddi-Address-ID</dsml:name>
+      <dsml:description>Unique ID which will serve as the Distinguished Name of each entry</dsml:description>
+      <dsml:object-identifier>208.185.55.117.1.36</dsml:object-identifier>
+      <dsml:syntax bound="16">acumen defined</dsml:syntax>
+   </dsml:attribute-type>
+
+   <dsml:attribute-type id="uddi-Overview-Doc-ID" single-value="true">
+      <dsml:name>uddi-Overview-Doc-ID</dsml:name>
+      <dsml:description>Unique ID which will serve as the Distinguished Name of each entry</dsml:description>
+      <dsml:object-identifier>208.185.55.117.1.37</dsml:object-identifier>
+      <dsml:syntax bound="16">acumen defined</dsml:syntax>
+   </dsml:attribute-type>
+
+   <dsml:attribute-type id="uddi-Instance-Details-ID" single-value="true">
+      <dsml:name>uddi-Instance-Details-ID</dsml:name>
+      <dsml:description>Unique ID which will serve as the Distinguished Name of each entry</dsml:description>
+      <dsml:object-identifier>208.185.55.117.1.38</dsml:object-identifier>
+      <dsml:syntax bound="16">acumen defined</dsml:syntax>
+   </dsml:attribute-type>
+
+   <dsml:attribute-type id="uddi-tModel-Instance-Info-ID" single-value="true">
+      <dsml:name>uddi-tModel-Instance-Info-ID</dsml:name>
+      <dsml:description>Unique ID which will serve as the Distinguished Name of each entry</dsml:description>
+      <dsml:object-identifier>208.185.55.117.1.39</dsml:object-identifier>
+      <dsml:syntax bound="16">acumen defined</dsml:syntax>
+   </dsml:attribute-type>
+
+   <dsml:attribute-type id="uddi-Publisher-Assertions-ID" single-value="true">
+      <dsml:name>uddi-Publisher-Assertions-ID</dsml:name>
+      <dsml:description>Unique ID which will serve as the Distinguished Name of each entry</dsml:description>
+      <dsml:object-identifier>208.185.55.117.1.40</dsml:object-identifier>
+      <dsml:syntax bound="16">acumen defined</dsml:syntax>
+   </dsml:attribute-type>
+
+   <dsml:attribute-type id="uddi-Keyed-Reference-ID" single-value="true">
+      <dsml:name>uddi-Keyed-Reference-ID</dsml:name>
+      <dsml:description>Unique ID which will serve as the Distinguished Name of each entry</dsml:description>
+      <dsml:object-identifier>208.185.55.117.1.41</dsml:object-identifier>
+      <dsml:syntax bound="16">acumen defined</dsml:syntax>
+   </dsml:attribute-type>
+
+   <dsml:attribute-type id="uddi-Ref-Attribute">
+      <dsml:name>uddi-Ref-Attribute</dsml:name>
+      <dsml:description>a reference to another entry</dsml:description>
+      <dsml:object-identifier>208.185.55.117.1.42</dsml:object-identifier>
+      <dsml:syntax bound="255">acumen defined</dsml:syntax>
+   </dsml:attribute-type>
+
+   <dsml:attribute-type id="uddi-Entity-Name">
+      <dsml:name>uddi-Entity-Name</dsml:name>
+      <dsml:description>Business entity Name</dsml:description>
+      <dsml:object-identifier>208.185.55.117.1.43</dsml:object-identifier>
+      <dsml:syntax bound="255">acumen defined</dsml:syntax>
+   </dsml:attribute-type>
+
+   <dsml:attribute-type id="uddi-tModel-Name">
+      <dsml:name>uddi-tModel-Name</dsml:name>
+      <dsml:description>tModel Name</dsml:description>
+      <dsml:object-identifier>208.185.55.117.1.44</dsml:object-identifier>
+      <dsml:syntax bound="255">acumen defined</dsml:syntax>
+   </dsml:attribute-type>
+
+   <dsml:attribute-type id="uddi-tMII-TModel-Key" single-value="true">
+      <dsml:name>uddi-tMII-TModel-Key</dsml:name>
+      <dsml:description>tModel key referneced in tModelInstanceInfo</dsml:description>
+      <dsml:object-identifier>208.185.55.117.1.45</dsml:object-identifier>
+      <dsml:syntax bound="255">acumen defined</dsml:syntax>
+   </dsml:attribute-type>
+
+   <dsml:attribute-type id="uddi-Keyed-Reference-TModel-Key" single-value="true">
+      <dsml:name>uddi-Keyed-Reference-TModel-Key</dsml:name>
+      <dsml:description>tModel key referneced in KeyedReference</dsml:description>
+      <dsml:object-identifier>208.185.55.117.1.46</dsml:object-identifier>
+      <dsml:syntax bound="255">acumen defined</dsml:syntax>
+   </dsml:attribute-type>
+
+   <dsml:attribute-type id="uddi-Address-tModel-Key" single-value="true">
+      <dsml:name>uddi-Address-tModel-Key</dsml:name>
+      <dsml:description>tModel key referneced in Address</dsml:description>
+      <dsml:object-identifier>208.185.55.117.1.47</dsml:object-identifier>
+      <dsml:syntax bound="255">acumen defined</dsml:syntax>
+   </dsml:attribute-type>
+
+   <dsml:attribute-type id="uddi-isHidden" single-value="true">
+      <dsml:name>uddi-isHidden</dsml:name>
+      <dsml:description>a flag to indicate whether an entry is hidden</dsml:description>
+      <dsml:object-identifier>208.185.55.117.1.48</dsml:object-identifier>
+      <dsml:syntax bound="255">acumen defined</dsml:syntax>
+   </dsml:attribute-type>
+
+   <dsml:attribute-type id="uddi-Time-Stamp" single-value="true">
+      <dsml:name>uddi-Time-Stamp</dsml:name>
+      <dsml:description>modification time satmp</dsml:description>
+      <dsml:object-identifier>208.185.55.117.1.49</dsml:object-identifier>
+      <dsml:syntax bound="255">acumen defined</dsml:syntax>
+   </dsml:attribute-type>
+
+   <dsml:attribute-type id="uddi-next-id" single-value="true">
+      <dsml:name>uddi-next-id</dsml:name>
+      <dsml:description>generic counter</dsml:description>
+      <dsml:object-identifier>208.185.55.117.1.50</dsml:object-identifier>
+      <dsml:syntax>acumen defined</dsml:syntax>
+   </dsml:attribute-type>
+
+   <dsml:attribute-type id="uddi-var" single-value="true">
+      <dsml:name>uddi-var</dsml:name>
+      <dsml:description>generic variable</dsml:description>
+      <dsml:object-identifier>208.185.55.117.1.15</dsml:object-identifier>
+      <dsml:syntax>acumen defined</dsml:syntax>
+   </dsml:attribute-type>
+   
+   <dsml:attribute-type id="principalNameIsUser">
+      <dsml:name>principalNameIsUser</dsml:name>
+      <dsml:description>This attribute is used to hold information about whether the principal is a username or a group name</dsml:description>
+      <dsml:object-identifier>1.3.6.1.4.1.4602.4.7</dsml:object-identifier>
+      <dsml:syntax bounds="32768">1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+      <dsml:equality>caseExactMatch</dsml:equality>
+      <dsml:ordering>generalizedTimeOrderingMatch</dsml:ordering>
+   </dsml:attribute-type>
+     
+   <dsml:attribute-type id="credentialAction">
+      <dsml:name>credentialAction</dsml:name>
+      <dsml:description>This attribute is used to hold information about credential action for the mapping</dsml:description>
+      <dsml:object-identifier>1.3.6.1.4.1.4602.4.8</dsml:object-identifier>
+   </dsml:attribute-type>
+     
+   <dsml:attribute-type id="keystoreAliasName">
+      <dsml:name>keyaliasName</dsml:name>
+      <dsml:description>This attribute is used to hold the keystore alias</dsml:description>
+      <dsml:object-identifier>1.3.6.1.4.1.4602.4.9</dsml:object-identifier>
+      <dsml:syntax bounds="32768">1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+      <dsml:equality>caseExactMatch</dsml:equality>
+     <dsml:ordering>generalizedTimeOrderingMatch</dsml:ordering>
+   </dsml:attribute-type>
+     
+   <dsml:attribute-type id="keystoreAliasPassword">
+      <dsml:name>keystoreAliasPassword</dsml:name>
+      <dsml:description>This attribute is used to hold the password to the key pair entry in the keystore</dsml:description>
+      <dsml:object-identifier>1.3.6.1.4.1.4602.4.10</dsml:object-identifier>
+      <dsml:syntax bounds="32768">1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+      <dsml:equality>caseExactMatch</dsml:equality>
+     <dsml:ordering>generalizedTimeOrderingMatch</dsml:ordering>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="wlsXmlFragment">
+    <dsml:name>wlsXmlFragment</dsml:name>
+    <dsml:description>This attribute holds XML fragments.</dsml:description>
+    <dsml:object-identifier>1.3.6.1.4.1.4602.3.2.15</dsml:object-identifier>
+    <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.5</dsml:syntax>
+  </dsml:attribute-type>
+
+  <dsml:class id="xacmlEntry" type="structural" superior="#top">
+	<dsml:name>xacmlEntry</dsml:name>
+	<dsml:description>This is for policies and policy sets expressed in XACML syntax.</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.16</dsml:object-identifier>
+	<dsml:attribute ref="#cn" required="true"/>
+	<dsml:attribute ref="#xacmlVersion" required="true"/>
+	<dsml:attribute ref="#xacmlDocument" required="true"/>
+	<dsml:attribute ref="#xacmlStatus" required="true"/>
+	<dsml:attribute ref="#wlsCreatorInfo" required="false"/>
+	<dsml:attribute ref="#wlsCollectionName" required="false"/>
+	<dsml:attribute ref="#wlsXmlFragment" required="false"/>
+  </dsml:class>
+
+  <dsml:class id="xacmlAuthorizationPolicy" type="structural" superior="#xacmlEntry">
+	<dsml:name>xacmlAuthorizationPolicy</dsml:name>
+	<dsml:description>This is for authorization policy expressed in XACML syntax.</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.17</dsml:object-identifier>
+  </dsml:class>
+
+  <dsml:class id="xacmlRoleAssignmentPolicy" type="structural" superior="#xacmlEntry">
+	<dsml:name>xacmlRoleAssignmentPolicy</dsml:name>
+	<dsml:description>This is for role assignment policy expressed in XACML syntax.</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.18</dsml:object-identifier>
+	<dsml:attribute ref="#xacmlRole" required="false"/>
+  </dsml:class>
+  
+  <dsml:class id="xacmlResourceScoping" type="auxiliary" superior="#top">
+	<dsml:name>xacmlResourceScoping</dsml:name>
+	<dsml:description>This is for authorization or role assignment policies to specify as an optimization that they can only apply at or below a level of the resource hierarchy.</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.19</dsml:object-identifier>
+	<dsml:attribute ref="#xacmlResourceScope" required="true"/>
+  </dsml:class>
+
+  <dsml:attribute-type id="xacmlDocument">
+	<dsml:name>xacmlDocument</dsml:name>
+	<dsml:description>This attribute holds the XACML document.</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.20</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.5</dsml:syntax>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="xacmlStatus">
+	<dsml:name>xacmlStatus</dsml:name>
+	<dsml:description>This attribute holds the status of the XACML entry. One of active (0), if referenced (1), inactive (2), or entitlement (3).</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.21</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.27</dsml:syntax>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="xacmlVersion">
+	<dsml:name>xacmlVersion</dsml:name>
+	<dsml:description>This attribute holds the version number for a policy or policy set.</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.22</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.26</dsml:syntax>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="xacmlRole">
+	<dsml:name>xacmlRole</dsml:name>
+	<dsml:description>This attribute holds role target of a role assignment policy.</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.23</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.26</dsml:syntax>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="xacmlResourceScope">
+	<dsml:name>xacmlResourceScope</dsml:name>
+	<dsml:description>This attribute holds resource scope for a given XACML authorization or role assignment policy.</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.24</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.26</dsml:syntax>
+  </dsml:attribute-type>
+
+  <dsml:class id="wlsPolicyCollectionInfo" type="structural" superior="#top">
+    <dsml:name>wlsPolicyCollectionInfo</dsml:name>
+    <dsml:description>This is for policy collection information.</dsml:description>
+    <dsml:object-identifier>1.3.6.1.4.1.4602.3.2.25</dsml:object-identifier>
+    <dsml:attribute ref="#wlsCollectionName" required="true"/>
+    <dsml:attribute ref="#wlsCollectionVersion" required="false"/>
+    <dsml:attribute ref="#wlsCollectionTimestamp" required="false"/>
+    <dsml:attribute ref="#wlsXmlFragment" required="false"/>
+  </dsml:class>
+
+  <dsml:class id="wlsRoleCollectionInfo" type="structural" superior="#top">
+    <dsml:name>wlsRoleCollectionInfo</dsml:name>
+    <dsml:description>This is for role collection information.</dsml:description>
+    <dsml:object-identifier>1.3.6.1.4.1.4602.3.2.26</dsml:object-identifier>
+    <dsml:attribute ref="#wlsCollectionName" required="true"/>
+    <dsml:attribute ref="#wlsCollectionVersion" required="false"/>
+    <dsml:attribute ref="#wlsCollectionTimestamp" required="false"/>
+    <dsml:attribute ref="#wlsXmlFragment" required="false"/>
+  </dsml:class>
+
+  <dsml:class id="wlsCredMapCollectionInfo" type="structural" superior="#top">
+    <dsml:name>wlsCredMapCollectionInfo</dsml:name>
+    <dsml:description>This is for credential map collection information.</dsml:description>
+    <dsml:object-identifier>1.3.6.1.4.1.4602.3.2.27</dsml:object-identifier>
+    <dsml:attribute ref="#wlsCollectionName" required="true"/>
+    <dsml:attribute ref="#wlsCollectionVersion" required="false"/>
+    <dsml:attribute ref="#wlsCollectionTimestamp" required="false"/>
+    <dsml:attribute ref="#wlsXmlFragment" required="false"/>
+  </dsml:class>
+
+  <dsml:attribute-type id="wlsCollectionName">
+    <dsml:name>wlsCollectionName</dsml:name>
+    <dsml:description>This attribute holds the policy, role or cred map collection name.</dsml:description>
+    <dsml:object-identifier>1.3.6.1.4.1.4602.3.2.28</dsml:object-identifier>
+    <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.26</dsml:syntax>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="wlsCollectionVersion">
+    <dsml:name>wlsCollectionVersion</dsml:name>
+    <dsml:description>This attribute holds the policy, role or cred map collection version.</dsml:description>
+    <dsml:object-identifier>1.3.6.1.4.1.4602.3.2.29</dsml:object-identifier>
+    <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.26</dsml:syntax>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="wlsCollectionTimestamp">
+    <dsml:name>wlsCollectionTimestamp</dsml:name>
+    <dsml:description>This attribute holds the policy, role or cred map collection timestamp.</dsml:description>
+    <dsml:object-identifier>1.3.6.1.4.1.4602.3.2.30</dsml:object-identifier>
+    <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.26</dsml:syntax>
+  </dsml:attribute-type>
+
+<!--                                                              -->
+<!-- SAML Schema Elements                                         -->
+<!-- Root OID: 1.3.6.1.4.1.4602.3.2.31                            -->
+<!--                                                              -->
+<!-- The above OID is reserved for SAML schema elements and       -->
+<!-- should not be used for other purposes.  OIDs for all SAML    -->
+<!-- elements are allocated under this SAML root OID.             -->
+<!--                                                              -->
+
+  <dsml:class id="beaSAMLPartner" type="abstract" superior="#top">
+    <dsml:name>beaSAMLPartner</dsml:name>
+    <dsml:description>
+    	Abstract class representing a SAML partner.
+    	Root OID for SAML-related objects/attributes is 1.3.6.1.4.1.4602.3.2.31.
+    </dsml:description>
+    <dsml:object-identifier>1.3.6.1.4.1.4602.3.2.31.1</dsml:object-identifier>
+    <dsml:attribute ref="#cn" required="true"/>
+    <dsml:attribute ref="#beaSAMLPartnerEnabled" required="true"/>
+    <dsml:attribute ref="#beaSAMLPartnerDescription" required="false"/>
+  </dsml:class>
+
+  <dsml:class id="beaSAMLAssertingParty" type="structural" superior="#beaSAMLPartner">
+    <dsml:name>beaSAMLAssertingParty</dsml:name>
+    <dsml:object-identifier>1.3.6.1.4.1.4602.3.2.31.2</dsml:object-identifier>
+    <dsml:attribute ref="#beaSAMLProfile" required="true"/>
+    <dsml:attribute ref="#beaSAMLTargetURL" required="false"/>
+    <dsml:attribute ref="#beaSAMLIssuerURI" required="false"/>
+    <dsml:attribute ref="#beaSAMLSourceId" required="false"/>
+    <dsml:attribute ref="#beaSAMLIntersiteTransferURL" required="false"/>
+    <dsml:attribute ref="#beaSAMLIntersiteTransferParams" required="false"/>
+    <dsml:attribute ref="#beaSAMLAssertionRetrievalURL" required="false"/>
+    <dsml:attribute ref="#beaSAMLAuthUsername" required="false"/>
+    <dsml:attribute ref="#beaSAMLAuthPassword" required="false"/>
+    <dsml:attribute ref="#beaSAMLRedirectURIs" required="false"/>
+    <dsml:attribute ref="#beaSAMLAudienceURI" required="false"/>
+    <dsml:attribute ref="#beaSAMLSignedAssertions" required="false"/>
+    <dsml:attribute ref="#beaSAMLAssertionSigningCertAlias" required="false"/>
+    <dsml:attribute ref="#beaSAMLProtocolSigningCertAlias" required="false"/>
+    <dsml:attribute ref="#beaSAMLNameMapperClass" required="false"/>
+    <dsml:attribute ref="#beaSAMLGroupsAttributeEnabled" required="false"/>
+    <dsml:attribute ref="#beaSAMLVirtualUserEnabled" required="false"/>
+    <dsml:attribute ref="#beaSAMLPersistentARSConnEnabled" required="false"/>
+  </dsml:class>
+
+  <dsml:class id="beaSAMLRelyingParty" type="structural" superior="#beaSAMLPartner">
+    <dsml:name>beaSAMLRelyingParty</dsml:name>
+    <dsml:object-identifier>1.3.6.1.4.1.4602.3.2.31.3</dsml:object-identifier>
+    <dsml:attribute ref="#beaSAMLProfile" required="true"/>
+    <dsml:attribute ref="#beaSAMLTargetURL" required="false"/>
+    <dsml:attribute ref="#beaSAMLAssertionConsumerURL" required="false"/>
+    <dsml:attribute ref="#beaSAMLAssertionConsumerParams" required="false"/>
+    <dsml:attribute ref="#beaSAMLAuthUsername" required="false"/>
+    <dsml:attribute ref="#beaSAMLAuthPassword" required="false"/>
+    <dsml:attribute ref="#beaSAMLAuthSSLClientCertAlias" required="false"/>
+    <dsml:attribute ref="#beaSAMLPostForm" required="false"/>
+    <dsml:attribute ref="#beaSAMLTimeToLive" required="false"/>
+    <dsml:attribute ref="#beaSAMLTimeToLiveOffset" required="false"/>
+    <dsml:attribute ref="#beaSAMLDoNotCacheCondition" required="false"/>
+    <dsml:attribute ref="#beaSAMLAudienceURI" required="false"/>
+    <dsml:attribute ref="#beaSAMLSignedAssertions" required="false"/>
+    <dsml:attribute ref="#beaSAMLKeyinfoIncluded" required="false"/>
+    <dsml:attribute ref="#beaSAMLNameMapperClass" required="false"/>
+    <dsml:attribute ref="#beaSAMLGroupsAttributeEnabled" required="false"/>
+  </dsml:class>
+
+  <dsml:attribute-type id="beaSAMLPartnerEnabled">
+	<dsml:name>beaSAMLPartnerEnabled</dsml:name>
+	<dsml:description>Boolean value indicating whether this SAML Partner entry is enabled or disabled.</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.31.4</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+    <dsml:single-value>true</dsml:single-value>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="beaSAMLPartnerDescription">
+	<dsml:name>beaSAMLPartnerDescription</dsml:name>
+	<dsml:description>Description for a SAML Partner entry.</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.31.5</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+    <dsml:single-value>true</dsml:single-value>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="beaSAMLTargetURL">
+	<dsml:name>beaSAMLTargetURL</dsml:name>
+	<dsml:description>The partner's configured Target URL.</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.31.6</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+    <dsml:single-value>true</dsml:single-value>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="beaSAMLProfile">
+	<dsml:name>beaSAMLProfile</dsml:name>
+	<dsml:description>The SAML Profile used for this partner.</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.31.7</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+    <dsml:single-value>true</dsml:single-value>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="beaSAMLIssuerURI">
+	<dsml:name>beaSAMLIssuerURI</dsml:name>
+	<dsml:description>The partner's SAML Issuer URI.</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.31.8</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+    <dsml:single-value>true</dsml:single-value>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="beaSAMLSourceId">
+	<dsml:name>beaSAMLSourceId</dsml:name>
+	<dsml:description>The partner's SAML Source ID.</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.31.9</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+    <dsml:single-value>true</dsml:single-value>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="beaSAMLIntersiteTransferURL">
+	<dsml:name>beaSAMLIntersiteTransferURL</dsml:name>
+	<dsml:description>The partner's SAML Intersite Transfer URL.</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.31.10</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+    <dsml:single-value>true</dsml:single-value>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="beaSAMLAssertionConsumerURL">
+	<dsml:name>beaSAMLAssertionConsumerURL</dsml:name>
+	<dsml:description>The partner's SAML Assertion Consumer URL.</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.31.11</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+    <dsml:single-value>true</dsml:single-value>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="beaSAMLAssertionRetrievalURL">
+	<dsml:name>beaSAMLAssertionRetrievalURL</dsml:name>
+	<dsml:description>The partner's SAML Assertion Retrieval URL.</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.31.12</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+    <dsml:single-value>true</dsml:single-value>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="beaSAMLRedirectURIs">
+	<dsml:name>beaSAMLRedirectURIs</dsml:name>
+	<dsml:description>Unauthenticated users accessing these URIs are redirected to the partner's ITS URL.</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.31.13</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+    <dsml:single-value>false</dsml:single-value>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="beaSAMLPostForm">
+	<dsml:name>beaSAMLPostForm</dsml:name>
+	<dsml:description>The POST form to use with Browser/POST Profile.</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.31.14</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+    <dsml:single-value>true</dsml:single-value>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="beaSAMLAudienceURI">
+	<dsml:name>beaSAMLAudienceURI</dsml:name>
+	<dsml:description>The SAML Audience URI for this partner's assertions.</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.31.15</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+    <dsml:single-value>false</dsml:single-value>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="beaSAMLAuthUsername">
+	<dsml:name>beaSAMLAuthUsername</dsml:name>
+	<dsml:description>Username for authentication to SAML responder.</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.31.16</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+    <dsml:single-value>true</dsml:single-value>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="beaSAMLAuthPassword">
+	<dsml:name>beaSAMLAuthPassword</dsml:name>
+	<dsml:description>Password for authentication to SAML responder.</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.31.17</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+    <dsml:single-value>true</dsml:single-value>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="beaSAMLAuthSSLClientCertAlias">
+	<dsml:name>beaSAMLAuthSSLClientCertAlias</dsml:name>
+	<dsml:description>The partner's SSL client certificate.</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.31.18</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+    <dsml:single-value>true</dsml:single-value>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="beaSAMLTimeToLive">
+	<dsml:name>beaSAMLTimeToLive</dsml:name>
+	<dsml:description>
+		Time-to-live for this partner's assertions, in seconds.  Added to the
+		assertion's NotBefore time to arrive at the NotOnOrAfter time.
+	</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.31.19</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.27</dsml:syntax>
+    <dsml:single-value>true</dsml:single-value>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="beaSAMLTimeToLiveOffset">
+	<dsml:name>beaSAMLTimeToLiveOffset</dsml:name>
+	<dsml:description>
+		Positive or negative number of seconds used to compensate for clock skew
+		between asserting party and relying party.  The delta value is added to
+		the current time to arrive at the NotBefore time for an assertion.  Does not
+		affect time-to-live, as the delta is applied before calculating NotOnOrAfter.
+	</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.31.20</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.27</dsml:syntax>
+    <dsml:single-value>true</dsml:single-value>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="beaSAMLDoNotCacheCondition">
+	<dsml:name>beaSAMLDoNotCacheCondition</dsml:name>
+	<dsml:description>Boolean value indicating whether a DoNotCache condition should be added to assertion.</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.31.21</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+    <dsml:single-value>true</dsml:single-value>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="beaSAMLSignedAssertions">
+	<dsml:name>beaSAMLAssertionSigned</dsml:name>
+	<dsml:description>Boolean value indicating whether this partner's assertions are signed.</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.31.22</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+    <dsml:single-value>true</dsml:single-value>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="beaSAMLKeyinfoIncluded">
+	<dsml:name>beaSAMLSigKeyinfoIncluded</dsml:name>
+	<dsml:description>Boolean value indicating whether signed assertions should include a keyinfo element.</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.31.23</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+    <dsml:single-value>true</dsml:single-value>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="beaSAMLAssertionSigningCertAlias">
+	<dsml:name>beaSAMLAssertionSigningCertAlias</dsml:name>
+	<dsml:description>The partner's assertion signing certificate.</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.31.24</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+    <dsml:single-value>true</dsml:single-value>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="beaSAMLProtocolSigningCertAlias">
+	<dsml:name>beaSAMLProtocolSigningCertAlias</dsml:name>
+	<dsml:description>The partner's protocol element signing certificate.</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.31.25</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+    <dsml:single-value>true</dsml:single-value>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="beaSAMLNameMapperClass">
+	<dsml:name>beaSAMLNameMapperClass</dsml:name>
+	<dsml:description>The Name Mapper class to use for this partner.</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.31.26</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+    <dsml:single-value>true</dsml:single-value>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="beaSAMLGroupsAttributeEnabled">
+	<dsml:name>beaSAMLGroupsAttributeEnabled</dsml:name>
+	<dsml:description>Boolean value indicating whether processing of user groups as AttributeStatements is enabled or disabled.</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.31.27</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+    <dsml:single-value>true</dsml:single-value>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="beaSAMLVirtualUserEnabled">
+	<dsml:name>beaSAMLVirtualUserEnabled</dsml:name>
+	<dsml:description>Boolean value indicating whether authentication of virtual users is enabled or disabled.</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.31.28</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+    <dsml:single-value>true</dsml:single-value>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="beaSAMLIntersiteTransferParams">
+	<dsml:name>beaSAMLIntersiteTransferParams</dsml:name>
+	<dsml:description>Parameters that should be sent to the partner's ITS on redirect.</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.31.29</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+    <dsml:single-value>false</dsml:single-value>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="beaSAMLAssertionConsumerParams">
+	<dsml:name>beaSAMLAssertionConsumerParams</dsml:name>
+	<dsml:description>Parameters that should be sent to the partner's ACS on redirect/POST.</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.31.30</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+    <dsml:single-value>false</dsml:single-value>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="beaSAMLPersistentARSConnEnabled">
+	<dsml:name>beaSAMLPersistentARSConnEnabled</dsml:name>
+	<dsml:description>Boolean value indicating whether persistent ARS connections are enabled for this partner.</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.31.31</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+    <dsml:single-value>true</dsml:single-value>
+  </dsml:attribute-type>
+
+<!--                                                              -->
+<!-- SAML 2.0 Schema Elements                                     -->
+<!-- Root OID: 1.3.6.1.4.1.4602.3.2.32                            -->
+<!--                                                              -->
+<!-- The above OID is reserved for SAML 2.0 schema elements and   -->
+<!-- should not be used for other purposes.  OIDs for all SAML    -->
+<!-- 2.0 elements are allocated under this SAML 2.0 root OID.     -->
+<!--                                                              -->
+
+  <dsml:class id="beaSAML2Partner" type="abstract" superior="#top">
+    <dsml:name>beaSAML2Partner</dsml:name>
+    <dsml:description>
+    	Abstract class representing a SAML 2.0 partner.
+    	Root OID for SAML 2.0-related objects/attributes is 1.3.6.1.4.1.4602.3.2.32.
+    </dsml:description>
+    <dsml:object-identifier>1.3.6.1.4.1.4602.3.2.32.1</dsml:object-identifier>
+    <dsml:attribute ref="#beaSAML2PartnerName" required="true"/>
+    <dsml:attribute ref="#beaSAML2PartnerAudienceURIs" required="false"/>
+    <dsml:attribute ref="#beaSAML2PartnerDescription" required="false"/>
+    <dsml:attribute ref="#beaSAML2PartnerType" required="false"/>
+    <dsml:attribute ref="#beaSAML2PartnerEnabled" required="false"/>
+    <dsml:attribute ref="#beaSAML2PartnerEntityId" required="false"/>
+    <dsml:attribute ref="#beaSAML2PartnerContactPersonCompany" required="false"/>
+    <dsml:attribute ref="#beaSAML2PartnerContactPersonEmailAddress" required="false"/>
+    <dsml:attribute ref="#beaSAML2PartnerContactPersonGivenName" required="false"/>
+    <dsml:attribute ref="#beaSAML2PartnerContactPersonSurName" required="false"/>
+    <dsml:attribute ref="#beaSAML2PartnerContactPersonTelephoneNumber" required="false"/>
+    <dsml:attribute ref="#beaSAML2PartnerContactPersonType" required="false"/>
+    <dsml:attribute ref="#beaSAML2PartnerIssuerURI" required="false"/>
+    <dsml:attribute ref="#beaSAML2PartnerErrorURL" required="false"/>
+    <dsml:attribute ref="#beaSAML2PartnerOrganizationName" required="false"/>
+    <dsml:attribute ref="#beaSAML2PartnerOrganizationURL" required="false"/>
+    <dsml:attribute ref="#beaSAML2PartnerSigningCert" required="false"/>
+    <dsml:attribute ref="#beaSAML2PartnerConfirmationMethod" required="false"/>
+    <dsml:attribute ref="#beaSAML2PartnerServices" required="false"/>
+    <dsml:attribute ref="#beaSAML2PartnerArtifactBindingUsePOST" required="false"/>
+    <dsml:attribute ref="#beaSAML2PartnerArtifactBindingPOSTForm" required="false"/>
+    <dsml:attribute ref="#beaSAML2PartnerWantArtifactRequestSigned" required="false"/>
+    <dsml:attribute ref="#beaSAML2PartnerPOSTBindingPOSTForm" required="false"/>
+    <dsml:attribute ref="#beaSAML2PartnerClientPasswordEncrypt" required="false"/>
+    <dsml:attribute ref="#beaSAML2PartnerClientUserName" required="false"/>
+    <dsml:attribute ref="#beaSAML2PartnerTransportLayerClientCert" required="false"/>
+    <dsml:attribute ref="#beaSAML2PartnerClientPasswordSet" required="false"/>
+  </dsml:class>
+
+  <dsml:class id="beaSAML2SPPartner" type="structural" superior="#beaSAML2Partner">
+    <dsml:name>beaSAML2SPPartner</dsml:name>
+    <dsml:description>
+    	Class representing a SAML 2.0 service provider partner.
+    </dsml:description>
+    <dsml:object-identifier>1.3.6.1.4.1.4602.3.2.32.2</dsml:object-identifier>
+    <dsml:attribute ref="#beaSAML2PartnerNameMapperClassName" required="false"/>
+    <dsml:attribute ref="#beaSAML2PartnerTimeToLive" required="false"/>
+    <dsml:attribute ref="#beaSAML2PartnerTimeToLiveOffset" required="false"/>
+    <dsml:attribute ref="#beaSAML2PartnerIncludeOneTimeUseCondition" required="false"/>
+    <dsml:attribute ref="#beaSAML2PartnerGenerateAttributes" required="false"/>
+    <dsml:attribute ref="#beaSAML2PartnerWantAssertionSigned" required="false"/>
+    <dsml:attribute ref="#beaSAML2PartnerKeyInfoIncluded" required="false"/>
+    <dsml:attribute ref="#beaSAML2PartnerWantAuthnRequestsSigned" required="false"/>
+  </dsml:class>
+
+  <dsml:class id="beaSAML2IdPPartner" type="structural" superior="#beaSAML2Partner">
+    <dsml:name>beaSAML2IdPPartner</dsml:name>
+    <dsml:description>
+    	Class representing a SAML 2.0 identity provider partner.
+    </dsml:description>
+    <dsml:object-identifier>1.3.6.1.4.1.4602.3.2.32.3</dsml:object-identifier>
+    <dsml:attribute ref="#beaSAML2PartnerNameMapperClassName" required="false"/>
+    <dsml:attribute ref="#beaSAML2PartnerVirtualUserEnabled" required="false"/>
+    <dsml:attribute ref="#beaSAML2PartnerWantAuthnRequestsSigned" required="false"/>
+    <dsml:attribute ref="#beaSAML2PartnerWantAssertionSigned" required="false"/>
+    <dsml:attribute ref="#beaSAML2PartnerProcessAttributes" required="false"/>
+    <dsml:attribute ref="#beaSAML2PartnerRedirectURIs" required="false"/>
+  </dsml:class>
+
+  <dsml:class id="beaSAML2Endpoint" type="structural" superior="#top">
+    <dsml:name>beaSAML2Endpoint</dsml:name>
+    <dsml:description>
+    	Class representing a SAML 2.0 service endpoint.
+    </dsml:description>
+    <dsml:object-identifier>1.3.6.1.4.1.4602.3.2.32.4</dsml:object-identifier>
+    <dsml:attribute ref="#beaSAML2EndpointBindingLocation" required="true"/>
+    <dsml:attribute ref="#beaSAML2EndpointBindingType" required="true"/>
+    <dsml:attribute ref="#beaSAML2EndpointServiceType" required="true"/>
+    <dsml:attribute ref="#beaSAML2PartnerName" required="true"/>
+    <dsml:attribute ref="#beaSAML2EndpointIndex" required="false"/>
+    <dsml:attribute ref="#beaSAML2EndpointDefault" required="false"/>
+    <dsml:attribute ref="#beaSAML2EndpointDefaultSet" required="false"/>
+</dsml:class>
+
+<dsml:class id="beaSAML2Cache" type="structural" superior="#top">
+    <dsml:name>beaSAML2Cache</dsml:name>
+    <dsml:description>
+    	Class representing SAML 2.0 backend storage based cache model.
+    </dsml:description>
+    <dsml:object-identifier>1.3.6.1.4.1.4602.3.2.32.5</dsml:object-identifier>
+    <dsml:attribute ref="#beaSAML2CacheName" required="true"/>
+    <dsml:attribute ref="#beaSAML2CacheKey" required="true"/>
+    <dsml:attribute ref="#beaSAML2CacheValue" required="false"/>
+    <dsml:attribute ref="#beaSAML2CacheExpirationTime" required="false"/>
+    <dsml:attribute ref="#beaSAML2CacheUpdateTime" required="false"/>
+</dsml:class>
+
+  <dsml:attribute-type id="beaSAML2PartnerName">
+	<dsml:name>beaSAML2PartnerName</dsml:name>
+	<dsml:description>Partner name</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.32.1</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+    <dsml:single-value>true</dsml:single-value>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="beaSAML2PartnerAudienceURIs">
+	<dsml:name>beaSAML2PartnerAudienceURIs</dsml:name>
+	<dsml:description>Partner audience URI</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.32.2</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+    <dsml:single-value>false</dsml:single-value>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="beaSAML2PartnerDescription">
+	<dsml:name>beaSAML2PartnerDescription</dsml:name>
+	<dsml:description>Partner description</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.32.3</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+    <dsml:single-value>true</dsml:single-value>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="beaSAML2PartnerType">
+	<dsml:name>beaSAML2PartnerType</dsml:name>
+	<dsml:description>Partner type</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.32.4</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+    <dsml:single-value>true</dsml:single-value>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="beaSAML2PartnerEnabled">
+	<dsml:name>beaSAML2PartnerEnabled</dsml:name>
+	<dsml:description>Boolean value indicating if partner is enabled</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.32.5</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.7</dsml:syntax>
+    <dsml:single-value>true</dsml:single-value>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="beaSAML2PartnerEntityId">
+	<dsml:name>beaSAML2PartnerEntityId</dsml:name>
+	<dsml:description>Partner entity Id</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.32.6</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+    <dsml:single-value>true</dsml:single-value>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="beaSAML2PartnerContactPersonCompany">
+	<dsml:name>beaSAML2PartnerContactPersonCompany</dsml:name>
+	<dsml:description>Partner contact person company</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.32.7</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+    <dsml:single-value>true</dsml:single-value>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="beaSAML2PartnerContactPersonEmailAddress">
+	<dsml:name>beaSAML2PartnerContactPersonEmailAddress</dsml:name>
+	<dsml:description>Partner contact person e-mail address</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.32.8</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+    <dsml:single-value>true</dsml:single-value>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="beaSAML2PartnerContactPersonGivenName">
+	<dsml:name>beaSAML2PartnerContactPersonGivenName</dsml:name>
+	<dsml:description>Partner contact person given name</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.32.9</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+    <dsml:single-value>true</dsml:single-value>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="beaSAML2PartnerContactPersonSurName">
+	<dsml:name>beaSAML2PartnerContactPersonSurName</dsml:name>
+	<dsml:description>Partner contact person surname</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.32.10</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+    <dsml:single-value>true</dsml:single-value>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="beaSAML2PartnerContactPersonTelephoneNumber">
+	<dsml:name>beaSAML2PartnerContactPersonTelephoneNumber</dsml:name>
+	<dsml:description>Partner contact person telephone number</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.32.11</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+    <dsml:single-value>true</dsml:single-value>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="beaSAML2PartnerContactPersonType">
+	<dsml:name>beaSAML2PartnerContactPersonType</dsml:name>
+	<dsml:description>Partner contact person type</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.32.12</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+    <dsml:single-value>true</dsml:single-value>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="beaSAML2PartnerIssuerURI">
+	<dsml:name>beaSAML2PartnerIssuerURI</dsml:name>
+	<dsml:description>Partner issuer URI</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.32.13</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+    <dsml:single-value>true</dsml:single-value>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="beaSAML2PartnerErrorURL">
+	<dsml:name>beaSAML2PartnerErrorURL</dsml:name>
+	<dsml:description>Partner error URL</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.32.14</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+    <dsml:single-value>true</dsml:single-value>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="beaSAML2PartnerOrganizationName">
+	<dsml:name>beaSAML2PartnerOrganizationName</dsml:name>
+	<dsml:description>Partner organization name</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.32.15</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+    <dsml:single-value>true</dsml:single-value>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="beaSAML2PartnerOrganizationURL">
+	<dsml:name>beaSAML2PartnerOrganizationURL</dsml:name>
+	<dsml:description>Partner organization URL</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.32.16</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+    <dsml:single-value>true</dsml:single-value>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="beaSAML2PartnerSigningCert">
+	<dsml:name>beaSAML2PartnerSigningCert</dsml:name>
+	<dsml:description>Partner signing certificate</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.32.17</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.5</dsml:syntax>
+    <dsml:single-value>true</dsml:single-value>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="beaSAML2PartnerConfirmationMethod">
+	<dsml:name>beaSAML2PartnerConfirmationMethod</dsml:name>
+	<dsml:description>Partner confirmation method</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.32.18</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+    <dsml:single-value>true</dsml:single-value>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="beaSAML2PartnerServices">
+	<dsml:name>beaSAML2PartnerServices</dsml:name>
+	<dsml:description>Partner service endpoints</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.32.19</dsml:object-identifier>
+    <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.12</dsml:syntax>
+    <dsml:equality>distinguishedNameMatch</dsml:equality>
+    <dsml:ordering>caseIgnoreOrderingMatch</dsml:ordering>
+    <dsml:single-value>true</dsml:single-value>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="beaSAML2PartnerArtifactBindingUsePOST">
+	<dsml:name>beaSAML2PartnerArtifactBindingUsePOST</dsml:name>
+	<dsml:description>Partner artifact binding use POST flag</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.32.20</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.7</dsml:syntax>
+    <dsml:single-value>true</dsml:single-value>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="beaSAML2PartnerArtifactBindingPOSTForm">
+	<dsml:name>beaSAML2PartnerArtifactBindingPOSTForm</dsml:name>
+	<dsml:description>Partner artifact binding POST form</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.32.21</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+    <dsml:single-value>true</dsml:single-value>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="beaSAML2PartnerWantArtifactRequestSigned">
+	<dsml:name>beaSAML2PartnerWantArtifactRequestSigned</dsml:name>
+	<dsml:description>Partner want artifact requests signed flag</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.32.22</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.7</dsml:syntax>
+    <dsml:single-value>true</dsml:single-value>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="beaSAML2PartnerPOSTBindingPOSTForm">
+	<dsml:name>beaSAML2PartnerPOSTBindingPOSTForm</dsml:name>
+	<dsml:description>Partner POST binding POST form</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.32.23</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+    <dsml:single-value>true</dsml:single-value>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="beaSAML2PartnerClientPasswordEncrypt">
+	<dsml:name>beaSAML2PartnerClientPasswordEncrypt</dsml:name>
+	<dsml:description>Partner encrypted client password</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.32.24</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+    <dsml:single-value>true</dsml:single-value>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="beaSAML2PartnerClientUserName">
+	<dsml:name>beaSAML2PartnerClientUserName</dsml:name>
+	<dsml:description>Partner client user name</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.32.25</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+    <dsml:single-value>true</dsml:single-value>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="beaSAML2PartnerTransportLayerClientCert">
+	<dsml:name>beaSAML2PartnerTransportLayerClientCert</dsml:name>
+	<dsml:description>Partner TLS client certificate</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.32.26</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.5</dsml:syntax>
+    <dsml:single-value>true</dsml:single-value>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="beaSAML2PartnerClientPasswordSet">
+	<dsml:name>beaSAML2PartnerClientPasswordSet</dsml:name>
+	<dsml:description>Partner client password set flag</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.32.27</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.7</dsml:syntax>
+    <dsml:single-value>true</dsml:single-value>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="beaSAML2PartnerNameMapperClassName">
+	<dsml:name>beaSAML2PartnerNameMapperClassName</dsml:name>
+	<dsml:description>Partner name-mapper class name</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.32.28</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+    <dsml:single-value>true</dsml:single-value>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="beaSAML2PartnerTimeToLive">
+	<dsml:name>beaSAML2PartnerTimeToLive</dsml:name>
+	<dsml:description>Partner assertion time-to-live</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.32.29</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.27</dsml:syntax>
+    <dsml:single-value>true</dsml:single-value>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="beaSAML2PartnerTimeToLiveOffset">
+	<dsml:name>beaSAML2PartnerTimeToLiveOffset</dsml:name>
+	<dsml:description>Partner assertion time-to-live offset</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.32.30</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.27</dsml:syntax>
+    <dsml:single-value>true</dsml:single-value>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="beaSAML2PartnerIncludeOneTimeUseCondition">
+	<dsml:name>beaSAML2PartnerIncludeOneTimeUseCondition</dsml:name>
+	<dsml:description>Partner include one-time use condition flag</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.32.31</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.7</dsml:syntax>
+    <dsml:single-value>true</dsml:single-value>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="beaSAML2PartnerGenerateAttributes">
+	<dsml:name>beaSAML2PartnerGenerateAttributes</dsml:name>
+	<dsml:description>Partner generate attributes flag</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.32.32</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.7</dsml:syntax>
+    <dsml:single-value>true</dsml:single-value>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="beaSAML2PartnerWantAssertionSigned">
+	<dsml:name>beaSAML2PartnerWantAssertionSigned</dsml:name>
+	<dsml:description>Partner want assertion signed flag</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.32.33</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.7</dsml:syntax>
+    <dsml:single-value>true</dsml:single-value>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="beaSAML2PartnerKeyInfoIncluded">
+	<dsml:name>beaSAML2PartnerKeyInfoIncluded</dsml:name>
+	<dsml:description>Partner key info included</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.32.34</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.7</dsml:syntax>
+    <dsml:single-value>true</dsml:single-value>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="beaSAML2PartnerWantAuthnRequestsSigned">
+	<dsml:name>beaSAML2PartnerWantAuthnRequestsSigned</dsml:name>
+	<dsml:description>Partner want authentication request signed flag</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.32.35</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.7</dsml:syntax>
+    <dsml:single-value>true</dsml:single-value>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="beaSAML2PartnerVirtualUserEnabled">
+	<dsml:name>beaSAML2PartnerVirtualUserEnabled</dsml:name>
+	<dsml:description>Partner virtual user enabled flag</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.32.36</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.7</dsml:syntax>
+    <dsml:single-value>true</dsml:single-value>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="beaSAML2PartnerProcessAttributes">
+	<dsml:name>beaSAML2PartnerProcessAttributes</dsml:name>
+	<dsml:description>Partner process attributes flag</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.32.37</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.7</dsml:syntax>
+    <dsml:single-value>true</dsml:single-value>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="beaSAML2PartnerRedirectURIs">
+	<dsml:name>beaSAML2PartnerRedirectURIs</dsml:name>
+	<dsml:description>Partner redirect URI</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.32.38</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+    <dsml:single-value>false</dsml:single-value>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="beaSAML2EndpointBindingLocation">
+	<dsml:name>beaSAML2EndpointBindingLocation</dsml:name>
+	<dsml:description>Endpoint binding location</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.32.39</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+    <dsml:single-value>true</dsml:single-value>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="beaSAML2EndpointBindingType">
+	<dsml:name>beaSAML2EndpointBindingType</dsml:name>
+	<dsml:description>Endpoint binding type</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.32.40</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+    <dsml:single-value>true</dsml:single-value>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="beaSAML2EndpointServiceType">
+	<dsml:name>beaSAML2EndpointServiceType</dsml:name>
+	<dsml:description>Endpoint service type</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.32.41</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+    <dsml:single-value>true</dsml:single-value>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="beaSAML2EndpointIndex">
+	<dsml:name>beaSAML2EndpointIndex</dsml:name>
+	<dsml:description>Endpoint index</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.32.42</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.27</dsml:syntax>
+    <dsml:single-value>true</dsml:single-value>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="beaSAML2EndpointDefault">
+	<dsml:name>beaSAML2EndpointDefault</dsml:name>
+	<dsml:description>Endpoint is default flag</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.32.43</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.7</dsml:syntax>
+    <dsml:single-value>true</dsml:single-value>
+  </dsml:attribute-type>
+
+  <dsml:attribute-type id="beaSAML2EndpointDefaultSet">
+	<dsml:name>beaSAML2EndpointDefaultSet</dsml:name>
+	<dsml:description>Endpoint is default flag</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.32.44</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.7</dsml:syntax>
+    <dsml:single-value>true</dsml:single-value>
+</dsml:attribute-type>
+
+<dsml:attribute-type id="beaSAML2CacheName">
+	<dsml:name>beaSAML2CacheName</dsml:name>
+    <dsml:description>name of a cache instance</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.32.45</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.26</dsml:syntax>
+    <dsml:single-value>true</dsml:single-value>
+</dsml:attribute-type>
+
+<dsml:attribute-type id="beaSAML2CacheKey">
+	<dsml:name>beaSAML2CacheKey</dsml:name>
+    <dsml:description>key associated with cached item</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.32.46</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.26</dsml:syntax>
+    <dsml:single-value>true</dsml:single-value>
+</dsml:attribute-type>
+
+<dsml:attribute-type id="beaSAML2CacheValue">
+	<dsml:name>beaSAML2CacheValue</dsml:name>
+    <dsml:description>the binary format of cached object</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.32.47</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.5</dsml:syntax>
+    <dsml:single-value>true</dsml:single-value>
+</dsml:attribute-type>
+
+<dsml:attribute-type id="beaSAML2CacheExpirationTime">
+	<dsml:name>beaSAML2CacheExpirationTime</dsml:name>
+    <dsml:description>expiration time of cached object, in milli seconds</dsml:description>
+	<dsml:object-identifier>1.3.6.1.4.1.4602.3.2.32.48</dsml:object-identifier>
+	<dsml:syntax>1.3.6.1.4.1.1466.115.121.1.27</dsml:syntax>
+    <dsml:single-value>true</dsml:single-value>
+</dsml:attribute-type>
+
+<!--                                                              -->
+<!-- END SAML Schema Elements                                     -->
+<!--                                                              -->
+
+  </dsml:directory-schema>
+</dsml:dsml>

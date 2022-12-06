@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p:window xmlns:p="http://www.bea.com/servers/portal/framework/laf/1.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.bea.com/servers/portal/framework/laf/1.0.0 laf-window-1_0_0.xsd">
+  <!-- 
+  The JNDI tree portal is fundamental to the console JNDI viewer.  Therefore 
+  this is the ideal place to include application-wide CSS and JavaScript 
+  resources.
+
+  Any CSS or Javascript resources that are used by the console in general or by more than
+  one specific portlet should be added here.
+  -->
+  <p:render-dependencies>
+    <p:html>
+      <p:links>
+        <p:search-path>
+          <p:path-element>../css</p:path-element>
+        </p:search-path>
+        <p:link rel="stylesheet" type="text/css" href="navtree.css"/>
+      </p:links>
+	<p:scripts>
+        <p:search-path>
+          <p:path-element>../navtree</p:path-element>
+        </p:search-path>
+        <p:script src="tree.js" type="text/javascript"/>
+      </p:scripts>
+    </p:html>
+  </p:render-dependencies>
+</p:window>

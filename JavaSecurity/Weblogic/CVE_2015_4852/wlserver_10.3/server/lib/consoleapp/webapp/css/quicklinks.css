@@ -1,0 +1,29 @@
+
+#QuickLinks .wlsc-window-content {
+    padding-top: 6px;
+    padding-bottom: 8px;
+    width: auto;
+    overflow: hidden;
+}
+
+#QuickLinks p {
+    padding: 6px;
+    text-align:  center;
+    margin: 0px;
+}
+
+#QuickLinks ul {
+    padding: 0px;
+    margin: 0px;
+}
+
+#QuickLinks li {
+    padding: 2px 0px;
+    margin-left: 18px;
+    list-style-type: disc;
+}
+
+#QuickLinks li.quicklinksrowover {
+    padding: 2px 0px;
+    margin-left: 18px;
+}

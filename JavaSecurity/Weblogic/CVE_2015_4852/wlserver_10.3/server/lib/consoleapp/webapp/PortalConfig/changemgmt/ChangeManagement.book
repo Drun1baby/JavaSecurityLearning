@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portal:root xmlns:html="http://www.w3.org/1999/xhtml-netuix-modified/1.0.0"
+             xmlns:netuix="http://www.bea.com/servers/netuix/xsd/controls/netuix/1.0.0"
+             xmlns:portal="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0 portal-support-1_0_0.xsd">
+<!--
+    Definition of the Change Management pages in
+    the WebLogic Server administration console
+
+    Copyright (c) 2004,2011, Oracle and/or its affiliates. All rights reserved.
+-->
+  <netuix:book hidden="true" definitionLabel="ChangeBook" localizationBundle="global"
+               markupName="book"
+               presentationClass="invisible"
+               title="changemgmt.changes.restarts.title">
+    <netuix:content>
+      <netuix:book hidden="true" definitionLabel="CoreChangeBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="changemgmt.changes.restarts.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="CoreChangePages" title="not.used"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <!-- Console Global Preference Page -->
+                  <netuix:book definitionLabel="ChangeManagementPage" hidden="true"
+                               title="change.management.title"
+                               markupName="book">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+                      <!-- Definition for the ChangeList tab -->
+                      <netuix:page markupName="page" definitionLabel="CheckListPageGeneral"
+                                   presentationClass="page-content"
+                                   title="checklist.general.title">
+                        <netuix:meta name="helpid" content="Change.change.list.title;changemanagement"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                              <netuix:portlet definitionLabel="ChangeListPortlet">
+                                <netuix:strutsContent module="" action="ChangeListAction" refreshAction="ChangeListAction"/>
+                              </netuix:portlet>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the Restart CheckList tab -->
+                      <netuix:page markupName="page" definitionLabel="RestartChecklistPageGeneral"
+                                   presentationClass="page-table"
+                                   title="restartchecklist.general.title">
+                        <netuix:meta name="helpid" content="Change.restart.list.title;changemanagement"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                              <netuix:portlet definitionLabel="RestartChecklistPortlet">
+                                <netuix:strutsContent module="" action="RestartChecklistAction"
+                                                      refreshAction="RestartChecklistAction"/>
+                              </netuix:portlet>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the Lock Page tab -->
+                      <netuix:page hidden="true" markupName="page" definitionLabel="MakeChangesPage"
+                                   presentationClass="page-content"
+                                   title="checklist.general.title">
+                        <netuix:meta name="helpid" content="nyi;unassigned"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                              <netuix:portlet definitionLabel="MakeChangesPortlet">
+                                <netuix:titlebar/>
+                                <netuix:strutsContent module="" action="MakeChangesAction" refreshAction="MakeChangesAction"/>
+                              </netuix:portlet>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                    </netuix:content>
+                  </netuix:book>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Restart Server & Resources assistant -->
+      <netuix:book hidden="true" definitionLabel="SingleChangeResourceRestartBook"
+                   markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.server.lifecycle.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="SingleChangeResourceRestart"
+                       title="not.used"
+                       hidden="true">
+            <netuix:meta name="helpid" content="Core.core.server.lifecycle.page.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="SingleChangeResourceRestartPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/changemgmt/lifecycle/Lifecycle.jpf"
+                                            action="restart"
+                                            refreshAction="restart"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition of the activate changes assistant -->
+      <netuix:book hidden="true" definitionLabel="ActivateChangesBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="ActivateChangesPage" title="not.used"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="ActivateChangesPortlet">
+                    <netuix:strutsContent module="" action="ActivateChangesAction" refreshAction="ActivateChangesAction"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition of the stop edit assistant -->
+      <netuix:book hidden="true" definitionLabel="StopEditBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="StopEditPage" title="not.used" hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="StopEditPortlet">
+                    <netuix:strutsContent module="" action="StopEditAction" refreshAction="StopEditAction"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+    </netuix:content>
+  </netuix:book>
+</portal:root>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portal:root xmlns:netuix="http://www.bea.com/servers/netuix/xsd/controls/netuix/1.0.0"
+             xmlns:html="http://www.w3.org/1999/xhtml-netuix-modified/1.0.0"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:portal="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0"
+             xsi:schemaLocation="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0 portal-support-1_0_0.xsd">
+<!-- 
+  Definition file for the search query/results page in the mbeansearch
+  console extension for the WebLogic Server Administration Console.
+
+  Copyright (c) 2007,2011, Oracle and/or its affiliates. All rights reserved.
+-->
+  <netuix:book definitionLabel="MBeanSearchBooks" title="book.title" markupName="book"
+               presentationClass="invisible">
+    <netuix:content>
+      <netuix:book defaultPage="page" definitionLabel="MBeanSearchBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   presentationClass="wlsc-frame"
+                   threadsafe="true"
+                   title="mbeansearch.page.title">
+        <netuix:meta name="skeleton-resource-bundle" content="mbeansearch"/>
+        <netuix:titlebar/> 
+        <netuix:content>
+
+          <!-- Definition for MBeanSearchPage -->
+          <netuix:page markupName="page" definitionLabel="MBeanSearchPage" title="not.used"
+                       hidden="true"
+                       presentationClass="page-table">
+            <netuix:meta name="helpid" content="MBeanSearch.mbeansearch.title;mbeansearch"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="MBeanSearchPortlet">
+                    <netuix:strutsContent module="/mbeansearch" action="DisplayResultsAction"
+                                          refreshAction="DisplayResultsAction"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+
+        </netuix:content>
+      </netuix:book>
+    </netuix:content>
+  </netuix:book>
+</portal:root>

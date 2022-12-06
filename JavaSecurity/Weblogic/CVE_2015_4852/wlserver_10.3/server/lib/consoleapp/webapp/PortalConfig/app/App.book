@@ -1,0 +1,1707 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portal:root xmlns:netuix="http://www.bea.com/servers/netuix/xsd/controls/netuix/1.0.0"
+             xmlns:html="http://www.w3.org/1999/xhtml-netuix-modified/1.0.0"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:portal="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0"
+             xsi:schemaLocation="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0 portal-support-1_0_0.xsd">
+<!--
+    Definition file for the deployment pages in the j2ee subsystem
+    of the WebLogic Server administration console.
+
+    This contains the following major page structures:
+
+    AppApplicationBook - Pages for an ear
+    AppDeploymentsBook - Domain-wide deployment table
+    Application control and lifecycle assistants
+
+    Copyright (c) 2004,2011, Oracle and/or its affiliates. All rights reserved.
+-->
+  <!-- Definition for the Application configuration pages -->
+  <netuix:book definitionLabel="AppBook" title="book.title" markupName="book"
+               presentationClass="invisible">
+    <netuix:content>
+      <netuix:book definitionLabel="AppApplicationBook" title="book.title" markupName="book"
+                   backingFile="com.bea.console.utils.AppDeploymentBackingFile"
+                   threadsafe="true"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="AppPages" title="not.used" hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:book markupName="book" definitionLabel="AppTabsBook" title="AppTabsBook">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+                      <!-- Definition for the Overview tab -->
+                      <netuix:page markupName="page" definitionLabel="AppApplicationOverviewPage"
+                                   presentationClass="page-content"
+                                   title="tab.overview.label">
+                        <netuix:meta name="helpid" content="J2EE.app.applicationoverview.title;j2ee"/>
+                        <netuix:meta name="breadcrumb-context" content="handle"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="AppApplicationOverviewPortlet"
+                                                      contentUri="/PortalConfig/app/ApplicationOverview.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the Deployment Plan tab -->
+                      <netuix:book markupName="book" definitionLabel="AppApplicationDeploymentPlanPage"
+                                   title="tab.deploymentplan.label">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                        <netuix:content>
+                          <!-- Definition for the Tuning Parameters tab -->
+                          <netuix:page markupName="page" definitionLabel="AppApplicationTuningParameters"
+                                       presentationClass="page-content"
+                                       title="tab.tunables.label">
+                            <netuix:meta name="helpid" content="J2EE.app.applicationtunables.title;j2ee"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <!-- Header text shared by all Tuning Parameter pages -->
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="AppApplicationTunablesHeaderPortlet"
+                                                          contentUri="/PortalConfig/app/ApplicationTunablesHeader.portlet"/>
+                                  <netuix:book presentationClass="invisible" title="title" markupName="book"
+                                               definitionLabel="AppApplicationTuningParametersBook">
+                                    <netuix:content>
+                                      <netuix:page markupName="page" definitionLabel="AppApplicationTunablesContents"
+                                                   title="tab.deploymentplan.label">
+                                        <netuix:content>
+                                          <netuix:flowLayout orientation="horizontal" markupType="Layout" markupName="twoColumnLayout">
+                                            <!-- Navigation tree shared by all Tuning Parameter pages -->
+                                            <netuix:placeholder title="left" presentationId="tuning-nav-col" markupName="twoColumn_left"
+                                                                usingFlow="false">
+                                              <netuix:portletInstance markupType="Portlet" instanceLabel="AppApplicationTunablesTreePortlet"
+                                                                      contentUri="/PortalConfig/app/ApplicationTunablesTree.portlet"/>
+                                            </netuix:placeholder>
+                                            <!-- Content pane for Tuning Parameter pages -->
+                                            <netuix:placeholder title="right" presentationId="tuning-content-col" markupName="twoColumn_right"
+                                                                usingFlow="false">
+                                              <netuix:book definitionLabel="AppApplicationTunablesContentsBook" title="book.title"
+                                                           markupName="book">
+                                                <netuix:content>
+                                                  <!-- The default, single-tab configuration page -->
+                                                  <netuix:book markupName="book" definitionLabel="ApplicationTunablesContentsDefaultPages"
+                                                               title="tab.deploymentplan.label">
+                                                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                                                    <netuix:content>
+                                                      <netuix:page markupName="page" definitionLabel="ApplicationTunablesContentsDefaultPage"
+                                                                   presentationClass="page-content"
+                                                                   title="tab.configuration.label">
+                                                        <netuix:content>
+                                                          <netuix:layout type="no" markupName="NoLayout">
+                                                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                                                              <netuix:portletInstance markupType="Portlet" instanceLabel="ApplicationTunablesContentsDefaultPortlet"
+                                                                                      contentUri="/PortalConfig/app/ApplicationTunablesContentsDefault.portlet"/>
+                                                            </netuix:placeholder>
+                                                          </netuix:layout>
+                                                        </netuix:content>
+                                                      </netuix:page>
+                                                    </netuix:content>
+                                                  </netuix:book>
+                                                  <!-- The single tunable tab for an Ear -->
+                                                  <netuix:book markupName="book" definitionLabel="ApplicationTunablesApplicationPages"
+                                                               title="tab.deploymentplan.label">
+                                                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                                                    <netuix:content>
+                                                      <netuix:page markupName="page" definitionLabel="ApplicationTunablesApplicationPage"
+                                                                   presentationClass="page-content"
+                                                                   title="tab.application.label">
+                                                        <netuix:content>
+                                                          <netuix:layout type="no" markupName="NoLayout">
+                                                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                                                              <netuix:portlet definitionLabel="ApplicationTunablesApplicationPortlet">
+                                                                <netuix:strutsContent module="/j2ee" action="ApplicationTunablesApplication"
+                                                                                      refreshAction="ApplicationTunablesApplication"/>
+                                                              </netuix:portlet>
+                                                            </netuix:placeholder>
+                                                          </netuix:layout>
+                                                        </netuix:content>
+                                                      </netuix:page>
+                                                    </netuix:content>
+                                                  </netuix:book>
+                                                  <!-- The two tunable tabs for a WebApp module -->
+                                                  <netuix:book markupName="book" definitionLabel="ApplicationTunablesWebAppPages"
+                                                               title="tab.deploymentplan.label">
+                                                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                                                    <netuix:content>
+                                                      <netuix:page markupName="page" definitionLabel="WebAppTunablesGeneralPage"
+                                                                   presentationClass="page-content"
+                                                                   title="tab.general.label">
+                                                        <netuix:content>
+                                                          <netuix:layout type="no" markupName="NoLayout">
+                                                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                                                              <netuix:portletInstance markupType="Portlet" instanceLabel="WebAppTunablesGeneralPortlet"
+                                                                                      contentUri="/PortalConfig/webapp/WebAppTunablesGeneral.portlet"/>
+                                                            </netuix:placeholder>
+                                                          </netuix:layout>
+                                                        </netuix:content>
+                                                      </netuix:page>
+                                                      <netuix:page markupName="page" definitionLabel="WebAppTunablesLoggingPage"
+                                                                   presentationClass="page-content"
+                                                                   title="tab.logging.label">
+                                                        <netuix:content>
+                                                          <netuix:layout type="no" markupName="NoLayout">
+                                                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                                                              <netuix:portletInstance markupType="Portlet" instanceLabel="WebAppTunablesLoggingPortlet"
+                                                                                      contentUri="/PortalConfig/webapp/WebAppTunablesLogging.portlet"/>
+                                                            </netuix:placeholder>
+                                                          </netuix:layout>
+                                                        </netuix:content>
+                                                      </netuix:page>
+                                                    </netuix:content>
+                                                  </netuix:book>
+                                                  <!-- The single tunable tab for an EJB -->
+                                                  <netuix:book markupName="book" definitionLabel="AppEJBTunablesPages"
+                                                               title="tab.deploymentplan.label">
+                                                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                                                    <netuix:content>
+                                                      <netuix:page markupName="page" definitionLabel="AppEJBTunablesPage"
+                                                                   presentationClass="page-content"
+                                                                   title="tab.config.label">
+                                                        <netuix:content>
+                                                          <netuix:layout type="no" markupName="NoLayout">
+                                                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                                                              <netuix:portletInstance markupType="Portlet" instanceLabel="AppEJBTunablesPortlet"
+                                                                                      contentUri="/PortalConfig/ejb/EJBTunables.portlet"/>
+                                                            </netuix:placeholder>
+                                                          </netuix:layout>
+                                                        </netuix:content>
+                                                      </netuix:page>
+                                                    </netuix:content>
+                                                  </netuix:book>
+                                                  <!-- The single tunable tab for a web service -->
+                                                  <netuix:book markupName="book" definitionLabel="WebServiceTunablesPages"
+                                                               title="tab.deploymentplan.label">
+                                                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                                                    <netuix:content>
+                                                      <netuix:page markupName="page" definitionLabel="WebServiceTunablesGeneralPage"
+                                                                   presentationClass="page-content"
+                                                                   title="tab.general.label">
+                                                        <netuix:content>
+                                                          <netuix:layout type="no" markupName="NoLayout">
+                                                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                                                              <netuix:portletInstance markupType="Portlet" instanceLabel="WebServiceTunablesGeneralPortlet"
+                                                                                      contentUri="/PortalConfig/webservice/WebServiceTunablesGeneral.portlet"/>
+                                                            </netuix:placeholder>
+                                                          </netuix:layout>
+                                                        </netuix:content>
+                                                      </netuix:page>
+                                                    </netuix:content>
+                                                  </netuix:book>
+                                                  <!-- The annotation editing page -->
+                                                  <netuix:book markupName="book" definitionLabel="ApplicationTunablesEditAnnotationPages"
+                                                               title="tab.deploymentplan.label">
+                                                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                                                    <netuix:content>
+                                                      <netuix:page markupName="page" definitionLabel="ApplicationTunablesEditAnnotationPage"
+                                                                   presentationClass="page-content"
+                                                                   title="tab.configuration.label">
+                                                        <netuix:content>
+                                                          <netuix:layout type="no" markupName="NoLayout">
+                                                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                                                              <netuix:portletInstance markupType="Portlet" instanceLabel="ApplicationTunablesEditAnnotationPortlet"
+                                                                                      contentUri="/PortalConfig/app/EditAnnotation.portlet"/>
+                                                            </netuix:placeholder>
+                                                          </netuix:layout>
+                                                        </netuix:content>
+                                                      </netuix:page>
+                                                    </netuix:content>
+                                                  </netuix:book>
+                                                </netuix:content>
+                                              </netuix:book>
+                                            </netuix:placeholder>
+                                          </netuix:flowLayout>
+                                        </netuix:content>
+                                      </netuix:page>
+                                    </netuix:content>
+                                  </netuix:book>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the Resource Dependencies tab -->
+                          <netuix:page markupName="page" definitionLabel="AppApplicationBindablesPages"
+                                       presentationClass="page-content"
+                                       title="tab.bindables.label">
+                            <netuix:meta name="helpid" content="J2EE.app.applicationdescriptors.title;j2ee"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <!-- Header text shared by all Dependencies pages -->
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="AppApplicationBindablesPortlet"
+                                                          contentUri="/PortalConfig/app/ApplicationBindablesHeader.portlet"/>
+                                  <netuix:book presentationClass="invisible" title="title" markupName="book"
+                                               definitionLabel="AppApplicationBindablesContentsBooks">
+                                    <netuix:content>
+                                      <netuix:page markupName="page" definitionLabel="AppApplicationBindablesContents"
+                                                   title="tab.deploymentplan.label">
+                                        <netuix:content>
+                                          <netuix:flowLayout orientation="horizontal" markupType="Layout" markupName="twoColumnLayout">
+                                            <!-- Navigation tree shared by all Dependencies pages -->
+                                            <netuix:placeholder title="left" presentationId="tuning-nav-col" markupName="twoColumn_left"
+                                                                usingFlow="false">
+                                              <netuix:portletInstance markupType="Portlet" instanceLabel="AppApplicationBindablesTreePortlet"
+                                                                      contentUri="/PortalConfig/app/ApplicationBindablesTree.portlet"/>
+                                            </netuix:placeholder>
+                                            <!-- Content pane for Dependencies pages -->
+                                            <netuix:placeholder title="right" presentationId="tuning-content-col" markupName="twoColumn_right"
+                                                                usingFlow="false">
+                                              <netuix:book definitionLabel="AppApplicationBindablesContentsBook" title="book.title"
+                                                           markupName="book">
+                                                <netuix:content>
+                                                  <!-- The default, single-tab resource configuration page -->
+                                                  <netuix:book markupName="book" definitionLabel="AppApplicationBindablesContentsPages"
+                                                               title="tab.deploymentplan.label">
+                                                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                                                    <netuix:content>
+                                                      <netuix:page markupName="page" definitionLabel="AppApplicationBindablesContentsPage"
+                                                                   presentationClass="page-content"
+                                                                   title="tab.configuration.label">
+                                                        <netuix:content>
+                                                          <netuix:layout type="no" markupName="NoLayout">
+                                                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                                                              <netuix:portletInstance markupType="Portlet" instanceLabel="AppApplicationBindablesContentsPortlet"
+                                                                                      contentUri="/PortalConfig/app/ApplicationBindablesContents.portlet"/>
+                                                            </netuix:placeholder>
+                                                          </netuix:layout>
+                                                        </netuix:content>
+                                                      </netuix:page>
+                                                    </netuix:content>
+                                                  </netuix:book>
+                                                  <!-- The annotation editing page -->
+                                                  <netuix:book markupName="book" definitionLabel="ApplicationBindablesEditAnnotationPages"
+                                                               title="tab.deploymentplan.label">
+                                                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                                                    <netuix:content>
+                                                      <netuix:page markupName="page" definitionLabel="ApplicationBindablesEditAnnotationPage"
+                                                                   presentationClass="page-content"
+                                                                   title="tab.configuration.label">
+                                                        <netuix:content>
+                                                          <netuix:layout type="no" markupName="NoLayout">
+                                                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                                                              <netuix:portletInstance markupType="Portlet" instanceLabel="ApplicationBindablesEditAnnotationPortlet"
+                                                                                      contentUri="/PortalConfig/app/EditAnnotation.portlet"/>
+                                                            </netuix:placeholder>
+                                                          </netuix:layout>
+                                                        </netuix:content>
+                                                      </netuix:page>
+                                                    </netuix:content>
+                                                  </netuix:book>
+                                                </netuix:content>
+                                              </netuix:book>
+                                            </netuix:placeholder>
+                                          </netuix:flowLayout>
+                                        </netuix:content>
+                                      </netuix:page>
+                                    </netuix:content>
+                                  </netuix:book>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                        </netuix:content>
+                      </netuix:book>
+                      <!-- Definition for the Configuration tab -->
+                      <netuix:book markupName="book" definitionLabel="AppApplicationConfigurationPage"
+                                   title="tab.configuration.label">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                        <netuix:content>
+                          <!-- Definition for the Application tab -->
+                          <netuix:page markupName="page" definitionLabel="ApplicationConfigurationApplicationPage"
+                                       presentationClass="page-content"
+                                       title="tab.application.label">
+                            <netuix:meta name="helpid" content="J2EE.app.appconfiguration.title;j2ee"/>
+                            <netuix:meta name="breadcrumb-context" content="handle"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="ApplicationConfigurationApplicationPortlet">
+                                    <netuix:strutsContent module="/j2ee" action="ApplicationConfigurationApplication"
+                                                          refreshAction="ApplicationConfigurationApplication"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the Persistence tab -->
+                          <netuix:page markupName="page" definitionLabel="AppApplicationPersistenceUnitTablePage"
+                                       presentationClass="page-content"
+                                       title="tab.persistenceunit.table.label">
+                            <netuix:meta name="helpid" content="J2EE.persistenceunit.table.title;j2ee"/>
+                            <netuix:meta name="breadcrumb-context" content="handle"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="AppApplicationPersistenceUnitTablePortlet"
+                                                          contentUri="/PortalConfig/persistence/PersistenceUnitTable.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the Workload tab -->
+                          <netuix:page markupName="page" definitionLabel="AppApplicationConfigurationWorkloadPage"
+                                       presentationClass="page-content"
+                                       title="tab.workload.label">
+                            <netuix:meta name="helpid" content="J2EE.app.applicationconfigurationworkload.title;j2ee"/>
+                            <netuix:meta name="breadcrumb-context" content="handle"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="AppApplicationConfigurationWorkloadPortlet">
+                                    <netuix:strutsContent module="/j2ee" action="AppApplicationConfigurationWorkload"
+                                                          refreshAction="AppApplicationConfigurationWorkload"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- definition for the Instrumentation subtab-->
+                          <netuix:page markupName="page"
+                                       definitionLabel="AppApplicationConfigurationInstrumentationPage"
+                                       presentationClass="page-content"
+                                       title="tab.diagnostics.instrumentation.label">
+                            <netuix:meta name="helpid"
+                                         content="Diagnostics.diagnostics.moduleconfiginstrumentation.title;diagnostics"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet"
+                                                          instanceLabel="AppApplicationConfigurationInstrumentationPortlet"
+                                                          contentUri="/PortalConfig/diagnostics/module/ModuleConfigInstrumentation.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                        </netuix:content>
+                      </netuix:book>
+                      <!-- Definition for the security tab -->
+                      <netuix:book markupName="book" definitionLabel="AppApplicationSecurityPage"
+                                   title="tab.security.label">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                        <netuix:content>
+                          <!-- definition for app roles table -->
+                          <netuix:page markupName="page" definitionLabel="AppRolesTablePage"
+                                       presentationClass="page-content"
+                                       title="tab.roles.label">
+                            <netuix:meta name="helpid" content="J2EE.app.approle.table.title;j2ee"/>
+                            <netuix:meta name="breadcrumb" content="tab.roles.label;key"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="AppApplicationRolesTablePortlet">
+                                    <netuix:strutsContent module="/j2ee" action="AppApplicationRolesTable"
+                                                          refreshAction="AppApplicationRolesTable"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- definition for app policies page -->
+                          <netuix:page markupName="page" definitionLabel="AppApplicationSecurityPoliciesPage"
+                                       presentationClass="page-content"
+                                       title="tab.policies.label">
+                            <netuix:meta name="helpid" content="J2EE.app.apppolicies.title;j2ee"/>
+                            <netuix:meta name="breadcrumb" content="tab.policies.label;key"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="AppApplicationSecurityPoliciesPortlet">
+                                    <netuix:pageflowContent contentUri="/com/bea/console/actions/app/apppolicies/EditAppPolicies.jpf"
+                                                            action="begin"
+                                                            refreshAction="begin"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                        </netuix:content>
+                      </netuix:book>
+                      <!-- Definition for the targets tab -->
+                      <netuix:page markupName="page" definitionLabel="AppApplicationTargetsPage"
+                                   presentationClass="page-content"
+                                   title="tab.targets.label">
+                        <netuix:meta name="helpid" content="J2EE.app.applicationtargets.title;j2ee"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                              <netuix:portlet definitionLabel="AppApplicationTargetsPortlet">
+                                <netuix:strutsContent module="/j2ee" action="AppApplicationTargetTable"
+                                                      refreshAction="AppApplicationTargetTable"/>
+                              </netuix:portlet>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the control tab -->
+                      <netuix:book markupName="book" definitionLabel="AppControlPages" title="tab.control.label">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                        <netuix:content>
+                          <!-- Definition for the Lifecycle tab -->
+                          <netuix:page markupName="page" definitionLabel="AppApplicationControlPage"
+                                       presentationClass="page-content"
+                                       title="tab.startstop.label">
+                            <netuix:meta name="helpid" content="J2EE.app.applicationcontrol.title;j2ee"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="AppApplicationControlPortlet">
+                                    <netuix:strutsContent module="/j2ee" action="AppApplicationControl"
+                                                          refreshAction="AppApplicationControl"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the Initialize Caches tab -->
+                          <netuix:page markupName="page" definitionLabel="AppControlCachesPage"
+                                       presentationClass="page-content"
+                                       title="tab.caches.label">
+                            <netuix:meta name="helpid" content="J2EE.app.appcontrolcaches.title;j2ee"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="AppControlCachesPortlet"
+                                                          contentUri="/PortalConfig/app/ApplicationControlCaches.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                        </netuix:content>
+                      </netuix:book>
+                      <!-- Definition for the testing tab -->
+                      <netuix:page markupName="page" definitionLabel="AppApplicationTestingPage"
+                                   presentationClass="page-content"
+                                   title="tab.testing.label">
+                        <netuix:meta name="helpid" content="J2EE.app.applicationtesting.title;j2ee"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="AppApplicationTestingPortlet"
+                                                      contentUri="/PortalConfig/app/ApplicationTesting.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the monitoring tab -->
+                      <netuix:book markupName="book" definitionLabel="AppApplicationMonitorPage"
+                                   title="tab.monitoring.label">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                        <netuix:content>
+                          <!-- Definition for the health tab -->
+                          <netuix:page markupName="page" definitionLabel="AppApplicationMonitorHealthPage"
+                                       presentationClass="page-content"
+                                       title="tab.health.label">
+                            <netuix:meta name="helpid" content="J2EE.app.applicationmonitorhealth.title;j2ee"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="AppApplicationMonitorHealthPortlet">
+                                    <netuix:strutsContent module="/j2ee" action="AppApplicationMonitorHealth"
+                                                          refreshAction="AppApplicationMonitorHealth"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the query cache work tab -->
+                          <netuix:page markupName="page" definitionLabel="AppApplicationMonitorQueryCachePage"
+                                       presentationClass="page-content"
+                                       title="tab.querycache.label">
+                            <netuix:meta name="helpid" content="J2EE.app.applicationmonitorquerycache.title;j2ee"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="AppApplicationMonitorQueryCachePortlet">
+                                    <netuix:strutsContent module="/j2ee" action="AppApplicationMonitorQueryCache"
+                                                          refreshAction="AppApplicationMonitorQueryCache"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the monitoring work tab -->
+                          <netuix:page markupName="page" definitionLabel="AppApplicationMonitorWorkloadPage"
+                                       presentationClass="page-content"
+                                       title="tab.workload.label">
+                            <netuix:meta name="helpid" content="J2EE.app.applicationmonitorworkload.title;j2ee"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="AppApplicationMonitorWorkloadPortlet"
+                                                          contentUri="/PortalConfig/app/ApplicationMonitorWorkload.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                        </netuix:content>
+                      </netuix:book>
+                      <!-- Definition for the notes tab -->
+                      <netuix:page markupName="page" definitionLabel="AppApplicationNotesPage"
+                                   presentationClass="page-content"
+                                   title="tab.notes.label">
+                        <netuix:meta name="helpid" content="J2EE.app.applicationnotes.title;j2ee"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                              <netuix:portlet definitionLabel="AppApplicationNotesPortlet">
+                                <netuix:strutsContent module="/j2ee" action="AppApplicationNotes" refreshAction="AppApplicationNotes"/>
+                              </netuix:portlet>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                    </netuix:content>
+                  </netuix:book>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <netuix:book definitionLabel="AppAutoApplicationBook" title="book.title" markupName="book"
+                   backingFile="com.bea.console.utils.AppDeploymentBackingFile"
+                   threadsafe="true"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="AppAutoPages" title="not.used" hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:book markupName="book" definitionLabel="AppAutoBook" title="AppBook">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+                      <!-- Definition for the Overview tab -->
+                      <netuix:page markupName="page" definitionLabel="AppAutoApplicationOverviewPage"
+                                   presentationClass="page-content"
+                                   title="tab.overview.label">
+                        <netuix:meta name="helpid" content="J2EE.app.applicationoverview.title;j2ee"/>
+                        <netuix:meta name="breadcrumb-context" content="handle"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="AppAutoApplicationOverviewPortlet"
+                                                      contentUri="/PortalConfig/app/ApplicationOverview.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the control tab -->
+                      <netuix:book markupName="book" definitionLabel="AppAutoControlPages"
+                                   title="tab.control.label">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                        <netuix:content>
+                          <!-- Definition for the Initialize Caches tab -->
+                          <netuix:page markupName="page" definitionLabel="AppAutoControlCachesPage"
+                                       presentationClass="page-content"
+                                       title="tab.caches.label">
+                            <netuix:meta name="helpid" content="J2EE.app.appcontrolcaches.title;j2ee"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="AppAutoControlCachesPortlet"
+                                                          contentUri="/PortalConfig/app/ApplicationControlCaches.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                        </netuix:content>
+                      </netuix:book>
+                      <!-- Definition for the testing tab -->
+                      <netuix:page markupName="page" definitionLabel="AppAutoApplicationTestingPage"
+                                   presentationClass="page-content"
+                                   title="tab.testing.label">
+                        <netuix:meta name="helpid" content="J2EE.app.applicationtesting.title;j2ee"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="AppAutoApplicationTestingPortlet"
+                                                      contentUri="/PortalConfig/app/ApplicationTesting.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the monitoring tab -->
+                      <netuix:book markupName="book" definitionLabel="AppAutoApplicationMonitorPage"
+                                   title="tab.monitoring.label">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                        <netuix:content>
+                          <!-- Definition for the monitoring work tab -->
+                          <netuix:page markupName="page" definitionLabel="AppAutoApplicationMonitorWorkloadPage"
+                                       presentationClass="page-content"
+                                       title="tab.workload.label">
+                            <netuix:meta name="helpid" content="J2EE.app.applicationmonitorworkload.title;j2ee"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="AppAutoApplicationMonitorWorkloadPortlet"
+                                                          contentUri="/PortalConfig/app/ApplicationMonitorWorkload.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                        </netuix:content>
+                      </netuix:book>
+                    </netuix:content>
+                  </netuix:book>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Deployments table page -->
+      <netuix:book definitionLabel="AppDeploymentsBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="deployments.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="AppDeploymentsPages" title="not.used"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:book markupName="book" definitionLabel="AppDeploymentsTableBook"
+                               title="deployments.title">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+                      <!-- Definition for the control tab -->
+                      <netuix:page markupName="page" definitionLabel="AppDeploymentsControlPage"
+                                   presentationClass="page-content"
+                                   title="tab.control.label">
+                        <netuix:meta name="helpid" content="J2EE.app.deploymentscontroltable.title;j2ee"/>
+                        <netuix:meta name="breadcrumb" content="deployments.title"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                              <netuix:portlet definitionLabel="AppDeploymentsControlPortlet">
+                                <netuix:strutsContent module="/j2ee" action="AppDeploymentsControlTable"
+                                                      refreshAction="AppDeploymentsControlTable"/>
+                              </netuix:portlet>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the monitor tab -->
+                      <netuix:book markupName="book" definitionLabel="AppDeploymentsMonitoringPage"
+                                   title="tab.monitoring.label">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                        <netuix:content>
+                          <!-- Definition for the webapp tab -->
+                          <netuix:page markupName="page" definitionLabel="AppDeploymentsMonitorWebAppPage"
+                                       presentationClass="page-content"
+                                       title="tab.webapp.label">
+                            <netuix:meta name="helpid" content="J2EE.app.deploymentsmonitorwebapptable.title;j2ee"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="AppDeploymentsMonitorWebAppPortlet">
+                                    <netuix:strutsContent module="/j2ee" action="AppDeploymentsMonitorWebAppTable"
+                                                          refreshAction="AppDeploymentsMonitorWebAppTable"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the webservices tab -->
+                          <netuix:page markupName="page" definitionLabel="AppDeploymentsMonitorWebServicesPage"
+                                       presentationClass="page-content"
+                                       title="tab.webservices.label">
+                            <netuix:meta name="helpid" content="J2EE.app.deploymentsmonitorwebservices.title;j2ee"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="AppDeploymentsMonitorWebServicesPortlet">
+                                    <netuix:strutsContent module="/j2ee" action="AppDeploymentsMonitorWebServices"
+                                                          refreshAction="AppDeploymentsMonitorWebServices"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the webserviceclients tab -->
+                          <netuix:page markupName="page" definitionLabel="AppDeploymentsMonitorWebServiceClientsPage"
+                                       presentationClass="page-content"
+                                       title="tab.webserviceclients.label">
+                            <netuix:meta name="helpid" content="J2EE.app.deploymentsmonitorwebserviceclients.title;j2ee"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="AppDeploymentsMonitorWebServiceClientsPortlet">
+                                    <netuix:strutsContent module="/j2ee" action="AppDeploymentsMonitorWebServiceClients"
+                                                          refreshAction="AppDeploymentsMonitorWebServiceClients"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the JDBC tab -->
+                          <netuix:page markupName="page" definitionLabel="AppDeploymentsMonitorJDBCTablePage"
+                                       presentationClass="page-content"
+                                       title="tab.jdbc.label">
+                            <netuix:meta name="helpid" content="J2EE.app.deploymentsmonitorjdbctable.title;j2ee"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="AppDeploymentsMonitorJDBCTablePortlet">
+                                    <netuix:strutsContent module="/jdbc" action="AppDeploymentsMonitorJDBCTable"
+                                                          refreshAction="AppDeploymentsMonitorJDBCTable"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the Workload tab -->
+                          <netuix:page markupName="page" definitionLabel="AppDeploymentsMonitorWorkloadPage"
+                                       presentationClass="page-content"
+                                       title="tab.workload.label">
+                            <netuix:meta name="helpid" content="J2EE.app.deploymentsmonitorworkload.title;j2ee"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="AppDeploymentsMonitorWorkloadPortlet">
+                                    <netuix:strutsContent module="/j2ee" action="AppDeploymentsMonitorWorkload"
+                                                          refreshAction="AppDeploymentsMonitorWorkload"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                        </netuix:content>
+                      </netuix:book>
+                    </netuix:content>
+                  </netuix:book>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Application Scoped Work Management Configuration pages -->
+      <netuix:book definitionLabel="AppWorkBook" title="book.title" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="AppWorkCapacityPages" title="not.used"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:book markupName="book" definitionLabel="AppWorkCapacityBook" title="AppWorkBook">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+                      <!-- Definition for the config tab -->
+                      <netuix:page markupName="page" definitionLabel="AppWorkCapacityConfigPage"
+                                   presentationClass="page-content"
+                                   title="tab.config.label">
+                        <netuix:meta name="helpid" content="J2EE.app.work.capacityconfig.title;j2ee"/>
+                        <netuix:meta name="configuration-page" content="CapacityBean"/>
+                        <netuix:meta name="breadcrumb-context" content="handle"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                              <netuix:portlet definitionLabel="AppWorkCapacityConfigPortlet">
+                                <netuix:strutsContent module="/j2ee" action="AppWorkCapacityConfig"
+                                                      refreshAction="AppWorkCapacityConfig"/>
+                              </netuix:portlet>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                    </netuix:content>
+                  </netuix:book>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+          <netuix:page markupName="page" definitionLabel="AppWorkContextRequestClassPages"
+                       title="not.used"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:book markupName="book" definitionLabel="AppWorkContextRequestClassBook"
+                               title="AppWorkBook">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+                      <!-- Definition for the config tab -->
+                      <netuix:page markupName="page" definitionLabel="AppWorkContextRequestClassConfigPage"
+                                   presentationClass="page-content"
+                                   title="tab.config.label">
+                        <netuix:meta name="helpid" content="J2EE.app.work.contextrequestclassconfig.title;j2ee"/>
+                        <netuix:meta name="configuration-page" content="ContextRequestClassBean"/>
+                        <netuix:meta name="breadcrumb-context" content="handle"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                              <netuix:portlet definitionLabel="AppWorkContextRequestClassConfigPortlet">
+                                <netuix:strutsContent module="/j2ee" action="AppWorkContextRequestClassConfig"
+                                                      refreshAction="AppWorkContextRequestClassConfig"/>
+                              </netuix:portlet>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                    </netuix:content>
+                  </netuix:book>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+          <netuix:page markupName="page" definitionLabel="AppWorkFairShareRequestClassPages"
+                       title="not.used"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:book markupName="book" definitionLabel="AppWorkFairShareRequestClassBook"
+                               title="AppWorkBook">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+                      <!-- Definition for the config tab -->
+                      <netuix:page markupName="page" definitionLabel="AppWorkFairShareRequestClassConfigPage"
+                                   presentationClass="page-content"
+                                   title="tab.config.label">
+                        <netuix:meta name="helpid" content="J2EE.app.work.fairsharerequestclassconfig.title;j2ee"/>
+                        <netuix:meta name="configuration-page" content="FairShareRequestClassBean"/>
+                        <netuix:meta name="breadcrumb-context" content="handle"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                              <netuix:portlet definitionLabel="AppWorkFairShareRequestClassConfigPortlet">
+                                <netuix:strutsContent module="/j2ee" action="AppWorkFairShareRequestClassConfig"
+                                                      refreshAction="AppWorkFairShareRequestClassConfig"/>
+                              </netuix:portlet>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                    </netuix:content>
+                  </netuix:book>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+          <netuix:page markupName="page" definitionLabel="AppWorkMaxThreadsConstraintPages"
+                       title="not.used"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:book markupName="book" definitionLabel="AppWorkMaxThreadsConstraintBook"
+                               title="AppWorkBook">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+                      <!-- Definition for the config tab -->
+                      <netuix:page markupName="page" definitionLabel="AppWorkMaxThreadsConstraintConfigPage"
+                                   presentationClass="page-content"
+                                   title="tab.config.label">
+                        <netuix:meta name="helpid" content="J2EE.app.work.maxthreadsconstraintconfig.title;j2ee"/>
+                        <netuix:meta name="configuration-page" content="MaxThreadsConstraintBean"/>
+                        <netuix:meta name="breadcrumb-context" content="handle"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                              <netuix:portlet definitionLabel="AppWorkMaxThreadsConstraintConfigPortlet">
+                                <netuix:strutsContent module="/j2ee" action="AppWorkMaxThreadsConstraintConfig"
+                                                      refreshAction="AppWorkMaxThreadsConstraintConfig"/>
+                              </netuix:portlet>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                    </netuix:content>
+                  </netuix:book>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+          <netuix:page markupName="page" definitionLabel="AppWorkMinThreadsConstraintPages"
+                       title="not.used"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:book markupName="book" definitionLabel="AppWorkMinThreadsConstraintBook"
+                               title="AppWorkBook">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+                      <!-- Definition for the config tab -->
+                      <netuix:page markupName="page" definitionLabel="AppWorkMinThreadsConstraintConfigPage"
+                                   presentationClass="page-content"
+                                   title="tab.config.label">
+                        <netuix:meta name="helpid" content="J2EE.app.work.minthreadsconstraintconfig.title;j2ee"/>
+                        <netuix:meta name="configuration-page" content="MinThreadsConstraintBean"/>
+                        <netuix:meta name="breadcrumb-context" content="handle"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                              <netuix:portlet definitionLabel="AppWorkMinThreadsConstraintConfigPortlet">
+                                <netuix:strutsContent module="/j2ee" action="AppWorkMinThreadsConstraintConfig"
+                                                      refreshAction="AppWorkMinThreadsConstraintConfig"/>
+                              </netuix:portlet>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                    </netuix:content>
+                  </netuix:book>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+          <netuix:page markupName="page" definitionLabel="AppWorkResponseTimeRequestClassPages"
+                       title="not.used"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:book markupName="book" definitionLabel="AppWorkResponseTimeRequestClassBook"
+                               title="AppWorkBook">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+                      <!-- Definition for the config tab -->
+                      <netuix:page markupName="page" definitionLabel="AppWorkResponseTimeRequestClassConfigPage"
+                                   presentationClass="page-content"
+                                   title="tab.config.label">
+                        <netuix:meta name="helpid" content="J2EE.app.work.responsetimerequestclassconfig.title;j2ee"/>
+                        <netuix:meta name="configuration-page" content="ResponseTimeRequestClassBean"/>
+                        <netuix:meta name="breadcrumb-context" content="handle"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                              <netuix:portlet definitionLabel="AppWorkResponseTimeRequestClassConfigPortlet">
+                                <netuix:strutsContent module="/j2ee" action="AppWorkResponseTimeRequestClassConfig"
+                                                      refreshAction="AppWorkResponseTimeRequestClassConfig"/>
+                              </netuix:portlet>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                    </netuix:content>
+                  </netuix:book>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+          <netuix:page markupName="page" definitionLabel="AppWorkWorkManagerPages" title="not.used"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:book markupName="book" definitionLabel="AppWorkWorkManagerBook" title="AppWorkBook">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+                      <!-- Definition for the config tab -->
+                      <netuix:page markupName="page" definitionLabel="AppWorkWorkManagerConfigPage"
+                                   presentationClass="page-content"
+                                   title="tab.config.label">
+                        <netuix:meta name="helpid" content="J2EE.app.work.workmanagerconfig.title;j2ee"/>
+                        <netuix:meta name="configuration-page" content="WorkManagerBean"/>
+                        <netuix:meta name="breadcrumb-context" content="handle"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                              <netuix:portlet definitionLabel="AppWorkWorkManagerConfigPortlet">
+                                <netuix:strutsContent module="/j2ee" action="AppWorkWorkManagerConfig"
+                                                      refreshAction="AppWorkWorkManagerConfig"/>
+                              </netuix:portlet>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                    </netuix:content>
+                  </netuix:book>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+          <netuix:page markupName="page" definitionLabel="AppWorkContextCasePages" title="not.used"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:book markupName="book" definitionLabel="AppWorkContextCaseBook"
+                               title="CoreContextCaseBook">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+                      <!-- Definition for the config tab -->
+                      <netuix:page markupName="page" definitionLabel="AppWorkContextCaseConfigPage"
+                                   presentationClass="page-content"
+                                   title="tab.config.label">
+                        <netuix:meta name="helpid" content="J2EE.app.appworkcontextcaseconfig.title;j2ee"/>
+                        <netuix:meta name="configuration-page" content="ContextCaseBean"/>
+                        <netuix:meta name="breadcrumb-context" content="handle"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                              <netuix:portlet definitionLabel="AppWorkContextCaseConfigPortlet">
+                                <netuix:strutsContent module="/j2ee" action="AppWorkContextCaseConfig"
+                                                      refreshAction="AppWorkContextCaseConfig"/>
+                              </netuix:portlet>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                    </netuix:content>
+                  </netuix:book>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Application Install assistant page -->
+      <netuix:book definitionLabel="AppApplicationInstall" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.deployment.install.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="AppApplicationInstallPage" title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="J2EE.app.install.title;j2ee"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="AppApplicationInstallPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/app/install/Flow.jpf" action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Application Update assistant page -->
+      <netuix:book definitionLabel="AppApplicationUpdate" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.deployment.update.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="AppApplicationUpdatePage" title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="J2EE.app.update.title;j2ee"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="AppApplicationUpdatePortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/app/update/Flow.jpf" action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Application Uninstall assistant page -->
+      <netuix:book definitionLabel="AppApplicationUninstall" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.deployment.uninstall.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="AppApplicationUninstallPage"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="J2EE.app.uninstall.title;j2ee"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="AppApplicationUninstallPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/app/uninstall/Flow.jpf" action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Application Start assistant page -->
+      <netuix:book definitionLabel="AppControlStartBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.deployment.start.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="AppControlStartPage" title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="J2EE.app.start.title;j2ee"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="AppControlStartPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/app/controlstart/ControlStart.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Application Stop assistant page for a specific app -->
+      <netuix:book definitionLabel="AppControlStopBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.deployment.stop.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="AppControlStopPage" title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="J2EE.app.stop.title;j2ee"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="AppControlStopPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/app/controlstop/ControlStop.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Application Force Stop assistant page for a specific app -->
+      <netuix:book definitionLabel="AppControlForceStopBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.deployment.forcestop.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="AppControlForceStopPage" title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="J2EE.app.forcestop.title;j2ee"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="AppControlForceStopPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/app/controlforcestop/ControlForceStop.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Application Admin assistant page -->
+      <netuix:book definitionLabel="AppControlAdminBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.deployment.start.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="AppControlAdminPage" title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="J2EE.app.admin.title;j2ee"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="AppControlAdminPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/app/controladmin/ControlAdmin.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Application Change Targets assistant page -->
+      <netuix:book definitionLabel="AppAppChangeTargets" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.deployment.changetargets.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="AppAppChangeTargetsPage" title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="J2EE.app.applicationtargets.title;j2ee"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="AppAppChangeTargetsPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/app/targeting/Targeting.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Init Cache assistant page -->
+      <netuix:book definitionLabel="AppInitCache" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.deployment.initcachespools.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="AppInitCachePage" title="not.used"
+                       hidden="true">
+            <netuix:meta name="helpid" content="J2EE.app.applicationinitcache.title;j2ee"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="AppInitCachePortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/app/initcache/Flow.jpf" action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Application Save Plan assistant page -->
+      <netuix:book definitionLabel="AppSavePlan" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.deployment.saveplan.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="AppSavePlanPage" title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="J2EE.app.saveplan.title;j2ee"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="AppSavePlanPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/app/saveplan/Flow.jpf" action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Annotation Editor Save assistant -->
+      <netuix:book definitionLabel="AppEditAnnotationSavePlan" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.deployment.saveplan.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="AppEditAnnotationSavePage" title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="J2EE.app.saveplan.title;j2ee"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="AppEditAnnotationSavePortlet">
+                    <netuix:strutsContent module="/j2ee" action="AppEditAnnotationSave"
+                                          refreshAction="AppEditAnnotationSave"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Deployment dispatcher page -->
+      <netuix:book definitionLabel="AppApplicationDispatcher" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="deployments.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="AppApplicationDispatcherPage"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="configuration-page" content="AppDeployment"/>
+            <netuix:meta name="configuration-page" content="ApplicationRuntime"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="AppApplicationDispatcherPortlet">
+                    <netuix:strutsContent module="/j2ee" action="AppApplicationDispatcher"
+                                          refreshAction="AppApplicationDispatcher"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Bindables dispatcher page -->
+      <netuix:book definitionLabel="ApplicationBindablesDispatcherBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="deployments.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="ApplicationBindablesDispatcherPage"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="ApplicationBindablesDispatcherPortlet">
+                    <netuix:strutsContent module="/j2ee" action="ApplicationBindablesDispatcher"
+                                          refreshAction="ApplicationBindablesDispatcher"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Tunables dispatcher page -->
+      <netuix:book definitionLabel="ApplicationTunablesDispatcherBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="deployments.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="ApplicationTunablesDispatcherPage"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="ApplicationTunablesDispatcherPortlet">
+                    <netuix:strutsContent module="/j2ee" action="ApplicationTunablesDispatcher"
+                                          refreshAction="ApplicationTunablesDispatcher"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the ApplicationTunablesApplication deletion assistant page -->
+      <netuix:book definitionLabel="ApplicationTunablesApplicationDeleteBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.delete.variable.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="ApplicationTunablesApplicationDeletePage"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="J2EE.app.deletevariable.title;j2ee"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="ApplicationTunablesApplicationDeletePortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/app/deletevariable/Flow.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the deployment status details page -->
+      <netuix:book definitionLabel="AppDeploymentStatusBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="deploymentstatus.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="AppDeploymentStatusPage" title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="AppDeploymentStatusPortlet">
+                    <netuix:strutsContent module="/j2ee" action="AppDeploymentStatus" refreshAction="AppDeploymentStatus"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- definition for the create app roles assistant -->
+      <netuix:book definitionLabel="AppApplicationRolesCreate" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.application.roles.create.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="AppApplicationCreateRolesPage"
+                       title="not.used"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="J2EE.app.approle.create.title;j2ee"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="AppApplicationCreateRolesPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/app/roles/create/CreateAppRole.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- definition for the edit app scoped roles page  -->
+      <netuix:book definitionLabel="AppApplicationRolesEdit" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.application.roles.edit.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="AppApplicationRolesTabPage" title="not.used"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="J2EE.app.approle.manage.title;j2ee"/>
+            <netuix:meta name="breadcrumb" content="assistant.application.roles.edit.title"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="AppApplicationRolesTable">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/app/roles/edit/EditAppRoles.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- definition for the delete app roles assistant -->
+      <netuix:book definitionLabel="AppApplicationRolesDelete" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.application.roles.delete.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="AppApplicationDeleteRolesPage"
+                       title="not.used"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="J2EE.app.approle.delete.title;j2ee"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="AppApplicationDeleteRolesPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/app/roles/delete/DeleteAppRole.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the ContextCase creation assistant page -->
+      <netuix:book definitionLabel="AppWorkCreateContextCaseBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.create.requestclass.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="AppWorkCreateContextCase" title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="J2EE.app.work.createcontextcase.page.title;j2ee"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="AppWorkCreateContextCasePortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/app/createcontextcase/Flow.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the ContextCase deletion assistant page -->
+      <netuix:book definitionLabel="AppWorkDeleteContextCaseBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.delete.requestclass.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="AppWorkDeleteContextCase" title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="J2EE.app.work.deletecontextcase.page.title;j2ee"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="AppWorkDeleteContextCasePortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/app/deletecontextcase/Flow.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Work Manager creation assistant page -->
+      <netuix:book definitionLabel="AppWorkCreateWorkManagerBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.create.requestclass.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="AppWorkCreateWorkManager" title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="J2EE.app.work.createworkmanager.page.title;j2ee"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="AppWorkCreateWorkManagerPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/app/createworkmanager/CreateWorkManager.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Work Manager deletion assistant page -->
+      <netuix:book definitionLabel="AppWorkDeleteWorkManagerBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.delete.requestclass.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="AppWorkDeleteWorkManager" title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="J2EE.app.work.deleteworkmanager.page.title;j2ee"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="AppWorkDeleteWorkManagerPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/app/deleteworkmanager/DeleteWorkManager.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Work Manager Child creation assistant page -->
+      <netuix:book definitionLabel="AppWorkCreateWorkManagerChildBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.create.requestclass.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="AppWorkCreateWorkManagerChild"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="J2EE.app.work.createworkmanager.page.title;j2ee"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="AppWorkCreateWorkManagerChildPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/app/createworkmanagerchild/Flow.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Work Manager Child deletion assistant page -->
+      <netuix:book definitionLabel="AppWorkDeleteWorkManagerChildBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.delete.requestclass.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="AppWorkDeleteWorkManagerChild"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="J2EE.app.work.deleteworkmanager.page.title;j2ee"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="AppWorkDeleteWorkManagerChildPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/app/deleteworkmanagerchild/Flow.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+    </netuix:content>
+  </netuix:book>
+</portal:root>

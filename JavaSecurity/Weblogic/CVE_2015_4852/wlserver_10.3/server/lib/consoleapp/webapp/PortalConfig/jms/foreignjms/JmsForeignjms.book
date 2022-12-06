@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portal:root xmlns:netuix="http://www.bea.com/servers/netuix/xsd/controls/netuix/1.0.0"
+             xmlns:html="http://www.w3.org/1999/xhtml-netuix-modified/1.0.0"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:portal="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0"
+             xsi:schemaLocation="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0 portal-support-1_0_0.xsd">
+<!-- 
+    Definition file for the pages in the jms.foreignjms subsystem
+    of the WebLogic Server administration console
+    
+    Copyright (c) 2004,2009, Oracle and/or its affiliates. All rights reserved.
+-->
+  <netuix:book definitionLabel="JMSForeignJMS" title="book.title" markupName="book"
+               presentationClass="invisible">
+    <netuix:content>
+      <netuix:book definitionLabel="JMSForeignJMSBook" title="book.title" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="JmsForeignjmsPages" title="not.used"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:book markupName="book" definitionLabel="JmsForeignjmsTabsBook"
+                               title="JmsForeignjmsTabsBook">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+                  <!-- Definition for the config tab -->
+                  <netuix:page markupName="page" definitionLabel="ForeignJMSConnectionFactoryconfigTabPage"
+                                   presentationClass="page-content"
+                                   title="tab.config.label">
+                        <netuix:meta name="helpid"
+                                     content="JMS.jms.foreignjms.foreignjmsconnectionfactoryconfig.title;jms"/>
+                        <netuix:meta name="configuration-page"
+                                     content="weblogic.j2ee.descriptor.wl.ForeignConnectionFactoryBean"/>
+                        <netuix:meta name="breadcrumb-context" content="handle"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                              <netuix:portlet definitionLabel="JmsForeignjmsForeignJMSConnectionFactoryConfigPortlet">
+                                <netuix:strutsContent module="/jms" action="JmsForeignjmsForeignJMSConnectionFactoryConfig"
+                                                      refreshAction="JmsForeignjmsForeignJMSConnectionFactoryConfig"/>
+                              </netuix:portlet>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the notes tab -->
+                  <netuix:page markupName="page" definitionLabel="ForeignJMSConnectionFactorynotesTabPage"
+                                   presentationClass="page-content"
+                                   title="tab.notes.label">
+                        <netuix:meta name="helpid"
+                                     content="JMS.jms.foreignjms.foreignjmsconnectionfactorynotes.title;jms"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                              <netuix:portlet definitionLabel="JmsForeignjmsForeignJMSConnectionFactoryNotesPortlet">
+                                <netuix:strutsContent module="/jms" action="JmsForeignjmsForeignJMSConnectionFactoryNotes"
+                                                      refreshAction="JmsForeignjmsForeignJMSConnectionFactoryNotes"/>
+                              </netuix:portlet>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                    </netuix:content>
+                  </netuix:book>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the ForeignJMSConnectionFactory creation assistant page -->
+  <netuix:book definitionLabel="JmsForeignjmsCreateForeignJMSConnectionFactoryBook"
+                   markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.create.foreignconnectionfactory.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page"
+                       definitionLabel="JmsForeignjmsCreateForeignJMSConnectionFactory"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid" content="JMS.jms.foreignconnectionfactory.create.title;jms"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="JmsForeignjmsCreateForeignJMSConnectionFactoryPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/jms/foreignjms/createforeignjmsconnectionfactory/Flow.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the ForeignJMSConnectionFactory deletion assistant page -->
+  <netuix:book definitionLabel="JmsForeignjmsDeleteForeignJMSConnectionFactoryBook"
+                   markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.create.foreigndestination.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page"
+                       definitionLabel="JmsForeignjmsDeleteForeignJMSConnectionFactory"
+                       title="not.used"
+                       hidden="true">
+            <netuix:meta name="helpid"
+                         content="JMS.jms.foreignconnectionfactory.deleteforeignconnectionfactory.page.title;jms"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="JmsForeignjmsDeleteForeignJMSConnectionFactoryPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/jms/foreignjms/deleteforeignjmsconnectionfactory/DeleteForeignJMSConnectionFactory.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <netuix:book definitionLabel="JMSForeignJMSDestinationBook" title="book.title"
+                   markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="JMSForeignJMSDestinationsPages"
+                       title="not.used"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:book markupName="book" definitionLabel="JMSForeignJMSDestinationsTabsBook"
+                               title="JMSForeignJMSDestinationsTabsBook">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+                  <!-- Definition for the config tab -->
+                  <netuix:page markupName="page" definitionLabel="ForeignJMSDestinationconfigTabPage"
+                                   presentationClass="page-content"
+                                   title="tab.config.label">
+                        <netuix:meta name="helpid"
+                                     content="JMS.jms.foreignjms.foreignjmsdestinationconfig.title;jms"/>
+                        <netuix:meta name="configuration-page"
+                                     content="weblogic.j2ee.descriptor.wl.ForeignDestinationBean"/>
+                        <netuix:meta name="breadcrumb-context" content="handle"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                              <netuix:portlet definitionLabel="JmsForeignjmsForeignJMSDestinationConfigPortlet">
+                                <netuix:strutsContent module="/jms" action="JmsForeignjmsForeignJMSDestinationConfig"
+                                                      refreshAction="JmsForeignjmsForeignJMSDestinationConfig"/>
+                              </netuix:portlet>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the notes tab -->
+                  <netuix:page markupName="page" definitionLabel="ForeignJMSDestinationnotesTabPage"
+                                   presentationClass="page-content"
+                                   title="tab.notes.label">
+                        <netuix:meta name="helpid" content="JMS.jms.foreignjms.foreignjmsdestinationnotes.title;jms"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                              <netuix:portlet definitionLabel="JmsForeignjmsForeignJMSDestinationNotesPortlet">
+                                <netuix:strutsContent module="/jms" action="JmsForeignjmsForeignJMSDestinationNotes"
+                                                      refreshAction="JmsForeignjmsForeignJMSDestinationNotes"/>
+                              </netuix:portlet>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                    </netuix:content>
+                  </netuix:book>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the ForeignJMSDestination creation assistant page -->
+  <netuix:book definitionLabel="JmsForeignjmsCreateForeignJMSDestinationBook"
+                   markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.create.foreigndestination.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="JmsForeignjmsCreateForeignJMSDestination"
+                       title="not.used"
+                       hidden="true">
+            <netuix:meta name="helpid" content="Jms.jms.foreigndestination.create.title;jms"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="JmsForeignjmsCreateForeignJMSDestinationPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/jms/foreignjms/createforeignjmsdestination/Flow.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the ForeignJMSDestination deletion assistant page -->
+  <netuix:book definitionLabel="JmsForeignjmsDeleteForeignJMSDestinationBook"
+                   markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.delete.foreigndestination.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="JmsForeignjmsDeleteForeignJMSDestination"
+                       title="not.used"
+                       hidden="true">
+            <netuix:meta name="helpid"
+                         content="JMS.jms.foreigndestination.deleteforeigndestination.page.title;jms"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="JmsForeignjmsDeleteForeignJMSDestinationPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/jms/foreignjms/deleteforeignjmsdestination/DeleteForeignJMSDestination.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- Foreign Servers -->
+  <netuix:book definitionLabel="ForeignServersBook" title="book.title" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="ForeignServersPages" title="not.used"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:book markupName="book" definitionLabel="ForeignServersTabsBook"
+                               title="ForeignServersTabsBook">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+                  <!-- Definition for the config tab -->
+                  <netuix:book markupName="book" definitionLabel="ForeignJMSServerconfigTabPage"
+                                   title="tab.config.label">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                        <netuix:content>
+                      <!-- Definition for the general tab -->
+                      <netuix:page markupName="page" definitionLabel="ForeignJMSServerconfigGeneralTabPage"
+                                       presentationClass="page-content"
+                                       title="tab.general.label">
+                            <netuix:meta name="helpid" content="JMS.jms.foreignjms.foreignjmsserverconfig.title;jms"/>
+                            <netuix:meta name="configuration-page"
+                                         content="weblogic.j2ee.descriptor.wl.ForeignServerBean"/>
+                            <netuix:meta name="breadcrumb-context" content="handle"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="JmsForeignjmsForeignJMSServerConfigPortlet">
+                                    <netuix:strutsContent module="/jms" action="JmsForeignjmsForeignJMSServerConfig"
+                                                          refreshAction="JmsForeignjmsForeignJMSServerConfig"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the ForeignJMSDestination table page /tab -->
+                      <netuix:page markupName="page" definitionLabel="JmsForeignjmsForeignJMSDestinationTablePage"
+                                       presentationClass="page-table"
+                                       title="tab.foreigndestinations.label">
+                            <netuix:meta name="helpid" content="JMS.jms.foreignjms.foreignjmsdestination.title;jms"/>
+                            <netuix:meta name="breadcrumb" content="tab.foreigndestinations.label"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="JmsForeignjmsForeignJMSDestinationTablePortlet">
+                                    <netuix:strutsContent module="/jms" action="JmsForeignjmsForeignJMSDestinationTable"
+                                                          refreshAction="JmsForeignjmsForeignJMSDestinationTable"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the ForeignJMSConnectionFactory table page /tab -->
+                      <netuix:page markupName="page"
+                                       definitionLabel="JmsForeignjmsForeignJMSConnectionFactoryTablePage"
+                                       presentationClass="page-table"
+                                       title="tab.foreignconnectionfactories.label">
+                            <netuix:meta name="helpid"
+                                         content="JMS.jms.foreignjms.foreignjmsconnectionfactory.title;jms"/>
+                            <netuix:meta name="breadcrumb" content="tab.foreignconnectionfactories.label"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="JmsForeignjmsForeignJMSConnectionFactoryTablePortlet">
+                                    <netuix:strutsContent module="/jms" action="JmsForeignjmsForeignJMSConnectionFactoryTable"
+                                                          refreshAction="JmsForeignjmsForeignJMSConnectionFactoryTable"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                        </netuix:content>
+                      </netuix:book>
+
+                      <!-- Definition for the targetdeploy tab -->
+                  <netuix:page markupName="page" definitionLabel="ForeignJMSServertargetdeployTabPage"
+                                   presentationClass="page-content"
+                                   title="tab.subdeployment.label">
+                        <netuix:meta name="helpid" content="JMS.jms.foreignjms.subdeployment.title;jms"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                              <netuix:portlet definitionLabel="JmsForeignjmsForeignJMSServerTargetdeployPortlet">
+                                <netuix:strutsContent module="/jms" action="JmsForeignjmsForeignJMSServerTargetdeploy"
+                                                      refreshAction="JmsForeignjmsForeignJMSServerTargetdeploy"/>
+                              </netuix:portlet>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the notes tab -->
+                  <netuix:page markupName="page" definitionLabel="ForeignJMSServernotesTabPage"
+                                   presentationClass="page-content"
+                                   title="tab.notes.label">
+                        <netuix:meta name="helpid" content="JMS.jms.foreignjms.foreignjmsservernotes.title;jms"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                              <netuix:portlet definitionLabel="JmsForeignjmsForeignJMSServerNotesPortlet">
+                                <netuix:strutsContent module="/jms" action="JmsForeignjmsForeignJMSServerNotes"
+                                                      refreshAction="JmsForeignjmsForeignJMSServerNotes"/>
+                              </netuix:portlet>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                    </netuix:content>
+                  </netuix:book>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+    </netuix:content>
+  </netuix:book>
+
+</portal:root>

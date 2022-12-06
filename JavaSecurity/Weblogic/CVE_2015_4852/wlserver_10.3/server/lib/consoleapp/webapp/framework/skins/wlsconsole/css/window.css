@@ -1,0 +1,150 @@
+/*
+    This file contains window-related styles for the "wlsconsole" skin.  
+    This includes titlebars, titlebar button rollovers and window content.
+
+    Note that this styling includes window content overflow handling.  
+    See below for specific notes.
+*/
+
+/* 
+    styles for titlebars
+*/
+
+.wlsc-titlebar {
+    background: #E9E9E9 url(../images/titlebar_bg.png) repeat-x right top;
+    border-bottom: 1px solid #E1E1E2;
+    color: #393B38;
+    padding: 0px 4px;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.wlsc-titlebar img {
+    border: 0;
+    vertical-align: middle;
+    margin-top: .3em; /* this is for IE6 only */
+}
+
+.wlsc-titlebar-window-icon,
+.wlsc-titlebar-title-panel {
+    float: left;
+}
+
+.wlsc-titlebar-title-panel h1,
+.wlsc-titlebar-title-panel h2 {
+    line-height: 22px;
+    margin: 0px;
+}
+
+.wlsc-titlebar-button-panel {
+    float: right;
+}
+
+.wlsc-titlebar-button-panel a,
+.wlsc-titlebar-button-panel a:hover,
+.wlsc-titlebar-button-panel a:focus {
+        background-color: transparent;
+        text-decoration: none;
+        padding: 0px;
+        outline-style: none;
+}
+
+/* styles for image rollovers (titlebar buttons) */
+
+.wlsc-titlebar-button-panel a:hover > img.wlsc-image-rollover {
+    display: inline;
+}
+
+.wlsc-titlebar-button-panel a:hover > img.wlsc-image-nonrollover {
+    display: none;
+}
+
+/*
+    styles for windows
+*/
+
+.wlsc-layout-cell .wlsc-book {
+    border-style: solid;
+    border-width: 1px;
+    margin: 8px;
+}
+
+.wlsc-page {
+}
+
+.wlsc-window, .wlsc-frame {
+    border: none;
+    margin: 6px;
+}
+
+.wlsc-frame {
+    position: relative;
+}
+
+.wlsc-frame .top {
+    background: transparent url(../images/shadow-corners.gif) no-repeat left top;
+    position: absolute;
+    height: 4px;
+    width: 4px;
+    top: 0px;
+    right: 0px;
+}
+
+/* this is just for IE6 */
+* html .wlsc-frame .top {
+    right: 6px;
+}
+
+.wlsc-frame .top div div {
+    font-size: 1px; /* for some reason IE 6 thinks it needs to make this higher
+    when you change the text size even though the height is fixed so make 
+    the font very small */
+}
+
+.wlsc-frame .middle {
+  background: transparent url(../images/shadow-right.gif) repeat-y right top;
+  padding-right: 4px;
+}
+
+.wlsc-frame .c2 {
+    border: 1px solid #BFC6C9;
+}
+
+.wlsc-frame .bottom {
+    background: transparent url(../images/shadow-corners.gif) no-repeat left -8px;
+    padding-left: 4px;
+}
+
+.wlsc-frame .bottom div {
+  background: transparent url(../images/shadow-corners.gif) no-repeat right -4px;
+  padding-right: 4px;
+}
+
+.wlsc-frame .bottom div div {
+    background: transparent url(../images/shadow-bottom.gif) repeat-x left bottom;
+    height: 4px;
+    font-size: 1px; /* for some reason IE 6 thinks it needs to make this higher
+    when you change the text size even though the height is fixed so make 
+    the font very small */
+}
+
+/*
+    The following style applies to window content that overflows the specified portlet width. If you want to
+    change this behavior for ALL of your portlets, set the appropriate value for the overflow style here.
+    If you want to change this behavior for a SPECIFIC portlet, add the appropriate overflow style to that
+    portlet's Content Presentation Style attribute. See the Portlet Development Guide for more information 
+    and examples.
+*/
+.wlsc-window-content
+{
+    width: 100%;
+    overflow: hidden;
+}
+
+/* styles for async content portlets */
+
+.wlsc-window-content-only
+{
+    border: 0;
+    margin: 0;
+}

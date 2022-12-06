@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+          "struts-config_1_1.dtd">
+<struts-config>
+  <!-- ========== Form Bean Definitions =================================== -->
+  <form-beans>
+    <form-bean name="genericTableForm"
+      type="org.apache.struts.action.DynaActionForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="contents" type="java.util.Collection" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="tablePreferences"
+        type="com.bea.console.cvo.preferences.TablePreferences" />
+    </form-bean>
+    <form-bean name="systemStatusForm"
+      type="org.apache.struts.action.DynaActionForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="systemStatus"
+        type="com.bea.console.cvo.systemstatus.SystemStatusBean" />
+    </form-bean>
+    <form-bean name="preferencesForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="preferences"
+        type="com.bea.console.cvo.preferences.ConsolePreferences" />
+    </form-bean>
+    <form-bean name="extensionTableForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="contents" type="java.util.Collection" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="tablePreferences"
+        type="com.bea.console.cvo.preferences.TablePreferences" />
+      <form-property name="preferences"
+        type="com.bea.console.cvo.preferences.ConsolePreferences" />
+    </form-bean>
+    <form-bean name="extensionForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="cvo"
+        type="com.bea.console.cvo.preferences.ExtensionBean" />
+    </form-bean>
+    <form-bean name="logoutForm"
+      type="org.apache.struts.action.DynaActionForm">
+      <form-property name="confirmedLogout" type="java.lang.String" />
+    </form-bean>
+    <form-bean name="tableEditForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="editHandle" type="java.lang.String" />
+      <form-property name="editProperty" type="java.lang.String" />
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+    </form-bean>
+    <form-bean name="changeListForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="changelist"
+        type="com.bea.console.cvo.changemgmt.ChangeList" />
+      <form-property name="confirmedTakeLock" type="java.lang.String" />
+      <form-property name="lockowner" type="java.lang.String" />
+    </form-bean>
+    <form-bean name="dispatcherForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="perspective" type="java.lang.String" />
+    </form-bean>
+    <form-bean name="customizedForm"
+      type="com.bea.console.actionforms.CustomizerForm">
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="tablePrefererences"
+        type="com.bea.console.cvo.preferences.TablePreferences" />
+    </form-bean>
+    <form-bean name="changeListTableForm"
+      type="org.apache.struts.action.DynaActionForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="contents" type="java.util.Collection" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="tablePreferences"
+        type="com.bea.console.cvo.preferences.TablePreferences" />
+      <form-property name="mixChanges" type="java.lang.Boolean" />
+    </form-bean>
+  </form-beans>
+  <!-- Global Exception Handlers for this module -->
+  <global-exceptions>
+    <exception key="global" type="java.lang.Exception"
+      handler="com.bea.console.utils.UnexpectedExceptionHandler" />
+  </global-exceptions>
+  <!-- ========== Global Forward Definitions ============================== -->
+  <global-forwards>
+    <forward name="error" path="/common/errors/unexpected_error.jsp" />
+    <forward name="consolesDead" path="/jsp/common/CriticalError.jsp"
+      redirect="true" />
+    <forward name="noJMXServer" path="/jsp/common/NoJMX.jsp" redirect="true" />
+  </global-forwards>
+  <!-- ========== Action Mapping Definitions ============================== -->
+  <action-mappings>
+    <!-- Start Change Management Actions -->
+    <action path="/MakeChangesAction"
+      type="com.bea.console.actions.changemgmt.MakeChangesAction"
+      scope="request" validate="false" name="changeListForm">
+      <forward name="success" path="/jsp/changemgmt/ChangeManager.jsp" />
+    </action>
+    <action path="/ChangeManagerAction"
+      type="com.bea.console.actions.changemgmt.ChangeManagerAction"
+      scope="request" validate="false" name="changeListForm">
+      <forward name="success" path="/jsp/changemgmt/ChangeManager.jsp" />
+    </action>
+    <action path="/ChangeListAction"
+      type="com.bea.console.actions.changemgmt.ChangeListAction" scope="request"
+      validate="false" name="changeListTableForm">
+      <forward name="success" path="/jsp/changemgmt/ChangeList.jsp" />
+    </action>
+    <action path="/RestartChecklistAction"
+      type="com.bea.console.actions.changemgmt.RestartChecklistAction"
+      scope="request" validate="false" name="genericTableForm">
+      <forward name="success" path="/jsp/changemgmt/RestartChecklist.jsp" />
+    </action>
+    <action path="/ActivateChangesAction"
+      type="com.bea.console.actions.changemgmt.ActivateChangesAction"
+      scope="request" validate="false" name="changeListForm">
+      <forward name="success" path="/jsp/changemgmt/ChangeManager.jsp" />
+    </action>
+    <action path="/StopEditAction"
+      type="com.bea.console.actions.changemgmt.StopEditAction" scope="request"
+      validate="false" name="changeListForm">
+      <forward name="success" path="/ChangeManagerAction.do" />
+    </action>
+    <action path="/CancelEditAction"
+      type="com.bea.console.actions.changemgmt.CancelEditAction" scope="request"
+      validate="false" name="changeListForm">
+      <forward name="success" path="/jsp/changemgmt/ChangeManager.jsp" />
+      <forward name="warnuser" redirect="true"
+        path="/jsp/common/warnusertakinglock.jsp" />
+    </action>
+    <!-- End Change Management Functions -->
+    <action path="/TablePreferencesUpdatedAction"
+      type="com.bea.console.actions.preferences.TablePreferencesUpdatedAction"
+      scope="request" validate="false" name="customizedForm">
+    </action>
+    <action path="/TableEditUpdatedAction"
+      type="com.bea.console.actions.TableEditUpdateAction" scope="request"
+      validate="false" name="tableEditForm">
+    </action>
+    <action path="/UserPreferencesAction"
+      type="com.bea.console.actions.preferences.UserPreferencesAction"
+      scope="request" validate="false" name="preferencesForm">
+      <forward name="success" contextRelative="true"
+        path="/jsp/preferences/userpreferences.jsp" />
+    </action>
+    <action path="/UserPreferencesUpdatedAction"
+      type="com.bea.console.actions.preferences.UserPreferencesUpdatedAction"
+      scope="request" validate="false" name="preferencesForm"
+      input="success">
+      <forward name="success" path="/UserPreferencesAction.do" />
+    </action>
+    <action path="/SharedPreferencesAction"
+      type="com.bea.console.actions.preferences.SharedPreferencesAction"
+      scope="request" validate="false" name="preferencesForm">
+      <forward name="success" contextRelative="true"
+        path="/jsp/preferences/sharedpreferences.jsp" />
+    </action>
+    <action path="/SharedPreferencesUpdatedAction"
+      type="com.bea.console.actions.preferences.SharedPreferencesUpdatedAction"
+      scope="request" validate="false" name="preferencesForm"
+      input="success">
+      <forward name="success" path="/SharedPreferencesAction.do" />
+    </action>
+    <action path="/ExtensionPreferencesAction"
+      type="com.bea.console.actions.preferences.ExtensionPreferencesAction"
+      scope="request" validate="false" name="extensionTableForm">
+      <forward name="success" contextRelative="true"
+        path="/jsp/preferences/ExtensionTable.jsp" />
+    </action>
+    <action path="/ExtensionPreferencesUpdatedAction"
+      type="com.bea.console.actions.preferences.ExtensionPreferencesUpdatedAction"
+      scope="request" validate="false" name="extensionTableForm">
+      <forward name="success" path="/ExtensionPreferencesAction.do" />
+    </action>
+    <action path="/ExtensionDetailsAction"
+      type="com.bea.console.actions.preferences.ExtensionDetailsAction"
+      scope="request" validate="false" name="extensionForm">
+      <forward name="success" contextRelative="true"
+        path="/jsp/preferences/ExtensionDetails.jsp" />
+    </action>
+    <action path="/DispatcherAction"
+      type="com.bea.console.actions.DispatcherAction" scope="request"
+      validate="false" name="dispatcherForm">
+      <!-- Dynamic Forward -->
+    </action>
+    <action path="/LogoutAction" name="logoutForm"
+      type="com.bea.console.actions.logout.LogoutAction" scope="request"
+      validate="false">
+      <forward name="index" redirect="true" path="/console.portal" contextRelative="true"/>
+      <forward name="warnuser" redirect="true"
+        path="/jsp/common/warnuserlockheld.jsp" />
+    </action>
+    <!-- Messages Page Action -->
+    <action path="/MessagesAction"
+      type="com.bea.console.actions.messages.MessagesAction"
+      name="genericTableForm" scope="request">
+      <forward name="success" contextRelative="true"
+        path="/jsp/contentheader/Messages.jsp" />
+    </action>
+    <!--  Server health status action -->
+    <action path="/ServerHealthStatusAction"
+      type="com.bea.console.actions.systemstatus.ServerHealthStatusAction"
+      name="systemStatusForm" scope="request">
+      <forward name="success" contextRelative="true"
+        path="/jsp/systemstatus/ServerHealthStatus.jsp" />
+    </action>
+
+  </action-mappings>
+  <controller inputForward="true"
+    processorClass="com.bea.console.internal.ConsolePageFlowRequestProcessor">
+    <set-property property="nocache" value="true" />
+    <set-property property="contentType" value="text/html;charset=UTF-8" />
+  </controller>
+  <!-- this is a bug in struts, for some reason in complains if this message resource isnt here -->
+  <message-resources factory="com.bea.console.utils.ConsoleMessageResourcesFactory" parameter="global" key="global"/>
+  <message-resources factory="com.bea.console.utils.ConsoleMessageResourcesFactory" parameter="preferences" key="preferences"/>
+  <message-resources factory="com.bea.console.utils.ConsoleMessageResourcesFactory" parameter="changemanagement" key="changemanagement"/>
+</struts-config>

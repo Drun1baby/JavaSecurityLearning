@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+
+<weblogic-application xmlns="http://www.bea.com/ns/weblogic/90" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <application-param>
+    <param-name>webapp.encoding.default</param-name>
+    <param-value>UTF-8</param-value>
+  </application-param>
+
+  <work-manager>
+    <name>consoleWorkManager</name>
+    <min-threads-constraint>
+      <name>consoleMinThreadsCount</name>
+      <count>5</count>
+    </min-threads-constraint>
+  </work-manager>
+
+  <prefer-application-packages>
+    <package-name>org.apache.log4j.*</package-name>
+    <package-name>org.apache.commons.*</package-name>
+    <package-name>org.apache.beehive.*</package-name>
+    <package-name>org.apache.struts.*</package-name>
+    <package-name>org.apache.oro.*</package-name>
+    <package-name>org.apache.taglibs.*</package-name>
+    <package-name>com.bea.json.*</package-name>
+    <package-name>com.bea.netuix.*</package-name>
+    <package-name>com.bea.portlet.*</package-name>
+    <package-name>com.bea.wsrp.*</package-name>
+    <package-name>com.bea.p13n.*</package-name>
+    <package-name>com.bea.campaign.*</package-name>
+    <package-name>com.bea.commerce.*</package-name>
+    <package-name>javax.help.*</package-name>
+
+  </prefer-application-packages>
+
+</weblogic-application>

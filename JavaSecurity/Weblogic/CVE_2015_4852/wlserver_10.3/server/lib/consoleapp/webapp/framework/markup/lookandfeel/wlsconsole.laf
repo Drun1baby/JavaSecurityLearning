@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<netuix:markupDefinition 
+    xmlns:netuix="http://www.bea.com/servers/netuix/xsd/controls/netuix/1.0.0" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://www.bea.com/servers/netuix/xsd/controls/netuix/1.0.0 markup-netuix-1_0_0.xsd"
+>
+    <netuix:locale language="en"/>
+    <netuix:markup>
+        <netuix:lookAndFeel
+            title="WLSConsole"
+            skin="wlsconsole" skeleton="wlsconsole"
+            description="The look and feel for WLS Console"
+            definitionLabel="wlsconsoleLookAndFeel"
+            markupType="LookAndFeel" markupName="wlsconsoleLookAndFeel">
+            <netuix:titlebarButtonOrder>
+                <netuix:otherButtons/>
+                <netuix:namedButton name="float"/>
+                <netuix:namedButton name="edit"/>
+                <netuix:namedButton name="help"/>
+                <netuix:namedButton name="minimized"/>
+                <netuix:namedButton name="maximized"/>
+                <netuix:namedButton name="delete"/>
+            </netuix:titlebarButtonOrder>
+        </netuix:lookAndFeel>
+    </netuix:markup>
+</netuix:markupDefinition>

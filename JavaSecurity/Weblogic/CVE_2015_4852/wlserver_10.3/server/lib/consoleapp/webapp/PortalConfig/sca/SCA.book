@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portal:root xmlns:netuix="http://www.bea.com/servers/netuix/xsd/controls/netuix/1.0.0"
+             xmlns:html="http://www.w3.org/1999/xhtml-netuix-modified/1.0.0"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:portal="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0"
+             xsi:schemaLocation="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0 portal-support-1_0_0.xsd">
+<!--
+    Definition file for the SCA deployment pages in the 
+    WebLogic Server administration console.
+
+    There are several main branches in this book:
+
+     - SCACompositeBook is used for an sca composite deployment
+
+    Copyright (c) 2007,2011, Oracle and/or its affiliates. All rights reserved.
+-->
+
+  <netuix:book definitionLabel="SCADeployment" title="book.title" markupName="book"
+               presentationClass="invisible">
+    <netuix:content>
+      <!-- Definition for the SCAComposite pages -->
+      <netuix:book definitionLabel="SCACompositeBook" title="book.title" markupName="book"
+                   backingFile="com.bea.console.utils.AppDeploymentBackingFile"
+                   threadsafe="true"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="SCACompositePages" title="not.used"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:book markupName="book" definitionLabel="SCACompositePagesBook" title="AppBook">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+                      <!-- Definition for the Overview tab -->
+                      <netuix:page markupName="page" definitionLabel="SCACompositeOverviewPage"
+                                   presentationClass="page-content"
+                                   title="tab.overview.label">
+                        <netuix:meta name="helpid" content="J2EE.sca.scacomposite.overview.title;j2ee"/>
+                        <netuix:meta name="breadcrumb-context" content="handle"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                              <netuix:portlet definitionLabel="SCACompositeOverviewPortlet">
+                                <netuix:strutsContent module="/j2ee" action="SCACompositeOverview"
+                                                      refreshAction="SCACompositeOverview"/>
+                              </netuix:portlet>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the targets tab -->
+                      <netuix:page markupName="page" definitionLabel="SCACompositeTargetsPage"
+                                   presentationClass="page-content"
+                                   title="tab.targets.label">
+                        <netuix:meta name="helpid" content="J2EE.sca.scacomposite.targets.title;j2ee"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                              <netuix:portlet definitionLabel="SCACompositeTargetsPortlet">
+                                <netuix:strutsContent module="/j2ee" action="SCACompositeTargets" refreshAction="SCACompositeTargets"/>
+                              </netuix:portlet>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the control tab -->
+                      <netuix:page markupName="page" definitionLabel="SCACompositeControlPage"
+                                   presentationClass="page-content"
+                                   title="tab.control.label">
+                        <netuix:meta name="helpid" content="J2EE.sca.scacomposite.control.title;j2ee"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                              <netuix:portlet definitionLabel="SCACompositeControlPortlet">
+                                <netuix:strutsContent module="/j2ee" action="SCACompositeControl" refreshAction="SCACompositeControl"/>
+                              </netuix:portlet>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the notes tab -->
+                      <netuix:page markupName="page" definitionLabel="SCACompositeNotesPage"
+                                   presentationClass="page-content"
+                                   title="tab.notes.label">
+                        <netuix:meta name="helpid" content="J2EE.sca.scacomposite.notes.title;j2ee"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                              <netuix:portlet definitionLabel="SCACompositeNotesPortlet">
+                                <netuix:strutsContent module="/j2ee" action="SCACompositeNotes" refreshAction="SCACompositeNotes"/>
+                              </netuix:portlet>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                    </netuix:content>
+                  </netuix:book>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+    </netuix:content>
+  </netuix:book>
+</portal:root>

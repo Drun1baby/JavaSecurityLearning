@@ -1,0 +1,522 @@
+/*
+    General console styles and some specific pages
+*/
+
+/*
+    General
+*/
+span.nobr {
+    white-space: nowrap;
+}
+
+p.wrapper {
+    margin: 0;
+    padding: 0;
+}
+
+iframe {
+    border-width: 0px;
+    width: 0px;
+    height: 0px;
+}
+
+.tbframeTop {
+    display: none;
+}
+
+.tbframeBottom {
+    display: none;
+}
+
+.tbframeContent {
+    margin: 2px 4px;
+}
+/*
+    Icons
+*/
+
+span.icon {
+    font-size: 1px;
+    display: -moz-inline-box;
+    display: inline-block;
+}
+
+span.icon.activate {
+    background: transparent url(../images/checkmark_status.gif) no-repeat left top;
+    width: 12px;
+    height: 12px;
+}
+
+span.icon.search {
+    background: transparent url(../images/search_ena.gif) no-repeat left top;
+    width: 16px;
+    height: 16px;
+}
+
+/*
+    Toolbar Area
+*/
+.toolbar {
+    background-color: #D2E5F9;
+    overflow: hidden;
+    width: 100%;
+    padding: 1px;
+}
+
+.toolbar li img {
+    vertical-align: text-bottom;
+    padding-right: 2px;
+}
+
+.toolbar-info {
+    height: 100%;
+    width: auto;
+    float: right;
+    color: #3E403D;
+}
+
+.toolbar-info .tbframeContent {
+    /* The intent here is to contain the floats which usually uses
+    width: 100% but in this case IE6 has a problem with that so
+    height is used to give this container layout */
+    overflow: hidden;
+    height: 100%;
+    display: inline; /* this makes IE6 treat this as a float and is ignored by other browsers */
+}
+
+.toolbar-info #welcome {
+    float: left;
+    font-weight: bold;
+}
+
+.toolbar-info #domain {
+    float: left;
+    padding-left: 4px;
+    border-left: 1px solid #7E8797;
+    margin-left: 4px;
+}
+
+#topSearch  .tbframeContent {
+    padding-left: 4px;
+    border-left: 1px solid #7E8797;
+    margin-left: 4px;
+}
+
+.toolbar-info p {
+    padding: 0;
+    margin: 0;
+    margin-top: 2px;
+    line-height: 22px;
+}
+
+.toolbar-menu {
+    height: 100%;
+    width: auto;
+    float: left;
+    text-align: left;
+}
+
+.toolbar ul {
+    list-style: none;
+    padding: 0px 2px;
+    margin: 0px;
+    white-space: nowrap;
+}
+
+.toolbar li {
+    display: inline;
+    margin-top: 4px;
+    line-height: 22px;
+}
+
+.toolbar a, 
+.toolbar a:active, 
+.toolbar a:visited, 
+.toolbar span {
+    text-decoration: none;
+    color: #3E403D;
+    padding: 0px 2px;
+}
+
+.toolbar a:hover {
+    text-decoration: underline;
+    padding: 0px 2px;
+}
+
+.toolbar span {
+    color: #999999;
+}
+
+.toolbar-search {
+    margin: 0px;
+    padding: 0 1px 1px 2px;
+    border: 1px solid #B9B9B4;
+    vertical-align: middle;
+}
+
+#topSearch .formButton {
+    vertical-align: middle;
+    padding-right: 0px;
+}
+
+/*
+    Breadcrumb (AKA history) Definitions
+*/
+
+.breadcrumbs, .breadcrumbs a {
+    color: #666666;
+    padding: 0px;
+    font-size: 10px;
+}
+
+.breadcrumbs, .breadcrumbs a, .breadcrumbs a:active, .breadcrumbs a:visited {
+    text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumbs .bclast {
+    font-weight: bold;
+}
+
+/*
+    Message area
+*/
+/* -- Used by Messages.jsp, MessagingBridgeFinal.jsp and others -- */
+.messagesbox {
+    background-color: #F6F6F6;
+    overflow:auto;
+    overflow-y:hidden;
+    overflow-x:auto;
+}
+
+.messagesbox .messagestitle {
+    color:#666666;
+    text-align: left;
+    padding-bottom:0px;
+    margin: 0px;
+    margin-bottom: 6px;
+}
+
+.messagesbox .message {
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 4px;
+}
+
+.messagesbox .message img {
+    vertical-align: middle;
+    margin-right: 4px;
+}
+
+.message_NORMAL {
+    color: black;
+}
+.message_SUCCESS {
+    color:green;
+}
+.message_WARNING {
+    color:black;
+}
+.message_ERROR {
+    color:#ad0e25;
+}
+
+/* special case used in change list */
+.message_MIXCHANGES {
+    color:#ad0e25;
+    font-weight: bold;
+}
+
+/*
+    Home page specific
+*/
+#HomePagePortlet .info-col {
+    float: left;
+    width: 33%;
+}
+
+#home-res1.info-col {
+    float: left;
+    width: 33%;
+}
+
+#home-res2.info-col {
+    float: left;
+    width: 66%;
+}
+
+#HomePagePortlet fieldset {
+  margin-top: 10px;
+}
+
+#HomePagePortlet fieldset.first {
+  margin-top: 0px;
+}
+
+#HomePagePortlet ul {
+    background-color: #f9f9f9;
+    border-top: 1px dotted #CCCCCC;
+    border-bottom: 1px dotted #CCCCCC;
+    margin: 0px 20px 0px 0px;
+    padding-bottom: 1em;
+    padding-left: 2px;
+}
+
+#HomePagePortlet li {
+    padding: 2px 0px;
+    margin-left: 16px;
+    list-style-type: disc;
+}
+
+#HomePagePortlet ul.sub {
+    margin: 0px 20px 0px 0px;
+    padding-bottom: 0px;
+    padding-left: 22px;
+    border-width: 0px;
+}
+
+#HomePagePortlet ul.sub li, #HomePagePortlet #home-res1.info-col li, #HomePagePortlet #home-res2.info-col li {
+    padding: 2px 0px;
+    margin-left: 16px;
+    list-style-type: square;
+}
+
+#HomePagePortlet h3 {
+    font-weight: bold;
+    color:#999999;
+    margin-bottom: 2px;
+    margin-right: 20px;
+    padding-left: 2px;
+}
+
+/*
+    Two column tuning/binding pages
+*/
+#tuning-nav-col {
+    width: 30%;
+}
+
+#tuning-content-col {
+    width: 70%;
+}
+
+/*
+    Data Table Definitions
+*/
+
+.tabletitle {
+    text-align: left;
+    font-weight: bold;
+    margin: 2px 7px;
+}
+
+.tablectrl {
+    background-color: #F6F6F6;
+    padding: 4px 6px;
+    border: 1px solid #CCCCCC;
+}
+
+.tablebuttonbar {
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+}
+
+.tablecontrols {
+    text-align: left;
+    /* adding white-space: nowrap; might seem like a good idea
+    so that the buttons don't wrap but it causes problems
+    when combined with the overflow: visible hack to get
+    IE to display a reasonable width button the button bar
+    becomes as wide as the buttons would be without overflow: visible
+    rather than as wide as the buttons are.
+    */
+}
+
+.tablenavigation {
+    text-align: right;
+    white-space: nowrap;
+}
+
+/* this is for the buttonSeparator image between previous and next */
+.tablenavigation img {
+    width: 1px;
+    height: 12px;
+    border: 0px;
+    margin: 0px 5px;
+    vertical-align: bottom;
+}
+
+.datatable {
+    width: 100%;
+    background-color: #567596;
+    border-collapse: separate;
+    border-spacing: 1px;
+}
+
+.checkboxColumn {
+    width: 1px;
+}
+
+.datatable th {
+    background-color: #CFDBEF;
+    height: 25px;
+    border-left: 1px solid #FFFFFF;
+    border-top: 1px solid #FFFFFF;
+    text-align: left;
+    vertical-align: middle;
+    padding: 4px;
+}
+
+.datatable th a, .datatable th a:visited {
+    color: #0000aa;
+    font-weight: bold;
+}
+
+.datatable th a:hover {
+    color: #000000;
+    font-weight: bold;
+}
+
+.datatable tr.rowEven td {
+    background-color: #FFFFFF;
+}
+
+.datatable tr.rowOdd td {
+    background-color: #F6F6F6;
+}
+
+.datatable td {
+    text-align: left;
+    padding: 4px;
+}
+
+.datatable td.tablenorows {
+    text-align: center;
+    background-color: #FFFFFF;
+}
+
+/*
+    Property Table Definitions
+*/
+
+.propertytable {
+    width: 100%;
+    background-color: #567596;
+    border-collapse: separate;
+    border-spacing: 1px;
+}
+
+.propertytable th {
+    background-color: #CFDBEF;
+    height: 25px;
+    border-left: 1px solid #FFFFFF;
+    border-top: 1px solid #FFFFFF;
+    text-align: left;
+    vertical-align: middle;
+    padding: 4px;
+}
+
+.propertytable tr.rowEven td {
+    background-color: #FFFFFF;
+}
+
+.propertytable tr.rowOdd td {
+    background-color: #F6F6F6;
+}
+
+.propertytable td {
+    text-align: left;
+    padding: 4px;
+}
+
+.propertytable td.tablenorows {
+    text-align: center;
+    background-color: #FFFFFF;
+}
+
+/*
+    Summary Table used on all summary pages
+*/
+
+.summaryTable {
+    margin: 4px;
+    border: solid 1px #567596;
+    border-collapse: collapse;
+}
+
+.summaryTable th {
+    text-align: left;
+    font-weight: bold;
+    padding: 4px;
+    background-color: #CFDBEF;
+    border: solid 1px #567596;
+}
+
+.summaryTable td {
+    border: solid 1px #567596;
+    padding: 4px;
+}
+
+.summaryTable tr.even {
+    background-color: #FFFFFF;
+}
+
+.summaryTable tr.odd {
+    background-color: #F6F6F6;
+}
+
+/*
+    Layout styles
+*/
+.upperButtonBar {
+    border-bottom: 1px dotted #CCCCCC;
+    padding-bottom: 4px;
+}
+
+.lowerButtonBar {
+    border-top: 1px dotted #CCCCCC;
+    padding-top: 4px;
+}
+
+.contenttable {
+}
+
+.contenttable li {
+    padding: 2px;
+    list-style-type: disc;
+}
+
+.introText {
+    padding: 6px 1em;
+}
+
+.summaryIntroText {
+    padding: 0px;
+}
+
+.stepTitle {
+    padding: 6px 10px;
+    font-weight: bold;
+}
+
+.stepIntro {
+    padding: 6px 10px;
+}
+
+.filterArea {
+    padding: 6px 0px;
+}
+
+ul.noMarker, ol.noMarker {
+    padding: 0;
+    margin: 0;
+}
+
+.noMarker li {
+    list-style-type: none;
+}

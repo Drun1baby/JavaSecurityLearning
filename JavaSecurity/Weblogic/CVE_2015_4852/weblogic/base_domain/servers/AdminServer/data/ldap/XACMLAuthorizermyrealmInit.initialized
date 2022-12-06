@@ -1,0 +1,5 @@
+#The version of LDIFT loaded for the WLS default Authorizer provider. Last update was to version 61
+#Tue Dec 06 14:48:09 CST 2022
+PolicyUpdate=false
+Authorizer=61
+StoreId=ldap_5eJUWTqRnWkDVRs+SynPaqJEpuw\=

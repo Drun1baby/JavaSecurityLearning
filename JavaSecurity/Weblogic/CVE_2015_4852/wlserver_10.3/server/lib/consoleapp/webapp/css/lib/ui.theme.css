@@ -1,0 +1,104 @@
+/*
+* jQuery UI CSS Framework
+* Copyright (c) 2009 AUTHORS.txt (http://jqueryui.com/about)
+* Dual licensed under the MIT (MIT-LICENSE.txt) and GPL (GPL-LICENSE.txt) licenses.
+*/
+/* hand edited for Console */
+
+/* Component containers
+----------------------------------*/
+.ui-widget-content { 
+  border: 1px solid #035C8A;
+  background-color: #ffffff;
+}
+.ui-tabs.ui-widget-content {
+  border: none;
+}
+.ui-widget-header {
+  border: 1px solid transparent;
+  border-bottom-color: #B2BEDD;
+  background: #EBF0FE url(../../images/titleBar_bg.png) repeat-x;
+  font-weight: bold;
+}
+.ui-tabs .ui-widget-header {
+  background: none;
+}
+.ui-dialog-content {
+  border: 0;
+  padding: 10px;
+}
+.ui-dialog-buttonpane {
+  border: 1px solid transparent;
+  border-top-color: #B2BEDD;
+  background: #DFE7FB url(../../images/footer_bg.png) repeat-x bottom;
+}
+.ui-dialog-buttons {
+  float: right;
+  margin-right: 10px;
+}
+.ui-dialog .ui-dialog-buttons button {
+  margin-left: 3px;
+}
+
+/* Interaction Cues
+----------------------------------*/
+.ui-state-disabled, .ui-widget-content .ui-state-disabled { opacity: .35; filter:Alpha(Opacity=35); background-image: none; }
+
+/* Icons
+----------------------------------*/
+
+/* states and images */
+
+/* don't combine these next 2 rules because of mvc.initIcons */
+.ui-dialog .icon {
+  background-image: url(../../images/dialogClose.png);
+}
+.ui-dialog .ui-icon {
+  background-image: url(../../images/dialogClose.png);
+}
+
+/* positioning */
+span.icon.close {
+  background-position: 0 0;
+}
+span.icon.close img {
+  left: 0;
+  top: 0;
+}
+button:hover span.icon.close,
+button:focus span.icon.close {
+  background-position: -16px 0px;
+}
+button:active span.icon.close,
+button.active span.icon.close {
+  background-position: -32px 0px;
+}
+button.disabled span.icon.close {
+  background-position: -48px 0px;
+}
+
+.ui-icon.ui-icon-grip-diagonal-se {
+  background-position: -48px 0;
+}
+
+/* Misc visuals
+----------------------------------*/
+
+/* Corner radius */
+.ui-corner-top { -moz-border-radius-topleft: 4px; -webkit-border-top-left-radius: 4px; -moz-border-radius-topright: 4px; -webkit-border-top-right-radius: 4px; }
+.ui-corner-bottom { -moz-border-radius-bottomleft: 4px; -webkit-border-bottom-left-radius: 4px; -moz-border-radius-bottomright: 4px; -webkit-border-bottom-right-radius: 4px; }
+.ui-corner-all { -moz-border-radius: 4px; -webkit-border-radius: 4px; }
+
+/* Overlays */
+/* would like to use IE filter but it causes a memory leak in IE so use transparent image for now 
+a future version of jQuery UI may provide an alternate solution
+.ui-widget-overlay { 
+  background-color: #aaaaaa;
+  -ms-filter: "alpha(Opacity=30)";
+  filter: alpha(Opacity=30);
+  opacity: .30;
+}
+*/
+.ui-widget-overlay { 
+  background: transparent url(../../images/overlay.png) repeat;
+}

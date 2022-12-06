@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portal:root
+  xmlns:netuix="http://www.bea.com/servers/netuix/xsd/controls/netuix/1.0.0"
+  xmlns:portal="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0 portal-support-1_0_0.xsd">
+  <netuix:portlet definitionLabel="CreateSAFDestinationPortlet">
+    <netuix:content>
+      <netuix:pageflowContent
+        contentUri="/com/bea/console/actions/jms/safdestination/create/Flow.jpf"
+        action="begin"
+        refreshAction="begin" />
+    </netuix:content>
+  </netuix:portlet>
+</portal:root>

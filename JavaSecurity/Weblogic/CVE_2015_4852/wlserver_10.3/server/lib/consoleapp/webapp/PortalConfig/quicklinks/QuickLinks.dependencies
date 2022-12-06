@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p:window xmlns:p="http://www.bea.com/servers/portal/framework/laf/1.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.bea.com/servers/portal/framework/laf/1.0.0 laf-window-1_0_0.xsd">
+  <p:render-dependencies>
+    <p:html>
+      <p:links>
+        <p:search-path>
+          <p:path-element>../../css</p:path-element>
+        </p:search-path>
+        <p:link rel="stylesheet" type="text/css" href="quicklinks.css"/>
+      </p:links>
+    </p:html>
+  </p:render-dependencies>
+</p:window>

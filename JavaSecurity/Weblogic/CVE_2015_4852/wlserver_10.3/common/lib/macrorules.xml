@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<stringSubsBuilder xmlns="http://www.bea.com/ns/weblogic/config/macrorules" >
+    <fileGroup name="Windows script files"
+               definition="(?i)\.cmd$"
+               directory="*" caseSensitiveSearch="false">
+
+        <rule isDirectory="true"
+              regFind="^(\s*set\s+WL_HOME\s*=)(&quot;|)[^%&quot;].*(\2)\s*"
+              replace="$1$2@WL_HOME$3"
+        />
+
+        <rule isDirectory="true"
+              regFind="^(\s*set\s+MW_HOME\s*=)(&quot;|)[^%&quot;].*(\2)\s*"
+              replace="$1$2@MW_HOME$3"
+        />
+
+        <rule isDirectory="true"
+              regFind="^(\s*set\s+MW_ORA_HOME\s*=)(&quot;|)[^%&quot;].*(\2)\s*"
+              replace="$1$2@MW_ORA_HOME$3"
+        />
+
+        <rule isDirectory="true"
+              regFind="^(\s*set\s+MW_SCA_HOME\s*=)(&quot;|)[^%&quot;].*(\2)\s*"
+              replace="$1$2@MW_SCA_HOME$3"
+        />
+
+        <rule isDirectory="false"
+              regFind="^(\s*set\s+BAR_WL_HOME\s*=)(&quot;|)[^%&quot;].*(\2)\s*"
+              replace="$1$2@BAR_WL_HOME$3"
+        />
+
+        <rule isDirectory="true"
+              regFind="^(\s*set\s+BEAHOME\s*=)(&quot;|)[^%&quot;].*(\2)\s*"
+              replace="$1$2@BEA_HOME$3"
+        />
+        <rule isDirectory="true"
+              regFind="^(\s*set\s+BEA_HOME\s*=)(&quot;|)[^%&quot;].*(\2)\s*"
+              replace="$1$2@BEA_HOME$3"
+        />
+        <rule isDirectory="true"
+              regFind="^(\s*set\s+PLATFORMDIR\s*=)(&quot;|)[^%&quot;].*(\2)\s*"
+              replace="$1$2@WL_HOME$3"
+        />
+        <rule isDirectory="true"
+              regFind="^(\s*set\s+JAVA_HOME\s*=)(&quot;|)[^%&quot;].*(\2)\s*"
+              replace="$1$2@JAVA_HOME$3"
+        />
+        <rule isDirectory="true"
+              regFind="^(\s*set\s+SUN_JAVA_HOME\s*=)(&quot;|)[^%&quot;].*(\2)\s*"
+              replace="$1$2@SUN_JAVA_HOME$3"
+        />
+        <rule isDirectory="true"
+              regFind="^(\s*set\s+BEA_JAVA_HOME\s*=)(&quot;|)[^%&quot;].*(\2)\s*"
+              replace="$1$2@BEA_JAVA_HOME$3"
+        />
+        <rule isDirectory="true"
+              regFind="^(\s*set\s+SAMPLES_HOME\s*=)(&quot;|)[^%&quot;].*(\2)\s*"
+              replace="$1$2@SAMPLES_HOME$3"
+        />
+        <rule regFind="^(\s*set\s+HOST_NAME\s*=)(&quot;|)[^%&quot;].*(\2)\s*"
+              replace="$1$2@HOST_NAME$3"
+        />
+        <rule 
+              regFind="^(\s*set\s+JAVA_VENDOR\s*=)(&quot;|)[^%&quot;].*(\2)\s*"
+              replace="$1$2@JAVA_VENDOR$3"
+        />
+        <rule isDirectory="true"
+              regFind="^(\s*set\s+USERDOMAIN_HOME\s*=)(&quot;|)[^%&quot;].*(\2)\s*"
+              replace="$1$2@USERDOMAIN_HOME$3"
+        />
+        <rule isDirectory="true"
+              regFind="^(\s*set\s+DOMAIN_HOME\s*=)(&quot;|)[^%&quot;].*(\2)\s*"
+              replace="$1$2@DOMAIN_HOME$3"
+        />
+        <rule 
+              regFind="^(\s*set\s+SERVER_NAME\s*=\s*)(&quot;|)[^%&quot;].*(\2)\s*"
+              replace="$1$2@SERVER_NAME$3"
+        />
+        <rule 
+              regFind="^(\s*set\s+DOMAIN_NAME\s*=)(&quot;|)[^%&quot;].*(\2)\s*"
+              replace="$1$2@DOMAIN_NAME$3"
+        />
+        <rule 
+              regFind="^(\s*set\s+PRODUCTION_MODE\s*=)(&quot;|)([^%&quot;].*|)(\2\s*$)"
+              replace="$1$2@PRODUCTION_MODE$4"
+        />
+        <rule 
+              regFind="^(\s*set\s+WLS_USER\s*=)(&quot;|)[^%&quot;].*(\2)\s*"
+              replace="$1$2@DOMAIN_USER$3"
+        />
+        <rule 
+              regFind="^(\s*set\s+WLS_PW\s*=)(&quot;|)[^%&quot;].*(\2)\s*"
+              replace="$1$2@PASSWORD$3"
+        />
+        <rule 
+              regFind="^(\s*set\s+ADMIN_URL\s*=)(&quot;|)([^%&quot;].*:&#x002f;&#x002f;)([.&quot;&quot;[^\@]]*)(\2)\s*$"
+              replace="$1$2$3@SERVER_HOST:@SERVER_PORT$2"
+        />
+    </fileGroup>
+
+    <fileGroup name="Unix script files"
+               definition="\.sh$"
+               directory="*" caseSensitiveSearch="true">
+
+        <rule isDirectory="true"
+              regFind="^\s*(export\s+|set\s+|)(WL_HOME\s*=)(&quot;|)[^$&quot;].*(\3)\s*"
+              replace="$1$2$3@WL_HOME$4"
+        />
+
+        <rule isDirectory="true"
+              regFind="^\s*(export\s+|set\s+|)(MW_HOME\s*=)(&quot;|)[^$&quot;].*(\3)\s*"
+              replace="$1$2$3@MW_HOME$4"
+        />
+
+        <rule isDirectory="true"
+              regFind="^\s*(export\s+|set\s+|)(MW_ORA_HOME\s*=)(&quot;|)[^$&quot;].*(\3)\s*"
+              replace="$1$2$3@MW_ORA_HOME$4"
+        />
+
+        <rule isDirectory="true"
+              regFind="^\s*(export\s+|set\s+|)(MW_SCA_HOME\s*=)(&quot;|)[^$&quot;].*(\3)\s*"
+              replace="$1$2$3@MW_SCA_HOME$4"
+        />
+
+
+        <rule isDirectory="true"
+              regFind="^\s*(export\s+|set\s+|)(BEAHOME\s*=)(&quot;|)[^\$&quot;].*(\3)\s*"
+              replace="$1$2$3@BEA_HOME$4"
+        />
+        <rule isDirectory="true"
+              regFind="^\s*(export\s+|set\s+|)(BEA_HOME\s*=)(&quot;|)[^\$&quot;].*(\3)\s*"
+              replace="$1$2$3@BEA_HOME$4"
+        />
+        <rule isDirectory="true"
+              regFind="^\s*(export\s+|set\s+|)(DOMAIN_HOME\s*=)(&quot;|)[^\$&quot;].*(\3)\s*"
+              replace="$1$2$3@DOMAIN_HOME$4"
+        />
+        <rule isDirectory="true"
+              regFind="^\s*(export\s+|set\s+|)(USERDOMAIN_HOME\s*=)(&quot;|)[^\$&quot;].*(\3)\s*"
+              replace="$1$2$3@USERDOMAIN_HOME$4"
+        />
+
+        <rule isDirectory="true"
+              regFind="^\s*(export\s+|set\s+|)(PLATFORMDIR\s*=)(&quot;|)[^\$&quot;].*(\3)\s*"
+              replace="$1$2$3@WL_HOME$4"
+        />
+
+        <rule isDirectory="true"
+              regFind="^\s*(export\s+|set\s+|)(JAVA_HOME\s*=)(&quot;|)[^\$&quot;].*(\3)\s*"
+              replace="$1$2$3@JAVA_HOME$4"
+        />
+        <rule isDirectory="true"
+              regFind="^\s*(export\s+|set\s+|)(SUN_JAVA_HOME\s*=)(&quot;|)[^\$&quot;].*(\3)\s*"
+              replace="$1$2$3@SUN_JAVA_HOME$4"
+        />
+        <rule isDirectory="true"
+              regFind="^\s*(export\s+|set\s+|)(BEA_JAVA_HOME\s*=)(&quot;|)[^\$&quot;].*(\3)\s*"
+              replace="$1$2$3@BEA_JAVA_HOME$4"
+        />
+        <rule regFind="^\s*(export\s+|set\s+|)(HOST_NAME\s*=)(&quot;|)[^\$&quot;].*(\3)\s*"
+              replace="$1$2$3@HOST_NAME$4"
+        />
+        <rule isDirectory="true"
+              regFind="^\s*(export\s+|set\s+|)(SAMPLES_HOME\s*=)(&quot;|)[^\$&quot;].*(\3)\s*"
+              replace="$1$2$3@SAMPLES_HOME$4"
+        />
+        <rule 
+              regFind="^\s*(export\s+|set\s+|)(JAVA_VENDOR\s*=)(&quot;|)[^\$&quot;].*(\3)\s*"
+              replace="$1$2$3@JAVA_VENDOR$4"
+        />
+        <rule 
+              regFind="^\s*(export\s+|set\s+|)(SERVER_NAME\s*=)(&quot;|)[^\$&quot;].*(\3)\s*"
+              replace="$1$2$3@SERVER_NAME$4"
+        />
+        <rule 
+              regFind="^\s*(export\s+|set\s+|)(DOMAIN_NAME\s*=)(&quot;|)[^\$&quot;].*(\3)\s*"
+              replace="$1$2$3@DOMAIN_NAME$4"
+        />
+        <rule 
+              regFind="^\s*(export\s+|set\s+|)(PRODUCTION_MODE\s*=)(&quot;|)([^\$&quot;].*|)(\3\s*$)"
+              replace="$1$2$3@PRODUCTION_MODE$5"
+        />
+        <rule 
+              regFind="^\s*(export\s+|set\s+|)(WLS_USER\s*=)(&quot;|)[^\$&quot;].*(\3)\s*"
+              replace="$1$2$3@DOMAIN_USER$4"
+        />
+        <rule 
+              regFind="^\s*(export\s+|set\s+|)(WLS_PW\s*=)(&quot;|)[^\$&quot;].*(\3)\s*"
+              replace="$1$2$3@PASSWORD$4"
+        />
+        <rule
+              regFind="^\s*(export\s+|set\s+|)(ADMIN_URL\s*=)(&quot;|)([^\$&quot;].*:&#x002f;&#x002f;)([.&quot;&quot;[^\@]]*)(\3)\s*$"
+              replace="$1$2$3$4@SERVER_HOST:@SERVER_PORT$3"
+        />
+    </fileGroup>
+
+
+    <fileGroup name="Windows and Unix common shell script"
+               definition="(?i)(\.cmd|\.sh)$"
+               directory="*" caseSensitiveSearch="false">
+        <rule
+              regFind="(-url\s+t3:&#x002f;&#x002f;)(.+:)(\d+)\s"
+              replace="$1$2@SERVER_PORT "
+        />
+    </fileGroup>
+
+    <fileGroup name="Java properties files"
+               definition="(?i)\.properties$"
+               directory="*" caseSensitiveSearch="true">
+
+        <!-- wlai.properties-->      
+        <rule
+              regFind="^\s*(wlai.hostPassword=)(\S*)"
+              replace="$1@PASSWORD"
+        />
+        <rule
+              regFind="^\s*(wlai.hostUserID=)(\S*)"
+              replace="$1@USERNAME"
+        />
+        <rule regFind="^\s*(wlai.repositoryRoot=)(.*)"
+              replace="$1@USERDOMAIN_HOME"
+        />
+
+        <!-- workshop.properties-->
+        <rule
+              regFind="^\s*(wlsHome.path=)(.*)"
+              replace="$1@WL_HOME"
+        />
+        <rule
+              regFind="^\s*(serverName=)(.*)"
+              replace="$1@SERVER_NAME"
+        />
+        <rule
+              regFind="^\s*(port=)(\S*)"
+              replace="$1@SERVER_PORT"
+        />
+        <rule
+              regFind="^\s*(domain=)(.*)"
+              replace="$1@DOMAIN_NAME"
+        />
+        <rule
+              regFind="^\s*(username=)(\S.*)"
+              replace="$1@USERNAME"
+        />
+        <rule
+              regFind="^\s*(hostname=)(\S*)"
+              replace="$1@SERVER_HOST"
+        />
+        <rule
+              regFind="^\s*(jdkHome.path=)(.*)"
+              replace="$1@JAVA_HOME"
+        />
+        <rule
+              regFind="^\s*(password=)(\S.*)"
+              replace="$1@PASSWORD"
+        />
+    </fileGroup>
+
+
+    <fileGroup name="WLW and WLP pointbase.ini"
+               definition="(?i)(\.ini|\.txt|\.html|\.xml|\.jsp|\.htm)$"
+               directory="*" caseSensitiveSearch="false">
+    </fileGroup>
+    
+    <fileGroup name="URLs.dat"
+               definition="(?i)URLs.dat"
+               directory="*" caseSensitiveSearch="false">
+    </fileGroup>
+
+</stringSubsBuilder>

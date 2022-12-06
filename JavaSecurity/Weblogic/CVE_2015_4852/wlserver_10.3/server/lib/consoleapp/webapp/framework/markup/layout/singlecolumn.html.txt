@@ -1,0 +1,7 @@
+<table class="portalLayout" id="thePortalLayout" width="100%" height="100%">
+  <tr>
+    <td class="placeholderTD" valign="top" width="100%">
+      <placeholder number="0"/>
+    </td>
+  </tr>
+</table>

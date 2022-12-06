@@ -1,0 +1,64 @@
+
+.treeView {
+  border: 1px solid #636661;
+}
+
+.hitarea {
+  height: 16px;
+  width: 16px;
+  float: left;
+  margin-left: -16px;
+  cursor: pointer;
+}
+
+li.expandable > .hitarea {
+  background: url(../images/disclose.png) no-repeat 0px 0px;
+}
+li.collapsable > .hitarea {
+  background: url(../images/disclose.png) no-repeat -16px 0px;
+}
+li.processing > .hitarea {
+  background: url(../images/nodeprocessing_anim.gif) no-repeat; 
+  background-position: center center;
+}
+li.expandable > .hitarea img {
+  left: 0px;
+}
+li.collapsable > .hitarea img {
+  left: -16px;
+}
+
+.nodelabel {
+  line-height: 16px;
+  color: #002A90;
+  background-color: #FFFFFF;
+  padding: 1px;
+  margin-left: 3px;
+  vertical-align: middle;
+}
+
+.treeItem.selected .nodelabel {
+  color: #002A90;
+  background-color: #D6E2EF;
+}
+
+.treeItem .icon {
+  vertical-align: middle;
+}
+
+.treeView ul {
+  list-style-type: none;
+  padding-left: 16px;
+  margin: 0;
+}
+
+.treeItem {
+  white-space:nowrap;
+}
+
+.treeView li {
+  line-height: 16px;
+  list-style-type: none;
+  padding: 0;
+  margin: 2px 0;
+}

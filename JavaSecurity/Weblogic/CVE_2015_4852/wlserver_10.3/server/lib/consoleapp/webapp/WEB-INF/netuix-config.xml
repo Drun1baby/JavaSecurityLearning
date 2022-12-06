@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<weblogic-portal-app
+    xmlns="http://www.bea.com/servers/portal/weblogic-portal/8.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://www.bea.com/servers/portal/weblogic-portal/8.0 netuix-config.xsd">
+
+  <!-- Turn customization on or off -->
+  <customization>
+    <enable>false</enable>
+    <propagate-preferences-on-deploy propagate-to-instances="false"/>
+    <preferences-spi-class>com.bea.console.preferences.spi.FilePreferencesProvider</preferences-spi-class>
+  </customization>
+
+  <!-- Turn off netui dependancy -->
+  <pageflow>
+    <enable>true</enable>
+  </pageflow>
+  
+  <!-- Turn portal and book file validation off -->
+  <validation>
+    <include-files enable="false"/>
+    <dot-files enable="false"/>
+  </validation>
+  
+  <!-- Turn off entitlement dependency and runtime check -->
+  <entitlements>
+    <enable>false</enable>
+  </entitlements>
+  
+  <!-- Enable or disable localization -->
+  <localization>
+    <enable>false</enable>
+  </localization>
+
+  <!-- Container supported widow states -->
+  <window-state name="minimized">
+    <activate-image>titlebar-button-minimize.png</activate-image>
+    <deactivate-image>titlebar-button-unminimize.png</deactivate-image>
+    <alt-text>
+      <locale language="en">
+        <activate>Minimize</activate>
+        <deactivate>Restore</deactivate>
+      </locale>
+    </alt-text>
+  </window-state>
+  
+  <window-state name="maximized">
+    <activate-image>titlebar-button-maximize.gif</activate-image>
+    <deactivate-image>titlebar-button-unmaximize.gif</deactivate-image>
+    <alt-text>
+      <locale language="en">
+        <activate>Maximize</activate>
+        <deactivate>Restore</deactivate>
+      </locale>
+    </alt-text>
+  </window-state>
+    
+  <window-state name="delete">
+    <activate-image>titlebar-button-delete.gif</activate-image>
+    <alt-text>
+      <locale language="en">
+        <activate>Delete</activate>
+      </locale>
+    </alt-text>
+  </window-state>
+  
+  <window-state name="float">
+    <activate-image>titlebar-button-float.gif</activate-image>
+    <alt-text>
+      <locale language="en">
+        <activate>Float</activate>
+      </locale>
+    </alt-text>
+  </window-state>
+    
+  <!-- Container supported window modes -->
+  <window-mode name="help">
+    <activate-image>titlebar-button-help.gif</activate-image>
+    <deactivate-image>titlebar-button-help-exit.gif</deactivate-image>
+    <alt-text>
+      <locale language="en">
+        <activate>Help</activate>
+        <deactivate>Leave Help</deactivate>
+      </locale>
+    </alt-text>
+  </window-mode>
+    
+  <window-mode name="edit">
+    <activate-image>titlebar-button-edit.gif</activate-image>
+    <deactivate-image>titlebar-button-edit-exit.gif</deactivate-image>
+    <alt-text>
+      <locale language="en">
+        <activate>Edit</activate>
+        <deactivate>Leave Edit</deactivate>
+      </locale>
+    </alt-text>
+  </window-mode>
+
+  <default-encoding encoding="UTF-8"/> 
+   
+</weblogic-portal-app>

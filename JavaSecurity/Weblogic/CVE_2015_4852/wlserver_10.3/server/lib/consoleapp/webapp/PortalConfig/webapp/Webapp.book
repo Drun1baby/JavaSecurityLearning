@@ -1,0 +1,1494 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portal:root xmlns:netuix="http://www.bea.com/servers/netuix/xsd/controls/netuix/1.0.0"
+             xmlns:html="http://www.w3.org/1999/xhtml-netuix-modified/1.0.0"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:portal="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0"
+             xsi:schemaLocation="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0 portal-support-1_0_0.xsd">
+<!--
+    Definition file for the WebApp pages in the j2ee subsystem
+    of the WebLogic Server administration console.
+
+    There are several main branches in this book:
+
+     - WebAppApplicationBook is used for a standalone WebApp
+     - WebAppModuleBook is used for a WebApp module within another app
+
+    Copyright (c) 2004,2011, Oracle and/or its affiliates. All rights reserved.
+-->
+  <!-- Definition for the WebAppApplicationBook configuration pages -->
+  <netuix:book definitionLabel="WebAppApplication" title="book.title" markupName="book"
+               presentationClass="invisible">
+    <netuix:content>
+      <netuix:book definitionLabel="WebAppApplicationBook" title="book.title" markupName="book"
+                   backingFile="com.bea.console.utils.AppDeploymentBackingFile"
+                   threadsafe="true"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="WebAppApplicationPages" title="not.used"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:book markupName="book" definitionLabel="WebAppApplicationTabsBook" title="AppBook">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+                      <!-- Definition for the Overview tab -->
+                      <netuix:page markupName="page" definitionLabel="WebAppApplicationOverviewPage"
+                                   presentationClass="page-content"
+                                   title="tab.overview.label">
+                        <netuix:meta name="helpid" content="J2EE.webapp.webappoverview.title;j2ee"/>
+                        <netuix:meta name="breadcrumb-context" content="handle"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                              <netuix:portlet definitionLabel="WebAppApplicationOverviewPortlet">
+                                <netuix:strutsContent module="/j2ee" action="WebAppApplicationOverview"
+                                                      refreshAction="WebAppApplicationOverview"/>
+                              </netuix:portlet>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the Deployment Plan tab -->
+                      <netuix:book markupName="book" definitionLabel="WebAppApplicationDeploymentPlanPage"
+                                   title="tab.deploymentplan.label">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                        <netuix:content>
+                          <!-- Definition for the Tuning Parameters tab -->
+                          <netuix:page markupName="page" definitionLabel="WebAppApplicationTuningParameters"
+                                       presentationClass="page-content"
+                                       title="tab.tunables.label">
+                            <netuix:meta name="helpid" content="J2EE.app.applicationtunables.title;j2ee"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <!-- Header text shared by all Tuning Parameter pages -->
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="AppApplicationTunablesHeaderPortlet"
+                                                          contentUri="/PortalConfig/app/ApplicationTunablesHeader.portlet"/>
+                                  <netuix:book presentationClass="invisible" title="title" markupName="book"
+                                               definitionLabel="WebAppApplicationTuningParametersBook">
+                                    <netuix:content>
+                                      <netuix:page markupName="page" definitionLabel="WebAppApplicationTunablesContents"
+                                                   title="tab.deploymentplan.label">
+                                        <netuix:content>
+                                          <netuix:flowLayout orientation="horizontal" markupName="twoColumnLayout" markupType="Layout">
+                                            <!-- Navigation tree shared by all Tuning Parameter pages -->
+                                            <netuix:placeholder title="left" presentationId="tuning-nav-col" markupName="twoColumn_left"
+                                                                usingFlow="false">
+                                              <netuix:portletInstance markupType="Portlet" instanceLabel="WebAppApplicationTunablesTreePortlet"
+                                                                      contentUri="/PortalConfig/app/ApplicationTunablesTree.portlet"/>
+                                            </netuix:placeholder>
+                                            <!-- Content pane for Tuning Parameter pages -->
+                                            <netuix:placeholder title="right" presentationId="tuning-content-col" markupName="twoColumn_right"
+                                                                usingFlow="false">
+                                              <netuix:book definitionLabel="WebAppApplicationTunablesContentsBook" title="book.title"
+                                                           markupName="book">
+                                                <netuix:content>
+                                                  <!-- The default, single-tab configuration page -->
+                                                  <netuix:book markupName="book"
+                                                               definitionLabel="WebAppApplicationTunablesContentsDefaultPages"
+                                                               title="tab.deploymentplan.label">
+                                                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                                                    <netuix:content>
+                                                      <netuix:page markupName="page"
+                                                                   definitionLabel="WebAppApplicationTunablesContentsDefaultPage"
+                                                                   presentationClass="page-content"
+                                                                   title="tab.configuration.label">
+                                                        <netuix:content>
+                                                          <netuix:layout type="no" markupName="NoLayout">
+                                                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                                                              <netuix:portletInstance markupType="Portlet"
+                                                                                      instanceLabel="WebAppApplicationTunablesContentsDefaultPortlet"
+                                                                                      contentUri="/PortalConfig/app/ApplicationTunablesContentsDefault.portlet"/>
+                                                            </netuix:placeholder>
+                                                          </netuix:layout>
+                                                        </netuix:content>
+                                                      </netuix:page>
+                                                    </netuix:content>
+                                                  </netuix:book>
+                                                  <!-- The two tunable tabs for a WebApp module -->
+                                                  <netuix:book markupName="book" definitionLabel="WebAppApplicationTunablesWebAppPages"
+                                                               title="tab.deploymentplan.label">
+                                                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                                                    <netuix:content>
+                                                      <netuix:page markupName="page" definitionLabel="WebAppApplicationTunablesGeneralPage"
+                                                                   presentationClass="page-content"
+                                                                   title="tab.general.label">
+                                                        <netuix:content>
+                                                          <netuix:layout type="no" markupName="NoLayout">
+                                                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                                                              <netuix:portletInstance markupType="Portlet" instanceLabel="WebAppApplicationTunablesGeneralPortlet"
+                                                                                      contentUri="/PortalConfig/webapp/WebAppTunablesGeneral.portlet"/>
+                                                            </netuix:placeholder>
+                                                          </netuix:layout>
+                                                        </netuix:content>
+                                                      </netuix:page>
+                                                      <netuix:page markupName="page" definitionLabel="WebAppApplicationTunablesLoggingPage"
+                                                                   presentationClass="page-content"
+                                                                   title="tab.logging.label">
+                                                        <netuix:content>
+                                                          <netuix:layout type="no" markupName="NoLayout">
+                                                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                                                              <netuix:portletInstance markupType="Portlet" instanceLabel="WebAppApplicationTunablesLoggingPortlet"
+                                                                                      contentUri="/PortalConfig/webapp/WebAppTunablesLogging.portlet"/>
+                                                            </netuix:placeholder>
+                                                          </netuix:layout>
+                                                        </netuix:content>
+                                                      </netuix:page>
+                                                    </netuix:content>
+                                                  </netuix:book>
+                                                  <!-- The single tunable tab for a web service -->
+                                                  <netuix:book markupName="book" definitionLabel="WebAppApplicationWebServiceTunablesPages"
+                                                               title="tab.deploymentplan.label">
+                                                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                                                    <netuix:content>
+                                                      <netuix:page markupName="page"
+                                                                   definitionLabel="WebAppApplicationWebServiceTunablesGeneralPage"
+                                                                   presentationClass="page-content"
+                                                                   title="tab.general.label">
+                                                        <netuix:content>
+                                                          <netuix:layout type="no" markupName="NoLayout">
+                                                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                                                              <netuix:portletInstance markupType="Portlet"
+                                                                                      instanceLabel="WebAppApplicationWebServiceTunablesGeneralPortlet"
+                                                                                      contentUri="/PortalConfig/webservice/WebServiceTunablesGeneral.portlet"/>
+                                                            </netuix:placeholder>
+                                                          </netuix:layout>
+                                                        </netuix:content>
+                                                      </netuix:page>
+                                                    </netuix:content>
+                                                  </netuix:book>
+                                                  <!-- The annotation editing page -->
+                                                  <netuix:book markupName="book"
+                                                               definitionLabel="WebAppApplicationTunablesEditAnnotationPages"
+                                                               title="tab.deploymentplan.label">
+                                                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                                                    <netuix:content>
+                                                      <netuix:page markupName="page" definitionLabel="WebAppApplicationTunablesEditAnnotationPage"
+                                                                   presentationClass="page-content"
+                                                                   title="tab.configuration.label">
+                                                        <netuix:content>
+                                                          <netuix:layout type="no" markupName="NoLayout">
+                                                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                                                              <netuix:portletInstance markupType="Portlet"
+                                                                                      instanceLabel="WebAppApplicationTunablesEditAnnotationPortlet"
+                                                                                      contentUri="/PortalConfig/app/EditAnnotation.portlet"/>
+                                                            </netuix:placeholder>
+                                                          </netuix:layout>
+                                                        </netuix:content>
+                                                      </netuix:page>
+                                                    </netuix:content>
+                                                  </netuix:book>
+                                                </netuix:content>
+                                              </netuix:book>
+                                            </netuix:placeholder>
+                                          </netuix:flowLayout>
+                                        </netuix:content>
+                                      </netuix:page>
+                                    </netuix:content>
+                                  </netuix:book>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the Resource Dependencies tab -->
+                          <netuix:page markupName="page" definitionLabel="WebAppApplicationBindablesPages"
+                                       presentationClass="page-content"
+                                       title="tab.bindables.label">
+                            <netuix:meta name="helpid" content="J2EE.app.applicationdescriptors.title;j2ee"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <!-- Header text shared by all Dependencies pages -->
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="WebAppApplicationBindablesPortlet"
+                                                          contentUri="/PortalConfig/app/ApplicationBindablesHeader.portlet"/>
+                                  <netuix:book presentationClass="invisible" title="title" markupName="book"
+                                               definitionLabel="WebAppApplicationBindablesContentsBooks">
+                                    <netuix:content>
+                                      <netuix:page markupName="page" definitionLabel="WebAppApplicationBindablesContents"
+                                                   title="tab.deploymentplan.label">
+                                        <netuix:content>
+                                          <netuix:flowLayout orientation="horizontal" markupType="Layout" markupName="twoColumnLayout">
+                                            <!-- Navigation tree shared by all Dependencies pages -->
+                                            <netuix:placeholder title="left" presentationId="tuning-nav-col" markupName="twoColumn_left"
+                                                                usingFlow="false">
+                                              <netuix:portletInstance markupType="Portlet" instanceLabel="WebAppApplicationBindablesTreePortlet"
+                                                                      contentUri="/PortalConfig/app/ApplicationBindablesTree.portlet"/>
+                                            </netuix:placeholder>
+                                            <!-- Content pane for Dependencies pages -->
+                                            <netuix:placeholder title="right" presentationId="tuning-content-col" markupName="twoColumn_right"
+                                                                usingFlow="false">
+                                              <netuix:book definitionLabel="WebAppApplicationBindablesContentsBook" title="book.title"
+                                                           markupName="book">
+                                                <netuix:content>
+                                                  <!-- The default, single-tab resource configuration page -->
+                                                  <netuix:book markupName="book" definitionLabel="WebAppApplicationBindablesContentsPages"
+                                                               title="tab.deploymentplan.label">
+                                                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                                                    <netuix:content>
+                                                      <netuix:page markupName="page" definitionLabel="WebAppApplicationBindablesContentsPage"
+                                                                   presentationClass="page-content"
+                                                                   title="tab.configuration.label">
+                                                        <netuix:content>
+                                                          <netuix:layout type="no" markupName="NoLayout">
+                                                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                                                              <netuix:portletInstance markupType="Portlet" instanceLabel="WebAppApplicationBindablesContentsPortlet"
+                                                                                      contentUri="/PortalConfig/app/ApplicationBindablesContents.portlet"/>
+                                                            </netuix:placeholder>
+                                                          </netuix:layout>
+                                                        </netuix:content>
+                                                      </netuix:page>
+                                                    </netuix:content>
+                                                  </netuix:book>
+                                                  <!-- The annotation editing page -->
+                                                  <netuix:book markupName="book"
+                                                               definitionLabel="WebAppApplicationBindablesEditAnnotationPages"
+                                                               title="tab.deploymentplan.label">
+                                                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                                                    <netuix:content>
+                                                      <netuix:page markupName="page"
+                                                                   definitionLabel="WebAppApplicationBindablesEditAnnotationPage"
+                                                                   presentationClass="page-content"
+                                                                   title="tab.configuration.label">
+                                                        <netuix:content>
+                                                          <netuix:layout type="no" markupName="NoLayout">
+                                                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                                                              <netuix:portletInstance markupType="Portlet"
+                                                                                      instanceLabel="WebAppApplicationBindablesEditAnnotationPortlet"
+                                                                                      contentUri="/PortalConfig/app/EditAnnotation.portlet"/>
+                                                            </netuix:placeholder>
+                                                          </netuix:layout>
+                                                        </netuix:content>
+                                                      </netuix:page>
+                                                    </netuix:content>
+                                                  </netuix:book>
+                                                </netuix:content>
+                                              </netuix:book>
+                                            </netuix:placeholder>
+                                          </netuix:flowLayout>
+                                        </netuix:content>
+                                      </netuix:page>
+                                    </netuix:content>
+                                  </netuix:book>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                        </netuix:content>
+                      </netuix:book>
+                      <!-- Definition for the Configuration tab -->
+                      <netuix:book markupName="book" definitionLabel="WebAppApplicationConfigurationPage"
+                                   title="tab.configuration.label">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                        <netuix:content>
+                          <!-- definition for General subtab -->
+                          <netuix:page markupName="page" definitionLabel="WebAppApplicationConfigurationGeneralPage"
+                                       presentationClass="page-content"
+                                       title="tab.general.label">
+                            <netuix:meta name="helpid" content="J2EE.webapp.webappconfiguration.title;j2ee"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet"
+                                                          instanceLabel="WebAppApplicationConfigurationGeneralPortlet"
+                                                          contentUri="/PortalConfig/webapp/WebAppConfiguration.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- definition for Logging subtab -->
+                          <netuix:page markupName="page" definitionLabel="WebAppApplicationConfigurationLoggingPage"
+                                       presentationClass="page-content"
+                                       title="tab.logging.label">
+                            <netuix:meta name="helpid" content="J2EE.webapp.webappconfigurationlogging.title;j2ee"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet"
+                                                          instanceLabel="WebAppApplicationConfigurationLoggingPortlet"
+                                                          contentUri="/PortalConfig/webapp/WebAppConfigurationLogging.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the Persistence tab -->
+                          <netuix:page markupName="page" definitionLabel="WebAppApplicationPersistenceUnitTablePage"
+                                       presentationClass="page-content"
+                                       title="tab.persistenceunit.table.label">
+                            <netuix:meta name="helpid" content="J2EE.persistenceunit.table.title;j2ee"/>
+                            <netuix:meta name="breadcrumb-context" content="handle"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet"
+                                                          instanceLabel="WebAppApplicationPersistenceUnitTablePortlet"
+                                                          contentUri="/PortalConfig/persistence/PersistenceUnitTable.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the Workload tab -->
+                          <netuix:page markupName="page" definitionLabel="WebAppApplicationConfigurationWorkloadPage"
+                                       presentationClass="page-content"
+                                       title="tab.workload.label">
+                            <netuix:meta name="helpid" content="J2EE.webapp.webappconfigurationworkload.title;j2ee"/>
+                            <netuix:meta name="breadcrumb-context" content="handle"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="WebAppApplicationConfigurationWorkloadPortlet">
+                                    <netuix:strutsContent module="/j2ee" action="WebAppApplicationConfigurationWorkload"
+                                                          refreshAction="WebAppApplicationConfigurationWorkload"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- definition for the Instrumentation subtab-->
+                          <netuix:page markupName="page"
+                                       definitionLabel="WebAppApplicationConfigurationInstrumentationPage"
+                                       presentationClass="page-content"
+                                       title="tab.diagnostics.instrumentation.label">
+                            <netuix:meta name="helpid"
+                                         content="Diagnostics.diagnostics.moduleconfiginstrumentation.title;diagnostics"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet"
+                                                          instanceLabel="WebAppApplicationConfigurationInstrumentationPortlet"
+                                                          contentUri="/PortalConfig/diagnostics/module/ModuleConfigInstrumentation.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                        </netuix:content>
+                      </netuix:book>
+                      <!-- Definition for the security tab -->
+                      <netuix:book markupName="book" definitionLabel="WebAppApplicationSecurityPage"
+                                   title="tab.security.label">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                        <netuix:content>
+                          <netuix:book markupName="book" definitionLabel="WebAppApplicationApplicationSecurityPage"
+                                       title="tab.applicationscope.label">
+                            <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level2"/>
+                            <netuix:content>
+                              <!-- definition for standalone web application roles table page -->
+                              <netuix:page markupName="page" definitionLabel="WebAppApplicationSecurityRolesTablePage"
+                                           presentationClass="page-content"
+                                           title="tab.roles.label">
+                                <netuix:meta name="helpid" content="J2EE.webapp.application.role.table.page.title;j2ee"/>
+                                <netuix:meta name="breadcrumb" content="tab.roles.label;key"/>
+                                <netuix:content>
+                                  <netuix:layout type="no" markupName="NoLayout">
+                                    <netuix:placeholder usingFlow="false" markupName="ph1">
+                                      <netuix:portlet definitionLabel="WebAppApplicationSecurityRolesTablePortlet">
+                                        <netuix:strutsContent module="/j2ee" action="WebAppApplicationRolesTable"
+                                                              refreshAction="WebAppApplicationRolesTable"/>
+                                      </netuix:portlet>
+                                    </netuix:placeholder>
+                                  </netuix:layout>
+                                </netuix:content>
+                              </netuix:page>
+                              <!-- definition for standalone web application policies page -->
+                              <netuix:page markupName="page" definitionLabel="WebAppApplicationSecurityPoliciesPage"
+                                           presentationClass="page-content"
+                                           title="tab.policies.label">
+                                <netuix:meta name="helpid" content="J2EE.webapp.application.policies.page.title;j2ee"/>
+                                <netuix:meta name="breadcrumb" content="tab.policies.label;key"/>
+                                <netuix:content>
+                                  <netuix:layout type="no" markupName="NoLayout">
+                                    <netuix:placeholder usingFlow="false" markupName="ph1">
+                                      <netuix:portlet definitionLabel="WebAppApplicationSecurityPoliciesPortlet">
+                                        <netuix:pageflowContent contentUri="/com/bea/console/actions/webapp/policies/edit/app/EditWebAppApplicationPolicies.jpf"
+                                                                action="begin"
+                                                                refreshAction="begin"/>
+                                      </netuix:portlet>
+                                    </netuix:placeholder>
+                                  </netuix:layout>
+                                </netuix:content>
+                              </netuix:page>
+                            </netuix:content>
+                          </netuix:book>
+                          <netuix:book markupName="book" definitionLabel="WebAppApplicationURLPatternSecurityPage"
+                                       title="tab.urlpatternscope.label">
+                            <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level2"/>
+                            <netuix:content>
+                              <!-- definition for WebAppApplicationRolesURLPatternTable page -->
+                              <netuix:page markupName="page" definitionLabel="WebAppApplicationRolesURLPatternTablePage"
+                                           presentationClass="page-content"
+                                           title="tab.roles.label">
+                                <netuix:meta name="helpid"
+                                             content="J2EE.webapp.application.urlpatterns.role.table.page.title;j2ee"/>
+                                <netuix:meta name="breadcrumb" content="tab.roles.label;key"/>
+                                <netuix:content>
+                                  <netuix:layout type="no" markupName="NoLayout">
+                                    <netuix:placeholder usingFlow="false" markupName="ph1">
+                                      <netuix:portlet definitionLabel="WebAppApplicationRolesURLPatternTablePortlet">
+                                        <netuix:strutsContent module="/j2ee" action="WebAppApplicationRolesURLPatternTable"
+                                                              refreshAction="WebAppApplicationRolesURLPatternTable"/>
+                                      </netuix:portlet>
+                                    </netuix:placeholder>
+                                  </netuix:layout>
+                                </netuix:content>
+                              </netuix:page>
+                              <!-- definition for WebAppApplicationPoliciesURLPatternTable page -->
+                              <netuix:page markupName="page"
+                                           definitionLabel="WebAppApplicationPoliciesURLPatternTablePage"
+                                           presentationClass="page-content"
+                                           title="tab.policies.label">
+                                <netuix:meta name="helpid"
+                                             content="J2EE.webapp.application.urlpatterns.policy.table.page.title;j2ee"/>
+                                <netuix:meta name="breadcrumb" content="tab.policies.label;key"/>
+                                <netuix:content>
+                                  <netuix:layout type="no" markupName="NoLayout">
+                                    <netuix:placeholder usingFlow="false" markupName="ph1">
+                                      <netuix:portlet definitionLabel="WebAppApplicationPoliciesURLPatternTablePortlet">
+                                        <netuix:strutsContent module="/j2ee" action="WebAppApplicationPoliciesURLPatternTable"
+                                                              refreshAction="WebAppApplicationPoliciesURLPatternTable"/>
+                                      </netuix:portlet>
+                                    </netuix:placeholder>
+                                  </netuix:layout>
+                                </netuix:content>
+                              </netuix:page>
+                            </netuix:content>
+                          </netuix:book>
+                        </netuix:content>
+                      </netuix:book>
+                      <!-- Definition for the targets tab -->
+                      <netuix:page markupName="page" definitionLabel="WebAppApplicationTargetsPage"
+                                   presentationClass="page-content"
+                                   title="tab.targets.label">
+                        <netuix:meta name="helpid" content="J2EE.webapp.webapptargets.title;j2ee"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                              <netuix:portlet definitionLabel="WebAppApplicationTargetsPortlet">
+                                <netuix:strutsContent module="/j2ee" action="WebAppTargets" refreshAction="WebAppTargets"/>
+                              </netuix:portlet>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the control tab -->
+                      <netuix:page markupName="page" definitionLabel="WebAppApplicationControlPage"
+                                   presentationClass="page-content"
+                                   title="tab.control.label">
+                        <netuix:meta name="helpid" content="J2EE.webapp.webappcontrol.title;j2ee"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                              <netuix:portlet definitionLabel="WebAppApplicationControlPortlet">
+                                <netuix:strutsContent module="/j2ee" action="WebAppControl" refreshAction="WebAppControl"/>
+                              </netuix:portlet>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the testing tab -->
+                      <netuix:page markupName="page" definitionLabel="WebAppApplicationTestingPage"
+                                   presentationClass="page-content"
+                                   title="tab.testing.label">
+                        <netuix:meta name="helpid" content="J2EE.webapp.webapptesting.title;j2ee"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="WebAppApplicationTestingPortlet"
+                                                      contentUri="/PortalConfig/webapp/WebAppTesting.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the monitoring tab -->
+                      <netuix:book markupName="book" definitionLabel="WebAppApplicationMonitorPage"
+                                   title="tab.monitoring.label">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                        <netuix:content>
+                          <!-- Definition for the monitoring webapp tab -->
+                          <netuix:page markupName="page" definitionLabel="WebAppApplicationMonitorRunningPage"
+                                       presentationClass="page-content"
+                                       title="tab.webapp.label">
+                            <netuix:meta name="helpid" content="J2EE.webapp.webappmonitorrunning.title;j2ee"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="WebAppApplicationMonitorRunningPortlet"
+                                                          contentUri="/PortalConfig/webapp/WebAppMonitorRunning.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the monitoring servlets tab -->
+                          <netuix:page markupName="page" definitionLabel="WebAppApplicationMonitorServletsPage"
+                                       presentationClass="page-content"
+                                       title="tab.servlets.label">
+                            <netuix:meta name="helpid" content="J2EE.webapp.webappmonitorservlets.title;j2ee"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="WebAppApplicationMonitorServletsPortlet"
+                                                          contentUri="/PortalConfig/webapp/WebAppMonitorServlets.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the monitoring sessions tab -->
+                          <netuix:page markupName="page" definitionLabel="WebAppApplicationMonitorSessionsPage"
+                                       presentationClass="page-content"
+                                       title="tab.sessions.label">
+                            <netuix:meta name="helpid" content="J2EE.webapp.webappmonitorsessions.title;j2ee"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="WebAppApplicationMonitorSessionsPortlet"
+                                                          contentUri="/PortalConfig/webapp/WebAppMonitorSessions.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the monitoring pageflows tab -->
+                          <netuix:page markupName="page" definitionLabel="WebAppApplicationMonitorPageFlows"
+                                       presentationClass="page-content"
+                                       title="tab.pageflows.label">
+                            <netuix:meta name="helpid" content="J2EE.webapp.webappmonitorpageflows.title;j2ee"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="WebAppApplicationMonitorPageFlowsPortlet"
+                                                          contentUri="/PortalConfig/webapp/WebAppMonitorPageFlows.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the monitoring work tab -->
+                          <netuix:page markupName="page" definitionLabel="WebAppApplicationMonitorWorkPage"
+                                       presentationClass="page-content"
+                                       title="tab.workload.label">
+                            <netuix:meta name="helpid" content="J2EE.webapp.webappmonitorworkload.title;j2ee"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="WebAppApplicationMonitorWorkPortlet"
+                                                          contentUri="/PortalConfig/webapp/WebAppMonitorWorkload.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the monitoring web service clients tab -->
+                          <netuix:page markupName="page"
+                                       definitionLabel="WebAppApplicationMonitorWebServiceClientsPage"
+                                       presentationClass="page-content"
+                                       title="tab.webserviceclients.label">
+                            <netuix:meta name="helpid"
+                                         content="J2EE.webservice.componentmonitorwebserviceclients.title;j2ee"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet"
+                                                          instanceLabel="WebAppApplicationMonitorWebServiceClientsPortlet"
+                                                          contentUri="/PortalConfig/webservice/ComponentMonitorWebServiceClients.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+
+                        </netuix:content>
+                      </netuix:book>
+                      <!-- Definition for the notes tab -->
+                      <netuix:page markupName="page" definitionLabel="WebAppApplicationNotesPage"
+                                   presentationClass="page-content"
+                                   title="tab.notes.label">
+                        <netuix:meta name="helpid" content="J2EE.webapp.webappnotes.title;j2ee"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                              <netuix:portlet definitionLabel="WebAppApplicationNotesPortlet">
+                                <netuix:strutsContent module="/j2ee" action="WebAppNotes" refreshAction="WebAppNotes"/>
+                              </netuix:portlet>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                    </netuix:content>
+                  </netuix:book>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the WebAppModuleBook configuration pages -->
+      <netuix:book definitionLabel="WebAppModuleBook" title="book.title" markupName="book"
+                   backingFile="com.bea.console.utils.AppDeploymentBackingFile"
+                   threadsafe="true"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="WebAppModulePages" title="not.used"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:book markupName="book" definitionLabel="WebAppModuleTabsBook" title="AppBook">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+                      <!-- Definition for the Overview tab -->
+                      <netuix:page markupName="page" definitionLabel="WebAppModuleOverviewPage"
+                                   presentationClass="page-content"
+                                   title="tab.overview.label">
+                        <netuix:meta name="helpid" content="J2EE.webapp.webappoverview.title;j2ee"/>
+                        <netuix:meta name="breadcrumb-context" content="handle"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                              <netuix:portlet definitionLabel="WebAppModuleOverviewPortlet">
+                                <netuix:strutsContent module="/j2ee" action="WebAppModuleOverview"
+                                                      refreshAction="WebAppModuleOverview"/>
+                              </netuix:portlet>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the Configuration tab -->
+                      <netuix:book markupName="book" definitionLabel="WebAppModuleConfigurationPage"
+                                   title="tab.configuration.label">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                        <netuix:content>
+                          <!-- definition for General subtab -->
+                          <netuix:page markupName="page" definitionLabel="WebAppModuleConfigurationGeneralPage"
+                                       presentationClass="page-content"
+                                       title="tab.general.label">
+                            <netuix:meta name="helpid" content="J2EE.webapp.webappconfiguration.title;j2ee"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="WebAppModuleConfigurationGeneralPortlet"
+                                                          contentUri="/PortalConfig/webapp/WebAppConfiguration.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- definition for Logging subtab -->
+                          <netuix:page markupName="page" definitionLabel="WebAppModuleConfigurationLoggingPage"
+                                       presentationClass="page-content"
+                                       title="tab.logging.label">
+                            <netuix:meta name="helpid" content="J2EE.webapp.webappconfiguration.title;j2ee"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="WebAppModuleConfigurationLoggingPortlet"
+                                                          contentUri="/PortalConfig/webapp/WebAppConfigurationLogging.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the Persistence tab -->
+                          <netuix:page markupName="page" definitionLabel="WebAppModulePersistenceUnitTablePage"
+                                       presentationClass="page-content"
+                                       title="tab.persistenceunit.table.label">
+                            <netuix:meta name="helpid" content="J2EE.persistenceunit.table.title;j2ee"/>
+                            <netuix:meta name="breadcrumb-context" content="handle"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="WebAppModulePersistenceUnitTablePortlet"
+                                                          contentUri="/PortalConfig/persistence/PersistenceUnitTable.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the Workload tab -->
+                          <netuix:page markupName="page" definitionLabel="WebAppModuleConfigurationWorkloadPage"
+                                       presentationClass="page-content"
+                                       title="tab.workload.label">
+                            <netuix:meta name="helpid" content="J2EE.webapp.webappconfigurationworkload.title;j2ee"/>
+                            <netuix:meta name="breadcrumb-context" content="handle"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="WebAppModuleConfigurationWorkloadPortlet">
+                                    <netuix:strutsContent module="/j2ee" action="WebAppModuleConfigurationWorkload"
+                                                          refreshAction="WebAppModuleConfigurationWorkload"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                        </netuix:content>
+                      </netuix:book>
+                      <!-- Definition for the security tab -->
+                      <netuix:book markupName="book" definitionLabel="WebAppModuleURLPatternSecurityPages"
+                                   title="tab.security.label">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                        <netuix:content>
+                          <!-- definition for WebAppModule url pattern roles page -->
+                          <netuix:page markupName="page" definitionLabel="WebAppModuleRolesURLPatternTablePage"
+                                       presentationClass="page-content"
+                                       title="tab.roles.label">
+                            <netuix:meta name="helpid"
+                                         content="J2EE.webapp.module.urlpatterns.role.table.page.title;j2ee"/>
+                            <netuix:meta name="breadcrumb" content="tab.roles.label;key"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="WebAppModuleRolesURLPatternTablePortlet">
+                                    <netuix:strutsContent module="/j2ee" action="WebAppModuleRolesURLPatternTable"
+                                                          refreshAction="WebAppModuleRolesURLPatternTable"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- definition for WebAppModule url pattern policies page -->
+                          <netuix:page markupName="page" definitionLabel="WebAppModulePoliciesURLPatternTablePage"
+                                       presentationClass="page-content"
+                                       title="tab.policies.label">
+                            <netuix:meta name="helpid"
+                                         content="J2EE.webapp.module.urlpatterns.policy.table.page.title;j2ee"/>
+                            <netuix:meta name="breadcrumb" content="tab.policies.label;key"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="WebAppModulePoliciesURLPatternTablePortlet">
+                                    <netuix:strutsContent module="/j2ee" action="WebAppModulePoliciesURLPatternTable"
+                                                          refreshAction="WebAppModulePoliciesURLPatternTable"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                        </netuix:content>
+                      </netuix:book>
+                      <!-- Definition for the testing tab -->
+                      <netuix:page markupName="page" definitionLabel="WebAppModuleTestingPage"
+                                   presentationClass="page-content"
+                                   title="tab.testing.label">
+                        <netuix:meta name="helpid" content="J2EE.webapp.webapptesting.title;j2ee"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="WebAppModuleTestingPortlet"
+                                                      contentUri="/PortalConfig/webapp/WebAppTesting.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the monitoring tab -->
+                      <netuix:book markupName="book" definitionLabel="WebAppModuleMonitorPage"
+                                   title="tab.monitoring.label">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                        <netuix:content>
+                          <!-- Definition for the monitoring webapp tab -->
+                          <netuix:page markupName="page" definitionLabel="WebAppModuleMonitorRunningPage"
+                                       presentationClass="page-content"
+                                       title="tab.webapp.label">
+                            <netuix:meta name="helpid" content="J2EE.webapp.webappmonitorrunning.title;j2ee"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="WebAppModuleMonitorRunningPortlet"
+                                                          contentUri="/PortalConfig/webapp/WebAppMonitorRunning.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the monitoring servlets tab -->
+                          <netuix:page markupName="page" definitionLabel="WebAppModuleMonitorServletsPage"
+                                       presentationClass="page-content"
+                                       title="tab.servlets.label">
+                            <netuix:meta name="helpid" content="J2EE.webapp.webappmonitorservlets.title;j2ee"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="WebAppModuleMonitorServletsPortlet"
+                                                          contentUri="/PortalConfig/webapp/WebAppMonitorServlets.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the monitoring sessions tab -->
+                          <netuix:page markupName="page" definitionLabel="WebAppModuleMonitorSessionsPage"
+                                       presentationClass="page-content"
+                                       title="tab.sessions.label">
+                            <netuix:meta name="helpid" content="J2EE.webapp.webappmonitorsessions.title;j2ee"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="WebAppModuleMonitorSessionsPortlet"
+                                                          contentUri="/PortalConfig/webapp/WebAppMonitorSessions.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the monitoring pageflows tab -->
+                          <netuix:page markupName="page" definitionLabel="WebAppModuleMonitorPageFlows"
+                                       presentationClass="page-content"
+                                       title="tab.pageflows.label">
+                            <netuix:meta name="helpid" content="J2EE.webapp.webappmonitorpageflows.title;j2ee"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="WebAppModuleMonitorPageFlowsPortlet"
+                                                          contentUri="/PortalConfig/webapp/WebAppMonitorPageFlows.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the monitoring work tab -->
+                          <netuix:page markupName="page" definitionLabel="WebAppModuleMonitorWorkPage"
+                                       presentationClass="page-content"
+                                       title="tab.workload.label">
+                            <netuix:meta name="helpid" content="J2EE.webapp.webappmonitorworkload.title;j2ee"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="WebAppModuleMonitorWorkPortlet"
+                                                          contentUri="/PortalConfig/webapp/WebAppMonitorWorkload.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the monitoring web service clients tab -->
+                          <netuix:page markupName="page" definitionLabel="WebAppModuleMonitorWebServiceClientsPage"
+                                       presentationClass="page-content"
+                                       title="tab.webserviceclients.label">
+                            <netuix:meta name="helpid"
+                                         content="J2EE.webservice.componentmonitorwebserviceclients.title;j2ee"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet"
+                                                          instanceLabel="WebAppModuleMonitorWebServiceClientsPortlet"
+                                                          contentUri="/PortalConfig/webservice/ComponentMonitorWebServiceClients.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                        </netuix:content>
+                      </netuix:book>
+                    </netuix:content>
+                  </netuix:book>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the WebAppPageFlowsBook configuration pages -->
+      <netuix:book definitionLabel="WebAppPageFlowsBook" title="book.title" markupName="book"
+                   backingFile="com.bea.console.utils.AppDeploymentBackingFile"
+                   threadsafe="true"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="WebAppPageFlowsPages" title="not.used"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:book markupName="book" definitionLabel="WebAppPageFlowsTabsBook" title="AppBook">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+                      <!-- Definition for the Overview tab -->
+                      <netuix:page markupName="page" definitionLabel="WebAppMonitorPageFlowActions"
+                                   presentationClass="page-content"
+                                   title="tab.overview.label">
+                        <netuix:meta name="helpid" content="J2EE.webapp.webappmonitorpageflowactions.title;j2ee"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                              <netuix:portlet definitionLabel="WebAppMonitorPageFlowActionsPortlet">
+                                <netuix:strutsContent module="/j2ee" action="WebAppMonitorPageFlowActions"
+                                                      refreshAction="WebAppMonitorPageFlowActions"/>
+                              </netuix:portlet>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                    </netuix:content>
+                  </netuix:book>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the WebAppTunablesGeneralDelete assistant page -->
+      <netuix:book definitionLabel="WebAppTunablesGeneralDelete" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.delete.variable.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="WebAppTunablesGeneralDeletePage"
+                       title="not.used"
+                       hidden="true">
+            <netuix:meta name="helpid" content="J2EE.webapp.stop.title;j2ee"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="WebAppTunablesGeneralDeletePortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/webapp/tunablesgeneraldelete/Flow.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the WebAppTunablesLoggingDelete assistant page -->
+      <netuix:book definitionLabel="WebAppTunablesLoggingDelete" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.delete.variable.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="WebAppTunablesLoggingDeletePage"
+                       title="not.used"
+                       hidden="true">
+            <netuix:meta name="helpid" content="J2EE.webapp.stop.title;j2ee"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="WebAppTunablesLoggingDeletePortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/webapp/tunablesloggingdelete/Flow.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- definition for the edit WebApp Module Roles URL Pattern assistant -->
+      <netuix:book definitionLabel="WebAppModuleEditRolesURLPatternBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.webapp.module.urlpattern.roles.edit.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="WebAppModuleEditRolesURLPatternPage"
+                       title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid"
+                         content="J2EE.webapp.module.urlpatterns.role.manage.page.title;j2ee"/>
+            <netuix:meta name="breadcrumb" content="assistant.webapp.module.urlpattern.roles.edit.title"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="WebAppModuleEditRolesURLPatternPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/webapp/urlpattern/roles/edit/module/EditModuleRolesURLPattern.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- definition for the create WebApp Module Roles URL Pattern assistant -->
+      <netuix:book definitionLabel="WebAppModuleCreateRolesURLPatternBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.webapp.module.urlpattern.roles.create.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="WebAppModuleCreateRolesURLPatternPage"
+                       title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid"
+                         content="J2EE.webapp.module.urlpatterns.role.create.page.title;j2ee"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="WebAppModuleCreateRolesURLPatternPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/webapp/urlpattern/roles/create/module/CreateModuleRolesURLPattern.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- definition for the delete WebApp Module Roles URL Pattern assistant -->
+      <netuix:book definitionLabel="WebAppModuleDeleteRolesURLPatternBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.webapp.module.urlpattern.roles.delete.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="WebAppModuleDeleteRolesURLPatternPage"
+                       title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid"
+                         content="J2EE.webapp.module.urlpatterns.role.delete.page.title;j2ee"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="WebAppModuleDeleteRolesURLPatternPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/webapp/urlpattern/roles/delete/module/DeleteWebAppModuleRolesURLPattern.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- definition for the create WebApp Application Roles URL Pattern assistant -->
+      <netuix:book definitionLabel="WebAppApplicationCreateRolesURLPatternBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.webapp.application.urlpattern.roles.create.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="WebAppApplicationCreateRolesURLPatternPage"
+                       title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid"
+                         content="J2EE.webapp.application.urlpatterns.role.create.page.title;j2ee"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="WebAppApplicationCreateRolesURLPatternPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/webapp/urlpattern/roles/create/app/CreateAppRolesURLPattern.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- definition for the edit WebApp Application Roles URL Pattern assistant -->
+      <netuix:book definitionLabel="WebAppApplicationEditRolesURLPatternBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.webapp.application.urlpattern.roles.edit.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="WebAppApplicationEditRolesURLPatternPage"
+                       title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid"
+                         content="J2EE.webapp.application.urlpatterns.role.manage.page.title;j2ee"/>
+            <netuix:meta name="breadcrumb"
+                         content="assistant.webapp.application.urlpattern.roles.edit.title"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="WebAppApplicationEditRolesURLPatternPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/webapp/urlpattern/roles/edit/app/EditAppRolesURLPattern.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- definition for the delete WebApp Application Roles URL Pattern assistant -->
+      <netuix:book definitionLabel="WebAppApplicationDeleteRolesURLPatternBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.webapp.application.urlpattern.roles.delete.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="WebAppApplicationDeleteRolesURLPatternPage"
+                       title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid"
+                         content="J2EE.webapp.application.urlpatterns.role.delete.page.title;j2ee"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="WebAppApplicationDeleteRolesURLPatternPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/webapp/urlpattern/roles/delete/app/DeleteWebAppApplicationRolesURLPattern.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- definition for the create webapp application roles assistant -->
+      <netuix:book definitionLabel="WebAppApplicationRolesCreate" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.webapp.application.roles.create.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <!-- definition for webapp application roles table -->
+        <netuix:content>
+          <!-- definition for webapp application create roles page -->
+          <netuix:page markupName="page" definitionLabel="WebAppApplicationCreateRolesPage"
+                       title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid" content="J2EE.webapp.application.role.create.page.title;j2ee"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="WebAppApplicationCreateRolesPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/webapp/roles/create/app/CreateApplicationRole.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- definition for the edit standalone webapp application roles page. -->
+      <netuix:book definitionLabel="WebAppApplicationRolesEdit" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.webapp.application.roles.edit.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="WebAppApplicationEditRolesPage"
+                       title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid" content="J2EE.webapp.application.role.manage.page.title;j2ee"/>
+            <netuix:meta name="breadcrumb" content="assistant.webapp.application.roles.edit.title"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="WebAppApplicationEditRolesPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/webapp/roles/edit/app/EditWebAppApplicationRoles.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- definition for the delete standalone webapp application roles page. -->
+      <netuix:book definitionLabel="WebAppApplicationRolesDelete" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.webapp.application.roles.delete.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="WebAppApplicationDeleteRolesPage"
+                       title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid" content="J2EE.webapp.application.role.delete.page.title;j2ee"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="WebAppApplicationDeleteRolesPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/webapp/roles/delete/app/DeleteApplicationRole.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- definition for the create WebApp Application Policies URL Pattern assistant -->
+      <netuix:book definitionLabel="WebAppApplicationCreatePoliciesURLPatternBook"
+                   markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.webapp.application.urlpattern.policy.create.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page"
+                       definitionLabel="WebAppApplicationCreatePoliciesURLPatternPage"
+                       title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid"
+                         content="J2EE.webapp.application.urlpatterns.policy.create.page.title;j2ee"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="WebAppApplicationCreatePoliciesURLPatternPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/webapp/urlpattern/policies/create/app/CreateAppPoliciesURLPattern.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- definition for the delete WebApp Application Policies URL Pattern assistant -->
+      <netuix:book definitionLabel="WebAppApplicationDeletePoliciesURLPatternBook"
+                   markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.webapp.application.urlpattern.policy.delete.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page"
+                       definitionLabel="WebAppApplicationDeletePoliciesURLPatternPage"
+                       title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid"
+                         content="J2EE.webapp.application.urlpatterns.policy.delete.page.title;j2ee"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="WebAppApplicationDeletePoliciesURLPatternPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/webapp/urlpattern/policies/delete/app/DeleteAppPoliciesURLPattern.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- definition for the create WebApp Module Policies URL Pattern assistant -->
+      <netuix:book definitionLabel="WebAppModuleCreatePoliciesURLPatternBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.webapp.module.urlpattern.policy.create.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="WebAppModuleCreatePoliciesURLPatternPage"
+                       title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid"
+                         content="J2EE.webapp.module.urlpatterns.policy.create.page.title;j2ee"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="WebAppModuleCreatePoliciesURLPatternPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/webapp/urlpattern/policies/create/module/CreateModulePoliciesURLPattern.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- definition for the delete WebApp Module Policies URL Pattern assistant -->
+      <netuix:book definitionLabel="WebAppModuleDeletePoliciesURLPatternBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.webapp.module.urlpattern.policy.delete.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="WebAppModuleDeletePoliciesURLPatternPage"
+                       title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid"
+                         content="J2EE.webapp.module.urlpatterns.policy.delete.page.title;j2ee"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="WebAppModuleDeletePoliciesURLPatternPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/webapp/urlpattern/policies/delete/module/DeleteModulePoliciesURLPattern.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- definition for the edit webapp module url pattern policies page. -->
+      <netuix:book definitionLabel="WebAppModulePoliciesURLPatternEdit" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.webapp.module.urlpattern.policy.edit.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="WebAppModuleEditPoliciesURLPatternPage"
+                       title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid"
+                         content="J2EE.webapp.module.urlpatterns.policy.manage.page.title;j2ee"/>
+            <netuix:meta name="breadcrumb"
+                         content="assistant.webapp.module.urlpattern.policy.edit.title"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="WebAppModuleEditPoliciesURLPatternPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/webapp/urlpattern/policies/edit/module/EditModulePoliciesURLPattern.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- definition for the edit URLPattern policies page. -->
+      <netuix:book definitionLabel="WebAppURLPatternPoliciesEdit" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.webapp.application.urlpattern.policy.edit.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="WebAppApplicationEditPoliciesURLPatternPage"
+                       title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid"
+                         content="J2EE.webapp.application.urlpatterns.policy.manage.page.title;j2ee"/>
+            <netuix:meta name="breadcrumb"
+                         content="assistant.webapp.application.urlpattern.policy.edit.title"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="WebAppApplicationEditPoliciesURLPatternPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/webapp/urlpattern/policies/edit/app/EditAppPoliciesURLPattern.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the WebApp Application Work Manager creation assistant page -->
+      <netuix:book definitionLabel="WebAppApplicationCreateWorkManagerBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.create.requestclass.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="WebAppApplicationCreateWorkManager"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="J2EE.app.work.createworkmanager.page.title;j2ee"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="WebAppApplicationCreateWorkManagerPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/webapp/createappworkmanager/Flow.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the WebApp Application Work Manager deletion assistant page -->
+      <netuix:book definitionLabel="WebAppApplicationDeleteWorkManagerBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.delete.requestclass.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="WebAppApplicationDeleteWorkManager"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="J2EE.app.work.deleteworkmanager.page.title;j2ee"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="WebAppApplicationDeleteWorkManagerPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/webapp/deleteappworkmanager/Flow.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the WebApp Module Work Manager creation assistant page -->
+      <netuix:book definitionLabel="WebAppModuleCreateWorkManagerBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.create.requestclass.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="WebAppModuleCreateWorkManager"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="J2EE.app.work.createworkmanager.page.title;j2ee"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="WebAppModuleCreateWorkManagerPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/webapp/createmoduleworkmanager/Flow.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the WebApp Module Work Manager deletion assistant page -->
+      <netuix:book definitionLabel="WebAppModuleDeleteWorkManagerBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.delete.requestclass.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="WebAppModuleDeleteWorkManager"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="J2EE.app.work.deleteworkmanager.page.title;j2ee"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="WebAppModuleDeleteWorkManagerPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/webapp/deletemoduleworkmanager/Flow.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+    </netuix:content>
+  </netuix:book>
+</portal:root>

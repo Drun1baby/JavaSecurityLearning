@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portal:root xmlns:netuix="http://www.bea.com/servers/netuix/xsd/controls/netuix/1.0.0"
+             xmlns:html="http://www.w3.org/1999/xhtml-netuix-modified/1.0.0"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:portal="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0"
+             xsi:schemaLocation="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0 portal-support-1_0_0.xsd">
+<!--
+    Definition file for the Library pages in the j2ee subsystem
+    of the WebLogic Server administration console.
+
+    There is one main branch in this book:
+
+     - LibraryBook is used for a Library deployment of any type
+
+    Copyright (c) 2005,2011, Oracle and/or its affiliates. All rights reserved.
+-->
+  <!-- Definition for the LibraryBook configuration pages -->
+  <netuix:book definitionLabel="LibraryBook" title="book.title" markupName="book"
+               backingFile="com.bea.console.utils.GeneralBackingFile"
+               threadsafe="true"
+               presentationClass="wlsc-frame">
+    <netuix:titlebar/>
+    <netuix:content>
+      <netuix:page markupName="page" definitionLabel="LibraryApplicationPages" title="not.used"
+                   hidden="true">
+        <netuix:content>
+          <netuix:layout type="no" markupName="NoLayout">
+            <netuix:placeholder usingFlow="false" markupName="ph1">
+              <netuix:book markupName="book" definitionLabel="LibraryTabsBook" title="AppBook">
+                <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                <netuix:content>
+                  <!-- Definition for the Overview tab -->
+                  <netuix:page markupName="page" definitionLabel="LibraryOverviewPage"
+                               presentationClass="page-content"
+                               title="tab.overview.label">
+                    <netuix:meta name="helpid" content="J2EE.library.overview.title;j2ee"/>
+                    <netuix:meta name="breadcrumb-context" content="handle"/>
+                    <netuix:meta name="configuration-page" content="Library"/>
+                    <netuix:content>
+                      <netuix:layout type="no" markupName="NoLayout">
+                        <netuix:placeholder usingFlow="false" markupName="ph1">
+                          <netuix:portlet definitionLabel="LibraryOverviewPortlet">
+                            <netuix:strutsContent module="/j2ee" action="LibraryOverview" refreshAction="LibraryOverview"/>
+                          </netuix:portlet>
+                        </netuix:placeholder>
+                      </netuix:layout>
+                    </netuix:content>
+                  </netuix:page>
+                  <!-- Definition for the targets tab -->
+                  <netuix:page markupName="page" definitionLabel="LibraryTargetsPage"
+                               presentationClass="page-content"
+                               title="tab.targets.label">
+                    <netuix:meta name="helpid" content="J2EE.library.targets.title;j2ee"/>
+                    <netuix:content>
+                      <netuix:layout type="no" markupName="NoLayout">
+                        <netuix:placeholder usingFlow="false" markupName="ph1">
+                          <netuix:portlet definitionLabel="LibraryTargetsPortlet">
+                            <netuix:strutsContent module="/j2ee" action="LibraryTargets" refreshAction="LibraryTargets"/>
+                          </netuix:portlet>
+                        </netuix:placeholder>
+                      </netuix:layout>
+                    </netuix:content>
+                  </netuix:page>
+                  <!-- Definition for the notes tab -->
+                  <netuix:page markupName="page" definitionLabel="LibraryNotesPage"
+                               presentationClass="page-content"
+                               title="tab.notes.label">
+                    <netuix:meta name="helpid" content="J2EE.library.notes.title;j2ee"/>
+                    <netuix:content>
+                      <netuix:layout type="no" markupName="NoLayout">
+                        <netuix:placeholder usingFlow="false" markupName="ph1">
+                          <netuix:portlet definitionLabel="LibraryNotesPortlet">
+                            <netuix:strutsContent module="/j2ee" action="LibraryNotes" refreshAction="LibraryNotes"/>
+                          </netuix:portlet>
+                        </netuix:placeholder>
+                      </netuix:layout>
+                    </netuix:content>
+                  </netuix:page>
+                </netuix:content>
+              </netuix:book>
+            </netuix:placeholder>
+          </netuix:layout>
+        </netuix:content>
+      </netuix:page>
+    </netuix:content>
+  </netuix:book>
+</portal:root>

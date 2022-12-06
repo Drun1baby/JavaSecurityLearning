@@ -1,0 +1,104 @@
+/*
+    Request Performance portlet styles
+*/
+#explorer {
+  padding: 5px;    
+}
+#requestNoteData {
+  padding: 5px;
+  overflow-x:auto;
+  overflow-y:auto;
+}
+#requestData {
+  padding: 5px;
+  overflow-x:auto;
+  overflow-y:auto;
+}
+.treeView {
+  border:1px solid #AAAAAA;
+  height: 300px;
+  width : 99%;
+}
+
+/* Tree styles */
+.outerrootbar {
+  background-color: transparent;
+  border: 1px solid #000000;
+  width: 52px;
+  padding-right: 1px;
+  height: 10px;
+  display: inline-block;
+  vertical-align: middle;
+  -moz-border-radius: 4px; -webkit-border-radius: 4px;
+}
+.innerrootbar {
+  background-color:#3399FF;
+  height: 10px;
+  display: inline-block;
+  vertical-align: top;
+  -moz-border-radius: 4px 0 0 4px; -webkit-border-radius: 4px 0 0 4px;
+  margin-bottom: 1px;
+}
+.outerchildbar {
+  background-color: transparent;
+  border: 1px solid #000000;
+  width: 52px;
+  padding-right: 1px;
+  height:10px;
+  display: inline-block;
+  vertical-align: middle;
+  -moz-border-radius: 4px; -webkit-border-radius: 4px;
+}
+.innerchildbar {
+  background-color:#00CC33;
+  height: 10px;
+  display: inline-block;
+  vertical-align: top;
+  -moz-border-radius: 4px 0 0 4px; -webkit-border-radius: 4px 0 0 4px;
+}
+
+.datatable {
+  background-color:#567596;
+  border-collapse:separate;
+  border-spacing:1px;  
+}
+
+.datatable th {
+  background-color:#CFDBEF;
+  border-left:1px solid #FFFFFF;
+  border-top:1px solid #FFFFFF;
+  height:25px;
+  padding:4px;
+  text-align:left;
+  vertical-align:middle;
+}
+
+.datatable tr.rowEven td {
+  background-color:#FFFFFF;
+}
+
+.datatable tr.rowOdd td {
+  background-color:#F6F6F6;
+}
+
+.datatable td {
+  padding:4px;
+  text-align:left;
+}
+
+.sortascicon {
+  background: url(../images/sort_up.gif) no-repeat;
+  background-position: center right;
+}
+
+.sortdescicon {
+  background: url(../images/sort_down.gif) no-repeat;
+  background-position: center right;
+}
+
+.intervalFieldsHidden {
+ display: inline;
+}
+.intervalFieldsShown {
+ display: block;
+}

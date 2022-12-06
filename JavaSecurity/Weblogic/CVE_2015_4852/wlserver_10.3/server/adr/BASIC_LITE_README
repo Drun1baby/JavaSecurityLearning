@@ -1,0 +1,14 @@
+Basic Lite Package Information 
+============================== 
+Sat Nov 27 17:26:59 CST 2010
+Client Shared Library 32-bit - 11.2.0.2.0
+
+Windows NT Version V5.2 Service Pack 2 
+CPU                 : 2 - type 586, 2 Physical Cores
+Process Affinity    : 0x0x00000000
+Memory (Avail/Total): Ph:7347M/7935M, Ph+PgF:11416M/11824M, VA:1966M/2047M VM name             : VMWare Version (6)
+
+Operating in ORACLE_HOME environment.
+Small timezone file = C:\ADE\aime_831249\oracle\oracore\zoneinfo\timezone_14.dat
+Large timezone file = C:\ADE\aime_831249\oracle\oracore\zoneinfo\timezlrg_14.dat
+

@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portal:root xmlns:netuix="http://www.bea.com/servers/netuix/xsd/controls/netuix/1.0.0"
+             xmlns:html="http://www.w3.org/1999/xhtml-netuix-modified/1.0.0"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:portal="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0"
+             xsi:schemaLocation="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0 portal-support-1_0_0.xsd">
+<!--
+    Definition file for the WorkContextResource pages
+    of the WebLogic Server administration console.
+
+    Copyright (c) 2005,2011, Oracle and/or its affiliates. All rights reserved.
+-->
+  <netuix:book definitionLabel="WorkContext" title="book.title" markupName="book"
+               presentationClass="invisible">
+    <netuix:content>
+      <netuix:book definitionLabel="WorkContextBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="workcontext.page.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="WorkContextPages" title="not.used"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:book markupName="book" definitionLabel="WorkContextSecurityBook"
+                               title="workcontext.page.title">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+                          <!-- Definition for the WorkContext roles sub tab -->
+                          <netuix:page markupName="page" definitionLabel="WorkContextRolesTablePage"
+                                   presentationClass="page-content"
+                                   title="tab.roles.label">
+                            <netuix:meta name="helpid" content="Security.workcontext.role.table.title;security"/>
+                            <netuix:meta name="breadcrumb" content="tab.roles.label;key"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="WorkContextRolesTablePortlet">
+                                <netuix:strutsContent module="/security" action="WorkContextRolesTable"
+                                                      refreshAction="WorkContextRolesTable"/>
+                              </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the WorkContext policies sub tab -->
+                          <netuix:page markupName="page" definitionLabel="WorkContextPoliciesPage"
+                                   presentationClass="page-content"
+                                   title="tab.policies.label">
+                            <netuix:meta name="helpid" content="Security.workcontext.policies.title;security"/>
+                            <netuix:meta name="breadcrumb" content="tab.policies.label;key"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="WorkContextPoliciesPortlet">
+                                <netuix:pageflowContent contentUri="/com/bea/console/actions/security/workcontext/policies/edit/EditWorkContextPolicies.jpf"
+                                                        action="begin"
+                                                        refreshAction="begin"/>
+                              </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                        </netuix:content>
+                  </netuix:book>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the WorkContextPathTable page -->
+      <netuix:book definitionLabel="WorkContextPathTableBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="workcontext.table.page.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="WorkContextPathTablePage" title="not.used"
+                       hidden="true"
+                       presentationClass="page-table">
+            <netuix:meta name="helpid" content="Security.workcontext.path.table.title;security"/>
+            <netuix:meta name="breadcrumb" content="workcontext.table.page.title"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="WorkContextPathTablePortlet">
+                    <netuix:strutsContent module="/security" action="WorkContextPathTable"
+                                          refreshAction="WorkContextPathTable"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- definiton for the edit WorkContext roles pages -->
+      <netuix:book definitionLabel="WorkContextRolesBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.workcontext.roles.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="WorkContextRolesPage" title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid" content="Security.workcontext.roles.title;security"/>
+            <netuix:meta name="breadcrumb" content="assistant.workcontext.roles.title"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="WorkContextRolesPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/security/workcontext/roles/edit/EditWorkContextRoles.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- definition for the create WorkContext roles assistant -->
+      <netuix:book definitionLabel="CreateWorkContextRoleBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.workcontext.role.create.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="CreateWorkContextRolePage" title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid" content="Security.workcontext.role.create.title;security"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="CreateWorkContextRolePortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/security/workcontext/roles/create/CreateWorkContextRole.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- definition for the delete WorkContext roles assistant -->
+      <netuix:book definitionLabel="DeleteWorkContextRoleBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.workcontext.role.delete.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="DeleteWorkContextRolePage" title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid" content="Security.workcontext.role.delete.title;security"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="DeleteWorkContextRolePortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/security/workcontext/roles/delete/DeleteWorkContextRole.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- definition for the create WorkContext Path assistant -->
+      <netuix:book definitionLabel="CreateWorkContextPathBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.workcontext.path.create.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="CreateWorkContextPathPage" title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="Security.workcontext.path.create.title;security"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="CreateWorkContextPathPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/security/workcontext/path/create/CreatePath.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- definition for the delete WorkContext path assistant -->
+      <netuix:book definitionLabel="DeleteWorkContextPathBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.workcontext.path.delete.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="DeleteWorkContextPathPage" title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="Security.workcontext.path.delete.title;security"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="DeleteWorkContextPathPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/security/workcontext/path/delete/DeletePath.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+    </netuix:content>
+  </netuix:book>
+</portal:root>

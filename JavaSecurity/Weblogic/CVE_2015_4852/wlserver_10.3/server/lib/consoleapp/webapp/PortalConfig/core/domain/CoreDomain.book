@@ -1,0 +1,1170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portal:root xmlns:netuix="http://www.bea.com/servers/netuix/xsd/controls/netuix/1.0.0"
+             xmlns:html="http://www.w3.org/1999/xhtml-netuix-modified/1.0.0"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:portal="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0"
+             xsi:schemaLocation="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0 portal-support-1_0_0.xsd">
+<!--
+    Definition file for the pages in the core.domain subsystem
+    of the WebLogic Server administration console
+
+    Copyright (c) 2004,2011, Oracle and/or its affiliates. All rights reserved.
+-->
+  <netuix:book definitionLabel="DomainBook" title="book.title" markupName="book"
+               backingFile="com.bea.console.utils.DomainCompatibilitySecurityBacking"
+               threadsafe="true"
+               presentationClass="invisible">
+    <netuix:content>
+      <netuix:book definitionLabel="CoreDomainBook" title="book.title" markupName="book"
+                   presentationClass="wlsc-frame"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="CoreDomainPages" title="not.used"
+                       hidden="false">
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:book markupName="book" definitionLabel="CoreDomainConfigGeneralBook"
+                               title="CoreDomainBook">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+                      <!-- Definition for the config tab -->
+                      <netuix:book markupName="book" definitionLabel="DomainconfigTabPage"
+                                   title="tab.config.label">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                        <netuix:content>
+                          <!-- Definition for the general tab -->
+                          <netuix:page markupName="page" definitionLabel="DomainConfigGeneralPage"
+                                       presentationClass="page-content"
+                                       title="tab.general.label">
+                            <netuix:meta name="helpid" content="Core.core.domain.domainconfiggeneral.title;core"/>
+                            <netuix:meta name="configuration-page" content="Domain"/>
+                            <netuix:meta name="breadcrumb-context" content="handle"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="DomainConfigGeneralPortlet">
+                                    <netuix:strutsContent module="/core" action="DomainConfigGeneral" refreshAction="DomainConfigGeneral"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the jta tab -->
+                          <netuix:page markupName="page" definitionLabel="DomainConfigJtaPage"
+                                       presentationClass="page-content"
+                                       title="tab.jta.label">
+                            <netuix:meta name="helpid" content="Core.core.domain.domainconfigjta.title;core"/>
+                            <netuix:meta name="breadcrumb-context" content="handle"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="DomainConfigJtaPortlet">
+                                    <netuix:strutsContent module="/core" action="DomainConfigJta" refreshAction="DomainConfigJta"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the jpa tab -->
+                          <netuix:page markupName="page" definitionLabel="DomainConfigJpaPage"
+                                       presentationClass="page-content"
+                                       title="tab.jpa.label">
+                            <netuix:meta name="helpid" content="Core.core.domain.domainconfigjpa.title;core"/>
+                            <netuix:meta name="breadcrumb-context" content="handle"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="DomainConfigJpaPortlet">
+                                    <netuix:strutsContent module="/core" action="DomainConfigJpa" refreshAction="DomainConfigJpa"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the EJB tab -->
+                          <netuix:page markupName="page" definitionLabel="DomainConfigEJBPage"
+                                       presentationClass="page-content"
+                                       title="tab.ejbcontainer.label">
+                            <netuix:meta name="helpid" content="Core.core.domain.domainconfigejb.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="DomainConfigEJBPortlet">
+                                    <netuix:strutsContent module="/core" action="DomainConfigEJB" refreshAction="DomainConfigEJB"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the WebApp tab -->
+                          <netuix:page markupName="page" definitionLabel="DomainConfigWebAppPage"
+                                       presentationClass="page-content"
+                                       title="tab.webapp.label">
+                            <netuix:meta name="helpid" content="Core.core.domain.domainconfigwebapp.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="DomainConfigWebAppPortlet">
+                                    <netuix:strutsContent module="/core" action="DomainConfigWebApp" refreshAction="DomainConfigWebApp"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the logging tab -->
+                          <netuix:page markupName="page" definitionLabel="DomainConfigLoggingPage"
+                                       presentationClass="page-content"
+                                       title="tab.logging.label">
+                            <netuix:meta name="helpid" content="Core.core.domain.domainconfiglogging.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="DomainConfigLoggingPortlet">
+                                    <netuix:strutsContent module="/core" action="DomainConfigLogging" refreshAction="DomainConfigLogging"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the log filter table tab -->
+                          <netuix:page markupName="page" definitionLabel="DomainConfigLogFilterTablePage"
+                                       presentationClass="page-content"
+                                       title="tab.logfiltertable.label">
+                            <netuix:meta name="helpid" content="Core.core.domain.logfiltertable.title;core"/>
+                            <netuix:meta name="breadcrumb-context" content="handle"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="DomainConfigLogFilterTablePortlet">
+                                    <netuix:strutsContent module="/core" action="CoreDomainConfigLogFilterTable"
+                                                          refreshAction="CoreDomainConfigLogFilterTable"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                        </netuix:content>
+                      </netuix:book>
+                      <!-- Definition for the monitor tab -->
+                      <netuix:book markupName="book" definitionLabel="DomainmonitorTabPage"
+                                   title="tab.monitor.label">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                        <netuix:content>
+                          <!-- Definition for the health tab -->
+                          <netuix:page markupName="page" definitionLabel="DomainMonitorHealthPage"
+                                       backingFile="com.bea.console.utils.PreferencesBackingFile"
+                                       threadsafe="true"
+                                       presentationClass="page-content"
+                                       title="tab.health.label">
+                            <netuix:meta name="helpid" content="Core.core.domain.domainmonitorhealth.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="DomainMonitorHealthPortlet">
+                                    <netuix:strutsContent module="/core" action="DomainMonitorHealth" refreshAction="DomainMonitorHealth"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the servers tab -->
+                          <netuix:page markupName="page" definitionLabel="DomainMonitorServersPage"
+                                       presentationClass="page-content"
+                                       title="tab.servers.label">
+                            <netuix:meta name="helpid" content="Core.core.domain.domainmonitorservers.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="DomainMonitorServersPortlet">
+                                    <netuix:strutsContent module="/core" action="DomainMonitorServers"
+                                                          refreshAction="DomainMonitorServers"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the clusters tab -->
+                          <netuix:page markupName="page" definitionLabel="DomainMonitorClustersPage"
+                                       presentationClass="page-content"
+                                       title="tab.clusters.label">
+                            <netuix:meta name="helpid" content="Core.core.domain.domainmonitorclusters.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="DomainMonitorClustersPortlet">
+                                    <netuix:strutsContent module="/core" action="DomainMonitorClusters"
+                                                          refreshAction="DomainMonitorClusters"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the migration tab -->
+                          <netuix:page markupName="page" definitionLabel="DomainMonitorMigrationPage"
+                                       presentationClass="page-content"
+                                       title="tab.migration.label">
+                            <netuix:meta name="helpid" content="Core.core.domain.domainmonitormigration.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="DomainMonitorMigrationPortlet">
+                                    <netuix:strutsContent module="/core" action="DomainMonitorMigration"
+                                                          refreshAction="DomainMonitorMigration"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                        </netuix:content>
+                      </netuix:book>
+                      <!-- Definition for the control tab -->
+                      <netuix:book markupName="book" definitionLabel="DomainControlPage" title="tab.control.label">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                        <netuix:content>
+                          <!-- Definition for the server control tab -->
+                          <netuix:page markupName="page" definitionLabel="DomainControlServersPage"
+                                       presentationClass="page-content"
+                                       title="tab.servers.label">
+                            <netuix:meta name="helpid" content="Core.core.domain.servercontrol.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="DomainControlServersPortlet">
+                                    <netuix:strutsContent module="/core" action="DomainControl" refreshAction="DomainControl"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the System Resource control tab -->
+                          <netuix:page markupName="page" definitionLabel="DomainControlSystemResourceTablePage"
+                                       presentationClass="page-content"
+                                       title="tab.systemresources.label">
+                            <netuix:meta name="helpid"
+                                         content="Core.core.domain.domaincontrolsystemresourcetable.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="DomainControlSystemResourceTablePortlet">
+                                    <netuix:strutsContent module="/core" action="DomainControlSystemResources"
+                                                          refreshAction="DomainControlSystemResources"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                        </netuix:content>
+                      </netuix:book>
+                      <!-- Definition for the security tab -->
+                      <netuix:book markupName="book" definitionLabel="DomainSecurityconfigTabPage"
+                                   backingFile="com.bea.console.utils.DomainSecurityBackingFile"
+                                   title="tab.security.label">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                        <netuix:content>
+                          <!-- Definition for the general tab -->
+                          <netuix:page markupName="page" definitionLabel="DomainSecuritygeneralTabPage"
+                                       presentationClass="page-content"
+                                       title="tab.general.label">
+                            <netuix:meta name="helpid"
+                                         content="Security.security.domain.domainconfiggeneral.title;security"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="SecurityDomainDomainConfigGeneralPortlet">
+                                    <netuix:strutsContent module="/security" action="SecurityDomainDomainConfigGeneral"
+                                                          refreshAction="SecurityDomainDomainConfigGeneral"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the filter tab -->
+                          <netuix:page markupName="page" definitionLabel="DomainSecurityfilterTabPage"
+                                       presentationClass="page-content"
+                                       title="tab.filter.label">
+                            <netuix:meta name="helpid"
+                                         content="Security.security.domain.domainconfigfilter.title;security"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="SecurityDomainDomainConfigFilterPortlet">
+                                    <netuix:strutsContent module="/security" action="SecurityDomainDomainConfigFilter"
+                                                          refreshAction="SecurityDomainDomainConfigFilter"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the unlock user tab -->
+                          <netuix:page markupName="page" definitionLabel="DomainUnlockUserPage"
+                                       presentationClass="page-content"
+                                       title="tab.unlockuser.label">
+                            <netuix:meta name="helpid" content="Core.core.domain.unlockuser.title;core"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="DomainUnlockUserPortlet">
+                                    <netuix:strutsContent module="/core" action="DomainUnlockUser" refreshAction="DomainUnlockUser"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the EmbeddedLDAP tab -->
+                          <netuix:page markupName="page" definitionLabel="DomainSecurityEmbeddedLDAPTabPage"
+                                       presentationClass="page-content"
+                                       title="tab.EmbeddedLDAP.label">
+                            <netuix:meta name="helpid"
+                                         content="Security.security.domain.domainconfigembeddedldap.title;security"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="SecurityDomainDomainConfigEmbeddedLDAPPortlet">
+                                    <netuix:strutsContent module="/security" action="SecurityDomainDomainConfigEmbeddedLDAP"
+                                                          refreshAction="SecurityDomainDomainConfigEmbeddedLDAP"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the Admin Resource Roles tab -->
+                          <netuix:page markupName="page" definitionLabel="DomainSecurityRolesTablePage"
+                                       presentationClass="page-content"
+                                       title="tab.roles.label">
+                            <netuix:meta name="helpid"
+                                         content="Security.security.domain.domainconfigrole.table.title;security"/>
+                            <netuix:meta name="breadcrumb" content="tab.roles.label;key"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="SecurityDomainDomainConfigRolesTablePortlet">
+                                    <netuix:strutsContent module="/security" action="SecurityDomainDomainConfigRolesTable"
+                                                          refreshAction="SecurityDomainDomainConfigRolesTable"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the Admin Resource Policies tab -->
+                          <netuix:book markupName="book" definitionLabel="DomainSecurityPoliciesBook"
+                                       title="tab.policies.label">
+                            <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level2"/>
+                            <netuix:content>
+                              <!-- Definition for the Admin Resource User Lockout Policies page -->
+                              <netuix:page markupName="page" definitionLabel="DomainSecurityPoliciesUserLockoutPage"
+                                           presentationClass="page-content"
+                                           title="tab.userlockout.label">
+                                <netuix:meta name="helpid"
+                                             content="Security.security.domain.domainconfigpolicies.userlockout.title;security"/>
+                                <netuix:meta name="breadcrumb" content="tab.userlockout.label;key"/>
+                                <netuix:content>
+                                  <netuix:layout type="no" markupName="NoLayout">
+                                    <netuix:placeholder usingFlow="false" markupName="ph1">
+                                      <netuix:portlet definitionLabel="SecurityDomainDomainConfigPoliciesUserLockoutPortlet">
+                                        <netuix:pageflowContent contentUri="/com/bea/console/actions/security/domain/policies/userlockout/EditDomainUserLockoutPolicies.jpf"
+                                                                action="begin"
+                                                                refreshAction="begin"/>
+                                      </netuix:portlet>
+                                    </netuix:placeholder>
+                                  </netuix:layout>
+                                </netuix:content>
+                              </netuix:page>
+                              <!-- End Definition for the Admin Resource User Lockout Policies page -->
+                              <!-- Definition for the Admin Resource Config Policies page -->
+                              <netuix:page markupName="page" definitionLabel="DomainSecurityPoliciesConfigPage"
+                                           presentationClass="page-content"
+                                           title="tab.config.label">
+                                <netuix:meta name="breadcrumb" content="tab.config.label;key"/>
+                                <netuix:meta name="helpid"
+                                             content="Security.security.domain.domainconfigpolicies.config.title;security"/>
+                                <netuix:content>
+                                  <netuix:layout type="no" markupName="NoLayout">
+                                    <netuix:placeholder usingFlow="false" markupName="ph1">
+                                      <netuix:portlet definitionLabel="SecurityDomainDomainConfigPoliciesConfigPortlet">
+                                        <netuix:pageflowContent contentUri="/com/bea/console/actions/security/domain/policies/config/EditDomainConfigPolicies.jpf"
+                                                                action="begin"
+                                                                refreshAction="begin"/>
+                                      </netuix:portlet>
+                                    </netuix:placeholder>
+                                  </netuix:layout>
+                                </netuix:content>
+                              </netuix:page>
+                              <!-- EndDefinition for the Admin Resource Config Policies page -->
+                              <!-- Definition for the Admin Resource FileUpload Policies page -->
+                              <netuix:page markupName="page" definitionLabel="DomainSecurityPoliciesFileUploadPage"
+                                           presentationClass="page-content"
+                                           title="tab.fileupload.label">
+                                <netuix:meta name="helpid"
+                                             content="Security.security.domain.domainconfigpolicies.fileupload.title;security"/>
+                                <netuix:meta name="breadcrumb" content="tab.fileupload.label;key"/>
+                                <netuix:content>
+                                  <netuix:layout type="no" markupName="NoLayout">
+                                    <netuix:placeholder usingFlow="false" markupName="ph1">
+                                      <netuix:portlet definitionLabel="SecurityDomainDomainConfigPoliciesFileUploadPortlet">
+                                        <netuix:pageflowContent contentUri="/com/bea/console/actions/security/domain/policies/fileupload/EditDomainFileUploadPolicies.jpf"
+                                                                action="begin"
+                                                                refreshAction="begin"/>
+                                      </netuix:portlet>
+                                    </netuix:placeholder>
+                                  </netuix:layout>
+                                </netuix:content>
+                              </netuix:page>
+                              <!-- EndDefinition for the Admin Resource FileUpload Policies page -->
+                              <!-- Definition for the Admin Resource FileDownload Policies page -->
+                              <netuix:page markupName="page" definitionLabel="DomainSecurityPoliciesFileDownloadPage"
+                                           presentationClass="page-content"
+                                           title="tab.filedownload.label">
+                                <netuix:meta name="helpid"
+                                             content="Security.security.domain.domainconfigpolicies.filedownload.title;security"/>
+                                <netuix:meta name="breadcrumb" content="tab.filedownload.label;key"/>
+                                <netuix:content>
+                                  <netuix:layout type="no" markupName="NoLayout">
+                                    <netuix:placeholder usingFlow="false" markupName="ph1">
+                                      <netuix:portlet definitionLabel="SecurityDomainDomainConfigPoliciesFileDownloadPortlet">
+                                        <netuix:pageflowContent contentUri="/com/bea/console/actions/security/domain/policies/filedownload/EditDomainFileDownloadPolicies.jpf"
+                                                                action="begin"
+                                                                refreshAction="begin"/>
+                                      </netuix:portlet>
+                                    </netuix:placeholder>
+                                  </netuix:layout>
+                                </netuix:content>
+                              </netuix:page>
+                              <!-- EndDefinition for the Admin Resource FileDownload Policies page -->
+                              <!-- Definition for the Admin Resource ViewLog Policies page -->
+                              <netuix:page markupName="page" definitionLabel="DomainSecurityPoliciesViewLogPage"
+                                           presentationClass="page-content"
+                                           title="tab.viewlog.label">
+                                <netuix:meta name="helpid"
+                                             content="Security.security.domain.domainconfigpolicies.viewlog.title;security"/>
+                                <netuix:meta name="breadcrumb" content="tab.viewlog.label;key"/>
+                                <netuix:content>
+                                  <netuix:layout type="no" markupName="NoLayout">
+                                    <netuix:placeholder usingFlow="false" markupName="ph1">
+                                      <netuix:portlet definitionLabel="SecurityDomainDomainConfigPoliciesViewLogPortlet">
+                                        <netuix:pageflowContent contentUri="/com/bea/console/actions/security/domain/policies/viewlog/EditDomainViewLogPolicies.jpf"
+                                                                action="begin"
+                                                                refreshAction="begin"/>
+                                      </netuix:portlet>
+                                    </netuix:placeholder>
+                                  </netuix:layout>
+                                </netuix:content>
+                              </netuix:page>
+                              <!-- EndDefinition for the Admin Resource ViewLog Policies page -->
+                              <!-- Definition for the Admin Resource IdentityAssertion Policies page -->
+                              <netuix:page markupName="page" definitionLabel="DomainSecurityPoliciesIdentityAssertionPage"
+                                           presentationClass="page-content"
+                                           title="tab.identityassertion.label">
+                                <netuix:meta name="helpid"
+                                             content="Security.security.domain.domainconfigpolicies.identityassertion.title;security"/>
+                                <netuix:meta name="breadcrumb" content="tab.identityassertion.label;key"/>
+                                <netuix:content>
+                                  <netuix:layout type="no" markupName="NoLayout">
+                                    <netuix:placeholder usingFlow="false" markupName="ph1">
+                                      <netuix:portlet definitionLabel="SecurityDomainDomainConfigPoliciesIdentityAssertionPortlet">
+                                        <netuix:pageflowContent contentUri="/com/bea/console/actions/security/domain/policies/identityassertion/EditDomainIdentityAssertionPolicies.jpf"
+                                                                action="begin"
+                                                                refreshAction="begin"/>
+                                      </netuix:portlet>
+                                    </netuix:placeholder>
+                                  </netuix:layout>
+                                </netuix:content>
+                              </netuix:page>
+                              <!-- EndDefinition for the Admin Resource IdentityAssertion Policies page -->
+                              <!-- Definition for the Admin Resource SSH Policies page -->
+                              <netuix:page markupName="page" definitionLabel="DomainSecurityPoliciesSSHPage"
+                                           presentationClass="page-content"
+                                           title="tab.ssh.label">
+                                <netuix:meta name="helpid"
+                                             content="Security.security.domain.domainconfigpolicies.ssh.title;security"/>
+                                <netuix:meta name="breadcrumb" content="tab.ssh.label;key"/>
+                                <netuix:content>
+                                  <netuix:layout type="no" markupName="NoLayout">
+                                    <netuix:placeholder usingFlow="false" markupName="ph1">
+                                      <netuix:portlet definitionLabel="SecurityDomainDomainConfigPoliciesSSHPortlet">
+                                        <netuix:pageflowContent contentUri="/com/bea/console/actions/security/domain/policies/ssh/EditDomainSSHPolicies.jpf"
+                                                                action="begin"
+                                                                refreshAction="begin"/>
+                                      </netuix:portlet>
+                                    </netuix:placeholder>
+                                  </netuix:layout>
+                                </netuix:content>
+                              </netuix:page>
+                              <!-- EndDefinition for the Admin Resource SSH Policies page -->
+                            </netuix:content>
+                          </netuix:book>
+                          <!-- End Definition for the Admin Resource Policies tab -->
+                          <!-- Definition for the Certificate Validation tab -->
+                          <netuix:book markupName="book" definitionLabel="DomainSecurityCertRevocBook"
+                                       title="tab.certrevoc.label">
+                            <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level2"/>
+                            <netuix:content>
+                              <!-- Definition for the Certificate Validation Config General tab -->
+                              <netuix:page markupName="page" definitionLabel="DomainSecurityCertRevocConfigGeneralPage"
+                                           presentationClass="page-content"
+                                           title="tab.general.label">
+                                <netuix:meta name="helpid"
+                                             content="Security.security.domain.certrevoc.config.general.title;security"/>
+                                <netuix:content>
+                                  <netuix:layout type="no" markupName="NoLayout">
+                                    <netuix:placeholder usingFlow="false" markupName="ph1">
+                                      <netuix:portlet definitionLabel="DomainSecurityCertRevocConfigGeneralPortlet">
+                                        <netuix:strutsContent module="/security" action="SecurityDomainCertRevocConfigGeneral"
+                                                              refreshAction="SecurityDomainCertRevocConfigGeneral"/>
+                                      </netuix:portlet>
+                                    </netuix:placeholder>
+                                  </netuix:layout>
+                                </netuix:content>
+                              </netuix:page>
+                              <!-- End Definition for the Certificate Validation Config General tab -->
+                              <!-- Definition for the Certificate Validation Config OCSP tab -->
+                              <netuix:page markupName="page" definitionLabel="DomainSecurityCertRevocConfigOCSPPage"
+                                           presentationClass="page-content"
+                                           title="tab.certrevoc.ocsp.label">
+                                <netuix:meta name="helpid"
+                                             content="Security.security.domain.certrevoc.config.ocsp.title;security"/>
+                                <netuix:content>
+                                  <netuix:layout type="no" markupName="NoLayout">
+                                    <netuix:placeholder usingFlow="false" markupName="ph1">
+                                      <netuix:portlet definitionLabel="DomainSecurityCertRevocConfigOCSPPortlet">
+                                        <netuix:strutsContent module="/security" action="SecurityDomainCertRevocConfigOCSP"
+                                                              refreshAction="SecurityDomainCertRevocConfigOCSP"/>
+                                      </netuix:portlet>
+                                    </netuix:placeholder>
+                                  </netuix:layout>
+                                </netuix:content>
+                              </netuix:page>
+                              <!-- End Definition for the Certificate Validation Config OCSP tab -->
+                              <!-- Definition for the Certificate Validation Config CRL tab -->
+                              <netuix:page markupName="page" definitionLabel="DomainSecurityCertRevocConfigCRLPage"
+                                           presentationClass="page-content"
+                                           title="tab.certrevoc.crl.label">
+                                <netuix:meta name="helpid"
+                                             content="Security.security.domain.certrevoc.config.crl.title;security"/>
+                                <netuix:content>
+                                  <netuix:layout type="no" markupName="NoLayout">
+                                    <netuix:placeholder usingFlow="false" markupName="ph1">
+                                      <netuix:portlet definitionLabel="DomainSecurityCertRevocConfigCRLPortlet">
+                                        <netuix:strutsContent module="/security" action="SecurityDomainCertRevocConfigCRL"
+                                                              refreshAction="SecurityDomainCertRevocConfigCRL"/>
+                                      </netuix:portlet>
+                                    </netuix:placeholder>
+                                  </netuix:layout>
+                                </netuix:content>
+                              </netuix:page>
+                              <!-- End Definition for the Certificate Validation Config CRL tab -->
+                              <!-- Definition for the Certificate Validation Certificate Authorities tab -->
+                              <netuix:page markupName="page" definitionLabel="DomainSecurityCertRevocCATablePage"
+                                           presentationClass="page-content"
+                                           title="tab.certrevoc.cas.label">
+                                <netuix:meta name="helpid"
+                                             content="Security.security.domain.certrevoc.ca.table.title;security"/>
+                                <netuix:content>
+                                  <netuix:layout type="no" markupName="NoLayout">
+                                    <netuix:placeholder usingFlow="false" markupName="ph1">
+                                      <netuix:portlet definitionLabel="DomainSecurityConfigCertRevocCATablePortlet">
+                                        <netuix:strutsContent module="/security" action="SecurityDomainCertRevocCATable"
+                                                              refreshAction="SecurityDomainCertRevocCATable"/>
+                                      </netuix:portlet>
+                                    </netuix:placeholder>
+                                  </netuix:layout>
+                                </netuix:content>
+                              </netuix:page>
+                              <!-- End Definition for the Certificate Validation Certificate Authorities tab -->
+                            </netuix:content>
+                          </netuix:book>
+                          <!-- End Definition for the Certificate Validation tab -->
+                        </netuix:content>
+                      </netuix:book>
+                      <!-- Definition for the WebServiceSecurity tab -->
+                      <netuix:page markupName="page" definitionLabel="DomainWebServiceSecurityPage"
+                                   presentationClass="page-content"
+                                   title="tab.webservicesecurity.label">
+                        <netuix:meta name="helpid"
+                                     content="J2EE.webservice.webservicesecurity.webservicesecuritytable.title;j2ee"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                              <netuix:portlet definitionLabel="WebServiceSecurityTablePortlet">
+                                <netuix:strutsContent module="/j2ee" action="WebServiceSecurityTable"
+                                                      refreshAction="WebServiceSecurityTable"/>
+                              </netuix:portlet>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the notes tab -->
+                      <netuix:page markupName="page" definitionLabel="DomainNotesPage"
+                                   presentationClass="page-content"
+                                   title="tab.notes.label">
+                        <netuix:meta name="helpid" content="Core.core.domain.domainnotes.title;core"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="DomainNotesPortlet"
+                                                      contentUri="/PortalConfig/core/CoreNotes.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                    </netuix:content>
+                  </netuix:book>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+          <netuix:page markupName="page" definitionLabel="DomainSecurityCertRevocCAPages"
+                       title="not.used"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:book markupName="book" definitionLabel="DomainSecurityCertRevocCABook"
+                               title="DomainSecurityCertRevocCABook">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+                      <!-- Definition for the config tab -->
+                      <netuix:book markupName="book" definitionLabel="DomainCertSecurityRevocCAConfigBook"
+                                   title="tab.config.label">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                        <netuix:content>
+                          <!-- Definition for the general tab -->
+                          <netuix:page markupName="page" definitionLabel="DomainSecurityCertRevocCAConfigGeneralPage"
+                                       presentationClass="page-content"
+                                       title="tab.general.label">
+                            <netuix:meta name="helpid"
+                                         content="Security.security.domain.certrevoc.ca.config.general.title;security"/>
+                            <netuix:meta name="configuration-page" content="CertRevocCa"/>
+                            <netuix:meta name="breadcrumb-context" content="handle"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="DomainSecurityCertRevocCAConfigGeneralPortlet">
+                                    <netuix:strutsContent module="/security" action="SecurityDomainCertRevocCAConfigGeneral"
+                                                          refreshAction="SecurityDomainCertRevocCAConfigGeneral"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- End Definition for the general tab -->
+                          <!-- Definition for the OCSP tab -->
+                          <netuix:page markupName="page" definitionLabel="DomainSecurityCertRevocCAConfigOCSPPage"
+                                       presentationClass="page-content"
+                                       title="tab.certrevoc.ocsp.label">
+                            <netuix:meta name="helpid"
+                                         content="Security.security.domain.certrevoc.ca.config.ocsp.title;security"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="DomainSecurityCertRevocCAConfigOCSPPortlet">
+                                    <netuix:strutsContent module="/security" action="SecurityDomainCertRevocCAConfigOCSP"
+                                                          refreshAction="SecurityDomainCertRevocCAConfigOCSP"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- End Definition for the OCSP tab -->
+                          <!-- Definition for the CRL tab -->
+                          <netuix:page markupName="page" definitionLabel="DomainSecurityCertRevocCAConfigCRLPage"
+                                       presentationClass="page-content"
+                                       title="tab.certrevoc.crl.label">
+                            <netuix:meta name="helpid"
+                                         content="Security.security.domain.certrevoc.ca.config.crl.title;security"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="DomainSecurityCertRevocCAConfigCRLPortlet">
+                                    <netuix:strutsContent module="/security" action="SecurityDomainCertRevocCAConfigCRL"
+                                                          refreshAction="SecurityDomainCertRevocCAConfigCRL"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- End Definition for the CRL tab -->
+                        </netuix:content>
+                      </netuix:book>
+                      <!-- End Definition for the config tab -->
+                      <!-- Definition for the notes tab -->
+                      <netuix:page markupName="page" definitionLabel="DomainSecurityCertRevocCANotesPage"
+                                   presentationClass="page-content"
+                                   title="tab.notes.label">
+                        <netuix:meta name="helpid"
+                                     content="Security.security.domain.certrevoc.ca.notes.title;security"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                              <netuix:portlet definitionLabel="DomainSecurityCertRevocCANotesPortlet">
+                                <netuix:strutsContent module="/security" action="SecurityDomainCertRevocCANotes"
+                                                      refreshAction="SecurityDomainCertRevocCANotes"/>
+                              </netuix:portlet>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- End Definition for the notes tab -->
+                    </netuix:content>
+                  </netuix:book>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the log filter creation assistant page -->
+      <netuix:book definitionLabel="CoreDomainCreateLogFilterBook" markupName="book"
+                   presentationClass="wlsc-frame"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.create.logfilter.title">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="DomainConfigLogFilterCreateLogFilter"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="Core.core.domain.createlogfilter.page.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="DomainConfigLogFilterCreateLogFilterPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/core/domain/createlogfilter/CreateLogFilter.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the log filter deletion assistant page -->
+      <netuix:book definitionLabel="CoreDomainDeleteLogFilterBook" markupName="book"
+                   presentationClass="wlsc-frame"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.delete.logfilter.title">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="DomainConfigLogFilterDeleteLogFilter"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="Core.core.domain.deletelogfilter.page.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="DomainConfigLogFilterDeleteLogFilterPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/core/domain/deletelogfilter/DeleteLogFilter.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Start Domain assistant -->
+      <netuix:book definitionLabel="CoreDomainStartBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   presentationClass="wlsc-frame"
+                   threadsafe="true"
+                   title="assistant.domain.lifecycle.title">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="CoreDomainStartDomain" title="not.used"
+                       hidden="true">
+            <netuix:meta name="helpid" content="Core.core.domain.lifecycle.page.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="CoreDomainStartDomainPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/core/domain/lifecycle/Lifecycle.jpf"
+                                            action="start"
+                                            refreshAction="start"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Shutdown Domain assistant -->
+      <netuix:book definitionLabel="CoreDomainShutdownBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   presentationClass="wlsc-frame"
+                   threadsafe="true"
+                   title="assistant.domain.lifecycle.title">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="CoreDomainShutdownDomain" title="not.used"
+                       hidden="true">
+            <netuix:meta name="helpid" content="Core.core.domain.lifecycle.page.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="CoreDomainShutdownDomainPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/core/domain/lifecycle/Lifecycle.jpf"
+                                            action="shutdown"
+                                            refreshAction="shutdown"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Force Shutdown Domain assistant -->
+      <netuix:book definitionLabel="CoreDomainForceShutdownBook" markupName="book"
+                   presentationClass="wlsc-frame"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.domain.lifecycle.title">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="CoreDomainForceShutdownDomain"
+                       title="not.used"
+                       hidden="true">
+            <netuix:meta name="helpid" content="Core.core.domain.lifecycle.page.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="CoreDomainForceShutdownDomainPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/core/domain/lifecycle/Lifecycle.jpf"
+                                            action="forceShutdown"
+                                            refreshAction="forceShutdown"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the SSL channels Domain assistant -->
+      <netuix:book definitionLabel="CoreDomainSSLChannelsBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   presentationClass="wlsc-frame"
+                   threadsafe="true"
+                   title="assistant.domain.lifecycle.title">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="CoreDomainRestartSSLChannels"
+                       title="not.used"
+                       hidden="true">
+            <netuix:meta name="helpid" content="Core.core.domain.lifecycle.page.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="CoreDomainRestartSSLChannelsPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/core/domain/restartsslchannels/Flow.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Suspend Domain assistant -->
+      <netuix:book definitionLabel="CoreDomainSuspendBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   presentationClass="wlsc-frame"
+                   threadsafe="true"
+                   title="assistant.domain.lifecycle.title">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="CoreDomainSuspendDomain" title="not.used"
+                       hidden="true">
+            <netuix:meta name="helpid" content="Core.core.domain.lifecycle.page.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="CoreDomainSuspendDomainPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/core/domain/lifecycle/Lifecycle.jpf"
+                                            action="suspend"
+                                            refreshAction="suspend"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Force Suspend Domain assistant -->
+      <netuix:book definitionLabel="CoreDomainForceSuspendBook" markupName="book"
+                   presentationClass="wlsc-frame"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.domain.lifecycle.title">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="CoreDomainForceSuspendDomain"
+                       title="not.used"
+                       hidden="true">
+            <netuix:meta name="helpid" content="Core.core.domain.lifecycle.page.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="CoreDomainForceSuspendDomainPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/core/domain/lifecycle/Lifecycle.jpf"
+                                            action="forceSuspend"
+                                            refreshAction="forceSuspend"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Resume Domain assistant -->
+      <netuix:book definitionLabel="CoreDomainResumeBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   presentationClass="wlsc-frame"
+                   threadsafe="true"
+                   title="assistant.domain.lifecycle.title">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="CoreDomainResumeDomain" title="not.used"
+                       hidden="true">
+            <netuix:meta name="helpid" content="Core.core.domain.lifecycle.page.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="CoreDomainResumeDomainPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/core/domain/lifecycle/Lifecycle.jpf"
+                                            action="resume"
+                                            refreshAction="resume"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Redeploy System Resource assistant -->
+      <netuix:book definitionLabel="CoreDomainRedeploySystemResourcesBook" markupName="book"
+                   presentationClass="wlsc-frame"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.domain.redeploysystemresources.title">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="CoreDomainRedeploySystemResources"
+                       title="not.used"
+                       hidden="true">
+            <netuix:meta name="helpid"
+                         content="Core.core.domain.redeploysystemresources.page.title;core"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="CoreDomainRedeploySystemResourcesPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/core/domain/redeploysystemresources/RedeploySystemResources.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- definition for Admin Domain Security create role assistant -->
+      <netuix:book definitionLabel="DomainSecurityCreateRoleBook" markupName="book"
+                   presentationClass="wlsc-frame"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.create.domain.security.roles.title">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="DomainSecurityCreateRolePage"
+                       title="not.used"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid"
+                         content="Security.security.domain.domainconfigrole.create.title;security"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="DomainSecurityCreateRolePortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/security/domain/roles/create/CreateDomainRole.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- definition for the Edit Admin Domain Security Roles assistant. -->
+      <netuix:book definitionLabel="DomainSecurityRolesEdit" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   presentationClass="wlsc-frame"
+                   threadsafe="true"
+                   title="assistant.edit.domain.security.roles.title">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="DomainSecurityEditRolePage" title="not.used"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid"
+                         content="Security.security.domain.domainconfigrole.manage.title;security"/>
+            <netuix:meta name="breadcrumb" content="assistant.edit.domain.security.roles.title"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="DomainSecurityEditRolePortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/security/domain/roles/edit/EditDomainRole.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- definition for the Delete Admin Domain Security Roles assistant -->
+      <netuix:book definitionLabel="DomainSecurityDeleteRolesBook" markupName="book"
+                   presentationClass="wlsc-frame"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.delete.domain.security.roles.title">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="DomainSecurityDeleteRolesPage"
+                       title="not.used"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid"
+                         content="Security.security.domain.domainconfigrole.delete.title;security"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="DomainSecurityDeleteRolesPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/security/domain/roles/delete/DeleteDomainRoles.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- definition for the JMX Resource assistant -->
+      <netuix:book definitionLabel="DomainSecuritySelectJMXResourceBook" markupName="book"
+                   presentationClass="wlsc-frame"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.jmx.policy.resource.title">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="DomainSecuritySelectJMXResourcePage"
+                       title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid"
+                         content="Security.security.domain.domainconfigpolicies.jmx.resource.title;security"/>
+            <netuix:meta name="breadcrumb" content="assistant.jmx.policy.resource.title"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="SecurityDomainDomainConfigPoliciesJMXSelectResourcePortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/security/domain/policies/jmx/resource/Flow.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- definition for the JMX Policy Editor assistant -->
+      <netuix:book definitionLabel="DomainSecurityEditJMXPolicyBook" markupName="book"
+                   presentationClass="wlsc-frame"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.jmx.policy.edit.title">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="DomainSecurityEditJMXPolicyPage"
+                       title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid"
+                         content="Security.security.domain.domainconfigpolicies.jmx.edit.title;security"/>
+            <netuix:meta name="breadcrumb" content="assistant.jmx.policy.edit.title"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="SecurityDomainDomainConfigPoliciesJMXEditPolicyPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/security/domain/policies/jmx/edit/Flow.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- definition for Domain Security Certificate Validation Create Certificate Authority assistant -->
+      <netuix:book definitionLabel="DomainSecurityCertRevocCreateCABook" markupName="book"
+                   presentationClass="wlsc-frame"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.create.domain.security.certrevoc.ca.title">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="DomainSecurityCertRevocCreateCAPage"
+                       title="not.used"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid"
+                         content="Security.security.domain.certrevoc.ca.create.title;security"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="DomainSecurityCertRevocCreateCAPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/security/domain/certrevoc/ca/create/Flow.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- definition for Domain Security Certificate Validation Delete Certificate Authority assistant -->
+      <netuix:book definitionLabel="DomainSecurityCertRevocDeleteCABook" markupName="book"
+                   presentationClass="wlsc-frame"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.delete.domain.security.certrevoc.ca.title">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="DomainSecurityCertRevocDeleteCAPage"
+                       title="not.used"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid"
+                         content="Security.security.domain.certrevoc.ca.delete.title;security"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="DomainSecurityCertRevocDeleteCAPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/security/domain/certrevoc/ca/delete/Flow.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+    </netuix:content>
+  </netuix:book>
+</portal:root>

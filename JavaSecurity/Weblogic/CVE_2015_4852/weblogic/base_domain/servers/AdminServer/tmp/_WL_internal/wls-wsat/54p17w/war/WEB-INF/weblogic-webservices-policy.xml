@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<webservice-policy-ref xmlns="http://xmlns.oracle.com/weblogic/webservice-policy-ref" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.oracle.com/weblogic/webservice-policy-ref http://xmlns.oracle.com/weblogic/webservice-policy-ref/1.0/webservice-policy-ref.xsd">
+	<!--this following configuration is commented out on purpose, this file just works 
+	  as a placeholder so it can merge with deploy plan generated at deployment time.
+	  see weblogic.deploy.internal.InternalAppProcessor
+	-->
+	<!--<port-policy>
+    <port-name>RegistrationPortTypeRPCPort</port-name>
+    <ws-policy>
+      <uri>wsat-policy.xml</uri>
+      <direction>both</direction>
+    </ws-policy>
+    <ws-policy>
+      <uri>wsat-auth-policy.xml</uri>
+      <direction>inbound</direction>
+    </ws-policy>
+  </port-policy>
+  -->
+</webservice-policy-ref>

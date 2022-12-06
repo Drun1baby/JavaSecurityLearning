@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF8">
+<title></title>
+<script src="javascript/lib/jquery-min.js"></script>
+<script src="javascript/lib/json2-min.js"></script>
+<!--[if IE]><script src="javascript/lib/excanvas.js"></script><![endif]-->
+<link rel="stylesheet" type="text/css" href="framework/skins/wlsconsole/css/general.css">
+<link rel="stylesheet" type="text/css" href="framework/skins/wlsconsole/css/console.css">
+<link rel="stylesheet" type="text/css" href="css/lib/ui-min.css">
+<link rel="stylesheet" type="text/css" href="css/lib/ui.theme.css">
+<link rel="stylesheet" type="text/css" href="css/dashboard-min.css">
+</head>
+<body>
+<div id="hd" class="wlsc-header">
+<div id="console-header-logo">
+<a href="#repetitive_links" class="skiplinks"><img class="dol10n" alt="sec508.skiplinks" src="images/spacer.gif"></a>
+<div>
+<img id="console-title" class="dol10n" alt="logo.title" src="framework/skins/wlsconsole/images/Branding_WeblogicConsole.gif">
+</div>
+</div>
+<div id="global-links">
+<ul>
+<li class="first"><a class="dol10n" href="#preferences">toolbar.preferences</a></li>
+<li><a class="dol10n" href="#" title="toolbar.help.newwindow">toolbar.help</a></li>
+<li><a id="logoutLink" class="dol10n" href="#">toolbar.logout</a></li>
+</ul>
+<span id="pageStatus" class="busy">
+<img id="pageIdle" class="dol10n" alt="page.status.idle" title="page.status.idle" src="framework/skins/wlsconsole/images/pageIdle.gif">
+<img id="pageBusy" class="dol10n" alt="page.status.busy" title="page.status.busy" src="framework/skins/wlsconsole/images/pageBusy.gif">
+</span>
+</div>
+<div id="header-trans">
+<img alt="" src="framework/skins/wlsconsole/images/gradient-white-none.png">
+</div>
+</div>
+<div id="main">
+<div id="mainMenuBar">
+<div class="ui-toolbar">
+</div>
+<div id="stamps">
+<span class="stampPoller"><span class="icon pollerInactive"></span></span>
+<span class="stampSeparator">&nbsp;</span>
+<span class="dol10n stampPrompt">toolbar.welcome</span> <span id="user" class="stampValue"></span>
+<span class="stampSeparator">&nbsp;</span>
+<span class="dol10n stampPrompt">toolbar.connectedto</span> <span id="domain" class="stampValue"></span>
+</div>
+</div>
+<div id="mainContent">
+<div id="explorer">
+<div id="explorerTabs" style="display:none">
+<ul>
+<li><a class="dol10n" href="#viewList">main.tabs.viewList</a></li>
+<li><a class="dol10n" href="#metricBrowser">main.tabs.metricBrowser</a></li>
+</ul>
+<div id="viewList">
+<div class="ui-toolbar">
+</div>
+<div id="viewTree">
+</div>
+</div>
+<div id="metricBrowser">
+<div class="ctrlRow">
+<div><label class="dol10n" for="mbServers">mb.servers</label></div>
+<select id="mbServers">
+</select>
+<button class="dol10n" id="mbGo" title="mb.servers.button.title">mb.servers.button</button>
+</div>
+<div class="ctrlRow">
+<input id="mbHarvestedOnly" type="checkbox" class="dol10n" title="mb.showHarvestedOnly.tip"><label class="dol10n" title="mb.showHarvestedOnly.tip" for="mbHarvestedOnly">mb.showHarvestedOnly</label>
+</div>
+<div class="ctrlRow">
+<input id="mbAllTypes" type="checkbox" class="dol10n" title="mb.showAllTypes.tip"><label class="dol10n" title="mb.showAllTypes.tip" for="mbAllTypes">mb.showAllTypes</label>
+</div>
+<div id="mbTypesFL" class="ctrlRow">
+</div>
+<div id="mbInstancesFL" class="ctrlRow">
+</div>
+<div id="mbMetricsFL" class="ctrlRow">
+</div>
+</div>
+</div>
+</div>
+<div id="content">
+<a id="repetitive_links" class="skiplinks"><img class="dol10n" alt="sec508.endlinks" src="images/spacer.gif"></a>
+<div id="viewArea">
+</div>
+</div>
+</div>
+</div>
+<div id="preferencesDialog" style="display: none">
+<div class="messages" style="display:none;">
+</div>
+<form tabindex='-1'>
+<div class='ctrlRow'>
+<label class="dol10n" for="prefSampleInterval">global.prefs.sampleInterval</label>
+<input id="prefSampleInterval" type="text" class="text" size="4"> <span class="promptUnits dol10n">global.prefs.sampleInterval.units</span>
+</div>
+<div class='ctrlRow'>
+<label class="dol10n" for="prefMaxSamples">global.prefs.maxSamples</label>
+<input id="prefMaxSamples" type="text" class="text" size="4">
+</div>
+<div class='ctrlRow'>
+<label class="dol10n" for="prefDefaultTimeRange">global.prefs.defaultTimeRange</label>
+<input id="prefDefaultTimeRange" type="text" class="text" size="4"> <span class="promptUnits dol10n">global.prefs.defaultTimeRange.units</span>
+</div>
+<div class='ctrlRow'>
+<label class="dol10n" for="prefZoomPercent">global.prefs.zoomPercentage</label>
+<input id="prefZoomPercent" type="text" class="text" size="3"> <span class="promptUnits dol10n">global.prefs.zoomPercentage.units</span>
+</div>
+<div class='ctrlRow'>
+<label class="dol10n" for="prefDefaultChartType">global.prefs.defaultChartType</label>
+<select id="prefDefaultChartType">
+<option class="dol10n" value="barChart">chart.menu.type.bar</option>
+<option class="dol10n" value="linePlot">chart.menu.type.line</option>
+<option class="dol10n" value="scatterPlot">chart.menu.type.scatter</option>
+<option class="dol10n" value="linearVGauge">chart.menu.type.linearV</option>
+<option class="dol10n" value="linearHGauge">chart.menu.type.linearH</option>
+<option class="dol10n" value="radialGauge">chart.menu.type.radial</option>
+</select>
+</div>
+<div class='ctrlRow'>
+<label class="dol10n" for="prefShowOverview">global.prefs.overview</label>
+<select id="prefShowOverview">
+<option class="dol10n" value="always">global.prefs.overview.always</option>
+<option class="dol10n" value="whenSelected">global.prefs.overview.whenSelected</option>
+<option class="dol10n" value="never">global.prefs.overview.never</option>
+</select>
+</div>
+</form>
+</div>
+<div id="chartDialog" style="display: none">
+<div class="messages" style="display:none;">
+</div>
+<form tabindex='-1'>
+<div class='ctrlRow'>
+<label class="dol10n" for="chartTitle">chart.props.chartTitle</label>
+<input id="chartTitle" type="text" class="text" size="30">
+</div>
+<div class='ctrlRow'>
+<label class="dol10n" for="chartUnits">chart.props.units</label>
+<input id="chartUnits" type="text" class="text" size="30">
+</div>
+<div class='ctrlRow'>
+<label class="dol10n" for="chartColor">chart.props.color</label>
+<input id="chartColor" type="text" class="text" size="12">
+</div>
+<div class='ctrlRow'>
+<label class="dol10n" for="chartBackgroundColor">chart.props.backgroundColor</label>
+<input id="chartBackgroundColor" type="text" class="text" size="12">
+</div>
+<div class='ctrlRow'>
+<label class="dol10n" for="chartHighlightColor">chart.props.highlightColor</label>
+<input id="chartHighlightColor" type="text" class="text" size="12">
+</div>
+<div class='ctrlRow'>
+<input id="chartAutoRange" type="checkbox"><label class="dol10n" for="chartAutoRange">chart.props.autoRange</label>
+<div class='ctrlRow'>
+<label class="dol10n" for="chartRangeMax">chart.props.rangeMax</label>
+<input id="chartRangeMax" type="text" class="text" size="10">
+</div>
+<div class='ctrlRow'>
+<label class="dol10n" for="chartRangeMin">chart.props.rangeMin</label>
+<input id="chartRangeMin" type="text" class="text" size="10">
+</div>
+</div>
+<div class='ctrlRow'>
+<label class="dol10n" for="chartThresholdMax">chart.props.thresholdMax</label>
+<input id="chartThresholdMax" type="text" class="text" size="10">
+</div>
+<div class='ctrlRow'>
+<label class="dol10n" for="chartThresholdMin">chart.props.thresholdMin</label>
+<input id="chartThresholdMin" type="text" class="text" size="10">
+</div>
+<fieldset class='ctrlRow'>
+<legend class="dol10n">chart.props.timeRange</legend>
+<div><input id="chartR1" name="chartRangeType" type="radio" value="current"><label class="dol10n" for="chartR1">chart.props.timeRangeCurrent</label></div>
+<div><input id="chartR2" name="chartRangeType" type="radio" value="custom"><label class="dol10n" for="chartR2">chart.props.timeRangeCustom</label></div>
+<div class='ctrlRow'>
+<label class="dol10n" for="chartTimeRangeStart">chart.props.timeRangeStart</label>
+<input id="chartTimeRangeStart" type="text" class="text" size="22">
+<span id="chartTimeRangeStartFormat" class="promptFormat"></span>
+</div>
+<div class='ctrlRow'>
+<label class="dol10n" for="chartTimeRangeDuration">chart.props.timeRangeDuration</label>
+<input id="chartTimeRangeDuration" type="text" class="text" size="10">
+<span class="promptFormat dol10n">chart.props.timeRangeDurationFormat</span>
+</div>
+</fieldset>
+</form>
+</div>
+<div id="chartMetricDialog" style="display: none">
+<div class="messages" style="display:none;">
+</div>
+<form tabindex='-1'>
+<div class='ctrlRow'>
+<label class="dol10n" for="metricName">chart.metric.props.name</label>
+<input id="metricName" type="text" class="text" size="30">
+</div>
+<div class='ctrlRow'>
+<span class="dol10n label">chart.metric.props.marker</span>
+<div id="metricMarkers" class="ctrl">
+</div>
+</div>
+<div class='ctrlRow'>
+<span class="dol10n label">chart.metric.props.color</span>
+<div id="metricColors" class="ctrl">
+</div>
+</div>
+</form>
+</div>
+<div id="mainMenu" style="display:none;">
+</div>
+<div id="viewListMenu" style="display:none;">
+</div>
+<script src="javascript/mvc-min.js"></script>
+<script src="i18n/mvccore.js"></script>
+<script src="i18n/dashboard.js"></script>
+<script src="javascript/lib/flot-min.js"></script>
+<script>
+// don't want to include consoleUtil.js but console-help needs this namespace
+var wls = { console: {} };
+</script>
+<script src="javascript/lib/ui-min.js"></script>
+<script src="javascript/db-min.js"></script>
+<script src="javascript/console-help.js"></script>
+</body>
+</html>

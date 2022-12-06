@@ -1,0 +1,5 @@
+[DEFAULT]
+BASEURL=http://localhost:7001/console
+[InternetShortcut]
+URL=http://localhost:7001/console
+Modified=C0D7E44DDACEC10132

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema attributeFormDefault="unqualified"
+    elementFormDefault="qualified"
+    targetNamespace="http://schemas.xmlsoap.org/ws/2004/10/wsat"
+    version="1.0"
+    xmlns:wsat="http://schemas.xmlsoap.org/ws/2004/10/wsat" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:complexType name="Notification">
+        <xsd:sequence>
+            <xsd:any maxOccurs="unbounded" minOccurs="0"
+                namespace="##other" processContents="lax"/>
+        </xsd:sequence>
+        <xsd:anyAttribute namespace="##other" processContents="lax"/>
+    </xsd:complexType>
+    <xsd:element name="Prepare" type="wsat:Notification"/>
+    <xsd:element name="Prepared" type="wsat:Notification"/>
+    <xsd:element name="Aborted" type="wsat:Notification"/>
+    <xsd:element name="ReadOnly" type="wsat:Notification"/>
+    <xsd:element name="Commit" type="wsat:Notification"/>
+    <xsd:element name="Rollback" type="wsat:Notification"/>
+    <xsd:element name="Committed" type="wsat:Notification"/>
+    <xsd:element name="Replay" type="wsat:Notification"/>
+    <xsd:simpleType name="Vote">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="VoteCommit"/>
+            <xsd:enumeration value="VoteRollback"/>
+            <xsd:enumeration value="VoteReadOnly"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:element name="PrepareResponse">
+        <xsd:complexType>
+            <xsd:attribute name="vote" type="wsat:Vote"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:simpleType name="Outcome">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="Commit"/>
+            <xsd:enumeration value="Rollback"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:element name="ReplayResponse">
+        <xsd:complexType>
+            <xsd:attribute name="outcome" type="wsat:Outcome"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:simpleType name="ErrorCodes">
+        <xsd:restriction base="xsd:QName">
+            <xsd:enumeration value="wsat:InconsistentInternalState"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <!-- Policy assertions -->
+    <xsd:element name="ATAssertion">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:any maxOccurs="unbounded" minOccurs="0"
+                    namespace="##other" processContents="lax"/>
+            </xsd:sequence>
+            <xsd:anyAttribute namespace="##other" processContents="lax"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="ATAlwaysCapability">
+        <xsd:complexType>
+            <xsd:anyAttribute namespace="##other" processContents="lax"/>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

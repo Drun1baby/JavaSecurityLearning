@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) OASIS Open 2006.  -->
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:wscoor="http://docs.oasis-open.org/ws-tx/wscoor/2006/06" 
+xmlns:soap11="http://schemas.xmlsoap.org/wsdl/soap/" 
+xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" 
+targetNamespace="http://docs.oasis-open.org/ws-tx/wscoor/2006/06">
+  <wsdl:types>
+    <xs:schema>
+      <xs:import
+          namespace='http://docs.oasis-open.org/ws-tx/wscoor/2006/06'
+          schemaLocation='wstx-wscoor-1.1-schema-200701.xsd' />
+    </xs:schema>
+  </wsdl:types> 
+  <!-- Messages -->
+  <wsdl:message name="CreateCoordinationContext">
+    <wsdl:part name="parameters" element="wscoor:CreateCoordinationContext"/>
+  </wsdl:message>
+  <wsdl:message name="CreateCoordinationContextResponse">
+    <wsdl:part name="parameters" element="wscoor:CreateCoordinationContextResponse"/>
+  </wsdl:message>
+  <wsdl:message name="Register">
+    <wsdl:part name="parameters" element="wscoor:Register"/>
+  </wsdl:message>
+  <wsdl:message name="RegisterResponse">
+    <wsdl:part name="parameters" element="wscoor:RegisterResponse"/>
+  </wsdl:message>
+  <!-- Port Types -->
+  <wsdl:portType name="RegistrationPortType">
+    <wsdl:operation name="RegisterOperation">
+      <wsdl:input message="wscoor:Register"
+	   wsam:Action="http://docs.oasis-open.org/ws-tx/wscoor/2006/06/Register"/>
+      <wsdl:output message="wscoor:RegisterResponse"
+	   wsam:Action="http://docs.oasis-open.org/ws-tx/wscoor/2006/06/RegisterResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+
+  <wsdl:portType name="RegistrationRequesterPortType">
+    <wsdl:operation name="RegisterResponse">
+      <wsdl:input message="wscoor:RegisterResponse" wsam:Action="http://docs.oasis-open.org/ws-tx/wscoor/2006/06/RegisterResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+
+  <wsdl:portType name="RegistrationCoordinatorPortType">
+    <wsdl:operation name="RegisterOperation">
+      <wsdl:input message="wscoor:Register" wsam:Action="http://docs.oasis-open.org/ws-tx/wscoor/2006/06/Register"/>
+    </wsdl:operation>
+  </wsdl:portType>
+
+
+  <wsdl:binding name="RegistrationBinding" type="wscoor:RegistrationPortType">
+    <soap11:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="RegisterOperation">
+      <soap11:operation style="document"/>
+      <wsdl:input wsam:Action="http://docs.oasis-open.org/ws-tx/wscoor/2006/06/Register">
+        <soap11:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output wsam:Action="http://docs.oasis-open.org/ws-tx/wscoor/2006/06/RegisterResponse">
+        <soap11:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+
+  <wsdl:binding name="RegistrationCoordinatorBinding" type="wscoor:RegistrationCoordinatorPortType">
+    <soap11:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="RegisterOperation">
+      <soap11:operation soapAction="http://docs.oasis-open.org/ws-tx/wscoor/2006/06/Register" style="document"/>
+      <wsdl:input>
+        <soap11:body parts="parameters" use="literal"/>
+      </wsdl:input>
+    </wsdl:operation>
+  </wsdl:binding>
+
+  <wsdl:binding name="RegistrationRequesterBinding" type="wscoor:RegistrationRequesterPortType">
+    <soap11:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="RegisterResponse">
+      <soap11:operation soapAction="http://docs.oasis-open.org/ws-tx/wscoor/2006/06/RegisterResponse" style="document"/>
+      <wsdl:input>
+        <soap11:body parts="parameters" use="literal"/>
+      </wsdl:input>
+    </wsdl:operation>
+  </wsdl:binding>
+
+  <wsdl:service name="RegistrationService_V11">
+    <wsdl:port binding="wscoor:RegistrationBinding" name="RegistrationPort">
+      <soap11:address location="http://www.oracle.com"/>
+    </wsdl:port>
+	<wsdl:port binding="wscoor:RegistrationCoordinatorBinding" name="RegistrationCoordinatorPort">
+      <soap11:address location="http://www.oracle.com"/>
+    </wsdl:port>
+	<wsdl:port binding="wscoor:RegistrationRequesterBinding" name="RegistrationRequesterPort">
+      <soap11:address location="http://www.oracle.com"/>
+    </wsdl:port>
+  </wsdl:service>
+
+</wsdl:definitions>

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portal:root xmlns:netuix="http://www.bea.com/servers/netuix/xsd/controls/netuix/1.0.0"
+             xmlns:html="http://www.w3.org/1999/xhtml-netuix-modified/1.0.0"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:portal="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0"
+             xsi:schemaLocation="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0 portal-support-1_0_0.xsd">
+
+<!--
+  Definition file for the summary pages in the WebLogic Server
+  administration console. These pages provide additional information
+  and organization for subsystem or feature in the console.
+
+  Copyright (c) 2003,2011, Oracle and/or its affiliates. All rights reserved.
+-->
+  <netuix:book markupName="book" definitionLabel="EnvironmentsSummaryBook"
+               localizationBundle="global"
+               presentationClass="invisible"
+               title="summary.environments.title">
+    <netuix:content>
+      <!-- Definition for the Environment Summary page -->
+      <netuix:book markupName="book" definitionLabel="EnvironmentsSummaryPageBook"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="summary.environments.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="EnvironmentsSummaryPage" title="not.used"
+                       hidden="true"
+                       presentationClass="page-table">
+            <netuix:meta name="breadcrumb" content="summary.environments.title"/>
+            <netuix:meta name="helpid" content="Summary.summary.environmentssummary.title;summary"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="EnvironmentsSummary">
+                    <netuix:jspContent contentUri="/jsp/summary/EnvironmentsSummary.jsp"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Services Summary page -->
+      <netuix:book markupName="book" definitionLabel="ServicesSummaryBook"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="summary.services.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="ServicesSummaryPage" title="not.used"
+                       hidden="true"
+                       presentationClass="page-table">
+            <netuix:meta name="breadcrumb" content="summary.services.title"/>
+            <netuix:meta name="helpid" content="Summary.summary.servicessummary.title;summary"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="ServicesSummary">
+                    <netuix:jspContent contentUri="/jsp/summary/ServicesSummary.jsp"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Services: JMS Summary page -->
+      <netuix:book markupName="book" definitionLabel="ServicesJmsSummaryBook"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="summary.services.jms.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="ServicesJmsSummaryPage" title="not.used"
+                       hidden="true"
+                       presentationClass="page-table">
+            <netuix:meta name="breadcrumb" content="summary.services.jms.title"/>
+            <netuix:meta name="helpid" content="Summary.summary.servicesjmssummary.title;summary"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="ServicesJmsSummary">
+                    <netuix:jspContent contentUri="/jsp/summary/ServicesJmsSummary.jsp"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Compatibility Security Summary page -->
+      <netuix:book markupName="book" definitionLabel="SecurityCompatibilitySummaryBook"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="summary.compatibilitysecurity.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="SecurityCompatibilitySummaryPage"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-table">
+            <netuix:meta name="breadcrumb" content="summary.compatibilitysecurity.title"/>
+            <netuix:meta name="helpid"
+                         content="Summary.summary.compatibilitysecuritysummary.title;summary"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="CompatibilitySecuritySummary">
+                    <netuix:jspContent contentUri="/jsp/summary/CompatibilitySecuritySummary.jsp"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Interoperability Summary page -->
+      <netuix:book markupName="book" definitionLabel="InteroperabilitySummaryBook"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="summary.interoperability.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="InteroperabilitySummaryPage"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-table">
+            <netuix:meta name="breadcrumb" content="summary.interoperability.title"/>
+            <netuix:meta name="helpid" content="Summary.summary.interoperabilitysummary.title;summary"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="InteroperabilitySummary">
+                    <netuix:jspContent contentUri="/jsp/summary/InteroperabilitySummary.jsp"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Diagnostics Summary page -->
+      <netuix:book markupName="book" definitionLabel="DiagnosticsSummaryBook"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="summary.diagnostics.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="DiagnosticsSummaryPage" title="not.used"
+                       hidden="true"
+                       presentationClass="page-table">
+            <netuix:meta name="breadcrumb" content="summary.diagnostics.title"/>
+            <netuix:meta name="helpid" content="Summary.summary.diagnosticssummary.title;summary"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="DiagnosticsSummary">
+                    <netuix:jspContent contentUri="/jsp/summary/DiagnosticsSummary.jsp"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Guardian Summary page -->
+      <netuix:book markupName="book" definitionLabel="GuardianSummaryPageBook"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="summary.guardian.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="GuardianSummaryPage" title="not.used"
+                       hidden="true"
+                       presentationClass="page-table">
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="GuardianSummary">
+                    <netuix:jspContent contentUri="/jsp/summary/GuardianSummary.jsp"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+    </netuix:content>
+  </netuix:book>
+</portal:root>

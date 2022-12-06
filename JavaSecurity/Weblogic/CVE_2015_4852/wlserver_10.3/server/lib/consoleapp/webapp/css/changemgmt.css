@@ -1,0 +1,45 @@
+
+#ChangeManagerPortlet .wlsc-window-content {
+    background-color: #E7EFFC;
+}
+
+#ChangeManagerPortlet p.changelink {
+    padding: 6px;
+    background-color: #E7EFFC;
+    margin: 0px;
+    font-weight: bold;
+}
+
+#ChangeManagerPortlet p.changeliststatus {
+    padding: 4px;
+    background-color: #FFFFFF;
+    margin: 0px 2px;
+}
+
+#ChangeManagerPortlet .buttonRow {
+    padding: 4px;
+    width: 80%;
+    margin: 0px auto;
+    border: none;
+    overflow: hidden;
+}
+
+#ChangeManagerPortlet .buttonRow button {
+    width: 95%; /* Want the button to fill its container but the value 100%
+    was causing problems for IE 6 */
+}
+
+/*
+    Style for the click lock and edit message
+*/
+.changelist em {
+    color: #19355E;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.changelist {
+    padding: 8px;
+    background-color: #E7EFFC;
+    margin: 0;
+}

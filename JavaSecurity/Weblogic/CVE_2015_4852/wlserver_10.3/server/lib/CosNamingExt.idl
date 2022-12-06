@@ -1,0 +1,60 @@
+// File: CosNaming.idl
+#ifndef _COSNAMINGANY_IDL_
+#define _COSNAMINGANY_IDL_
+
+#include "CosNaming.idl"
+
+module weblogic {
+  module corba {
+    module cos {
+      module naming {
+	interface NamingContextAny : CosNaming::NamingContextExt {
+
+	  typedef wstring WStringName;
+
+	  struct WNameComponent {
+	    wstring id;
+	    CosNaming::Istring kind;
+	  };
+
+	  typedef sequence<WNameComponent> WName;
+
+	  exception TypeNotSupported {};
+	  exception NotFound { 
+	    CosNaming::NamingContext::NotFoundReason  why;
+	    WName            rest_of_name;
+	  };
+	  
+	  exception CannotProceed {
+	    CosNaming::NamingContext   cxt;
+	    WName            rest_of_name;
+	  };
+	  
+	  void    bind_any(in WName n, in any obj)    
+	    raises (NotFound, CannotProceed,
+		    CosNaming::NamingContext::InvalidName,
+		    CosNaming::NamingContext::AlreadyBound, 
+		    TypeNotSupported);
+    
+	  void    rebind_any(in WName n, in any obj)
+	    raises(NotFound, CannotProceed, 
+		   CosNaming::NamingContext::InvalidName, 
+		   TypeNotSupported);
+	  
+	  any  resolve_any (in WName n)
+	    raises (NotFound, CannotProceed,
+		    CosNaming::NamingContext::InvalidName);
+    
+	  any resolve_str_any(in WStringName n)
+	    raises (NotFound, CannotProceed,
+		    CosNaming::NamingContext::InvalidName);
+	};
+	
+	// So that we can generate an old impl base.
+	interface BindingIterator : CosNaming::BindingIterator { };
+      };
+    };
+  };
+};
+
+#endif // _COSNAMINGEXT_IDL_

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<netuix:markupDefinition xmlns:netuix="http://www.bea.com/servers/netuix/xsd/controls/netuix/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.bea.com/servers/netuix/xsd/controls/netuix/1.0.0 markup-netuix-1_0_0.xsd">
+    <netuix:locale language="en"/>
+    <netuix:markup>
+        <netuix:flowLayout
+                           title="Three Column Flow Layout" description="This layout uses the flowLayout control to create three columns in which placeables flow vertically."
+                           orientation="horizontal" htmlLayoutUri="/framework/markup/layout/threecolumn.html.txt" iconUri="/framework/markup/layout/threecolumn.gif"
+                           markupType="Layout" markupName="threeColumnFlowLayout">
+            <netuix:placeholder title="left" description="The left most placeholder in this layout."
+                                usingFlow="false" width="30%"
+                                markupType="Placeholder" markupName="threeColumnFlow_left">
+            </netuix:placeholder>
+            <netuix:placeholder title="center" description="The middle placeholder in this layout."
+                                usingFlow="false" width="40%"
+                                markupType="Placeholder" markupName="threeColumnFlow_center">
+            </netuix:placeholder>
+            <netuix:placeholder title="right" description="The right most placeholder in this layout."
+                                usingFlow="false" width="30%"
+                                markupType="Placeholder" markupName="threeColumnFlow_right">
+            </netuix:placeholder>
+        </netuix:flowLayout>
+    </netuix:markup>
+</netuix:markupDefinition>

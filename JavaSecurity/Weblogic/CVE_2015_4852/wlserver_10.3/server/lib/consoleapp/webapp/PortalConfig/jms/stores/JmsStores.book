@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portal:root xmlns:netuix="http://www.bea.com/servers/netuix/xsd/controls/netuix/1.0.0"
+             xmlns:html="http://www.w3.org/1999/xhtml-netuix-modified/1.0.0"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:portal="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0"
+             xsi:schemaLocation="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0 portal-support-1_0_0.xsd">
+<!-- 
+    Definition file for the pages in the jms.stores subsystem
+    of the WebLogic Server administration console
+    
+    Copyright (c) 2004,2009, Oracle and/or its affiliates. All rights reserved.
+-->
+  <netuix:book definitionLabel="JmsStores" title="book.title" markupName="book"
+               presentationClass="invisible">
+    <netuix:content>
+      <netuix:book definitionLabel="JmsStoresBook" title="book.title" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="JmsFileStoresPages" title="not.used"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:book markupName="book" definitionLabel="JmsStoresTabsBook" title="JmsStoresTabsBook">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+                  <!-- Definition for the FileStore config tab -->
+                  <netuix:page markupName="page" definitionLabel="JMSFileStoreConfigTabPage"
+                                   presentationClass="page-content"
+                                   title="tab.config.label">
+                        <netuix:meta name="helpid" content="JMS.jms.stores.jmsfilestoreconfig.title;jms"/>
+                        <netuix:meta name="breadcrumb-context" content="handle"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                              <netuix:portlet definitionLabel="JmsStoresJMSFileStoreConfigPortlet">
+                                <netuix:strutsContent module="/jms" action="JmsStoresJMSFileStoreConfig"
+                                                      refreshAction="JmsStoresJMSFileStoreConfig"/>
+                              </netuix:portlet>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+
+                      <!-- Definition for the monitor tab -->
+                  <netuix:book markupName="book" definitionLabel="FileStoreMonitoringBook"
+                                   title="tab.monitor.label">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                        <netuix:content>
+
+                          <netuix:page markupName="page" definitionLabel="FileStoreMonitoringPage"
+                                       presentationClass="page-content"
+                                       title="tab.statistics.label">
+                            <netuix:meta name="helpid" content="JMS.jms.stores.filestoremonitoring.title;jms"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="FileStoreMonitoringPortlet">
+                                    <netuix:strutsContent module="/jms" action="FileStoreMonitoring" refreshAction="FileStoreMonitoring"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+
+                          <netuix:page markupName="page" definitionLabel="FileStoreConnectionsPage"
+                                       presentationClass="page-content"
+                                       title="tab.connections.label">
+                            <netuix:meta name="helpid" content="JMS.jms.stores.filestoreconnections.title;jms"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="FileStoreConnectionPortlet">
+                                    <netuix:strutsContent module="/jms" action="FileStoreConnectionTable"
+                                                          refreshAction="FileStoreConnectionTable"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+
+                        </netuix:content>
+                      </netuix:book>
+
+                      <!-- Definition for the FileStore notes tab -->
+                  <netuix:page markupName="page" definitionLabel="JMSFileStoreNotesTabPage"
+                                   presentationClass="page-content"
+                                   title="tab.notes.label">
+                        <netuix:meta name="helpid" content="JMS.jms.stores.jmsfilestorenotes.title;jms"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="JmsStoresJMSFileStoreNotesPortlet"
+                                                      contentUri="/PortalConfig/jms/JMSMBeanNotes.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                    </netuix:content>
+                  </netuix:book>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+          <netuix:page markupName="page" definitionLabel="JmsJDBCStoresPages" title="not.used"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:book markupName="book" definitionLabel="JmsJDBCStoresBook" title="JmsJDBCStoresBook">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+                  <!-- Definition for the JDBCStore config tab -->
+                  <netuix:page markupName="page" definitionLabel="JMSJDBCStoreConfigTabPage"
+                                   presentationClass="page-content"
+                                   title="tab.config.label">
+                        <netuix:meta name="helpid" content="JMS.jms.stores.jmsjdbcstoreconfig.title;jms"/>
+                        <netuix:meta name="breadcrumb-context" content="handle"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                              <netuix:portlet definitionLabel="JmsStoresJMSJDBCStoreConfigPortlet">
+                                <netuix:strutsContent module="/jms" action="JmsStoresJMSJDBCStoreConfig"
+                                                      refreshAction="JmsStoresJMSJDBCStoreConfig"/>
+                              </netuix:portlet>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+
+                      <!-- Definition for the monitor tab -->
+                  <netuix:book markupName="book" definitionLabel="JDBCStoreMonitoringBook"
+                                   title="tab.monitor.label">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                        <netuix:content>
+
+                          <netuix:page markupName="page" definitionLabel="JDBCStoreMonitoringPage"
+                                       presentationClass="page-content"
+                                       title="tab.statistics.label">
+                            <netuix:meta name="helpid" content="JMS.jms.stores.jdbcstoremonitoring.title;jms"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="JDBCStoreMonitoringPortlet">
+                                    <netuix:strutsContent module="/jms" action="JDBCStoreMonitoring" refreshAction="JDBCStoreMonitoring"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+
+                          <netuix:page markupName="page" definitionLabel="JDBCStoreConnectionsPage"
+                                       presentationClass="page-content"
+                                       title="tab.connections.label">
+                            <netuix:meta name="helpid" content="JMS.jms.stores.jdbcstoreconnections.title;jms"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="JDBCStoreConnectionPortlet">
+                                    <netuix:strutsContent module="/jms" action="JDBCStoreConnectionTable"
+                                                          refreshAction="JDBCStoreConnectionTable"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+
+                        </netuix:content>
+                      </netuix:book>
+
+                      <!-- Definition for the JDBCStore notes tab -->
+                  <netuix:page markupName="page" definitionLabel="JMSJDBCStoreNotesTabPage"
+                                   presentationClass="page-content"
+                                   title="tab.notes.label">
+                        <netuix:meta name="helpid" content="JMS.jms.stores.jmsjdbcstorenotes.title;jms"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="JmsStoresJDBCStoreNotesPortlet"
+                                                      contentUri="/PortalConfig/jms/JMSMBeanNotes.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                    </netuix:content>
+                  </netuix:book>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the JMSStore table page -->
+  <netuix:book definitionLabel="JmsStoresJMSStoreTableBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="persistentstores.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="JmsStoresJMSStoreTablePage" title="not.used"
+                       hidden="true"
+                       presentationClass="page-table">
+            <netuix:meta name="helpid" content="JMS.jms.stores.jmsstore.title;jms"/>
+            <netuix:meta name="configuration-page" content="PersistentStoreRuntime"/>
+            <netuix:meta name="breadcrumb" content="persistentstores.title"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="JmsStoresJMSStoreTablePortlet">
+                    <netuix:strutsContent module="/jms" action="JmsStoresJMSStoreTable"
+                                          refreshAction="JmsStoresJMSStoreTable"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for new File Store assistant -->
+  <netuix:book definitionLabel="JmsStoresCreateJMSFileStoreBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.create.jmsfilestore.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="JmsStoresCreateJMSFileStore"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="JMS.jms.stores.createjmsfilestore.page.title;jms"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="JmsStoresCreateJMSFileStorePortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/jms/stores/createjmsfilestore/CreateJMSFileStore.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for new JDBC Store assistant -->
+  <netuix:book definitionLabel="JmsStoresCreateJMSJDBCStoreBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.create.jmsjdbcstore.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="JmsStoresCreateJMSJDBCStore"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="JMS.jms.stores.createjmsjdbcstore.page.title;jms"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="JmsStoresCreateJMSJDBCStorePortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/jms/stores/createjmsjdbcstore/CreateJMSJDBCStore.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the PersistentStore deletion assistant page -->
+  <netuix:book definitionLabel="JmsStoresDeleteJMSStoreBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.delete.persistentstore.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="JmsStoresDeleteJMSStore" title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="JMS.jms.stores.deletejmsstore.title;jms"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="JmsStoresDeleteJMSStorePortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/jms/stores/deletejmsstore/DeleteJMSStore.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the JMSStore configuration dispatcher page -->
+  <netuix:book definitionLabel="JmsStoresJMSStoreConfigBook" title="book.title"
+                   markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="JmsStoresJMSStoreConfigTabPage"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid" content="JMS.jms.stores.jmsstore.title;jms"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="JmsStoresJMSStoreConfigPortlet">
+                    <netuix:strutsContent module="/jms" action="JmsStoresJMSStoreConfig"
+                                          refreshAction="JmsStoresJMSStoreConfig"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+    </netuix:content>
+  </netuix:book>
+
+</portal:root>

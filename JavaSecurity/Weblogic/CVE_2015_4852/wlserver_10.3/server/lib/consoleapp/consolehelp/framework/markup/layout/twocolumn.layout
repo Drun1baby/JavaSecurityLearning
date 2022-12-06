@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<netuix:markupDefinition xmlns:netuix="http://www.bea.com/servers/netuix/xsd/controls/netuix/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.bea.com/servers/netuix/xsd/controls/netuix/1.0.0 markup-netuix-1_0_0.xsd">
+    <netuix:locale language="en"/>
+    <netuix:markup>
+        <netuix:gridLayout
+                           title="Two Column Layout" description="This layout uses the gridLayout control to create two columns in which placeables flow vertically. twocolumnflow.layout is simpler and outputs less markup, and therefore is generally preferred to this layout. It is being retained for backward compatibility."
+                           columns="2" htmlLayoutUri="/framework/markup/layout/twocolumn.html.txt" iconUri="/framework/markup/layout/twocolumn.gif"
+                           markupType="Layout" markupName="twoColumnLayout">
+            <netuix:placeholder title="left" description="The left most placeholder in this layout."
+                                flow="vertical" usingFlow="true" width="30%"
+                                markupType="Placeholder" markupName="twoColumn_left">
+            </netuix:placeholder>
+            <netuix:placeholder title="right" description="The right most placeholder in this layout."
+                                flow="vertical" usingFlow="true" width="70%"
+                                markupType="Placeholder" markupName="twoColumn_right">
+            </netuix:placeholder>
+        </netuix:gridLayout>
+    </netuix:markup>
+</netuix:markupDefinition>

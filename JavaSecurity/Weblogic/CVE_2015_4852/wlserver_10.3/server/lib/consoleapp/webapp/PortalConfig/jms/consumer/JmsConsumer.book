@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portal:root xmlns:netuix="http://www.bea.com/servers/netuix/xsd/controls/netuix/1.0.0"
+             xmlns:html="http://www.w3.org/1999/xhtml-netuix-modified/1.0.0"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:portal="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0"
+             xsi:schemaLocation="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0 portal-support-1_0_0.xsd">
+<!-- 
+    Definition file for the pages in the jms.consumer subsystem
+    of the WebLogic Server administration console
+    Copyright (c) 2003,2009, Oracle and/or its affiliates. All rights reserved.
+-->
+    <netuix:book definitionLabel="JmsConsumerBook" title="JmsConsumerBook" markupName="book">
+        <netuix:content>
+
+            <!-- Definition for the JMSConsumerRuntime table page -->
+            <netuix:page markupName="page" definitionLabel="JmsConsumerJMSConsumerRuntimeTablePage"
+                   title="not.used"
+                   hidden="true"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true">
+                <netuix:meta name="helpid" content="JMS.jms.consumer.jmsconsumerruntime.title;jms"/>
+                <netuix:content>
+                    <netuix:layout type="no" markupName="NoLayout">
+                        <netuix:placeholder usingFlow="false" markupName="ph1">
+                            <netuix:portlet definitionLabel="JmsConsumerJMSConsumerRuntimeTablePortlet">
+                <netuix:strutsContent module="/jms" action="JmsConsumerJMSConsumerRuntimeTable"
+                                      refreshAction="JmsConsumerJMSConsumerRuntimeTable"/>
+              </netuix:portlet>
+                        </netuix:placeholder>
+                    </netuix:layout>
+                </netuix:content>
+            </netuix:page>
+
+        </netuix:content>
+    </netuix:book>
+</portal:root>

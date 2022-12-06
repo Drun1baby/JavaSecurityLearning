@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portal:root xmlns:netuix="http://www.bea.com/servers/netuix/xsd/controls/netuix/1.0.0"
+             xmlns:html="http://www.w3.org/1999/xhtml-netuix-modified/1.0.0"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:portal="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0"
+             xsi:schemaLocation="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0 portal-support-1_0_0.xsd">
+<!-- Definition file for the pages in the WebService Security subsystem
+     of the WebLogic Server administration console
+     Copyright (c) 2003,2009, Oracle and/or its affiliates. All rights reserved.
+-->
+
+  <netuix:book definitionLabel="WebServiceSecurity" title="book.title" markupName="book"
+               presentationClass="invisible">
+    <netuix:content>
+
+      <netuix:book definitionLabel="WebServiceSecurityBook" title="book.title" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="WebServiceSecurityPages" title="not.used"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:book markupName="book" definitionLabel="WebServiceSecurityConfigTabBook"
+                               title="tab.configuration.label">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                    <netuix:content>
+                      <netuix:book markupName="book" definitionLabel="WebServiceSecurityTabBook"
+                                   title="tab.webservicesecurity.label">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                        <netuix:content>
+                          <!-- Definition for the general tab -->
+                          <netuix:page markupName="page" definitionLabel="WebServiceSecurityGeneralTabPage"
+                                       presentationClass="page-content"
+                                       title="tab.general.label">
+                            <netuix:meta name="helpid" content="J2EE.webservice.webservicesecurity.general.title;j2ee"/>    
+                            <netuix:meta name="breadcrumb-context" content="handle"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="WebServiceSecurityGeneralPortlet">
+                                    <netuix:strutsContent module="/j2ee" action="WebServiceSecurityGeneral"
+                                                          refreshAction="WebServiceSecurityGeneral"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+          
+                          <!-- Definition for the credential provider tab -->
+                          <netuix:page markupName="page" definitionLabel="WebServiceSecurityCredentialProviderTabPage"
+                                       presentationClass="page-content"
+                                       title="tab.credentialprovider.label">
+                            <netuix:meta name="helpid"
+                                         content="J2EE.webservice.webservicesecurity.credentialprovider.credentialprovidertable.title;j2ee"/>   
+                            <netuix:meta name="breadcrumb-context" content="handle"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="WebServiceSecurityCredentialProviderTablePortlet">
+                                    <netuix:strutsContent module="/j2ee" action="WebServiceSecurityCredentialProviderTable"
+                                                          refreshAction="WebServiceSecurityCredentialProviderTable"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the token handler tab -->
+                          <netuix:page markupName="page" definitionLabel="WebServiceSecurityTokenHandlerTabPage"
+                                       presentationClass="page-content"
+                                       title="tab.tokenhandler.label">
+                            <netuix:meta name="helpid"
+                                         content="J2EE.webservice.webservicesecurity.tokenhandler.tokenhandlertable.title;j2ee"/>          
+                            <netuix:meta name="breadcrumb-context" content="handle"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="WebServiceSecurityTokenHandlerTablePortlet">
+                                    <netuix:strutsContent module="/j2ee" action="WebServiceSecurityTokenHandlerTable"
+                                                          refreshAction="WebServiceSecurityTokenHandlerTable"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the timestamp tab -->
+                          <netuix:page markupName="page" definitionLabel="WebServiceSecurityTimestampTabPage"
+                                       presentationClass="page-content"
+                                       title="tab.timestamp.label">
+                            <netuix:meta name="helpid" content="J2EE.webservice.webservicesecurity.timestamp.title;j2ee"/>    
+                            <netuix:meta name="breadcrumb-context" content="handle"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="WebServiceSecurityTimestampPortlet">
+                                    <netuix:strutsContent module="/j2ee" action="WebServiceSecurityTimestamp"
+                                                          refreshAction="WebServiceSecurityTimestamp"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                        </netuix:content>
+                      </netuix:book>
+                    </netuix:content>
+                  </netuix:book>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+        </netuix:book>
+        <!-- definition for the web service security create assistant page -->
+        <netuix:book definitionLabel="CreateWebServiceSecurityBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.create.webservice.security.title"
+                   presentationClass="wlsc-frame">
+          <netuix:titlebar/>
+          <netuix:content>
+          <netuix:page markupName="page" definitionLabel="CreateWebServiceSecurityPage"
+                       title="not.used"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="J2EE.webservice.webservicesecurity.create.title;j2ee"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="CreateWebServiceSecurityPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/webservice/webservicesecurity/create/CreateWebServiceSecurity.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+          </netuix:content>
+        </netuix:book>
+        <!-- definition for the web service security delete assistant page -->
+        <netuix:book definitionLabel="DeleteWebServiceSecurityBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.delete.webservice.security.title"
+                   presentationClass="wlsc-frame">
+          <netuix:titlebar/>
+          <netuix:content>
+          <netuix:page markupName="page" definitionLabel="DeleteWebServiceSecurityPage"
+                       title="not.used"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid"
+                         content="J2EE.webservice.webservicesecurity.deletewebservicesecurity.title;j2ee"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="DeleteWebServiceSecurityPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/webservice/webservicesecurity/delete/DeleteWebServiceSecurity.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+          </netuix:content>
+        </netuix:book>
+
+    </netuix:content>
+  </netuix:book>
+
+</portal:root>

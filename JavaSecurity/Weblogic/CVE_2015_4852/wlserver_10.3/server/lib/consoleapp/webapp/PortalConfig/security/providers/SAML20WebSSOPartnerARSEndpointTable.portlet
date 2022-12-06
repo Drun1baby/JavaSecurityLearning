@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Portlet definition file for the SAML20 Web Single Sign-On Partner Artifact Resolution Service Endpoint Table page
+  in the WebLogic Server administration console.
+  
+  Copyright (c) 2006,2009, Oracle and/or its affiliates. All rights reserved.
+-->
+<portal:root
+  xmlns:portal="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0"
+  xmlns:netuix="http://www.bea.com/servers/netuix/xsd/controls/netuix/1.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0 portal-support-1_0_0.xsd">
+  <netuix:portlet definitionLabel="SAML20WebSSOPartnerARSEndpointTablePortlet">
+    <netuix:strutsContent
+      module="/security"
+      action="SecurityProvidersSAML20WebSSOPartnerARSEndpointTable"
+      refreshAction="SecurityProvidersSAML20WebSSOPartnerARSEndpointTable" />
+  </netuix:portlet>
+</portal:root>

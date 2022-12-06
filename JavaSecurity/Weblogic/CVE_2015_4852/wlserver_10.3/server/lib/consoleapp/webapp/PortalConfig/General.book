@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portal:root xmlns:netuix="http://www.bea.com/servers/netuix/xsd/controls/netuix/1.0.0"
+             xmlns:html="http://www.w3.org/1999/xhtml-netuix-modified/1.0.0"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:portal="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0"
+             xsi:schemaLocation="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0 portal-support-1_0_0.xsd">
+<!--
+    Definition file for the General console pages in the
+    WebLogic Server administration console.
+
+    There are several main stuctures in this book:
+
+
+    Copyright (c) 2004,2009, Oracle and/or its affiliates. All rights reserved.
+-->
+    <netuix:book hidden="true" definitionLabel="GeneralBook" title="book.title"
+               markupName="book"
+               presentationClass="invisible">
+        <netuix:content>
+
+            <!-- Not yet implemented -->
+            <netuix:book definitionLabel="NotYetImplemented" hidden="true" title="Not Yet Implemented"
+                   markupName="book"
+                   presentationClass="wlsc-frame">
+                <netuix:titlebar/>
+                <netuix:content>
+                <netuix:page markupName="page" definitionLabel="NotYetImplementedPage" title="not.used"
+                       hidden="true"
+                       presentationClass="page-table">
+                    <netuix:content>
+                        <netuix:layout type="no" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                                <netuix:portlet definitionLabel="NotYetImplementedPortlet">
+                    <netuix:jspContent contentUri="/jsp/common/nyi.jsp"/>
+                  </netuix:portlet>
+                            </netuix:placeholder>
+                        </netuix:layout>
+                    </netuix:content>
+                </netuix:page>
+                </netuix:content>
+            </netuix:book>
+
+            <!-- Object Unexpectedly Deleted Page -->
+            <netuix:book definitionLabel="ObjectDeletedBook" hidden="true" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="objectdeleted.title"
+                   presentationClass="wlsc-frame">
+                <netuix:titlebar/>
+                <netuix:content>
+                <netuix:page markupName="page" definitionLabel="ObjectDeletedPage" title="not.used"
+                       hidden="true"
+                       presentationClass="page-table">
+                    <netuix:content>
+                        <netuix:layout type="no" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                                <netuix:portlet definitionLabel="ObjectDeletedPortlet">
+                    <netuix:jspContent contentUri="/jsp/common/ObjectDeleted.jsp"/>
+                  </netuix:portlet>
+                            </netuix:placeholder>
+                        </netuix:layout>
+                    </netuix:content>
+                </netuix:page>
+                </netuix:content>
+            </netuix:book>
+
+            <!-- Dispatcher Page -->
+            <netuix:book definitionLabel="DispatcherBook" hidden="true" title="Not Yet Implemented"
+                   markupName="book">
+                <netuix:content>
+                <netuix:page markupName="page" definitionLabel="DispatcherPage" title="not.used"
+                       hidden="true"
+                       backingFile="com.bea.console.utils.ContextualBreadCrumb">
+                    <netuix:content>
+                        <netuix:layout type="no" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                                <netuix:portlet definitionLabel="DispatcherPortlet">
+                    <netuix:titlebar/>
+                    <netuix:strutsContent module="" action="DispatcherAction" refreshAction="DispatcherAction"/>
+                  </netuix:portlet>
+                            </netuix:placeholder>
+                        </netuix:layout>
+                    </netuix:content>
+                </netuix:page>
+                <netuix:page markupName="page" definitionLabel="DispatcherPageNotFound" title="not.used"
+                       hidden="true">
+                    <netuix:content>
+                        <netuix:layout type="no" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                                <netuix:portlet definitionLabel="DispatcherPortletNotFound">
+                    <netuix:jspContent contentUri="/jsp/common/dispatchedpagenotfound.jsp"/>
+                  </netuix:portlet>
+                            </netuix:placeholder>
+                        </netuix:layout>
+                    </netuix:content>
+                </netuix:page>
+                </netuix:content>
+            </netuix:book>
+
+            <!-- Unexpected Exception Handler Book -->
+            <netuix:book definitionLabel="UnexpectedExceptionBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="unexpected.exception"
+                   presentationClass="wlsc-frame">
+                <netuix:titlebar/>
+                <netuix:content>
+                    <netuix:page markupName="page" definitionLabel="UnexpectedExceptionPage" title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+                        <netuix:meta name="helpid" content="1234;common"/>
+                        <netuix:content>
+                            <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                    <netuix:portlet definitionLabel="UnexpectedExceptionPortlet">
+                    <netuix:jspContent contentUri="/jsp/common/UnexpectedException.jsp"/>
+                  </netuix:portlet>
+                                </netuix:placeholder>
+                            </netuix:layout>
+                        </netuix:content>
+                    </netuix:page>
+                </netuix:content>
+            </netuix:book>
+
+        </netuix:content>
+    </netuix:book>
+</portal:root>

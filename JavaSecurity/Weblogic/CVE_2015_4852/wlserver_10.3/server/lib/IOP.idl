@@ -1,0 +1,26 @@
+/**
+ * IOP idl definitions required by csiv2.idl for the thin-client. This
+ * file should never be compiled and is only required so that
+ * csiv2.idl can be compiled.
+ *
+ * @author Copyright (c) 2002 by BEA Systems, Inc. All Rights Reserved.
+ */
+#ifndef _OMG_IOP_IDL
+#define _OMG_IOP_IDL
+
+#pragma prefix "omg.org"
+
+module CORBA {
+  typedef unsigned long PolicyType;
+};
+
+module IOP {
+  typedef unsigned long ComponentId;
+  struct TaggedComponent {
+    ComponentId tag;
+    sequence <octet> component_data;
+  };
+};
+
+#endif
+

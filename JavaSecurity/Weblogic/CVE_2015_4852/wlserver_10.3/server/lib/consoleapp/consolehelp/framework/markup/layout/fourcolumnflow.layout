@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<netuix:markupDefinition xmlns:netuix="http://www.bea.com/servers/netuix/xsd/controls/netuix/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.bea.com/servers/netuix/xsd/controls/netuix/1.0.0 markup-netuix-1_0_0.xsd">
+    <netuix:locale language="en"/>
+    <netuix:markup>
+        <netuix:flowLayout
+                           title="Four Column Flow Layout" description="This layout uses the flowLayout control to create four columns in which placeables flow vertically."
+                           orientation="horizontal" htmlLayoutUri="/framework/markup/layout/fourcolumn.html.txt" iconUri="/framework/markup/layout/fourcolumn.gif"
+                           markupType="Layout" markupName="fourColumnFlowLayout">
+            <netuix:placeholder title="left" description="The left most placeholder in this layout."
+                                usingFlow="false" width="25%"
+                                markupType="Placeholder" markupName="fourColumnFlow_left">
+            </netuix:placeholder>
+            <netuix:placeholder title="leftCenter" description="The left-center placeholder in this layout."
+                                usingFlow="false" width="25%"
+                                markupType="Placeholder" markupName="fourColumnFlow_leftCenter">
+            </netuix:placeholder>
+            <netuix:placeholder title="rightCenter" description="The right-center placeholder in this layout."
+                                usingFlow="false" width="25%"
+                                markupType="Placeholder" markupName="fourColumnFlow_rightCenter">
+            </netuix:placeholder>
+            <netuix:placeholder title="right" description="The right most placeholder in this layout."
+                                usingFlow="false" width="25%"
+                                markupType="Placeholder" markupName="fourColumnFlow_right">
+            </netuix:placeholder>
+        </netuix:flowLayout>
+    </netuix:markup>
+</netuix:markupDefinition>

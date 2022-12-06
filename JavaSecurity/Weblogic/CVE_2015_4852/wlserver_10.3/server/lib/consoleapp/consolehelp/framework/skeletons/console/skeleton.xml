@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    The console skeleton was created based on the bighorn skeleton.
+    The intent is to not use tables for layout at all. Rather than change
+    the gridlayout to not use tables. The portal files were changed to use
+    other layouts.
+    
+    The intent is for this skeleton to use HTML 4.01 Transitional DTD
+    because of iframes.
+
+    The float and delete JavaScript functions remain eventhough console doesn't 
+    use them.
+    
+    Do not add application specific css or js files here use portlet dependencies
+    files instead.
+-->
+<skeleton
+    xmlns="http://www.bea.com/servers/portal/framework/laf/1.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.bea.com/servers/portal/framework/laf/1.0.0 laf-skeleton-1_0_0.xsd"
+>
+    <render-format>
+        <preset>HTML_4_01_TRANSITIONAL</preset>
+    </render-format>
+    <render-strategy>
+        <search-path>
+            <path-element>.</path-element>
+        </search-path>
+    </render-strategy>
+    <render-dependencies>
+        <html>
+            <links>
+                <search-path>
+                    <path-element>css</path-element>
+                </search-path>
+                <link href="layout.css" rel="stylesheet" type="text/css"/>
+            </links>
+            <scripts>
+                <search-path>
+                    <path-element>js</path-element>
+                </search-path>
+                <script src="buttons.js" type="text/javascript"/>
+                <script src="util.js" type="text/javascript"/>
+            </scripts>
+        </html>
+    </render-dependencies>
+</skeleton>

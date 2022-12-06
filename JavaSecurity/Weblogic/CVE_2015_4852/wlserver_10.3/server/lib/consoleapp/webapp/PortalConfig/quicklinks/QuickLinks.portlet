@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portal:root
+  xmlns:netuix="http://www.bea.com/servers/netuix/xsd/controls/netuix/1.0.0"
+  xmlns:portal="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0 portal-support-1_0_0.xsd">
+  <netuix:portlet
+    definitionLabel="QuickHelpPortlet"
+    presentationClass="wlsc-frame"
+    lafDependenciesUri="/PortalConfig/quicklinks/QuickLinks.dependencies"
+    backingFile="com.bea.console.utils.PortletBackingFile" threadsafe="true">
+    <netuix:titlebar>
+      <netuix:minimize />
+    </netuix:titlebar>
+    <netuix:content>
+      <netuix:jspContent contentUri="/jsp/quicklinks/QuickLinks.jsp" />
+    </netuix:content>
+  </netuix:portlet>
+</portal:root>

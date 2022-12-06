@@ -1,0 +1,29 @@
+# ACLs - for more info on ACL syntax, refer to the WebLogic Server
+# System Administration Guide
+#
+# An empty file (everything commented out) denies access to everyone
+# except the Admin DN. Users may be able to bind, but can not read or
+# modify entries in the LDAP server.
+# 
+# If you wish to update default access, comment or uncomment the ACL
+# syntax below by adding or removing the '#' character
+#
+# User Update Configuration - allows read access to everyone and
+# write access to own user info
+#
+#[root]|entry#grant:s,r,b,t#[all]#public
+#[root]|subtree#grant:s,r,c#[all]#public:
+#[root]|subtree#grant:b,t#[entry]#public:
+#[root]|subtree#deny:r,c#userpassword#public:
+#[root]|subtree#deny:r,c#rootpw#public:
+#[root]|subtree#deny:r,c#rootuser#public:
+#[root]|subtree#grant:r#userpassword#this:
+#[root]|subtree#grant:w,o#userpassword,title,description,postaladdress,telephonenumber#this:
+#cn=schema|entry#grant:r,s#[all]#public:
+#cn=schema|entry#grant:b,t#[entry]#public:
+#
+# Default Configuration - user can see own information and update subset of 
+# attributes. No other access is allowed.
+#
+[root]|subtree#grant:s,r,b,t#[all]#this:
+[root]|subtree#grant:w,o#userpassword,title,description,postaladdress,telephonenumber#this:

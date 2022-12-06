@@ -6,6 +6,7 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.2.0.RELEASE</version>
+        <relativePath   />
     </parent>
     <groupId>com.drunkbaby</groupId>
     <artifactId>SSTI</artifactId>
@@ -23,6 +24,11 @@
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
@@ -33,10 +39,15 @@
             <version>2.6.7</version>
         </dependency>
 
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-thymeleaf</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.thymeleaf</groupId>-->
+<!--            <artifactId>thymeleaf-spring5</artifactId>-->
+<!--            <version>3.0.12.RELEASE</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.thymeleaf.extras</groupId>-->
+<!--            <artifactId>thymeleaf-extras-java8time</artifactId>-->
+<!--        </dependency>-->
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -44,18 +55,18 @@
             <version>2.6.4</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.apache.velocity/velocity-engine-core -->
         <dependency>
             <groupId>org.apache.velocity</groupId>
             <artifactId>velocity-engine-core</artifactId>
             <version>2.3</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.apache.velocity.tools/velocity-tools-generic -->
+
         <dependency>
             <groupId>org.apache.velocity.tools</groupId>
             <artifactId>velocity-tools-generic</artifactId>
             <version>3.0</version>
         </dependency>
+
     </dependencies>
 
     <build>

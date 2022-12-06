@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5">
+  <display-name>WLS WS-AT endpoints</display-name>
+
+  <servlet>
+    <servlet-name>CoordinatorPortTypeServlethttp</servlet-name>
+    <servlet-class>weblogic.wsee.wstx.wsat.v10.endpoint.CoordinatorPortTypePortImpl</servlet-class>
+    <load-on-startup>0</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CoordinatorPortTypeServlethttp</servlet-name>
+    <url-pattern>/CoordinatorPortType</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>RegistrationPortTypeRPCServlethttp</servlet-name>
+    <servlet-class>weblogic.wsee.wstx.wsc.v10.endpoint.RegistrationPortTypeRPCPortImpl</servlet-class>
+    <load-on-startup>0</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RegistrationPortTypeRPCServlethttp</servlet-name>
+    <url-pattern>/RegistrationPortTypeRPC</url-pattern>
+  </servlet-mapping>
+
+
+  <servlet>
+    <servlet-name>ParticipantPortTypeServlethttp</servlet-name>
+    <servlet-class>weblogic.wsee.wstx.wsat.v10.endpoint.ParticipantPortTypePortImpl</servlet-class>
+    <load-on-startup>0</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ParticipantPortTypeServlethttp</servlet-name>
+    <url-pattern>/ParticipantPortType</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>RegistrationRequesterPortTypeServlethttp</servlet-name>
+    <servlet-class>weblogic.wsee.wstx.wsc.v10.endpoint.RegistrationRequesterPortTypePortImpl</servlet-class>
+    <load-on-startup>0</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RegistrationRequesterPortTypeServlethttp</servlet-name>
+    <url-pattern>/RegistrationRequesterPortType</url-pattern>
+  </servlet-mapping>
+
+
+    <servlet>
+      <servlet-name>CoordinatorPortTypeServlethttp11</servlet-name>
+      <servlet-class>weblogic.wsee.wstx.wsat.v11.endpoint.CoordinatorPortImpl</servlet-class>
+      <load-on-startup>0</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>CoordinatorPortTypeServlethttp11</servlet-name>
+      <url-pattern>/CoordinatorPortType11</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+      <servlet-name>RegistrationPortTypeRPCServlethttp11</servlet-name>
+      <servlet-class>weblogic.wsee.wstx.wsc.v11.endpoint.RegistrationPortImpl</servlet-class>
+      <load-on-startup>0</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>RegistrationPortTypeRPCServlethttp11</servlet-name>
+      <url-pattern>/RegistrationPortTypeRPC11</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+      <servlet-name>ParticipantPortTypeServlethttp11</servlet-name>
+      <servlet-class>weblogic.wsee.wstx.wsat.v11.endpoint.ParticipantPortImpl</servlet-class>
+      <load-on-startup>0</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>ParticipantPortTypeServlethttp11</servlet-name>
+      <url-pattern>/ParticipantPortType11</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+      <servlet-name>RegistrationRequesterPortType11Servlethttp</servlet-name>
+      <servlet-class>weblogic.wsee.wstx.wsc.v11.endpoint.RegistrationRequesterPortImpl</servlet-class>
+      <load-on-startup>0</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>RegistrationRequesterPortType11Servlethttp</servlet-name>
+      <url-pattern>/RegistrationRequesterPortType11</url-pattern>
+    </servlet-mapping>
+
+</web-app>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portal:root xmlns:netuix="http://www.bea.com/servers/netuix/xsd/controls/netuix/1.0.0"
+             xmlns:html="http://www.w3.org/1999/xhtml-netuix-modified/1.0.0"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:portal="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0"
+             xsi:schemaLocation="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0 portal-support-1_0_0.xsd">
+<!-- Definition file for the pages in the jms.subscribers subsystem
+     of the WebLogic Server administration console
+     Copyright (c) 2003,2011, Oracle and/or its affiliates. All rights reserved.
+-->
+  <netuix:book definitionLabel="JmsUniformDistributedTopicDurableSubscribers"
+               title="book.title"
+               markupName="book"
+               presentationClass="invisible">
+    <netuix:content>
+
+      <netuix:book definitionLabel="JmsUniformDistDestinationSubscribersDeleteJMSUniformDistributedTopicDurableSubscriberBook"
+                   markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.delete.jmsdurablesubscriber.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <!-- Definition for the JMS Durable Subscriber deletion assistant page -->
+          <netuix:page markupName="page"
+                       definitionLabel="JmsUniformDistDestinationSubscribersDeleteJMSUniformDistributedTopicDurableSubscriber"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid"
+                         content="JMS.jms.subscribers.deletejmsdurablesubscriber.title;jms"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="JmsUniformDistDestinationSubscribersDeleteJMSUniformDistributedTopicDurableSubscriberPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/jms/uniformdistdestination/topic/subscribers/deletejmsdurablesubscriber/DeleteJMSUniformDistributedTopicDurableSubscriber.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+    </netuix:content>
+  </netuix:book>
+</portal:root>

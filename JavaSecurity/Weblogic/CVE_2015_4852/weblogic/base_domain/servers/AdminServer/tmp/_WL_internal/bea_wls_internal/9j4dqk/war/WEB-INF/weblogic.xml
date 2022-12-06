@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<weblogic-web-app
+  xmlns="http://www.bea.com/ns/weblogic/90"
+  xmlns:j2ee="http://java.sun.com/xml/ns/j2ee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.bea.com/ns/weblogic/90 http://www.bea.com/ns/weblogic/90/weblogic-web-app.xsd"> 
+
+  <context-root>/bea_wls_internal</context-root>
+</weblogic-web-app>
+

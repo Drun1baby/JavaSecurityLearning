@@ -1,0 +1,836 @@
+/*
+    This file contains styles for forms and form elements
+*/
+
+/*
+    Forms and form fields
+*/
+form {
+    margin: 0px;
+    padding: 0px;
+}
+
+input, select, textarea, button {
+    margin: 1px;
+}
+
+textarea, select {
+    border: 1px solid #B9B9B4;
+}
+
+fieldset {
+    padding: 0px 8px 8px 8px;
+}
+
+legend {
+    font-weight: bold;
+}
+
+fieldset.formseparator {
+    border-width: 0px;
+    border-top: 2px solid #A0BAD5;
+}
+
+fieldset.formseparator legend {
+    font-weight: bold;
+    color: #19355E;
+}
+
+label, span.likeLabel {
+    font-weight: bold;
+}
+
+.radioAndCheckbox {
+    padding: 0px;
+}
+
+table.formTable .radioAndCheckbox {
+    margin-right: 4px;
+}
+
+.textinput {
+    padding: 1px 2px 1px 3px;
+    border: 1px solid #B9B9B4;
+    color: #000000;
+}
+
+.inputDisabled {
+    background-color: #F4F4F4;
+    padding: 1px 2px 1px 3px;
+    border: 1px solid #B9B9B4;
+    color: #7E807A;
+    cursor: default;
+}
+
+/*
+    Form table layout
+*/
+table.formTable {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table.formTable tr.rowEven td {
+    background-color: #F6F6F6;
+    vertical-align: top;
+    padding: 10px 4px;
+    border-top: 1px dotted #cccccc;
+}
+
+table.formTable tr.rowOdd td  {
+    background-color: #FFFFFF;
+    vertical-align: top;
+    padding: 10px 4px;
+    border-top: 1px dotted #cccccc;
+}
+
+table.formTable tr.rowError td {
+    background-color: #FFE3E7;
+    vertical-align: top;
+    padding: 10px 4px;
+    border-top: 1px dotted #cccccc;
+}
+
+table.formTable tr.row td {
+    vertical-align: top;
+    padding: 10px 4px;
+}
+
+table.formTable tr.rowIntro td {
+    vertical-align: top;
+    padding: 8px 4px;
+    border-top: 1px dotted #cccccc;
+}
+
+table.formTable tr.errorinline td {
+    background-color: #FFE3E7;
+    vertical-align: top;
+    text-align: left;
+    padding: 10px 4px;
+    border-top: 1px dotted #cccccc;
+}
+
+.errorinline img {
+    margin-right: 4px;
+}
+
+.errorlabel {
+    color: #AD0E25;
+}
+
+/* the disabled style is combined with rowEven etc. */
+table.formTable tr.disabled td {
+    color: #999999;
+}
+table.formTable tr.disabled td .inlinehelp {
+    color: #cccccc;
+}
+
+.labelCol {
+    width: auto;
+    text-align: left;
+}
+
+.inputCol {
+    width: auto;
+    text-align: left;
+}
+
+.helpCol {
+    text-align: left;
+    width: 40%;
+}
+
+.paddingCol {
+    text-align: left;
+    width: 20%;
+}
+
+td.inputField div {
+    white-space: nowrap;
+}
+
+td.inputFieldRO div {
+    white-space: normal;
+}
+
+td.inputField div *,
+td.inputFieldRO div *,
+td.labeledField * {
+    vertical-align: middle;
+}
+
+label img, span.likeLabel img {
+    padding-right: 4px;
+    width: 16px;
+    height: 16px;
+}
+
+table.formTable img {
+    vertical-align: middle;
+    border: 0px;
+}
+
+/*
+    Form buttons and button bar
+*/
+.buttonBar {
+    padding: 2px 0px;
+    /* adding white-space: nowrap; might seem like a good idea
+    so that the buttons don't wrap but it causes problems 
+    when combined with the overflow: visible hack to get
+    IE to display a reasonable width button the button bar
+    becomes as wide as the buttons would be with out overflow: visible
+    rather than as wide as the buttons are. 
+    */
+}
+.buttonBar img {
+    padding: 0px;
+    vertical-align: middle;
+}
+
+.formButton, .formMenuButton {
+    padding: 0px 4px 1px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #DDDDD8 #AFAFAF #797975;
+    background: #FDFDFA url(../images/button_bg_n.png) repeat-x center bottom;
+    color: #000000;
+    font-size: 11px;
+    white-space: nowrap;
+    overflow: visible; /* keeps IE from making buttons too wide */
+}
+
+.formButton:hover, .formMenuButton:hover {
+    border-color: #ACBACF #768092 #0A0B19;
+    background: #EDFFFF url(../images/button_bg_mo.png) repeat-x center bottom;
+}
+
+.formButton:active, .formMenuButton:active {
+    border-color:  #00000A #677183 #9DABC0;
+    background: #AABACD url(../images/button_bg_md.png) repeat-x center bottom;
+}
+
+.formButton-disabled, .formMenuButton-disabled {
+    padding: 0px 4px 1px;
+    border: 1px solid #B9B9B4;
+    background: #E5E5E0  none;
+    color: #737373;
+    font-size: 11px;
+    white-space: nowrap;
+    overflow: visible; /* keeps IE from making buttons too wide */
+}
+
+.formButton span.icon, .formMenuButton span.icon {
+    padding-right: 4px;
+    vertical-align: middle;
+    line-height: 0.1em;
+}
+
+.formButton-disabled span.icon, .formMenuButton-disabled span.icon {
+    padding-right: 4px;
+    vertical-align: middle;
+    opacity: .5;
+    filter:alpha(opacity=50);
+    line-height: 0.1em;
+}
+
+/*
+    Buttons menus
+*/
+.formMenuButton span {
+    margin-left: 3px;
+    background: transparent url(../images/dropdown.gif) no-repeat right 0px;
+    display: -moz-inline-box;
+    display: inline-block;
+    vertical-align: middle;
+    width: 7px;
+    height: 4px;
+    overflow: hidden; /* required by ie6 to obey height */
+}
+
+.formMenuButton-disabled span {
+    margin-left: 3px;
+    background: transparent url(../images/dropdown.gif) no-repeat right -4px;
+    display: -moz-inline-box;
+    display: inline-block;
+    vertical-align: middle;
+    width: 7px;
+    height: 4px;
+    overflow: hidden; /* required by ie6 to obey height */
+}
+
+.button-menu-outer {
+    visibility: hidden;
+    position: absolute;
+    z-index: 4;
+    border: none;
+}
+
+.button-menu-outer .menudstr {
+    background: transparent url(../images/menu_shadowtrbl.png) no-repeat right top;
+    height: 5px;
+    overflow: hidden;
+}
+
+.button-menu-outer .menudsbl {
+    background: transparent url(../images/menu_shadowtrbl.png) no-repeat left bottom;
+    padding-left: 5px;
+}
+
+.button-menu-outer .menuds {
+    background: transparent url(../images/menu_shadow.png) no-repeat right bottom;
+}
+
+.button-menu {
+    background-color: #ffffff;
+    margin: 0px;
+    padding: 1px;
+    border: 1px solid #768092;
+    border-top-color: #A9B6CB;
+    border-bottom-color: #00000A;
+    position: relative;
+    top: -5px;
+    left: -5px;
+}
+
+.button-menu li {
+    margin: 1px;
+    padding: 0px;
+    list-style-type: none;
+    list-style-image: none;
+}
+
+.button-menu a {
+    color: #000000;
+    text-decoration: none;
+    padding: 4px;
+    display: block;
+}
+
+* html .button-menu a {
+    height: 100%; /* triger haslayout but for IE6 only */
+}
+
+.button-menu a:focus, .button-menu a:hover {
+    background-color: #D1DDE7;
+}
+
+/* 
+    misc stuff
+*/
+.requiredfield {
+    color: #666666;
+    padding-right: 2px;
+}
+
+div.requiredfield {
+    margin-bottom: 20px;
+}
+
+.dialog-info {
+}
+.dialog-info p {
+   padding-top: 1px;
+}
+
+.dialog-info-note {
+    color: #999999;
+}
+
+/*
+    tablePreferences form layout
+*/
+
+.dialog {
+    width: 100%;
+    background-color: #F6F6F6;
+    border: 1px solid #CCCCCC;
+}
+
+.formRow td, .formRow2 td {
+    padding: 4px 8px;
+}
+
+.formRow .labeledCtrl label {
+}
+
+.formRow .bigCtrl {
+}
+
+.dialog .buttonRow {
+    margin: 4px 8px;
+    padding-top: 4px;
+    border-top: 1px dotted #CCCCCC;
+}
+
+/*
+    Various separator styles
+*/
+
+.advancedSeparator {
+    overflow: hidden;
+    width: 100%;
+}
+
+.advancedSeparator.showLine {
+    background-image: url(../images/separator_bg.gif);
+    background-repeat: repeat-x;
+    background-position: left center;
+}
+
+.advancedSeparator.showLine h3 {
+    margin: 2px 10px;
+    padding: 0px 4px;
+    background-color: #fff;
+    float: left;
+}
+
+.advancedSeparator a {
+    white-space: nowrap;
+}
+
+.advancedSeparator img {
+    vertical-align: middle;
+    border: 0px;
+}
+
+.formSeparator {
+    background-image: url(../images/separator_bg.gif);
+    background-repeat: repeat-x;
+    background-position: left center;
+    overflow: hidden;
+    width: 100%;
+}
+
+.formSeparator h3 {
+    color: #19355E;
+    font-weight: bold;
+    margin: 2px 10px;
+    padding: 0px 4px;
+    background-color: #fff;
+    float: left;
+}
+
+.formSeparator h2 {
+    color: #19355E;
+    font-weight: bold;
+    margin: 2px 10px;
+    padding: 0px 4px;
+    background-color: #fff;
+    float: left;
+}
+
+/* match dialog background color */
+.dialog .formSeparator h3 {
+    background-color: #F6F6F6;
+}
+
+.fieldGroupLabel td {
+    text-align: left;
+}
+
+.fieldGroupLabel h4 {
+    font-size: 11px;
+    font-weight: bold;
+}
+
+/*
+    Policy Editor styles
+*/
+
+.pe-expr {
+    padding: 2px;
+    margin-left: 18px;
+    color: #000000;
+}
+
+.pe-term {
+    padding: 2px;
+}
+
+.pe-group {
+    padding: 2px;
+    border: 1px solid #999999;
+    color: #999999;
+}
+
+.pe-op {
+    padding: 2px;
+    margin-left: 18px;
+}
+
+.predicateEditorItem {
+    width: 150px;
+}
+
+.predicateEditorList {
+    width: 150px;
+}
+
+.listEditorItem {
+    width: 250px;
+}
+
+.listEditorList {
+    width: 250px;
+}
+
+/*
+    Target table styles
+*/
+
+table.targetTable {
+    border-collapse: collapse;
+    width: 400px;
+    margin: 10px 0px;
+}
+
+table.targetTable thead {
+    background-color: #B8B8B8;
+}
+
+table.targetTable thead th {
+    background-color: #CFDBEF;
+    text-align: left;
+    padding: 4px 4px;
+    border: 2px ridge #666666;
+}
+
+table.targetTable tr.rowEven td {
+    background-color: #F6F6F6;
+    padding: 10px 2px;
+    border: 2px ridge #666666;
+}
+
+table.targetTable tr.rowOdd td  {
+    background-color: #FFFFFF;
+    padding: 10px 2px;
+    border: 2px ridge #666666;
+}
+
+table.targetTable .clusterOptions {
+    padding-left: 20px;
+}
+
+table.targetTable .clusterServer {
+    padding-left: 30px;
+}
+
+
+/*
+    Chooser Widget Definitions
+*/
+.chooser {
+  float: left;
+  border: none;
+  margin: 2px;
+  padding: 2px;
+}
+
+.chooser div {
+  border-width: 0; /* don't want width to be medium because of JS that wants to calculate the height of divs */
+}
+
+.chooser legend {
+  padding: 0;
+  line-height: 0;
+  font-size: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 0;
+  left: -99999px;
+}
+
+.chooser div.avail, .chooser div.chooserBtns, .chooser div.reorder, .chooser div.sel, .chooser div.orderBtns {
+  float: left;
+}
+
+.chooser .chooserBtns, .chooser .orderBtns {
+  padding: 0 10px;
+}
+.chooser .chooserBtns div {
+  padding-top: 10px;
+}
+.chooser .chooserBtns div.first {
+  padding-top: 0;
+}
+.chooser .orderBtns div.down {
+  padding-top: 5px;
+}
+
+.chooser .avail label, .chooser .sel label {
+  color: #3E403D;
+}
+
+.chooser .chooserBtns input, .chooser .orderBtns input {
+    background-repeat: no-repeat;
+    background-color: transparent;
+    padding: 0px;
+    width:16px; 
+    height:16px;
+    border:0px;
+}
+.buttonsChooserAdd {
+    background: transparent url(../images/shuttle.gif) no-repeat 0px 0px;
+}
+.buttonsChooserAdd:hover {
+    background: transparent url(../images/shuttle.gif) no-repeat -16px 0px;
+}
+.buttonsChooserAdd-disabled {
+    background: transparent url(../images/shuttle.gif) no-repeat -48px 0px;
+}
+
+.buttonsChooserAddAll {
+    background: transparent url(../images/shuttle.gif) no-repeat 0px -16px;
+}
+.buttonsChooserAddALl:hover {
+    background: transparent url(../images/shuttle.gif) no-repeat -16px -16px;
+}
+.buttonsChooserAddAll-disabled {
+    background: transparent url(../images/shuttle.gif) no-repeat -48px -16px;
+}
+
+.buttonsChooserRemove {
+    background: transparent url(../images/shuttle.gif) no-repeat 0px -32px;
+}
+.buttonsChooserRemove:hover {
+    background: transparent url(../images/shuttle.gif) no-repeat -16px -32px;
+}
+.buttonsChooserRemove-disabled {
+    background: transparent url(../images/shuttle.gif) no-repeat -48px -32px;
+}
+
+.buttonsChooserRemoveAll {
+    background: transparent url(../images/shuttle.gif) no-repeat 0px -48px;
+}
+.buttonsChooserRemoveAll:hover {
+    background: transparent url(../images/shuttle.gif) no-repeat -16px -48px;
+}
+.buttonsChooserRemoveAll-disabled {
+    background: transparent url(../images/shuttle.gif) no-repeat -48px -48px;
+}
+
+.buttonsChooserTop {
+    background: transparent url(../images/shuttle.gif) no-repeat 0px -80px;
+}
+.buttonsChooserTop:hover {
+    background: transparent url(../images/shuttle.gif) no-repeat -16px -80px;
+}
+.buttonsChooserTop-disabled {
+    background: transparent url(../images/shuttle.gif) no-repeat -48px -80px;
+}
+
+.buttonsChooserUp {
+    background: transparent url(../images/shuttle.gif) no-repeat 0px -64px;
+}
+.buttonsChooserUp:hover {
+    background: transparent url(../images/shuttle.gif) no-repeat -16px -64px;
+}
+.buttonsChooserUp-disabled {
+    background: transparent url(../images/shuttle.gif) no-repeat -48px -64px;
+}
+
+.buttonsChooserDown {
+    background: transparent url(../images/shuttle.gif) no-repeat 0px -96px;
+}
+.buttonsChooserDown:hover {
+    background: transparent url(../images/shuttle.gif) no-repeat -16px -96px;
+}
+.buttonsChooserDown-disabled {
+    background: transparent url(../images/shuttle.gif) no-repeat -48px -96px;
+}
+
+.buttonsChooserBottom {
+    background: transparent url(../images/shuttle.gif) no-repeat 0px -112px;
+}
+.buttonsChooserBottom:hover {
+    background: transparent url(../images/shuttle.gif) no-repeat -16px -112px;
+}
+.buttonsChooserBottom-disabled {
+    background: transparent url(../images/shuttle.gif) no-repeat -48px -112px;
+}
+
+.multiSelect {
+  border: 1px solid #B9B9B4;
+  background-color: #FFF;
+  padding: 0;
+  margin: 2px;
+  /* BLAF has  line-height: 1.5em; but doesn't look right */
+  float: left;
+}
+
+.multiSelect legend {
+  padding: 0;
+  line-height: 0;
+  font-size: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 0;
+  left: -1500px;
+}
+
+.multiSelect ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 12em;
+  width: 16em;
+}
+
+.multiSelect li {
+  list-style: none;
+  display: block;
+  padding: 0;
+  margin: 1px 2px;
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+
+.multiSelect li.selected {
+  background-color: #316AC5;
+}
+
+.multiSelect li.focus {
+  /* normal focus handling works just fine */
+  /* border: 1px dotted #000; */
+}
+
+.multiSelect label {
+  color: #000;
+  margin-left: 2px;
+}
+.multiSelect li.selected label {
+  color: #FFF;
+}
+
+.multiSelect input {
+  margin: 0 3px 0 0;
+}
+
+.bigCtrl .multiSelect ul {
+  width: 24em;
+}
+
+/* special case for web service policy chooser that has very long choice labels */
+.wsPolicyChooser.chooser {
+  width: 88em;
+}
+.wsPolicyChooser .multiSelect ul {
+  width: 40em;
+  height: 30em;
+}
+
+/*
+// --------------------------------------------------------------------------------------------------------------------
+// File Chooser Widget Definitions
+// --------------------------------------------------------------------------------------------------------------------
+*/
+
+
+.fileChooser {
+    border: 1px solid #CCCCCC;
+    margin: 4px 2px;
+}
+
+.fileChooser .fcNavigation {
+    border-bottom: 1px solid #CCCCCC;
+    background-color: #F6F6F6;
+    padding: 4px;
+}
+
+.fileChooser .fcNavigation .ctrlRow {
+    overflow: hidden;
+    width: 100%;
+    padding: 0px;
+}
+
+.fileChooser .fcNavigation .ctrlRow label,
+.fileChooser .fcNavigation .ctrlRow span.label {
+    float: left;
+    width: 18%;
+    font-weight: bold;
+    margin-top: 4px;
+}
+
+.fileChooser .fcNavigation .ctrlRow input,
+.fileChooser .fcNavigation .ctrlRow div,
+.fileChooser .fcNavigation .ctrlRow ul {
+    float: left;
+    width: 80%;
+}
+
+.fileChooser .fcNavigation .ctrlRow ul,
+.fileChooser .fcNavigation .ctrlRow ul li {
+    margin: 0px;
+}
+
+.fileChooser .fcNavigation .ctrlRow div {
+    margin-left: 4px;
+    margin-top: 2px;
+}
+
+.fileChooser ul {
+    padding: 2px;
+    margin: 0px;
+}
+
+.fileChooser li {
+    list-style-type: none;
+    list-style-image: none;
+    padding: 2px;
+    margin: 0px;
+    display: block;
+    overflow: hidden;
+    width: 90%;
+}
+
+.fileChooser li div.sel {
+    float: left;
+    width: 28px;
+    text-align: center;
+    height: 15px;
+}
+
+.fileChooser li div.name {
+    float: left;
+    height: 16px;
+}
+
+.fileChooser li img {
+    margin: 0px;
+    vertical-align: baseline;
+    height: 16px;
+    width: 16px;
+    padding-right: 4px;
+}
+
+.fileChooser li input {
+    vertical-align: baseline;
+    margin: 1px;
+}
+
+/*
+    Inline Help Definitions
+*/
+
+.inlinehelp {
+    color: #606060;
+    padding-right: 1em;
+}
+
+/*
+    Confirmation List Definitions
+*/
+.confirmList {
+    margin-bottom: 8px;
+}
+ 
+.confirmList p {
+    margin: 2px 0px;
+}
+

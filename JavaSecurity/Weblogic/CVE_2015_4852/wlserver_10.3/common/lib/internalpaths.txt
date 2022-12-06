@@ -1,0 +1,30 @@
+#These file sets non-import paths used during template building.
+#All paths in this file should be prefixed with "$USER_INSTALL_DIR$/"
+#Where $USER_INSTALL_DIR$ represents your product installation directory (i.e. C:\bea\weblogic81)
+#When building templates the files under these paths will not be included
+#  by application importing and JDBC SQL file selection.
+
+$WLS_INSTALL_DIR$/server/lib
+$WLS_INSTALL_DIR$/common/deployable-libraries
+$WLI_INSTALL_DIR$/integration/lib
+$WLI_INSTALL_DIR$/integration/common
+$WLI_INSTALL_DIR$/integration/adapters
+$WLP_INSTALL_DIR$/portal/lib
+$WLP_INSTALL_DIR$/portal/db
+$WLS_INSTALL_DIR$/samples/server
+$WLS_INSTALL_DIR$/samples/platform/end2end
+$ALSB_INSTALL_DIR$/servicebus/lib
+$WLW_INSTALL_DIR$/workshop/lib
+$MW_HOME$/applications/atf/deploy
+$MW_HOME$/applications/com/deploy
+$MW_HOME$/applications/crm/deploy
+$MW_HOME$/applications/fin/deploy
+$MW_HOME$/applications/fscm/deploy
+$MW_HOME$/applications/fs/deploy
+$MW_HOME$/applications/grc/deploy
+$MW_HOME$/applications/hcm/deploy
+$MW_HOME$/applications/ic/deploy
+$MW_HOME$/applications/prc/deploy
+$MW_HOME$/applications/prj/deploy
+$MW_HOME$/applications/scm/deploy
+$MW_HOME$/applications/soa/modules/oracle.soa.apps_11.1.1

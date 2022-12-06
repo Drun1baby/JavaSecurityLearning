@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--
+    Document   : tablePreferences
+    Created on : June 11 2004
+    Author     : mjasnows
+    Comment
+        This stylesheet serves as the layout for forms with these differences from form.xml
+        No alternating row styles
+        No Icon column
+        No inline help
+        Support for two columns
+        No required field or field error support
+        advancedseparatorrow is handled differently - if it is used at all it
+        must introduce the form
+-->
+
+<xsl:stylesheet version="1.0"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+    <xsl:output method="html" encoding="UTF-8"/>
+
+    <xsl:template match="text()"/>
+
+    <!-- web context to use in path names -->
+    <xsl:param name="web-context" select="default"/>
+
+    <!-- template rule matching source root element -->
+    <xsl:template match="form">
+       <xsl:apply-templates select="script"/>
+
+       <xsl:element name="form">
+         <xsl:attribute name="name"><xsl:value-of select="@name"/></xsl:attribute>
+         <xsl:attribute name="method"><xsl:value-of select="@method"/></xsl:attribute>
+         <xsl:attribute name="action"><xsl:value-of select="@action"/></xsl:attribute>
+         <xsl:attribute name="onsubmit"><xsl:value-of select="@onsubmit"/></xsl:attribute>
+         <!-- REVIEW jsnyders: why no enctype attribute like assistant has -->
+
+         <!-- The advancedseparator (if there is one) begins and is outside 
+              the dialog -->
+         <xsl:apply-templates select="advancedseparatorrow"/>
+
+         <table class="dialog" summary="" datatable="0">
+           <colgroup>
+             <col class="l1" />
+             <col class="ctl1" />
+             <col class="l2" />
+             <col class="ctl2" />
+           </colgroup>
+           <!-- These are the rest of the visual top-level elements that the 
+                form can contain -->
+           <xsl:apply-templates select="two-column-row|row|button-row|separator"/>
+         </table>
+         <!-- These belong outside of the dialog - should just be hidden stuff -->
+         <xsl:if test="formstate|form-owned">
+         <div>
+           <xsl:apply-templates select="formstate|form-owned"/>
+         </div>
+         </xsl:if>
+       </xsl:element>
+
+    </xsl:template>
+
+    <!-- This prints out hidden fields for a form. Comes from the wl:form tag -->
+    <xsl:template match="formstate">
+      <xsl:copy-of select="*"/>
+    </xsl:template>
+
+    <!-- This prints out script to go after a form. Comes from the wl:form tag -->
+    <xsl:template match="form-owned">
+      <xsl:copy-of select="*"/>
+    </xsl:template>
+
+    <!-- Empty template for now -->
+    <xsl:template match="required"/>
+
+    <xsl:template match="script">
+        <xsl:copy-of select="."/>
+    </xsl:template>
+
+    <!-- Process markup from the wl:advanced-form tag -->
+    <xsl:template match="advancedseparatorrow">
+      <div class="advancedSeparator">
+        <xsl:copy-of select="tr/td/*"/>
+      </div>
+    </xsl:template>
+
+    <!-- REVIEW jsnyders this should be a fieldset for accessability 
+         but it probably can't span rows and also doesn't contain
+         the the rows it separates -->
+    <!-- Process markup from the form-separator tag -->
+    <xsl:template match="separator">
+      <tr class="formSeparator"><td colspan="4">
+        <h3><xsl:value-of select="@label" /></h3>
+      </td></tr>
+    </xsl:template>
+
+    <!-- A two column row splits the available width between col1 and col2 
+    The two-column-row element is expected to contain exactly 2 row elements.
+    These rows are put one into each column.
+    -->
+    <xsl:template match="two-column-row">
+
+     <tr class="formRow2">
+          <xsl:apply-templates select="row[1]"/>
+          <xsl:apply-templates select="row[2]"/>
+     </tr>
+
+    </xsl:template>
+
+    <!-- A row contains a fieldlabel and an inputfield -->
+    <xsl:template match="row">
+
+      <xsl:choose>
+        <xsl:when test="ancestor::two-column-row">
+          <xsl:apply-templates/>
+        </xsl:when>
+        <xsl:otherwise>
+          <tr class="formRow">
+            <xsl:apply-templates/>
+          </tr>
+        </xsl:otherwise>
+      </xsl:choose>
+
+    </xsl:template>
+
+    <!-- A button-row contains a bunch of buttons -->
+    <xsl:template match="button-row">
+
+      <tr class="buttonRow"><td colspan="4">
+        <xsl:copy-of select="*"/>
+      </td></tr>
+
+    </xsl:template>
+
+    <!--
+    An inputfield that contains a checkbox or radiobutton gets turned into
+    a labeledCtrl with the checkbox/radio followed by the label
+    -->
+    <xsl:template match="inputfield[input[@type='checkbox']|input[@type='radio']]">
+      <xsl:variable name="colspan">
+        <xsl:choose>
+          <xsl:when test="ancestor::two-column-row">2</xsl:when>
+          <xsl:otherwise>4</xsl:otherwise>
+        </xsl:choose>
+      </xsl:variable>
+
+      <td colspan="{$colspan}" class="labeledCtrl">
+        <xsl:copy-of select="input"/>
+        <label for="{input/@id}"><xsl:value-of select="preceding-sibling::fieldlabel/@value"/></label>
+      </td>
+
+    </xsl:template>
+
+    <!--
+    A chooser control (or text area or table) is large and may be laid out 
+    differently. It may be better to put the label above it.
+    -->
+    <xsl:template match="inputfield[chooser|textarea|table]">
+      <xsl:variable name="colspan">
+        <xsl:choose>
+          <xsl:when test="ancestor::two-column-row">2</xsl:when>
+          <xsl:otherwise>4</xsl:otherwise>
+        </xsl:choose>
+      </xsl:variable>
+
+      <td colspan="{$colspan}" class="bigCtrl">
+        <div>
+          <xsl:choose>
+            <xsl:when test="textarea/@id">
+              <label for="{textarea/@id}">
+                <xsl:value-of select="preceding-sibling::fieldlabel/@value"/>:</label>
+            </xsl:when>
+            <xsl:otherwise>
+              <span class="likeLabel">
+                <xsl:value-of select="preceding-sibling::fieldlabel/@value"/>:</span>
+            </xsl:otherwise>
+          </xsl:choose>
+        </div>
+        <xsl:copy-of select="chooser/*|textarea|table|script"/>
+      </td>
+
+    </xsl:template>
+    <!-- 
+    Any other inputfield goes in its own cell
+    The more specific match above ensures that this will not match a checkbox or radio inputfield
+    -->
+    <xsl:template match="inputfield">
+
+      <xsl:variable name="colspan">
+        <xsl:choose>
+          <xsl:when test="ancestor::two-column-row">1</xsl:when>
+          <xsl:otherwise>3</xsl:otherwise>
+        </xsl:choose>
+      </xsl:variable>
+
+      <td colspan="{$colspan}" class="ctrl">
+        <xsl:copy-of select="input|select|script"/>
+      </td>
+
+    </xsl:template>
+
+    <!--
+    Only applies to non radio button or check box controls.
+    Turn this into a label for the following control
+    -->
+    <xsl:template match="fieldlabel">
+
+      <xsl:if test="not(following-sibling::inputfield[input[@type='radio']|input[@type='checkbox']|chooser|textarea|table])">
+        <td>
+          <label for="{following-sibling::inputfield/*/@id}">
+            <xsl:value-of select="@value"/>:</label>
+        </td>
+      </xsl:if>
+
+    </xsl:template>
+
+</xsl:stylesheet>

@@ -1,0 +1,810 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portal:root xmlns:netuix="http://www.bea.com/servers/netuix/xsd/controls/netuix/1.0.0"
+             xmlns:html="http://www.w3.org/1999/xhtml-netuix-modified/1.0.0"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:portal="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0"
+             xsi:schemaLocation="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0 portal-support-1_0_0.xsd">
+<!-- 
+    Definition file for the pages in the jms.safagent subsystem
+    of the WebLogic Server administration console
+    
+    Copyright (c) 2004,2009, Oracle and/or its affiliates. All rights reserved.
+-->
+  <netuix:book definitionLabel="JmsSAFAgentSAFAgent" title="book.title" markupName="book"
+               presentationClass="invisible">
+    <netuix:content>
+      <netuix:book definitionLabel="JmsSAFAgentSAFAgentBook" title="book.title" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="JmsSAFAgentSAFAgentPage" title="not.used"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:book markupName="book" definitionLabel="JmsSAFAgentBook" title="JmsSAFAgentBook">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+                  <!-- Definition for the config tab -->
+                  <netuix:book markupName="book" definitionLabel="JmsSAFAgentSAFAgentConfigPage"
+                                   title="tab.config.label">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                        <netuix:content>
+                      <!-- Definition for the general tab -->
+                      <netuix:page markupName="page" definitionLabel="JmsSAFAgentSAFAgentConfigGeneralTabPage"
+                                       presentationClass="page-content"
+                                       title="tab.general.label">
+                            <netuix:meta name="helpid" content="JMS.jms.safagent.safagentconfiggeneral.title;jms"/>
+                            <netuix:meta name="breadcrumb-context" content="handle"/>
+                            <netuix:meta name="configuration-page" content="SAFAgent"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="JmsSAFAgentSAFAgentConfigGeneralPortlet">
+                                    <netuix:strutsContent module="/jms" action="JmsSAFAgentSAFAgentConfigGeneral"
+                                                          refreshAction="JmsSAFAgentSAFAgentConfigGeneral"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the thresholds tab -->
+                      <netuix:page markupName="page" definitionLabel="JmsSAFAgentSAFAgentConfigThresholdsTabPage"
+                                       presentationClass="page-content"
+                                       title="tab.thresholds.label">
+                            <netuix:meta name="helpid" content="JMS.jms.safagent.safagentconfigthresholds.title;jms"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="JmsSAFAgentSAFAgentConfigThresholdsPortlet">
+                                    <netuix:strutsContent module="/jms" action="JmsSAFAgentSAFAgentConfigThresholds"
+                                                          refreshAction="JmsSAFAgentSAFAgentConfigThresholds"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                        </netuix:content>
+                      </netuix:book>
+
+                      <!-- Definition for the logging tab -->
+                  <netuix:book markupName="book" definitionLabel="JmsSAFAgentLoggingTabBook"
+                                   title="tab.jms.logging.label">
+                        <netuix:content>
+                          <netuix:page markupName="page" definitionLabel="JmsSAFAgentLoggingTabPage"
+                                       presentationClass="page-content"
+                                       title="tab.logging.label">
+                            <netuix:meta name="helpid" content="JMS.jms.safagent.safagentlogging.title;jms"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="JmsSAFAgentLoggingPortlet">
+                                    <netuix:strutsContent module="/jms" action="SAFAgentLoggingGeneral"
+                                                          refreshAction="SAFAgentLoggingGeneral"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                        </netuix:content>
+                      </netuix:book>
+
+                      <!-- Definition for the Monitoring tab -->
+                  <netuix:book markupName="book" definitionLabel="JmsSAFAgentMonitoringBook"
+                                   title="tab.monitor.label">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                        <netuix:content>
+
+                      <!-- Statistics Tab -->
+                      <netuix:page markupName="page" definitionLabel="JmsSAFAgentMonitoringTabPage"
+                                       presentationClass="page-content"
+                                       title="tab.statistics.label">
+                            <netuix:meta name="helpid" content="JMS.jms.safagent.safagentmonitoring.title;jms"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="JmsSAFAgentMonitoringPortlet">
+                                    <netuix:strutsContent module="/jms" action="SAFAgentMonitoring" refreshAction="SAFAgentMonitoring"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+
+                          <!-- Remote EndPoints Tab -->
+                      <netuix:page markupName="page" definitionLabel="JmsSAFAgentMonitoringRemoteEndPointsPage"
+                                       presentationClass="page-content"
+                                       title="tab.safagent.remoteendpoints.label">
+                            <netuix:meta name="helpid"
+                                         content="JMS.jms.safagent.safagentmonitoring.remoteendpoints.title;jms"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="JmsSAFAgentMonitoringRemoteEndpointsPortlet">
+                                    <netuix:strutsContent module="/jms" action="SAFAgentMonitoringRemoteEndpoints"
+                                                          refreshAction="SAFAgentMonitoringRemoteEndpoints"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+
+                          <!-- Conversations Tab -->
+                      <netuix:page markupName="page" definitionLabel="JmsSAFAgentMonitoringConversationsPage"
+                                       presentationClass="page-content"
+                                       title="tab.safagent.conversations.label">
+                            <netuix:meta name="helpid"
+                                         content="JMS.jms.safagent.safagentmonitoring.conversations.title;jms"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="JmsSAFAgentMonitoringConversationsPortlet">
+                                    <netuix:strutsContent module="/jms" action="SAFAgentMonitoringConversations"
+                                                          refreshAction="SAFAgentMonitoringConversations"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+
+                        </netuix:content>
+                      </netuix:book>
+
+                      <!-- Definition for the Target tab -->
+                  <netuix:book markupName="book" definitionLabel="JmsSAFAgentTargetdeployTabPage"
+                                   title="tab.targets.label">
+                        <netuix:content>
+                          <netuix:page markupName="page" definitionLabel="JmsSAFAgentSAFAgentTargetdeployTabPage"
+                                       presentationClass="page-content"
+                                       title="tab.targets.label">
+                            <netuix:meta name="helpid" content="JMS.jms.safagent.safagenttargetdeploy.title;jms"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="JmsSAFAgentSAFAgentTargetdeployPortlet">
+                                    <netuix:strutsContent module="/jms" action="JmsSAFAgentSAFAgentTargetdeploy"
+                                                          refreshAction="JmsSAFAgentSAFAgentTargetdeploy"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                        </netuix:content>
+                      </netuix:book>
+
+
+
+                      <!-- Definition for the notes tab -->
+                  <netuix:book markupName="book" definitionLabel="JmsSAFAgentNotesTabPage"
+                                   title="tab.notes.label">
+                        <netuix:content>
+                          <netuix:page markupName="page" definitionLabel="JmsSAFAgentSAFAgentNotesTabPage"
+                                       presentationClass="page-content"
+                                       title="tab.notes.label">
+                            <netuix:meta name="helpid" content="JMS.jms.safagent.safagentnotes.title;jms"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="JmsSAFAgentSAFAgentNotesPortlet"
+                                                          contentUri="/PortalConfig/jms/JMSMBeanNotes.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                        </netuix:content>
+                      </netuix:book>
+                    </netuix:content>
+                  </netuix:book>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the SAFAgent table page -->
+  <netuix:book definitionLabel="JmsSAFAgentSAFAgentTableBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="service.types.SAFAgent"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="JmsSAFAgentSAFAgentTablePage"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-table">
+            <netuix:meta name="helpid" content="JMS.jms.safagent.safagenttable.title;jms"/>
+            <netuix:meta name="configuration-page" content="SAFRuntime"/>
+            <netuix:meta name="breadcrumb" content="service.types.SAFAgent"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="JmsSAFAgentSAFAgentTablePortlet">
+                    <netuix:strutsContent module="/jms" action="JmsSAFAgentSAFAgentTable"
+                                          refreshAction="JmsSAFAgentSAFAgentTable"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the SAFAgent creation assistant page -->
+  <netuix:book definitionLabel="JmsSAFAgentCreateSAFAgentBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.create.safagent.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="JmsSAFAgentCreateSAFAgent" title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="JMS.jms.safagent.createsafagent.page.title;jms"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="JmsSAFAgentCreateSAFAgentPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/jms/safagent/createsafagent/CreateSAFAgent.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the SAFAgent deletion assistant page -->
+  <netuix:book definitionLabel="JmsSAFAgentDeleteSAFAgentBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.delete.safagent.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="JmsSAFAgentDeleteSAFAgent" title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="JMS.jms.safagent.deletesafagent.page.title;jms"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="JmsSAFAgentDeleteSAFAgentPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/jms/safagent/deletesafagent/DeleteSAFAgent.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- Definition for the SAF Remote Endpoint Message table page -->
+  <netuix:book definitionLabel="SAFRemoteEndpointMessageTableBook"
+                   title="safagent.remoteendpoint.messages"
+                   markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="SAFRemoteEndpointMessagesTablePage"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-table">
+            <netuix:meta name="helpid" content="JMS.jms.safagent.safagenttable.title;jms"/>
+            <netuix:meta name="configuration-page" content="SAFRuntime"/>
+            <netuix:meta name="breadcrumb" content="safagent.remoteendpoint.messages"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="SAFRemoteEndpointMessagesTablePortlet"
+                                          contentUri="/PortalConfig/jms/safagent/SAFRemoteEndpointMessagesTable.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- START SAF Agent CONTROL -->
+
+  <!-- definition for the agent pause incoming assistant -->
+  <netuix:book definitionLabel="SAFAgentPauseIncomingBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.safagent.pauseincoming.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="SAFAgentPauseIncomingPage" title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid" content="JMS.jms.safagent.safagentpauseincoming.title;jms"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="SAFAgentPauseIncomingPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/jms/safagent/control/ControlSAFAgent.jpf"
+                                            action="pauseIncoming"
+                                            refreshAction="pauseIncoming"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- definition for the agent resume incoming assistant -->
+  <netuix:book definitionLabel="SAFAgentResumeIncomingBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.safagent.resumeincoming.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="SAFAgentResumeIncomingPage" title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid" content="JMS.jms.safagent.safagentresumeincoming.title;jms"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="SAFAgentResumeIncomingPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/jms/safagent/control/ControlSAFAgent.jpf"
+                                            action="resumeIncoming"
+                                            refreshAction="resumeIncoming"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- definition for the agent pause forwarding assistant -->
+  <netuix:book definitionLabel="SAFAgentPauseForwardingBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.safagent.pauseforwarding.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="SAFAgentPauseForwardingPage"
+                       title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid" content="JMS.jms.safagent.safagentpauseforwarding.title;jms"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="SAFAgentPauseForwardingPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/jms/safagent/control/ControlSAFAgent.jpf"
+                                            action="pauseForwarding"
+                                            refreshAction="pauseForwarding"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- definition for the agent resume forwarding assistant -->
+  <netuix:book definitionLabel="SAFAgentResumeForwardingBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.safagent.resumeforwarding.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="SAFAgentResumeForwardingPage"
+                       title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid" content="JMS.jms.safagent.safagentresumeforwarding.title;jms"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="SAFAgentResumeForwardingPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/jms/safagent/control/ControlSAFAgent.jpf"
+                                            action="resumeForwarding"
+                                            refreshAction="resumeForwarding"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- definition for the agent pause receiving assistant -->
+  <netuix:book definitionLabel="SAFAgentPauseReceivingBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.safagent.pausereceiving.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="SAFAgentPauseReceivingPage" title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid" content="JMS.jms.safagent.safagentpausereceiving.title;jms"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="SAFAgentPauseReceivingPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/jms/safagent/control/ControlSAFAgent.jpf"
+                                            action="pauseReceiving"
+                                            refreshAction="pauseReceiving"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- definition for the agent resume receiving assistant -->
+  <netuix:book definitionLabel="SAFAgentResumeReceivingBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.safagent.resumereceiving.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="SAFAgentResumeReceivingPage"
+                       title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid" content="JMS.jms.safagent.safagentresumereceiving.title;jms"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="SAFAgentResumeReceivingPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/jms/safagent/control/ControlSAFAgent.jpf"
+                                            action="resumeReceiving"
+                                            refreshAction="resumeReceiving"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+
+      <!-- END SAF Agent CONTROL -->
+
+ <!-- START REMOTE ENDPOINT control -->
+
+  <!-- definition for the agent pause incoming assistant -->
+  <netuix:book definitionLabel="SAFRemoteEndpointPauseIncoming" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.safagent.remoteendpoint.pauseincoming.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="SAFRemoteEndpointPauseIncomingPage"
+                       title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid" content="JMS.jms.safagent.remoteendpointpauseincoming.title;jms"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="SAFRemoteEndpointPauseIncomingPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/jms/safagent/remoteendpoint/ControlRemoteEndpoint.jpf"
+                                            action="pauseIncoming"
+                                            refreshAction="pauseIncoming"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- definition for the agent resume incoming assistant -->
+  <netuix:book definitionLabel="SAFRemoteEndpointResumeIncoming" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.safagent.remoteendpoint.resumeincoming.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="SAFRemoteEndpointResumeIncomingPage"
+                       title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid" content="JMS.jms.safagent.remoteendpointresumeincoming.title;jms"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="SAFRemoteEndpointResumeIncomingPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/jms/safagent/remoteendpoint/ControlRemoteEndpoint.jpf"
+                                            action="resumeIncoming"
+                                            refreshAction="resumeIncoming"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- definition for the agent pause forwarding assistant -->
+  <netuix:book definitionLabel="SAFRemoteEndpointPauseForwarding" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.safagent.remoteendpoint.pauseforwarding.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="SAFRemoteEndpointPauseForwardingPage"
+                       title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid"
+                         content="JMS.jms.safagent.remoteendpointpauseforwarding.title;jms"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="SAFRemoteEndpointPauseForwardingPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/jms/safagent/remoteendpoint/ControlRemoteEndpoint.jpf"
+                                            action="pauseForwarding"
+                                            refreshAction="pauseForwarding"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- definition for the agent resume forwarding assistant -->
+  <netuix:book definitionLabel="SAFRemoteEndpointResumeForwarding" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.safagent.remoteendpoint.resumeforwarding.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="SAFRemoteEndpointResumeForwardingPage"
+                       title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid"
+                         content="JMS.jms.safagent.remoteendpointresumeforwarding.title;jms"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="SAFRemoteEndpointResumeForwardingPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/jms/safagent/remoteendpoint/ControlRemoteEndpoint.jpf"
+                                            action="resumeForwarding"
+                                            refreshAction="resumeForwarding"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- definition for the agent expireall assistant -->
+  <netuix:book definitionLabel="SAFRemoteEndpointExpireAll" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.safagent.remoteendpoint.expireall.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="SAFRemoteEndpointExpireAllPage"
+                       title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid" content="JMS.jms.safagent.remoteendpointexpireall.title;jms"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="SAFRemoteEndpointExpireAllPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/jms/safagent/remoteendpoint/ControlRemoteEndpoint.jpf"
+                                            action="expireAll"
+                                            refreshAction="expireAll"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- definition for the agent purgeall assistant -->
+  <netuix:book definitionLabel="SAFRemoteEndpointPurgeAll" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.safagent.remoteendpoint.purgeall.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="SAFRemoteEndpointPurgeAllPage"
+                       title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid" content="JMS.jms.safagent.remoteendpointpurgeall.title;jms"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="SAFRemoteEndpointPurgeAllPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/jms/safagent/remoteendpoint/ControlRemoteEndpoint.jpf"
+                                            action="purgeAll"
+                                            refreshAction="purgeAll"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- END REMOTE ENDPOINT control -->
+
+  <netuix:book definitionLabel="SAFConversationDestroyBook"
+                   title="assistant.safagent.conversation.destroy.title"
+                   markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="SAFConversationDestroyPage" title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid" content="JMS.jms.safagent.destroyconversation.title;jms"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="SAFConversationDestroyPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/jms/safagent/conversation/SAFConversationDestroy.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- Definition for the SAF Remote Endpoint JMS Message Table page -->
+  <netuix:book definitionLabel="SAFRemoteEndpointMessagesBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="jms.safagent.remoteendpoint.messages.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="SAFRemoteEndpointMessagesPage"
+                       title="not.used"
+                       hidden="true">
+            <netuix:meta name="helpid" content="JMS.jms.safagent.remoteendpoint.messagetable.title;jms"/>
+            <netuix:meta name="breadcrumb-context" content="handle"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portletInstance markupType="Portlet" instanceLabel="SAFRemoteEndpointMessagesPortlet"
+                                          contentUri="/PortalConfig/jms/safagent/SAFRemoteEndpointMessagesTable.portlet"/>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- Definition for the SAF Remote Endpoint Message JMS Detail Table page -->
+  <netuix:book definitionLabel="SAFRemoteEndpointMessagesDetailBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="jms.safagent.remoteendpoint.messagesdetail.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="SAFRemoteEndpointMessagesDetailPage"
+                       title="not.used"
+                       hidden="true">
+            <netuix:meta name="helpid"
+                         content="JMS.jms.safagent.remoteendpoint.jmsmessagedetail.title;jms"/>
+            <netuix:meta name="breadcrumb-context" content="handle"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="SAFRemoteEndpointMessagesDetailPortlet">
+                    <netuix:strutsContent module="/jms" action="SAFRemoteEndpointMessagesDetail"
+                                          refreshAction="SAFRemoteEndpointMessagesDetail"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- Definition for the SAF Remote Endpoint SAF Message Table page -->
+  <netuix:book definitionLabel="SAFRemoteEndpointSAFMessageTableBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="jms.safagent.remoteendpoint.safmessage.table.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="SAFRemoteEndpointSAFMessageTablePage"
+                       title="not.used"
+                       hidden="true">
+            <netuix:meta name="helpid"
+                         content="JMS.jms.safagent.remoteendpoint.safmessage.table.title;jms"/>
+            <netuix:meta name="breadcrumb-context" content="handle"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="SAFRemoteEndpointSAFMessagePortlet">
+                    <netuix:strutsContent module="/jms" action="SAFRemoteEndpointSAFMessageTable"
+                                          refreshAction="SAFRemoteEndpointSAFMessageTable"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- Definition for the SAF Remote Endpoint Message SAF Detail Table page -->
+  <netuix:book definitionLabel="SAFRemoteEndpointSAFMessageDetailBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="jms.safagent.remoteendpoint.safmessage.detail.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="SAFRemoteEndpointSAFMessageDetailPage"
+                       title="not.used"
+                       hidden="true">
+            <netuix:meta name="helpid"
+                         content="JMS.jms.safagent.remoteendpoint.safmessage.detail.title;jms"/>
+            <netuix:meta name="breadcrumb-context" content="handle"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="SAFRemoteEndpointSAFMessageDetailPortlet">
+                    <netuix:strutsContent module="/jms" action="SAFRemoteEndpointSAFMessageDetail"
+                                          refreshAction="SAFRemoteEndpointSAFMessageDetail"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- Definition for the SAF Remote Endpoint Message Table dispatcher page -->
+  <netuix:book definitionLabel="SAFRemoteEndpointMessageTableDispatcherBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="not.used"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="SAFRemoteEndpointMessageTableDispatcherPage"
+                       title="not.used"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="SAFRemoteEndpointMessageTableDispatcherPortlet">
+                    <netuix:strutsContent module="/jms" action="SAFRemoteEndpointMessageTableDispatcher"
+                                          refreshAction="SAFRemoteEndpointMessageTableDispatcher"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+    </netuix:content>
+  </netuix:book>
+
+</portal:root>

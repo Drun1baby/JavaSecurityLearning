@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Portlet definition file for the ConnectorConfigurationProperties page in
+  the WebLogic Server administration console.
+  
+  Copyright (c) 2004,2009, Oracle and/or its affiliates. All rights reserved. 
+-->
+<portal:root
+  xmlns:html="http://www.w3.org/1999/xhtml-netuix-modified/1.0.0"
+  xmlns:portal="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0"
+  xmlns:netuix="http://www.bea.com/servers/netuix/xsd/controls/netuix/1.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0 portal-support-1_0_0.xsd">
+  <netuix:portlet definitionLabel="ConnectorApplicationConfigurationPropertiesPortlet">
+    <netuix:strutsContent
+      module="/connector"
+      action="ConnectorConfigurationProperties"
+      refreshAction="ConnectorConfigurationProperties" />
+  </netuix:portlet>
+</portal:root>

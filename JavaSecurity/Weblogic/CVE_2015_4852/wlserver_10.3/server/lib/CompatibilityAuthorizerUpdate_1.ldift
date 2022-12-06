@@ -1,0 +1,51 @@
+dn: dc=@domain@
+objectclass: top
+objectclass: domain
+dc: @domain@
+
+dn: ou=@realm@,dc=@domain@
+objectclass: top
+objectclass: organizationalUnit
+ou: @realm@
+
+dn: ou=ERole,ou=@realm@,dc=@domain@
+objectclass: top
+objectclass: organizationalUnit
+ou: ERole
+
+dn: ou=EResource,ou=@realm@,dc=@domain@
+objectclass: top
+objectclass: organizationalUnit
+ou: EResource
+
+dn: ou=EPredicate,ou=@realm@,dc=@domain@
+objectclass: top
+objectclass: organizationalUnit
+ou: EPredicate
+
+dn: ou=EProfile,ou=@realm@,dc=@domain@
+objectclass: top
+objectclass: organizationalUnit
+ou: EProfile
+
+dn: ou=EProfileDefinition,ou=@realm@,dc=@domain@
+objectclass: top
+objectclass: organizationalUnit
+ou: EProfileDefinition
+
+dn: ou=EProfileInstance,ou=@realm@,dc=@domain@
+objectclass: top
+objectclass: organizationalUnit
+ou: EProfileInstance
+
+dn: cn=type@E@Fejb@G,ou=EResource,ou=@realm@,dc=@domain@
+objectclass: top
+objectclass: EResource
+cn: type@E@Fejb@G
+EExpr:: Z2V2ZXJ5b25lCg==
+
+dn: cn=type@E@Furl@G,ou=EResource,ou=@realm@,dc=@domain@
+objectclass: top
+objectclass: EResource
+cn: type@E@Furl@G
+EExpr:: Z2V2ZXJ5b25lCg==

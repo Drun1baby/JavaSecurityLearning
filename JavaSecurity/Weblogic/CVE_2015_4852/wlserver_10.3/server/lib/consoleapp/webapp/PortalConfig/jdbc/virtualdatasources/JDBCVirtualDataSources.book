@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portal:root xmlns:netuix="http://www.bea.com/servers/netuix/xsd/controls/netuix/1.0.0"
+             xmlns:html="http://www.w3.org/1999/xhtml-netuix-modified/1.0.0"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:portal="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0"
+             xsi:schemaLocation="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0 portal-support-1_0_0.xsd">
+<!--
+    Definition file for the pages in the jdbc.virtualdatasource subsystem
+    of the WebLogic Server administration console
+
+    Copyright (c) 2004,2011, Oracle and/or its affiliates. All rights reserved.
+-->
+  <netuix:book markupName="book" definitionLabel="JdbcVirtualDataSource" title="book.title"
+               presentationClass="invisible">
+    <netuix:content>
+      <netuix:book markupName="book" definitionLabel="JdbcVirtualDataSourceBook"
+                   title="book.title"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar>
+    </netuix:titlebar>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="JdbcVirtualDataSourcePages" title="not.used"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:book markupName="book" definitionLabel="JdbcVirtualDataSourceTabsBook"
+                               title="JdbcVirtualDataSourceTabsBook">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+                  <!-- Definition for the config tab -->
+                  <netuix:book markupName="book" definitionLabel="JDBCVirtualDataSourceConfigTabPage"
+                                   title="tab.config.label">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                        <netuix:content>
+                      <!-- Definition for the general tab -->
+                      <netuix:page markupName="page" definitionLabel="JDBCVirtualDataSourceConfigGeneralTabPage"
+                                       presentationClass="page-content"
+                                       title="tab.general.label">
+                            <netuix:meta name="helpid"
+                                         content="JDBC.jdbc.virtualdatasources.jdbcvirtualdatasourceconfiggeneral.title;jdbc"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="JdbcVirtualDataSourcesJDBCVirtualDataSourceConfigGeneralPortlet">
+                                    <netuix:strutsContent module="/jdbc"
+                                                          action="JdbcVirtualDataSourcesJDBCVirtualDataSourceConfigGeneral"
+                                                          refreshAction="JdbcVirtualDataSourcesJDBCVirtualDataSourceConfigGeneral"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the data sources tab -->
+                      <netuix:page markupName="page"
+                                       definitionLabel="JDBCVirtualDataSourceConfigDataSourcesTabPage"
+                                       presentationClass="page-content"
+                                       title="tab.datasources.label">
+                            <netuix:meta name="helpid"
+                                         content="JDBC.jdbc.virtualdatasources.jdbcvirtualdatasourceconfigdatasources.title;jdbc"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="JdbcVirtualDataSourcesJDBCVirtualDataSourceConfigDataSourcesPortlet">
+                                    <netuix:strutsContent module="/jdbc"
+                                                          action="JdbcVirtualDataSourcesJDBCVirtualDataSourceConfigDataSources"
+                                                          refreshAction="JdbcVirtualDataSourcesJDBCVirtualDataSourceConfigDataSources"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                        </netuix:content>
+                      </netuix:book>
+                      <!-- Definition for the targetdeploy tab -->
+                  <netuix:page markupName="page" definitionLabel="JDBCVirtualDataSourceTargetDeployTabPage"
+                                   presentationClass="page-content"
+                                   title="tab.targets.label">
+                        <netuix:meta name="helpid"
+                                     content="JDBC.jdbc.virtualdatasources.jdbcvirtualdatasourcetargetdeploy.title;jdbc"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                              <netuix:portlet definitionLabel="JdbcVirtualDataSourcesJDBCVirtualDataSourceTargetDeployPortlet">
+                                <netuix:strutsContent module="/jdbc" action="JdbcVirtualDataSourcesJDBCVirtualDataSourceTargetDeploy"
+                                                      refreshAction="JdbcVirtualDataSourcesJDBCVirtualDataSourceTargetDeploy"/>
+                              </netuix:portlet>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the notes tab -->
+                  <netuix:page markupName="page" definitionLabel="JDBCVirtualDataSourceNotesTabPage"
+                                   presentationClass="page-content"
+                                   title="tab.notes.label">
+                        <netuix:meta name="helpid"
+                                     content="JDBC.jdbc.virtualdatasources.jdbcvirtualdatasourcenotes.title;jdbc"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                              <netuix:portlet definitionLabel="JdbcVirtualDataSourcesJDBCVirtualDataSourceNotesPortlet">
+                                <netuix:strutsContent module="/jdbc" action="JdbcVirtualDataSourcesJDBCVirtualDataSourceNotes"
+                                                      refreshAction="JdbcVirtualDataSourcesJDBCVirtualDataSourceNotes"/>
+                              </netuix:portlet>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                    </netuix:content>
+                  </netuix:book>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the JDBCVirtualDataSource creation assistant page -->
+      <netuix:book markupName="book" definitionLabel="CreateGlobalJDBCVirtualDataSourceBook"
+                   title="assistant.create.jdbcvirtualdatasource.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="CreateGlobalJDBCVirtualDataSource"
+                       title="not.used"
+                       hidden="true"
+                       backingFile="com.bea.console.utils.GeneralBackingFile"
+                       threadsafe="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid"
+                         content="JDBC.jdbc.virtualdatasources.createvirtualdatasource.title;jdbc"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="CreateGlobalJDBCVirtualDataSourcePortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/jdbc/virtualdatasources/createvirtualdatasource/CreateVirtualDataSource.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+    </netuix:content>
+  </netuix:book>
+
+</portal:root>

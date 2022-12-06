@@ -1,0 +1,84 @@
+A:link {
+	BACKGROUND: none transparent scroll repeat 0% 0%; 
+	COLOR: #000000; 
+	FONT-FAMILY:Tahoma,Arial,Helvetica,Verdana,sans-serif;
+  FONT-SIZE: 80%;
+	TEXT-DECORATION: none;
+}
+A:active {
+	BACKGROUND: none transparent scroll repeat 0% 0%; 
+	COLOR: #000000; 
+	FONT-FAMILY:Tahoma,Arial,Helvetica,Verdana,sans-serif;
+	FONT-SIZE: 80%;
+	TEXT-DECORATION: none;
+}
+A:visited {
+	BACKGROUND: none transparent scroll repeat 0% 0%; 
+	COLOR: #000000; 
+	FONT-FAMILY:Tahoma,Arial,Helvetica,Verdana,sans-serif;
+	FONT-SIZE: 80%;
+	TEXT-DECORATION: none;
+}
+A:hover {
+	BACKGROUND: #C7D8EB; 
+	COLOR: #000000; 
+	FONT-FAMILY:Tahoma,Arial,Helvetica,Verdana,sans-serif;
+	FONT-SIZE: 80%;
+	TEXT-DECORATION: none;
+}
+
+.aNode {
+  FONT-FAMILY: Tahoma,Arial,Helvetica,Verdana,sans-serif;
+  font-size: 10pt;  
+  /*background-Color: rgb(223,230,192); */
+  width: 100%;
+  border: 0px solid black;  
+  color:#FFFFFF;
+}
+.bNode {
+  font-family: Comic Sans MS,Arial;
+  font-size: 6pt;  
+  background-Color: rgb(237,243,246);
+  /*width: 240px;*/
+  border: 0px solid black;  
+  color:#FFFFFF;
+}
+TD {font-size:10pt;}
+
+.ELEMENT {
+  FONT-FAMILY: Tahoma,Arial,Helvetica,Verdana,sans-serif;
+  color: rgb(210,106,101);
+}
+
+.CDATA {
+  FONT-FAMILY: Tahoma,Arial,Helvetica,Verdana,sans-serif;
+  color: rgb(0,0,0);
+}
+
+.COMMENT {
+  FONT-FAMILY: Tahoma,Arial,Helvetica,Verdana,sans-serif;
+  color: rgb(192,192,192);
+}
+
+#QUERY {
+  FONT-FAMILY: Tahoma,Arial,Helvetica,Verdana,sans-serif;
+  background-color: rgb(109,123,147);
+  border: 1px solid rgb(0,0,0);
+  width: 80%;
+  color: white;
+}
+.QUERY {
+  FONT-FAMILY: Tahoma,Arial,Helvetica,Verdana,sans-serif;
+  background-color: rgb(235,230,92);
+  border: 1px solid rgb(198,189,92);
+  width: 80%;
+}
+
+.ENTITIES {
+  color: blue;
+}
+.CHECKBOX {
+ height:10px;
+ width:10px;
+ border: 1px solid black;
+}

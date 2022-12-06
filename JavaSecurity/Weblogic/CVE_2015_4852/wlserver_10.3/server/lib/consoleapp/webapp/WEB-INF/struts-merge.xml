@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+          "struts-config_1_1.dtd">
+
+<struts-config>
+
+  <!-- Global Exception Handlers for this module -->
+  <global-exceptions>
+    <exception
+      key="global"
+      type="java.lang.Exception"
+      handler="com.bea.console.utils.UnexpectedExceptionHandler" />
+  </global-exceptions>
+
+  <global-forwards>
+    <forward
+      name="providerchanged"
+      contextRelative="true"
+      path="/jsp/security/ProviderChanged.jsp" />
+    <forward
+      name="serverrestartrequired"
+      contextRelative="true"
+      path="/jsp/security/ServerRestartRequired.jsp" />
+    <forward
+      name="emptyresourcelist"
+      contextRelative="true"
+      path="/jsp/security/EmptyResourceList.jsp" />
+  </global-forwards>
+
+  <controller
+    className="org.apache.beehive.netui.pageflow.config.PageFlowControllerConfig"
+    inputForward="true"
+    processorClass="com.bea.console.internal.ConsolePageFlowRequestProcessor">
+    <set-property
+      value="true"
+      property="isReturnToPageDisabled" />
+    <set-property
+      value="true"
+      property="isReturnToActionDisabled" />
+    <set-property
+      property="nocache"
+      value="true" />
+    <set-property
+      property="contentType"
+      value="text/html;charset=UTF-8" />
+  </controller>
+
+</struts-config>

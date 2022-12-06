@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    The console skin was created based on the bighorn skin.
+-->
+<skin 
+    xmlns="http://www.bea.com/servers/portal/framework/laf/1.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.bea.com/servers/portal/framework/laf/1.0.0 laf-skin-1_0_0.xsd"
+>
+    <target-skeleton>
+        <skeleton-id>console</skeleton-id>
+    </target-skeleton>
+    <images>
+        <search-path>
+            <path-element>images</path-element>
+        </search-path>
+    </images>
+    <render-dependencies>
+        <html>
+            <links>
+                <search-path>
+                    <path-element>css</path-element>
+                </search-path>
+                <link href="general.css" rel="stylesheet" type="text/css" />
+                <link href="menu.css" rel="stylesheet" type="text/css" />
+                <link href="window.css" rel="stylesheet" type="text/css" />
+                <link href="console.css" rel="stylesheet" type="text/css" />
+            </links>
+        </html>
+    </render-dependencies>
+</skin>

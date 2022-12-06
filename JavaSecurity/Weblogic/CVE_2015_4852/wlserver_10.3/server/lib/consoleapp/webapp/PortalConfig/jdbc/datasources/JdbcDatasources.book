@@ -1,0 +1,1050 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portal:root xmlns:netuix="http://www.bea.com/servers/netuix/xsd/controls/netuix/1.0.0"
+             xmlns:html="http://www.w3.org/1999/xhtml-netuix-modified/1.0.0"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:portal="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0"
+             xsi:schemaLocation="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0 portal-support-1_0_0.xsd">
+<!-- 
+    Definition file for the pages in the JDBC Datasource subsystem
+    of the WebLogic Server administration console
+    
+    Copyright (c) 2004,2011, Oracle and/or its affiliates. All rights reserved.
+-->
+  <netuix:book markupName="book" definitionLabel="JdbcDatasources" title="book.title"
+               presentationClass="invisible">
+    <netuix:content>
+      <netuix:book markupName="book" definitionLabel="JdbcDatasourcesBook" title="book.title"
+                   backingFile="com.bea.console.utils.JdbcDataSourceBackingFile"
+                   threadsafe="true"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="JdbcDatasourcesPages" title="not.used"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:book markupName="book" definitionLabel="JdbcDatasourcesTabsBook"
+                               title="JdbcDatasourcesTabsBook">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+                  <!-- Definition for the config tab -->
+                  <netuix:book markupName="book" definitionLabel="JdbcDatasourcesJDBCDataSourceConfigPage"
+                                   title="tab.config.label">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                        <netuix:content>
+                      <!-- Definition for the general tab -->
+                      <netuix:page markupName="page" definitionLabel="JdbcDatasourcesJDBCDataSourceConfigTabPage"
+                                       presentationClass="page-content"
+                                       title="tab.general.label">
+                            <netuix:meta name="helpid"
+                                         content="JDBC.jdbc.datasources.jdbcdatasourceconfiggeneral.title;jdbc"/>
+                            <netuix:meta name="configuration-page"
+                                         content="weblogic.j2ee.descriptor.wl.JDBCDataSourceBean"/>
+                            <netuix:meta name="configuration-page" content="JDBCSystemResource"/>
+                            <netuix:meta name="breadcrumb-context" content="handle"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet" instanceLabel="JdbcDatasourcesJDBCDataSourceConfigPortlet"
+                                                          contentUri="/PortalConfig/jdbc/datasources/JDBCDataSourceConfig.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the connection pool tab -->
+                      <netuix:page markupName="page"
+                                       definitionLabel="JdbcDatasourcesJDBCDataSourceConfigConnectionPoolTabPage"
+                                       presentationClass="page-content"
+                                       title="tab.connectionpool.label">
+                            <netuix:meta name="helpid"
+                                         content="JDBC.jdbc.datasources.jdbcdatasourceconfigconnectionpool.title;jdbc"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet"
+                                                          instanceLabel="JdbcDatasourcesJDBCDataSourceConfigConnectionPoolPortlet"
+                                                          contentUri="/PortalConfig/jdbc/datasources/JDBCDataSourceConfigConnectionPool.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the Oracle Parameters tab -->
+                      <netuix:page markupName="page"
+                                       definitionLabel="JdbcDatasourcesJDBCDataSourceOracleParamsTabPage"
+                                       presentationClass="page-content"
+                                       title="tab.oracle.label">
+                            <netuix:meta name="helpid"
+                                         content="JDBC.jdbc.datasources.jdbcdatasourceconfig.oracleparams.title;jdbc"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet"
+                                                          instanceLabel="JdbcDatasourcesJDBCDataSourceOracleParamsPortlet"
+                                                          contentUri="/PortalConfig/jdbc/datasources/JDBCDataSourceOracleParams.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the ONS tab -->
+                      <netuix:page markupName="page"
+                                       definitionLabel="JdbcDatasourcesJDBCDataSourceONSClientConfigTabPage"
+                                       presentationClass="page-content"
+                                       title="tab.ons.label">
+                            <netuix:meta name="helpid"
+                                         content="JDBC.jdbc.datasources.jdbcdatasourceonsclientconfiggeneral.title;jdbc"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet"
+                                                          instanceLabel="JdbcDatasourcesJDBCDataSourceONSConfigPortlet"
+                                                          contentUri="/PortalConfig/jdbc/datasources/JDBCDataSourceONSClientConfig.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the Transaction tab -->
+                      <netuix:page markupName="page"
+                                       definitionLabel="JdbcDatasourcesJDBCDataSourceConfigTransactionTabPage"
+                                       presentationClass="page-content"
+                                       title="tab.transaction.label">
+                            <netuix:meta name="helpid"
+                                         content="JDBC.jdbc.datasources.jdbcdatasourceconfigtransaction.title;jdbc"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet"
+                                                          instanceLabel="JdbcDatasourcesJDBCDataSourceConfigTransactionPortlet"
+                                                          contentUri="/PortalConfig/jdbc/datasources/JDBCDataSourceConfigTransaction.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the Diagnostics tab -->
+                      <netuix:page markupName="page"
+                                       definitionLabel="JdbcDatasourcesJDBCDataSourceConfigDiagnosticsTabPage"
+                                       presentationClass="page-content"
+                                       title="tab.diagnostics.label">
+                            <netuix:meta name="helpid"
+                                         content="JDBC.jdbc.datasources.jdbcdatasourceconfigdiagnostics.title;jdbc"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet"
+                                                          instanceLabel="JdbcDatasourcesJDBCDataSourceConfigDiagnosticsPortlet"
+                                                          contentUri="/PortalConfig/jdbc/datasources/JDBCDataSourceConfigDiagnostics.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the Security tab -->
+                      <netuix:page markupName="page"
+                                       definitionLabel="JdbcDatasourcesJDBCDataSourceConfigSecurityTabPage"
+                                       presentationClass="page-content"
+                                       title="tab.identityoptions.label">
+                            <netuix:meta name="helpid"
+                                         content="JDBC.jdbc.datasources.jdbcdatasourceconfigsecurity.title;jdbc"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet"
+                                                          instanceLabel="JdbcDatasourcesJDBCDataSourceConfigSecurityPortlet"
+                                                          contentUri="/PortalConfig/jdbc/datasources/JDBCDataSourceConfigSecurity.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                        </netuix:content>
+                      </netuix:book>
+                      <!-- Definition for the targetdeploy tab -->
+                  <netuix:page markupName="page" definitionLabel="JDBCDataSourcetargetdeployTabPage"
+                                   presentationClass="page-content"
+                                   title="tab.targets.label">
+                        <netuix:meta name="helpid" content="JDBC.jdbc.jdbctargets.title;jdbc"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet"
+                                                      instanceLabel="JdbcDatasourcesJDBCDataSourceTargetdeployPortlet"
+                                                      contentUri="/PortalConfig/jdbc/JDBCTargets.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the monitoring tab -->
+                  <netuix:book markupName="book" definitionLabel="JdbcDatasourcesJDBCDataSourceMonitorPage"
+                                   title="tab.monitor.label">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                        <netuix:content>
+                      <!-- Definition for the statistics tab -->
+                      <netuix:page markupName="page"
+                                       definitionLabel="JdbcDatasourcesJDBCDataSourceMonitorStatisticsPage"
+                                       presentationClass="page-content"
+                                       title="tab.statistics.label">
+                            <netuix:meta name="helpid"
+                                         content="JDBC.jdbc.datasources.jdbcdatasourcemonitorstatistics.title;jdbc"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet"
+                                                          instanceLabel="JdbcDatasourcesJDBCDataSourceMonitorStatisticsPortlet"
+                                                          contentUri="/PortalConfig/jdbc/datasources/JDBCDataSourceMonitorStatistics.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the testing tab -->
+                      <netuix:page markupName="page"
+                                       definitionLabel="JdbcDatasourcesJDBCDataSourceMonitorTestingPage"
+                                       presentationClass="page-content"
+                                       title="tab.testing.label">
+                            <netuix:meta name="helpid"
+                                         content="JDBC.jdbc.datasources.jdbcdatasourcemonitortesting.title;jdbc"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portletInstance markupType="Portlet"
+                                                          instanceLabel="JdbcDatasourcesJDBCDataSourceMonitorTestingPortlet"
+                                                          contentUri="/PortalConfig/jdbc/datasources/JDBCDataSourceMonitorTesting.portlet"/>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                        </netuix:content>
+                      </netuix:book>
+                      <!-- Definition for the control tab -->
+                  <netuix:page markupName="page" definitionLabel="JDBCDataSourceControlTabPage"
+                                   presentationClass="page-content"
+                                   title="tab.control.label">
+                        <netuix:meta name="helpid" content="JDBC.jdbc.datasources.jdbcdatasourcecontrol.title;jdbc"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                              <netuix:portlet definitionLabel="JdbcDatasourcesJDBCDataSourceControlPortlet">
+                                <netuix:strutsContent module="/jdbc" action="JdbcResourceDataSourceControl"
+                                                      refreshAction="JdbcResourceDataSourceControl"/>
+                              </netuix:portlet>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the secuirty tab -->
+                  <netuix:book markupName="book" definitionLabel="JdbcDatasourcesSecurityPage"
+                                   title="tab.security.label">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                        <netuix:content>
+                      <!-- Definition for the roles tab -->
+                      <netuix:page markupName="page" definitionLabel="JdbcDatasourcesSecurityRolesTabPage"
+                                       presentationClass="page-content"
+                                       title="tab.roles.label">
+                            <netuix:meta name="helpid" content="JDBC.jdbc.datasources.security.role.table.title;jdbc"/>
+                            <netuix:meta name="breadcrumb" content="tab.roles.label;key"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="JdbcDatasourcesSecurityRolesPortlet">
+                                    <netuix:strutsContent module="/jdbc" action="JdbcDatasourcesSecurityRolesTable"
+                                                          refreshAction="JdbcDatasourcesSecurityRolesTable"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the policies tab -->
+                      <netuix:page markupName="page" definitionLabel="JdbcDatasourcesSecurityPoliciesTabPage"
+                                       presentationClass="page-content"
+                                       title="tab.policies.label">
+                            <netuix:meta name="helpid" content="JDBC.jdbc.datasources.security.policies.title;jdbc"/>
+                            <netuix:meta name="breadcrumb" content="tab.policies.label;key"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="JdbcDatasourcesSecurityPoliciesPortlet">
+                                    <netuix:pageflowContent contentUri="/com/bea/console/actions/jdbc/datasources/policies/EditJDBCDataSourcePolicies.jpf"
+                                                            action="begin"
+                                                            refreshAction="begin"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                          <!-- Definition for the credential mapping tab -->
+                      <netuix:page markupName="page"
+                                       definitionLabel="JdbcDatasourcesSecurityCredentialMappingTabPage"
+                                       presentationClass="page-content"
+                                       title="tab.credentialmapping.label">
+                            <netuix:meta name="helpid"
+                                         content="JDBC.jdbc.datasources.jdbcdatasourcesecuritycredentialmapping.title;jdbc"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="JdbcDatasourcesSecurityCredentialMappingPortlet">
+                                    <netuix:strutsContent module="/jdbc" action="JdbcDatasourcesSecurityCredentialMapping"
+                                                          refreshAction="JdbcDatasourcesSecurityCredentialMapping"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+                        </netuix:content>
+                      </netuix:book>
+                      <!-- Definition for the notes tab -->
+                  <netuix:page markupName="page" definitionLabel="JDBCDataSourcenotesTabPage"
+                                   presentationClass="page-content"
+                                   title="tab.notes.label">
+                        <netuix:meta name="helpid" content="JDBC.jdbc.datasources.jdbcdatasourcenotes.title;jdbc"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                              <netuix:portlet definitionLabel="JdbcDatasourcesJDBCDataSourceNotesPortlet">
+                                <netuix:strutsContent module="/jdbc" action="JdbcDatasourcesJDBCDataSourceNotes"
+                                                      refreshAction="JdbcDatasourcesJDBCDataSourceNotes"/>
+                              </netuix:portlet>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      
+                    </netuix:content>
+                  </netuix:book>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      
+      <!-- Definition for the JDBCDataSource table page -->
+      <netuix:book definitionLabel="GlobalJDBCDataSourceTableBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="jdbcdatasources.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="GlobalJDBCDataSourceTablePages"
+                       title="not.used"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:book markupName="book" definitionLabel="GlobalJDBCDataSourceTablePagesBook"
+                               title="jdbcdatasources.title">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+                      <!-- Definition for the CoreServerServerTablePage page -->
+                      <netuix:page markupName="page" definitionLabel="GlobalJDBCDataSourceTablePage"
+                                   presentationClass="page-content"
+                                   title="tab.configuration.label">
+                        <netuix:meta name="helpid" content="JDBC.jdbc.datasources.datasourcetable.title;jdbc"/>
+                        <netuix:meta name="breadcrumb" content="jdbcdatasources.title"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                              <netuix:portlet definitionLabel="GlobalJDBCDataSourceTablePortlet">
+                                <netuix:strutsContent module="/jdbc" action="GlobalJDBCDataSourceTable"
+                                                      refreshAction="GlobalJDBCDataSourceTable"/>
+                              </netuix:portlet>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the WLSServerControlTablePage page -->
+                      <netuix:page markupName="page" definitionLabel="GlobalJDBCDataSourceMonitorTablePage"
+                                   presentationClass="page-content"
+                                   title="tab.monitoring.label">
+                        <netuix:meta name="helpid" content="JDBC.jdbc.datasources.datasourcemonitortable.title;jdbc"/>
+                        <netuix:meta name="breadcrumb" content="jdbcdatasources.title"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                              <netuix:portlet definitionLabel="GlobalJDBCDataSourceMonitorTablePortlet">
+                                <netuix:strutsContent module="/jdbc" action="GlobalJDBCDataSourceMonitorTable"
+                                                      refreshAction="GlobalJDBCDataSourceMonitorTable"/>
+                              </netuix:portlet>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                    </netuix:content>
+                  </netuix:book>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      
+      <!-- Definition for the Global DataSource creation assistant page -->
+      <netuix:book markupName="book" definitionLabel="CreateJDBCDataSourceBook"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.create.jdbcdatasource.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="CreateGlobalJDBCDataSource" title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="JDBC.jdbc.datasources.createjdbcdatasource.title;jdbc"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="CreateGlobalJDBCDataSourcePortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/jdbc/datasources/createjdbcdatasource/CreateJDBCDataSource.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      
+      <!-- Definition for the Global GridLink DataSource creation assistant page -->
+      <netuix:book markupName="book" definitionLabel="CreateJDBCGridLinkDataSourceBook"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.create.jdbcgridlinkdatasource.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="CreateGlobalJDBCGridLinkDataSource"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid"
+                         content="JDBC.jdbc.datasources.creategridlinkdatasource.title;jdbc"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="CreateGlobalJDBCGridLinkDataSourcePortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/jdbc/datasources/creategridlinkdatasource/CreateGridLinkDataSource.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Global DataSource deletion assistant page -->
+  <netuix:book markupName="book" definitionLabel="DeleteJDBCDataSourceBook"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.delete.jdbcdatasource.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="DeleteGlobalJDBCDataSource" title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid"
+                         content="JDBC.jdbc.datasources.deletejdbcdatasource.page.title;jdbc"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="DeleteGlobalJDBCDataSourcePortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/jdbc/datasources/deletejdbcdatasource/DeleteJDBCDataSource.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Credential Mapping creation assistant page -->
+  <netuix:book definitionLabel="CreateJDBCDataSourceSecurityCredentialMappingBook"
+                   markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.create.jdbcdatasourcecredentialmapping.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page"
+                       definitionLabel="CreateJDBCDataSourceSecurityCredentialMapping"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid"
+                         content="JDBC.jdbc.datasources.createcredentialmapping.title;jdbc"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="CreateJDBCDataSourceSecurityCredentialMappingPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/jdbc/datasources/createcredentialmapping/CreateCredentialMapping.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Credential Mapping edit page -->
+  <netuix:book definitionLabel="JdbcDatasourcesSecurityCredentialMappingConfigBook"
+                   markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.jdbcdatasource.editcredentialmapping.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page"
+                       definitionLabel="JdbcDatasourcesSecurityCredentialMappingConfigPage"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid" content="JDBC.jdbc.datasources.editcredentialmapping.title;jdbc"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="JdbcDatasourcesSecurityCredentialMappingConfigPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/jdbc/datasources/editcredentialmapping/EditCredentialMapping.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the Credential Mapping deletion assistant page -->
+  <netuix:book definitionLabel="DeleteJDBCDataSourceSecurityCredentialMappingBook"
+                   markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.delete.jdbcdatasourcecredentialmapping.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page"
+                       definitionLabel="DeleteJDBCDataSourceSecurityCredentialMapping"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid"
+                         content="JDBC.jdbc.datasources.deletecredentialmapping.title;jdbc"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="DeleteJDBCDataSourceSecurityCredentialMappingPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/jdbc/datasources/deletecredentialmapping/DeleteCredentialMapping.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the JDBCDataSource shrink assistant page -->
+  <netuix:book definitionLabel="JdbcDatasourcesShrinkJDBCDataSourceBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.jdbcdatasource.lifecycle.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="JdbcDatasourcesShrinkJDBCDataSource"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="JDBC.jdbc.datasources.shrinkjdbcdatasource.title;jdbc"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="JdbcDatasourcesShrinkJDBCDataSourcePortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/jdbc/datasources/lifecycle/Lifecycle.jpf"
+                                            action="shrink"
+                                            refreshAction="shrink"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the JDBCDataSource reset assistant page -->
+  <netuix:book definitionLabel="JdbcDatasourcesResetJDBCDataSourceBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.jdbcdatasource.lifecycle.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="JdbcDatasourcesResetJDBCDataSource"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="JDBC.jdbc.datasources.resetjdbcdatasource.title;jdbc"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="JdbcDatasourcesResetJDBCDataSourcePortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/jdbc/datasources/lifecycle/Lifecycle.jpf"
+                                            action="reset"
+                                            refreshAction="reset"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the JDBCDataSource clearstatementcache assistant page -->
+  <netuix:book definitionLabel="JdbcDatasourcesClearStatementCacheBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.jdbcdatasource.lifecycle.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="JdbcDatasourcesClearStatementCache"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="JDBC.jdbc.datasources.clearstatementcache.title;jdbc"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="JdbcDatasourcesClearStatementCachePortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/jdbc/datasources/lifecycle/Lifecycle.jpf"
+                                            action="clearStatementCache"
+                                            refreshAction="clearStatementCache"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the JDBCDataSource suspend assistant page -->
+  <netuix:book definitionLabel="JdbcDatasourcesSuspendJDBCDataSourceBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.jdbcdatasource.lifecycle.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="JdbcDatasourcesSuspendJDBCDataSource"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="JDBC.jdbc.datasources.suspendjdbcdatasource.title;jdbc"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="JdbcDatasourcesSuspendJDBCDataSourcePortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/jdbc/datasources/lifecycle/Lifecycle.jpf"
+                                            action="suspend"
+                                            refreshAction="suspend"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the JDBCDataSource forcesuspend assistant page -->
+  <netuix:book definitionLabel="JdbcDatasourcesForceSuspendJDBCDataSourceBook"
+                   markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.jdbcdatasource.lifecycle.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="JdbcDatasourcesForceSuspendJDBCDataSource"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid"
+                         content="JDBC.jdbc.datasources.forcesuspendjdbcdatasource.title;jdbc"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="JdbcDatasourcesForceSuspendJDBCDataSourcePortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/jdbc/datasources/lifecycle/Lifecycle.jpf"
+                                            action="forceSuspend"
+                                            refreshAction="forceSuspend"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the JDBCDataSource shutdown assistant page -->
+  <netuix:book definitionLabel="JdbcDatasourcesShutdownJDBCDataSourceBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.jdbcdatasource.lifecycle.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="JdbcDatasourcesShutdownJDBCDataSource"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="JDBC.jdbc.datasources.shutdownjdbcdatasource.title;jdbc"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="JdbcDatasourcesShutdownJDBCDataSourcePortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/jdbc/datasources/lifecycle/Lifecycle.jpf"
+                                            action="shutdown"
+                                            refreshAction="shutdown"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the JDBCDataSource forceshutdown assistant page -->
+  <netuix:book definitionLabel="JdbcDatasourcesForceShutdownJDBCDataSourceBook"
+                   markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.jdbcdatasource.lifecycle.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="JdbcDatasourcesForceShutdownJDBCDataSource"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid"
+                         content="JDBC.jdbc.datasources.forceshutdownjdbcdatasource.title;jdbc"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="JdbcDatasourcesForceShutdownJDBCDataSourcePortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/jdbc/datasources/lifecycle/Lifecycle.jpf"
+                                            action="forceShutdown"
+                                            refreshAction="forceShutdown"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the JDBCDataSource resume assistant page -->
+  <netuix:book definitionLabel="JdbcDatasourcesResumeJDBCDataSourceBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.jdbcdatasource.lifecycle.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="JdbcDatasourcesResumeJDBCDataSource"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid" content="JDBC.jdbc.datasources.resumejdbcdatasource.title;jdbc"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="JdbcDatasourcesResumeJDBCDataSourcePortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/jdbc/datasources/lifecycle/Lifecycle.jpf"
+                                            action="resume"
+                                            refreshAction="resume"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the JDBCDataSource start assistant page -->
+  <netuix:book definitionLabel="JdbcDatasourcesStartJDBCDataSourceBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.jdbcdatasource.lifecycle.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="JdbcDatasourcesStartJDBCDataSource"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid" content="JDBC.jdbc.datasources.startjdbcdatasource.title;jdbc"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="JdbcDatasourcesStartJDBCDataSourcePortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/jdbc/datasources/lifecycle/Lifecycle.jpf"
+                                            action="start"
+                                            refreshAction="start"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+  
+      <!-- Definition for the JDBCDataSource test assistant page -->
+  <netuix:book definitionLabel="TestJDBCDataSourceBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.jdbcdatasource.testjdbcdatasource.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="TestJDBCDataSourcePage" title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid"
+                         content="JDBC.jdbc.datasources.jdbcdatasourcemonitortesting.title;jdbc"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="TestJDBCDataSourcePortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/jdbc/datasources/testjdbcdatasource/TestJDBCDataSource.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- definition for JDBC Data Sources Security create role assistant -->
+  <netuix:book definitionLabel="JDBCDataSourcesSecurityCreateRoleBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.create.jdbcdatasources.security.roles.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="JDBCDataSourcesSecurityCreateRolePage"
+                       title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid" content="JDBC.jdbc.datasources.security.role.create.title;jdbc"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="JDBCDataSourcesSecurityCreateRolePortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/jdbc/datasources/roles/create/CreateJDBCDataSourceRole.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- definition for the Edit JDBC Data Sources Security Roles assistant. -->
+      <netuix:book definitionLabel="JDBCDataSourcesSecurityRolesEdit" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.edit.jdbcdatasources.security.roles.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="JDBCDataSourcesSecurityEditRolePage"
+                       title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid" content="JDBC.jdbc.datasources.security.role.manage.title;jdbc"/>
+            <netuix:meta name="breadcrumb" content="assistant.edit.jdbcdatasources.security.roles.title"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="JDBCDataSourcesSecurityEditRolePortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/jdbc/datasources/roles/edit/EditJDBCDataSourceRole.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- definition for the Delete JDBC Data Sources  Security Roles assistant -->
+      <netuix:book definitionLabel="JDBCDataSourcesSecurityDeleteRolesBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.delete.jdbcdatasources.security.roles.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="JDBCDataSourcesSecurityDeleteRolesPage"
+                       title="not.used"
+                       presentationClass="page-content">
+            <netuix:meta name="helpid" content="JDBC.jdbc.datasources.security.role.delete.title;jdbc"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="JDBCDataSourcesSecurityDeleteRolesPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/jdbc/datasources/roles/delete/DeleteJDBCDataSourceRoles.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+      <!-- definition for the JDBC Data Sources Dispatcher -->
+      <netuix:book definitionLabel="JdbcDatasourcesJDBCDataSourceDispatcherBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="tab.config.label"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="JdbcDatasourcesJDBCDataSourceDispatcherPage"
+                       title="not.used"
+                       presentationClass="page-content">
+             <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="JdbcDatasourcesJDBCDataSourceDispatcherPortlet">
+                    <netuix:strutsContent module="/jdbc" action="JDBCDataSourceDispatcher"
+                                          refreshAction="JDBCDataSourceDispatcher"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+
+      <!-- definition for the Oracle JDBC Data Sources pages -->
+      <netuix:book definitionLabel="JDBCOracleDataSourceBook" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="book.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+
+          <netuix:page markupName="page" definitionLabel="JDBCOracleDataSourcePages" title="not.used"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:book markupName="book" definitionLabel="JDBCOracleDataSourceBookBook"
+                               title="JDBCOracleDataSourceBookBook">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+                      <!-- Definition for the monitoring tab -->
+                      <netuix:book markupName="book" definitionLabel="JDBCOracleDataSourceInstancesMonitoringPage"
+                                   title="tab.configuration.label">
+                        <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                        <netuix:content>
+
+                          <!-- Definition for the general tab -->
+                          <netuix:page markupName="page" definitionLabel="JDBCOracleDataSourceInstancesPage"
+                                       presentationClass="page-content"
+                                       title="tab.datasource.instances.label">
+                            <netuix:meta name="helpid"
+                                         content="JDBC.jdbc.datasources.jdbcoracledsinstancemonitorstatistics.title;jdbc"/>
+                            <netuix:content>
+                              <netuix:layout type="no" markupName="NoLayout">
+                                <netuix:placeholder usingFlow="false" markupName="ph1">
+                                  <netuix:portlet definitionLabel="JDBCOracleDataSourceInstancesPortlet">
+                                    <netuix:strutsContent module="/jdbc" action="JdbcDatasourcesJDBCORACDSInstancesMonitorStatistics"
+                                                          refreshAction="JdbcDatasourcesJDBCORACDSInstancesMonitorStatistics"/>
+                                  </netuix:portlet>
+                                </netuix:placeholder>
+                              </netuix:layout>
+                            </netuix:content>
+                          </netuix:page>
+
+                          <!-- Definition for the ONS Client tab -->
+
+                      <netuix:book markupName="book" definitionLabel="JDBCOracleDataSourceONSPage"
+                                       title="tab.datasource.ons.label">
+                            <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu" presentationClass="menu-level1"/>
+                            <netuix:content>
+
+                              <netuix:page markupName="page" definitionLabel="JDBCOracleDataSourceONSStatisticsPage"
+                                           presentationClass="page-content"
+                                           title="tab.statistics.label">
+                                <netuix:meta name="helpid"
+                                             content="JDBC.jdbc.datasources.jdbcoracledsonsmonitorstatistics.title;jdbc"/>
+                                <netuix:content>
+                                  <netuix:layout type="no" markupName="NoLayout">
+                                    <netuix:placeholder usingFlow="false" markupName="ph1">
+                                      <netuix:portlet definitionLabel="JDBCOracleDataSourceONSStatisticsPortlet">
+                                        <netuix:strutsContent module="/jdbc" action="JdbcDatasourcesJDBCORACDSONSMonitorStatistics"
+                                                              refreshAction="JdbcDatasourcesJDBCORACDSONSMonitorStatistics"/>
+                                      </netuix:portlet>
+                                    </netuix:placeholder>
+                                  </netuix:layout>
+                                </netuix:content>
+                              </netuix:page>
+                              <netuix:page markupName="page" definitionLabel="JdbcDatasourcesJDBCDataSourceONSTestingPage"
+                                           presentationClass="page-content"
+                                           title="tab.testing.label">
+                                <netuix:meta name="helpid" content="JDBC.jdbc.datasources.jdbcoracledsonstesting.title;jdbc"/>
+                                <netuix:content>
+                                  <netuix:layout type="no" markupName="NoLayout">
+                                    <netuix:placeholder usingFlow="false" markupName="ph1">
+                                      <netuix:portlet definitionLabel="JdbcDatasourcesJDBCDataSourceONSTestingPortlet">
+                                        <netuix:strutsContent module="/jdbc" action="JdbcDatasourcesJDBCDataSourceONSTesting"
+                                                              refreshAction="JdbcDatasourcesJDBCDataSourceONSTesting"/>
+                                      </netuix:portlet>
+                                    </netuix:placeholder>
+                                  </netuix:layout>
+                                </netuix:content>
+                              </netuix:page>
+                              <netuix:page markupName="page" definitionLabel="TestJDBCOracleDataSourceONSPage"
+                                           title="not.used"
+                                           hidden="true"
+                                           presentationClass="page-assistant">
+                                <netuix:meta name="helpid"
+                                             content="JDBC.jdbc.datasources.jdbcdatasourcemonitortesting.title;jdbc"/>
+                                <netuix:content>
+                                  <netuix:layout type="no" markupName="NoLayout">
+                                    <netuix:placeholder usingFlow="false" markupName="ph1">
+                                      <netuix:portlet definitionLabel="TestJDBCOracleDataSourceONSPortlet">
+                                        <netuix:pageflowContent contentUri="/com/bea/console/actions/jdbc/datasources/testjdbcdatasourceons/TestJDBCDataSourceONS.jpf"
+                                                                action="begin"
+                                                                refreshAction="begin"/>
+                                      </netuix:portlet>
+                                    </netuix:placeholder>
+                                  </netuix:layout>
+                                </netuix:content>
+                              </netuix:page>
+
+                            </netuix:content>
+                          </netuix:book>
+
+                        </netuix:content>
+                      </netuix:book>
+		                  </netuix:content>
+		                </netuix:book>
+		              </netuix:placeholder>
+	             </netuix:layout>
+	           </netuix:content>
+	         </netuix:page>
+
+        </netuix:content>
+      </netuix:book>
+
+    </netuix:content>
+  </netuix:book>
+
+</portal:root>

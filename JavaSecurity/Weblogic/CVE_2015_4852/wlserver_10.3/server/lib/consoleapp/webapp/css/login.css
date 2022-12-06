@@ -1,0 +1,161 @@
+/*
+    Styles for the login page and other standalone pages (pages outside the
+    control of Portal)
+*/
+
+.float-container {
+    overflow: hidden;
+    width: 100%;
+}
+
+#top {
+    background: #FFFFFF url(../framework/skins/wlsconsole/images/Login_GC_LoginPage_Bg.gif) repeat-x top left;
+    min-width: 920px;
+    height: 550px;
+}
+
+#content {
+    overflow: hidden;
+    width: 100%;
+}
+
+#login-header {
+    height: 89px;
+}
+
+#login-header img {
+    margin-top: 20px;
+    margin-left: 25px;
+}
+
+#header {
+    padding-bottom: 20px;
+}
+
+#console-title {
+    padding: 6px 0px 0px 10px;
+}
+
+#sidebar {
+    float: left;
+    width: 527px;
+}
+
+#login {
+    background: #FFFFFF url(../framework/skins/wlsconsole/images/Loginarea_Background.png) repeat top left;
+    border: 1px solid #316D91;
+    padding: 7px 9px 10px;
+    float: right;
+    width: 320px;
+    margin-right: 52px;
+    margin-top: 60px;
+}
+
+#title {
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.input-row, .button-row {
+    overflow: hidden;
+    width: 100%;
+    padding-bottom: 4px;
+}
+
+#message .message-row {
+    padding: 4px 8px;
+}
+
+#message {
+    width: 630px;
+    margin: 0px auto;
+}
+
+#loginData {
+    padding: 8px;
+    margin: 0px;
+}
+
+.content {
+    padding: 8px;
+}
+
+.input-row label {
+    width: 12em;
+    float: left;
+    font-weight: bold;
+    padding-top: 4px;
+}
+
+.input-row .ctrl {
+    width: 14em;
+    float: left;
+}
+
+.button-row .ctrl{
+    float: right;
+}
+
+input, select, textarea, button {
+    margin: 1px;
+}
+
+.textinput {
+    border: 1px solid #B9B9B4;
+    padding: 1px 2px 1px 3px;
+}
+
+#j_username, #j_password {
+    width: 12em;
+}
+
+.formButton {
+    padding: 0px 4px 1px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #DDDDD8 #AFAFAF #797975;
+    background: #FDFDFA url(../images/button_bg_n.png) repeat-x center bottom;
+    color: #000000;
+    font-size: 11px;
+    white-space: nowrap;
+    overflow: visible; /* keeps IE from making buttons too wide */
+}
+
+.formButton:hover {
+    border-color: #ACBACF #768092 #0A0B19;
+    background: #EDFFFF url(../images/button_bg_mo.png) repeat-x center bottom;
+}
+
+.formButton:active {
+    border-color:  #00000A #677183 #9DABC0;
+    background: #AABACD url(../images/button_bg_md.png) repeat-x center bottom;
+}
+
+.formButton-disabled {
+    padding: 0px 4px 1px;
+    border: 1px solid #B9B9B4;
+    background: #E5E5E0  none;
+    color: #737373;
+    font-size: 11px;
+    white-space: nowrap;
+    overflow: visible; /* keeps IE from making buttons too wide */
+}
+
+.login-footer .info p {
+    margin: 1px 0px;
+}
+
+.login-footer {
+    padding: 0px 0px 6px 15px;
+    text-align: left;
+    color: #B2CBDB;
+    background-color: #185E87;
+    font-size: 10px;
+    white-space: nowrap;
+}
+
+.loginFailed {
+    color: #AD0E25;
+}
+

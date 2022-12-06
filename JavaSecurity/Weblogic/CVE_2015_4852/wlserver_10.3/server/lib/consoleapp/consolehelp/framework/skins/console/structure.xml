@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    There are no themes or specializations for Console
+-->
+<structure 
+    xmlns="http://www.bea.com/servers/portal/framework/laf/1.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.bea.com/servers/portal/framework/laf/1.0.0 laf-structure-1_0_0.xsd"
+>
+    <specializations>
+    </specializations>
+    <themes>
+    </themes>
+</structure>

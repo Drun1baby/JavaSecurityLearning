@@ -1,0 +1,21 @@
+<project name="newlaf" default="all">
+
+  <dirname property="laftemplate.src.dir" file="${ant.file.newlaf}"/>
+  <property name="usage" value="Usage : ant -f build-new-laf.xml -Dname=&lt;my extension name&gt; -Ddir=&lt;my extension source directory&gt;"/>
+  <condition property="direxists">
+    <available file="${dir}"/>
+  </condition>
+
+  <target name="all" description="${usage}">
+    <fail unless="name" message="&quot;name&quot; not defined.  ${usage}"/>
+    <fail unless="dir" message="&quot;dir&quot; not definted.  ${usage}"/>
+    <fail if="direxists" message="${dir} already exists.  ${usage}"/>
+    <mkdir dir="${dir}"/>
+    <unzip src="${laftemplate.src.dir}/laftemplate.zip" dest="${dir}"/>
+    <move file="${dir}/framework/skeletons/EXTENSIONNAME" tofile="${dir}/framework/skeletons/${name}"/>
+    <move file="${dir}/framework/skins/EXTENSIONNAME" tofile="${dir}/framework/skins/${name}"/>
+    <move file="${dir}/framework/markup/lookandfeel/EXTENSIONNAME.laf" tofile="${dir}/framework/markup/lookandfeel/${name}.laf"/>
+    <replace dir="${dir}" token="EXTENSIONNAME" value="${name}"/>
+  </target>
+
+</project>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p:window xmlns:p="http://www.bea.com/servers/portal/framework/laf/1.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.bea.com/servers/portal/framework/laf/1.0.0 laf-window-1_0_0.xsd">
+  <!-- 
+  The JNDI tree portal is fundamental to the WLS console JNDI viewer therefore 
+  it makes the ideal place to include application wide CSS and JavaScript 
+  resources.
+
+  Any css or js resources that are used by the console in general or by more than
+  one specific portle should be added here.
+  -->
+  <p:render-dependencies>
+    <p:html>
+      <p:links>
+        <p:search-path>
+          <p:path-element>../../css</p:path-element>
+        </p:search-path>
+        <p:link rel="stylesheet" type="text/css" href="jndinavtree.css"/>
+        <p:link rel="stylesheet" type="text/css" href="content.css"/>
+        <p:link rel="stylesheet" type="text/css" href="forms.css"/>
+      </p:links>
+      <p:scripts>
+        <p:search-path>
+          <p:path-element>../../javascript</p:path-element>
+        </p:search-path>
+        <!-- 
+          The following are used by most pages so it makes sense
+          to include them globally even if a few pages don't need them
+        -->
+        <p:script src="consoleUtil.js" type="text/javascript"/>
+        <p:script src="console-help.js" type="text/javascript"/>
+        <p:script src="tree.js" type="text/javascript"/>
+        <p:script src="form.js" type="text/javascript"/>
+        <p:script src="PredicateEditor.js" type="text/javascript"/>
+        <p:script src="table.js" type="text/javascript"/>
+      </p:scripts>
+    </p:html>
+  </p:render-dependencies>
+</p:window>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portal:root xmlns:netuix="http://www.bea.com/servers/netuix/xsd/controls/netuix/1.0.0"
+             xmlns:html="http://www.w3.org/1999/xhtml-netuix-modified/1.0.0"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:portal="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0"
+             xsi:schemaLocation="http://www.bea.com/servers/netuix/xsd/portal/support/1.0.0 portal-support-1_0_0.xsd">
+<!--
+    Definition file for the logfilter pages in the snmp subsystem
+    of the WebLogic Server administration console
+
+    Copyright (c) 2004,2009, Oracle and/or its affiliates. All rights reserved.
+-->
+  <netuix:book definitionLabel="SnmpLogfilter" title="book.title" markupName="book"
+               presentationClass="invisible">
+    <netuix:content>
+      <netuix:book definitionLabel="SnmpLogfilterBook" title="book.title" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="SnmpLogfilterPages" title="not.used"
+                       hidden="true">
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:book markupName="book" definitionLabel="SnmpLogfilterTabsBook"
+                               title="SnmpLogfilterTabsBook">
+                    <netuix:singleLevelMenu markupType="Menu" markupName="singleLevelMenu"/>
+                    <netuix:content>
+                  <!-- Definition for the general tab -->
+                  <netuix:page markupName="page" definitionLabel="SNMPLogFilterGeneralTabPage"
+                                   presentationClass="page-content"
+                                   title="tab.general.label">
+                        <netuix:meta name="helpid" content="SNMP.snmp.snmplogfiltergeneral.title;snmp"/>
+                        <netuix:meta name="breadcrumb-context" content="handle"/>
+                        <netuix:meta name="configuration-page" content="SNMPLogFilter"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                              <netuix:portlet definitionLabel="SNMPLogFilterGeneralPortlet">
+                                <netuix:strutsContent module="/snmp" action="SnmpLogfilterSNMPLogFilterGeneral"
+                                                      refreshAction="SnmpLogfilterSNMPLogFilterGeneral"/>
+                              </netuix:portlet>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the servers tab -->
+                  <netuix:page markupName="page" definitionLabel="SNMPLogFilterServersTabPage"
+                                   presentationClass="page-content"
+                                   title="tab.servers.label">
+                        <netuix:meta name="helpid" content="SNMP.snmp.snmplogfilterservers.title;snmp"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                              <netuix:portlet definitionLabel="SNMPLogFilterServersPortlet">
+                                <netuix:strutsContent module="/snmp" action="SnmpLogfilterSNMPLogFilterServers"
+                                                      refreshAction="SnmpLogfilterSNMPLogFilterServers"/>
+                              </netuix:portlet>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                      <!-- Definition for the notes tab -->
+                  <netuix:page markupName="page" definitionLabel="SNMPLogFilterNotesPage"
+                                   presentationClass="page-content"
+                                   title="tab.notes.label">
+                        <netuix:meta name="helpid" content="SNMP.snmp.snmplogfilternotes.title;snmp"/>
+                        <netuix:content>
+                          <netuix:layout type="no" markupName="NoLayout">
+                            <netuix:placeholder usingFlow="false" markupName="ph1">
+                              <netuix:portletInstance markupType="Portlet" instanceLabel="SNMPLogFilterNotesPortlet"
+                                                      contentUri="/PortalConfig/snmp/SNMPNotes.portlet"/>
+                            </netuix:placeholder>
+                          </netuix:layout>
+                        </netuix:content>
+                      </netuix:page>
+                    </netuix:content>
+                  </netuix:book>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the SNMPLogFilter creation assistant page -->
+  <netuix:book definitionLabel="SNMPLogFilterCreate" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="assistant.create.snmp.traps.logfilter.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="SnmpLogfilterCreateSNMPLogFilter"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="SNMP.createsnmplogfilter.page.title;snmp"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="SnmpLogfilterCreateSNMPLogFilterPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/snmp/logfilter/createsnmplogfilter/CreateSNMPLogFilter.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+      <!-- Definition for the SNMPLogFilter deletion assistant page -->
+  <netuix:book definitionLabel="SNMPLogFilterDelete" markupName="book"
+                   backingFile="com.bea.console.utils.GeneralBackingFile"
+                   threadsafe="true"
+                   title="snmp.traps.logfilters.title"
+                   presentationClass="wlsc-frame">
+        <netuix:titlebar/>
+        <netuix:content>
+          <netuix:page markupName="page" definitionLabel="SnmpLogfilterDeleteSNMPLogFilter"
+                       title="not.used"
+                       hidden="true"
+                       presentationClass="page-assistant">
+            <netuix:meta name="helpid" content="SNMP.snmp.deletesnmplogfilter.page.title;snmp"/>
+            <netuix:content>
+              <netuix:layout type="no" markupName="NoLayout">
+                <netuix:placeholder usingFlow="false" markupName="ph1">
+                  <netuix:portlet definitionLabel="SnmpLogfilterDeleteSNMPLogFilterPortlet">
+                    <netuix:pageflowContent contentUri="/com/bea/console/actions/snmp/logfilter/deletesnmplogfilter/DeleteSNMPLogFilter.jpf"
+                                            action="begin"
+                                            refreshAction="begin"/>
+                  </netuix:portlet>
+                </netuix:placeholder>
+              </netuix:layout>
+            </netuix:content>
+          </netuix:page>
+        </netuix:content>
+      </netuix:book>
+
+    </netuix:content>
+  </netuix:book>
+
+</portal:root>

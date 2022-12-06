@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "struts-config_1_1.dtd">
+<struts-config>
+  <form-beans>
+    <form-bean name="snmpGeneralConfigForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="snmpGeneralConfig"
+        type="com.bea.console.cvo.snmp.SNMPGeneralConfigBean" />
+      <form-property name="generalConfigType" type="java.lang.String" />
+    </form-bean>
+    <form-bean name="overviewTableForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="contents" type="java.util.Collection" />
+      <form-property name="chosenContents" type="java.util.Collection" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="tablePreferences"
+        type="com.bea.console.cvo.preferences.TablePreferences" />
+      <form-property name="serverName" type="java.lang.String" />
+      <form-property name="logicalName" type="java.lang.String" />
+      <form-property name="extendedLog" type="java.lang.Boolean" />
+      <form-property name="selector" type="java.lang.String" />
+      <form-property name="metadata"
+        type="com.bea.console.taglib.html.metadata.CursorTableMetaData" />
+      <form-property name="domainSNMPAgent" type="java.util.Collection" />
+    </form-bean>
+    <form-bean name="genericTableForm"
+      type="org.apache.struts.action.DynaActionForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="contents" type="java.util.Collection" />
+      <form-property name="chosenContents" type="java.util.Collection" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="tablePreferences"
+        type="com.bea.console.cvo.preferences.TablePreferences" />
+      <form-property name="configType" type="java.lang.String" />
+    </form-bean>
+    <form-bean name="notesForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="interfaceClassName" type="java.lang.String" />
+      <form-property name="notes" type="com.bea.console.cvo.NotesBean" />
+    </form-bean>
+    <form-bean name="dispatcherForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+    </form-bean>
+    <form-bean name="snmpAttributeChangeConfigForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="snmpAttributeChangeConfig"
+        type="com.bea.console.cvo.snmp.attribute.SNMPAttributeChangeConfigBean" />
+    </form-bean>
+    <form-bean name="snmpAttributeChangeServersForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="snmpAttributeChangeServers"
+        type="com.bea.console.cvo.TargetBean" />
+    </form-bean>
+    <form-bean name="snmpCounterMonitorConfigForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="snmpCounterMonitorConfig"
+        type="com.bea.console.cvo.snmp.monitors.SNMPCounterMonitorConfigBean" />
+    </form-bean>
+    <form-bean name="snmpCounterMonitorServersForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="snmpCounterMonitorServers"
+        type="com.bea.console.cvo.TargetBean" />
+    </form-bean>
+    <form-bean name="snmpGaugeMonitorGeneralForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="snmpGaugeMonitorGeneral"
+        type="com.bea.console.cvo.snmp.monitors.SNMPGaugeMonitorGeneralBean" />
+    </form-bean>
+    <form-bean name="snmpGaugeMonitorServersForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="snmpGaugeMonitorServers"
+        type="com.bea.console.cvo.TargetBean" />
+    </form-bean>
+    <form-bean name="snmpLogFilterGeneralForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="snmpLogFilterGeneral"
+        type="com.bea.console.cvo.snmp.logfilter.SNMPLogFilterGeneralBean" />
+    </form-bean>
+    <form-bean name="snmpLogFilterServersForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="snmpLogFilterServers"
+        type="com.bea.console.cvo.TargetBean" />
+    </form-bean>
+    <form-bean name="snmpProxyGeneralForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="snmpProxyGeneral"
+        type="com.bea.console.cvo.snmp.proxy.SNMPProxyGeneralBean" />
+    </form-bean>
+    <form-bean name="snmpStringMonitorGeneralForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="snmpStringMonitorGeneral"
+        type="com.bea.console.cvo.snmp.monitors.SNMPStringMonitorGeneralBean" />
+    </form-bean>
+    <form-bean name="snmpStringMonitorServersForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="snmpStringMonitorServers"
+        type="com.bea.console.cvo.TargetBean" />
+    </form-bean>
+    <form-bean name="snmpTrapDestinationGeneralForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="snmpTrapDestinationGeneral"
+        type="com.bea.console.cvo.snmp.traps.SNMPTrapDestinationGeneralBean" />
+    </form-bean>
+    <form-bean name="customizedForm"
+      type="com.bea.console.actionforms.CustomizerForm">
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="tablePrefererences"
+        type="com.bea.console.cvo.preferences.TablePreferences" />
+    </form-bean>
+    <form-bean name="snmpServerAgentTargetsForm"
+      type="org.apache.struts.validator.DynaValidatorForm">
+      <form-property name="name" type="java.lang.String" />
+      <form-property name="handle" type="com.bea.console.handles.Handle" />
+      <form-property name="targetDeploy" type="com.bea.console.cvo.TargetBean" />
+    </form-bean>
+  </form-beans>
+  <!-- Global Exception Handlers for this module -->
+  <global-exceptions>
+    <exception key="global" type="java.lang.Exception"
+      handler="com.bea.console.utils.UnexpectedExceptionHandler" />
+  </global-exceptions>
+  <action-mappings>
+    <action path="/SNMPNotes"
+      type="com.bea.console.actions.NotesAction" name="notesForm"
+      scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/snmp/SNMPNotes.jsp" />
+    </action>
+    <action path="/SNMPNotesUpdated"
+      type="com.bea.console.actions.NotesUpdatedAction" name="notesForm"
+      scope="request" validate="false" input="success">
+      <forward name="success" path="/SNMPNotes.do" />
+    </action>
+    <action path="/SNMPOverviewTable"
+      type="com.bea.console.actions.snmp.SNMPOverviewTableAction"
+      name="overviewTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/snmp/SNMPOverviewTable.jsp" />
+    </action>
+    <action path="/SNMPMonitoringTable"
+      type="com.bea.console.actions.snmp.SNMPMonitoringTable"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/snmp/SNMPMonitoringTable.jsp" />
+    </action>
+    <action path="/SNMPControlTable"
+      type="com.bea.console.actions.snmp.SNMPControlTable"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/snmp/SNMPControlTable.jsp" />
+    </action>
+    <action path="/SNMPCredentialMapTable"
+      type="com.bea.console.actions.snmp.SNMPCredentialMapTable"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/snmp/SNMPCredentialMapTable.jsp" />
+    </action>
+    <action path="/SNMPGeneralConfig"
+      type="com.bea.console.actions.snmp.general.SNMPGeneralConfigAction"
+      name="snmpGeneralConfigForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/snmp/general/SNMPGeneralConfigForm.jsp" />
+    </action>
+    <action path="/SNMPGeneralConfigUpdated"
+      type="com.bea.console.actions.snmp.general.SNMPGeneralConfigUpdatedAction"
+      name="snmpGeneralConfigForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/SNMPGeneralConfig.do" />
+    </action>
+    <action path="/SnmpAttributeSNMPAttributeChangeTable"
+      type="com.bea.console.actions.snmp.attribute.SNMPAttributeChangeTableAction"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/snmp/attribute/SNMPAttributeChangeTable.jsp" />
+    </action>
+    <action path="/SnmpAttributeSNMPAttributeChangeConfig"
+      type="com.bea.console.actions.snmp.attribute.SNMPAttributeChangeConfigAction"
+      name="snmpAttributeChangeConfigForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/snmp/attribute/SNMPAttributeChangeConfigForm.jsp" />
+    </action>
+    <action path="/SnmpAttributeSNMPAttributeChangeConfigUpdated"
+      type="com.bea.console.actions.snmp.attribute.SNMPAttributeChangeConfigUpdatedAction"
+      name="snmpAttributeChangeConfigForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/SnmpAttributeSNMPAttributeChangeConfig.do" />
+    </action>
+    <action path="/SnmpAttributeSNMPAttributeChangeServers"
+      type="com.bea.console.actions.snmp.attribute.SNMPAttributeChangeServersAction"
+      name="snmpAttributeChangeServersForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/snmp/attribute/SNMPAttributeChangeServersForm.jsp" />
+    </action>
+    <action path="/SnmpAttributeSNMPAttributeChangeServersUpdated"
+      type="com.bea.console.actions.snmp.attribute.SNMPAttributeChangeServersUpdatedAction"
+      name="snmpAttributeChangeServersForm" scope="request" validate="false"
+      input="success">
+      <forward name="success"
+        path="/SnmpAttributeSNMPAttributeChangeServers.do" />
+    </action>
+    <action path="/SnmpMonitorsSNMPCounterMonitorTable"
+      type="com.bea.console.actions.snmp.monitors.SNMPCounterMonitorTableAction"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/snmp/monitors/SNMPCounterMonitorTable.jsp" />
+    </action>
+    <action path="/SnmpMonitorsSNMPCounterMonitorConfig"
+      type="com.bea.console.actions.snmp.monitors.SNMPCounterMonitorConfigAction"
+      name="snmpCounterMonitorConfigForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/snmp/monitors/SNMPCounterMonitorConfigForm.jsp" />
+    </action>
+    <action path="/SnmpMonitorsSNMPCounterMonitorConfigUpdated"
+      type="com.bea.console.actions.snmp.monitors.SNMPCounterMonitorConfigUpdatedAction"
+      name="snmpCounterMonitorConfigForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/SnmpMonitorsSNMPCounterMonitorConfig.do" />
+    </action>
+    <action path="/SnmpMonitorsSNMPCounterMonitorServers"
+      type="com.bea.console.actions.snmp.monitors.SNMPCounterMonitorServersAction"
+      name="snmpCounterMonitorServersForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/snmp/monitors/SNMPCounterMonitorServersForm.jsp" />
+    </action>
+    <action path="/SnmpMonitorsSNMPCounterMonitorServersUpdated"
+      type="com.bea.console.actions.snmp.monitors.SNMPCounterMonitorServersUpdatedAction"
+      name="snmpCounterMonitorServersForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/SnmpMonitorsSNMPCounterMonitorServers.do" />
+    </action>
+    <action path="/SnmpMonitorsSNMPGaugeMonitorTable"
+      type="com.bea.console.actions.snmp.monitors.SNMPGaugeMonitorTableAction"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/snmp/monitors/SNMPGaugeMonitorTable.jsp" />
+    </action>
+    <action path="/SnmpMonitorsSNMPGaugeMonitorGeneral"
+      type="com.bea.console.actions.snmp.monitors.SNMPGaugeMonitorGeneralAction"
+      name="snmpGaugeMonitorGeneralForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/snmp/monitors/SNMPGaugeMonitorGeneralForm.jsp" />
+    </action>
+    <action path="/SnmpMonitorsSNMPGaugeMonitorGeneralUpdated"
+      type="com.bea.console.actions.snmp.monitors.SNMPGaugeMonitorGeneralUpdatedAction"
+      name="snmpGaugeMonitorGeneralForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/SnmpMonitorsSNMPGaugeMonitorGeneral.do" />
+    </action>
+    <action path="/SnmpMonitorsSNMPGaugeMonitorServers"
+      type="com.bea.console.actions.snmp.monitors.SNMPGaugeMonitorServersAction"
+      name="snmpGaugeMonitorServersForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/snmp/monitors/SNMPGaugeMonitorServersForm.jsp" />
+    </action>
+    <action path="/SnmpMonitorsSNMPGaugeMonitorServersUpdated"
+      type="com.bea.console.actions.snmp.monitors.SNMPGaugeMonitorServersUpdatedAction"
+      name="snmpGaugeMonitorServersForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/SnmpMonitorsSNMPGaugeMonitorServers.do" />
+    </action>
+    <action path="/SnmpMonitorsSNMPStringMonitorTable"
+      type="com.bea.console.actions.snmp.monitors.SNMPStringMonitorTableAction"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/snmp/monitors/SNMPStringMonitorTable.jsp" />
+    </action>
+    <action path="/SnmpMonitorsSNMPStringMonitorGeneral"
+      type="com.bea.console.actions.snmp.monitors.SNMPStringMonitorGeneralAction"
+      name="snmpStringMonitorGeneralForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/snmp/monitors/SNMPStringMonitorGeneralForm.jsp" />
+    </action>
+    <action path="/SnmpMonitorsSNMPStringMonitorGeneralUpdated"
+      type="com.bea.console.actions.snmp.monitors.SNMPStringMonitorGeneralUpdatedAction"
+      name="snmpStringMonitorGeneralForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/SnmpMonitorsSNMPStringMonitorGeneral.do" />
+    </action>
+    <action path="/SnmpMonitorsSNMPStringMonitorServers"
+      type="com.bea.console.actions.snmp.monitors.SNMPStringMonitorServersAction"
+      name="snmpStringMonitorServersForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/snmp/monitors/SNMPStringMonitorServersForm.jsp" />
+    </action>
+    <action path="/SnmpMonitorsSNMPStringMonitorServersUpdated"
+      type="com.bea.console.actions.snmp.monitors.SNMPStringMonitorServersUpdatedAction"
+      name="snmpStringMonitorServersForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/SnmpMonitorsSNMPStringMonitorServers.do" />
+    </action>
+    <action path="/SnmpLogfilterSNMPLogFilterTable"
+      type="com.bea.console.actions.snmp.logfilter.SNMPLogFilterTableAction"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/snmp/logfilter/SNMPLogFilterTable.jsp" />
+    </action>
+    <action path="/SnmpLogfilterSNMPLogFilterGeneral"
+      type="com.bea.console.actions.snmp.logfilter.SNMPLogFilterGeneralAction"
+      name="snmpLogFilterGeneralForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/snmp/logfilter/SNMPLogFilterGeneralForm.jsp" />
+    </action>
+    <action path="/SnmpLogfilterSNMPLogFilterGeneralUpdated"
+      type="com.bea.console.actions.snmp.logfilter.SNMPLogFilterGeneralUpdatedAction"
+      name="snmpLogFilterGeneralForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/SnmpLogfilterSNMPLogFilterGeneral.do" />
+    </action>
+    <action path="/SnmpLogfilterSNMPLogFilterServers"
+      type="com.bea.console.actions.snmp.logfilter.SNMPLogFilterServersAction"
+      name="snmpLogFilterServersForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/snmp/logfilter/SNMPLogFilterServersForm.jsp" />
+    </action>
+    <action path="/SnmpLogfilterSNMPLogFilterServersUpdated"
+      type="com.bea.console.actions.snmp.logfilter.SNMPLogFilterServersUpdatedAction"
+      name="snmpLogFilterServersForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/SnmpLogfilterSNMPLogFilterServers.do" />
+    </action>
+    <action path="/SnmpProxySNMPProxyTable"
+      type="com.bea.console.actions.snmp.proxy.SNMPProxyTableAction"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/snmp/proxy/SNMPProxyTable.jsp" />
+    </action>
+    <action path="/SnmpProxySNMPProxyGeneral"
+      type="com.bea.console.actions.snmp.proxy.SNMPProxyGeneralAction"
+      name="snmpProxyGeneralForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/snmp/proxy/SNMPProxyGeneralForm.jsp" />
+    </action>
+    <action path="/SnmpProxySNMPProxyGeneralUpdated"
+      type="com.bea.console.actions.snmp.proxy.SNMPProxyGeneralUpdatedAction"
+      name="snmpProxyGeneralForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/SnmpProxySNMPProxyGeneral.do" />
+    </action>
+    <action path="/SnmpTrapsSNMPTrapDestinationTable"
+      type="com.bea.console.actions.snmp.traps.SNMPTrapDestinationTableAction"
+      name="genericTableForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/snmp/traps/SNMPTrapDestinationTable.jsp" />
+    </action>
+    <action path="/SnmpTrapsSNMPTrapDestinationGeneral"
+      type="com.bea.console.actions.snmp.traps.SNMPTrapDestinationGeneralAction"
+      name="snmpTrapDestinationGeneralForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/snmp/traps/SNMPTrapDestinationGeneralForm.jsp" />
+    </action>
+    <action path="/SnmpTrapsSNMPTrapDestinationGeneralUpdated"
+      type="com.bea.console.actions.snmp.traps.SNMPTrapDestinationGeneralUpdatedAction"
+      name="snmpTrapDestinationGeneralForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/SnmpTrapsSNMPTrapDestinationGeneral.do" />
+    </action>
+    <action path="/TablePreferencesUpdatedAction"
+      type="com.bea.console.actions.preferences.TablePreferencesUpdatedAction"
+      scope="request" validate="false" name="customizedForm">
+    </action>
+    <action path="/SNMPMonitorDispatcher"
+      type="com.bea.console.actions.snmp.monitors.SNMPMonitorDispatcherAction"
+      name="dispatcherForm" scope="request" validate="false">
+    </action>
+    <action path="/SNMPServerAgentTargets"
+      type="com.bea.console.actions.TargetDeployAction"
+      name="snmpServerAgentTargetsForm" scope="request" validate="false">
+      <forward name="success" contextRelative="true"
+        path="/jsp/snmp/SNMPServerAgentTargetsForm.jsp" />
+    </action>
+    <action path="/SNMPServerAgentTargetsUpdated"
+      type="com.bea.console.actions.TargetDeployUpdatedAction"
+      name="snmpServerAgentTargetsForm" scope="request" validate="false"
+      input="success">
+      <forward name="success" path="/SNMPServerAgentTargets.do" />
+    </action>
+  </action-mappings>
+  <controller
+    processorClass="com.bea.console.internal.ConsolePageFlowRequestProcessor">
+    <set-property property="nocache" value="true" />
+    <set-property property="contentType" value="text/html;charset=UTF-8" />
+  </controller>
+  <message-resources factory="com.bea.console.utils.ConsoleMessageResourcesFactory"  null="false" parameter="snmp" key="snmp"/>
+</struts-config>

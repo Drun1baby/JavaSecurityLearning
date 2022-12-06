@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<s0:definitions targetNamespace="http://schemas.xmlsoap.org/ws/2004/10/wscoor" xmlns="" xmlns:s0="http://schemas.xmlsoap.org/wsdl/" xmlns:s1="http://schemas.xmlsoap.org/ws/2004/10/wscoor" xmlns:s2="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:s3="http://schemas.xmlsoap.org/wsdl/soap/">
+  <s0:types>
+    <xs:schema xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wscoor="http://schemas.xmlsoap.org/ws/2004/10/wscoor" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing" schemaLocation="addressing.xsd"/>
+      <xs:import namespace="http://schemas.xmlsoap.org/ws/2004/10/wscoor" schemaLocation="wscoor.xsd"/>
+    </xs:schema>
+  </s0:types>
+  <s0:message name="CreateCoordinationContext">
+    <s0:part element="s1:CreateCoordinationContext" name="parameters"/>
+  </s0:message>
+  <s0:message name="CreateCoordinationContextResponse">
+    <s0:part element="s1:CreateCoordinationContextResponse" name="parameters"/>
+  </s0:message>
+  <s0:message name="Register">
+    <s0:part element="s1:Register" name="parameters"/>
+  </s0:message>
+  <s0:message name="RegisterResponse">
+    <s0:part element="s1:RegisterResponse" name="parameters"/>
+  </s0:message>
+  <s0:portType name="RegistrationCoordinatorPortType">
+    <s0:operation name="RegisterOperation">
+      <s0:input message="s1:Register" s2:Action="http://schemas.xmlsoap.org/ws/2004/10/wscoor/Register"/>
+    </s0:operation>
+  </s0:portType>
+  <s0:portType name="RegistrationRequesterPortType">
+    <s0:operation name="RegisterResponse">
+      <s0:input message="s1:RegisterResponse" s2:Action="http://schemas.xmlsoap.org/ws/2004/10/wscoor/RegisterResponse"/>
+    </s0:operation>
+  </s0:portType>
+  <s0:portType name="RegistrationPortTypeRPC">
+    <s0:operation name="RegisterOperation">
+      <s0:input message="s1:Register" s2:Action="http://schemas.xmlsoap.org/ws/2004/10/wscoor/Register"/>
+      <s0:output message="s1:RegisterResponse" s2:Action="http://schemas.xmlsoap.org/ws/2004/10/wscoor/RegisterResponse"/>
+    </s0:operation>
+  </s0:portType>
+  <s0:binding name="RegistrationRequesterPortTypeSOAPBinding" type="s1:RegistrationRequesterPortType">
+    <s3:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <s0:operation name="RegisterResponse">
+      <s3:operation soapAction="http://schemas.xmlsoap.org/ws/2004/10/wscoor/RegisterResponse" style="document"/>
+      <s0:input>
+        <s3:body parts="parameters" use="literal"/>
+      </s0:input>
+    </s0:operation>
+  </s0:binding>
+  <s0:binding name="RegistrationPortTypeRPCSOAPBinding" type="s1:RegistrationPortTypeRPC">
+    <s3:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <s0:operation name="RegisterOperation">
+      <s3:operation soapAction="http://schemas.xmlsoap.org/ws/2004/10/wscoor/RegisterOperation" style="document"/>
+      <s0:input>
+        <s3:body parts="parameters" use="literal"/>
+      </s0:input>
+      <s0:output>
+        <s3:body parts="parameters" use="literal"/>
+      </s0:output>
+    </s0:operation>
+  </s0:binding>
+  <s0:binding name="RegistrationCoordinatorPortTypeSOAPBinding" type="s1:RegistrationCoordinatorPortType">
+    <s3:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <s0:operation name="RegisterOperation">
+      <s3:operation soapAction="http://schemas.xmlsoap.org/ws/2004/10/wscoor/RegisterOperation" style="document"/>
+      <s0:input>
+        <s3:body parts="parameters" use="literal"/>
+      </s0:input>
+    </s0:operation>
+  </s0:binding>
+  
+  <s0:service name="RegistrationService_V10">
+    <s0:port binding="s1:RegistrationRequesterPortTypeSOAPBinding" name="RegistrationRequesterPortTypePort">
+      <s3:address location="http://www.oracle.com"/>
+    </s0:port>
+    <s0:port binding="s1:RegistrationPortTypeRPCSOAPBinding" name="RegistrationPortTypeRPCPort">
+      <s3:address location="http://www.oracle.com"/>
+    </s0:port>
+    <s0:port binding="s1:RegistrationCoordinatorPortTypeSOAPBinding" name="RegistrationCoordinatorPortTypePort">
+      <s3:address location="http://www.oracle.com"/>
+    </s0:port>
+  </s0:service>
+
+</s0:definitions>

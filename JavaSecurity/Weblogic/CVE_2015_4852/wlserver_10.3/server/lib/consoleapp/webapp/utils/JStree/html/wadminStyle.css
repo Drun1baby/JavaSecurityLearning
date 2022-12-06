@@ -1,0 +1,155 @@
+a:link {text-decoration:none;}
+a:active {text-decoration:none;}
+a:visited {text-decoration:none;}
+BODY{
+   background-color: rgb(255,255,255);
+}
+.PSTATUSCOMPLETE{
+   background-color: rgb(203,221,231);
+   color: rgb(193,193,193);
+   font-family:Arial;
+   font-size: 10pt;
+}
+.PSTATUSCOMPLETESPLIT{
+   background-color: rgb(178,206,221);
+   color: rgb(193,193,193);
+   font-family:Arial;
+   font-size: 10pt;
+}
+
+#RULEDITOR {   
+   position:absolute;
+   top:100px;
+   left:140px;
+   width:400px;
+   height:100px;
+   background-color: rgb(192,192,192);
+   layer-background-color: rgb(192,192,192);
+   border-top: 2px outset white;
+}
+#PARMS {
+  position:absolute;
+  top:100;left:200;
+  width:200px;
+  height:130px;
+  background-color: rgb(192,192,192);
+  border: 2px outset white;
+  z-index: 0;
+}
+.ACTINFO{
+  background-Color: rgb(176,205,220); 
+  font-family:Arial;
+  font-size: 10pt;
+}
+.CRUMB {
+  font-family:Arial;
+  font-size:10pt;
+}
+H1 {
+  font-family:Arial;
+  font-size: 12pt;
+}
+.TC_HEAD{
+  font-family:Helvetica Arial;
+  font-size: 12pt;
+  color: rgb(255,255,255);
+}
+.thc {
+   font-family: Arial;
+   font-size: 10pt;
+   font-weight: plain;
+   color: rgb(255,255,255);
+   background-Color: rgb(95,159,212);  
+}
+#TABSET {
+  /*background-color: rgb(192,192,192);*/
+  /*layer-background-color: rgb(192,192,192);*/
+  position:absolute;
+  top:0px;
+  left:0px;
+  height:28px;
+  /*width: 480px;*/
+  width: 100%;
+  clip:rect(0,680,28,0);
+}
+.TAB {
+  font-family:Arial;
+  font-size: 10pt;
+  /*position:absolute;*/
+  width: 160px;
+  height: 24px; 
+  border: 2px outset white;  
+  background-color: rgb(154,162,189);
+  layer-background-color: rgb(154,162,189);
+}
+.TC {
+  /*background-Color = rgb(142,194,230);*/
+  background-Color: rgb(96,114,164);
+}
+.TCI {
+  background-color: rgb(222,233,239); 
+  /*layer-background-color: rgb(98,167,195);*/ 
+  font-family:Arial;
+  font-size: 10pt;
+}
+.TCIOFFSET {
+  font-family:Arial;
+  font-size: 10pt;
+  background-color: rgb(230,238,243); 
+}
+.TCB {
+  background-Color: rgb(222,233,239); 
+  /*border: 2px outset white;*/
+  font-family:Arial;
+  font-size: 10pt;
+  font-weight: bold;
+}
+.TC_CAPTION {
+  background-Color: rgb(96,114,164);
+  font-family: Arial;
+  font-size: 12pt;
+  color: white;
+}
+/*
+.TAB{
+  font-family: Arial;
+  font-size: 10pt;
+  font-color: black;
+  font-weight: bold;  
+  /*border: 2px outset white;*/
+  border-top: 2px outset white;
+  border-right: 2px outset white;
+  background-Color = rgb(222,233,239);
+}*/
+#TAB1{
+  font-family: Arial;
+  font-size: 10pt;
+  font-color: black;
+  font-weight: bold;  
+}
+#TAB2{
+  font-family: Arial;
+  font-size: 10pt;
+  color: gray; 
+  background-Color: rgb(132,144,180); 
+}
+#TAB3{
+  font-family: Arial;
+  font-size: 10pt;
+  color: gray; 
+  background-Color: rgb(132,144,180);
+}
+.BUTTON{
+  font-family: Arial;
+  font-size: 10pt;
+  color: white;  
+  border: 1px outset white;
+  background-Color: rgb(95,159,212);
+  height:20px;width:60px;
+}
+.OPTIONBAR {
+  font-family: Arial;
+  font-size: 10pt;
+  color: #FFFFFF;
+  text-align:center;
+}

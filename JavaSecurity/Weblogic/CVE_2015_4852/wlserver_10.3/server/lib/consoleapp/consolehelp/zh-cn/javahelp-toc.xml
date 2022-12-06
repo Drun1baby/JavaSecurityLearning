@@ -1,0 +1,1923 @@
+<?xml version = '1.0' encoding="UTF-8"?>
+<!DOCTYPE toc PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp TOC Version 2.0//EN" "http://java.sun.com/products/javahelp/toc_2_0.dtd">
+<toc xml:lang="zh-cn" version="2.0" categoryclosedimage="chapter" topicimage="topic">
+  <tocitem text="WebLogic Server 管理控制台" target="intro"/>
+    <tocitem text="帮助主题" target="blank">
+    <tocitem text="使用管理控制台" target="blank">
+      
+  <tocitem text="启动控制台" target="console.StartTheConsole"/>
+
+  <tocitem text="使用更改中心" target="console.UseTheChangeCenter"/>
+
+  <tocitem text="启用和禁用域配置锁定" target="console.EnableAndDisableTheConfigurationLock"/>
+
+  <tocitem text="查看暂挂更改" target="console.ViewPendingChanges"/>
+
+  <tocitem text="释放配置锁定" target="console.ReleaseTheConfigurationLock"/>
+
+  <tocitem text="从控制台注销" target="console.LogOutOfTheConsole"/>
+
+  <tocitem text="禁用控制台" target="console.DisableTheConsole"/>
+
+  <tocitem text="更改控制台的 URL" target="console.ChangeTheURLForTheConsole"/>
+
+  <tocitem text="更改控制台首选项" target="console.ChangeConsoleBehavior"/>
+
+  <tocitem text="搜索配置" target="console.PerformSearch"/>
+
+  <tocitem text="创建注释" target="console.CreateNotes"/>
+
+  <tocitem text="定制表视图" target="console.CustomizeTableViews"/>
+
+  <tocitem text="配置监视刷新率" target="console.ConfigureMonitoringRefreshRate"/>
+
+  <tocitem text="记录 WLST 脚本" target="console.RecordWLSTScripts"><tocitem text="设置 WLST 记录的首选项" target="console.SetPreferencesForWLSTRecording"/><tocitem text="开始 WLST 记录" target="console.StartWLSTRecording"/><tocitem text="查看记录的命令" target="console.ViewRecordedCommands"/><tocitem text="停止 WLST 记录" target="console.StopWLSTRecording"/></tocitem>
+
+  <tocitem text="管理控制台扩展" target="console.ManageConsoleExtensions"><tocitem text="显示控制台扩展点标签" target="console.DisplayExtensionPointLabels"/></tocitem>
+
+    </tocitem>
+
+    <tocitem text="配置 WebLogic Server 环境" target="blank">
+      
+  <tocitem text="配置域" target="blank">
+    <tocitem text="创建受管服务器" target="domainconfig.CreateManagedServers"/>
+
+    <tocitem text="克隆服务器" target="domainconfig.CloneManagedServers"/>
+
+    <tocitem text="配置默认的 JPA 持久性提供程序" target="domainconfig.ConfigureDefaultJPAProvider"/>
+
+    <tocitem text="删除受管服务器" target="domainconfig.DeleteManagedServers"/>
+
+    <tocitem text="删除管理服务器" target="domainconfig.DeleteTheAdministrationServer"/>
+
+    <tocitem text="配置域范围管理端口" target="domainconfig.EnableTheDomainwideAdministrationPort"/>
+
+    <tocitem text="更改为生产模式" target="domainconfig.ChangeRuntimeModes"/>
+
+    <tocitem text="配置多个域" target="console.EditingMoreThanOneDomain"/>
+
+    <tocitem text="归档配置文件" target="domainconfig.ArchiveConfigurationFiles"/>
+
+    <tocitem text="禁用受管服务器独立性" target="domainconfig.DisableManagedServerIndependence"/>
+
+    <tocitem text="为受管服务器独立性复制域配置文件" target="domainconfig.ReplicateDomainConfigFilesForManagedServerIndependence"/>
+
+    <tocitem text="重新部署系统资源" target="deployment.RedeploySystemResources"/>
+  </tocitem>
+
+
+      
+  <tocitem text="配置网络连接" target="blank">
+    <tocitem text="配置域范围管理端口" target="domainconfig.EnableTheDomainwideAdministrationPort"/>
+
+    <tocitem text="配置定制网络通道" target="channels.ConfigureCustomNetworkChannelsForNonclusteredServers"/>
+
+    <tocitem text="配置默认网络连接" target="channels.ConfigureDefaultNetworkConnections"><tocitem text="配置监听地址" target="channels.ConfigureListenAddresses"/><tocitem text="配置监听端口" target="channels.ConfigureListenPorts"/><tocitem text="配置协议" target="channels.ConfigureProtocols"/><tocitem text="配置 HTTP 协议" target="channels.ConfigureHTTPProtocol"/><tocitem text="配置双向 SSL" target="security.ConfigureTwowaySSL"/><tocitem text="配置 T3 协议" target="channels.ConfigureT3Protocol"/><tocitem text="启用和配置 IIOP" target="channels.EnableAndConfigureIIOP"/><tocitem text="启用 jCOM" target="channels.EnableAndConfigureJCOM"/><tocitem text="为网络通道启用套接字定向协议" target="channels.EnableSDP"/></tocitem>
+  </tocitem>
+
+
+      
+  <tocitem text="创建和配置集群" target="clusters.ClusterRoadmap"><tocitem text="创建集群" target="clusters.CreateCluster"/><tocitem text="向集群分配服务器" target="clusters.AssignServersToClusters"/><tocitem text="配置集群" target="clusters.ConfigureClusters"/><tocitem text="启动集群中的受管服务器" target="clusters.StartOrStopAServer"/><tocitem text="关闭集群中的服务器" target="clusters.ServerShutdownCluster"/><tocitem text="配置集群中的健康状况监视" target="clusters.MonitorClusters"/><tocitem text="配置跨集群复制" target="clusters.SpecifyClusterReplicationGroups"/><tocitem text="配置集群中的服务器迁移" target="clusters.ConfigureClusterMigration"/><tocitem text="为集群配置 HTTP 设置" target="clusters.ConfigureClusterHTTP"/><tocitem text="删除集群" target="clusters.DeleteClusters"/><tocitem text="定义新单例服务" target="clusters.DefineSingletonService"/><tocitem text="配置单例服务" target="clusters.ConfigureSingletonService"/><tocitem text="从集群中删除服务器" target="clusters.RemoveServers"/><tocitem text="为作业调度程序配置数据源" target="clusters.ConfigureADataSourceForAJobScheduler"/><tocitem text="取消作业" target="clusters.CancelJobs"/></tocitem>
+
+
+      
+  <tocitem text="创建和配置计算机" target="blank">
+    <tocitem text="将服务器实例分配给计算机" target="machines.AssignServerInstancesToMachines"/>
+
+    <tocitem text="配置节点管理器" target="machines.BindToProtectedPortsOnServersStartedByNodeManager"/>
+
+    <tocitem text="创建和配置要在 UNIX 上运行的计算机" target="machines.BindToProtectedPortsOnUNIX"/>
+
+    <tocitem text="克隆计算机" target="machines.CloneMachines"/>
+
+    <tocitem text="创建和配置计算机" target="machines.ConfigureMachines"/>
+
+    <tocitem text="删除计算机" target="machines.DeleteMachines"/>
+
+    <tocitem text="监视节点管理器日志" target="machines.MonitorNodeManagerLogs"/>
+
+    <tocitem text="监视节点管理器状态" target="machines.MonitorNodeManagerStatus"/>
+  </tocitem>
+
+
+      
+  <tocitem text="创建和管理虚拟主机" target="virtual_hosts.VirtualHosts"><tocitem text="新建虚拟主机" target="virtual_hosts.CreateVirtualHosts"/><tocitem text="配置虚拟主机一般属性" target="virtual_hosts.ConfigureVirtualHosts"/><tocitem text="克隆虚拟主机" target="virtual_hosts.CloneVirtualHosts"/><tocitem text="为虚拟主机配置 HTTP 日志文件设置" target="virtual_hosts.ConfigureVirtualHostLogging"/><tocitem text="为虚拟主机配置 HTTP" target="virtual_hosts.ConfigureVirtualHostHTTP"/><tocitem text="将虚拟主机定位到服务器" target="virtual_hosts.TargetVirtualHosts"/><tocitem text="将 Web 应用程序定位到虚拟主机" target="virtual_hosts.TargetWebApplicationsToTheVirtualHost"/><tocitem text="删除虚拟主机" target="virtual_hosts.DeleteVirtualHosts"/></tocitem>
+
+
+      
+  <tocitem text="使用定制类配置服务器" target="startup_shutdown.UseStartupAndShutdownClasses"><tocitem text="配置启动类" target="startup_shutdown.ConfigureStartupAndShutdownClasses"/><tocitem text="配置关闭类" target="startup_shutdown.ConfigureShutdownClasses"/><tocitem text="部署启动类和关闭类" target="startup_shutdown.AssignStartupAndShutdownClasses"/><tocitem text="向类路径中添加启动类和关闭类" target="startup_shutdown.AddStartupAndShutdownClassesToTheClasspath"/><tocitem text="删除启动类和关闭类" target="startup_shutdown.DeleteStartupAndShutdownClassConfigurations"/></tocitem>
+
+
+      
+  <tocitem text="创建和配置全局工作管理器" target="blank">
+    <tocitem text="创建全局工作管理器" target="work.CreateGlobalWorkManager"/>
+
+    <tocitem text="创建全局请求类" target="work.CreateGlobalRequestClass"/>
+
+    <tocitem text="创建全局约束条件" target="work.CreateGlobalConstraint"/>
+
+    <tocitem text="删除全局工作管理器、约束条件或请求类" target="work.DeleteGlobalWorkManager"/>
+  </tocitem>
+
+  <tocitem text="创建和配置应用程序范围的工作管理器" target="blank">
+    <tocitem text="创建应用程序范围工作管理器" target="work.CreateAppScopedWorkManager"/>
+
+    <tocitem text="创建应用程序范围请求类" target="work.CreateAppScopedRequestClass"/>
+
+    <tocitem text="创建应用程序范围约束条件" target="work.CreateAppScopedConstraint"/>
+
+    <tocitem text="删除应用程序范围工作管理器、约束条件或请求类" target="work.DeleteAppScopedWorkManager"/>
+  </tocitem>
+
+    </tocitem>
+
+    
+  <tocitem text="启动和停止服务器" target="startstop.StartAndStopServers"><tocitem text="为受管服务器配置启动参数" target="startstop.ConfigureStartupArgumentsForManagedServers"/><tocitem text="控制正常关闭" target="startstop.ControlGracefulShutdowns"/><tocitem text="恢复服务器" target="startstop.ResumeAServer"/><tocitem text="为节点管理器启动的服务器设置 Java 选项" target="startstop.SetJavaOptionsForServersStartedByNodeManager"/><tocitem text="设置用于启动和停止服务器的用户身份证明" target="startstop.SetUserCredentialsToStartAndStopServers"/><tocitem text="关闭服务器实例" target="startstop.ShutDownAServerInstance"/><tocitem text="从管理控制台启动受管服务器" target="startstop.StartManagedServersFromTheAdministrationConsole"/><tocitem text="指定启动模式" target="startstop.SpecifyAStartupMode"/><tocitem text="以待机模式启动受管服务器" target="startstop.StartManagedServersInSTANDBY"/><tocitem text="以管理模式启动受管服务器" target="startstop.StartServersInADMIN"/><tocitem text="挂起服务器" target="startstop.SuspendAServer"/></tocitem>
+
+
+    <tocitem text="部署和配置资源" target="blank">
+      
+  <tocitem text="企业应用程序" target="applications.ApplicationOverview"><tocitem text="安装企业应用程序" target="applications.DeployEnterpriseApplications"/><tocitem text="启动和停止部署的企业应用程序" target="applications.StopDeployedEnterpriseApplications"/><tocitem text="配置企业应用程序" target="applications.ConfigureEnterpriseApplications"/><tocitem text="将企业应用程序定位到服务器" target="applications.TargetEnterpriseApplication"/><tocitem text="更新 (重新部署) 企业应用程序" target="applications.UpdateEnterpriseApplication"/><tocitem text="创建部署计划" target="applications.CreateDeploymentPlan"/><tocitem text="指定部署计划" target="applications.SpecifyDeploymentPlan"/><tocitem text="更新部署计划" target="applications.UpdateDeploymentPlan"/><tocitem text="删除企业应用程序" target="applications.DeleteAnEnterpriseApplication"/><tocitem text="查看企业应用程序模块" target="applications.ViewDeployedApplications"/><tocitem text="监视企业应用程序模块" target="applications.MonitorEnterpriseApplications"/><tocitem text="初始化企业应用程序高速缓存" target="applications.AppInitializeCache"/><tocitem text="测试企业应用程序中的模块" target="applications.TestAppModules"/></tocitem>
+
+
+      
+  <tocitem text="部署" target="blank">
+    <tocitem text="更改目标服务器" target="deployment.ChangeTargetServers"/>
+
+    <tocitem text="更改服务器部署顺序" target="deployment.ChangeTheServerDeploymentOrder"/>
+
+    <tocitem text="部署应用程序和模块" target="deployment.DeployApplicationsAndModules"/>
+
+    <tocitem text="安装应用程序和模块" target="deployment.InstallApplicationsAndModules"/>
+
+    <tocitem text="从域中删除应用程序或模块" target="deployment.RemoveAnApplicationOrModuleFromADomain"/>
+
+    <tocitem text="设置服务器临时模式" target="deployment.SetAServerStagingMode"/>
+
+    <tocitem text="启动应用程序和模块" target="deployment.StartApplicationsAndModules"/>
+
+    <tocitem text="停止应用程序和模块" target="deployment.StopApplicationsAndModules"/>
+
+    <tocitem text="更新 (重新部署) 应用程序" target="deployment.UpdateApplication"/>
+
+    <tocitem text="重新部署系统资源" target="deployment.RedeploySystemResources"/>
+
+    <tocitem text="JDBC 模块" target="blank">
+      <tocitem text="重新部署系统资源" target="deployment.RedeploySystemResources"/>
+
+      <tocitem text="安装独立 JDBC 模块" target="jdbc.jdbc_app.InstallStandAloneJdbcModules"/>
+
+      <tocitem text="修改 JDBC 应用程序模块" target="jdbc.jdbc_app.ModifyJdbcAppModules"/>
+
+      <tocitem text="监测部署的 JDBC 数据源" target="jdbc.jdbc_app.MonitorJDBCAppDataSources"/>
+    </tocitem>
+
+    <tocitem text="JMS 模块和资源" target="blank">
+      <tocitem text="部署独立 JMS 模块" target="jms_modules.jms_app.DeployStandAloneJmsModules"/>
+
+      <tocitem text="重新部署系统资源" target="deployment.RedeploySystemResources"/>
+
+      <tocitem text="安装独立 JMS 模块" target="jms_modules.jms_app.InstallStandAloneJmsModules"/>
+
+      <tocitem text="修改 JMS 应用程序模块" target="jms_modules.jms_app.ModifyJmsAppModules"/>
+
+      <tocitem text="监视已部署的 JMS 目标的统计信息" target="jms_modules.jms_app.MonitorJMSAppDestinations"/>
+    </tocitem>
+  </tocitem>
+
+
+      
+  <tocitem text="EJB" target="blank">
+    <tocitem text="配置编译器选项" target="ejb.ConfigureCompilerOptions"/>
+
+    <tocitem text="配置部署描述符值" target="ejb.ConfigureDeploymentDescriptorValues"/>
+
+    <tocitem text="配置 EJB" target="ejb.ConfigureEJBModules"/>
+
+    <tocitem text="删除 EJB" target="ejb.DeleteEJBs"/>
+
+    <tocitem text="部署 EJB 模块" target="ejb.DeployStandaloneEJBModules"/>
+
+    <tocitem text="初始化 EJB 的空闲 Bean 高速缓存和池" target="ejb.InitializeCache"/>
+
+    <tocitem text="激活 EJB 的计时器对象" target="ejb.ActivateTimerObjects"/>
+
+    <tocitem text="安装独立 EJB" target="ejb.InstallStandaloneEJBModules"/>
+
+    <tocitem text="挂起和恢复 MDB JMS 连接" target="ejb.SuspendAndResumeMDB"/>
+
+    <tocitem text="监视 EJB" target="ejb.MonitorEJBs"/>
+
+    <tocitem text="更新 (重新部署) EJB" target="ejb.RedeployEJBs"/>
+
+    <tocitem text="设置 EJB 目标服务器和集群" target="ejb.SetEJBTargetServersAndClusters"/>
+
+    <tocitem text="启动 EJB" target="ejb.StartEJBs"/>
+
+    <tocitem text="停止 EJB" target="ejb.StopEJBs"/>
+
+    <tocitem text="测试 EJB" target="ejb.TestEJBs"/>
+
+    <tocitem text="查看 EJB 的部署状态" target="ejb.ViewEJBDeploymentStatus"/>
+  </tocitem>
+
+  <tocitem text="EJB 组件身份证明映射" target="blank">
+    <tocitem text="创建 EJB 组件身份证明映射" target="ejb.CreateEJBComponentCredentialMappings"/>
+
+    <tocitem text="编辑 EJB 组件身份证明映射" target="ejb.EditEJBComponentCredentialMappings"/>
+
+    <tocitem text="删除 EJB 组件身份证明映射" target="ejb.DeleteEJBComponentCredentialMappings"/>
+  </tocitem>
+
+
+      
+  <tocitem text="持久性单元" target="blank">
+    <tocitem text="配置持久性单元" target="persistence.config_per_unit"/>
+    <tocitem text="配置持久性插件" target="persistence.config_per_plugin"/>      
+  </tocitem>
+
+
+      
+  <tocitem text="Web 应用程序" target="blank">
+    <tocitem text="安装 Web 应用程序" target="web_applications.InstallWebApplications"/>
+
+    <tocitem text="配置 Web 应用程序" target="web_applications.ConfigureWebApplications"/>
+
+    <tocitem text="删除 Web 应用程序" target="web_applications.DeleteWebApplications"/>
+
+    <tocitem text="部署 Web 应用程序" target="web_applications.DeployWebApplications"/>
+
+    <tocitem text="监视 Web 应用程序和 Servlet" target="web_applications.MonitorWebApplicationsAndServlets"/>
+
+    <tocitem text="指定默认 Web 应用程序" target="web_applications.SpecifyDefaultWebApplications"/>
+
+    <tocitem text="启动 Web 应用程序" target="web_applications.StartWebApplications"/>
+
+    <tocitem text="停止已部署的 Web 应用程序" target="web_applications.StopDeployedWebApplications"/>
+
+    <tocitem text="测试部署" target="web_applications.TestTheDeployment"/>
+
+    <tocitem text="更新运行时描述符" target="web_applications.UpdateRuntimeDescriptors"/>
+
+    <tocitem text="更新 (重新部署) Web 应用程序" target="web_applications.UpdateWebApplication"/>
+
+    <tocitem text="查看已部署的 Web 应用程序" target="web_applications.ViewDeployedWebApplications"/>
+  </tocitem>
+
+
+      
+  <tocitem text="Web 服务" target="webservices.WebServicesOverview"><tocitem text="安装 Web 服务" target="webservices.InstallAWebService"/><tocitem text="查看已安装的 Web 服务" target="webservices.ViewInstalledWebServices"/><tocitem text="启动和停止 Web 服务" target="webservices.StartAndStopAWebService"/><tocitem text="配置 Web 服务" target="webservices.UpdateWebServiceConfiguration"/><tocitem text="将 WS-Policy 文件附加到 Web 服务" target="webservices.ConfigureWSPolicyFile"/><tocitem text="配置 Web 服务可靠消息传送" target="webservices.ConfigureJMSResourcesForReliableMessaging"/><tocitem text="配置 Web 服务的消息缓冲" target="webservices.ConfigureBuffering"/><tocitem text="配置 Web 服务原子事务处理" target="webservices.ConfigureAtomicTransactions"/><tocitem text="配置 Web 服务持久性" target="webservices.ConfigurePersistence"/><tocitem text="查看 Web 服务的 SOAP 消息处理程序" target="webservices.ViewSoapMessageHandlers"/><tocitem text="查看 Web 服务的 WSDL" target="webservices.ViewWsdl"/><tocitem text="测试 Web 服务" target="webservices.TestAWebService"/><tocitem text="监视 Web 服务" target="webservices.MonitorAWebService"/><tocitem text="监视 Web 服务客户机" target="webservices.MonitorAWebServiceClient"/><tocitem text="创建和更新消息级别的安全配置" target="blank">
+      <tocitem text="创建 Web 服务安全配置" target="webservices.webservicesecurity.CreateDefaultWSSConfig"/>
+
+      <tocitem text="使用 X.509 证书建立标识" target="webservices.webservicesecurity.UseX509ForIdentity"/>
+
+      <tocitem text="在 SOAP 消息中使用口令摘要" target="webservices.webservicesecurity.UsePasswordDigest"/>
+
+      <tocitem text="指定用于对 SOAP 消息进行签名的密钥对" target="webservices.webservicesecurity.CreateDigitalSignatureKeystore"/>
+
+      <tocitem text="指定对 SOAP 消息进行加密的密钥对" target="webservices.webservicesecurity.CreateEncryptionKeystore"/>
+
+      <tocitem text="使用 SAML holder_of_key 断言时禁用 X.509 证书验证" target="webservices.webservicesecurity.DisableX509Validation"/>
+    </tocitem><tocitem text="删除 Web 服务" target="webservices.DeleteAWebService"/></tocitem>
+
+
+      
+  <tocitem text="Java EE 库" target="library.LibraryOverview"><tocitem text="安装 Java EE 库" target="library.DeployLibrary"/><tocitem text="更新 (重新部署) Java EE 库" target="library.UpdateLibrary"/><tocitem text="配置 Java EE 库" target="library.ConfigureLibrary"/><tocitem text="将 Java EE 库定位到服务器或集群" target="library.TargetLibrary"/><tocitem text="删除 Java EE 库" target="library.DeleteLibrary"/></tocitem>
+
+    </tocitem>
+
+    <tocitem text="配置服务" target="blank">
+      <tocitem text="配置消息传送" target="blank">
+        
+  <tocitem text="配置 JMS 服务器" target="jms_servers.ConfigureJMSServers"><tocitem text="创建 JMS 服务器" target="jms_servers.CreateJMSServers"/><tocitem text="删除 JMS 服务器" target="jms_servers.DeleteJMSServers"/><tocitem text="配置一般 JMS 服务器属性" target="jms_servers.ConfigureJMSServerGeneral"/><tocitem text="在重新启动时暂停 JMS 服务器消息操作" target="jms_servers.ConfigureJMSServerPauseMessages"/><tocitem text="配置 JMS 服务器阈值与限额" target="jms_servers.ConfigureJMSServerThresholds"/><tocitem text="创建 JMS 会话池" target="jms_servers.CreateJMSSessionPools"><tocitem text="创建 JMS 连接使用者" target="jms_servers.CreateJMSConnectionConsumers"/></tocitem><tocitem text="配置 JMS 服务器消息日志滚动" target="jms_servers.ConfigureJMSServerLogging"/><tocitem text="更改 JMS 服务器定位" target="jms_servers.TargetAndDeployJMSServers"/><tocitem text="监视 JMS 服务器" target="jms_servers.MonitorJMSServers"/><tocitem text="在运行时暂停 JMS 服务器消息操作" target="jms_servers.ConfigureJMSServerControl"/><tocitem text="配置与 JMS 相关的服务的迁移" target="jms_servers.ConfigureJMSMigration"><tocitem text="配置与 JMS 相关的服务的可迁移目标" target="jms_servers.ConfigureMigratableTargetsForJMSServers"/><tocitem text="配置 JMS 服务的自动迁移" target="jms_servers.AutoMigrateJMSServer"/><tocitem text="手动迁移与 JMS 相关的服务" target="jms_servers.MigrateJMSServer"/></tocitem></tocitem>
+
+
+        
+  <tocitem text="配置存储转发代理" target="saf_agents.ConfigureSAFService"><tocitem text="创建存储转发代理" target="saf_agents.CreateSAFAgents"/><tocitem text="配置 SAF 代理的一般属性" target="saf_agents.ConfigureGeneralAttributes"/><tocitem text="配置 SAF 代理阈值与限额" target="saf_agents.ConfigureThresholdsandQuotas"/><tocitem text="配置 SAF 代理的 JMS 消息日志滚动" target="saf_agents.ConfigureSAFAgentLogging"/><tocitem text="监视 SAF 代理统计信息" target="saf_agents.MonitorSAFAgentStatics"/><tocitem text="监视 SAF 代理远程端点" target="saf_agents.MonitorSAFAgentRemoteEndpoints"/><tocitem text="监视 SAF 代理 WSRM 对话" target="saf_agents.MonitorSAFAgentConversations"/><tocitem text="更改 SAF 代理目标" target="saf_agents.TargetSAFAgentsToServers"/><tocitem text="删除存储转发代理" target="saf_agents.DeleteSAFAgents"/><tocitem text="配置与 JMS 相关的服务的迁移" target="jms_servers.ConfigureJMSMigration"/></tocitem>
+
+
+        
+  <tocitem text="配置 JMS 系统模块并添加 JMS 资源" target="jms_modules.ConfigJMSModuleResources"><tocitem text="配置 JMS 系统模块" target="jms_modules.modules.ConfigureJMSModules"><tocitem text="创建 JMS 系统模块" target="jms_modules.modules.CreateJMSModules"/><tocitem text="为 JMS 系统模块配置资源" target="jms_modules.modules.ConfigureJMSModuleResources"/><tocitem text="在 JMS 系统模块中配置子部署" target="jms_modules.modules.ConfigureJMSModuleSubdeploys"/><tocitem text="定位 JMS 系统模块" target="jms_modules.modules.TargetJMSModules"/><tocitem text="创建 JMS 系统模块安全角色" target="jms_modules.modules.CreateJMSModuleSecurityRoles"/><tocitem text="配置 JMS 系统模块安全策略" target="jms_modules.modules.ConfigureJMSModuleSecurityPolicies"/><tocitem text="从 JMS 系统模块中删除资源" target="jms_modules.modules.DeleteJMSModuleResources"/><tocitem text="从 JMS 系统模块中删除子部署" target="jms_modules.modules.DeleteJMSModuleSubdeploys"/><tocitem text="删除 JMS 系统模块" target="jms_modules.modules.DeleteJMSModules"/><tocitem text="导航到系统模块中的 JMS 资源" target="jms_modules.NavSystemMod"/><tocitem text="保存对系统模块中 JMS 资源的更改" target="jms_modules.SaveSystemMod"/><tocitem text="导航到应用程序模块中的 JMS 资源" target="jms_modules.NavPackagedMod"/><tocitem text="保存对应用程序模块中 JMS 资源的更改" target="jms_modules.SavePackagedMod"/></tocitem><tocitem text="部署 JMS 模块" target="jms_modules.DeployJmsModules"><tocitem text="安装独立 JMS 模块" target="jms_modules.jms_app.InstallStandAloneJmsModules"/><tocitem text="修改 JMS 应用程序模块" target="jms_modules.jms_app.ModifyJmsAppModules"/><tocitem text="更新 (重新部署) 独立 JMS 模块" target="jms_modules.jms_app.UpdateStandAloneJmsModules"/><tocitem text="监视已部署的 JMS 目标的统计信息" target="jms_modules.jms_app.MonitorJMSAppDestinations"/></tocitem><tocitem text="为目标配置限额" target="jms_modules.quotas.ConfigureQuotas"><tocitem text="为系统模块中的目标创建限额" target="jms_modules.quotas.CreateQuotas"/><tocitem text="删除限额" target="jms_modules.quotas.DeleteQuotas"/></tocitem><tocitem text="配置 JMS 模板" target="jms_modules.templates.ConfigureJMSTemplates"><tocitem text="为系统模块中的目标创建 JMS 模板" target="jms_modules.templates.CreateJMSTemplates"/><tocitem text="配置一般 JMS 模板属性" target="jms_modules.templates.ConfigureJMSTemplateGeneral"/><tocitem text="配置高级 JMS 模板参数" target="jms_modules.templates.ConfigureJMSTemplateAdvanced"/><tocitem text="服务器重新启动时暂停 JMS 模板消息操作" target="jms_modules.templates.ConfigureJMSTemplatePauseMessages"/><tocitem text="配置 JMS 模板阈值与限额" target="jms_modules.templates.ConfigureJMSTemplateThresholds"/><tocitem text="配置 JMS 模板消息传送覆盖" target="jms_modules.templates.ConfigureJMSTemplateOverride"/><tocitem text="配置 JMS 模板消息传送失败参数" target="jms_modules.templates.ConfigureJMSTemplateDeliveryFailure"/><tocitem text="配置 JMS 模板消息日志记录" target="jms_modules.templates.ConfigureJMSTemplateLogging"/><tocitem text="配置主题多点传送参数" target="jms_modules.templates.ConfigureJMSTemplateMulticast"/><tocitem text="为错误目标配置 JMS 模板子部署" target="jms_modules.templates.ConfigureJMSTemplateSubdeployment"/><tocitem text="删除 JMS 模板" target="jms_modules.templates.DeleteJMSTemplates"/></tocitem><tocitem text="配置目标关键字" target="jms_modules.destination_keys.ConfigureDestinationKeys"><tocitem text="为系统模块中的目标创建排序关键字" target="jms_modules.destination_keys.CreateDestinationKeys"/><tocitem text="删除目标关键字" target="jms_modules.destination_keys.DeleteDestinationKeys"/></tocitem><tocitem text="配置主题" target="jms_modules.topics.ConfigureTopics"><tocitem text="在系统模块中创建主题" target="jms_modules.topics.CreateTopics"/><tocitem text="配置一般主题属性" target="jms_modules.topics.ConfigureTopicGeneral"/><tocitem text="配置高级主题参数" target="jms_modules.topics.ConfigureTopicAdvanced"/><tocitem text="重新启动服务器时暂停主题消息操作" target="jms_modules.topics.ConfigureTopicPauseMessages"/><tocitem text="配置主题阈值与限额" target="jms_modules.topics.ConfigureTopicThresholds"/><tocitem text="配置主题消息传送覆盖" target="jms_modules.topics.ConfigureTopicOverrides"/><tocitem text="配置主题消息传送失败选项" target="jms_modules.topics.ConfigureTopicDeliveryFailure"/><tocitem text="配置主题消息日志记录" target="jms_modules.topics.ConfigureTopicLogging"/><tocitem text="配置主题多点传送参数" target="jms_modules.topics.ConfigureTopicMulticast"/><tocitem text="监视 JMS 系统模块中的主题" target="jms_modules.topics.MonitorTopics"/><tocitem text="管理主题持久订户" target="jms_modules.topics.ManageDurableSubscribers"/><tocitem text="在运行时暂停主题消息操作" target="jms_modules.topics.ConfigureTopicControl"/><tocitem text="创建主题安全角色" target="jms_modules.topics.CreateTopicSecurityRoles"/><tocitem text="配置主题安全策略" target="jms_modules.topics.ConfigureTopicSecurityPolicies"/><tocitem text="指定主题的子部署" target="jms_modules.topics.TargetTopics"/><tocitem text="删除主题" target="jms_modules.topics.DeleteTopics"/></tocitem><tocitem text="配置队列" target="jms_modules.queues.ConfigureQueues"><tocitem text="在系统模块中创建队列" target="jms_modules.queues.CreateQueues"/><tocitem text="配置一般队列参数" target="jms_modules.queues.ConfigureQueueGeneral"/><tocitem text="配置高级队列参数" target="jms_modules.queues.ConfigureQueueAdvanced"/><tocitem text="服务器重新启动时暂停队列消息操作" target="jms_modules.queues.ConfigureQueuePauseMessages"/><tocitem text="配置队列阈值与限额" target="jms_modules.queues.ConfigureQueueThresholds"/><tocitem text="配置消息传送覆盖" target="jms_modules.queues.ConfigureQueueOverrides"/><tocitem text="配置队列消息日志记录" target="jms_modules.queues.ConfigureQueueLogging"/><tocitem text="配置队列消息传送失败选项" target="jms_modules.queues.ConfigureQueueDeliveryFailure"/><tocitem text="监视 JMS 系统模块中的队列" target="jms_modules.queues.MonitorQueues"/><tocitem text="管理队列消息" target="jms_modules.queues.ManageQueues"/><tocitem text="在运行时暂停队列消息操作" target="jms_modules.queues.ConfigureQueueControl"/><tocitem text="创建队列安全角色" target="jms_modules.queues.CreateQueueSecurityRoles"/><tocitem text="配置队列安全策略" target="jms_modules.queues.ConfigureQueueSecurityPolicies"/><tocitem text="指定队列的子部署" target="jms_modules.queues.TargetQueues"/><tocitem text="删除队列" target="jms_modules.queues.DeleteQueues"/></tocitem><tocitem text="配置连接工厂" target="jms_modules.connection_factories.ConfigureConnectionFactories"><tocitem text="在系统模块中创建连接工厂" target="jms_modules.connection_factories.CreateConnectionFactories"/><tocitem text="配置连接工厂默认传送参数" target="jms_modules.connection_factories.ConfigureDefaultDeliveryParams"/><tocitem text="配置连接工厂客户机参数" target="jms_modules.connection_factories.ConfigureClientParams"/><tocitem text="配置连接工厂订阅共享策略" target="jms_modules.connection_factories.ConfigureSubscriptionSharing"/><tocitem text="配置使用同一客户机 ID 的多个连接" target="jms_modules.connection_factories.ConfigureMultipleConnectionswithSameClientId"/><tocitem text="配置连接工厂事务处理参数" target="jms_modules.connection_factories.ConfigureConnectionFactoryTransactions"/><tocitem text="配置连接工厂流控制" target="jms_modules.connection_factories.ConfigureFlowControl"/><tocitem text="配置连接工厂顺序单元参数" target="jms_modules.connection_factories.ConfigureUOOParams"/><tocitem text="配置连接工厂负载平衡参数" target="jms_modules.connection_factories.ConfigureLoadBalancingParams"/><tocitem text="配置连接工厂安全参数" target="jms_modules.connection_factories.ConfigureSecurityParams"/><tocitem text="指定连接工厂的子部署" target="jms_modules.connection_factories.TargetConnectionFactories"/><tocitem text="删除连接工厂" target="jms_modules.connection_factories.DeleteConnectionFactories"/></tocitem><tocitem text="配置统一分布式主题" target="jms_modules.distributed_topics.ConfigureDistributedTopics"><tocitem text="在系统模块中创建统一分布式主题" target="jms_modules.distributed_topics.CreateUniformDistributedTopics"/><tocitem text="在系统模块中创建分区统一分布式主题" target="jms_modules.distributed_topics.CreatePartitionedUniformDistributedTopics"/><tocitem text="统一分布式主题 - 配置一般参数" target="jms_modules.distributed_topics.ConfigureUDTGeneral"/><tocitem text="统一分布式主题 - 配置高级参数" target="jms_modules.distributed_topics.ConfigureUDTAdvanced"/><tocitem text="统一分布式主题 - 服务器重新启动时暂停消息操作" target="jms_modules.distributed_topics.ConfigureUDTPauseMessages"/><tocitem text="统一分布式主题 - 配置阈值与限额" target="jms_modules.distributed_topics.ConfigureUDTThresholds"/><tocitem text="统一分布式主题 - 配置传送覆盖" target="jms_modules.distributed_topics.ConfigureUDTOverrides"/><tocitem text="统一分布式主题 - 配置消息日志记录" target="jms_modules.distributed_topics.ConfigureUDTLogging"/><tocitem text="统一分布式主题 - 配置传送失败参数" target="jms_modules.distributed_topics.ConfigureUDTDeliveryFailure"/><tocitem text="统一分布式主题 - 配置多点传送参数" target="jms_modules.distributed_topics.ConfigureUDTMulticast"/><tocitem text="统一分布式主题 - 创建安全角色" target="jms_modules.distributed_topics.CreateUDTSecurityRoles"/><tocitem text="统一分布式主题 - 配置安全策略" target="jms_modules.distributed_topics.ConfigureUDTSecurityPolicies"/><tocitem text="统一分布式主题 - 监视统计信息" target="jms_modules.distributed_topics.MonitorUDTs"/><tocitem text="统一分布式主题 - 指定子部署" target="jms_modules.distributed_topics.TargetDTs"/><tocitem text="删除分布式主题" target="jms_modules.distributed_topics.DeleteDTs"/><tocitem text="在系统模块中创建加权分布式主题" target="jms_modules.distributed_topics.CreateWeightedDistributedTopics"/><tocitem text="加权分布式主题 - 配置一般参数" target="jms_modules.distributed_topics.ConfigureWDTGeneral"/><tocitem text="加权分布式主题 - 配置成员权重" target="jms_modules.distributed_topics.ConfigureWDTMembers"/></tocitem><tocitem text="配置统一分布式队列" target="jms_modules.distributed_queues.ConfigureDistributedQueues"><tocitem text="在系统模块中创建统一分布式队列" target="jms_modules.distributed_queues.CreateUniformDistributedQueues"/><tocitem text="统一分布式队列 - 配置一般参数" target="jms_modules.distributed_queues.ConfigureUDQGeneral"/><tocitem text="统一分布式队列 - 配置高级参数" target="jms_modules.distributed_queues.ConfigureUDQAdvanced"/><tocitem text="统一分布式队列 - 服务器重新启动时暂停消息操作" target="jms_modules.distributed_queues.ConfigureUDQPauseMessages"/><tocitem text="统一分布式队列 - 配置阈值与限额" target="jms_modules.distributed_queues.ConfigureUDQThresholds"/><tocitem text="统一分布式队列 - 配置传送覆盖" target="jms_modules.distributed_queues.ConfigureUDQOverrides"/><tocitem text="统一分布式队列 - 配置消息日志记录" target="jms_modules.distributed_queues.ConfigureUDQLogging"/><tocitem text="统一分布式队列 - 配置传送失败参数" target="jms_modules.distributed_queues.ConfigureUDQDeliveryFailure"/><tocitem text="统一分布式队列 - 创建安全角色" target="jms_modules.distributed_queues.CreateUDQSecurityRoles"/><tocitem text="统一分布式队列 - 配置安全策略" target="jms_modules.distributed_queues.ConfigureUDQSecurityPolicies"/><tocitem text="统一分布式队列 - 监视统计信息" target="jms_modules.distributed_queues.MonitorUDQs"/><tocitem text="管理分布式队列消息" target="jms_modules.distributed_queues.ManageDQMessages"/><tocitem text="统一分布式队列 - 指定子部署" target="jms_modules.distributed_queues.TargetDQs"/><tocitem text="删除分布式队列" target="jms_modules.distributed_queues.DeleteDQs"/><tocitem text="在系统模块中创建加权分布式队列" target="jms_modules.distributed_queues.CreateWeightedDistributedQueues"/><tocitem text="加权分布式队列 - 配置一般参数" target="jms_modules.distributed_queues.ConfigureWDQGeneral"/><tocitem text="加权分布式队列 - 配置成员权重" target="jms_modules.distributed_queues.ConfigureWDQMembers"/></tocitem><tocitem text="配置外部服务器" target="jms_modules.foreign_servers.ConfigureForeignServers"><tocitem text="在系统模块中创建外部服务器" target="jms_modules.foreign_servers.CreateForeignServers"/><tocitem text="创建外部目标" target="jms_modules.foreign_servers.CreateForeignDestinations"/><tocitem text="创建外部连接工厂" target="jms_modules.foreign_servers.CreateForeignConnectionFactories"/><tocitem text="指定外部服务器的子部署" target="jms_modules.foreign_servers.TargetForeignServers"/><tocitem text="删除外部服务器" target="jms_modules.foreign_servers.DeleteForeignServers"/><tocitem text="删除外部目标" target="jms_modules.foreign_servers.DeleteForeignDestinations"/><tocitem text="删除外部连接工厂" target="jms_modules.foreign_servers.DeleteForeignConnectionFactories"/></tocitem><tocitem text="配置 JMS SAF" target="jms_modules.store_and_forward.ConfigureJMSSAF"><tocitem text="在 JMS 系统模块中创建 SAF 导入目标" target="jms_modules.store_and_forward.imported_destinations.CreateImportedDestinations"><tocitem text="配置 SAF 导入目标" target="jms_modules.store_and_forward.imported_destinations.ConfigureImportedDestinations"/><tocitem text="指定 SAF 导入目标的子部署" target="jms_modules.store_and_forward.imported_destinations.TargetImportedDestinations"/><tocitem text="删除 SAF 导入目标" target="jms_modules.store_and_forward.imported_destinations.DeleteImportedDestinations"/><tocitem text="创建 SAF 队列" target="jms_modules.store_and_forward.imported_destinations.queues.CreateQueueDestinations"><tocitem text="配置 SAF 队列" target="jms_modules.store_and_forward.imported_destinations.queues.ConfigureQueueDestinations"/><tocitem text="配置 SAF 队列消息日志记录" target="jms_modules.store_and_forward.imported_destinations.queues.ConfigureSAFQueueLogging"/><tocitem text="创建 SAF 队列安全角色" target="jms_modules.store_and_forward.imported_destinations.queues.CreateSAFQueueSecurityRoles"/><tocitem text="配置 SAF 队列安全角色" target="jms_modules.store_and_forward.imported_destinations.queues.ConfigureQueueSecurityRoles"/><tocitem text="删除 SAF 队列安全角色" target="jms_modules.store_and_forward.imported_destinations.queues.DeleteQueueSecurityRoles"/><tocitem text="配置 SAF 队列安全策略" target="jms_modules.store_and_forward.imported_destinations.queues.ConfigureQueueSecurityPolicy"/><tocitem text="删除 SAF 队列" target="jms_modules.store_and_forward.imported_destinations.queues.DeleteQueueDestinations"/></tocitem><tocitem text="创建 SAF 主题" target="jms_modules.store_and_forward.imported_destinations.topics.CreateTopicDestinations"><tocitem text="配置 SAF 主题" target="jms_modules.store_and_forward.imported_destinations.topics.ConfigureTopicDestinations"/><tocitem text="配置 SAF 主题消息日志记录" target="jms_modules.store_and_forward.imported_destinations.topics.ConfigureTopicLogging"/><tocitem text="创建 SAF 主题安全角色" target="jms_modules.store_and_forward.imported_destinations.topics.CreateSAFTopicSecurityRoles"/><tocitem text="配置 SAF 主题安全角色" target="jms_modules.store_and_forward.imported_destinations.topics.ConfigureTopicSecurityRoles"/><tocitem text="删除 SAF 主题安全角色" target="jms_modules.store_and_forward.imported_destinations.topics.DeleteTopicSecurityRoles"/><tocitem text="配置 SAF 主题安全策略" target="jms_modules.store_and_forward.imported_destinations.topics.ConfigureTopicSecurityPolicy"/><tocitem text="删除 SAF 主题" target="jms_modules.store_and_forward.imported_destinations.topics.DeleteTopicDestinations"/></tocitem></tocitem><tocitem text="创建 SAF 远程上下文" target="jms_modules.store_and_forward.remote_context.CreateRemoteContext"><tocitem text="配置远程 SAF 上下文" target="jms_modules.store_and_forward.remote_context.ConfigureRemoteContext"/><tocitem text="删除远程 SAF 上下文" target="jms_modules.store_and_forward.remote_context.DeleteRemoteContext"/></tocitem><tocitem text="创建 SAF 错误处理资源" target="jms_modules.store_and_forward.error_handling.CreateErrorHandling"><tocitem text="配置 SAF 错误处理资源" target="jms_modules.store_and_forward.error_handling.ConfigureErrorHandling"/><tocitem text="删除 SAF 错误处理资源" target="jms_modules.store_and_forward.error_handling.DeleteErrorHandling"/></tocitem></tocitem></tocitem>
+
+
+        
+  <tocitem text="配置和管理消息传送桥接程序" target="bridge.ConfigureandManageMsgBridge"><tocitem text="创建消息传送桥接程序实例" target="bridge.bridge_instance.CreateJMSBridgeInstance"><tocitem text="配置消息传送桥接程序实例" target="bridge.bridge_instance.ConfigureGeneralAttributes"/><tocitem text="配置连接重试属性" target="bridge.bridge_instance.ConfigureConnectionRetry"/><tocitem text="配置事务处理属性" target="bridge.bridge_instance.ConfigureTransactions"/><tocitem text="将消息传送桥接程序定位到服务器" target="bridge.bridge_instance.TargetMessagingBridgesToServers"/><tocitem text="删除桥接程序实例" target="bridge.bridge_instance.DeleteJMSMsgBridgeInstance"/></tocitem><tocitem text="创建 JMS 桥接程序目标" target="bridge.jms_destination.CreateJMSBridgeDestinations"><tocitem text="配置 JMS 桥接程序目标" target="bridge.jms_destination.ConfigureJMSBridgeDestinationAttributes"/><tocitem text="删除 JMS 桥接程序目标" target="bridge.jms_destination.DeleteJMSBridgeDestionations"/></tocitem><tocitem text="管理消息传送桥接程序" target="bridge.manage.ManageMsgBridge"><tocitem text="部署资源适配器" target="bridge.manage.DeployResourceAdaptors"/><tocitem text="监视消息传送桥接程序实例" target="bridge.manage.MonitorMessagingBridges"/><tocitem text="挂起并重新启动消息传送桥接程序" target="bridge.manage.StopAndRestartMessagingBridges"/><tocitem text="配置消息传送桥接程序执行线程池大小" target="bridge.manage.ConfigureMessagingBridgeExecuteThreadPoolSize"/></tocitem></tocitem>
+
+      </tocitem>
+
+      <tocitem text="配置数据源" target="blank">
+        
+  <tocitem text="配置数据库连接" target="jdbc.ConfigureDatabaseConnectivity"><tocitem text="配置 JDBC 一般数据源" target="jdbc.ConfigureDataSources"/><tocitem text="配置 JDBC GridLink 数据源" target="jdbc.ConfigureGridLinkDataSources"/><tocitem text="创建 JDBC GridLink 数据源" target="jdbc.jdbc_datasources.CreateGridLinkDataSources"/><tocitem text="创建 JDBC 一般数据源" target="jdbc.jdbc_datasources.CreateDataSources"/><tocitem text="将数据源绑定到具有多个名称的 JNDI 树" target="jdbc.jdbc_datasources.BindingaDataSourcetotheJNDITreewithMultipleNames"/><tocitem text="创建启用了 LLR 的 JDBC 数据源" target="jdbc.jdbc_datasources.CreateLLRDataSources"/><tocitem text="删除 JDBC 数据源" target="jdbc.jdbc_datasources.DeleteDataSources"/><tocitem text="配置连接标签化回调类" target="jdbc.jdbc_datasources.ConfigureLabelingCallbackClass"/><tocitem text="为连接池配置连接收集" target="jdbc.jdbc_datasources.ConfigureConnectionHarvesting"/><tocitem text="启用 RMI JDBC 安全" target="jdbc.EnableRMIJDBCSecurity"/><tocitem text="设置系统属性" target="jdbc.jdbc_datasources.SetSystemProperties"/><tocitem text="配置 ONS 客户机参数" target="jdbc.jdbc_datasources.ConfigureONSClientParameters"/><tocitem text="测试 ONS 客户机配置" target="jdbc.jdbc_datasources.TestONSClientConfiguration"/><tocitem text="监视已部署的数据源实例" target="jdbc.jdbc_datasources.MonitorDeployedDataSourceInstance"/><tocitem text="监视 GridLink 数据源实例的统计信息" target="jdbc.jdbc_datasources.MonitorOracleDataSourceInstanceStatistics"/><tocitem text="监视已部署的 ONS 守护程序" target="jdbc.jdbc_datasources.MonitorDeployedONSDaemons"/><tocitem text="使用 Oracle Wallet 文件配置 ONS 客户机的 SSL" target="jdbc.jdbc_datasources.ConfigureONSWallet"/><tocitem text="配置 Oracle 参数" target="jdbc.jdbc_datasources.ConfigureOracleParameters"/><tocitem text="为 JDBC 数据源配置全局事务处理选项" target="jdbc.jdbc_datasources.ConfigureTransactionOptionsForADataSource"/><tocitem text="为 JDBC 数据源配置测试选项" target="jdbc.jdbc_datasources.ConfigureTestingOptionsForADataSource"/><tocitem text="禁止包装数据类型对象" target="jdbc.jdbc_datasources.DisableWrapping"/><tocitem text="配置 JDBC 连接池的语句高速缓存" target="jdbc.jdbc_datasources.ConfigureTheStatementCacheForADataSource"/><tocitem text="为 JDBC 连接池配置连接容量" target="jdbc.jdbc_datasources.ConfigureConnectionCapacity"/><tocitem text="使连接请求能够等待连接" target="jdbc.jdbc_datasources.EnableConnectionRequestsToWait"/><tocitem text="为 JDBC 数据源配置诊断概要分析" target="jdbc.jdbc_datasources.ConfigureDiagnosticsForADataSource"/><tocitem text="定位 JDBC 数据源" target="jdbc.jdbc_datasources.TargetAndDeployDataSources"/><tocitem text="为 JDBC 数据源配置身份证明映射" target="jdbc.jdbc_datasources.ConfigureCredentialMappingForADataSource"/><tocitem text="删除 JDBC 数据源的身份证明映射" target="jdbc.jdbc_datasources.DeleteCredentialMappingForADataSource"/><tocitem text="启用设置 JDBC 数据源连接上客户机 ID 的功能" target="jdbc.jdbc_datasources.EnableCredentialMapping"/><tocitem text="启用 JDBC 数据源的基于标识的连接池" target="jdbc.jdbc_datasources.EnableIdentityBasedConnectionPooling"/><tocitem text="导航到 JDBC 数据源系统资源" target="jdbc.NavigateToJdbcSystemResource"/><tocitem text="导航到 JDBC 应用程序模块" target="jdbc.NavigateToJdbcAppModules"/></tocitem>
+
+  <tocitem text="监测 JDBC 数据源" target="jdbc.MonitorDataSources"><tocitem text="监视 JDBC 数据源的统计信息" target="jdbc.jdbc_datasources.MonitorDataSourceStatistics"/><tocitem text="测试 JDBC 数据源" target="jdbc.jdbc_datasources.TestDataSources"/></tocitem>
+
+  <tocitem text="控制 JDBC 数据源" target="jdbc.ControlDataSources"><tocitem text="收缩 JDBC 数据源中的连接池" target="jdbc.jdbc_datasources.ShrinkDataSources"/><tocitem text="重置 JDBC 数据源中的连接" target="jdbc.jdbc_datasources.ResetConnectionsInADataSource"/><tocitem text="清除 JDBC 数据源中的语句高速缓存" target="jdbc.jdbc_datasources.ClearStatementCache"/><tocitem text="挂起 JDBC 数据源" target="jdbc.jdbc_datasources.SuspendDataSources"/><tocitem text="关闭 JDBC 数据源" target="jdbc.jdbc_datasources.ShutDownDataSources"/><tocitem text="恢复挂起的 JDBC 数据源" target="jdbc.jdbc_datasources.ResumeDataSources"/><tocitem text="启动 JDBC 数据源" target="jdbc.jdbc_datasources.StartDataSources"/></tocitem>
+
+  <tocitem text="配置 JDBC 多数据源" target="jdbc.ConfigureMultiDataSources"><tocitem text="创建 JDBC 多数据源" target="jdbc.jdbc_multidatasources.CreateMultiDataSources"/><tocitem text="删除 JDBC 多数据源" target="jdbc.jdbc_multidatasources.DeleteMultiDataSources"/><tocitem text="向 JDBC 多数据源中添加数据源或从中删除数据源" target="jdbc.jdbc_multidatasources.AddandRemoveDataSourcesInAMultiDataSource"/><tocitem text="注册故障转移回调处理程序" target="jdbc.jdbc_multidatasources.RegisterAFailoverCallbackHandler"/><tocitem text="定位和部署 JDBC 多数据源" target="jdbc.jdbc_multidatasources.TargetAndDeployMultiDataSources"/></tocitem>
+
+  <tocitem text="部署 JDBC 模块" target="jdbc.DeployJdbcModules"><tocitem text="部署独立 JDBC 模块" target="jdbc.jdbc_app.DeployStandAloneJdbcModules"/><tocitem text="修改 JDBC 应用程序模块" target="jdbc.jdbc_app.ModifyJdbcAppModules"/><tocitem text="更新 (重新部署) 独立 JDBC 模块" target="jdbc.jdbc_app.UpdateStandAloneJdbcModules"/><tocitem text="监测部署的 JDBC 数据源" target="jdbc.jdbc_app.MonitorJDBCAppDataSources"/></tocitem>
+
+  <tocitem text="创建 JDBC 数据源工厂" target="jdbc.jdbc_datasourcefactories.CreateDataSourceFactories"><tocitem text="删除 JDBC 数据源工厂" target="jdbc.jdbc_datasourcefactories.DeleteDataSourceFactories"/></tocitem>
+
+      </tocitem>
+
+      
+  <tocitem text="配置定制持久性存储" target="stores.ConfigureStores"><tocitem text="创建文件存储" target="stores.CreateFileStores"/><tocitem text="创建 JDBC 存储" target="stores.CreateJDBCStores"/><tocitem text="修改默认存储设置" target="stores.ConfigureDefaultStore"/><tocitem text="删除持久性存储" target="stores.DeletePersistentStores"/><tocitem text="配置与 JMS 相关的服务的迁移" target="jms_servers.ConfigureJMSMigration"/></tocitem>
+
+
+      
+  <tocitem text="配置路径服务" target="pathservice.ConfigurePathService"><tocitem text="创建路径服务" target="pathservice.CreatePathServices"/><tocitem text="更改持久性存储" target="pathservice.ChangePersistentStore"/><tocitem text="更改路径服务目标" target="pathservice.TargetPathServices"/><tocitem text="删除路径服务" target="pathservice.DeletePathServices"/><tocitem text="配置与 JMS 相关的服务的迁移" target="jms_servers.ConfigureJMSMigration"/></tocitem>
+
+
+      
+  <tocitem text="配置 JNDI" target="blank">
+    <tocitem text="在 JNDI 树中加载对象" target="jndi.LoadObjectsInTheJNDITree"/>
+
+    <tocitem text="查看 JNDI 树中的对象" target="jndi.ViewObjectsInTheJNDITree"/>
+
+    <tocitem text="配置外部 JNDI" target="jndi.ManageForeignJNDI"><tocitem text="创建外部 JNDI 提供程序" target="jndi.ConfigureForeignJNDIProvider"/><tocitem text="创建外部 JNDI 对象链接" target="jndi.CreateForeignJNDIObjectLinks"/><tocitem text="删除外部 JNDI 提供程序" target="jndi.DeleteForeignJNDIProvider"/><tocitem text="删除外部 JNDI 对象链接" target="jndi.DeleteForeignJNDIObjectLinks"/></tocitem>
+  </tocitem>
+
+
+      
+  <tocitem text="创建工作上下文资源" target="work_contexts.CreateWorkContextResource"><tocitem text="访问工作上下文资源的策略" target="security.DefinePoliciesForWorkContextResources"/><tocitem text="创建工作上下文资源的范围角色" target="security.DefineRolesForWorkContextResources"/></tocitem>
+
+
+      
+  <tocitem text="配置 XML 资源" target="xml.ConfigureXMLResources"><tocitem text="XML 注册表" target="blank">
+      <tocitem text="创建 XML 注册表" target="xml.CreateXMLRegistry"/>
+
+      <tocitem text="更新现有 XML 注册表" target="xml.UpdateExistingXMLRegistry"/>
+
+      <tocitem text="配置外部实体解决方案" target="xml.ConfigureExternalEntityResolution"/>
+
+      <tocitem text="将语法分析器与文档类型关联" target="xml.ConfigureParsersAccordingToDocumentType"/>
+
+      <tocitem text="查看关联的 XML 注册表" target="xml.ViewAssociatedXMLRegistry"/>
+
+      <tocitem text="将 XML 注册表重新定位到其他服务器" target="xml.TargetDiffXMLRegistry"/>
+
+      <tocitem text="更改与 WebLogic Server 关联的 XML 注册表" target="xml.TargetNewXMLRegistry"/>
+
+      <tocitem text="删除 XML 注册表" target="xml.DeleteXMLRegistry"/>
+
+      <tocitem text="删除外部实体解决方案条目" target="xml.DeleteExternalEntityEntry"/>
+
+      <tocitem text="删除语法分析器选择条目" target="xml.DeleteParserSelectEntry"/>
+    </tocitem><tocitem text="XML 实体高速缓存" target="blank">
+      <tocitem text="创建 XML 实体高速缓存" target="xml.CreateXMLEntityCache"/>
+
+      <tocitem text="配置现有的 XML 实体高速缓存" target="xml.ConfigureTheExternalEntityCache"/>
+
+      <tocitem text="查看关联的 XML 实体高速缓存" target="xml.ViewAssociatedXMLEntityCache"/>
+
+      <tocitem text="将 XML 实体高速缓存定位到服务器" target="xml.TargetXMLEntityCache"/>
+
+      <tocitem text="监视 XML 实体高速缓存" target="xml.MonitorTheExternalEntityCache"/>
+
+      <tocitem text="删除 XML 实体高速缓存" target="xml.DeleteXMLEntityCache"/>
+    </tocitem></tocitem>
+
+
+      
+  <tocitem text="配置资源适配器" target="connectors.ConfigureResourceAdapters"><tocitem text="部署资源适配器模块" target="connectors.DeployConnectorResourceAdapterModules"/><tocitem text="启动和停止资源适配器" target="connectors.StartStop"/><tocitem text="配置资源适配器属性" target="connectors.ConfigureResourceAdapterProperties"/><tocitem text="配置出站连接池属性" target="connectors.ConfigureOutboundConnectionPoolProperties"/><tocitem text="配置管理对象属性" target="connectors.ConfigureAdminObjectProperties"/><tocitem text="创建身份证明映射" target="connectors.CreateCredentialMappings"/><tocitem text="删除身份证明映射" target="connectors.DeleteCredentialMappings"/><tocitem text="配置安全主用户" target="connectors.ConfigureSecurityPrincipals"/><tocitem text="测试出站连接" target="connectors.TestOutboundConnections"/><tocitem text="监视资源适配器" target="connectors.MonitorConnectors"/></tocitem>
+
+
+      
+  <tocitem text="配置对 JavaMail 的访问" target="mail.CreateMailSessions"><tocitem text="删除邮件会话" target="mail.DeleteMailSessions"/><tocitem text="定位邮件会话" target="mail.TargetMailSessions"/></tocitem>
+
+
+      
+  <tocitem text="File T3" target="blank">
+    <tocitem text="创建文件系统" target="filet3.CreateFileSystems"/>
+
+    <tocitem text="克隆文件系统" target="filet3.CloneFileSystems"/>
+
+    <tocitem text="定位 File T3 服务" target="filet3.TargetFileT3Services"/>
+
+    <tocitem text="删除文件系统" target="filet3.DeleteFileSystems"/>
+  </tocitem>
+
+
+      
+  <tocitem text="配置 JTA" target="jta.ConfigureJTA"><tocitem text="配置高级域 JTA 选项" target="jta.ConfigureJTAAdvanced"/><tocitem text="配置域 JTA 选项" target="jta.ConfigureDomainJTA"/><tocitem text="配置安全互操作性模式" target="jta.ConfigureInteropMode"/><tocitem text="配置事务处理的通信通道" target="jta.ConfigureInterdomainTransactions"/><tocitem text="配置事务处理恢复服务迁移的默认持久性存储" target="jta.ConfigureTheDefaultStore"/><tocitem text="配置事务处理日志存储" target="jta.ConfigureTheTLogStore"/><tocitem text="配置只读一阶段优化和两阶段提交" target="jta.ConfigureOnePhaseRD_ONLY"/><tocitem text="配置要迁移的 JTA 事务处理恢复服务" target="jta.ConfigureTRSMigration"><tocitem text="为事务处理恢复服务迁移配置候选服务器" target="jta.LimitServersForTransactionRecoveryMigration"/><tocitem text="配置 JTA 事务处理恢复服务的自动迁移" target="jta.AutoMigrateTRS"/><tocitem text="手动迁移事务处理恢复服务" target="jta.MigrateTheTransactionRecoveryService"/><tocitem text="配置 JTA 事务处理恢复服务的可迁移目标" target="jta.ConfigureMigratableTargetsForTransactionRecoveryService"/></tocitem><tocitem text="监视 JTA" target="jta.MonitorJTA"><tocitem text="查看事务处理统计信息" target="jta.ViewTransactionStatistics"/><tocitem text="查看命名事务处理的统计信息" target="jta.ViewStatisticsForNamedTransactions"/><tocitem text="查看 XA 资源的事务处理统计信息" target="jta.ViewTransactionStatisticsForXAResources"/><tocitem text="查看非 XA 资源的事务处理统计信息" target="jta.ViewTransactionStatisticsForNonXAResources"/><tocitem text="查看当前事务处理" target="jta.ViewCurrentTransactions"/><tocitem text="强制本地提交" target="jta.ForceLocalCommit"/><tocitem text="强制本地回退" target="jta.ForceLocalRollback"/><tocitem text="强制全局提交" target="jta.ForceGlobalCommit"/><tocitem text="强制全局回退" target="jta.ForceGlobalRollback"/><tocitem text="查看事务处理恢复统计信息" target="jta.ViewTransactionRecoveryStatistics"/><tocitem text="查看 TLOG 存储连接的统计信息" target="jta.ViewTransactionLogConnectionStatistics"/><tocitem text="查看服务器的事务处理日志统计信息" target="jta.ViewTransactionLogStatistics"/></tocitem></tocitem>
+
+    </tocitem>
+
+    
+  <tocitem text="确保服务器和资源安全" target="security.SecureServersAndApplications"><tocitem text="管理安全领域" target="security.ManageSecurityRealms"><tocitem text="配置新的安全领域" target="security.ConfigureNewSecurityRealms"/><tocitem text="更改默认安全领域" target="security.ChangeTheDefaultSecurityRealm"/><tocitem text="删除安全领域" target="security.DeleteSecurityRealms"/><tocitem text="从安全领域导出数据" target="security.ExportDataFromSecurityRealms"/><tocitem text="将数据导入到安全领域中" target="security.ImportDataIntoSecurityRealms"/><tocitem text="还原前一种安全配置" target="security.RevertToAPreviousSecurityConfiguration"/></tocitem><tocitem text="管理安全提供程序" target="security.ManageSecurityProviders"><tocitem text="删除安全提供程序" target="security.DeleteSecurityProviders"/><tocitem text="对安全提供程序重新排序" target="security.ReorderSecurityProviders"/><tocitem text="配置验证和标识断言提供程序" target="security.ConfigureAuthenticationProviders"><tocitem text="对验证提供程序重新排序" target="security.ReorderAuthenticationProviders"/><tocitem text="为安全提供程序配置高速缓存" target="security.ConfigureCachesforSecurityProviders"/><tocitem text="设置 JAAS 控制标记" target="security.SetTheJAASControlFlag"/><tocitem text="配置口令验证提供程序" target="security.ConfigurePasswordValidationProviders"/><tocitem text="配置 Oracle Internet Directory 验证提供程序" target="security.ConfigureOracleInternetDirectoryATNProvider"/><tocitem text="配置 Oracle Virtual Directory 验证提供程序" target="security.ConfigureOracleVirtualDirectoryATNProvider"/></tocitem><tocitem text="配置授权提供程序" target="security.ConfigureAuthorizationProviders"/><tocitem text="配置 WebLogic 仲裁提供程序" target="security.ConfigureTheWebLogicAdjudicationProvider"/><tocitem text="配置角色映射提供程序" target="security.ConfigureRoleMappingProviders"/><tocitem text="配置审计提供程序" target="security.ConfigureAuditingProviders"/><tocitem text="配置身份证明映射提供程序" target="security.ConfigureCredentialMappingProviders"/><tocitem text="创建身份证明映射" target="security.CreateSecurityCredentialMappings"/><tocitem text="创建 PKI 身份证明映射" target="security.CreatePKICredentialMappings"/><tocitem text="创建和配置 SAML 1.1 合作伙伴" target="security.CreateSAML11Partners"><tocitem text="创建 SAML 1.1 断言方" target="security.CreateAssertingParty"/><tocitem text="配置 SAML 1.1 断言方" target="security.ConfigureAssertingParty"/><tocitem text="创建 SAML 1.1 依赖方" target="security.CreateRelyingParty"/><tocitem text="配置 SAML 1.1 依赖方" target="security.ConfigureRelyingParty"/></tocitem><tocitem text="创建和配置 SAML 2.0 合作伙伴" target="security.CreateSAML20Partners"><tocitem text="创建 SAML 2.0 Web 一次登入标识提供程序合作伙伴" target="security.CreateSAML20WebSSOIdPPartner"/><tocitem text="创建 SAML 2.0 Web 一次登入服务提供程序合作伙伴" target="security.CreateSAML20WebSSOSPPartner"/><tocitem text="创建 SAML 2.0 Web 服务标识提供程序合作伙伴" target="security.CreateSAML20WSIdPPartner"/><tocitem text="创建 SAML 2.0 Web 服务服务提供程序合作伙伴" target="security.CreateSAML20WSSPPartner"/><tocitem text="创建合作伙伴查找字符串" target="security.CreatePartnerLookupStrings"/></tocitem><tocitem text="配置证书路径提供程序" target="security.ConfigureCertPathProviders"/><tocitem text="配置定制安全提供程序" target="security.ConfigureCustomSecurityProviders"/><tocitem text="配置用户名映射器" target="security.ConfigureAUserNameMapper"/><tocitem text="配置定制用户名映射器" target="security.ConfigureCustomUserNameMappers"/><tocitem text="从安全提供程序导出数据" target="security.ExportDataFromSecurityProviders"/><tocitem text="将数据导入到安全提供程序中" target="security.ImportDataIntoSecurityProviders"/></tocitem><tocitem text="配置 RDBMS 安全存储" target="security.ConfigureRDBMSSecurityStore"><tocitem text="创建使用 RDBMS 安全存储的新域" target="security.CreateNewDomainToUseRDBMSStore"/><tocitem text="将现有域升级为使用 RDBMS 安全存储" target="security.UpgradeExistingDomainToUseRDBMSStore"/></tocitem><tocitem text="配置标识和信任" target="security.ConfigureIdentityAndTrust"><tocitem text="配置密钥库" target="security.ConfigureKeystoresAndSSL"/><tocitem text="在域中配置 X.509 证书撤销检查" target="security.ConfigureX509CertificateRevocationChecking"><tocitem text="在域中启用证书撤销检查" target="security.EnableCertificateRevocationCheckingInDomain"/><tocitem text="定制域范围内的 CRL 设置" target="security.CustomizeDomainWideCRLSettings"/><tocitem text="定制域范围内的 OCSP 设置" target="security.CustomizeDomainWideOCSPSettings"/><tocitem text="配置证书颁发机构覆盖" target="security.ConfigureCAOverrides"/></tocitem><tocitem text="重新启动 SSL" target="security.RestartSSL"/></tocitem><tocitem text="设置 SSL" target="security.SetUpSSL"><tocitem text="确认已启用主机名验证" target="security.VerifyHostNameVerification"/><tocitem text="禁用主机名验证" target="security.DisableHostNameVerification"/><tocitem text="配置定制主机名验证器" target="security.ConfigureACustomHostNameVerifier"/><tocitem text="配置双向 SSL" target="security.ConfigureTwowaySSL"/></tocitem><tocitem text="管理用户和组" target="security.ManageUsersAndGroups"><tocitem text="创建用户" target="security.DefineUsers"/><tocitem text="修改用户" target="security.ModifyUsers"/><tocitem text="将用户添加到组中" target="security.AddUsersToGroup"/><tocitem text="管理用户属性的值" target="security.AddUserAttributes"/><tocitem text="删除用户" target="security.DeleteUsers"/><tocitem text="设置用户封锁属性" target="security.SetLockoutAttributes"/><tocitem text="取消对用户帐户的锁定" target="security.UnlockUserAccounts"/><tocitem text="创建组" target="security.DefineGroups"/><tocitem text="修改组" target="security.ModifyGroups"/><tocitem text="将组添加到其他组中" target="security.AddGroupsToGroups"/><tocitem text="删除组" target="security.DeleteGroups"/></tocitem><tocitem text="使用角色和策略确保资源安全" target="security.UseRolesAndPoliciesToSecureResources"><tocitem text="为 Web 应用程序和 EJB 管理安全性" target="security.ManageSecurityForDD"><tocitem text="从部署描述符导入安全数据" target="security.CopySecurityFromDD"/><tocitem text="验证导入角色" target="security.VerifyCopiedRoles"/><tocitem text="验证导入策略" target="security.VerifyCopiedPolicies"/><tocitem text="停止导入角色和策略" target="security.RevertOnFutureDeploys"/><tocitem text="设置默认安全模型" target="security.SetDefaultSecurityModel"/><tocitem text="重置 EnforceStrictURLPattern 标记" target="security.SetEnforceURLPatternDefault"/></tocitem><tocitem text="管理安全角色" target="security.ManageSecurityRoles"><tocitem text="创建全局安全角色" target="security.DefineGlobalRoles"/><tocitem text="创建范围安全角色" target="security.DefineScopedRoles"><tocitem text="创建 JNDI 资源的范围角色" target="security.DefineRolesForJNDIResources"/><tocitem text="创建工作上下文资源的范围角色" target="security.DefineRolesForWorkContextResources"/></tocitem><tocitem text="将用户添加到角色中" target="security.AddUsersToRoles"/><tocitem text="删除安全角色" target="security.DeleteRoles"/></tocitem><tocitem text="管理安全策略" target="security.ManageSecurityPolicies"><tocitem text="创建资源实例的策略" target="security.CreatePoliciesForResourceInstances"><tocitem text="访问 JNDI 资源的策略" target="security.DefinePoliciesForJNDIResources"/><tocitem text="访问工作上下文资源的策略" target="security.DefinePoliciesForWorkContextResources"/><tocitem text="创建 JMX 策略" target="security.DefinePoliciesforMBeans"/><tocitem text="将 MBean 授权委派给领域" target="security.DelegateMBeanAuthorization"/></tocitem><tocitem text="创建根级别策略" target="security.CreateRootLevelPolicies"/><tocitem text="删除安全策略" target="security.DeletePolicies"/><tocitem text="组合条件" target="security.CombinePolicyConditions"/></tocitem></tocitem><tocitem text="审计安全事件" target="security.AuditSecurityEvents"/><tocitem text="配置 SAML 联合服务" target="security.ConfigureFederationServices"><tocitem text="配置 SAML 1.1 源服务" target="security.ConfigureSAMLSource"/><tocitem text="配置 SAML 1.1 目标服务" target="security.ConfigureSAMLDestination"/><tocitem text="配置 SAML 2.0 一般服务" target="security.ConfigureSAML20General"/><tocitem text="配置 SAML 2.0 标识提供程序服务" target="security.ConfigureSAML20IdentityProviderServices"/><tocitem text="配置 SAML 2.0 服务提供程序服务" target="security.ConfigureSAML20ServiceProviderServices"/></tocitem><tocitem text="启用域之间的跨域安全" target="security.EnableTrustBetweenDomains"><tocitem text="创建跨域安全身份证明映射" target="security.CreateCrossDomainCredentialMapping"/><tocitem text="启用域之间的全局信任" target="security.EnableGlobalTrustBetweenDomains"/></tocitem><tocitem text="配置连接筛选" target="security.ConfigureConnectionFiltering"/><tocitem text="配置嵌入式 LDAP 服务器" target="security.ConfigureEmbeddedLDAPServers"/><tocitem text="配置嵌入式 LDAP 服务器的备份" target="security.ConfigureBackupsForEmbeddedLDAPServers"/></tocitem>
+
+
+    <tocitem text="监视器、诊断和故障排除" target="blank">
+      
+  <tocitem text="查看任务的详细资料" target="task_runtimes.ViewDetailsAboutATask"/>
+
+  <tocitem text="定义调试设置" target="task_runtimes.DefineDebugSettings"/>
+
+
+      
+  <tocitem text="配置 WebLogic 诊断框架" target="diagnostics.ConfigureWebLogicDiagnosticFramework"/>
+
+  <tocitem text="使用诊断系统模块监视服务器实例" target="diagnostics.UseDiagnosticModulesToMonitorServers"><tocitem text="创建诊断系统模块" target="diagnostics.CreateDiagnosticModules"/><tocitem text="配置诊断系统模块" target="diagnostics.ConfigureDiagnosticModules"/><tocitem text="定位和取消定位诊断系统模块" target="diagnostics.TargetDiagnosticModules"/><tocitem text="删除诊断系统模块" target="diagnostics.DeleteDiagnosticModules"/><tocitem text="为诊断系统模块配置度量收集" target="diagnostics.ConfigureMetricCollectionForADiagnosticModule"><tocitem text="配置诊断系统模块中要收集的度量" target="diagnostics.ConfigureMetricsToCollectInADiagnosticModule"/><tocitem text="编辑度量配置" target="diagnostics.EditTheConfigurationForAMetric"/><tocitem text="启用或禁用诊断系统模块中的度量收集" target="diagnostics.EnableOrDisableMetricCollectionInADiagnosticModule"/><tocitem text="从诊断系统模块中删除度量" target="diagnostics.DeleteMetricsFromADiagnosticModule"/></tocitem><tocitem text="为诊断系统模块配置测量" target="diagnostics.ConfigureInstrumentationForADiagnosticModule"><tocitem text="将诊断监视器添加到诊断系统模块" target="diagnostics.AddDiagnosticMonitorsToADiagnosticModule"/><tocitem text="启用或禁用诊断系统模块中的测量" target="diagnostics.EnableOrDisableInstrumentationInADiagnosticModule"/><tocitem text="配置诊断系统模块中的诊断监视器" target="diagnostics.ConfigureDiagnosticMonitorsInADiagnosticModule"/><tocitem text="从诊断系统模块中删除诊断监视器" target="diagnostics.RemoveDiagnosticMonitorsFromADiagnosticModule"/></tocitem><tocitem text="启用或禁用服务器实例的诊断上下文" target="diagnostics.EnableOrDisableDiagnosticContext"/><tocitem text="使用诊断应用程序模块监视应用程序" target="diagnostics.UseDiagnosticApplicationModulesToMonitorApplication"><tocitem text="为应用程序配置测量" target="diagnostics.ConfigureInstrumentationForApplications"/><tocitem text="创建应用程序的定制诊断监视器" target="diagnostics.CreateCustomMonitor"/></tocitem><tocitem text="配置观察器和通知" target="diagnostics.ConfigureWatchesAndNotifications"><tocitem text="为诊断系统模块创建观察器" target="diagnostics.CreateWatchesForADiagnosticModule"/><tocitem text="构造观察器规则表达式" target="diagnostics.ConstructWatchRuleExpressions"/><tocitem text="使用查询语言创建观察器表达式" target="diagnostics.UseQueryLanguageforWatches"/><tocitem text="修改诊断系统模块中的现有观察器" target="diagnostics.ModifyExistingWatchesInADiagnosticModule"/><tocitem text="启用或禁用诊断系统模块中的观察器" target="diagnostics.EnableOrDisableWatches"/><tocitem text="从诊断系统模块中删除观察器" target="diagnostics.DeleteWatchesFromADiagnosticModule"/><tocitem text="为诊断系统模块中的观察器创建通知" target="diagnostics.CreateNotificationsForWatches"/><tocitem text="修改诊断系统模块中的现有通知" target="diagnostics.ModifyExistingNotificationsInADiagnosticModule"/><tocitem text="启用或禁用诊断系统模块中观察器的通知" target="diagnostics.EnableOrDisableNotificationsForWatches"/><tocitem text="从诊断系统模块中删除通知" target="diagnostics.DeleteNotificationsFromADiagnosticModule"/></tocitem></tocitem>
+
+  <tocitem text="配置和捕获诊断图像" target="diagnostics.ConfigureAndCaptureDiagnosticImages"><tocitem text="为诊断图像指定目标目录和超时时段" target="diagnostics.SpecifyDestinationDirectoriesForDiagnosticImages"/><tocitem text="配置 WLDF 诊断数据量" target="diagnostics.ConfigureWLDFDiagnosticsVolume"/><tocitem text="捕获诊断图像" target="diagnostics.CaptureImages"/></tocitem>
+
+  <tocitem text="配置诊断档案" target="diagnostics.ConfigureDiagnositcArchives"><tocitem text="配置诊断数据停用" target="diagnostics.ConfigureDiagnosticDataRetirement"/><tocitem text="创建诊断数据停用策略" target="diagnostics.CreateDiagnosticDataRetirementPolicies"/><tocitem text="启动数据停用" target="diagnostics.StartDataRetirement"/></tocitem>
+
+
+      
+  <tocitem text="启动监视仪表盘" target="diagnostics.dashboard.LaunchMonitoringDashboard"><tocitem text="显示或创建视图、图表和度量：主要步骤" target="diagnostics.dashboard.DisplayOrCreateViewsChartsAndMetrics"/><tocitem text="使用监视仪表盘中的视图" target="diagnostics.dashboard.WorkWithViewsInMonitoringDashboard"><tocitem text="显示视图" target="diagnostics.dashboard.DisplayViews"/><tocitem text="启动和停止视图" target="diagnostics.dashboard.StartAndStopView"/><tocitem text="创建定制视图" target="diagnostics.dashboard.CreateCustomViews"><tocitem text="选择“新建视图”按钮" target="diagnostics.dashboard.SelectNewViewIcon"/><tocitem text="选择“视图列表”菜单" target="diagnostics.dashboard.SelectViewListMenu"/></tocitem><tocitem text="复制视图" target="diagnostics.dashboard.CopyView"><tocitem text="选择“复制视图”按钮" target="diagnostics.dashboard.SelectCopyViewIcon"/></tocitem><tocitem text="更改视图名称" target="diagnostics.dashboard.ChangeViewNames"/><tocitem text="删除视图" target="diagnostics.dashboard.DeleteViews"><tocitem text="选择“删除视图”按钮" target="diagnostics.dashboard.SelectDeleteViewIcon"/></tocitem><tocitem text="显示有关监视仪表盘中项目的概要注释" target="diagnostics.dashboard.DisplayTooltipsForMetricsAndCharts"/></tocitem><tocitem text="使用监视仪表盘中的图表" target="diagnostics.dashboard.WorkWithChartsInMonitoringDashboard"><tocitem text="向视图添加图表" target="diagnostics.dashboard.AddChartsToView"><tocitem text="选择视图菜单" target="diagnostics.dashboard.SelectViewMenu"/><tocitem text="选择图表菜单" target="diagnostics.dashboard.SelectChartMenu"/><tocitem text="选择图表类型" target="diagnostics.dashboard.ChooseChartType"/></tocitem><tocitem text="在视图中重新定位图表" target="diagnostics.dashboard.RepositionChartsInView"/><tocitem text="使用图表中的度量" target="diagnostics.dashboard.WorkWithMetricsInCharts"><tocitem text="向图表添加度量" target="diagnostics.dashboard.AddMetricsToChart"/><tocitem text="显示有关图表中的度量的概要信息" target="diagnostics.dashboard.DisplayDetailsAboutMetricsInCharts"/><tocitem text="将度量从一个图表移动或复制到另一个图表" target="diagnostics.dashboard.MoveMetricsFromOneChartToAnother"/><tocitem text="滚动和缩放图表中显示的度量数据" target="diagnostics.dashboard.PanAndZoomMetricsShownInChart"><tocitem text="缩放图表中的度量数据" target="diagnostics.dashboard.ZoomInAndOutOfMetricsDataInChart"/><tocitem text="使用图表概览" target="diagnostics.dashboard.UseChartOverview"/></tocitem><tocitem text="定制度量显示属性" target="diagnostics.dashboard.CustomizeMetricDisplayProperties"><tocitem text="选择度量图例菜单" target="diagnostics.dashboard.SelectMetricLegendMenu"/><tocitem text="从图表中删除度量" target="diagnostics.dashboard.RemoveMetricsFromChart"/></tocitem></tocitem><tocitem text="复制或移动图表" target="diagnostics.dashboard.CopyOrMoveCharts"/><tocitem text="清除所有图表数据" target="diagnostics.dashboard.ClearAllChartData"><tocitem text="选择工具栏菜单" target="diagnostics.dashboard.SelectToolbarMenu"/></tocitem><tocitem text="重置计量表统计信息" target="diagnostics.dashboard.ResetGaugeStatistics"/><tocitem text="删除图表" target="diagnostics.dashboard.DeleteChart"/><tocitem text="设置图表属性" target="diagnostics.dashboard.SetChartProperties"><tocitem text="设置单个图表属性" target="diagnostics.dashboard.SetIndividualChartProperties"><tocitem text="选择图表编辑工具" target="diagnostics.dashboard.SelectChartEditTool"/><tocitem text="控制 Y 轴范围" target="diagnostics.dashboard.ControlYAxisRange"/><tocitem text="显示图表中的阈值" target="diagnostics.dashboard.DisplayThreshholdsInCharts"/><tocitem text="设置图表时间范围" target="diagnostics.dashboard.SetChartTimeRange"/></tocitem></tocitem></tocitem><tocitem text="使用度量浏览器" target="diagnostics.dashboard.WorkWithMetricBrowser"><tocitem text="选择要监视的服务器" target="diagnostics.dashboard.SelectServerToMonitor"/><tocitem text="显示度量浏览器中的项" target="diagnostics.dashboard.DisplayItemsInMetricBrowser"/><tocitem text="显示有关度量浏览器中的 MBean 实例和度量的概要注释" target="diagnostics.dashboard.DisplayDetailsAboutMBeanInstancesAndMetrics"/></tocitem><tocitem text="设置仪表盘首选项" target="diagnostics.dashboard.SetDashboardPreferences"/><tocitem text="使用键盘快捷方式" target="diagnostics.dashboard.UseKeyboardShortcuts"/></tocitem>
+
+  <tocitem text="分析请求性能" target="diagnostics.performance.AnalyzeMethodPerformance"><tocitem text="选择服务器" target="diagnostics.performance.SelectServers"/><tocitem text="选择用于获取请求数据的时间间隔" target="diagnostics.performance.SelectTimeIntervalForObtainingRequestData"/><tocitem text="显示请求和方法" target="diagnostics.performance.DisplayRequestsAndMethods"/><tocitem text="显示有关请求和方法的详细资料" target="diagnostics.performance.DisplayDetailsAboutRequests"/><tocitem text="显示有关测量事件的详细资料" target="diagnostics.performance.DisplayDetailsAboutInstrumentationEvents"/></tocitem>
+
+
+      
+  <tocitem text="监视和优化服务器" target="blank">
+    <tocitem text="监视服务器" target="monitoring.MonitorServers"/>
+
+    <tocitem text="配置健康状况监视" target="monitoring.ConfigureSelfhealthMonitoring"/>
+
+    <tocitem text="监视服务器健康状况" target="monitoring.MonitorServerHealth"/>
+
+    <tocitem text="监视服务器性能" target="monitoring.MonitorServerPerformance"/>
+
+    <tocitem text="确定服务器软件平台" target="monitoring.DetermineTheServerSoftwarePlatform"/>
+
+    <tocitem text="记录内存不足情况" target="monitoring.LogLowMemoryConditions"/>
+
+    <tocitem text="手动请求垃圾收集" target="monitoring.RequestGarbageCollection"/>
+
+    <tocitem text="显示线程堆栈" target="monitoring.DisplayThreadStacks"/>
+
+    <tocitem text="更改服务器编译器选项" target="tuning.ChangingCompilers"/>
+
+    <tocitem text="启用本机 IO" target="tuning.EnableNativeIO"/>
+
+    <tocitem text="启用 NIOSocketMuxer" target="tuning.EnableNIOSocketMuxer"/>
+
+    <tocitem text="优化连接积压缓冲" target="tuning.TuneConnectionBacklogBuffering"/>
+
+    <tocitem text="优化粘滞线程检测行为" target="tuning.TuningExecuteThreads"/>
+
+    <tocitem text="优化超载情况" target="tuning.TuningForOverload"/>
+
+    <tocitem text="优化可用套接字读取器的数目" target="tuning.TuningSocketReaders"/>
+  </tocitem>
+
+
+      
+  <tocitem text="查看和配置日志" target="logging.ConfigureAndViewLogs"><tocitem text="更改域日志文件的名称和位置" target="logging.ChangeDomainLogFileNamesAndLocations"/><tocitem text="更改服务器日志文件名称和位置" target="logging.ChangeServerLogFileNamesAndLocations"/><tocitem text="将消息转发到域日志" target="domain_log_filters.SpecifyMessagesToForwardToTheDomainLog"/><tocitem text="禁止将消息转发到域日志" target="logging.DisableMessageForwardingToDomainLogs"/><tocitem text="指定日志记录实施" target="logging.SpecifyTheLoggingImplementation"/><tocitem text="启用和配置 HTTP 日志" target="logging.EnableAndConfigureHTTPLogs"/><tocitem text="启用和配置数据源概要文件日志" target="logging.EnableAndConfigureDataSourceLogs"/><tocitem text="启用配置审计" target="logging.EnableConfigurationAuditing"/><tocitem text="重定向 JVM 输出" target="logging.RedirectJVMOutput"/><tocitem text="滚动日志文件" target="logging.RotateLogFiles"/><tocitem text="指定日志记录程序的严重性级别" target="logging.SpecifyLoggerSeverityProperties"/><tocitem text="指定发送到标准输出的消息" target="logging.SpecifyMessagesForStandardOut"/><tocitem text="查看域日志" target="logging.ViewDomainLogsFromTheConsole"/><tocitem text="查看服务器日志" target="logging.ViewServerLogsFromTheConsole"/><tocitem text="查看远程启动输出" target="logging.ViewStandardOutForServersStartedByNodeManager"/><tocitem text="定制日志条目表" target="logging.CustomizeLogMessageTable"/><tocitem text="构造日志筛选器表达式" target="domain_log_filters.ConstructLogFilterExpressions"/></tocitem>
+
+
+      
+  <tocitem text="筛选日志消息" target="domain_log_filters.FilterLogMessages"><tocitem text="创建日志筛选器" target="domain_log_filters.CreateLogFilters"/><tocitem text="删除日志筛选器" target="domain_log_filters.DeleteLogFilters"/></tocitem>
+
+
+      
+  <tocitem text="使用 SNMP 监视 WebLogic Server" target="snmp.ConfigureSNMPAndWebLogicServer"><tocitem text="创建 SNMP 代理" target="snmp.EnableAndConfigureTheWebLogicSNMPAgent"><tocitem text="保护 SNMPv3 通信安全" target="snmp.SecureSNMPv3Communication"/><tocitem text="创建 SNMP 网络通道" target="snmp.CreateAnSNMPNetworkChannel"/><tocitem text="定位 SNMP 代理" target="snmp.TargetSNMPAgents"/></tocitem><tocitem text="使 SNMP 身份证明高速缓存失效" target="snmp.InvalidateSNMPCredentialsCache"/><tocitem text="创建陷阱目标" target="snmp.CreateTrapDestinations"/><tocitem text="删除陷阱目标" target="snmp.DeleteTrapDestinations"/><tocitem text="验证通知生成" target="snmp.VerifyTrapGeneration"/><tocitem text="停止生成通知" target="snmp.DisableTrapGeneration"/><tocitem text="指定 MBean 实例名称" target="snmp.DetermineMBeanInstanceNames"/><tocitem text="配置 INFORM 通知" target="snmp.ConfigureINFORMNotifcations"/><tocitem text="创建 SNMP 监视器" target="snmp.ConfigureMonitors"><tocitem text="创建计数器监视器" target="snmp.ConfigureCounterMonitors"/><tocitem text="定位计数器监视器" target="snmp.TargetCounterMonitors"/><tocitem text="创建计量表监视器" target="snmp.ConfigureGaugeMonitors"/><tocitem text="定位计量表监视器" target="snmp.TargetGaugeMonitors"/><tocitem text="创建字符串监视器" target="snmp.ConfigureStringMonitors"/><tocitem text="定位字符串监视器" target="snmp.TargetStringMonitors"/><tocitem text="删除 SNMP 监视器" target="snmp.DeleteSNMPMonitors"/></tocitem><tocitem text="创建属性更改" target="snmp.ConfigureAttributeChanges"><tocitem text="定位属性更改" target="snmp.TargetAttributeChanges"/><tocitem text="删除属性更改" target="snmp.DeleteAttributeChanges"/></tocitem><tocitem text="创建 SNMP 日志筛选器" target="snmp.ConfigureNotificationLogFilters"><tocitem text="定位 SNMP 日志筛选器" target="snmp.TargetNotificationLogFilters"/><tocitem text="删除 SNMP 日志筛选器" target="snmp.DeleteNotificationLogFilters"/></tocitem><tocitem text="监视定制 MBean" target="snmp.MonitorCustomMBeans"/><tocitem text="监视 SNMP 代理" target="snmp.MonitorSNMPAgents"/><tocitem text="创建 SNMP 代理" target="snmp.ConfigureSNMPProxies"/><tocitem text="删除 SNMP 代理" target="snmp.DeleteSNMPProxies"/></tocitem>
+
+    </tocitem>
+  </tocitem>
+
+    <tocitem text="管理控制台引用" target="blank">
+    
+  <tocitem text="搜索" target="MBeanSearchmbeansearchtitle"/>
+
+
+    
+  <tocitem text="控制台" target="blank">
+
+    <tocitem text="更改中心" target="Changechangemgmtchangecentertitle"><tocitem text="更改中心：更改列表" target="Changechangelisttitle"/><tocitem text="更改中心：重新启动核对清单" target="Changerestartlisttitle"/></tocitem>
+
+    <tocitem text="首选项" target="blank">
+        <tocitem text="首选项：用户首选项" target="Userpreferencestitle"/>
+        <tocitem text="首选项：共享的首选项" target="Sharedpreferencestitle"/>
+        <tocitem text="首选项：WLST 脚本记录：一般信息" target="Preferenceswlsttitle"/>
+        <tocitem text="首选项：WLST 脚本记录：控制" target="Preferenceswlstcontroltitle"/>
+        <tocitem text="禁用控制台扩展" target="Preferencesextensiondisabletitle"/>
+        <tocitem text="启用控制台扩展" target="Preferencesextensionenabletitle"/>
+        <tocitem text="首选项：扩展详细资料" target="Preferencesextensiondetailstitle"/>
+        <tocitem text="首选项：扩展首选项" target="Preferencesextensionpreferencestitle"/>
+    </tocitem>
+
+  </tocitem>
+
+
+    
+  <tocitem text="域" target="blank">
+    <tocitem text="配置" target="blank">
+      <tocitem text="域：配置：一般信息" target="Corecoredomaindomainconfiggeneraltitle"/>
+
+      <tocitem text="域：配置：JTA" target="Corecoredomaindomainconfigjtatitle"/>
+                
+      <tocitem text="域：配置：JPA" target="Corecoredomaindomainconfigjpatitle"/>
+
+      <tocitem text="域：配置：EJB" target="Corecoredomaindomainconfigejbtitle"/>
+
+      <tocitem text="域：配置：Web 应用程序" target="Corecoredomaindomainconfigwebapptitle"/>
+
+      <tocitem text="域：配置：日志记录" target="Corecoredomaindomainconfigloggingtitle"/>
+
+      <tocitem text="域：控制：重新部署系统资源" target="Corecoredomainredeploysystemresourcespagetitle"/>
+
+      <tocitem text="域日志筛选器" target="Corecoredomainlogfiltertabletitle"><tocitem text="创建日志筛选器" target="Corecoredomaincreatelogfilterpagetitle"/><tocitem text="删除日志筛选器" target="Corecoredomaindeletelogfilterpagetitle"/><tocitem text="日志筛选器配置" target="Corecorelogfilterlogfilterconfigtitle"/><tocitem text="域：配置：日志筛选器：注释" target="Corecorelogfilterlogfilternotestitle"/></tocitem>
+    </tocitem>
+
+    <tocitem text="监视" target="blank">
+      <tocitem text="域：监视：健康状况" target="Corecoredomaindomainmonitorhealthtitle"/>
+
+      <tocitem text="域：监视：服务器" target="Corecoredomaindomainmonitorserverstitle"/>
+
+      <tocitem text="域：监视：集群" target="Corecoredomaindomainmonitorclusterstitle"/>
+
+      <tocitem text="域：监视：迁移" target="Corecoredomaindomainmonitormigrationtitle"/>
+    </tocitem>
+
+    <tocitem text="Web 服务安全" target="blank">
+      <tocitem text="创建 Web 服务安全配置" target="J2EEwebservicewebservicesecuritycreatetitle"/>
+
+      <tocitem text="删除 Web 服务安全配置" target="J2EEwebservicewebservicesecuritydeletewebservicesecuritytitle"/>
+
+      <tocitem text="域：Web 服务安全：表" target="J2EEwebservicewebservicesecuritywebservicesecuritytabletitle"/>
+
+      <tocitem text="域：Web 服务安全：一般信息" target="J2EEwebservicewebservicesecuritygeneraltitle"/>
+
+      <tocitem text="域：Web 服务安全：时间戳" target="J2EEwebservicewebservicesecuritytimestamptitle"/>
+
+      <tocitem text="身份证明提供程序" target="blank">
+        <tocitem text="创建 Web 服务安全配置的身份证明提供程序" target="J2EEwebservicewebservicesecuritycredentialprovidercreatetitle"/>
+
+        <tocitem text="删除 Web 服务安全配置的身份证明提供程序" target="J2EEwebservicewebservicesecuritycredentialproviderdeletecredentialprovidertitle"/>
+
+        <tocitem text="创建 Web 服务安全配置的身份证明提供程序的属性" target="J2EEwebservicewebservicesecuritycredentialproviderpropertycreatecredentialproviderpropertiestitle"/>
+
+        <tocitem text="删除 Web 服务安全配置的身份证明提供程序的属性" target="J2EEwebservicewebservicesecuritycredentialproviderpropertydeletecredentialproviderpropertiestitle"/>
+
+        <tocitem text="域：Web 服务安全：身份证明提供程序：表" target="J2EEwebservicewebservicesecuritycredentialprovidercredentialprovidertabletitle"/>
+
+        <tocitem text="域：Web 服务安全：身份证明提供程序：配置" target="J2EEwebservicewebservicesecuritycredentialproviderconfigtitle"/>
+
+        <tocitem text="域：Web 服务安全：身份证明提供程序：注释" target="J2EEwebservicewebservicesecuritycredentialprovidernotestitle"/>
+
+        <tocitem text="域：Web 服务安全：身份证明提供程序：属性：配置" target="J2EEwebservicewebservicesecuritycredentialproviderpropertyconfigtitle"/>
+
+        <tocitem text="域：Web 服务安全：身份证明提供程序：属性：注释" target="J2EEwebservicewebservicesecuritycredentialproviderpropertynotestitle"/>
+      </tocitem>
+
+      <tocitem text="标记处理程序" target="blank">
+        <tocitem text="创建 Web 服务安全配置的标记处理程序" target="J2EEwebservicewebservicesecuritytokenhandlercreatetitle"/>
+
+        <tocitem text="删除 Web 服务安全配置的标记处理程序" target="J2EEwebservicewebservicesecuritytokenhandlerdeletetokenhandlertitle"/>
+
+        <tocitem text="创建 Web 服务安全配置的标记处理程序的属性" target="J2EEwebservicewebservicesecuritytokenhandlercreatetokenhandlerpropertytitle"/>
+
+        <tocitem text="删除 Web 服务安全配置的标记处理程序的属性" target="J2EEwebservicewebservicesecuritytokenhandlerdeletetokenhandlerpropertytitle"/>
+
+        <tocitem text="域：Web 服务安全：标记处理程序：表" target="J2EEwebservicewebservicesecuritytokenhandlertokenhandlertabletitle"/>
+
+        <tocitem text="域：Web 服务安全：标记处理程序：配置" target="J2EEwebservicewebservicesecuritytokenhandlerconfiguretokenhandlertitle"/>
+
+        <tocitem text="域：Web 服务安全：标记处理程序：注释" target="J2EEwebservicewebservicesecuritytokenhandlernotestitle"/>
+
+        <tocitem text="域：Web 服务安全：标记处理程序：属性：配置" target="J2EEwebservicewebservicesecuritytokenhandlerconfigurepropertiestitle"/>
+
+        <tocitem text="域：Web 服务安全：标记处理程序：属性：注释" target="J2EEwebservicewebservicesecuritytokenhandlerpropertynotestitle"/>
+      </tocitem>
+    </tocitem>
+
+    <tocitem text="域：控制：服务器" target="Corecoredomainservercontroltitle"/>
+
+    <tocitem text="域：控制：系统资源" target="Corecoredomaindomaincontrolsystemresourcetabletitle"/>
+
+    <tocitem text="域：控制：服务器生命周期" target="Corecoredomainlifecyclepagetitle"/>
+
+    <tocitem text="域：注释" target="Corecoredomaindomainnotestitle"/>
+  </tocitem>
+
+
+    <tocitem text="环境" target="Summarysummaryenvironmentssummarytitle">
+      
+  <tocitem text="任务" target="Corecoretaskstaskruntimetitle"><tocitem text="任务：状态" target="Corecoretaskstasksummarytitle"/><tocitem text="任务：服务器生命周期任务概要" target="Corecoretasksserverlifecycletasksummarytitle"/><tocitem text="任务：服务器生命周期任务日志" target="Corecoretasksserverlifecycletasklogtitle"/></tocitem>
+
+
+      
+  <tocitem text="服务器" target="Corecoreserverservertitle"><tocitem text="新建服务器" target="Corecoreservercreateserverpagetitle"/><tocitem text="删除服务器" target="Corecoreserverdeleteservertitle"/><tocitem text="配置" target="blank">
+      <tocitem text="服务器：配置：一般信息" target="Corecoreserverserverconfiggeneraltitle"/>
+
+      <tocitem text="服务器：配置：集群" target="Corecoreserverserverconfigclustertitle"/>
+
+      <tocitem text="服务器：配置：密钥库" target="Corecoreserverserverconfigkeystoretitle"/>
+
+      <tocitem text="服务器：配置：SSL" target="Corecoreserverserverconfigssltitle"/>
+
+      <tocitem text="联合服务" target="blank">
+        <tocitem text="服务器：配置：联合服务：目标站点" target="Corecoreserverserverconfigfederationservicesdestinationsitetitle"/>
+
+        <tocitem text="服务器：配置：联合服务：源站点" target="Corecoreserverserverconfigfederationservicessourcesitetitle"/>
+
+        <tocitem text="服务器：配置：联合服务：发布 SAML 2.0 元数据" target="Corecoreserversaml20publishmetadatatitle"/>
+
+        <tocitem text="服务器：配置：联合服务：SAML 2.0 一般信息" target="Corecoreserverserverconfigfederationservicessaml20generaltitle"/>
+
+        <tocitem text="服务器：配置：联合服务：SAML 2.0 标识提供程序" target="Corecoreserverserverconfigfederationservicessaml20identityprovidertitle"/>
+
+        <tocitem text="服务器：配置：联合服务：SAML 2.0 服务提供程序" target="Corecoreserverserverconfigfederationservicessaml20serviceprovidertitle"/>
+      </tocitem>
+
+      <tocitem text="服务器：配置：部署" target="Corecoreserverserverconfigdeploymenttitle"/>
+
+      <tocitem text="服务器：配置：迁移" target="Corecoreserverserverconfigmigrationtitle"/>
+
+      <tocitem text="服务器：配置：服务" target="Corecoreserverserverconfigservicestitle"/>
+
+      <tocitem text="服务器：配置：优化" target="Corecoreserverserverconfigtuningtitle"/>
+
+      <tocitem text="服务器：配置：超载" target="Corecoreserverserverconfigoverloadtitle"/>
+
+      <tocitem text="服务器：配置：健康状况监视" target="Corecoreserverserverconfighealthmonitoringtitle"/>
+
+      <tocitem text="服务器：配置：服务器启动" target="Corecoreserverserverconfigserverstarttitle"/>
+
+      <tocitem text="Web 服务" target="blank">
+        <tocitem text="新建逻辑存储" target="Corecoreservercreatelogicalstorepagetitle"/>
+
+        <tocitem text="删除逻辑存储" target="Corecoreserverserverconfigwebservicesdeletelogicalstoretitle"/>  
+
+        <tocitem text="服务器：配置：Web 服务：缓冲" target="Corecoreserverserverconfigwebservicesbufferingtitle"/>
+
+        <tocitem text="服务器：配置：Web 服务：可靠消息" target="Corecoreserverserverconfigwebservicesreliabilitytitle"/>
+
+        <tocitem text="服务器：配置：Web 服务：逻辑存储" target="Corecoreserverserverconfigwebserviceslogicalstorestitle"/>
+
+        <tocitem text="服务器：配置：Web 服务：逻辑存储" target="Corecoreserverserverconfigwebserviceslogicalstoreconfigtitle"/>          
+
+      </tocitem>
+
+    </tocitem><tocitem text="JNDI" target="blank">
+      <tocitem text="JNDI：绑定" target="Corejndibindingpagetitle"/>
+
+      <tocitem text="JNDI：上下文" target="Corejndicontexttablepagetitle"/>
+
+      <tocitem text="JNDI 绑定节点：安全角色" target="Corejndibindingsecurityroletablepagetitle"/>
+
+      <tocitem text="编辑 JNDI 绑定节点范围角色" target="Corejndibindingsecurityrolemanagepagetitle"/>
+
+      <tocitem text="创建 JNDI 绑定节点范围角色" target="Corejndibindingsecurityrolecreatepagetitle"/>
+
+      <tocitem text="删除 JNDI 绑定节点范围角色" target="Corejndibindingsecurityroledeletepagetitle"/>
+
+      <tocitem text="JNDI：绑定：安全策略" target="Corejndibindingsecuritypoliciespagetitle"/>
+
+      <tocitem text="JNDI 根内容节点：安全角色" target="Corejndicontentsecurityroletablepagetitle"/>
+
+      <tocitem text="编辑 JNDI 根内容节点范围角色" target="Corejndicontentsecurityrolemanagepagetitle"/>
+
+      <tocitem text="创建 JNDI 根内容节点范围角色" target="Corejndicontentsecurityrolecreatepagetitle"/>
+
+      <tocitem text="删除 JNDI 根内容节点范围角色" target="Corejndicontentsecurityroledeletepagetitle"/>
+
+      <tocitem text="JNDI：内容：安全策略" target="Corejndicontentsecuritypoliciespagetitle"/>
+
+      <tocitem text="JNDI 上下文节点：安全角色" target="Corejndicontextsecurityroletablepagetitle"/>
+
+      <tocitem text="编辑 JNDI 上下文节点范围角色" target="Corejndicontextsecurityrolemanagepagetitle"/>
+
+      <tocitem text="创建 JNDI 上下文节点范围角色" target="Corejndicontextsecurityrolecreatepagetitle"/>
+
+      <tocitem text="删除 JNDI 上下文节点范围角色" target="Corejndicontextsecurityroledeletepagetitle"/>
+
+      <tocitem text="JNDI：上下文：安全策略" target="Corejndicontextsecuritypoliciespagetitle"/>
+    </tocitem><tocitem text="协议" target="blank">
+      <tocitem text="服务器：协议：一般信息" target="Corecoreserverserverprotocolsgeneraltitle"/>
+
+      <tocitem text="服务器：协议：HTTP" target="Corecoreserverserverprotocolshttptitle"/>
+
+      <tocitem text="服务器：协议：jCOM" target="Corecoreserverserverprotocolsjcomtitle"/>
+
+      <tocitem text="服务器：协议：IIOP" target="Corecoreserverserverprotocolsiioptitle"/>
+    </tocitem><tocitem text="通道" target="blank">
+      <tocitem text="服务器：协议：通道" target="Corecoreserverserverprotocolschannelstitle"/>
+
+      <tocitem text="新建网络通道" target="Corecoreservercreatechannelpagetitle"/>
+
+      <tocitem text="通道：配置" target="Corecoreserverchannelconfiggeneraltitle"/>
+
+      <tocitem text="通道：配置：安全" target="Corecoreserverchannelconfigsecuritytitle"/>
+
+      <tocitem text="通道：监视器：概览" target="Corecoreserverchannelmonitoroverviewtitle"/>
+
+      <tocitem text="通道：监视器：连接" target="Corecoreserverchannelmonitorconnectionstitle"/>
+
+      <tocitem text="删除网络通道" target="Corecoreserverdeletechannelstitle"/>
+    </tocitem></tocitem>
+
+  <tocitem text="日志记录" target="blank">
+    <tocitem text="服务器：日志记录：一般信息" target="Corecoreserverserverlogginggeneraltitle"/>
+
+    <tocitem text="服务器：日志记录：HTTP" target="Corecoreserverserverlogginghttptitle"/>
+
+    <tocitem text="服务器：日志记录：数据源" target="Corecoreserverserverloggingdatasourcetitle"/>
+  </tocitem>
+
+  <tocitem text="调试" target="Corecoreserverserverdebugtitle"/>
+
+  <tocitem text="监视" target="blank">
+    <tocitem text="服务器：监视：一般信息" target="Corecoreserverservermonitoringgeneraltitle"/>
+
+    <tocitem text="服务器：监视：健康状况" target="Corecoreserverservermonitoringhealthtitle"/>
+
+    <tocitem text="服务器：监视：通道" target="Corecoreserverservermonitoringchannelstitle"/>
+
+    <tocitem text="服务器：监视：性能" target="Corecoreserverservermonitoringperformancetitle"/>
+
+    <tocitem text="服务器：监视：性能：GC 暂停时间" target="Corecoreservergcpausetimepagetitle"/>
+
+    <tocitem text="服务器：监视：线程" target="Corecoreserverservermonitorthreadstitle"/>
+
+    <tocitem text="执行队列" target="Corecoreserverservermonitoringqueuestitle"/>
+
+    <tocitem text="服务器：监视：安全" target="Corecoreserverservermonitoringsecuritytitle"/>
+
+    <tocitem text="服务器：监视：默认存储：统计信息" target="Corecoreserverservermonitoringdefaultstoretitle"/>
+
+    <tocitem text="服务器：监视：默认存储：连接" target="Corecoreserverdefaultstoreconnectionstitle"/>
+
+    <tocitem text="服务器：监视：JMS" target="Corecoreserverservermonitoringjmstitle"/>
+
+    <tocitem text="服务器：监视：SAF" target="Corecoreserverservermonitoringsaftitle"/>
+
+    <tocitem text="服务器：监视：JDBC" target="Corecoreserverservermonitoringjdbctitle"/>
+
+    <tocitem text="服务器：监视：JTA：概要" target="Corecoreserverservermonitoringjtasummarytitle"/>
+
+    <tocitem text="服务器：监视：事务处理日志存储统计信息" target="Corecoreserverservermonitoringtransactionlogstoretitle"/>
+
+    <tocitem text="服务器：监视：事务处理日志存储连接" target="Corecoreservertransactionlogstoreconnectionstitle"/>
+
+    <tocitem text="服务器：监视：JTA：按名称排列事务处理" target="Corecoreserverservermonitoringjtatransactionnamestitle"/>
+
+    <tocitem text="服务器：监视：JTA XA 资源" target="Corecoreserverservermonitoringjtaxaresourcestitle"/>
+
+    <tocitem text="服务器：监视：JTA：非 XA 资源" target="Corecoreserverservermonitoringjtanonxaresourcestitle"/>
+
+    <tocitem text="服务器：监视：JTA：事务处理" target="Corecoreserverservermonitoringjtatransactionstitle"/>
+
+    <tocitem text="服务器：监视：JTA：恢复服务" target="Corecoreserverservermonitoringjtarecoverytitle"/>
+
+    <tocitem text="服务器：监视：工作量" target="Corecoreserverservermonitoringworkloadtitle"/>
+
+    <tocitem text="服务器：监视：计时器" target="Corecoreservermonitoringtimerstitle"/>
+
+    <tocitem text="控制" target="blank">
+      <tocitem text="域：控制：服务器" target="Corecoreserverserverscontroltabletitle"/>
+
+      <tocitem text="服务器：控制：启动/停止" target="Corecoreserverservercontrolstartstoptitle"/>
+
+      <tocitem text="服务器：控制：服务器生命周期" target="Corecoreserverlifecyclepagetitle"/>
+
+      <tocitem text="服务器：控制：远程启动输出" target="Corecoreserverservercontrolremotestartoutputtitle"/>
+
+      <tocitem text="服务器：控制：迁移" target="Corecoreserverservercontrolmigrationtitle"/>
+
+      <tocitem text="计时器" target="Corecoreservercontroljobstitle"/>
+    </tocitem>
+
+    <tocitem text="服务器：部署：应用程序" target="Corecoreserverserverdeploymentstitle"/>
+
+    <tocitem text="服务" target="blank">
+      <tocitem text="服务器：服务：JDBC" target="Corecoreserverserverservicesjdbctitle"/>
+
+      <tocitem text="服务器：服务：JMS" target="Corecoreserverserverservicesjmstitle"/>
+
+      <tocitem text="服务器：服务：工作管理器" target="Corecoreserverserverservicesworkmanagertitle"/>
+
+      <tocitem text="服务器：服务：启动/关闭" target="Corecoreserverserverservicesclassestitle"/>
+
+      <tocitem text="服务器：服务：桥接程序" target="Corecoreserverserverservicesbridgetitle"/>
+
+      <tocitem text="服务器：服务：XML" target="Corecoreserverserverservicesxmltitle"/>
+
+      <tocitem text="服务器：服务：SNMP" target="Corecoreserverserverservicessnmptitle"/>
+
+      <tocitem text="服务器：服务：邮件" target="Corecoreserverserverservicesmailtitle"/>
+
+      <tocitem text="服务器：服务：File T3" target="Corecoreserverserverservicesfilet3title"/>
+    </tocitem>
+
+    <tocitem text="安全角色和策略" target="blank">
+      <tocitem text="服务器：安全：角色" target="Corecoreserverroletablepagetitle"/>
+
+      <tocitem text="编辑服务器范围角色条件" target="Corecoreserverrolemanagepagetitle"/>
+
+      <tocitem text="创建服务器范围角色" target="Corecoreserverrolecreatepagetitle"/>
+
+      <tocitem text="删除服务器范围角色" target="Corecoreserverroledeletepagetitle"/>
+
+      <tocitem text="服务器：安全策略" target="Corecoreserverserverpoliciespagetitle"/>
+    </tocitem>
+
+    <tocitem text="服务器：注释" target="Corecoreserverservernotestitle"/>
+  </tocitem>
+
+
+      
+  <tocitem text="集群" target="Corecoreclustertabletitle"><tocitem text="集群：创建集群" target="Corecoreclustercreateclusterpagetitle"/><tocitem text="集群：配置：服务器" target="Corecoreclusteraddserverpagetitle"/><tocitem text="集群配置" target="blank">
+      <tocitem text="集群：配置：一般信息" target="Corecoreclusterclusterconfiggeneraltitle"/>
+
+      <tocitem text="集群：配置：多点传送" target="Corecoreclusterclusterconfigmulticasttitle"/>
+
+      <tocitem text="集群：配置：服务器" target="Corecoreclusterclusterconfigserverstitle"/>
+
+      <tocitem text="集群：配置：调度" target="Corecoreclusterclusterconfigschedulertitle"/>
+
+      <tocitem text="集群：配置：单例服务" target="Corecoreclusterclusterconfigsingletonservicestitle"/>
+
+      <tocitem text="集群：配置：复制" target="Corecoreclusterclusterconfigreplicationtitle"/>
+
+      <tocitem text="集群：配置：迁移" target="Corecoreclusterclusterconfigmigrationtitle"/>
+
+      <tocitem text="集群：配置：超载" target="Corecoreclusterclusterconfigoverloadtitle"/>
+
+      <tocitem text="集群：配置：健康状况监视" target="Corecoreclusterclusterconfighealthtitle"/>
+
+      <tocitem text="集群：配置：HTTP" target="Corecoreclusterclusterconfighttptitle"/>
+    </tocitem><tocitem text="集群控制和监视" target="blank">
+      <tocitem text="集群：控制服务器" target="Corecoreclusterservercontroltitle"/>
+
+      <tocitem text="集群：控制：单例服务迁移" target="Corecoreclustercontrolsingletonservicemigrationtitle"/>
+
+      <tocitem text="集群：监视：健康状况" target="Corecoreclusterclustermonitorhealthtitle"/>
+
+      <tocitem text="集群：监视" target="Corecoreclusterclustermonitorsummarytitle"/>
+
+      <tocitem text="集群：监视：故障转移" target="Corecoreclusterclustermonitorfailovertitle"/>
+    </tocitem><tocitem text="服务" target="blank">
+      <tocitem text="集群：服务：启动/关闭" target="Corecoreclusterclusterservicesclassestitle"/>
+
+      <tocitem text="集群：服务：File T3" target="Corecoreclusterclusterservicesfilet3title"/>
+
+      <tocitem text="集群：服务：JDBC" target="Corecoreclusterclusterservicesjdbctitle"/>
+
+      <tocitem text="集群：服务：JMS" target="Corecoreclusterclusterservicesjmstitle"/>
+
+      <tocitem text="集群：服务：邮件" target="Corecoreclusterclusterservicesmailtitle"/>
+
+      <tocitem text="集群：服务：桥接程序" target="Corecoreclusterclusterservicesbridgetitle"/>
+
+      <tocitem text="集群：服务：工作管理器" target="Corecoreclusterclusterservicesworkmanagertitle"/>
+    </tocitem><tocitem text="删除集群" target="Corecoreclusterdeleteclustertitle"/><tocitem text="集群：部署" target="Corecoreclusterclusterdeploymentstitle"/><tocitem text="删除服务器" target="Corecoreclusterremoveservertitle"/><tocitem text="集群：注释" target="Corecoreclusterclusternotestitle"/><tocitem text="启动集群" target="Corecoreclusterlifecyclepagetitle"/></tocitem>
+
+
+      
+  <tocitem text="虚拟主机" target="Corecorevirtualhosttabletitle"><tocitem text="创建虚拟主机" target="Corecorevirtualhostcreatevirtualhosttitle"/><tocitem text="虚拟主机：配置：一般信息" target="Corecorevirtualhostvirtualhostconfiggeneraltitle"/><tocitem text="虚拟主机：配置：日志记录" target="Corecorevirtualhostvirtualhostconfigloggingtitle"/><tocitem text="虚拟主机：配置：HTTP" target="Corecorevirtualhostvirtualhostconfighttptitle"/><tocitem text="虚拟主机：目标" target="Corecorevirtualhostvirtualhosttargetdeploytitle"/><tocitem text="删除虚拟主机" target="Corecorevirtualhostdeletevirtualhosttitle"/><tocitem text="虚拟主机：注释" target="Corecorevirtualhostvirtualhostnotestitle"/></tocitem>
+
+
+      
+  <tocitem text="计算机" target="Corecoremachinemachinetabletitle"><tocitem text="创建计算机" target="Corecoremachinecreatemachinepagetitle"/><tocitem text="删除计算机" target="Corecoremachinedeletemachinepagetitle"/><tocitem text="计算机：配置：一般信息" target="Corecoremachinemachineconfiggeneraltitle"/><tocitem text="计算机：配置：节点管理器" target="Corecoremachinemachineconfignodemanagertitle"/><tocitem text="计算机：配置：虚拟机管理器" target="Corecoremachinemachineconfigvirtualmanagertitle"/><tocitem text="计算机：配置：服务器" target="Corecoremachinemachineconfigserverstitle"/><tocitem text="计算机：监视：节点管理器日志" target="Corecoremachinemachinemonitornodemanagerlogtitle"/><tocitem text="计算机：监视：节点管理器状态" target="Corecoremachinemachinemonitornodemanagerstatustitle"/><tocitem text="计算机：注释" target="Corecoremachinemachinenotestitle"/><tocitem text="计算机：Unix 计算机：配置：一般信息" target="Corecoremachineunixmachineconfiggeneraltitle"/><tocitem text="删除服务器" target="Corecoremachineremoveservertitle"/></tocitem>
+
+
+      
+  <tocitem text="工作管理器" target="Corecoreworkmanagerstitle"><tocitem text="上下文案例" target="Corecoreworkcontextcaseconfigtitle"/><tocitem text="创建上下文案例" target="Corecoreworkcreatecontextcasepagetitle"/><tocitem text="创建工作管理器" target="Corecoreworkcreateworkmanagerpagetitle"/><tocitem text="删除上下文案例" target="Corecoreworkdeletecontextcasetitle"/><tocitem text="删除工作管理定义" target="Corecoreworkdeleteworkmanagertitle"/><tocitem text="工作管理器：配置" target="Corecoreworkworkmanagerconfigtitle"/><tocitem text="工作管理器：注释" target="Corecoreworkworkmanagernotestitle"/><tocitem text="工作管理器：目标部署" target="Corecoreworkworkmanagertargetdeploytitle"/><tocitem text="工作管理器：容量：配置" target="Corecoreworkcapacityconfigtitle"/><tocitem text="工作管理器：容量：注释" target="Corecoreworkcapacitynotestitle"/><tocitem text="工作管理器：容量：目标部署" target="Corecoreworkcapacitytargetdeploytitle"/><tocitem text="工作管理器：上下文：配置" target="Corecoreworkcontextrequestclassconfigtitle"/><tocitem text="工作管理器：上下文：注释" target="Corecoreworkcontextrequestclassnotestitle"/><tocitem text="工作管理器：上下文：目标部署" target="Corecoreworkcontextrequestclasstargetdeploytitle"/><tocitem text="工作管理器：公平共享：配置" target="Corecoreworkfairsharerequestclassconfigtitle"/><tocitem text="工作管理器：公平共享：注释" target="Corecoreworkfairsharerequestclassnotestitle"/><tocitem text="工作管理器：公平共享：目标部署" target="Corecoreworkfairsharerequestclasstargetdeploytitle"/><tocitem text="工作管理器：最大线程数约束条件：配置" target="Corecoreworkmaxthreadsconstraintconfigtitle"/><tocitem text="工作管理器：最大线程数约束条件：注释" target="Corecoreworkmaxthreadsconstraintnotestitle"/><tocitem text="工作管理器：最大线程数约束条件：目标部署" target="Corecoreworkmaxthreadsconstrainttargetdeploytitle"/><tocitem text="工作管理器：最小线程数约束条件：配置" target="Corecoreworkminthreadsconstraintconfigtitle"/><tocitem text="工作管理器：最小线程数约束条件：注释" target="Corecoreworkminthreadsconstraintnotestitle"/><tocitem text="工作管理器：最小线程数约束条件：目标部署" target="Corecoreworkminthreadsconstrainttargetdeploytitle"/><tocitem text="工作管理器：响应时间：配置" target="Corecoreworkresponsetimerequestclassconfigtitle"/><tocitem text="工作管理器：响应时间：注释" target="Corecoreworkresponsetimerequestclassnotestitle"/><tocitem text="工作管理器：响应时间：目标部署" target="Corecoreworkresponsetimerequestclasstargetdeploytitle"/></tocitem>
+
+
+      
+  <tocitem text="可迁移目标" target="Corecoremigratabletargettabletitle"><tocitem text="新建可迁移目标" target="Corecoremigrationcreatemigratabletargettitle"/><tocitem text="删除可迁移目标" target="Corecoremigrationdeletemigratabletargettitle"/><tocitem text="可迁移目标：配置：一般信息" target="Corecoremigrationmigratabletargetconfiggeneraltitle"/><tocitem text="可迁移目标：配置：迁移" target="Corecoremigrationmigratabletargetconfigmigrationtitle"/><tocitem text="手动迁移可迁移目标" target="Corecoremigratabletargetscontrolmigrationtitle"/><tocitem text="可迁移目标：控制" target="Corecoremigratabletargetcontrolmigrationtitle"/><tocitem text="迁移可迁移目标" target="Corecoremigrationmigratemigratabletargettitle"/><tocitem text="可迁移目标：注释" target="Corecoremigrationmigratabletargetnotestitle"/></tocitem>
+
+
+      
+    <tocitem text="单例服务：配置：一般信息" target="Corecoresingletonservicesingletonserviceconfiggeneraltitle"/>
+    <tocitem text="单例服务：配置：迁移" target="Corecoresingletonservicesingletonserviceconfigmigrationtitle"/>
+    <tocitem text="单例服务：注释" target="Corecoresingletonservicesingletonservicenotestitle"/>
+
+
+      
+  <tocitem text="启动类和关闭类" target="Corecoreclassesclassdeploymenttitle"><tocitem text="配置新的启动类或关闭类" target="Corecoreclassescreateclasstitle"/><tocitem text="删除启动类或关闭类" target="Corecoreclassesdeleteclasstitle"/><tocitem text="启动类：配置" target="Corecoreclassesstartupclassconfigtitle"/><tocitem text="启动类：目标" target="Corecoreclassesstartupclasstargetdeploytitle"/><tocitem text="启动类：注释" target="Corecoreclassesstartupclassnotestitle"/><tocitem text="关闭类：配置" target="Corecoreclassesshutdownclassconfigtitle"/><tocitem text="关闭类：目标" target="Corecoreclassesshutdownclasstargetdeploytitle"/><tocitem text="关闭类：注释" target="Corecoreclassesshutdownclassnotestitle"/></tocitem>
+
+    </tocitem>
+
+    <tocitem text="部署" target="J2EEappdeploymentscontroltabletitle">
+      
+  <tocitem text="企业应用程序" target="blank">
+    <tocitem text="安装企业应用程序" target="J2EEappinstalltitle"/>
+
+    <tocitem text="删除应用程序" target="J2EEappuninstalltitle"/>
+
+    <tocitem text="启动应用程序" target="J2EEappstarttitle"/>
+
+    <tocitem text="将应用程序置于管理模式" target="J2EEappadmintitle"/>
+
+    <tocitem text="停止应用程序" target="J2EEappstoptitle"/>
+
+    <tocitem text="强制停止应用程序" target="J2EEappforcestoptitle"/>
+
+    <tocitem text="更新应用程序" target="J2EEappupdatetitle"/>
+
+    <tocitem text="删除：变量" target="J2EEappdeletevariabletitle"/>
+
+    <tocitem text="保存部署计划" target="J2EEappsaveplantitle"/>
+
+    <tocitem text="初始化高速缓存和池" target="J2EEappapplicationinitcachetitle"/>
+
+    <tocitem text="配置" target="blank">
+      <tocitem text="应用程序：概览" target="J2EEappapplicationoverviewtitle"/>
+
+      <tocitem text="应用程序：部署计划：优化参数" target="J2EEappapplicationtunablestitle"/>
+
+      <tocitem text="应用程序：部署计划：资源相关性" target="J2EEappapplicationdescriptorstitle"/>
+
+      <tocitem text="应用程序：配置：应用程序" target="J2EEappappconfigurationtitle"/>
+
+      <tocitem text="应用程序：配置：工作量" target="J2EEappapplicationconfigurationworkloadtitle"/>
+
+      <tocitem text="创建工作管理器" target="J2EEappworkcreateworkmanagerpagetitle"/>
+
+      <tocitem text="工作管理器：配置" target="J2EEappworkworkmanagerconfigtitle"/>
+
+      <tocitem text="工作管理器：容量：配置" target="J2EEappworkcapacityconfigtitle"/>
+
+      <tocitem text="工作管理器：上下文案例：配置" target="J2EEappappworkcontextcaseconfigtitle"/>
+
+      <tocitem text="工作管理器：上下文：配置" target="J2EEappworkcontextrequestclassconfigtitle"/>
+
+      <tocitem text="工作管理器：公平共享：配置" target="J2EEappworkfairsharerequestclassconfigtitle"/>
+
+      <tocitem text="工作管理器：最大线程数约束条件：配置" target="J2EEappworkmaxthreadsconstraintconfigtitle"/>
+
+      <tocitem text="工作管理器：最小线程数约束条件：配置" target="J2EEappworkminthreadsconstraintconfigtitle"/>
+
+      <tocitem text="工作管理器：响应时间：配置" target="J2EEappworkresponsetimerequestclassconfigtitle"/>
+    </tocitem>
+
+    <tocitem text="安全角色和策略" target="blank">
+      <tocitem text="应用程序：安全：策略" target="J2EEappapppoliciestitle"/>
+
+      <tocitem text="应用程序：安全：角色" target="J2EEappapproletabletitle"/>
+
+      <tocitem text="编辑应用程序范围角色" target="J2EEappapprolemanagetitle"/>
+
+      <tocitem text="创建应用程序范围角色" target="J2EEappapprolecreatetitle"/>
+
+      <tocitem text="删除应用程序范围角色" target="J2EEappapproledeletetitle"/>
+    </tocitem>
+
+    <tocitem text="监视" target="blank">
+      <tocitem text="部署：监视：Web 应用程序" target="J2EEappdeploymentsmonitorwebapptabletitle"/>
+
+      <tocitem text="部署：监视：EJB：无状态" target="J2EEappdeploymentsmonitorejbstatelesstitle"/>
+
+      <tocitem text="部署：监视：EJB：有状态" target="J2EEappdeploymentsmonitorejbstatefultitle"/>
+
+      <tocitem text="部署：监视：EJB：实体" target="J2EEappdeploymentsmonitorejbentitytitle"/>
+
+      <tocitem text="部署：监视：EJB：消息驱动" target="J2EEappdeploymentsmonitorejbmessagedriventitle"/>
+
+      <tocitem text="部署：监视：Web 服务" target="J2EEappdeploymentsmonitorwebservicestitle"/>
+
+      <tocitem text="部署：监视：Web 服务客户机" target="J2EEappdeploymentsmonitorwebserviceclientstitle"/>
+
+      <tocitem text="部署：Web 应用程序或 EJB 模块：监视：Web 服务客户机" target="J2EEwebservicecomponentmonitorwebserviceclientstitle"/>
+
+      <tocitem text="部署：监视：JDBC：数据源" target="J2EEappdeploymentsmonitorjdbctabletitle"/>
+
+      <tocitem text="部署：监视：工作量" target="J2EEappdeploymentsmonitorworkloadtitle"/>
+
+      <tocitem text="部署：监视：JMS：目标" target="J2EEappdeploymentsmonitorjmstitle"/>
+    </tocitem>
+
+    <tocitem text="部署" target="J2EEappdeploymentscontroltabletitle"/>
+
+    <tocitem text="应用程序：目标" target="J2EEappapplicationtargetstitle"/>
+
+    <tocitem text="应用程序：控制：启动/停止" target="J2EEappapplicationcontroltitle"/>
+
+    <tocitem text="应用程序：控制：初始化高速缓存" target="J2EEappappcontrolcachestitle"/>
+
+    <tocitem text="应用程序：测试" target="J2EEappapplicationtestingtitle"/>
+
+    <tocitem text="应用程序：监视：健康状况" target="J2EEappapplicationmonitorhealthtitle"/>
+
+    <tocitem text="应用程序：监视：查询高速缓存" target="J2EEappapplicationmonitorquerycachetitle"/>
+
+    <tocitem text="应用程序：监视：工作量" target="J2EEappapplicationmonitorworkloadtitle"/>
+
+    <tocitem text="应用程序：注释" target="J2EEappapplicationnotestitle"/>
+  </tocitem>
+
+
+      
+  <tocitem text="EJB" target="blank">
+    <tocitem text="EJB：配置" target="J2EEejbejbconfigurationtitle"/>
+
+    <tocitem text="EJB：配置：工作量" target="J2EEejbconfigurationworkloadtitle"/>
+
+    <tocitem text="EJB：控制" target="J2EEejbejbcontroltitle"/>
+
+    <tocitem text="EJB：初始化高速缓存" target="J2EEejbejbinitcachetitle"/>
+
+    <tocitem text="EJB：控制：Bean" target="J2EEejbejbcontrolbeantitle"/>
+
+    <tocitem text="EJB：激活计时器" target="J2EEejbactivatetimerstitle"/>
+
+    <tocitem text="EJB：注释" target="J2EEejbejbnotestitle"/>
+
+    <tocitem text="EJB：概览" target="J2EEejbejboverviewtitle"/>
+
+    <tocitem text="EJB：目标" target="J2EEejbejbtargetstitle"/>
+
+    <tocitem text="EJB：测试" target="J2EEejbejbtestingtitle"/>
+
+    <tocitem text="EJB：监视：运行中" target="J2EEejbejbmonitorrunningtitle"/>
+
+    <tocitem text="EJB：监视：工作量" target="J2EEejbejbmonitorworkloadtitle"/>
+
+    <tocitem text="EJB：挂起" target="J2EEejbsuspendtitle"/>
+
+    <tocitem text="EJB：恢复" target="J2EEejbresumetitle"/>
+
+    <tocitem text="安全角色和策略" target="blank">
+      <tocitem text="EJB 应用程序：安全：应用程序范围角色" target="J2EEejbejbapplicationroletabletitle"/>
+
+      <tocitem text="编辑独立 EJB 应用程序范围角色" target="J2EEejbejbapplicationrolestitle"/>
+
+      <tocitem text="创建独立 EJB 应用程序范围角色" target="J2EEejbejbapplicationrolecreatetitle"/>
+
+      <tocitem text="删除独立 EJB 应用程序范围角色" target="J2EEejbejbapplicationroledeletetitle"/>
+
+      <tocitem text="EJB 应用程序：安全：策略" target="J2EEejbapplicationpoliciespagetitle"/>
+
+      <tocitem text="编辑 EJB 模块范围角色" target="J2EEejbejbapplicationmodulerolestitle"/>
+
+      <tocitem text="EJB 应用程序：安全：模块范围角色" target="J2EEejbejbapplicationmoduleroletabletitle"/>
+
+      <tocitem text="创建独立 EJB 应用程序模块范围角色" target="J2EEejbejbapplicationmodulerolecreatetitle"/>
+
+      <tocitem text="删除 EJB 模块范围角色" target="J2EEejbejbapplicationmoduleroledeletetitle"/>
+
+      <tocitem text="EJB 模块：安全：策略" target="J2EEejbapplicationmodulepoliciespagetitle"/>
+
+      <tocitem text="编辑 EJB 模块范围安全角色" target="J2EEejbejbmodulerolestitle"/>
+
+      <tocitem text="EJB 模块：安全：角色" target="J2EEejbejbmoduleroletabletitle"/>
+
+      <tocitem text="创建 EJB 模块范围角色" target="J2EEejbejbmodulerolecreatetitle"/>
+
+      <tocitem text="删除 EJB 模块范围角色" target="J2EEejbejbmoduleroledeletetitle"/>
+
+      <tocitem text="EJB 模块：安全：策略" target="J2EEejbmodulepoliciespagetitle"/>
+
+      <tocitem text="EJB 组件：jCOM：jCOM 类：新建 EJB COM 类" target="J2EEjcomcreatejcomclasstitle"/>
+
+      <tocitem text="EJB 组件：jCOM：安全：策略" target="J2EEejbjcomjcompoliciestitle"/>
+
+      <tocitem text="EJB 组件：jCOM：删除 jCOM 类" target="J2EEjcomdeletejcomclasstitle"/>
+
+      <tocitem text="EJB 组件：安全：策略" target="J2EEejbcomponentpoliciespagetitle"/>
+
+      <tocitem text="编辑 EJB 组件安全角色" target="J2EEejbejbcomponentrolestitle"/>
+
+      <tocitem text="EJB 组件：安全：角色" target="J2EEejbejbcomponentroletabletitle"/>
+
+      <tocitem text="创建 EJB 组件范围角色" target="J2EEejbejbcomponentrolecreatetitle"/>
+
+      <tocitem text="删除 EJB 组件范围角色" target="J2EEejbejbcomponentroledeletetitle"/>
+
+      <tocitem text="EJB 组件：安全：身份证明映射" target="J2EEejbcomponentsecuritycredentialmappingtabletitle"/>
+
+      <tocitem text="EJB 组件：安全：身份证明映射：创建身份证明映射" target="J2EEejbcomponentcreatecredentialmappingtitle"/>
+
+      <tocitem text="EJB 组件：安全：身份证明映射" target="J2EEejbcomponenteditcredentialmappingtitle"/>
+
+      <tocitem text="EJB 组件：安全：身份证明映射：删除 EJB 组件身份证明映射" target="J2EEejbcomponentdeletecredentialmappingtitle"/>
+    </tocitem>
+  </tocitem>
+
+
+      
+  <tocitem text="持久性" target="blank">
+    <tocitem text="持久性单元：高级配置" target="J2EEpersistenceunitadvancedtitle"/>
+
+    <tocitem text="创建数据高速缓存" target="J2EEpersistenceunitcreatedatacachetitle"/>
+
+    <tocitem text="创建数据库字典" target="J2EEpersistenceunitcreatedbdictionarytitle"/>
+
+    <tocitem text="创建属性值" target="J2EEpersistenceunitcreatepropertytitle"/>
+
+    <tocitem text="创建查询高速缓存" target="J2EEpersistenceunitcreatequerycachetitle"/>
+
+    <tocitem text="创建远程提交提供程序" target="J2EEpersistenceunitcreateremotecommitprovidertitle"/>
+
+    <tocitem text="持久性单元：数据源配置" target="J2EEpersistenceunitdatasourcestitle"/>
+
+    <tocitem text="删除数据高速缓存" target="J2EEpersistenceunitdeletedatacachetitle"/>
+
+    <tocitem text="删除数据库字典" target="J2EEpersistenceunitdeletedbdictionarytitle"/>
+
+    <tocitem text="删除属性" target="J2EEpersistenceunitdeletepropertytitle"/>
+
+    <tocitem text="删除查询高速缓存" target="J2EEpersistenceunitdeletequerycachetitle"/>
+
+    <tocitem text="删除远程提交提供程序" target="J2EEpersistenceunitdeleteremotecommitprovidertitle"/>
+
+    <tocitem text="持久性单元：一般配置" target="J2EEpersistenceunitgeneraltitle"/>
+
+    <tocitem text="持久性单元：JTA 连接配置" target="J2EEpersistenceunitjtaconnectiontitle"/>
+
+    <tocitem text="持久性单元：非 JTA 连接配置" target="J2EEpersistenceunitnonjtaconnectiontitle"/>
+
+    <tocitem text="持久性单元" target="J2EEpersistenceunittabletitle"/>
+
+    <tocitem text="插件" target="blank">
+      <tocitem text="持久性：插件：Access 字典配置" target="J2EEkodojdbcconfdescriptorAccessDictionaryBeantitle"/>
+
+      <tocitem text="持久性：插件：集群远程提交提供程序" target="J2EEkodoconfdescriptorClusterRemoteCommitProviderBeantitle"/>
+
+      <tocitem text="持久性：插件：定制数据高速缓存配置" target="J2EEkodoconfdescriptorCustomDataCacheBeantitle"/>
+
+      <tocitem text="持久性：插件：定制字典配置" target="J2EEkodojdbcconfdescriptorCustomDBDictionaryBeantitle"/>
+
+      <tocitem text="持久性：插件：定制查询高速缓存配置" target="J2EEkodoconfdescriptorCustomQueryCacheBeantitle"/>
+
+      <tocitem text="持久性：插件：定制远程提交提供程序配置" target="J2EEkodoconfdescriptorCustomRemoteCommitProviderBeantitle"/>
+
+      <tocitem text="持久性：插件：DB2 字典配置" target="J2EEkodojdbcconfdescriptorDB2DictionaryBeantitle"/>
+
+      <tocitem text="持久性：插件：默认的数据高速缓存配置" target="J2EEkodoconfdescriptorDefaultDataCacheBeantitle"/>
+
+      <tocitem text="持久性：插件：默认的查询高速缓存配置" target="J2EEkodoconfdescriptorDefaultQueryCacheBeantitle"/>
+
+      <tocitem text="持久性：插件：Derby 字典配置" target="J2EEkodojdbcconfdescriptorDerbyDictionaryBeantitle"/>
+
+      <tocitem text="持久性：插件：禁用的查询高速缓存配置" target="J2EEkodoconfdescriptorDisabledQueryCacheBeantitle"/>
+
+      <tocitem text="持久性：插件：Empress 字典配置" target="J2EEkodojdbcconfdescriptorEmpressDictionaryBeantitle"/>
+
+      <tocitem text="持久性：插件：FoxPro 字典" target="J2EEkodojdbcconfdescriptorFoxProDictionaryBeantitle"/>
+
+      <tocitem text="持久性：插件：Gem Fire 数据高速缓存" target="J2EEkodoconfdescriptorGemFireDataCacheBeantitle"/>
+
+      <tocitem text="持久性：插件：Gem Fire 查询高速缓存" target="J2EEkodoconfdescriptorGemFireQueryCacheBeantitle"/>
+
+      <tocitem text="持久性：插件：HSQL 字典" target="J2EEkodojdbcconfdescriptorHSQLDictionaryBeantitle"/>
+
+      <tocitem text="持久性：插件：Informix 字典" target="J2EEkodojdbcconfdescriptorInformixDictionaryBeantitle"/>
+
+      <tocitem text="持久性：插件：JDataStore 字典" target="J2EEkodojdbcconfdescriptorJDataStoreDictionaryBeantitle"/>
+
+      <tocitem text="持久性：插件：JMS 远程提交提供程序" target="J2EEkodoconfdescriptorJMSRemoteCommitProviderBeantitle"/>
+
+      <tocitem text="持久性：插件：并发数据高速缓存" target="J2EEkodoconfdescriptorKodoConcurrentDataCacheBeantitle"/>
+
+      <tocitem text="持久性：插件：并发查询高速缓存" target="J2EEkodoconfdescriptorKodoConcurrentQueryCacheBeantitle"/>
+
+      <tocitem text="持久性：插件：LRU 数据高速缓存" target="J2EEkodoconfdescriptorLRUDataCacheBeantitle"/>
+
+      <tocitem text="持久性：插件：LRU 查询高速缓存" target="J2EEkodoconfdescriptorLRUQueryCacheBeantitle"/>
+
+      <tocitem text="持久性：插件：MySQL 字典" target="J2EEkodojdbcconfdescriptorMySQLDictionaryBeantitle"/>
+
+      <tocitem text="持久性：插件：Oracle 字典" target="J2EEkodojdbcconfdescriptorOracleDictionaryBeantitle"/>
+
+      <tocitem text="持久性：插件：Pointbase 字典" target="J2EEkodojdbcconfdescriptorPointbaseDictionaryBeantitle"/>
+
+      <tocitem text="持久性：插件：Postgres 字典" target="J2EEkodojdbcconfdescriptorPostgresDictionaryBeantitle"/>
+
+      <tocitem text="持久性：插件：JVM 远程提交提供程序" target="J2EEkodoconfdescriptorSingleJVMRemoteCommitProviderBeantitle"/>
+
+      <tocitem text="持久性：插件：SQLServer 字典" target="J2EEkodojdbcconfdescriptorSQLServerDictionaryBeantitle"/>
+
+      <tocitem text="持久性：插件：Sybase 字典" target="J2EEkodojdbcconfdescriptorSybaseDictionaryBeantitle"/>
+
+      <tocitem text="持久性：插件：Tangosol 数据高速缓存" target="J2EEkodoconfdescriptorTangosolDataCacheBeantitle"/>
+
+      <tocitem text="持久性：插件：Tangosol 查询高速缓存" target="J2EEkodoconfdescriptorTangosolQueryCacheBeantitle"/>
+
+      <tocitem text="持久性：插件：TCP 远程提交提供程序" target="J2EEkodoconfdescriptorTCPRemoteCommitProviderBeantitle"/>
+    </tocitem>
+  </tocitem>
+
+
+      
+  <tocitem text="Web 应用程序" target="blank">
+    <tocitem text="部署：Web 应用程序：配置" target="J2EEwebappwebappconfigurationtitle"/>
+
+    <tocitem text="部署：Web 应用程序：配置：日志记录" target="J2EEwebappwebappconfigurationloggingtitle"/>
+
+    <tocitem text="部署：Web 应用程序：配置：工作量" target="J2EEwebappwebappconfigurationworkloadtitle"/>
+
+    <tocitem text="部署：Web 应用程序：控制" target="J2EEwebappwebappcontroltitle"/>
+
+    <tocitem text="部署：Web 应用程序：监视：Web 应用程序" target="J2EEwebappwebappmonitorrunningtitle"/>
+
+    <tocitem text="部署：Web 应用程序：监视：Servlet" target="J2EEwebappwebappmonitorservletstitle"/>
+
+    <tocitem text="部署：Web 应用程序：监视：会话" target="J2EEwebappwebappmonitorsessionstitle"/>
+
+    <tocitem text="部署：Web 应用程序：监视：工作量" target="J2EEwebappwebappmonitorworkloadtitle"/>
+    
+    <tocitem text="部署：Web 应用程序：监视：页面流" target="J2EEwebappwebappmonitorpageflowstitle"/>
+        
+
+
+    <tocitem text="部署：Web 应用程序：注释" target="J2EEwebappwebappnotestitle"/>
+
+    <tocitem text="部署：Web 应用程序：概览" target="J2EEwebappwebappoverviewtitle"/>
+
+    <tocitem text="部署：Web 应用程序：目标" target="J2EEwebappwebapptargetstitle"/>
+
+    <tocitem text="部署：Web 应用程序：测试" target="J2EEwebappwebapptestingtitle"/>
+
+    <tocitem text="安全角色和策略" target="blank">
+
+      <tocitem text="独立 Web 应用程序：应用程序安全角色" target="J2EEwebappapplicationroletablepagetitle"/>
+
+      <tocitem text="编辑独立 Web 应用程序范围角色条件" target="J2EEwebappapplicationrolemanagepagetitle"/>
+
+      <tocitem text="创建独立 Web 应用程序范围角色" target="J2EEwebappapplicationrolecreatepagetitle"/>
+
+      <tocitem text="删除独立 Web 应用程序范围角色" target="J2EEwebappapplicationroledeletepagetitle"/>
+
+      <tocitem text="独立 Web 应用程序：应用程序安全策略" target="J2EEwebappapplicationpoliciespagetitle"/>
+
+      <tocitem text="独立 Web 应用程序：URL 模式安全策略" target="J2EEwebappapplicationurlpatternsroletablepagetitle"/>
+
+      <tocitem text="编辑独立 Web 应用程序 URL 模式角色条件" target="J2EEwebappapplicationurlpatternsrolemanagepagetitle"/>
+
+      <tocitem text="创建独立 Web 应用程序 URL 模式范围角色" target="J2EEwebappapplicationurlpatternsrolecreatepagetitle"/>
+
+      <tocitem text="删除独立 Web 应用程序 URL 模式范围角色" target="J2EEwebappapplicationurlpatternsroledeletepagetitle"/>
+
+      <tocitem text="独立 Web 应用程序：URL 模式安全策略" target="J2EEwebappapplicationurlpatternspolicytablepagetitle"/>
+
+      <tocitem text="编辑独立 Web 应用程序 URL 模式范围策略" target="J2EEwebappapplicationurlpatternspolicymanagepagetitle"/>
+
+      <tocitem text="创建独立 Web 应用程序 URL 模式范围策略" target="J2EEwebappapplicationurlpatternspolicycreatepagetitle"/>
+
+      <tocitem text="删除独立 Web 应用程序 URL 模式范围策略" target="J2EEwebappapplicationurlpatternspolicydeletepagetitle"/>
+
+      <tocitem text="Web 应用程序模块：安全角色" target="J2EEwebappmoduleurlpatternsroletablepagetitle"/>
+
+      <tocitem text="编辑 Web 应用程序模块角色条件" target="J2EEwebappmoduleurlpatternsrolemanagepagetitle"/>
+
+      <tocitem text="创建 Web 应用程序模块范围角色" target="J2EEwebappmoduleurlpatternsrolecreatepagetitle"/>
+
+      <tocitem text="删除 Web 应用程序模块 URL 模式范围角色" target="J2EEwebappmoduleurlpatternsroledeletepagetitle"/>
+
+      <tocitem text="Web 应用程序模块：安全策略" target="J2EEwebappmoduleurlpatternspolicytablepagetitle"/>
+
+      <tocitem text="Web 应用程序模块：安全策略" target="J2EEwebappmoduleurlpatternspolicymanagepagetitle"/>
+
+      <tocitem text="创建 Web 应用程序模块范围策略" target="J2EEwebappmoduleurlpatternspolicycreatepagetitle"/>
+
+      <tocitem text="删除 Web 应用程序模块 URL 模式范围策略" target="J2EEwebappmoduleurlpatternspolicydeletepagetitle"/>
+
+    </tocitem>
+  </tocitem>
+
+
+      
+  <tocitem text="资源适配器" target="blank">
+    <tocitem text="创建出站连接" target="J2EEconnectorcreateoutboundconnectiontitle"/>
+
+    <tocitem text="删除出站连接" target="J2EEconnectordeleteoutboundconnectiontitle"/>
+
+    <tocitem text="创建身份证明映射条目" target="J2EEconnectorcreatesecuritycredentialtitle"/>
+
+    <tocitem text="编辑身份证明映射条目" target="J2EEconnectoreditsecuritycredentialtitle"/>
+
+    <tocitem text="删除身份证明映射条目" target="J2EEconnectordeletesecuritycredentialtitle"/>
+
+    <tocitem text="创建管理对象" target="J2EEconnectorcreateadminobjecttitle"/>
+
+    <tocitem text="删除管理对象" target="J2EEconnectordeleteadminobjecttitle"/>
+
+    <tocitem text="资源适配器：概览" target="J2EEconnectorconnectoroverviewtitle"/>
+
+    <tocitem text="资源适配器：配置：一般信息" target="J2EEconnectorconfigurationgeneraltitle"/>
+
+    <tocitem text="资源适配器：配置：属性" target="J2EEconnectorconfigurationpropertiestitle"/>
+
+    <tocitem text="资源适配器：配置：出站连接池" target="J2EEconnectorconfigurationoutboundconnectionstitle"><tocitem text="资源适配器：出站连接池：一般信息" target="J2EEconnectorconnectoroutboundconnectionconfiggeneraltitle"/><tocitem text="资源适配器：出站连接池：属性" target="J2EEconnectorconnectoroutboundconnectionconfigpropertiestitle"/><tocitem text="资源适配器：出站连接池：事务处理" target="J2EEconnectorconnectoroutboundconnectionconfigtransactiontitle"/><tocitem text="资源适配器：出站连接池：验证" target="J2EEconnectorconnectoroutboundconnectionconfigauthenticationtitle"/><tocitem text="资源适配器：出站连接池：连接池" target="J2EEconnectorconnectoroutboundconnectionconfigpooltitle"/><tocitem text="资源适配器：出站连接池：日志记录" target="J2EEconnectorconnectoroutboundconnectionconfigloggingtitle"/></tocitem>
+
+    <tocitem text="资源适配器：管理对象" target="J2EEconnectorconnectorconfigurationadminobjectstitle"><tocitem text="资源适配器：配置：管理对象：属性" target="J2EEconnectorconnectoradminobjectsconfigpropertiestitle"/></tocitem>
+
+    <tocitem text="资源适配器：配置：工作量" target="J2EEconnectorconnectorconfigurationworkloadtitle"/>
+
+    <tocitem text="独立资源适配器：安全角色" target="J2EEconnectorconnectorapplicationroletabletitle"/>
+
+    <tocitem text="编辑独立资源适配器范围角色条件" target="J2EEconnectorconnectorapplicationrolemanagetitle"/>
+
+    <tocitem text="创建独立资源适配器范围角色" target="J2EEconnectorconnectorapplicationrolecreatetitle"/>
+
+    <tocitem text="删除独立资源适配器范围角色" target="J2EEconnectorconnectorapplicationroledeletetitle"/>
+
+    <tocitem text="资源适配器模块：安全角色" target="J2EEconnectorconnectormoduleroletabletitle"/>
+
+    <tocitem text="编辑资源适配器模块角色条件" target="J2EEconnectorconnectormodulerolemanagetitle"/>
+
+    <tocitem text="创建资源适配器模块范围角色" target="J2EEconnectorconnectormodulerolecreatetitle"/>
+
+    <tocitem text="删除资源适配器模块范围角色" target="J2EEconnectorconnectormoduleroledeletetitle"/>
+
+    <tocitem text="资源适配器：安全：策略" target="J2EEconnectorapplicationpoliciespagetitle"/>
+
+    <tocitem text="资源适配器模块：安全策略" target="J2EEconnectorconnectormodulepoliciestitle"/>
+
+    <tocitem text="资源适配器：安全：身份证明映射" target="J2EEconnectorsecuritycredentialmappingtabletitle"/>
+
+    <tocitem text="资源适配器：安全：主用户" target="J2EEconnectorconnectorsecurityprincipalstitle"/>
+
+    <tocitem text="资源适配器：目标" target="J2EEconnectorconnectortargetstitle"/>
+
+    <tocitem text="资源适配器：注释" target="J2EEconnectorconnectornotestitle"/>
+
+    <tocitem text="资源适配器：控制：资源适配器" target="J2EEconnectorconnectorapplicationcontrolresourceadaptertitle"><tocitem text="资源适配器：控制：资源适配器" target="J2EEconnectorconnectormodulecontrolresourceadaptertitle"/><tocitem text="资源适配器：全部恢复" target="J2EEconnectorlifecycleresumealltitle"/><tocitem text="资源适配器：恢复入站服务" target="J2EEconnectorlifecycleresumeinboundtitle"/><tocitem text="资源适配器：恢复出站服务" target="J2EEconnectorlifecycleresumeoutboundtitle"/><tocitem text="资源适配器：恢复工作服务" target="J2EEconnectorlifecycleresumeworktitle"/><tocitem text="资源适配器：挂起所有服务" target="J2EEconnectorlifecyclesuspendalltitle"/><tocitem text="资源适配器：挂起入站服务" target="J2EEconnectorlifecyclesuspendinboundtitle"/><tocitem text="资源适配器：挂起出站服务" target="J2EEconnectorlifecyclesuspendoutboundtitle"/><tocitem text="资源适配器：挂起工作服务" target="J2EEconnectorlifecyclesuspendworktitle"/></tocitem>
+
+    <tocitem text="资源适配器：控制：出站连接池" target="J2EEconnectorconnectorcontrolconnectionpoolstitle"><tocitem text="资源适配器：控制：重置出站连接池" target="J2EEconnectorcontrolresetpooltitle"/><tocitem text="资源适配器：控制：强制重置出站连接池" target="J2EEconnectorcontrolforceresetpooltitle"/></tocitem>
+
+    <tocitem text="资源适配器：测试" target="J2EEconnectorconnectortestingtitle"/>
+
+    <tocitem text="资源适配器：监视" target="J2EEconnectorconnectormonitorconnectiontabletitle"><tocitem text="资源适配器：监视：入站监听程序" target="J2EEconnectorconnectormonitorinboundlistenerstitle"/><tocitem text="资源适配器：监视：出站连接池" target="J2EEconnectorconnectormonitorconnectionpooltabletitle"/><tocitem text="资源适配器：监视：工作量" target="J2EEconnectorconnectormonitorworkloadtitle"/></tocitem>
+  </tocitem>
+
+
+      
+  <tocitem text="Web 服务" target="blank">
+    <tocitem text="Web 服务：概览" target="J2EEwebservicewebserviceoverviewtitle"/>
+
+    <tocitem text="Web 服务配置" target="blank">
+      <tocitem text="为 Web 服务配置策略文件" target="J2EEwebservicewebservicepolicytitle"/>
+
+      <tocitem text="Web 服务：配置：一般信息" target="J2EEwebservicewebserviceconfigurationgeneraltitle"/>
+
+      <tocitem text="Web 服务：配置：处理程序：一般信息" target="J2EEwebservicewebserviceconfigurationhandlersgeneraltitle"/>
+
+      <tocitem text="Web 服务：配置：处理程序：初始化参数" target="J2EEwebservicewebserviceconfigurationhandlersinitparamstitle"/>
+
+      <tocitem text="Web 服务：配置：处理程序：表" target="J2EEwebservicewebserviceconfigurationhandlerstitle"/>
+
+      <tocitem text="Web 服务：配置：策略：表" target="J2EEwebservicewebservicepoliciestabletitle"/>
+
+      <tocitem text="Web 服务：配置：端口" target="J2EEwebservicewebserviceporttabletitle"/>
+
+      <tocitem text="Web 服务：配置：端口组件：可靠消息" target="J2EEwebServiceportconfigreliablemessagetitle"/>
+
+      <tocitem text="Web 服务：配置：端口组件：缓冲" target="J2EEwebServiceportconfigbufferingtitle"/>
+
+      <tocitem text="Web 服务：配置：端口组件：原子事务处理" target="J2EEwebservicewebserviceconfigatomictransactiontitle"/>
+
+      <tocitem text="Web 服务：配置：端口组件：持久性" target="J2EEwebServiceportconfigpersistencetitle"/>
+    </tocitem>
+
+    <tocitem text="Web 服务安全" target="blank">
+      <tocitem text="Web 服务模块：安全：策略" target="J2EEwebservicemodulepoliciespagetitle"/>
+
+      <tocitem text="Web 服务模块：安全：角色" target="J2EEwebservicemoduleroletablepagetitle"/>
+
+      <tocitem text="编辑 Web 服务模块范围角色" target="J2EEwebservicemodulerolemanagepagetitle"/>
+
+      <tocitem text="创建 Web 服务模块范围角色" target="J2EEwebservicemodulerolecreatepagetitle"/>
+
+      <tocitem text="删除 Web 服务模块范围角色" target="J2EEwebservicemoduleroledeletepagetitle"/>
+    </tocitem>
+
+    <tocitem text="Web 服务：测试" target="J2EEwebservicewebservicetestingtitle"/>
+
+    <tocitem text="Web 服务监视" target="blank">
+      <tocitem text="Web 服务：监视：一般信息" target="J2EEwebservicewebservicemonitorgeneraltitle"/>
+
+      <tocitem text="Web 服务：监视：调用" target="J2EEwebservicewebservicemonitorinvocationstitle"/>
+
+      <tocitem text="Web 服务：监视：WS 策略" target="J2EEwebservicewebservicemonitorwspolicytitle"/>
+
+      <tocitem text="Web 服务：监视：端口" target="J2EEwebservicewebservicemonitorportstitle"/>
+
+      <tocitem text="Web 服务客户机：监视：一般信息" target="J2EEwebservicewebserviceclientmonitorgeneraltitle"/>
+
+      <tocitem text="Web 服务客户机：监视：调用" target="J2EEwebservicewebserviceclientmonitorinvocationstitle"/>
+
+      <tocitem text="Web 服务客户机：监视：WS 策略" target="J2EEwebservicewebserviceclientmonitorwspolicytitle"/>
+
+      <tocitem text="Web 服务客户机：监视：服务器" target="J2EEwebservicewebserviceclientmonitorserverstitle"/>
+
+      <tocitem text="Web 服务：监视：端口：一般信息" target="J2EEwebserviceportmonitorgeneraltitle"/>
+
+      <tocitem text="Web 服务：监视：端口：集群路由" target="J2EEwebserviceportmonitorclusterroutingtitle"/>
+
+      <tocitem text="Web 服务：监视：端口：调用" target="J2EEwebserviceportmonitorinvocationstitle"/>
+
+      <tocitem text="Web 服务：监视：端口：建立连接" target="J2EEwebserviceportmonitormakeconnectionanonymousendpointstitle"/>
+
+      <tocitem text="Web 服务：监视：端口：可靠消息" target="J2EEwebserviceportmonitorreliablemessagesequencestitle"/>
+
+      <tocitem text="Web 服务：监视：端口：WS 策略" target="J2EEwebserviceportmonitorwspolicytitle"/>
+
+      <tocitem text="Web 服务：监视：端口：操作" target="J2EEwebserviceportmonitoroperationstitle"/>
+
+      <tocitem text="Web 服务：监视：端口：操作：一般信息" target="J2EEwebserviceoperationmonitorgeneraltitle"/>
+
+      <tocitem text="Web 服务：监视：端口：操作：调用" target="J2EEwebserviceoperationmonitorinvocationstitle"/>
+
+      <tocitem text="Web 服务：监视：端口：可靠消息：请求" target="J2EEwebservicereliablemessagesequencemonitorrequeststitle"/>
+    </tocitem>
+  </tocitem>
+
+
+      
+  <tocitem text="Java EE 库" target="blank">
+    <tocitem text="Java EE 库：概览" target="J2EElibraryoverviewtitle"/>
+
+    <tocitem text="Java EE 库：目标" target="J2EElibrarytargetstitle"/>
+
+    <tocitem text="Java EE 库：注释" target="J2EElibrarynotestitle"/>
+  </tocitem>
+
+    </tocitem>
+
+    <tocitem text="服务" target="Summarysummaryservicessummarytitle">
+      <tocitem text="消息传送" target="Summarysummaryservicesjmssummarytitle">
+        
+  <tocitem text="JMS 服务器" target="JMSjmsserverjmsservertabletitle"><tocitem text="创建 JMS 服务器" target="JMSjmsservercreatejmsservertitle"/><tocitem text="删除 JMS 服务器" target="JMSjmsserverdeletejmsservertitle"/><tocitem text="JMS 服务器：配置：一般信息" target="JMSjmsserverjmsserverconfiggeneraltitle"/><tocitem text="JMS 服务器：配置：阈值与限额" target="JMSjmsserverjmsserverconfigthresholdstitle"/><tocitem text="JMS 服务器：日志记录" target="JMSjmsserverjmsserverloggingtitle"/><tocitem text="JMS 服务器：目标" target="JMSjmsserverjmsservertargetdeploytitle"/><tocitem text="JMS 服务器：监视" target="JMSjmsserverjmsservermonitortitle"><tocitem text="JMS 服务器：监视：活动目标" target="JMSjmsservermonitordestinationstitle"><tocitem text="JMS 服务器：监视：活动目标：暂停生产" target="JMSjmsserverdestinationsjmsdestinationpauseproductiontitle"/><tocitem text="JMS 服务器：监视：活动目标：恢复生产" target="JMSjmsserverdestinationsjmsdestinationresumeproductiontitle"/><tocitem text="JMS 服务器：监视：活动目标：暂停使用" target="JMSjmsserverdestinationsjmsdestinationpauseconsumptiontitle"/><tocitem text="JMS 服务器：监视：活动目标：恢复使用" target="JMSjmsserverdestinationsjmsdestinationresumeconsumptiontitle"/><tocitem text="JMS 服务器：监视：活动目标：暂停插入" target="JMSjmsserverdestinationsjmsdestinationpauseinsertiontitle"/><tocitem text="JMS 服务器：监视：活动目标：恢复插入" target="JMSjmsserverdestinationsjmsdestinationresumeinsertiontitle"/></tocitem><tocitem text="JMS 服务器：监视：活动事务处理" target="JMSjmsservermonitortransactionstitle"><tocitem text="JMS 服务器：监视：活动事务处理：强制提交" target="JMSjmsserverforcetransactioncommittitle"/><tocitem text="JMS 服务器：监视：活动事务处理：强制回退" target="JMSjmsserverforcetransactionrollbacktitle"/></tocitem><tocitem text="JMS 服务器：监视：活动连接" target="JMSjmsservermonitorconnectionstitle"><tocitem text="JMS 服务器：监视：活动连接：销毁" target="JMSjmsserverdestroyconnectiontitle"/><tocitem text="JMS 服务器：监视：活动连接：会话" target="JMSjmssessionjmssessionruntimetabletitle"/><tocitem text="JMS 服务器：监视：活动连接：会话：使用者" target="JMSjmsconsumerjmsconsumerruntimetitle"/><tocitem text="JMS 服务器：监视：活动连接：会话：生成器" target="JMSjmsproducerjmsproducerruntimetitle"/></tocitem><tocitem text="JMS 服务器：监视：活动会话池" target="JMSjmsservermonitorsessionpoolstitle"/><tocitem text="JMS 服务器：监视：池中的活动连接" target="JMSjmsservermonitorpooledconnectionstitle"/></tocitem><tocitem text="JMS 服务器：控制" target="JMSjmsdestinationsjmsservercontroltitle"><tocitem text="JMS 服务器：控制：暂停生产" target="JMSjmsserverjmsserverpauseproductiontitle"/><tocitem text="JMS 服务器：控制：恢复生产" target="JMSjmsserverjmsserverresumeproductiontitle"/><tocitem text="JMS 服务器：控制：暂停使用" target="JMSjmsserverjmsserverpauseconsumptiontitle"/><tocitem text="JMS 服务器：控制：恢复使用" target="JMSjmsserverjmsserverresumeconsumptiontitle"/><tocitem text="JMS 服务器：控制：暂停插入" target="JMSjmsserverjmsserverpauseinsertiontitle"/><tocitem text="JMS 服务器：控制：恢复插入" target="JMSjmsserverjmsserverresumeinsertiontitle"/></tocitem><tocitem text="JMS 服务器：注释" target="JMSjmsserverjmsservernotestitle"/><tocitem text="服务器会话池" target="JMSjmssessionjmssessionpooltabletitle"><tocitem text="创建 JMS 会话池" target="JMSjmssessioncreatejmssessionpooltitle"/><tocitem text="JMS 服务器：JMS 会话池：配置" target="JMSjmssessionjmssessionpoolconfigtitle"/><tocitem text="删除 JMS 会话池" target="JMSjmssessiondeletejmssessionpooltitle"/><tocitem text="JMS 服务器：JMS 会话池：注释" target="JMSjmssessionjmssessionpoolnotestitle"/></tocitem><tocitem text="连接使用者" target="JMSjmssessionjmsconnectionconsumertabletitle"><tocitem text="创建 JMS 连接使用者" target="JMSjmssessioncreateconnectionconsumertitle"/><tocitem text="JMS 服务器：会话池：连接使用者：配置" target="JMSjmssessionjmsconnectionconsumerconfigtitle"/><tocitem text="JMS 连接使用者" target="JMSjmssessionjmsconnectionconsumerruntimetitle"/><tocitem text="删除 JMS 连接使用者" target="JMSjmssessiondeleteconnectionconsumertitle"/><tocitem text="JMS 服务器：会话池：连接使用者：注释" target="JMSjmssessionjmsconnectionconsumernotestitle"/></tocitem></tocitem>
+
+
+        
+  <tocitem text="存储转发代理" target="JMSjmssafagentsafagenttabletitle"><tocitem text="创建存储转发代理" target="JMSjmssafagentcreatesafagentpagetitle"/><tocitem text="存储转发代理：配置：一般信息" target="JMSjmssafagentsafagentconfiggeneraltitle"/><tocitem text="存储转发代理：配置：阈值与限额" target="JMSjmssafagentsafagentconfigthresholdstitle"/><tocitem text="存储转发代理：JMS 日志记录" target="JMSjmssafagentsafagentloggingtitle"/><tocitem text="存储转发代理：监视：统计信息" target="JMSjmssafagentsafagentmonitoringtitle"/><tocitem text="存储转发代理：监视：统计信息：暂停传入" target="JMSjmssafagentsafagentpauseincomingtitle"/><tocitem text="存储转发代理：监视：统计信息：恢复传入" target="JMSjmssafagentsafagentresumeincomingtitle"/><tocitem text="存储转发代理：监视：统计信息：暂停转发" target="JMSjmssafagentsafagentpauseforwardingtitle"/><tocitem text="存储转发代理：监视：统计信息：恢复转发" target="JMSjmssafagentsafagentresumeforwardingtitle"/><tocitem text="存储转发代理：监视：统计信息：暂停接收" target="JMSjmssafagentsafagentpausereceivingtitle"/><tocitem text="存储转发代理：监视：统计信息：恢复接收" target="JMSjmssafagentsafagentresumereceivingtitle"/><tocitem text="存储转发代理：监视：远程端点" target="JMSjmssafagentsafagentmonitoringremoteendpointstitle"/><tocitem text="存储转发代理：监视：远程端点：JMS 消息" target="JMSjmssafagentremoteendpointmessagetabletitle"/><tocitem text="存储转发代理：监视：远程端点：JMS 消息详细资料" target="JMSjmssafagentremoteendpointjmsmessagedetailtitle"/><tocitem text="存储转发代理：监视：远程端点：SAF 消息" target="JMSjmssafagentremoteendpointsafmessagetabletitle"/><tocitem text="存储转发代理：监视：远程端点：SAF 消息详细资料" target="JMSjmssafagentremoteendpointsafmessagedetailtitle"/><tocitem text="存储转发代理：监视：远程端点：暂停传入" target="JMSjmssafagentremoteendpointpauseincomingtitle"/><tocitem text="存储转发代理：监视：远程端点：恢复传入" target="JMSjmssafagentremoteendpointresumeincomingtitle"/><tocitem text="存储转发代理：监视：远程端点：暂停转发" target="JMSjmssafagentremoteendpointpauseforwardingtitle"/><tocitem text="存储转发代理：监视：远程端点：恢复转发" target="JMSjmssafagentremoteendpointresumeforwardingtitle"/><tocitem text="存储转发代理：监视：远程端点：全部失效" target="JMSjmssafagentremoteendpointexpirealltitle"/><tocitem text="存储转发代理：监视：远程端点：全部清除" target="JMSjmssafagentremoteendpointpurgealltitle"/><tocitem text="存储转发代理：监视：对话" target="JMSjmssafagentsafagentmonitoringconversationstitle"/><tocitem text="存储转发代理：监视：对话：销毁" target="JMSjmssafagentdestroyconversationtitle"/><tocitem text="存储转发代理：目标" target="JMSjmssafagentsafagenttargetdeploytitle"/><tocitem text="删除存储转发代理" target="JMSjmssafagentdeletesafagentpagetitle"/><tocitem text="存储转发代理：注释" target="JMSjmssafagentsafagentnotestitle"/></tocitem>
+
+
+        
+  <tocitem text="JMS 模块" target="JMSjmsmodulestitle"><tocitem text="JMS 模块资源" target="JMSjmsjmsoverviewtitle"><tocitem text="JMS 模块：安全角色" target="JMSjmsmodulesjmsmoduleroletabletitle"/><tocitem text="编辑 JMS 模块范围角色条件" target="JMSjmsmodulesjmsmodulerolemanagetitle"/><tocitem text="创建 JMS 模块范围角色" target="JMSjmsmodulesjmsmodulerolecreatetitle"/><tocitem text="删除 JMS 模块范围角色" target="JMSjmsmodulesjmsmoduleroledeletetitle"/><tocitem text="JMS 模块：安全策略" target="JMSjmsmodulesjmsmodulepoliciestitle"/><tocitem text="JMS 模块：目标" target="JMSjmsjmstargetstitle"/><tocitem text="JMS：测试" target="JMSjmsjmstestingtitle"/></tocitem><tocitem text="在 JMS 系统模块中创建资源" target="JMSjmssystemmodulecreateentitytitle"/><tocitem text="创建 JMS 系统模块" target="JMSjmsmodulessystemcreatejmsmoduletitle"><tocitem text="JMS 系统模块：配置：一般信息" target="JMSjmssystemmoduleconfiggeneraltitle"/><tocitem text="JMS 系统模块：管理子部署" target="JMSjmssystemmodulesubdeploymenttitle"/><tocitem text="JMS 系统模块：创建子部署" target="JMSjmssystemmodulecreatesubdeploymenttitle"/><tocitem text="JMS 系统模块：定位子部署" target="JMSjmssystemmodulesubdeploymenttargetstitle"/><tocitem text="JMS 系统模块：安全角色" target="JMSjmssystemmodulessecurityroletabletitle"/><tocitem text="编辑 JMS 系统模块范围角色条件" target="JMSjmssystemmodulessecurityrolemanagetitle"/><tocitem text="创建 JMS 系统模块范围角色" target="JMSjmssystemmodulessecurityrolecreatetitle"/><tocitem text="删除 JMS 系统模块范围角色" target="JMSjmssystemmodulessecurityroledeletetitle"/><tocitem text="JMS 系统模块：安全策略" target="JMSjmssystemmodulessecuritypoliciestitle"/><tocitem text="JMS 系统模块：目标" target="JMSjmssystemmoduleconfigtargetstitle"/><tocitem text="JMS 系统模块：注释" target="JMSjmssystemmoduleconfignotestitle"/><tocitem text="删除 JMS 系统模块子部署" target="JMSjmssystemmoduledeletesubdeploymenttitle"/><tocitem text="删除 JMS 系统模块资源" target="JMSjmsmodulessystemdeletejmsmoduleresourcetitle"/><tocitem text="删除 JMS 系统模块" target="JMSjmsmodulessystemdeletejmsmoduletitle"/></tocitem><tocitem text="限额" target="JMSjmsquotatabletitle"><tocitem text="限额：配置" target="JMSjmsquotaconfiggeneraltitle"/><tocitem text="限额：注释" target="JMSjmsquotanotestitle"/></tocitem><tocitem text="模板" target="JMSjmstemplatestemplatetabletitle"><tocitem text="JMS 模板：配置：一般信息" target="JMSjmstemplatesjmstemplateconfiggeneraltitle"/><tocitem text="JMS 模板：配置：阈值与限额" target="JMSjmstemplatesjmstemplateconfigthresholdstitle"/><tocitem text="JMS 模板：配置：覆盖" target="JMSjmstemplatesjmstemplateconfigoverridetitle"/><tocitem text="JMS 模板：配置：重新传送" target="JMSjmstemplatesjmstemplateconfigredeliverytitle"/><tocitem text="JMS 模板：配置：日志记录" target="JMSjmstemplatesjmstemplateloggingtitle"/><tocitem text="JMS 模板：配置：多点传送" target="JMSjmstemplatesjmstemplatemulticasttitle"/><tocitem text="JMS 模板：配置：子部署" target="JMSjmstemplatesjmstemplategroupparamstabletitle"/><tocitem text="为错误目标创建 JMS 模板子部署" target="JMSjmstemplatescreatejmstemplategroupparamtitle"/><tocitem text="JMS 模板：配置：子部署：一般信息" target="JMSjmstemplatesjmstemplateconfiggroupparamtitle"/><tocitem text="删除 JMS 模板子部署" target="JMSjmstemplatesdeletejmstemplategroupparamtitle"/><tocitem text="JMS 模板：注释" target="JMSjmstemplatesjmstemplatenotestitle"/></tocitem><tocitem text="目标关键字" target="JMSjmsdestinationsdestinationkeytabletitle"><tocitem text="JMS 目标关键字：配置" target="JMSjmsdestinationsjmsdestinationkeyconfigtitle"/><tocitem text="JMS 目标关键字：注释" target="JMSjmsdestinationsjmsdestinationkeynotestitle"/></tocitem><tocitem text="主题" target="JMSjmsdestinationstopictabletitle"><tocitem text="JMS 主题：配置：一般信息" target="JMSjmsdestinationsjmstopicconfiggeneraltitle"/><tocitem text="JMS 主题：配置：阈值与限额" target="JMSjmsdestinationsjmstopicconfigthresholdstitle"/><tocitem text="JMS 主题：配置：覆盖" target="JMSjmsdestinationsjmstopicconfigoverridestitle"/><tocitem text="JMS 主题：配置：日志记录" target="JMSjmsjmstopicloggingconfigtitle"/><tocitem text="JMS 主题：配置：传送失败" target="JMSjmsdestinationsjmstopicconfigredeliverytitle"/><tocitem text="JMS 主题：配置：多点传送" target="JMSjmsdestinationsjmstopicmulticasttitle"/><tocitem text="JMS 主题：监视：统计信息" target="JMSjmsdestinationsjmstopicmonitortitle"/><tocitem text="JMS 主题：监视：持久订户" target="JMSjmssubscribersjmsdurablesubscriberruntimetitle"/><tocitem text="JMS 主题：监视：持久订户：查看持久订户详细资料" target="JMSjmssubscribersjmsdurablesubscriberdetailtitle"/><tocitem text="JMS 主题：监视：持久订户：创建持久订户" target="JMSjmssubscriberscreatejmsdurablesubscriberpagetitle"/><tocitem text="JMS 主题：监视：持久订户：删除持久订户" target="JMSjmssubscribersdeletejmsdurablesubscribertitle"/><tocitem text="JMS 主题：控制" target="JMSjmsdestinationsjmstopiccontroltabletitle"/><tocitem text="JMS 主题：暂停生产" target="JMSjmsdestinationsjmstopicpauseproductiontitle"/><tocitem text="JMS 主题：控制：恢复生产" target="JMSjmsdestinationsjmstopicresumeproductiontitle"/><tocitem text="JMS 主题：控制：暂停使用" target="JMSjmsdestinationsjmstopicpauseconsumptiontitle"/><tocitem text="JMS 主题：控制：恢复使用" target="JMSjmsdestinationsjmstopicresumeconsumptiontitle"/><tocitem text="JMS 主题：控制：暂停插入" target="JMSjmsdestinationsjmstopicpauseinsertiontitle"/><tocitem text="JMS 主题：控制：恢复插入" target="JMSjmsdestinationsjmstopicresumeinsertiontitle"/><tocitem text="JMS 主题：安全：角色" target="JMSjmsdestinationsjmstopicroletabletitle"/><tocitem text="编辑 JMS 主题范围角色条件" target="JMSjmsdestinationsjmstopicrolemanagetitle"/><tocitem text="创建 JMS 主题范围角色" target="JMSjmsdestinationsjmstopicrolecreatetitle"/><tocitem text="删除 JMS 主题范围角色" target="JMSjmsdestinationsjmstopicroledeletetitle"/><tocitem text="JMS 主题：安全策略" target="JMSjmsdestinationsjmstopicpoliciestitle"/><tocitem text="JMS 主题：子部署" target="JMSjmsdestinationsjmstopictargetstitle"/><tocitem text="JMS 主题：注释" target="JMSjmsdestinationsjmstopicnotestitle"/></tocitem><tocitem text="队列" target="JMSjmsdestinationsqueuetabletitle"><tocitem text="JMS 队列：配置：一般信息" target="JMSjmsdestinationsjmsqueueconfiggeneraltitle"/><tocitem text="JMS 队列：配置：阈值与限额" target="JMSjmsdestinationsjmsqueueconfigthresholdstitle"/><tocitem text="JMS 队列：配置：覆盖" target="JMSjmsdestinationsjmsqueueconfigoverridestitle"/><tocitem text="JMS 队列：配置：日志记录" target="JMSjmsjmsqueueloggingconfigtitle"/><tocitem text="JMS 队列：配置：传送失败" target="JMSjmsdestinationsjmsqueueredeliverytitle"/><tocitem text="JMS 队列：监视：统计信息" target="JMSjmsdestinationsjmsqueuemonitortitle"/><tocitem text="JMS 队列：控制" target="JMSjmsdestinationsjmsqueuecontroltabletitle"/><tocitem text="JMS 队列：控制：暂停生产" target="JMSjmsdestinationsjmsqueuepauseproductiontitle"/><tocitem text="JMS 队列：控制：恢复生产" target="JMSjmsdestinationsjmsqueueresumeproductiontitle"/><tocitem text="JMS 队列：控制：暂停使用" target="JMSjmsdestinationsjmsqueuepauseconsumptiontitle"/><tocitem text="JMS 队列：控制：恢复使用" target="JMSjmsdestinationsjmsqueueresumeconsumptiontitle"/><tocitem text="JMS 队列：控制：暂停插入" target="JMSjmsdestinationsjmsqueuepauseinsertiontitle"/><tocitem text="JMS 队列：控制：恢复插入" target="JMSjmsdestinationsjmsqueueresumeinsertiontitle"/><tocitem text="JMS 队列：安全：角色" target="JMSjmsdestinationsjmsqueueroletabletitle"/><tocitem text="编辑 JMS 队列范围角色条件" target="JMSjmsdestinationsjmsqueuerolemanagetitle"/><tocitem text="创建 JMS 队列范围角色" target="JMSjmsdestinationsjmsqueuerolecreatetitle"/><tocitem text="删除 JMS 队列范围角色" target="JMSjmsdestinationsjmsqueueroledeletetitle"/><tocitem text="JMS 队列：安全策略" target="JMSjmsdestinationsjmsqueuepoliciestitle"/><tocitem text="JMS 队列：子部署" target="JMSjmsdestinationsjmsqueuetargetstitle"/><tocitem text="JMS 队列：注释" target="JMSjmsdestinationsjmsqueuenotestitle"/></tocitem><tocitem text="消息管理" target="JMSjmsmessagejmsmessagetabletitle"><tocitem text="JMS 消息：生成消息" target="JMSjmsmessagecreatejmsmessagetitle"/><tocitem text="JMS 消息：查看详细资料" target="JMSjmsmessagejmsmessagedetailtitle"/><tocitem text="JMS 消息：删除消息" target="JMSjmsmessagedeletejmsmessagetitle"/><tocitem text="JMS 消息：移动消息" target="JMSjmsmessagemovejmsmessagetitle"/><tocitem text="JMS 消息：导入消息" target="JMSjmsmessageimportjmsmessagetitle"/><tocitem text="JMS 消息：导出消息" target="JMSjmsmessageexportjmsmessagetitle"/></tocitem><tocitem text="连接工厂" target="JMSjmsconnectionconnectionfactorytabletitle"><tocitem text="JMS 连接工厂：配置：一般信息" target="JMSjmsconnectionjmsconnectionfactoryconfiggeneraltitle"/><tocitem text="JMS 连接工厂：配置：默认传送" target="JMSjmsconnectionjmsconnectionfactoryconfigdefaultdeliveryparamstitle"/><tocitem text="JMS 连接工厂：配置：客户机" target="JMSjmsconnectionjmsconnectionfactoryconfigclientparamstitle"/><tocitem text="JMS 连接工厂：配置：流控制" target="JMSjmsconnectionjmsconnectionfactoryconfigflowcontrolparamstitle"/><tocitem text="JMS 连接工厂：配置：事务处理" target="JMSjmsconnectionjmsconnectionfactoryconfigtransactionparamstitle"/><tocitem text="JMS 连接工厂：配置：负载平衡" target="JMSjmsconnectionjmsconnectionfactoryconfigloadbalancingparamstitle"/><tocitem text="JMS 连接工厂：配置：安全" target="JMSjmsconnectionjmsconnectionfactoryconfigsecurityparamstitle"/><tocitem text="JMS 连接工厂：子部署" target="JMSjmsconnectionsubdeploymenttitle"/><tocitem text="JMS 连接工厂：注释" target="JMSjmsconnectionjmsconnectionfactorynotestitle"/></tocitem><tocitem text="分布式主题" target="JMSjmsdistributeddestinationstopictabletitle"><tocitem text="统一分布式主题" target="notused"><tocitem text="统一分布式主题：配置：一般信息" target="JMSjmsuniformdestinationsjmstopicconfiggeneraltitle"/><tocitem text="统一分布式主题：配置：阈值与限额" target="JMSjmsuniformdestinationsjmstopicconfigthresholdstitle"/><tocitem text="统一分布式主题：配置：覆盖" target="JMSjmsuniformdestinationsjmstopicconfigoverridestitle"/><tocitem text="统一分布式目标：配置：日志记录" target="JMSjmsuniformdestinationloggingconfigtitle"/><tocitem text="统一分布式主题：配置：重新传送" target="JMSjmsuniformdestinationsjmstopicconfigredeliverytitle"/><tocitem text="统一分布式主题：配置：多点传送" target="JMSjmsuniformdestinationsjmstopicmulticasttitle"/><tocitem text="统一分布式目标：配置：成员" target="JMSjmsuniformdistributedmemberstitle"/><tocitem text="JMS 统一分布式主题：安全：角色" target="JMSjmsuniformdistdestinationjmsuniformdistributedtopicroletabletitle"/><tocitem text="编辑 JMS 统一分布式主题范围角色条件" target="JMSjmsuniformdistdestinationjmsuniformdistributedtopicrolemanagetitle"/><tocitem text="创建 JMS 统一分布式主题范围角色" target="JMSjmsuniformdistdestinationjmsuniformdistributedtopicrolecreatetitle"/><tocitem text="删除 JMS 统一分布式主题范围角色" target="JMSjmsuniformdistdestinationjmsuniformdistributedtopicroledeletetitle"/><tocitem text="统一分布式主题：安全：策略" target="JMSjmsuniformdistributedtopicsecuritypoliciestitle"/><tocitem text="统一分布式主题：监视" target="JMSjmsuniformdestinationsjmstopicmonitortitle"/><tocitem text="统一分布式主题：子部署" target="JMSjmsuniformdestinationtopicsubdeploymenttitle"/><tocitem text="统一分布式主题：注释" target="JMSjmsuniformdestinationsjmstopicnotestitle"/></tocitem><tocitem text="加权分布式主题" target="notused"><tocitem text="加权分布式主题：配置：一般信息" target="JMSjmsdistributeddestinationsjmsdistributedtopicconfiggeneraltitle"/><tocitem text="加权分布式主题：成员" target="JMSjmsdistributeddestinationsjmsdistributedtopicmemberstabletitle"/><tocitem text="创建加权分布式目标成员" target="JMSjmsdistributedestitioncreatemembertitle"/><tocitem text="加权分布式主题：成员：配置" target="JMSjmsdistributeddestinationsjmsdistributedtopicmemberconfigtitle"/><tocitem text="删除加权分布式目标成员" target="JMSjmsdistributeddestinationsdeletedistributeddestinationmembertitle"/><tocitem text="加权分布式主题：成员：注释" target="JMSjmsdistributeddestinationsjmsdistributedtopicmembernotestitle"/><tocitem text="加权分布式主题：注释" target="JMSjmsdistributeddestinationsjmsdistributedtopicnotestitle"/></tocitem></tocitem><tocitem text="分布式队列" target="JMSjmsdistributeddestinationsqueuetabletitle"><tocitem text="统一分布式队列" target="notused"><tocitem text="统一分布式队列：配置：一般信息" target="JMSjmsuniformdestinationsjmsqueueconfiggeneraltitle"/><tocitem text="统一分布式队列：配置：阈值与限额" target="JMSjmsuniformdestinationsjmsqueueconfigthresholdstitle"/><tocitem text="统一分布式队列：配置：覆盖" target="JMSjmsuniformdestinationsjmsqueueconfigoverridestitle"/><tocitem text="统一分布式目标：配置：日志记录" target="JMSjmsuniformdestinationloggingconfigtitle"/><tocitem text="统一分布式队列：配置：传送失败" target="JMSjmsuniformdestinationsjmsqueueredeliverytitle"/><tocitem text="统一分布式目标：配置：成员" target="JMSjmsuniformdistributedmemberstitle"/><tocitem text="JMS 统一分布式队列：安全：角色" target="JMSjmsuniformdistdestinationjmsuniformdistributedqueueroletabletitle"/><tocitem text="编辑 JMS 统一分布式队列范围角色条件" target="JMSjmsuniformdistdestinationjmsuniformdistributedqueuerolemanagetitle"/><tocitem text="创建 JMS 统一分布式队列范围角色" target="JMSjmsuniformdistdestinationjmsuniformdistributedqueuerolecreatetitle"/><tocitem text="删除 JMS 统一分布式队列范围角色" target="JMSjmsuniformdistdestinationjmsuniformdistributedqueueroledeletetitle"/><tocitem text="统一分布式队列：安全策略" target="JMSjmsuniformdistributedqueuesecuritypoliciestitle"/><tocitem text="统一分布式队列：监视" target="JMSjmsuniformdistdestinationjmsuniformdistributedqueuemonitortitle"/><tocitem text="统一分布式队列：子部署" target="JMSjmsuniformdestinationqueuesubdeploymenttitle"/><tocitem text="统一分布式队列：注释" target="JMSjmsuniformdestinationsjmsqueuenotestitle"/></tocitem><tocitem text="加权分布式队列" target="notused"><tocitem text="加权分布式队列：配置：一般信息" target="JMSjmsdistributeddestinationsjmsdistributedqueueconfiggeneraltitle"/><tocitem text="加权分布式队列：成员" target="JMSjmsdistributeddestinationsjmsdistributedqueuememberstabletitle"/><tocitem text="创建加权分布式目标成员" target="JMSjmsdistributedestitioncreatemembertitle"/><tocitem text="加权分布式队列：成员：配置" target="JMSjmsdistributeddestinationsjmsdistributedqueuememberconfigtitle"/><tocitem text="删除加权分布式目标成员" target="JMSjmsdistributeddestinationsdeletedistributeddestinationmembertitle"/><tocitem text="加权分布式队列：成员：注释" target="JMSjmsdistributeddestinationsjmsdistributedqueuemembernotestitle"/><tocitem text="加权分布式队列：注释" target="JMSjmsdistributeddestinationsjmsdistributedqueuenotestitle"/></tocitem></tocitem><tocitem text="外部服务器" target="Jmsjmsforeignjmsforeignjmsservertabletitle"><tocitem text="外部服务器：配置：一般信息" target="JMSjmsforeignjmsforeignjmsserverconfigtitle"/><tocitem text="外部服务器：子部署" target="JMSjmsforeignjmssubdeploymenttitle"/><tocitem text="外部服务器：注释" target="JMSjmsforeignjmsforeignjmsservernotestitle"/><tocitem text="外部连接工厂" target="JMSjmsforeignjmsforeignjmsconnectionfactorytitle"/><tocitem text="创建外部连接工厂" target="JMSjmsforeignconnectionfactorycreatetitle"/><tocitem text="外部连接工厂：配置" target="JMSjmsforeignjmsforeignjmsconnectionfactoryconfigtitle"/><tocitem text="删除外部连接工厂" target="JMSjmsforeignconnectionfactorydeleteforeignconnectionfactorypagetitle"/><tocitem text="外部 JMS 连接工厂：注释" target="JMSjmsforeignjmsforeignjmsconnectionfactorynotestitle"/><tocitem text="外部目标" target="JMSjmsforeignjmsforeignjmsdestinationtitle"/><tocitem text="创建外部目标" target="Jmsjmsforeigndestinationcreatetitle"/><tocitem text="外部目标：配置" target="JMSjmsforeignjmsforeignjmsdestinationconfigtitle"/><tocitem text="删除外部目标" target="JMSjmsforeigndestinationdeleteforeigndestinationpagetitle"/><tocitem text="外部目标：注释" target="JMSjmsforeignjmsforeignjmsdestinationnotestitle"/></tocitem><tocitem text="创建 SAF 导入目标" target="JMSjmssafdestinationimportedcreatetitle"><tocitem text="SAF 导入目标：配置：一般信息" target="JMSjmssafimportedestinationconfigtitle"/><tocitem text="SAF 导入目标：子部署" target="JMSjmssafimportedestinationsubdeploymenttitle"/><tocitem text="SAF 导入目标：注释" target="JMSjmssafdimportedestinationnotestitle"/><tocitem text="SAF 队列" target="JMSjmssafqueuetabletitle"/><tocitem text="SAF 主题" target="JMSjmssaftopictabletitle"/><tocitem text="创建 SAF 队列" target="JMSjmssafqueuecreatetitle"/><tocitem text="创建 SAF 主题" target="JMSjmssaftopiccreatetitle"/><tocitem text="删除 SAF 队列" target="JMSjmssafqueuedeletetitle"/><tocitem text="删除 SAF 主题" target="JMSjmssaftopicdeletetitle"/><tocitem text="SAF 目标：一般信息" target="JMSjmssafdestinationconfigtitle"/><tocitem text="SAF 目标：日志记录" target="JMSjmssafdestinationloggingtitle"/><tocitem text="SAF 目标：安全：策略" target="JMSjmssafdestinationconfigsecuritypoliciestitle"/><tocitem text="SAF 目标：安全：角色" target="JMSjmssafdestinationconfigsecurityroletabletitle"/><tocitem text="编辑 SAF 目标范围角色条件" target="JMSjmssafdestinationconfigsecurityrolemanagetitle"/><tocitem text="创建 SAF 目标范围角色" target="JMSjmssafdestinationconfigsecurityrolecreatetitle"/><tocitem text="删除 SAF 目标范围角色" target="JMSjmssafdestinationconfigsecurityroledeletetitle"/><tocitem text="SAF 目标：注释" target="JMSjmssafdestinationnotestitle"/></tocitem><tocitem text="创建远程 SAF 上下文" target="JMSjmsremotesafcontextcreatetitle"><tocitem text="远程 SAF 上下文：配置" target="JMSjmsremotesafcontextconfigtitle"/><tocitem text="远程 SAF 上下文：注释" target="JMSjmsremotesafcontextnotestitle"/></tocitem><tocitem text="创建 SAF 错误处理策略" target="notused"><tocitem text="错误处理：配置" target="JMSjmserrorhandlingconfigtitle"/><tocitem text="错误处理：注释" target="JMSjmserrorhandlingnotestitle"/></tocitem></tocitem>
+
+
+        
+  <tocitem text="桥接程序" target="Bridgebridgemessagingbridgetitle"><tocitem text="创建桥接程序实例" target="Bridgebridgecreatebridgetitle"/><tocitem text="消息传送桥接程序：配置：一般信息" target="Bridgebridgemessagingbridgeconfiggeneraltitle"/><tocitem text="消息传送桥接程序：配置：连接重试" target="Bridgebridgemessagingbridgeconfigconnectionretrytitle"/><tocitem text="消息传送桥接程序：配置：事务处理" target="Bridgebridgemessagingbridgeconfigtransactionstitle"/><tocitem text="消息传送桥接程序：目标" target="Bridgebridgemessagingbridgetargetdeploytitle"/><tocitem text="删除桥接程序实例" target="Bridgebridgedeletebridgepagetitle"/><tocitem text="消息传送桥接程序：注释" target="Bridgebridgemessagingbridgenotestitle"/><tocitem text="JMS 桥接程序目标" target="Bridgebridgejmsbridgedestinationtitle"><tocitem text="创建 JMS 桥接程序目标" target="Bridgebridgecreatejmsbridgedestinationtitle"/><tocitem text="JMS 桥接程序目标：配置" target="Bridgebridgejmsbridgedestinationconfigtitle"/><tocitem text="删除 JMS 桥接程序目标" target="Bridgebridgedeletejmsbridgedestinationtitle"/><tocitem text="JMS 桥接程序目标：注释" target="Bridgebridgejmsbridgedestinationnotestitle"/></tocitem></tocitem>
+
+
+        
+  <tocitem text="JMS 目标" target="blank">
+    <tocitem text="加权分布式队列：配置：一般信息" target="JMSjmsdistributeddestinationsjmsdistributedqueueconfiggeneraltitle"/>
+    <tocitem text="加权分布式队列：成员：配置" target="JMSjmsdistributeddestinationsjmsdistributedqueuememberconfigtitle"/>
+    <tocitem text="加权分布式队列：成员" target="JMSjmsdistributeddestinationsjmsdistributedqueuememberstabletitle"/>
+    <tocitem text="分布式队列：监视" target="JMSjmsdistributeddestinationsjmsdistributedqueuemonitortitle"/>
+    <tocitem text="加权分布式队列：注释" target="JMSjmsdistributeddestinationsjmsdistributedqueuenotestitle"/>
+    <tocitem text="分布式队列" target="JMSjmsdistributeddestinationsqueuetabletitle"/>
+    <tocitem text="加权分布式主题：配置：一般信息" target="JMSjmsdistributeddestinationsjmsdistributedtopicconfiggeneraltitle"/>
+    <tocitem text="加权分布式主题：成员：配置" target="JMSjmsdistributeddestinationsjmsdistributedtopicmemberconfigtitle"/>
+    <tocitem text="加权分布式主题：成员" target="JMSjmsdistributeddestinationsjmsdistributedtopicmemberstabletitle"/>
+    <tocitem text="加权分布式主题：注释" target="JMSjmsdistributeddestinationsjmsdistributedtopicnotestitle"/>
+    <tocitem text="JMS 分布式主题" target="JMSjmsdistributeddestinationstopictabletitle"/>
+  </tocitem>
+
+      </tocitem>
+
+      
+  <tocitem text="JDBC 数据源" target="JDBCjdbcdatasourcesdatasourcetabletitle"><tocitem text="创建 JDBC 数据源" target="JDBCjdbcdatasourcescreatejdbcdatasourcetitle"/><tocitem text="创建 JDBC GridLink 数据源" target="JDBCjdbcdatasourcescreategridlinkdatasourcetitle"/><tocitem text="删除 JDBC 数据源" target="JDBCjdbcdatasourcesdeletejdbcdatasourcepagetitle"/><tocitem text="JDBC 数据源：配置：一般信息" target="JDBCjdbcdatasourcesjdbcdatasourceconfiggeneraltitle"/><tocitem text="JDBC 数据源：配置：连接池" target="JDBCjdbcdatasourcesjdbcdatasourceconfigconnectionpooltitle"/><tocitem text="JDBC 数据源：ONS 客户机配置：一般信息" target="JDBCjdbcdatasourcesjdbcdatasourceonsclientconfiggeneraltitle"/><tocitem text="JDBC 数据源：Oracle 参数" target="JDBCjdbcdatasourcesjdbcdatasourceconfigoracleparamstitle"/><tocitem text="JDBC 数据源：配置：事务处理" target="JDBCjdbcdatasourcesjdbcdatasourceconfigtransactiontitle"/><tocitem text="JDBC 数据源：配置：诊断" target="JDBCjdbcdatasourcesjdbcdatasourceconfigdiagnosticstitle"/><tocitem text="JDBC 数据源：配置：标识选项" target="JDBCjdbcdatasourcesjdbcdatasourceconfigsecuritytitle"/><tocitem text="JDBC 数据源：监视：统计信息" target="JDBCjdbcdatasourcesjdbcdatasourcemonitorstatisticstitle"/><tocitem text="GridLink 数据源实例：监视：统计信息" target="JDBCjdbcdatasourcesjdbcoracledsinstancemonitorstatisticstitle"/><tocitem text="GridLink 数据源 ONS 客户机：监视：统计信息" target="JDBCjdbcdatasourcesjdbcoracledsonsmonitorstatisticstitle"/><tocitem text="JDBC 数据源：ONS：测试" target="JDBCjdbcdatasourcesjdbcoracledsonstestingtitle"/><tocitem text="JDBC 数据源：监视：测试" target="JDBCjdbcdatasourcesjdbcdatasourcemonitortestingtitle"/><tocitem text="JDBC 数据源：控制" target="JDBCjdbcdatasourcesjdbcdatasourcecontroltitle"/><tocitem text="JDBC 数据源：收缩" target="JDBCjdbcdatasourcesshrinkjdbcdatasourcetitle"/><tocitem text="JDBC 数据源：重置" target="JDBCjdbcdatasourcesresetjdbcdatasourcetitle"/><tocitem text="JDBC 数据源：清除语句高速缓存" target="JDBCjdbcdatasourcesclearstatementcachetitle"/><tocitem text="JDBC 数据源：挂起" target="JDBCjdbcdatasourcessuspendjdbcdatasourcetitle"/><tocitem text="JDBC 数据源：强制挂起" target="JDBCjdbcdatasourcesforcesuspendjdbcdatasourcetitle"/><tocitem text="JDBC 数据源：关闭" target="JDBCjdbcdatasourcesshutdownjdbcdatasourcetitle"/><tocitem text="JDBC 数据源：强制关闭" target="JDBCjdbcdatasourcesforceshutdownjdbcdatasourcetitle"/><tocitem text="JDBC 数据源：恢复" target="JDBCjdbcdatasourcesresumejdbcdatasourcetitle"/><tocitem text="JDBC 数据源：启动" target="JDBCjdbcdatasourcesstartjdbcdatasourcetitle"/><tocitem text="JDBC 数据源：注释" target="JDBCjdbcdatasourcesjdbcdatasourcenotestitle"/><tocitem text="安全" target="blank">
+      <tocitem text="JDBC 数据源：安全：角色" target="JDBCjdbcdatasourcessecurityroletabletitle"/>
+
+      <tocitem text="编辑 JDBC 数据源角色" target="JDBCjdbcdatasourcessecurityrolemanagetitle"/>
+
+      <tocitem text="创建 JDBC 数据源范围角色" target="JDBCjdbcdatasourcessecurityrolecreatetitle"/>
+
+      <tocitem text="删除 JDBC 数据源范围角色" target="JDBCjdbcdatasourcessecurityroledeletetitle"/>
+
+      <tocitem text="JDBC 数据源：安全：策略" target="JDBCjdbcdatasourcessecuritypoliciestitle"/>
+
+      <tocitem text="JDBC 数据源：安全：身份证明映射" target="JDBCjdbcdatasourcesjdbcdatasourcesecuritycredentialmappingtitle"/>
+
+      <tocitem text="JDBC 数据源：创建身份证明映射" target="JDBCjdbcdatasourcescreatecredentialmappingtitle"/>
+
+      <tocitem text="JDBC 数据源：安全：身份证明映射" target="JDBCjdbcdatasourceseditcredentialmappingtitle"/>
+
+      <tocitem text="删除 JDBC 数据源身份证明映射" target="JDBCjdbcdatasourcesdeletecredentialmappingtitle"/>
+    </tocitem><tocitem text="JDBC 数据源" target="JDBCjdbcdatasourcesdatasourcemonitortabletitle"/></tocitem>
+
+  <tocitem text="多数据源" target="blank">
+    <tocitem text="创建多数据源" target="JDBCjdbcvirtualdatasourcescreatevirtualdatasourcetitle"/>
+
+    <tocitem text="JDBC 多数据源：配置：一般信息" target="JDBCjdbcvirtualdatasourcesjdbcvirtualdatasourceconfiggeneraltitle"/>
+
+    <tocitem text="JDBC 多数据源：配置：数据源" target="JDBCjdbcvirtualdatasourcesjdbcvirtualdatasourceconfigdatasourcestitle"/>
+
+    <tocitem text="JDBC 多数据源：目标" target="JDBCjdbcvirtualdatasourcesjdbcvirtualdatasourcetargetdeploytitle"/>
+
+    <tocitem text="JDBC 多数据源：注释" target="JDBCjdbcvirtualdatasourcesjdbcvirtualdatasourcenotestitle"/>
+  </tocitem>
+
+  <tocitem text="JDBC 应用程序模块" target="blank">
+    <tocitem text="部署：JDBC 模块：概览" target="JDBCjdbcjdbcoverviewtitle"/>
+
+    <tocitem text="部署：JDBC 模块：配置：JDBC 多数据源：一般信息" target="JDBCjdbcapplicationvirtualdatasourcesjdbcvirtualdatasourceconfiggeneraltitle"/>
+
+    <tocitem text="部署：JDBC 模块：目标" target="JDBCjdbcjdbctargetstitle"/>
+
+    <tocitem text="JDBC 模块：控制" target="JDBCjdbcjdbccontroltitle"/>
+
+    <tocitem text="部署：监视：JDBC：数据源" target="J2EEappdeploymentsmonitorjdbctabletitle"/>
+
+    <tocitem text="安全" target="blank">
+      <tocitem text="部署：JDBC 模块：安全：角色" target="JDBCjdbcapplicationroletablepagetitle"/>
+
+      <tocitem text="编辑 JDBC 应用程序范围角色条件" target="JDBCjdbcapplicationrolemanagepagetitle"/>
+
+      <tocitem text="创建 JDBC 应用程序范围角色" target="JDBCjdbcapplicationrolecreatepagetitle"/>
+
+      <tocitem text="删除 JDBC 应用程序范围角色" target="JDBCjdbcapplicationroledeletepagetitle"/>
+
+      <tocitem text="JDBC 模块：安全角色" target="JDBCjdbcmoduleroletablepagetitle"/>
+
+      <tocitem text="编辑 JDBC 模块范围角色条件" target="JDBCjdbcmodulerolemanagepagetitle"/>
+
+      <tocitem text="创建 JDBC 模块范围角色" target="JDBCjdbcmodulerolecreatepagetitle"/>
+
+      <tocitem text="删除 JDBC 模块范围角色" target="JDBCjdbcmoduleroledeletepagetitle"/>
+
+      <tocitem text="编辑 JDBC 应用程序范围策略条件" target="JDBCjdbcapplicationsecuritypoliciestitle"/>
+
+      <tocitem text="编辑 JDBC 应用程序模块范围策略条件" target="JDBCjdbcmodulesecuritypoliciestitle"/>
+
+      <tocitem text="部署：JDBC 模块：安全：身份证明映射" target="JDBCjdbcapplicationsecuritycredentialstabletitle"/>
+
+      <tocitem text="创建身份证明映射" target="JDBCjdbcapplicationcreatecredentialmappingtitle"/>
+
+      <tocitem text="删除 JDBC 模块身份证明映射" target="JDBCjdbcapplicationdeletecredentialmappingtitle"/>
+    </tocitem>
+  </tocitem>
+
+  <tocitem text="JDBC 数据源工厂" target="JDBCjdbcdatasourcefactorydatasourcefactorytabletitle"><tocitem text="创建 JDBC 数据源工厂" target="JDBCjdbcdatasourcefactorycreatedatasourcefactorytitle"/><tocitem text="删除 JDBC 数据源工厂" target="JDBCjdbcdatasourcefactorydeletedatasourcefactorytitle"/><tocitem text="JDBC 数据源工厂：配置" target="JDBCjdbcdatasourcefactorydatasourcefactoryconfigtitle"/></tocitem>
+
+
+      
+  <tocitem text="持久性存储" target="JMSjmsstoresjmsstoretitle"><tocitem text="创建文件存储" target="JMSjmsstorescreatejmsfilestorepagetitle"/><tocitem text="创建 JDBC 存储" target="JMSjmsstorescreatejmsjdbcstorepagetitle"/><tocitem text="文件存储：配置" target="JMSjmsstoresjmsfilestoreconfigtitle"/><tocitem text="文件存储：监视：统计信息" target="JMSjmsstoresfilestoremonitoringtitle"/><tocitem text="文件存储：监视：连接" target="JMSjmsstoresfilestoreconnectionstitle"/><tocitem text="JDBC 存储：配置" target="JMSjmsstoresjmsjdbcstoreconfigtitle"/><tocitem text="JDBC 存储：监视：统计信息" target="JMSjmsstoresjdbcstoremonitoringtitle"/><tocitem text="JDBC 存储：监视：连接" target="JMSjmsstoresjdbcstoreconnectionstitle"/><tocitem text="删除持久性存储" target="JMSjmsstoresdeletejmsstoretitle"/><tocitem text="文件存储：注释" target="JMSjmsstoresjmsfilestorenotestitle"/><tocitem text="JDBC 存储：注释" target="JMSjmsstoresjmsjdbcstorenotestitle"/></tocitem>
+
+
+      
+  <tocitem text="路径服务" target="JMSjmspathservicetabletitle"><tocitem text="创建路径服务" target="JMSjmspathservicecreatepathservicetitle"/><tocitem text="路径服务：配置" target="JMSjmspathserviceconfiggeneraltitle"/><tocitem text="路径服务：目标" target="JMSjmspathservicetargetstitle"/><tocitem text="删除路径服务" target="JMSjmspathservicedeletepathservicetitle"/><tocitem text="路径服务：注释" target="JMSjmspathservicenotestitle"/></tocitem>
+
+
+      
+  <tocitem text="外部 JNDI 提供程序" target="Corecorejndiforeignjndiprovidertabletitle"><tocitem text="创建外部 JNDI 提供程序" target="Corecorejndicreateforeignjndiproviderpagetitle"/><tocitem text="配置：外部 JNDI 提供程序" target="Corecorejndiforeignjndiproviderconfiggeneraltitle"/><tocitem text="配置：定位外部 JNDI 提供程序" target="Corecorejndiforeignjndiprovidertargetdeploytitle"/><tocitem text="外部 JNDI 提供程序：注释" target="Corecorejndiforeignjndiprovidernotestitle"/><tocitem text="创建外部 JNDI 链接" target="Corecorejndicreateforeignjndilinkpagetitle"/><tocitem text="配置：外部 JNDI 链接" target="Corecorejndiforeignjndilinkconfigtitle"/><tocitem text="配置：外部 JNDI 链接" target="Corecorejndiforeignjndiproviderconfiglinkstitle"/><tocitem text="外部 JNDI 链接：注释" target="Corecorejndiforeignjndilinknotestitle"/><tocitem text="删除外部 JNDI 提供程序" target="Corecorejndideleteforeignjndiprovidertitle"/><tocitem text="删除外部 JNDI 链接" target="Corecorejndideleteforeignjndilinktitle"/></tocitem>
+
+
+      
+  <tocitem text="工作上下文" target="blank">
+    <tocitem text="定义新的工作上下文资源" target="Securityworkcontextpathcreatetitle"/>
+
+    <tocitem text="工作上下文路径表" target="Securityworkcontextpathtabletitle"/>
+
+    <tocitem text="工作上下文资源：策略" target="Securityworkcontextpoliciestitle"/>
+
+    <tocitem text="工作上下文：角色" target="Securityworkcontextroletabletitle"/>
+
+    <tocitem text="编辑工作上下文范围角色" target="Securityworkcontextrolestitle"/>
+
+    <tocitem text="创建工作上下文范围角色" target="Securityworkcontextrolecreatetitle"/>
+
+    <tocitem text="删除工作上下文范围角色" target="Securityworkcontextroledeletetitle"/>
+  </tocitem>
+
+
+      
+  <tocitem text="XML 注册表" target="Corexmlregistryxmlregistrytitle"><tocitem text="创建 XML 注册表" target="Corexmlregistrycreatexmlregistrytitle"/><tocitem text="克隆 XML 注册表" target="Corexmlregistryclonexmlregistrytitle"/><tocitem text="创建 XML 语法分析器选择条目" target="Corexmlregistrycreatexmlparserselectregistryentrytitle"/><tocitem text="克隆 XML 语法分析器选择条目" target="Corexmlregistryclonexmlparserselectregistryentrytitle"/><tocitem text="创建 XML 实体规范条目" target="Corexmlregistrycreatexmlentityspecregistryentrytitle"/><tocitem text="克隆 XML 实体规范条目" target="Corexmlregistryclonexmlentityspecregistryentrytitle"/><tocitem text="删除 XML 注册表" target="Corexmlregistrydeletexmlregistrytitle"/><tocitem text="删除 XML 实体规范条目" target="Corexmlregistrydeletexmlentityspecregistryentrytitle"/><tocitem text="删除 XML 语法分析器选择条目" target="Corexmlregistrydeletexmlparserselectregistryentrytitle"/><tocitem text="XML 注册表：配置" target="Corexmlregistryxmlregistryconfigtitle"/><tocitem text="XML 注册表：目标" target="Corexmlregistryxmlregistrytargetdeploytitle"/><tocitem text="XML 注册表：内容：实体规范条目：表" target="Corexmlregistryxmlregistrycontentsentityspectitle"/><tocitem text="XML 注册表：内容：实体规范条目：配置" target="Corexmlregistryxmlentityspecregistryentryconfigtitle"/><tocitem text="XML 注册表：内容：实体规范条目：注释" target="Corexmlregistryxmlentityspecregistryentrynotestitle"/><tocitem text="XML 注册表：内容：语法分析器选择条目：表" target="Corexmlregistryxmlregistrycontentsparserselecttitle"/><tocitem text="XML 注册表：内容：语法分析器选择条目：配置" target="Corexmlregistryxmlparserselectregistryentryconfigtitle"/><tocitem text="XML 注册表：内容：语法分析器选择条目：注释" target="Corexmlregistryxmlparserselectregistryentrynotestitle"/><tocitem text="XML 注册表：注释" target="Corexmlregistryxmlregistrynotestitle"/></tocitem>
+
+
+      
+  <tocitem text="XML 实体高速缓存" target="blank">
+    <tocitem text="创建 XML 实体高速缓存" target="Corexmlregistrycreatexmlentitycachetitle"/>
+
+    <tocitem text="删除 XML 实体高速缓存" target="Corexmlregistrydeletexmlentitycachetitle"/>
+
+    <tocitem text="XML 实体高速缓存：表" target="Corexmlregistryxmlentitycachetitle"/>
+
+    <tocitem text="XML 实体高速缓存：配置" target="Corexmlregistryxmlentitycacheconfigtitle"/>
+
+    <tocitem text="XML 实体高速缓存：监视：当前" target="Corexmlregistryxmlentitycachemonitorcurrenttitle"/>
+
+    <tocitem text="XML 实体高速缓存：监视：累积" target="Corexmlregistryxmlentitycachemonitorcumulativetitle"/>
+
+    <tocitem text="XML 实体高速缓存：监视：历史" target="Corexmlregistryxmlentitycachemonitorhistoricaltitle"/>
+
+    <tocitem text="XML 实体高速缓存：注释" target="Corexmlregistryxmlentitycachenotestitle"/>
+  </tocitem>
+
+
+      
+  <tocitem text="jCom" target="blank">
+    <tocitem text="指定新的 jCOM 类" target="Securityjcomcreatejcomclasstitle"/>
+
+    <tocitem text="jCOM：jCOM 类：表" target="Securityjcomjcomclasstabletitle"/>
+
+    <tocitem text="jCOM：安全：策略" target="Securityjcomjcompoliciestitle"/>
+
+    <tocitem text="jCOM 服务：安全：角色" target="Securityjcomjcomroletabletitle"/>
+
+    <tocitem text="编辑 jCOM 范围角色条件" target="Securityjcomjcomrolemanagetitle"/>
+
+    <tocitem text="创建 jCOM 服务范围角色" target="Securityjcomjcomrolecreatetitle"/>
+
+    <tocitem text="删除 jCOM 服务范围角色" target="Securityjcomjcomroledeletetitle"/>
+  </tocitem>
+
+
+      
+  <tocitem text="资源适配器" target="blank">
+    <tocitem text="创建出站连接" target="J2EEconnectorcreateoutboundconnectiontitle"/>
+
+    <tocitem text="删除出站连接" target="J2EEconnectordeleteoutboundconnectiontitle"/>
+
+    <tocitem text="创建身份证明映射条目" target="J2EEconnectorcreatesecuritycredentialtitle"/>
+
+    <tocitem text="编辑身份证明映射条目" target="J2EEconnectoreditsecuritycredentialtitle"/>
+
+    <tocitem text="删除身份证明映射条目" target="J2EEconnectordeletesecuritycredentialtitle"/>
+
+    <tocitem text="创建管理对象" target="J2EEconnectorcreateadminobjecttitle"/>
+
+    <tocitem text="删除管理对象" target="J2EEconnectordeleteadminobjecttitle"/>
+
+    <tocitem text="资源适配器：概览" target="J2EEconnectorconnectoroverviewtitle"/>
+
+    <tocitem text="资源适配器：配置：一般信息" target="J2EEconnectorconfigurationgeneraltitle"/>
+
+    <tocitem text="资源适配器：配置：属性" target="J2EEconnectorconfigurationpropertiestitle"/>
+
+    <tocitem text="资源适配器：配置：出站连接池" target="J2EEconnectorconfigurationoutboundconnectionstitle"><tocitem text="资源适配器：出站连接池：一般信息" target="J2EEconnectorconnectoroutboundconnectionconfiggeneraltitle"/><tocitem text="资源适配器：出站连接池：属性" target="J2EEconnectorconnectoroutboundconnectionconfigpropertiestitle"/><tocitem text="资源适配器：出站连接池：事务处理" target="J2EEconnectorconnectoroutboundconnectionconfigtransactiontitle"/><tocitem text="资源适配器：出站连接池：验证" target="J2EEconnectorconnectoroutboundconnectionconfigauthenticationtitle"/><tocitem text="资源适配器：出站连接池：连接池" target="J2EEconnectorconnectoroutboundconnectionconfigpooltitle"/><tocitem text="资源适配器：出站连接池：日志记录" target="J2EEconnectorconnectoroutboundconnectionconfigloggingtitle"/></tocitem>
+
+    <tocitem text="资源适配器：管理对象" target="J2EEconnectorconnectorconfigurationadminobjectstitle"><tocitem text="资源适配器：配置：管理对象：属性" target="J2EEconnectorconnectoradminobjectsconfigpropertiestitle"/></tocitem>
+
+    <tocitem text="资源适配器：配置：工作量" target="J2EEconnectorconnectorconfigurationworkloadtitle"/>
+
+    <tocitem text="独立资源适配器：安全角色" target="J2EEconnectorconnectorapplicationroletabletitle"/>
+
+    <tocitem text="编辑独立资源适配器范围角色条件" target="J2EEconnectorconnectorapplicationrolemanagetitle"/>
+
+    <tocitem text="创建独立资源适配器范围角色" target="J2EEconnectorconnectorapplicationrolecreatetitle"/>
+
+    <tocitem text="删除独立资源适配器范围角色" target="J2EEconnectorconnectorapplicationroledeletetitle"/>
+
+    <tocitem text="资源适配器模块：安全角色" target="J2EEconnectorconnectormoduleroletabletitle"/>
+
+    <tocitem text="编辑资源适配器模块角色条件" target="J2EEconnectorconnectormodulerolemanagetitle"/>
+
+    <tocitem text="创建资源适配器模块范围角色" target="J2EEconnectorconnectormodulerolecreatetitle"/>
+
+    <tocitem text="删除资源适配器模块范围角色" target="J2EEconnectorconnectormoduleroledeletetitle"/>
+
+    <tocitem text="资源适配器：安全：策略" target="J2EEconnectorapplicationpoliciespagetitle"/>
+
+    <tocitem text="资源适配器模块：安全策略" target="J2EEconnectorconnectormodulepoliciestitle"/>
+
+    <tocitem text="资源适配器：安全：身份证明映射" target="J2EEconnectorsecuritycredentialmappingtabletitle"/>
+
+    <tocitem text="资源适配器：安全：主用户" target="J2EEconnectorconnectorsecurityprincipalstitle"/>
+
+    <tocitem text="资源适配器：目标" target="J2EEconnectorconnectortargetstitle"/>
+
+    <tocitem text="资源适配器：注释" target="J2EEconnectorconnectornotestitle"/>
+
+    <tocitem text="资源适配器：控制：资源适配器" target="J2EEconnectorconnectorapplicationcontrolresourceadaptertitle"><tocitem text="资源适配器：控制：资源适配器" target="J2EEconnectorconnectormodulecontrolresourceadaptertitle"/><tocitem text="资源适配器：全部恢复" target="J2EEconnectorlifecycleresumealltitle"/><tocitem text="资源适配器：恢复入站服务" target="J2EEconnectorlifecycleresumeinboundtitle"/><tocitem text="资源适配器：恢复出站服务" target="J2EEconnectorlifecycleresumeoutboundtitle"/><tocitem text="资源适配器：恢复工作服务" target="J2EEconnectorlifecycleresumeworktitle"/><tocitem text="资源适配器：挂起所有服务" target="J2EEconnectorlifecyclesuspendalltitle"/><tocitem text="资源适配器：挂起入站服务" target="J2EEconnectorlifecyclesuspendinboundtitle"/><tocitem text="资源适配器：挂起出站服务" target="J2EEconnectorlifecyclesuspendoutboundtitle"/><tocitem text="资源适配器：挂起工作服务" target="J2EEconnectorlifecyclesuspendworktitle"/></tocitem>
+
+    <tocitem text="资源适配器：控制：出站连接池" target="J2EEconnectorconnectorcontrolconnectionpoolstitle"><tocitem text="资源适配器：控制：重置出站连接池" target="J2EEconnectorcontrolresetpooltitle"/><tocitem text="资源适配器：控制：强制重置出站连接池" target="J2EEconnectorcontrolforceresetpooltitle"/></tocitem>
+
+    <tocitem text="资源适配器：测试" target="J2EEconnectorconnectortestingtitle"/>
+
+    <tocitem text="资源适配器：监视" target="J2EEconnectorconnectormonitorconnectiontabletitle"><tocitem text="资源适配器：监视：入站监听程序" target="J2EEconnectorconnectormonitorinboundlistenerstitle"/><tocitem text="资源适配器：监视：出站连接池" target="J2EEconnectorconnectormonitorconnectionpooltabletitle"/><tocitem text="资源适配器：监视：工作量" target="J2EEconnectorconnectormonitorworkloadtitle"/></tocitem>
+  </tocitem>
+
+
+      
+  <tocitem text="邮件" target="blank">
+    <tocitem text="创建邮件会话" target="Mailcreatemailsessionpagetitle"/>
+	    <tocitem text="删除邮件会话" target="Mailmaildeletemailsessionpagetitle"/>
+
+    <tocitem text="邮件会话：配置" target="Mailmailmailsessionconfigtitle"/>
+
+    <tocitem text="邮件会话：注释" target="Mailmailmailsessionnotestitle"/>
+
+    <tocitem text="邮件会话" target="Mailmailsessiontitle"/>
+
+    <tocitem text="邮件会话：目标" target="Mailmailmailsessiontargetdeploytitle"/>
+  </tocitem>
+
+
+      
+  <tocitem text="File T3" target="blank">
+	    <tocitem text="创建 File (T3) 资源" target="FileT3createfilet3pagetitle"/>
+		<tocitem text="删除 File (T3) 资源" target="FileT3filet3deletefilet3pagetitle"/>
+    <tocitem text="服务：File T3：配置" target="FileT3filet3filet3configtitle"/>
+    <tocitem text="服务：File T3：注释" target="FileT3filet3filet3notestitle"/>
+    <tocitem text="服务：File T3 (已废弃)" target="FileT3filet3filet3title"/>
+    <tocitem text="服务：File T3：定位和部署" target="FileT3filet3filet3targetdeploytitle"/>
+  </tocitem>
+
+
+      <tocitem text="JTA" target="blank">
+        
+  <tocitem text="域：配置：JTA" target="Corecoredomaindomainconfigjtatitle"/>
+
+      </tocitem>
+    </tocitem>
+
+    <tocitem text="安全领域" target="blank">
+      
+  <tocitem text="安全域" target="blank">
+    <tocitem text="域：安全：一般信息" target="Securitysecuritydomaindomainconfiggeneraltitle"/>
+
+    <tocitem text="域：安全：嵌入式 LDAP" target="Securitysecuritydomaindomainconfigembeddedldaptitle"/>
+
+    <tocitem text="域：安全：筛选器" target="Securitysecuritydomaindomainconfigfiltertitle"/>
+
+    <tocitem text="域：安全：取消用户锁定" target="Corecoredomainunlockusertitle"/>
+
+    <tocitem text="域：安全：角色" target="Securitysecuritydomaindomainconfigroletabletitle"/>
+
+    <tocitem text="编辑域范围角色条件" target="Securitysecuritydomaindomainconfigrolemanagetitle"/>
+
+    <tocitem text="创建域范围角色" target="Securitysecuritydomaindomainconfigrolecreatetitle"/>
+
+    <tocitem text="删除域范围角色" target="Securitysecuritydomaindomainconfigroledeletetitle"/>
+
+    <tocitem text="域：安全策略：配置" target="Securitysecuritydomaindomainconfigpoliciesconfigtitle"/>
+
+    <tocitem text="域：安全策略：文件下载" target="Securitysecuritydomaindomainconfigpoliciesfiledownloadtitle"/>
+
+    <tocitem text="域：安全策略：文件上载" target="Securitysecuritydomaindomainconfigpoliciesfileuploadtitle"/>
+
+    <tocitem text="域：安全策略：用户封锁" target="Securitysecuritydomaindomainconfigpoliciesuserlockouttitle"/>
+
+    <tocitem text="域：安全策略：查看日志" target="Securitysecuritydomaindomainconfigpoliciesviewlogtitle"/>
+
+    <tocitem text="域：安全策略：标识断言" target="Securitysecuritydomaindomainconfigpoliciesidentityassertiontitle"/>
+
+    <tocitem text="域：安全策略：SSH" target="Securitysecuritydomaindomainconfigpoliciessshtitle"/>
+
+    <tocitem text="JMX 策略编辑器" target="Securitysecuritydomaindomainconfigpoliciesjmxresourcetitle"/>
+
+    <tocitem text="编辑 JMX 策略" target="Securitysecuritydomaindomainconfigpoliciesjmxedittitle"/>
+
+    <tocitem text="域：安全：证书撤销检查：一般信息" target="Securitysecuritydomaincertrevocconfiggeneraltitle"/>
+
+    <tocitem text="域：安全：证书撤销检查：OCSP" target="Securitysecuritydomaincertrevocconfigocsptitle"/>
+
+    <tocitem text="域：安全：证书撤销检查：CRL" target="Securitysecuritydomaincertrevocconfigcrltitle"/>
+
+    <tocitem text="域：安全：证书撤销检查：证书颁发机构覆盖" target="Securitysecuritydomaincertrevoccatabletitle"/>
+
+    <tocitem text="域：安全：证书撤销检查：证书颁发机构覆盖：配置：一般信息" target="Securitysecuritydomaincertrevoccaconfiggeneraltitle"/>
+
+    <tocitem text="域：安全：证书撤销检查：证书颁发机构覆盖：配置：OCSP" target="Securitysecuritydomaincertrevoccaconfigocsptitle"/>
+
+    <tocitem text="域：安全：证书撤销检查：证书颁发机构覆盖：配置：CRL" target="Securitysecuritydomaincertrevoccaconfigcrltitle"/>
+
+    <tocitem text="域：安全：证书撤销检查：证书颁发机构覆盖：注释" target="Securitysecuritydomaincertrevoccanotestitle"/>
+
+    <tocitem text="域：安全：证书撤销检查：创建证书颁发机构覆盖" target="Securitysecuritydomaincertrevoccacreatetitle"/>
+
+    <tocitem text="域：安全：证书撤销检查：删除证书颁发机构覆盖" target="Securitysecuritydomaincertrevoccadeletetitle"/>
+
+  </tocitem>
+
+
+      
+  <tocitem text="安全角色" target="blank">
+    <tocitem text="角色和策略：角色" target="Securitysecurityglobalroletabletitle"/>
+
+    <tocitem text="安全领域：创建范围角色" target="Securitysecurityrolecreateroletitle"/>
+     <tocitem text="角色和策略：编辑全局角色" target="Securitysecurityroleeditroletitle"/>
+
+    <tocitem text="安全策略：添加条件" target="Securitysecuritypolicyaddconditionsstarttitle"/>
+
+    <tocitem text="定义策略条件" target="Securitysecuritypolicyaddconditionseditargumentstitle"/>
+  </tocitem>
+
+
+      
+  <tocitem text="安全策略" target="blank">
+    <tocitem text="角色和策略：策略" target="Securitysecurityglobalpolicytabletitle"/>
+
+    <tocitem text="安全领域：创建策略" target="Securitysecuritypolicyeditortitle"/>
+
+    <tocitem text="安全：根级别策略" target="Securitysecurityrootlevelpoliciespagetitle"/>
+
+    <tocitem text="安全策略：添加条件" target="Securitysecuritypolicyaddconditionsstarttitle"/>
+
+    <tocitem text="定义策略条件" target="Securitysecuritypolicyaddconditionseditargumentstitle"/>
+  </tocitem>
+
+
+      
+  <tocitem text="安全提供程序" target="blank">
+    <tocitem text="验证提供程序" target="Securitysecurityprovidersauthenticationprovidertitle"><tocitem text="创建验证提供程序" target="Securitysecurityproviderscreateauthenticatortitle"/><tocitem text="删除验证提供程序" target="Securitysecurityprovidersdeleteatnpagetitle"/><tocitem text="验证提供程序：重新排序" target="Securitysecurityprovidersreorderauthenticatorstitle"/><tocitem text="Active Directory 验证提供程序：公用" target="Securitysecurityauthenticatoractivedirectoryauthenticatorconfigcommontitle"/><tocitem text="Active Directory 验证提供程序：特定于提供程序" target="Securitysecurityauthenticatoractivedirectoryauthenticatorconfigproviderspecifictitle"/><tocitem text="Active Directory 验证器提供程序：性能" target="Securitysecurityauthenticatoractivedirectoryauthenticatorcachingtitle"/><tocitem text="定制 DBMS 验证器：公用" target="Securitysecurityauthenticatorcustomdbmsauthenticatorconfigcommontitle"/><tocitem text="定制 DBMS 验证器：特定于提供程序" target="Securitysecurityauthenticatorcustomdbmsauthenticatorconfigproviderspecifictitle"/><tocitem text="定制 DBMS 验证提供程序：性能" target="Securitysecurityauthenticatorcustomdbmsauthenticatorcachingtitle"/><tocitem text="默认验证提供程序：公用" target="Securitysecurityauthenticatordefaultauthenticatorconfigcommontitle"/><tocitem text="默认验证提供程序：特定于提供程序" target="Securitysecurityauthenticatordefaultauthenticatorconfigproviderspecifictitle"/><tocitem text="默认验证提供程序：性能" target="Securitysecurityauthenticatordefaultauthenticatorcachingtitle"/><tocitem text="默认标识断言者：公用" target="Securitysecurityauthenticatordefaultidentityasserterconfigcommontitle"/><tocitem text="默认标识断言者：特定于提供程序" target="Securitysecurityauthenticatordefaultidentityasserterconfigproviderspecifictitle"/><tocitem text="iPlanet 验证提供程序：公用" target="Securitysecurityauthenticatoriplanetauthenticatorconfigcommontitle"/><tocitem text="iPlanet 验证提供程序：特定于提供程序" target="Securitysecurityauthenticatoriplanetauthenticatorconfigproviderspecifictitle"/><tocitem text="iPlanet 验证器提供程序：性能" target="Securitysecurityauthenticatoriplanetauthenticatorcachingtitle"/><tocitem text="LDAP 验证提供程序：公用" target="Securitysecurityauthenticatorldapauthenticatorconfigcommontitle"/><tocitem text="LDAP 验证提供程序：特定于提供程序" target="Securitysecurityauthenticatorldapauthenticatorconfigproviderspecifictitle"/><tocitem text="LDAP 验证器提供程序：性能" target="Securitysecurityauthenticatorldapauthenticatorcachingtitle"/><tocitem text="LDAP X509 标识断言者：公用" target="Securitysecurityauthenticatorldapx509identityasserterconfigcommontitle"/><tocitem text="LDAP X509 标识断言者：特定于提供程序" target="Securitysecurityauthenticatorldapx509identityasserterconfigproviderspecifictitle"/><tocitem text="协商标识断言者：公用" target="Securitysecurityauthenticatornegotiateidentityasserterconfigcommontitle"/><tocitem text="协商标识断言者：特定于提供程序" target="Securitysecurityauthenticatornegotiateidentityasserterconfigproviderspecifictitle"/><tocitem text="Novell 验证提供程序：公用" target="Securitysecurityauthenticatornovellauthenticatorconfigcommontitle"/><tocitem text="Novell 验证提供程序：特定于提供程序" target="Securitysecurityauthenticatornovellauthenticatorconfigproviderspecifictitle"/><tocitem text="Novell 验证提供程序：性能" target="Securitysecurityauthenticatornovellauthenticatorcachingtitle"/><tocitem text="Open LDAP 验证提供程序：公用" target="Securitysecurityauthenticatoropenldapauthenticatorconfigcommontitle"/><tocitem text="Open LDAP 验证提供程序：特定于提供程序" target="Securitysecurityauthenticatoropenldapauthenticatorconfigproviderspecifictitle"/><tocitem text="Open LDAP 验证提供程序：性能" target="Securitysecurityauthenticatoropenldapauthenticatorcachingtitle"/><tocitem text="Oracle Internet Directory 验证提供程序：公用" target="Securitysecurityauthenticatororacleinternetdirectoryauthenticatorconfigcommontitle"/><tocitem text="Oracle Internet Directory 验证提供程序：特定于提供程序" target="Securitysecurityauthenticatororacleinternetdirectoryauthenticatorconfigproviderspecifictitle"/><tocitem text="Oracle Internet Directory 验证器提供程序：性能" target="Securitysecurityauthenticatororacleinternetdirectoryauthenticatorcachingtitle"/><tocitem text="Oracle Virtual Directory 验证提供程序：公用" target="Securitysecurityauthenticatororaclevirtualdirectoryauthenticatorconfigcommontitle"/><tocitem text="Oracle Virtual Directory 验证提供程序：特定于提供程序" target="Securitysecurityauthenticatororaclevirtualdirectoryauthenticatorconfigproviderspecifictitle"/><tocitem text="Oracle Virtual Directory 验证器提供程序：性能" target="Securitysecurityauthenticatororaclevirtualdirectoryauthenticatorcachingtitle"/><tocitem text="只读 SQL 验证器：公用" target="Securitysecurityauthenticatorreadonlysqlauthenticatorconfigcommontitle"/><tocitem text="只读 SQL 验证器：特定于提供程序" target="Securitysecurityauthenticatorreadonlysqlauthenticatorconfigproviderspecifictitle"/><tocitem text="只读 SQL 验证器提供程序：性能" target="Securitysecurityauthenticatorreadonlysqlauthenticatorcachingtitle"/><tocitem text="SQL 验证器：公用" target="Securitysecurityauthenticatorsqlauthenticatorconfigcommontitle"/><tocitem text="SQL 验证器：特定于提供程序" target="Securitysecurityauthenticatorsqlauthenticatorconfigproviderspecifictitle"/><tocitem text="SQL 验证器提供程序：性能" target="Securitysecurityauthenticatorsqlauthenticatorcachingtitle"/><tocitem text="Windows NT 验证器：公用" target="Securitysecurityauthenticatorwindowsntauthenticatorconfigcommontitle"/><tocitem text="Windows NT 验证器：特定于提供程序" target="Securitysecurityauthenticatorwindowsntauthenticatorconfigproviderspecifictitle"/><tocitem text="领域适配器验证提供程序：公用" target="Securitysecurityauthenticatorrealmadapterauthenticatorconfigcommontitle"/><tocitem text="领域适配器验证提供程序：特定于提供程序" target="Securitysecurityauthenticatorrealmadapterauthenticatorconfigproviderspecifictitle"/><tocitem text="SAML 验证提供程序：公用" target="Securitysecurityauthenticatorsamlauthenticatorconfigcommontitle"/><tocitem text="SAML 验证提供程序：特定于提供程序" target="Securitysecurityauthenticatorsamlauthenticatorconfigproviderspecifictitle"/><tocitem text="SAML 标识断言者版本 2：公用" target="Securitysecurityauthenticatorsamlidentityasserterv2configcommontitle"/><tocitem text="SAML 标识断言者版本 2：特定于提供程序" target="Securitysecurityauthenticatorsamlidentityasserterv2configproviderspecifictitle"/><tocitem text="SAML 标识断言者版本 2：创建断言方" target="Securitysecurityprovidersamlidentityasserterv2createpartnertitle"/><tocitem text="SAML 标识断言者版本 2：删除断言方" target="Securitysecurityprovidersamlidentityasserterv2deletepartnerpagetitle"/><tocitem text="SAML 标识断言者版本 2：管理：合作伙伴" target="Securitysecurityproviderssamlidentityasserterv2managementpartnerstitle"/><tocitem text="SAML 标识断言者版本 2：断言方：配置" target="Securitysecurityproviderssamlidentityasserterv2managementpartnerconfiggeneraltitle"/><tocitem text="SAML 标识断言者版本 2：创建证书" target="Securitysecurityprovidersamlidentityasserterv2createcertificatetitle"/><tocitem text="SAML 标识断言者版本 2：查看证书" target="Securitysecurityproviderssamlidentityasserterv2viewcertificatetitle"/><tocitem text="SAML 标识断言者版本 2：管理：证书" target="Securitysecurityproviderssamlidentityasserterv2managementcertificatestitle"/><tocitem text="SAML 标识断言者版本 1：公用" target="Securitysecurityauthenticatorsamlidentityasserterconfigcommontitle"/><tocitem text="SAML 标识断言者版本 1：特定于提供程序" target="Securitysecurityauthenticatorsamlidentityasserterconfigproviderspecifictitle"/><tocitem text="SAML 标识断言者版本 1：管理" target="Securitysecurityproviderssamlidentityassertermanagementtitle"/><tocitem text="SAML 标识断言者版本 1：创建证书" target="Securitysecurityprovidersamlidentityassertercreatecertificatetitle"/><tocitem text="SAML 标识断言者版本 1：查看证书" target="Securitysecurityproviderssamlidentityasserterviewcertificatetitle"/><tocitem text="SAML 2.0 标识断言者：公用" target="Securitysecurityauthenticatorsaml2identityasserterconfigcommontitle"/><tocitem text="SAML 2.0 标识断言者：特定于提供程序" target="Securitysecurityauthenticatorsaml2identityasserterconfigproviderspecifictitle"/><tocitem text="SAML 2.0 标识断言者：管理" target="Securitysecurityproviderssaml20identityassertermanagementtitle"/><tocitem text="SAML 2.0 标识断言者：Web 一次登入标识提供程序合作伙伴：一般信息" target="Securitysecurityproviderssaml20webssoidentityproviderpartnerconfiggeneraltitle"/><tocitem text="SAML 2.0 标识断言者：Web 一次登入标识提供程序合作伙伴：一次登入服务端点" target="Securitysecurityproviderssaml20webssoidentityproviderpartnerssoendpointstitle"/><tocitem text="SAML 2.0 标识断言者：Web 服务标识提供程序合作伙伴：一般信息" target="Securitysecurityproviderssaml20wssidentityproviderpartnerconfiggeneraltitle"/><tocitem text="SAML 2.0 标识断言者：Web 服务标识提供程序合作伙伴：断言签名证书" target="Securitysecurityproviderssaml20wssidentityproviderpartnerassertionsigningcertconfigtitle"/><tocitem text="SAML 2.0 标识断言者：Web 服务标识提供程序合作伙伴：导入断言签名证书" target="Securitysecurityproviderssaml20wssidentityproviderpartnerassertionsigningcertimportcertfromfiletitle"/><tocitem text="SAML 2.0 Web 一次登入合作伙伴：站点信息" target="Securitysecurityproviderssaml20webssopartnerconfigsiteinfotitle"/><tocitem text="SAML 2.0 Web 一次登入合作伙伴：Artifact 解决方案服务端点" target="Securitysecurityproviderssaml20webssopartnerarsendpointstitle"/><tocitem text="SAML 2.0 Web 一次登入合作伙伴：一次登入签名证书" target="Securitysecurityproviderssaml20webssopartnerssosigningcertconfigtitle"/><tocitem text="SAML 2.0 Web 一次登入合作伙伴：传输层客户机证书" target="Securitysecurityproviderssaml20webssopartnertransportlayerclientcertconfigtitle"/><tocitem text="SAML 2.0 Web 一次登入合作伙伴：导入传输层客户机证书" target="Securitysecurityproviderssaml20webssopartnertransportlayerclientcertimportcertfromfiletitle"/><tocitem text="SAML 2.0 标识断言者：创建 SAML 2.0 Web 一次登入标识提供程序合作伙伴" target="Securitysecurityproviderscreatesaml20webssoidentityproviderpartnertitle"/><tocitem text="SAML 2.0 标识断言者：创建 Web 服务标识提供程序合作伙伴" target="Securitysecurityproviderscreatesaml20wssidentityproviderpartnertitle"/><tocitem text="SAML 2.0 标识断言者：删除标识提供程序合作伙伴" target="Securitysecurityprovidersdeletesaml20identityproviderpartnertitle"/><tocitem text="安全提供程序：导出" target="Securitysecurityprovidersmigrationexporttitle"/><tocitem text="安全提供程序：导入" target="Securitysecurityprovidersmigrationimporttitle"/></tocitem>
+
+    <tocitem text="口令验证提供程序" target="Securitysecurityproviderspasswordvalidatortitle"><tocitem text="创建口令验证提供程序" target="Securitysecurityproviderscreatepasswordvalidatortitle"/><tocitem text="删除口令验证提供程序" target="Securitysecurityprovidersdeletepasswordvalidatorpagetitle"/><tocitem text="口令验证提供程序：重新排序" target="Securitysecurityprovidersreorderpasswordvalidatorstitle"/><tocitem text="系统口令验证提供程序：公用" target="Securitysecurityproviderssystempasswordvalidatorconfigcommontitle"/><tocitem text="系统口令验证提供程序：特定于提供程序" target="Securitysecurityproviderssystempasswordvalidatorproviderspecifictitle"/></tocitem>
+
+    <tocitem text="授权提供程序" target="Securitysecurityprovidersauthorizertitle"><tocitem text="创建授权提供程序" target="Securitysecurityproviderscreateauthorizertitle"/><tocitem text="删除授权提供程序" target="Securitysecurityprovidersdeleteauthorizerpagetitle"/><tocitem text="授权提供程序：重新排序" target="Securitysecurityprovidersreorderauthorizerstitle"/><tocitem text="WebLogic 授权提供程序：公用" target="Securitysecurityprovidersdefaultauthorizerconfigcommontitle"/><tocitem text="WebLogic 授权提供程序：特定于提供程序" target="Securitysecurityprovidersdefaultauthorizerproviderspecifictitle"/><tocitem text="领域适配器授权提供程序：公用" target="Securitysecurityprovidersrealmadapterauthorizerconfigcommontitle"/><tocitem text="领域适配器授权提供程序：特定于提供程序" target="Securitysecurityprovidersrealmadapterauthorizerproviderspecifictitle"/><tocitem text="XACML 授权提供程序：公用" target="Securitysecurityprovidersxacmlauthorizerconfigcommontitle"/><tocitem text="XACML 授权提供程序：特定于提供程序" target="Securitysecurityprovidersxacmlauthorizerproviderspecifictitle"/><tocitem text="安全提供程序：导出" target="Securitysecurityprovidersmigrationexporttitle"/><tocitem text="安全提供程序：导入" target="Securitysecurityprovidersmigrationimporttitle"/></tocitem>
+
+    <tocitem text="仲裁提供程序" target="Securitysecurityprovidersadjudicatortitle"><tocitem text="创建仲裁提供程序" target="Securitysecurityproviderscreateadjudicatortitle"/><tocitem text="删除仲裁提供程序" target="Securitysecurityprovidersdeleteadjudicatorpagetitle"/><tocitem text="WebLogic 仲裁提供程序：公用" target="Securitysecurityprovidersdefaultadjudicatorconfigcommontitle"/><tocitem text="WebLogic 仲裁提供程序：特定于提供程序" target="Securitysecurityprovidersdefaultadjudicatorproviderspecifictitle"/><tocitem text="安全提供程序：导出" target="Securitysecurityprovidersmigrationexporttitle"/><tocitem text="安全提供程序：导入" target="Securitysecurityprovidersmigrationimporttitle"/></tocitem>
+
+    <tocitem text="角色映射提供程序" target="Securitysecurityprovidersrolemappingtitle"><tocitem text="创建角色映射提供程序" target="Securitysecurityproviderscreaterolemappingtitle"/><tocitem text="删除角色映射提供程序" target="Securitysecurityprovidersdeleterolemappingpagetitle"/><tocitem text="角色映射提供程序：重新排序" target="Securitysecurityprovidersreorderrolemapperstitle"/><tocitem text="XACML 角色映射提供程序：公用" target="Securitysecurityprovidersxacmlrolemapperconfigcommontitle"/><tocitem text="XACML 角色映射提供程序：特定于提供程序" target="Securitysecurityprovidersxacmlrolemapperproviderspecifictitle"/><tocitem text="WebLogic 角色映射提供程序：公用" target="Securitysecurityprovidersdefaultrolemapperconfigcommontitle"/><tocitem text="WebLogic 角色映射提供程序：特定于提供程序" target="Securitysecurityprovidersdefaultrolemapperproviderspecifictitle"/><tocitem text="安全提供程序：导出" target="Securitysecurityprovidersmigrationexporttitle"/><tocitem text="安全提供程序：导入" target="Securitysecurityprovidersmigrationimporttitle"/></tocitem>
+
+    <tocitem text="审计提供程序" target="Securitysecurityprovidersauditingprovidertabletitle"><tocitem text="创建审计提供程序" target="Securitysecurityproviderscreateauditortitle"/><tocitem text="删除审计提供程序" target="Securitysecurityprovidersdeleteauditorpagetitle"/><tocitem text="审计提供程序：重新排序" target="Securitysecurityprovidersreorderauditorstitle"/><tocitem text="WebLogic 审计提供程序：公用" target="Securitysecurityprovidersdefaultauditorconfigcommontitle"/><tocitem text="WebLogic 审计提供程序：特定于提供程序" target="Securitysecurityprovidersdefaultauditorproviderspecifictitle"/><tocitem text="安全提供程序：导出" target="Securitysecurityprovidersmigrationexporttitle"/><tocitem text="安全提供程序：导入" target="Securitysecurityprovidersmigrationimporttitle"/></tocitem>
+
+    <tocitem text="身份证明映射提供程序" target="Securitysecurityproviderscredentialmappingprovidertitle"><tocitem text="创建身份证明映射提供程序" target="Securitysecurityproviderscreatecredentialmappertitle"/><tocitem text="删除身份证明映射提供程序" target="Securitysecurityprovidersdeletecredentialmapperpagetitle"/><tocitem text="身份证明映射提供程序：重新排序" target="Securitysecurityprovidersreordercredentialmapperstitle"/><tocitem text="默认身份证明映射器：公用" target="Securitysecurityprovidersdefaultcredentialmapperconfigcommontitle"/><tocitem text="默认身份证明映射器：特定于提供程序" target="Securitysecurityprovidersdefaultcredentialmapperproviderspecifictitle"/><tocitem text="PKI 身份证明映射提供程序：公用" target="Securitysecurityproviderspkicredentialmapperconfigcommontitle"/><tocitem text="PKI 身份证明映射提供程序：特定于提供程序" target="Securitysecurityproviderspkicredentialmapperproviderspecifictitle"/><tocitem text="SAML 身份证明映射提供程序版本 2：创建依赖方" target="Securitysecurityprovidersamlcredentialmapperv2createpartnertitle"/><tocitem text="SAML 身份证明映射器版本 2：删除证书" target="Securitysecurityproviderdeletesamlcredentialmapperv2certificatepagetitle"/><tocitem text="SAML 身份证明映射器版本 2：删除依赖方" target="Securitysecurityprovidersamlcredentialmapperv2deletepartnerpagetitle"/><tocitem text="SAML 身份证明映射提供程序版本 2：公用" target="Securitysecurityproviderssamlcredentialmapperv2configcommontitle"/><tocitem text="SAML 身份证明映射提供程序版本 2：特定于提供程序" target="Securitysecurityproviderssamlcredentialmapperv2providerspecifictitle"/><tocitem text="SAML 身份证明映射提供程序版本 2：创建证书" target="Securitysecurityprovidersamlcredentialmapperv2createcertificatetitle"/><tocitem text="SAML 身份证明映射提供程序版本 2：查看证书" target="Securitysecurityproviderssamlcredentialmapperv2viewcertificatetitle"/><tocitem text="SAML 身份证明映射提供程序版本 2：管理：合作伙伴" target="Securitysecurityproviderssamlcredentialmapperv2managementpartnerstitle"/><tocitem text="SAML 身份证明映射提供程序版本 2：依赖方：配置" target="Securitysecurityproviderssamlcredentialmapperv2managementpartnerconfiggeneraltitle"/><tocitem text="SAML 身份证明映射提供程序版本 2：管理：证书" target="Securitysecurityproviderssamlcredentialmapperv2managementcertificatestitle"/><tocitem text="SAML 身份证明映射提供程序版本 1：公用" target="Securitysecurityproviderssamlcredentialmapperconfigcommontitle"/><tocitem text="SAML 身份证明映射提供程序版本 1：特定于提供程序" target="Securitysecurityproviderssamlcredentialmapperproviderspecifictitle"/><tocitem text="SAML 2.0 身份证明映射提供程序：公用" target="Securitysecurityproviderssaml2credentialmapperconfigcommontitle"/><tocitem text="SAML 2.0 身份证明映射提供程序：特定于提供程序" target="Securitysecurityproviderssaml2credentialmapperproviderspecifictitle"/><tocitem text="SAML 2.0 身份证明映射提供程序：管理" target="Securitysecurityproviderssaml20credentialmappermanagementtitle"/><tocitem text="SAML 2.0 身份证明映射提供程序：Web 一次登入服务提供程序合作伙伴：断言使用者服务端点" target="Securitysecurityproviderssaml20webssoserviceproviderpartneracsendpointstitle"/><tocitem text="SAML 2.0 身份证明映射提供程序：Web 一次登入服务提供程序合作伙伴：一般信息" target="Securitysecurityproviderssaml20webssoserviceproviderpartnerconfiggeneraltitle"/><tocitem text="SAML 2.0 身份证明映射提供程序：Web 服务服务提供程序合作伙伴：一般信息" target="Securitysecurityproviderssaml20wssserviceproviderpartnerconfigtitle"/><tocitem text="SAML 2.0 Web 一次登入合作伙伴：站点信息" target="Securitysecurityproviderssaml20webssopartnerconfigsiteinfotitle"/><tocitem text="SAML 2.0 Web 一次登入合作伙伴：Artifact 解决方案服务端点" target="Securitysecurityproviderssaml20webssopartnerarsendpointstitle"/><tocitem text="SAML 2.0 Web 一次登入合作伙伴：一次登入签名证书" target="Securitysecurityproviderssaml20webssopartnerssosigningcertconfigtitle"/><tocitem text="SAML 2.0 Web 一次登入合作伙伴：传输层客户机证书" target="Securitysecurityproviderssaml20webssopartnertransportlayerclientcertconfigtitle"/><tocitem text="SAML 2.0 Web 一次登入合作伙伴：导入传输层客户机证书" target="Securitysecurityproviderssaml20webssopartnertransportlayerclientcertimportcertfromfiletitle"/><tocitem text="SAML 2.0 身份证明映射器：创建 Web 一次登入服务提供程序合作伙伴" target="Securitysecurityproviderscreatesaml20webssoserviceproviderpartnertitle"/><tocitem text="SAML 2.0 身份证明映射器：创建 Web 服务服务提供程序合作伙伴" target="Securitysecurityproviderscreatesaml20wssserviceproviderpartnertitle"/><tocitem text="SAML 2.0 身份证明映射器：删除服务提供程序合作伙伴" target="Securitysecurityprovidersdeletesaml20serviceproviderpartnertitle"/><tocitem text="安全提供程序：导出" target="Securitysecurityprovidersmigrationexporttitle"/><tocitem text="安全提供程序：导入" target="Securitysecurityprovidersmigrationimporttitle"/></tocitem>
+
+    <tocitem text="证书路径提供程序" target="Securitysecurityproviderscertpathprovidertabletitle"><tocitem text="创建证书路径提供程序" target="Securitysecurityproviderscreatecertpathtitle"/><tocitem text="删除证书路径提供程序" target="Securitysecurityprovidersdeletecertpathtitle"/><tocitem text="证书路径提供程序：重新排序" target="Securitysecurityprovidersreordercertpathproviderstitle"/><tocitem text="证书注册表：公用" target="Securitysecurityproviderscertificateregistryconfigcommontitle"/><tocitem text="证书注册表：特定于提供程序" target="Securitysecurityproviderscertificateregistryproviderspecifictitle"/><tocitem text="WebLogic CertPath 提供程序：公用" target="Securitysecurityprovidersweblogiccertpathproviderconfigcommontitle"/><tocitem text="WebLogic CertPath 提供程序：特定于提供程序" target="Securitysecurityprovidersweblogiccertpathproviderproviderspecifictitle"/><tocitem text="安全提供程序：导出" target="Securitysecurityprovidersmigrationexporttitle"/><tocitem text="安全提供程序：导入" target="Securitysecurityprovidersmigrationimporttitle"/></tocitem>
+
+    <tocitem text="证书注册表：管理" target="Securitysecurityproviderscertregistrymanagementtabletitle"><tocitem text="证书注册表：创建证书" target="Securitysecurityproviderscreatecertificatetitle"/><tocitem text="证书注册表：删除证书" target="Securitysecurityproviderdeletecertificatepagetitle"/><tocitem text="证书注册表：将证书复制到文件" target="Securitysecurityproviderscertcopytitle"/><tocitem text="证书注册表：查看证书" target="Securitysecurityprovidersviewcertificatetitle"/><tocitem text="安全提供程序：导出" target="Securitysecurityprovidersmigrationexporttitle"/><tocitem text="安全提供程序：导入" target="Securitysecurityprovidersmigrationimporttitle"/></tocitem>
+
+    <tocitem text="密钥库提供程序" target="Securitysecurityproviderskeystoreprovidertitle"><tocitem text="创建密钥库提供程序" target="Securitysecurityproviderscreatekeystoretitle"/><tocitem text="删除密钥库提供程序" target="Securitysecurityprovidersdeletekeystorepagetitle"/><tocitem text="密钥库提供程序：重新排序" target="Securitysecurityprovidersreorderkeystoreproviderstitle"/><tocitem text="WebLogic 密钥库提供程序：公用" target="Securitysecurityprovidersdefaultkeystoreconfigcommontitle"/><tocitem text="WebLogic 密钥库提供程序：特定于提供程序" target="Securitysecurityprovidersdefaultkeystoreproviderspecifictitle"/><tocitem text="安全提供程序：导出" target="Securitysecurityprovidersmigrationexporttitle"/><tocitem text="安全提供程序：导入" target="Securitysecurityprovidersmigrationimporttitle"/></tocitem>
+  </tocitem>
+
+
+      
+  <tocitem text="安全领域" target="blank">
+    <tocitem text="新建安全领域" target="Securitysecurityrealmcreaterealmpagetitle"/>
+
+    <tocitem text="删除安全领域" target="Securitysecurityrealmdeleterealmtitle"/>
+
+    <tocitem text="安全领域" target="Securitysecurityrealmrealmtabletitle"/>
+
+    <tocitem text="安全领域：一般信息" target="Securitysecurityrealmrealmgeneraltitle"/>
+
+    <tocitem text="安全领域：安全存储" target="Securitysecurityrealmrealmsecuritystoretitle"/>
+
+    <tocitem text="安全领域：用户封锁" target="Securitysecurityrealmrealmuserlockouttitle"/>
+
+    <tocitem text="安全领域：性能" target="Securitysecurityrealmperformancetitle"/>
+
+    <tocitem text="安全领域：用户" target="Securitysecurityrealmusertabletitle"/>
+
+    <tocitem text="安全领域：组" target="Securitysecurityrealmgrouptabletitle"/>
+
+    <tocitem text="安全领域：全局角色" target="Securitysecurityrealmrolestabletitle"/>
+
+    <tocitem text="安全领域：迁移：导入" target="Securitysecurityrealmmigrationimporttitle"/>
+
+    <tocitem text="安全领域：迁移：导出" target="Securitysecurityrealmmigrationexporttitle"/>
+  </tocitem>
+
+
+      
+  <tocitem text="安全用户和组" target="blank">
+    <tocitem text="用户：创建用户" target="Securitysecurityuserscreateuserpagetitle"/>
+
+    <tocitem text="用户：一般信息" target="Securitysecurityusersconfiggeneraltitle"/>
+
+    <tocitem text="用户：更改口令" target="Securitysecurityusersconfigchangepasswordtitle"/>
+
+    <tocitem text="用户：属性" target="Securitysecurityusersuserattributestabletitle"/>
+
+    <tocitem text="用户：组" target="Securitysecurityusersusergroupstitle"/>
+
+    <tocitem text="组：创建组" target="Securitysecurityuserscreategrouppagetitle"/>
+
+    <tocitem text="组：成员资格" target="Securitysecurityusersgroupmembershiptitle"/>
+
+    <tocitem text="组：一般信息" target="Securitysecurityusersconfiggroupstitle"/>
+  </tocitem>
+
+
+      
+  <tocitem text="身份证明映射" target="blank">
+    <tocitem text="全局用户口令身份证明映射" target="Securitysecurityglobalcredentialmappinguserpasswordtabletitle"/>
+
+    <tocitem text="全局 PKI 身份证明映射" target="Securitysecurityglobalcredentialmappingpkitabletitle"/>
+
+    <tocitem text="新建安全身份证明映射条目" target="Securitysecurityglobalcredentialuserpasswordcreatetitle"/>
+
+    <tocitem text="编辑安全身份证明映射条目" target="Securitysecurityglobalcredentialuserpasswordedittitle"/>
+
+    <tocitem text="新建安全身份证明映射条目" target="Securitysecurityglobalcredentialpkicreatetitle"/>
+
+    <tocitem text="编辑安全身份证明映射条目" target="Securitysecurityglobalcredentialpkiedittitle"/>
+
+    <tocitem text="为全局身份证明映射条目创建远程资源" target="Securitysecuritycredentialsremoteresourcecreatetitle"/>
+
+    <tocitem text="删除安全身份证明映射条目" target="Securitysecurityglobalcredentialmappingdeletecredentialtitle"/>
+  </tocitem>
+
+    </tocitem>
+
+    <tocitem text="互操作性" target="Summarysummaryinteroperabilitysummarytitle">
+    </tocitem>
+
+    <tocitem text="诊断" target="Summarysummarydiagnosticssummarytitle">
+      
+  <tocitem text="诊断：日志表" target="Diagnosticsdiagnosticsdiagnosticslogtabletitle"><tocitem text="诊断：查看域日志表" target="Diagnosticsdiagnosticsdiagnosticsviewdomainlogtabletitle"/><tocitem text="诊断：域日志条目" target="Diagnosticsdiagnosticsdiagnosticsdomainlogentrytitle"/><tocitem text="诊断：查看事件日志表" target="Diagnosticsdiagnosticsvieweventslogtabletitle"/><tocitem text="诊断：事件日志条目" target="Diagnosticsdiagnosticsdiagnosticseventslogentrytitle"/><tocitem text="诊断：查看度量日志表" target="Diagnosticsdiagnosticsviewmetricslogtabletitle"/><tocitem text="诊断：度量日志条目" target="Diagnosticsdiagnosticsdiagnosticsmetricslogentrytitle"/><tocitem text="诊断：查看服务器日志表" target="Diagnosticsdiagnosticsdiagnosticsviewserverlogtabletitle"/><tocitem text="诊断：服务器日志条目" target="Diagnosticsdiagnosticsdiagnosticsserverlogentrytitle"/><tocitem text="诊断：查看 Web 服务器日志表" target="Diagnosticsdiagnosticsdiagnosticsviewwebserverlogtabletitle"/><tocitem text="诊断：Web 服务器日志条目" target="Diagnosticsdiagnosticsdiagnosticswebserverlogentrytitle"/><tocitem text="诊断：查看数据源日志表" target="Diagnosticsdiagnosticsdiagnosticsviewdatasourcelogtabletitle"/><tocitem text="诊断：域日志条目" target="Diagnosticsdiagnosticsdiagnosticsdatasourcelogentrytitle"/><tocitem text="诊断：查看 Web 应用程序日志表" target="Diagnosticsdiagnosticsdiagnosticsviewwebapplogtabletitle"/><tocitem text="诊断：Web 应用程序日志条目" target="Diagnosticsdiagnosticsdiagnosticswebapplogentrytitle"/><tocitem text="诊断：查看资源适配器日志表" target="Diagnosticsdiagnosticsdiagnosticsviewconnectorlogtabletitle"/><tocitem text="诊断：查看 JMS 日志表" target="Diagnosticsdiagnosticsdiagnosticsviewjmslogtabletitle"/><tocitem text="诊断：JMS 日志条目" target="Diagnosticsdiagnosticsdiagnosticsjmslogentrytitle"/></tocitem>
+
+  <tocitem text="诊断系统模块概要" target="Diagnosticsdiagnosticsmoduletabletitle"><tocitem text="诊断模块：创建诊断系统模块" target="Diagnosticsdiagnosticscreatemoduletitle"/><tocitem text="诊断模块：删除诊断系统模块" target="Diagnosticsdiagnosticsdeletemoduletitle"/><tocitem text="诊断模块：配置：一般信息" target="Diagnosticsdiagnosticsmoduleconfiggeneraltitle"/><tocitem text="诊断模块：配置：收集的度量" target="Diagnosticsdiagnosticsmoduleconfigmetricstitle"/><tocitem text="诊断模块：创建度量" target="Diagnosticsdiagnosticscreatemetrictitle"/><tocitem text="诊断模块：删除收集的度量" target="Diagnosticsdiagnosticsdeletemetrictitle"/><tocitem text="诊断模块：度量配置：一般信息" target="Diagnosticsdiagnosticsconfigmetrictitle"/><tocitem text="诊断模块：度量配置：实例" target="Diagnosticsdiagnosticsconfigmetricinstancestitle"/><tocitem text="诊断模块：配置：观察器" target="Diagnosticsdiagnosticsmoduleconfigwatchtitle"/><tocitem text="诊断模块：创建诊断观察器" target="Diagnosticsdiagnosticscreatewatchtitle"/><tocitem text="诊断模块：配置：观察器通知" target="Diagnosticsdiagnosticsmoduleconfigwatchnotificationtitle"/><tocitem text="诊断：观察器配置：一般信息" target="Diagnosticsdiagnosticswatchconfiggeneraltitle"/><tocitem text="诊断：观察器配置：预警" target="Diagnosticsdiagnosticswatchconfigalarmtitle"/><tocitem text="诊断：观察器配置：规则表达式" target="Diagnosticsdiagnosticseditwatchruletitle"/><tocitem text="诊断模块：删除诊断观察器" target="Diagnosticsdiagnosticsdeletewatchtitle"/><tocitem text="诊断模块：配置：通知" target="Diagnosticsdiagnosticsmoduleconfignotificationtitle"/><tocitem text="诊断模块：创建诊断通知" target="Diagnosticsdiagnosticscreatenotificationtitle"/><tocitem text="诊断模块：配置：通知" target="Diagnosticsdiagnosticswatchconfignotificationstitle"/><tocitem text="诊断模块：通知配置：一般信息" target="Diagnosticsdiagnosticsnotificationconfiggeneraltitle"/><tocitem text="诊断模块：删除诊断通知" target="Diagnosticsdiagnosticsdeletenotificationtitle"/><tocitem text="诊断模块：通知配置：SMTP 属性" target="Diagnosticsdiagnosticssmtpnotificationconfigpropertiestitle"/><tocitem text="诊断模块：通知配置：JMS 属性" target="Diagnosticsdiagnosticsjmsnotificationconfigpropertiestitle"/><tocitem text="诊断模块：通知配置：JMX 属性" target="Diagnosticsdiagnosticsjmxnotificationconfigpropertiestitle"/><tocitem text="诊断模块：通知配置：图像属性" target="Diagnosticsdiagnosticsimagenotificationconfigpropertiestitle"/><tocitem text="诊断模块：配置：测量" target="Diagnosticsdiagnosticsmoduleconfiginstrumentationtitle"/><tocitem text="诊断模块：添加或删除诊断监视器" target="Diagnosticsdiagnosticscreatemonitortitle"/><tocitem text="诊断模块：测量：设置" target="Diagnosticsdiagnosticsmodulediagnosticsmonitorconfigtitle"/><tocitem text="诊断模块：目标" target="Diagnosticsdiagnosticsmoduletargetstitle"/><tocitem text="诊断模块：创建定制监视器" target="Diagnosticsdiagnosticscreatecustommonitortitle"/></tocitem>
+
+  <tocitem text="诊断图像" target="Diagnosticsdiagnosticsimageimagetabletitle"><tocitem text="诊断图像：捕获" target="Diagnosticsdiagnosticsimagecaptureimagetitle"/><tocitem text="诊断图像：配置" target="Diagnosticsdiagnosticsimageimageconfigtitle"/></tocitem>
+
+  <tocitem text="诊断档案" target="Diagnosticsdiagnosticsarchivearchivetabletitle"><tocitem text="诊断档案：配置" target="Diagnosticsdiagnosticsarchivearchiveconfigtitle"/><tocitem text="诊断档案：诊断存储监视：统计信息" target="Diagnosticsdiagnosticsarchivediagnosticsstoretitle"/><tocitem text="诊断档案：诊断存储监视：连接" target="Diagnosticsdiagnosticsarchivediagnosticsstoreconnectionstitle"/><tocitem text="诊断模块：创建诊断档案数据停用策略" target="Diagnosticsdiagnosticscreatedataretirementtitle"/><tocitem text="诊断模块：配置诊断档案数据停用策略。" target="Diagnosticsdiagnosticsdataretirementconfiggeneraltitle"/><tocitem text="诊断模块：删除数据停用策略" target="Diagnosticsarchivedeletedataretirementtitle"/><tocitem text="诊断模块：启用或禁用数据停用策略" target="Diagnosticsarchiveenabledisabledataretirementtitle"/><tocitem text="诊断模块：启动数据停用任务" target="Diagnosticsarchivestarttaskdataretirementtitle"/></tocitem>
+
+  <tocitem text="诊断：上下文" target="Diagnosticsdiagnosticsdiagnosticscontexttabletitle"/>
+  <tocitem text="诊断请求性能" target="clientdiagnosticsrequestperformancetitle"/>  
+  
+  <tocitem text="监视仪表盘" target="clientdashboardpagetitle"/>
+
+
+
+      
+	<tocitem text="SNMP" target="SNMPsnmpoverviewtabletitle"><tocitem text="创建一个服务器 SNMP 代理" target="SNMPcreateserversnmpagentpagetitle"/><tocitem text="SNMP 代理：配置：一般信息" target="SNMPsnmpgeneralconfigtitle"><tocitem text="SNMP 代理：配置：代理" target="SNMPsnmpsnmpproxytitle"><tocitem text="创建 SNMP 代理" target="SNMPcreatesnmpproxypagetitle"/><tocitem text="删除 SNMP 代理" target="SNMPsnmpdeletesnmpproxypagetitle"/><tocitem text="SNMP 代理：一般信息" target="SNMPsnmpsnmpproxygeneraltitle"/><tocitem text="SNMP 代理：注释" target="SNMPsnmpsnmpproxynotestitle"/></tocitem><tocitem text="SNMP 代理：配置：字符串监视器" target="SNMPsnmpsnmpstringmonitortitle"><tocitem text="删除 SNMP 字符串监视器" target="SNMPsnmpdeletesnmpstringmonitorpagetitle"/><tocitem text="SNMP 代理：配置：计量表监视器" target="SNMPsnmpsnmpgaugemonitortitle"><tocitem text="创建 SNMP 计量表监视器" target="SNMPcreatesnmpgaugemonitorpagetitle"/><tocitem text="删除 SNMP 计量表监视器" target="SNMPsnmpdeletesnmpgaugemonitorpagetitle"/><tocitem text="SNMP 计量表监视器：一般信息" target="SNMPsnmpsnmpgaugemonitorgeneraltitle"/><tocitem text="SNMP 计量表监视器：服务器" target="SNMPsnmpsnmpgaugemonitorserverstitle"/><tocitem text="SNMP 计量表监视器：注释" target="SNMPsnmpsnmpgaugemonitornotestitle"/></tocitem><tocitem text="SNMP 代理：配置：字符串监视器" target="SNMPsnmpsnmpstringmonitortitle"><tocitem text="创建 SNMP 字符串监视器" target="SNMPcreatesnmpstringmonitorpagetitle"/><tocitem text="删除 SNMP 字符串监视器" target="SNMPsnmpdeletesnmpstringmonitorpagetitle"/><tocitem text="SNMP 字符串监视器：一般信息" target="SNMPsnmpsnmpstringmonitorgeneraltitle"/><tocitem text="SNMP 字符串监视器：服务器" target="SNMPsnmpsnmpstringmonitorserverstitle"/><tocitem text="SNMP 字符串监视器：注释" target="SNMPsnmpsnmpstringmonitornotestitle"/></tocitem><tocitem text="SNMP 代理：配置：计数器监视器" target="SNMPsnmpsnmpcountermonitortitle"><tocitem text="创建 SNMP 计数器监视器" target="SNMPcreatesnmpcountermonitorpagetitle"/><tocitem text="删除 SNMP 计数器监视器" target="SNMPsnmpdeletesnmpcountermonitorpagetitle"/><tocitem text="SNMP 计数器监视器：配置" target="SNMPsnmpsnmpcountermonitorconfigtitle"/><tocitem text="SNMP 计数器监视器：服务器" target="SNMPsnmpsnmpcountermonitorserverstitle"/><tocitem text="SNMP 计数器监视器：注释" target="SNMPsnmpsnmpcountermonitornotestitle"/></tocitem></tocitem><tocitem text="SNMP 代理：配置：日志筛选器" target="SNMPsnmpsnmplogfiltertitle"><tocitem text="创建 SNMP 日志筛选器" target="SNMPcreatesnmplogfilterpagetitle"/><tocitem text="删除 SNMP 日志筛选器" target="SNMPsnmpdeletesnmplogfilterpagetitle"/><tocitem text="SNMP 日志筛选器：配置" target="SNMPsnmpsnmplogfiltergeneraltitle"/><tocitem text="SNMP 日志筛选器：服务器" target="SNMPsnmpsnmplogfilterserverstitle"/><tocitem text="SNMP 日志筛选器：注释" target="SNMPsnmpsnmplogfilternotestitle"/></tocitem><tocitem text="SNMP 代理：配置：属性更改" target="SNMPsnmpsnmpattributechangetitle"><tocitem text="创建 SNMP 属性更改" target="SNMPcreatesnmpattributechangepagetitle"/><tocitem text="删除 SNMP 属性更改" target="SNMPsnmpdeletesnmpattributechangepagetitle"/><tocitem text="SNMP 属性更改：配置" target="SNMPsnmpsnmpattributechangeconfigtitle"/><tocitem text="SNMP 属性更改：服务器" target="SNMPsnmpsnmpattributechangeserverstitle"/><tocitem text="SNMP 属性更改：注释" target="SNMPsnmpsnmpattributechangenotestitle"/></tocitem><tocitem text="SNMP 代理：配置：陷阱目标" target="SNMPsnmpsnmptrapdestinationtitle"><tocitem text="创建 SNMP 陷阱目标" target="SNMPcreatesnmptrapdestinationpagetitle"/><tocitem text="删除 SNMP 陷阱目标" target="SNMPsnmpdeletesnmptrapdestinationpagetitle"/><tocitem text="SNMP 陷阱目标：配置" target="SNMPsnmpsnmptrapdestinationgeneraltitle"/><tocitem text="SNMP 陷阱目标：注释" target="SNMPsnmpsnmptrapdestinationnotestitle"/></tocitem><tocitem text="SNMP 服务器代理目标" target="SNMPsnmpsnmpserveragenttargetstitle"/><tocitem text="SNMP 代理：注释" target="SNMPsnmpagentnotestitle"/></tocitem><tocitem text="SNMP 安全" target="SNMPsnmpcredentialmappingtabletitle"><tocitem text="创建 SNMP 身份证明映射" target="SNMPsnmpcreatecredentialmappingtitle"/><tocitem text="删除 SNMP 身份证明映射" target="SNMPsnmpdeletecredentialmappingtitle"/><tocitem text="SNMP：安全：身份证明映射" target="SNMPsnmpeditcredentialmappingtitle"/></tocitem><tocitem text="SNMP 控制" target="SNMPsnmpcontroltabletitle"><tocitem text="使 SNMP 身份证明高速缓存失效" target="SNMPsnmpinvalidatecredentialtitle"/></tocitem><tocitem text="SNMP 监视" target="SNMPsnmpmonitoringtabletitle"/></tocitem>
+
+    </tocitem>
+  </tocitem>
+</toc>

