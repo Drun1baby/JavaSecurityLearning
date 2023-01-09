@@ -5,7 +5,7 @@ import base64
 from turtle import mode
 import uuid
 from random import Random
-from Crypto.Cipher import AES 
+from Crypto.Cipher import AES
 
 def get_file_data(filename):
     with open(filename, 'rb') as f:

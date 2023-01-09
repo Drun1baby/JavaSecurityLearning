@@ -1,12 +1,9 @@
 package com.jsh.erp.utils;
 
-import com.alibaba.fastjson.parser.ParserConfig;
-import org.apache.xbean.propertyeditor.JndiConverter;
 import org.springframework.util.StringUtils;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 
-import java.lang.reflect.Type;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -217,7 +214,6 @@ public class StringUtil {
     public static String getInfo(String search, String key){
         String value = "";
         if(search!=null) {
-            ParserConfig.getGlobalInstance().setAutoTypeSupport(true);
             JSONObject obj = JSONObject.parseObject(search);
             value = obj.getString(key);
             if(value.equals("")) {
@@ -248,7 +244,7 @@ public class StringUtil {
     }
 
     public static void main(String[] args) {
-        StringUtil stringUtil = new StringUtil();
-        stringUtil.getInfo("search","key");
+        int i = 10/3;
+        System.out.println(i);
     }
 }

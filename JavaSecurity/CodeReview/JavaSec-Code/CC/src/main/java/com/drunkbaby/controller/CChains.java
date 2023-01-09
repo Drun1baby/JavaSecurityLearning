@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
+import java.util.Arrays;
 import java.util.Base64;
 
 @RestController
@@ -61,15 +62,12 @@ public class CChains {
     @PostMapping("/cc6")
     @ResponseBody
     public String CC6(@RequestParam String EXP) throws IOException, ClassNotFoundException {
-        if (EXP.equals("")) {
-            return "Input the evil EXP";
-        } else {
             byte[] exp = Base64.getDecoder().decode(EXP);
             ByteArrayInputStream bytes = new ByteArrayInputStream(exp);
             ObjectInputStream objectInputStream = new ObjectInputStream(bytes);
             objectInputStream.readObject();
             return "Input Success, u receive feedback?";
-        }
+
     }
 
     /**
@@ -88,11 +86,9 @@ public class CChains {
     @PostMapping("/cc3")
     @ResponseBody
     public String CC3(@RequestParam String EXP) throws IOException, ClassNotFoundException {
-        if (EXP.equals("")) {
-            return "Input the evil EXP";
-        } else {
+
             byte[] exp = Base64.getDecoder().decode(EXP);
-            if (exp.toString().contains("Runtime.getRuntime().exec()")){
+            if (Arrays.toString(exp).contains("Runtime.getRuntime().exec()")){
                 return "My dear Hacker! No Runtime Please!";
             }
             else {
@@ -101,7 +97,6 @@ public class CChains {
                 objectInputStream.readObject();
                 return "Input Success, u receive feedback?";
             }
-        }
     }
 
     /**
@@ -175,16 +170,11 @@ public class CChains {
     @PostMapping("/cc11")
     @ResponseBody
     public String CC11(@RequestParam String EXP) throws IOException, ClassNotFoundException {
-        if (EXP.equals("")) {
-            return "Input the evil EXP";
-        } else {
             byte[] exp = Base64.getDecoder().decode(EXP);
             ByteArrayInputStream bytes = new ByteArrayInputStream(exp);
             ObjectInputStream objectInputStream = new ObjectInputStream(bytes);
             objectInputStream.readObject();
             return "Input Success, u receive feedback?";
-        }
-
     }
 }
 
