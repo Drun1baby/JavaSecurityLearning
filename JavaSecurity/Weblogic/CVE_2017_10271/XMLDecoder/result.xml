@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0_65" class="java.beans.XMLDecoder">
+ <object class="javax.swing.JButton">
+  <string>Hello,xml</string>
+ </object>
+</java>
