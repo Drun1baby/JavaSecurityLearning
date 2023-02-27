@@ -19,7 +19,7 @@ import java.net.URL;
 public class JNDILdapServer {
     private static final String LDAP_BASE = "dc=example,dc=com";
     public static void main (String[] args) {
-        String url = "http://127.0.0.1:7777/#JndiCalc";
+        String url = "http://127.0.0.1:7777/#JndiCalc7";
         int port = 1389;
         try {
             InMemoryDirectoryServerConfig config = new InMemoryDirectoryServerConfig(LDAP_BASE);
