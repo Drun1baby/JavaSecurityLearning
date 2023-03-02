@@ -5,7 +5,7 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>S2-001</title>
+  <title>S2-002</title>
 </head>
 <body>
 <p>Hello <s:property value="username"></s:property></p>
