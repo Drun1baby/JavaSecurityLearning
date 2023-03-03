@@ -1,2 +1,4 @@
 .idea
 .vscode
+
+*.html linguist-language=python
