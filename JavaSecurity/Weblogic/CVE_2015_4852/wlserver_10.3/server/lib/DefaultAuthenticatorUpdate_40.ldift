@@ -1,9 +1,0 @@
-dn: cn=CrossDomainConnectors,ou=groups,ou=@realm@,dc=@domain@
-memberURL: ldap:///ou=groups,ou=@realm@,dc=@domain@??sub?(&(objectclass=person)(wlsMemberOf=cn=CrossDomainConnectors,ou=groups,ou=@realm@,dc=@domain@))
-description: CrossDomainConnectors can communicate with other domains
-objectclass: top
-objectclass: groupOfUniqueNames
-objectclass: groupOfURLs
-cn: CrossDomainConnectors
-
-

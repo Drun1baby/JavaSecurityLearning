@@ -1,5 +1,0 @@
-Manifest-Version: 1.0
-Ant-Version: Apache Ant 1.7.1
-Created-By: R28.2.0-79-146777-1.6.0_29-20111005-1808-windows-ia32 (Ora
- cle Corporation)
-

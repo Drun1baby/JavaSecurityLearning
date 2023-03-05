@@ -1,7 +1,0 @@
-dn: cn=AdminChannelUsers,ou=groups,ou=@realm@,dc=@domain@
-memberURL: ldap:///ou=groups,ou=@realm@,dc=@domain@??sub?(&(objectclass=person)(wlsMemberOf=cn=AdminChannelUsers,ou=groups,ou=@realm@,dc=@domain@))
-description: AdminChannelUsers access the admin channel
-objectclass: top
-objectclass: groupOfUniqueNames
-objectclass: groupOfURLs
-cn: AdminChannelUsers

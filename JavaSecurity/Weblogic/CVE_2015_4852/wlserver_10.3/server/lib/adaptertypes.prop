@@ -1,7 +1,0 @@
-#
-#  This file lists easy to remember names for the backend classes
-#
-
-standard=com.octetstring.vde.backend.standard.BackendStandard
-proxy=com.octetstring.vde.backend.jndi.BackendJNDI
-ldap=com.octetstring.vde.backend.jndi.BackendJNDI
