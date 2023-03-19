@@ -6,7 +6,7 @@ public class Proxy {
     private Host host;
 
     public Proxy(){}
-    public  Proxy(Host host){
+    public Proxy(Host host){
         this.host = host;
     }
 
