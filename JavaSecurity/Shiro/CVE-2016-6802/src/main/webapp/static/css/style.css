@@ -1,0 +1,19 @@
+span.desc{
+    margin-left:20px;
+    color:gray;
+}
+div.workingroom{
+    margin:200px auto;
+    width:400px;
+}
+div.workingroom a{
+    display:inline-block;
+    margin-top:20px;
+}
+div.loginDiv{
+    text-align: left;
+}
+div.errorInfo{
+    color:red;
+    font-size:0.65em;
+}
