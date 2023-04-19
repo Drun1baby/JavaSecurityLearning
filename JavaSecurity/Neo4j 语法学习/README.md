@@ -521,7 +521,7 @@ MATCH (a)-[:ACTED_IN]->(m)<-[:DIRECTED]-(d) RETURN a,m,d LIMIT 10
 1. 返回数据库的所有信息
 2. 返回数据库中所有电影的信息
 3. 返回 Lilly Wachowski 相关的所有电影
-4. 返回与Person 'Oliver'相连的带有Movie标签的所有节点
+4. 返回与Person 'Lilly Wachowski'相连的带有Movie标签的所有节点
 
 #### 查找关系
 
