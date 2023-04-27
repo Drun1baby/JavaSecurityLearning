@@ -106,8 +106,7 @@ LDAP 是包含在 JNDI 里面的
 - [Fastjson-1.2.24版本漏洞分析](https://drun1baby.github.io/2022/08/06/Java反序列化Fastjson篇02-Fastjson-1-2-24版本漏洞分析/)
 - [Fastjson篇03-Fastjson各版本绕过分析](https://drun1baby.github.io/2022/08/08/Java反序列化Fastjson篇03-Fastjson各版本绕过分析/)
 - [Java反序列化Fastjson篇04-Fastjson1.2.62-1.2.68版本反序列化漏洞](https://drun1baby.github.io/2022/08/13/Java反序列化Fastjson篇04-Fastjson1-2-62-1-2-68版本反序列化漏洞/)
-
-
+- [Java反序列化Fastjson篇05-写给自己看的一些源码深入分析](https://drun1baby.top/2022/10/19/Java反序列化Fastjson篇05-写给自己看的一些源码深入分析/)
 
 值得一提的是，2022 蓝帽杯初赛有一道 fastjson 1.2.68 的题目，师傅们可以去我的仓库中，到本地复现。[CTFReposityStore](https://github.com/Drun1baby/CTFReposityStore)
 
@@ -123,11 +122,16 @@ LDAP 是包含在 JNDI 里面的
 
 ## Weblogic 
 
-emmm 懒癌犯了，晚点再看
+以下四个洞虽然简单，但很有趣。
+
+- [CVE-2015-4852 WebLogic T3 反序列化分析](https://drun1baby.top/2022/11/28/CVE-2015-4852-WebLogic-T3-反序列化分析/)
+- [CVE-2017-10271 WebLogic XMLDecoder](https://drun1baby.top/2023/02/09/CVE-2017-10271-WebLogic-XMLDecoder/)
+- [CVE-2021-2109 WebLogic JNDI 注入](https://drun1baby.top/2023/02/12/CVE-2021-2109-WebLogic-JNDI-注入/)
+- [WebLogic 弱口令&文件上传&SSRF](https://drun1baby.top/2023/03/06/WebLogic-弱口令-文件上传-SSRF/)
 
 
 
-## EL 表达式注入
+## EL 表达式注入（本质上还是 OGNL 表达式注入）
 
 - [Java 之 SpEL 表达式注入](https://drun1baby.github.io/2022/09/23/Java-之-SpEL-表达式注入/)
 
@@ -218,15 +222,34 @@ emmm 懒癌犯了，晚点再看
 
 在审计 CMS 的时候，审计出漏洞之后，不光是要明白怎么打，更要明白如何修复。
 
-
-
 **更新于 2023.1.28**
-
-
 
 走到这一步我觉得需要学习一下对应的开发，这个开发不是单纯的 Java 开发，比如这些课题 "用 golang 重构一个 sqlmap"，比如 "如何自己写一个扫描器"，如何写 "burpsuite 插件"，目前我正在学习这一部分。
 
-
-
 另有一些新的 Java 产出文章，有兴趣的师傅可以具体见博客 https://drun1baby.github.io/
 
+**更新于 2023.4.28**
+
+一眨眼就是三个月，谈一谈我所认为的安全研究吧，不一定准确，若有说的不准确的地方还请师傅们多多斧正。
+
+我认为的安全研究分四种：
+
+最厉害的一种应该是纯研究，这种太厉害太厉害。
+
+再就是几种类型的安全研究
+
+安全研究 + 攻击性产品完善（开发）、类似于 安全研究新漏洞，将其规则输出到 goby 里；
+
+安全研究 + 审计性产品完善（开发）、类似于主机扫描等，或者说 jar 包分析、代码审计的白盒自动化扫描器。
+
+安全研究 + 红队、类似于研究 0day、代码审计、域渗透攻防研究。
+
+几种研究并不分好坏，但是目前很少有”纯“安全研究了。
+
+我也很菜，目前还是在不断前进，愿与师傅们共勉这一段话，最早看到是在 Err0r 哥哥的博客（队内的好哥哥）
+
+[关于考研](https://err0r.top/article/postgraduate/)
+
+> 即便尽其所能，亦未必如初愿。如举笔画物，光有明暗，画制于材，技艺有所不能，虽心之所愿，然下笔仍有憾。
+
+深有感触，前路可能黑暗迷茫，努力加油走下去，终会看见曙光。
