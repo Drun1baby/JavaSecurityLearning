@@ -9,5 +9,6 @@
   <url>http://maven.apache.org</url>
   <modules>
     <module>XStream-Basic</module>
+      <module>XStreamCVES</module>
   </modules>
 </project>
