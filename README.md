@@ -77,22 +77,17 @@
 CC 链部分结束，进入 shiro 部分，shiro 之前我们已经走过开发了，所以理解起来很简单。
 
 - [Shiro550流程分析](https://drun1baby.github.io/2022/07/10/Java反序列化Shiro篇01-Shiro550流程分析/)
-
-Shiro 721 的可能后续会学习吧，现在先不学习。
-
-
+- [02-Shiro721流程分析](https://drun1baby.top/2023/03/08/Java反序列化Shiro篇02-Shiro721流程分析/)
 
 进入到新的阶段
 
 ## Java 反序列化进阶
 
 - 这块是基础中的基础，但是也很难，要静下心来学的。
-
 - [RMI基础](https://drun1baby.github.io/2022/07/19/Java反序列化之RMI专题01-RMI基础/)
-
 - [RMI的几种攻击方式](https://drun1baby.github.io/2022/07/23/Java反序列化之RMI专题02-RMI的几种攻击方式/)
-
 - [JNDI学习](https://drun1baby.github.io/2022/07/28/Java反序列化之JNDI学习/)
+- [浅谈 JEP290](https://drun1baby.top/2023/04/18/浅谈-JEP290/)
 
 LDAP 是包含在 JNDI 里面的
 
@@ -115,8 +110,6 @@ LDAP 是包含在 JNDI 里面的
 ## Log4j2
 
 - [Log4j2 复现](https://drun1baby.github.io/2022/08/09/Log4j2复现/)
-
-
 
 这些学完之后可以学一下内存马，Weblogic，Tomcat 和 Spring 开发；这里先学 Spring 开发。 
 
