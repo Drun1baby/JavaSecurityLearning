@@ -4,31 +4,25 @@
 
 记录一下 Java 安全学习历程，也有参考 Y4tacker 师傅的学习笔记 https://github.com/Y4tacker/JavaSec
 
-> 也在整理自己的 Java 学习路线，学了也有一会儿了，总结出一点小心得
+整理出一条比较合适的 Java 安全学习路线
 
 > 有师傅说这个项目对他帮助很大，我想这是我当初新建这个项目的初衷，能够帮助到越来越多的师傅学习 Java 安全，不至于那么迷茫。对于能够帮助师傅们学习 Java 安全这件事，我是倍感荣幸的。
 
-## 先从开发学起
+## 基础开发（是一定要学的）
 
 推荐的是这些：
 
 先学 Springboot[【狂神说Java】SpringBoot最新教程IDEA版通俗易懂](https://www.bilibili.com/video/BV1PE411i7CV)，前面部分是 Thymeleaf 模板引擎的开发，后面是一些组件的基本使用，很基础。
 
-
-
 学一下 vue：[尚硅谷Vue2.0+Vue3.0全套教程丨vuejs从入门到精通](https://www.bilibili.com/video/BV1Zy4y1K7SH?spm_id_from=333.788.top_right_bar_window_custom_collection.content.click)
 
 学完这两个之后可以自己过一个小项目[【实战】基于SpringBoot+Vue开发的前后端分离博客项目完整教学](https://www.bilibili.com/video/BV1PQ4y1P7hZ?vd_source=a4eba559e280bf2f1aec770f740d0645)
 
-
-
 - 学完这些内容最多花费两个月时间。
-
-
 
 如果中途有什么看不懂的，也可以推荐看 Java 基础，哪块不懂看哪块，二倍速走起看[【狂神说Java】Java零基础学习视频通俗易懂](https://www.bilibili.com/video/BV12J41137hu?spm_id_from=333.337.search-card.all.click)
 
-## Java 基础
+## Java 安全基础
 
 可以看b站白日梦组长的视频，讲的非常好
 
@@ -43,8 +37,6 @@
 - [Java 反弹 shell 与 Runtime.getRuntime().exec() 的故事](https://drun1baby.github.io/2022/10/12/Java-反弹-shell-与-Runtime-getRuntime-exec-的故事/)
 
 一开始学还是会有点懵的，学到后面自然而然就会了
-
-
 
 ## Java 反序列化基础
 
@@ -94,8 +86,6 @@ LDAP 是包含在 JNDI 里面的
 ***
 
 学完上面的之后就可以开始学习其他的了。
-
-
 
 ## Fastjson&&Jackson
 
@@ -179,19 +169,13 @@ LDAP 是包含在 JNDI 里面的
 
 现在一些基础的东西已经没问题了，如果在把上述内容都学完之后，谈一谈我认为蛮重要的几个点吧。
 
-
-
 - 要温故而知新，像 CC 链这种 EXP，能手写尽量手写，其他的链子也是，要有独立分析的能力
 - 对于 Java 代码审计也是，需要有独立分析的能力，学会总结审计方法
 - 最近自己也在刷力扣，还是想保证一些编程手感，并且为日后的手撕代码做准备。
 
-
-
 ## 在学完上述内容之后该学什么
 
 > 我认为还是应该查漏补缺，下面会放一些我觉得蛮有意思的东西供师傅们学习
-
-
 
 [Java反序列化之C3P0链](https://drun1baby.github.io/2022/10/06/Java反序列化之C3P0链/)
 
