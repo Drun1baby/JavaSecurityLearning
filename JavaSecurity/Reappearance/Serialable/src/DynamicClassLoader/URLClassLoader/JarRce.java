@@ -9,6 +9,6 @@ public class JarRce {
         URLClassLoader urlClassLoader = new URLClassLoader(new URL[]{new URL("jar:file:///E:\\Calc.jar!/")});
         Class calc = urlClassLoader.loadClass("Calc");
         calc.newInstance();
-
+        urlClassLoader.close();
     }
 }
