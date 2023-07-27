@@ -43,6 +43,8 @@ public class JNDIGadgetServer {
         }
         catch ( Exception e ) {
             e.printStackTrace();
+        } finally {
+            ds.shutDown(true);
         }
     }
 
