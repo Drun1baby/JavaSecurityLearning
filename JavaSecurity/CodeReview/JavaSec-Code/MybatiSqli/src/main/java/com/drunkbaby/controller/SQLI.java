@@ -71,14 +71,17 @@ public class SQLI {
                 result.append(info);
                 logger.info(info);
             }
-            rs.close();
-            con.close();
+            
 
 
         } catch (ClassNotFoundException e) {
             logger.error("Sorry,can`t find the Driver!");
         } catch (SQLException e) {
             logger.error(e.toString());
+        } finally {
+            statement.close();
+            rs.close();
+            con.close();
         }
         return result.toString();
     }
@@ -117,14 +120,17 @@ public class SQLI {
                 logger.info(info);
             }
 
-            rs.close();
-            con.close();
+           
 
         } catch (ClassNotFoundException e) {
             logger.error("Sorry, can`t find the Driver!");
             e.printStackTrace();
         } catch (SQLException e) {
             logger.error(e.toString());
+        } finally {
+            st.close();
+            rs.close();
+            con.close();
         }
         return result.toString();
     }

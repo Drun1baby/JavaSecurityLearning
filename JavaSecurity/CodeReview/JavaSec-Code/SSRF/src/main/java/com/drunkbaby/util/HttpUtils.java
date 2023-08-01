@@ -85,6 +85,9 @@ public class HttpUtils {
 
         } catch (Exception e) {
             return e.getMessage();
+        } finally {
+            rd.close();
+            client.close();
         }
     }
 
