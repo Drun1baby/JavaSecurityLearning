@@ -163,7 +163,7 @@ LDAP 是包含在 JNDI 里面的
 
 最近学下来，感觉先学完 WebGoat，然后跟着复现一些漏洞吧，比如 RuoYi 的一些漏洞，前期先看其他师傅的文章跟着复现，后续可以自己审计一些代码。
 
-详细的**代码审计的文章**与资料，欢迎师傅们进到 [Java Owasp Top10 审计](https://github.com/Drun1baby/JavaSecurityLearning/tree/main/JavaSecurity/OWASP TOP10)，项目中查看。这个项目是我参考于 joychou93 师傅写的 `java-sec-code` 项目的，并且自己加上了一些理解
+详细的**代码审计的文章**与资料，欢迎师傅们进到 [Java Owasp Top10 审计](https://github.com/Drun1baby/JavaSecurityLearning/tree/main/JavaSecurity/CodeReview/JavaSec-Code)，项目中查看。这个项目是我参考于 joychou93 师傅写的 `java-sec-code` 项目的，并且自己加上了一些理解
 
 
 
