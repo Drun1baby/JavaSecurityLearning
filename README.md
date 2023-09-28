@@ -229,4 +229,9 @@ LDAP 是包含在 JNDI 里面的
 
 **更新于 2023.9.15**
 
+先看 CodeQL 的这块部分
+[CodeQL 入门](https://drun1baby.top/2023/09/03/CodeQL-%E5%85%A5%E9%97%A8/)
+[CodeQL 官方文档学习](https://drun1baby.top/2023/07/31/CodeQL-%E5%AD%A6%E4%B9%A0/)
+
+这里看完之后，建议是开始做一些代码审计的漏洞挖掘，再根据一些挖洞经验来修改 QL 的默认规则，使其变得更加准确
 可能明年会更新 CodeQL 的部分（咕咕咕-）
