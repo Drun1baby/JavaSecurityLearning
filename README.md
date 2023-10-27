@@ -2,7 +2,7 @@
 
 # JavaSecurityLearning
 
-可能写的有点乱，但基本是形成了一个路线形式的文章，后续可能会把排版优化一下哈哈哈
+写的有点乱，但基本是形成了一条路线，后续可能会把排版优化一下哈哈哈
 
 记录一下 Java 安全学习历程，也有参考 Y4tacker 师傅的学习笔记 https://github.com/Y4tacker/JavaSec
 
