@@ -1,20 +1,16 @@
 > 如果师傅们看到有好的文章，也欢迎 pr，一起分享在这个 repo 中
+>
+> 详细项目代码在 JavaSecurity 文件夹中
 
 # JavaSecurityLearning
 
-写的有点乱，但基本是形成了一条路线，后续可能会把排版优化一下哈哈哈
+## Ref：
 
-记录一下 Java 安全学习历程，也有参考 Y4tacker 师傅的学习笔记 https://github.com/Y4tacker/JavaSec
-
-整理出一条比较合适的 Java 安全学习路线
-
-> 有师傅说这个项目对他帮助很大，我想这是我当初新建这个项目的初衷，能够帮助到越来越多的师傅学习 Java 安全，不至于那么迷茫。对于能够帮助师傅们学习 Java 安全这件事，我是倍感荣幸的。
+ https://github.com/Y4tacker/JavaSec
 
 ## 基础开发（是一定要学的）
 
-推荐的是这些：
-
-先学 Springboot[【狂神说Java】SpringBoot最新教程IDEA版通俗易懂](https://www.bilibili.com/video/BV1PE411i7CV)，前面部分是 Thymeleaf 模板引擎的开发，后面是一些组件的基本使用，很基础。
+先学 Springboot[【狂神说Java】SpringBoot最新教程IDEA版通俗易懂](https://www.bilibili.com/video/BV1PE411i7CV)
 
 学一下 vue，VUE 可以过快一点：[尚硅谷Vue2.0+Vue3.0全套教程丨vuejs从入门到精通](https://www.bilibili.com/video/BV1Zy4y1K7SH?spm_id_from=333.788.top_right_bar_window_custom_collection.content.click)
 
@@ -22,7 +18,7 @@
 
 - 学完这些内容最多花费两个月时间。
 
-如果中途有什么看不懂的，也可以推荐看 Java 基础，哪块不懂看哪块，二倍速走起看[【狂神说Java】Java零基础学习视频通俗易懂](https://www.bilibili.com/video/BV12J41137hu?spm_id_from=333.337.search-card.all.click)
+推荐的 Java 基础，哪块不懂看哪块，二倍速【狂神说Java】Java零基础学习视频通俗易懂](https://www.bilibili.com/video/BV12J41137hu?spm_id_from=333.337.search-card.all.click)
 
 ## Java 安全基础
 
@@ -73,8 +69,6 @@ CC 链部分结束，进入 shiro 部分，shiro 之前我们已经走过开发�
 - [Shiro550流程分析](https://drun1baby.github.io/2022/07/10/Java反序列化Shiro篇01-Shiro550流程分析/)
 - [02-Shiro721流程分析](https://drun1baby.top/2023/03/08/Java反序列化Shiro篇02-Shiro721流程分析/)
 
-进入到新的阶段
-
 ## Java 反序列化进阶
 
 - 这块是基础中的基础，但是也很难，要静下心来学的。
@@ -97,7 +91,7 @@ LDAP 是包含在 JNDI 里面的
 - [Java反序列化Fastjson篇04-Fastjson1.2.62-1.2.68版本反序列化漏洞](https://drun1baby.github.io/2022/08/13/Java反序列化Fastjson篇04-Fastjson1-2-62-1-2-68版本反序列化漏洞/)
 - [Java反序列化Fastjson篇05-写给自己看的一些源码深入分析](https://drun1baby.top/2022/10/19/Java反序列化Fastjson篇05-写给自己看的一些源码深入分析/)
 
-值得一提的是，2022 蓝帽杯初赛有一道 fastjson 1.2.68 的题目，师傅们可以去我的仓库中，到本地复现。[CTFReposityStore](https://github.com/Drun1baby/CTFReposityStore)
+2022 蓝帽杯初赛有一道 fastjson 1.2.68 的题目 [CTFReposityStore](https://github.com/Drun1baby/CTFReposityStore)
 
 ## Log4j2
 
@@ -126,25 +120,7 @@ LDAP 是包含在 JNDI 里面的
 
 ## 内存马
 
-个人认为内存马刚开始学习的时候和反序列化并无太大关联，反而和 Servlet，Tomcat 关联度非常高。
-
-我觉得还是需要打一下基础的，学习路线如下
-
-基础部分：Tomcat 架构 ---> Servlet 相关基础知识 ----> JSP 的马 ----> 
-
-
-
-学完基础就可以开始看内存马了，Web 服务的流程应该是 Listener ---> Filter ---->  Servlet；但是先学 Listener
-
-
-
-内存马的学习：Filter ----> Listener -----> Servlet; 内存马与反序列化
-
-
-
 关于内存马的环境搭建可以看我这一篇文章：[Servlet 项目搭建](https://drun1baby.github.io/2022/08/22/Servlet-项目搭建/)
-
-
 
 - [Java反序列化之内存马系列 01-基础内容学习](https://drun1baby.github.io/2022/08/19/Java内存马系列-01-基础内容学习/)
 - [Java内存马系列-02-内存马介绍](https://drun1baby.github.io/2022/08/21/Java内存马系列-02-内存马介绍/)
@@ -153,31 +129,13 @@ LDAP 是包含在 JNDI 里面的
 - [Java内存马系列-05-Tomcat 之 Servlet 型内存马](https://drun1baby.github.io/2022/09/04/Java内存马系列-05-Tomcat-之-Servlet-型内存马/)
 - [Java内存马系列-06-Tomcat 之 Valve 型内存马](https://drun1baby.github.io/2022/09/07/Java内存马系列-06-Tomcat-之-Valve-型内存马/)
 
-
-
 ## 关于 Java 代码审计
 
-最近自己也在看吧，感觉有点意思，Java 代码审计还是有点难度的；建议先从 WebGoat 入手，后续再看吧。
+WebGoat 代码打底 [WebGoat代码审计](https://drun1baby.top/2022/03/17/WebGoat代码审计-02-SQL注入/)
 
+详细的**代码审计的文章**与资料，指路 [Java Owasp Top10 审计](https://github.com/Drun1baby/JavaSecurityLearning/tree/main/JavaSecurity/CodeReview/JavaSec-Code)
 
-
-最近学下来，感觉先学完 WebGoat，然后跟着复现一些漏洞吧，比如 RuoYi 的一些漏洞，前期先看其他师傅的文章跟着复现，后续可以自己审计一些代码。
-
-详细的**代码审计的文章**与资料，欢迎师傅们进到 [Java Owasp Top10 审计](https://github.com/Drun1baby/JavaSecurityLearning/tree/main/JavaSecurity/CodeReview/JavaSec-Code)，项目中查看。这个项目是我参考于 joychou93 师傅写的 `java-sec-code` 项目的，并且自己加上了一些理解
-
-
-
-**更新于 2022.10.13**
-
-现在一些基础的东西已经没问题了，如果在把上述内容都学完之后，谈一谈我认为蛮重要的几个点吧。
-
-- 要温故而知新，像 CC 链这种 EXP，能手写尽量手写，其他的链子也是，要有独立分析的能力
-- 对于 Java 代码审计也是，需要有独立分析的能力，学会总结审计方法
-- 最近自己也在刷力扣，还是想保证一些编程手感，并且为日后的手撕代码做准备。
-
-## 在学完上述内容之后该学什么
-
-> 我认为还是应该查漏补缺，下面会放一些我觉得蛮有意思的东西供师傅们学习
+## 查漏补缺
 
 [Java反序列化之C3P0链](https://drun1baby.github.io/2022/10/06/Java反序列化之C3P0链/)
 
@@ -193,47 +151,15 @@ LDAP 是包含在 JNDI 里面的
 
 [Java反序列化Fastjson篇05-写给自己看的一些源码深入分析](https://drun1baby.github.io/2022/10/19/Java反序列化Fastjson篇05-写给自己看的一些源码深入分析/)
 
-懒癌终于不犯了，开始学习 Struts2 系列漏洞，这一块是没有必要特别去学开发的，因为 Struts2 的应用已经太少太少了。
+## Struts2 系列漏洞
 
 [Java Struts2 学习与环境搭建](https://drun1baby.github.io/2022/11/02/Java-Struts2-学习与环境搭建/)
 
 [Java Struts2 系列 S2-001](https://drun1baby.github.io/2022/10/27/Java-Struts2-系列-S2-001/)
 
-在进行代码审计的时候，多想一想有漏洞的代码是为什么产生的，最好是自己手写一遍有漏洞的代码，并且进行修复。
-
-在审计 CMS 的时候，审计出漏洞之后，不光是要明白怎么打，更要明白如何修复。
-
-**更新于 2023.1.28**
-
-走到这一步我觉得需要学习一下对应的开发，这个开发不是单纯的 Java 开发，比如这些课题 "用 golang 重构一个 sqlmap"，比如 "如何自己写一个扫描器"，如何写 "burpsuite 插件"，目前我正在学习这一部分。
-
-另有一些新的 Java 产出文章，有兴趣的师傅可以具体见博客 https://drun1baby.github.io/
-
-**更新于 2023.4.28**
-
-一眨眼就是三个月，谈一谈我所认为的安全研究吧，不一定准确，若有说的不准确的地方还请师傅们多多斧正。
-
-我认为的安全研究分四种：
-
-最厉害的一种应该是纯研究，这种太厉害太厉害。
-
-再就是几种类型的安全研究
-
-安全研究 + 攻击性产品完善（开发）、类似于 安全研究新漏洞，将其规则输出到 goby 里；
-
-安全研究 + 审计性产品完善（开发）、类似于主机扫描等，或者说 jar 包分析、代码审计的白盒自动化扫描器。
-
-安全研究 + 红队、类似于研究 0day、代码审计、域渗透攻防研究。
-
-几种研究并不分好坏，但是目前很少有”纯“安全研究了。
-
-**更新于 2023.9.15**
-
-先看 CodeQL 的这块部分
+## CodeQL
 
 [CodeQL 入门](https://drun1baby.top/2023/09/03/CodeQL-%E5%85%A5%E9%97%A8/)
 
 [CodeQL 官方文档学习](https://drun1baby.top/2023/07/31/CodeQL-%E5%AD%A6%E4%B9%A0/)
 
-这里看完之后，建议是开始做一些代码审计的漏洞挖掘，再根据一些挖洞经验来修改 QL 的默认规则，使其变得更加准确
-可能明年会更新 CodeQL 的部分（咕咕咕-）
