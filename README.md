@@ -18,7 +18,7 @@
 
 - 学完这些内容最多花费两个月时间。
 
-推荐的 Java 基础，哪块不懂看哪块，二倍速【狂神说Java】Java零基础学习视频通俗易懂](https://www.bilibili.com/video/BV12J41137hu?spm_id_from=333.337.search-card.all.click)
+推荐的 Java 基础，哪块不懂看哪块，[二倍速【狂神说Java】Java零基础学习视频通俗易懂](https://www.bilibili.com/video/BV12J41137hu?spm_id_from=333.337.search-card.all.click)
 
 ## Java 安全基础
 
