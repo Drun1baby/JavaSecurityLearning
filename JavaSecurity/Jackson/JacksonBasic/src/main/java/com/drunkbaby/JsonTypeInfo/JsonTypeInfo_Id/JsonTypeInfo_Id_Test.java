@@ -1,21 +1,21 @@
-package com.drunkbaby.JsonTypeInfo.JsonTypeInfo_Id_NONE;
+package com.drunkbaby.JsonTypeInfo.JsonTypeInfo_Id;
 
 import com.drunkbaby.Hacker;
-import com.drunkbaby.Person;
+import com.drunkbaby.Person2;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-public class JsonTypeInfo_Id_NONE_Test {
+public class JsonTypeInfo_Id_Test {
     public static void main(String[] args) throws Exception {
-        Person p = new Person();
+        Person2 p = new Person2();
         p.age = 6;
-        p.name = "mi1k7ea";
+        p.name = "drunkbaby";
         p.object = new Hacker();
         ObjectMapper mapper = new ObjectMapper();
 
         String json = mapper.writeValueAsString(p);
         System.out.println(json);
 
-        Person p2 = mapper.readValue(json, Person.class);
+        Person2 p2 = mapper.readValue(json, Person2.class);
         System.out.println(p2);
     }
 }

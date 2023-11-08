@@ -2,6 +2,7 @@ package com.drunkbaby;
 
 import com.drunkbaby.defaultTyping.object_and_non_concrete.Sex;
 
+// 基础序列化与反序列化（多态实现）
 public class Person {
     public int age;
     public String name;
