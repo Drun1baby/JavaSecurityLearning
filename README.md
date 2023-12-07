@@ -157,6 +157,10 @@ WebGoat 代码打底 [WebGoat代码审计](https://drun1baby.top/2022/03/17/WebG
 
 [Java Struts2 系列 S2-001](https://drun1baby.github.io/2022/10/27/Java-Struts2-系列-S2-001/)
 
+## Jackson 系列漏洞
+
+
+
 ## CodeQL
 
 [CodeQL 入门](https://drun1baby.top/2023/09/03/CodeQL-%E5%85%A5%E9%97%A8/)
