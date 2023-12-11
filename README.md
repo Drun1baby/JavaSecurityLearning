@@ -83,7 +83,7 @@ LDAP 是包含在 JNDI 里面的
 
 学完上面的之后就可以开始学习其他的了。
 
-## Fastjson&&Jackson
+## Fastjson
 
 - [FastJson基础](https://drun1baby.github.io/2022/08/04/Java反序列化Fastjson篇01-Fastjson基础/)
 - [Fastjson-1.2.24版本漏洞分析](https://drun1baby.github.io/2022/08/06/Java反序列化Fastjson篇02-Fastjson-1-2-24版本漏洞分析/)
@@ -128,6 +128,7 @@ LDAP 是包含在 JNDI 里面的
 - [Java内存马系列-04-Tomcat 之 Listener 型内存马](https://drun1baby.github.io/2022/08/27/Java内存马系列-04-Tomcat-之-Listener-型内存马/)
 - [Java内存马系列-05-Tomcat 之 Servlet 型内存马](https://drun1baby.github.io/2022/09/04/Java内存马系列-05-Tomcat-之-Servlet-型内存马/)
 - [Java内存马系列-06-Tomcat 之 Valve 型内存马](https://drun1baby.github.io/2022/09/07/Java内存马系列-06-Tomcat-之-Valve-型内存马/)
+- [Java Agent 内存马学习](https://drun1baby.top/2023/12/07/Java-Agent-内存马学习/)
 
 ## 关于 Java 代码审计
 
@@ -159,7 +160,11 @@ WebGoat 代码打底 [WebGoat代码审计](https://drun1baby.top/2022/03/17/WebG
 
 ## Jackson 系列漏洞
 
+[Jackson 反序列化（一）漏洞原理](https://drun1baby.top/2023/12/07/Jackson-反序列化（一）漏洞原理/)
 
+[Jackson 反序列化（二）CVE-2017-7525](https://drun1baby.top/2023/12/07/Jackson-反序列化（二）CVE-2017-7525/)
+
+[Jackson 反序列化（三）CVE-2017-17485](https://drun1baby.top/2023/12/07/Jackson-反序列化（三）CVE-2017-17485/)
 
 ## CodeQL
 
