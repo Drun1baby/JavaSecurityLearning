@@ -1,0 +1,22 @@
+services:
+  confluence:
+    build: .
+    ports:
+      - "8090:8090"
+      - "5005:5005"
+    environment:
+      - CATALINA_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005
+    depends_on:
+      - postgres
+    command: /atlassian-confluence/bin/start-confluence.sh --fg
+
+  postgres:
+    image: postgres:12-alpine3.19
+    expose:
+      - 5432
+    environment:
+      - POSTGRES_PASSWORD=postgres
+    command:
+      - sh
+      - -c
+      - echo 'CREATE DATABASE confluence;' > /docker-entrypoint-initdb.d/init.sql && /usr/local/bin/docker-entrypoint.sh postgres
