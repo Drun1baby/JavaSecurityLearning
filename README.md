@@ -134,7 +134,7 @@ LDAP 是包含在 JNDI 里面的
 
 WebGoat 代码打底 [WebGoat代码审计](https://drun1baby.top/2022/03/17/WebGoat代码审计-02-SQL注入/)
 
-详细的**代码审计的文章**与资料，指路 [Java Owasp Top10 审计](https://github.com/Drun1baby/JavaSecurityLearning/tree/main/JavaSecurity/CodeReview/JavaSec-Code)
+详细的**代码审计的文章与资料**，指路 [Java Owasp Top10 审计](https://github.com/Drun1baby/JavaSecurityLearning/tree/main/JavaSecurity/CodeReview/JavaSec-Code)
 
 ## 查漏补缺
 
