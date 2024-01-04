@@ -130,7 +130,9 @@ LDAP 是包含在 JNDI 里面的
 - [Java内存马系列-06-Tomcat 之 Valve 型内存马](https://drun1baby.github.io/2022/09/07/Java内存马系列-06-Tomcat-之-Valve-型内存马/)
 - [Java Agent 内存马学习](https://drun1baby.top/2023/12/07/Java-Agent-内存马学习/)
 
-## 关于 Java 代码审计
+## 关于 Java 代码审计（很多人对这块其实有个误区）
+
+其实 Java 安全不光只有反序列化，其实代码审计也是很重要的，我最开始学的时候就踏入了这个误区。
 
 WebGoat 代码打底 [WebGoat代码审计](https://drun1baby.top/2022/03/17/WebGoat代码审计-02-SQL注入/)
 
