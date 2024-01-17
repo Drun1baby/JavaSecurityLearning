@@ -156,6 +156,8 @@ WebGoat 代码打底 [WebGoat代码审计](https://drun1baby.top/2022/03/17/WebG
 
 ## Struts2 系列漏洞
 
+这块应该是目前学校的重点之一
+
 [Java Struts2 学习与环境搭建](https://drun1baby.github.io/2022/11/02/Java-Struts2-学习与环境搭建/)
 
 [Java Struts2 系列 S2-001](https://drun1baby.github.io/2022/10/27/Java-Struts2-系列-S2-001/)
