@@ -180,6 +180,8 @@ WebGoat 代码打底 [WebGoat代码审计](https://drun1baby.top/2022/03/17/WebG
 
 [CodeQL 官方文档学习](https://drun1baby.top/2023/07/31/CodeQL-%E5%AD%A6%E4%B9%A0/)
 
+[用CodeQL分析漏洞_CVE-2022-42889 | l3yx's blog](https://l3yx.github.io/2022/12/17/用CodeQL分析漏洞-CVE-2022-42889/)
+
 
 
 
