@@ -35,6 +35,7 @@ public class RomeEXP {
         Field field = toStringBean.getClass().getDeclaredField("_obj");
         field.setAccessible(true);
         field.set(toStringBean,templates);
+
         serialize(hashMap);
         unserialize("ser.bin");
 
