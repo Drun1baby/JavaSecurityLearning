@@ -10,6 +10,7 @@
   <modules>
     <module>Rome</module>
       <module>CommonsBeanUtils</module>
+    <module>RMIConnector</module>
   </modules>
 
   <dependencies>
