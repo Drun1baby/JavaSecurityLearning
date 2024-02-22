@@ -80,7 +80,7 @@ public class RMiConnectorEXP {
         setFieldValue(lazyMap,"factory", invokerTransformer);
 
         //序列化
-    //    serialize(expMap);
+        serialize(expMap);
 
         //反序列化
         deserialize("ser.bin");
