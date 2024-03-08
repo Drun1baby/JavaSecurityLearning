@@ -176,7 +176,13 @@ WebGoat 代码打底 [WebGoat代码审计](https://drun1baby.top/2022/03/17/WebG
 
 ## Apache
 
-Apache dolphinscheduler：https://xz.aliyun.com/t/13981
+## Apache DolphinScheduler
+
+CVE-2023-49299 & CVE-2024-23320 & CVE-2023-49109 漏洞概述：https://xz.aliyun.com/t/13981
+
+## Apache Ofbiz
+
+
 
 ## CodeQL
 
