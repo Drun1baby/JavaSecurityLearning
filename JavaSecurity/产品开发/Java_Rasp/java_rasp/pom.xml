@@ -9,8 +9,8 @@
   <url>http://maven.apache.org</url>
   <modules>
     <module>agent</module>
-    <module>test-s2</module>
     <module>RCE-Test</module>
+    <module>bypass</module>
   </modules>
   <dependencies>
     <dependency>
