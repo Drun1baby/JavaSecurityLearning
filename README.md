@@ -182,7 +182,7 @@ CVE-2023-49299 & CVE-2024-23320 & CVE-2023-49109 漏洞概述：https://xz.aliyu
 
 ### Apache Ofbiz
 
-
+https://y4tacker.github.io/2023/12/27/year/2023/12/Apache-OFBiz%E6%9C%AA%E6%8E%88%E6%9D%83%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%B5%85%E6%9E%90-CVE-2023-51467/
 
 ## CodeQL
 
