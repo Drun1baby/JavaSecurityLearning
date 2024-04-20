@@ -125,6 +125,7 @@ LDAP 是包含在 JNDI 里面的
 ## 内存马
 
 关于内存马的环境搭建可以看我这一篇文章：[Servlet 项目搭建](https://drun1baby.github.io/2022/08/22/Servlet-项目搭建/)
+学习完之后最好自己可以用 Java Agent 实现一个 RASP
 
 - [Java反序列化之内存马系列 01-基础内容学习](https://drun1baby.github.io/2022/08/19/Java内存马系列-01-基础内容学习/)
 - [Java内存马系列-02-内存马介绍](https://drun1baby.github.io/2022/08/21/Java内存马系列-02-内存马介绍/)
