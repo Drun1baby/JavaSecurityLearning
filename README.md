@@ -125,6 +125,7 @@ LDAP 是包含在 JNDI 里面的
 ## 内存马
 
 关于内存马的环境搭建可以看我这一篇文章：[Servlet 项目搭建](https://drun1baby.github.io/2022/08/22/Servlet-项目搭建/)
+学习完之后最好自己可以用 Java Agent 实现一个 RASP
 
 - [Java反序列化之内存马系列 01-基础内容学习](https://drun1baby.github.io/2022/08/19/Java内存马系列-01-基础内容学习/)
 - [Java内存马系列-02-内存马介绍](https://drun1baby.github.io/2022/08/21/Java内存马系列-02-内存马介绍/)
@@ -176,13 +177,13 @@ WebGoat 代码打底 [WebGoat代码审计](https://drun1baby.top/2022/03/17/WebG
 
 ## Apache
 
-## Apache DolphinScheduler
+### Apache DolphinScheduler
 
 CVE-2023-49299 & CVE-2024-23320 & CVE-2023-49109 漏洞概述：https://xz.aliyun.com/t/13981
 
-## Apache Ofbiz
+### Apache Ofbiz
 
-
+https://y4tacker.github.io/2023/12/27/year/2023/12/Apache-OFBiz%E6%9C%AA%E6%8E%88%E6%9D%83%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%B5%85%E6%9E%90-CVE-2023-51467/
 
 ## CodeQL
 

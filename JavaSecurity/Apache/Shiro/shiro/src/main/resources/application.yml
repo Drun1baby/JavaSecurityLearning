@@ -32,3 +32,5 @@ spring:
 mybatis:
   type-aliases-package: shiro.pojo
   mapper-locations: classpath:mapper/*.xml
+server:
+  port: 8082

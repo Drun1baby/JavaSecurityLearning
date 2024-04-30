@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.drunkbaby.mapper.UserMapper">
+
+    <resultMap type="com.drunkbaby.pojo.User" id="User">
+        <id column="id" property="id" javaType="java.lang.Integer" jdbcType="NUMERIC"/>
+        <id column="username" property="username" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <id column="password" property="password" javaType="java.lang.String" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <!--<select id="findByUserName" resultMap="User">-->
+	    <!--select * from users where username = #{username}-->
+    <!--</select>-->
+
+    <select id="findByUserNameVuln02" parameterType="String" resultMap="User">
+        select * from users where username like '%${_parameter}%'
+    </select>
+
+    <select id="findByUserNameVuln03" parameterType="String" resultMap="User">
+        select * from users
+        <if test="order != null">
+            order by ${order} asc
+        </if>
+    </select>
+
+    <select id="findByIdVuln04" parameterType="String" resultMap="User">
+        select * from users where id in (${id})
+    </select>
+
+    <select id="findByIdSec04" parameterType="String" resultMap="User">
+        SELECT
+        *
+        from users
+        WHERE id IN
+        <foreach collection="id" item="id" open="(" close=")" separator=",">
+            #{id}
+        </foreach>
+    </select>
+
+    <select id="findById" resultMap="User">
+        select * from users where id = #{id}
+    </select>
+
+
+    <select id="OrderByUsername" resultMap="User">
+        select * from users order by id asc limit 1
+    </select>
+</mapper>

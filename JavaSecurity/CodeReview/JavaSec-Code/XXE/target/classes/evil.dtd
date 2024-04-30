@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <!ENTITY secret SYSTEM 'file:///E:/1.txt'>
