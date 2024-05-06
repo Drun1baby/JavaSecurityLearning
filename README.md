@@ -114,8 +114,6 @@ LDAP 是包含在 JNDI 里面的
 - [CVE-2021-2109 WebLogic JNDI 注入](https://drun1baby.top/2023/02/12/CVE-2021-2109-WebLogic-JNDI-注入/)
 - [WebLogic 弱口令&文件上传&SSRF](https://drun1baby.top/2023/03/06/WebLogic-弱口令-文件上传-SSRF/)
 
-
-
 ## EL 表达式注入（本质上还是 OGNL 表达式注入）
 
 - [Java 之 SpEL 表达式注入](https://drun1baby.github.io/2022/09/23/Java-之-SpEL-表达式注入/)
@@ -193,7 +191,7 @@ https://y4tacker.github.io/2023/12/27/year/2023/12/Apache-OFBiz%E6%9C%AA%E6%8E%8
 
 [用CodeQL分析漏洞_CVE-2022-42889 | l3yx's blog](https://l3yx.github.io/2022/12/17/用CodeQL分析漏洞-CVE-2022-42889/)
 
-
+## 漏洞挖掘
 
 
 
