@@ -1,0 +1,56 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8" /><title>Source Code</title></head><body><pre>&lt;%--
+ Licensed to the Apache Software Foundation (ASF) under one or more
+  contributor license agreements.  See the NOTICE file distributed with
+  this work for additional information regarding copyright ownership.
+  The ASF licenses this file to You under the Apache License, Version 2.0
+  (the "License"); you may not use this file except in compliance with
+  the License.  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+--%>
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+&lt;%@page contentType="text/html; charset=UTF-8" %>
+&lt;html>
+&lt;head>
+   &lt;title>JSP Chat&lt;/title>
+&lt;/head>
+
+&lt;body bgcolor="#FFFFFF">
+
+&lt;form method="POST" action='chat' name="postForm">
+&lt;input type="hidden" name="action" value="post">
+Message: &lt;input type="text" name="message">
+&lt;input type="submit">
+&lt;/form>
+
+&lt;br>
+&lt;%
+  String serverName = request.getServerName();
+  if ("localhost".equals(serverName)) {
+      serverName = "127.0.0.1";
+  } else if ("127.0.0.1".equals(serverName)) {
+      serverName = "localhost";
+  }
+
+  String chatUrl = request.getScheme() + "://" + serverName + ":"
+    + request.getServerPort() + request.getContextPath()
+    + request.getServletPath();
+
+  // strip "post.jsp" from the address
+  chatUrl = chatUrl.substring(0, chatUrl.lastIndexOf("/") + 1);
+%>
+&lt;a target="_blank" href="&lt;%=chatUrl %>">Click to open a new chat window&lt;/a>
+&lt;em>Note&lt;/em>: To avoid hitting the limit on the count of simultaneous
+connections to the same host, imposed by the
+&lt;a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec8.html#sec8.1.4">HTTP specification&lt;/a>,
+the second chat window should be opened using a different URL, e.g. with
+an IP address instead of the host name.
+&lt;/body>
+&lt;/html>
+</pre></body></html>
