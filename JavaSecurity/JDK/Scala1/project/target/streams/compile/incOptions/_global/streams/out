@@ -1,0 +1,5 @@
+[debug] Created transactional ClassFileManager with tempDir = /Users/drunkbaby/Desktop/Codes/JavaSecurityLearning/JavaSecurity/JDK/Scala1/project/target/scala-2.12/sbt-1.0/classes.bak
+[debug] About to delete class files:
+[debug] We backup class files:
+[debug] Created transactional ClassFileManager with tempDir = /Users/drunkbaby/Desktop/Codes/JavaSecurityLearning/JavaSecurity/JDK/Scala1/project/target/scala-2.12/sbt-1.0/classes.bak
+[debug] Removing the temporary directory used for backing up class files: /Users/drunkbaby/Desktop/Codes/JavaSecurityLearning/JavaSecurity/JDK/Scala1/project/target/scala-2.12/sbt-1.0/classes.bak
