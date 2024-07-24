@@ -195,7 +195,7 @@ https://y4tacker.github.io/2023/12/27/year/2023/12/Apache-OFBiz%E6%9C%AA%E6%8E%8
 
 ## 漏洞挖掘
 
-
+Tabby 的使用：https://github.com/wh1t3p1g/tabby
 
 
 
