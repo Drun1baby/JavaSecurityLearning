@@ -73,6 +73,8 @@ CC 链部分结束，进入 shiro 部分，shiro 之前我们已经走过开发�
 - [Shiro550流程分析](https://drun1baby.github.io/2022/07/10/Java反序列化Shiro篇01-Shiro550流程分析/)
 - [02-Shiro721流程分析](https://drun1baby.top/2023/03/08/Java反序列化Shiro篇02-Shiro721流程分析/)
 
+后面根据自己需求可以补 Shiro 权限绕过的部分。
+
 ## Java 反序列化进阶
 
 - 这块是基础中的基础，但是也很难，要静下心来学的。
