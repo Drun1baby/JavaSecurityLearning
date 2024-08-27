@@ -4,10 +4,6 @@
 
 项目文件夹中包含了部分用于漏洞调试的代码，对应文章记录在博客中。
 
-## Ref：
-
- https://github.com/Y4tacker/JavaSec
-
 ## 基础开发（是一定要学的）
 
 先学 Springboot[【狂神说Java】SpringBoot最新教程IDEA版通俗易懂](https://www.bilibili.com/video/BV1PE411i7CV)
