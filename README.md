@@ -30,7 +30,7 @@
 - [反弹shell学习 ———— 这里主要是为了 yso 的使用](https://drun1baby.github.io/2022/07/20/反弹shell学习/)
 - [Java 反弹 shell 与 Runtime.getRuntime().exec() 的故事](https://drun1baby.github.io/2022/10/12/Java-反弹-shell-与-Runtime-getRuntime-exec-的故事/)
 
-一开始学还是会有点懵的，学到后面自然而然就会了
+一开始学还是会有点懵的，学到后面自然而然就会了。
 
 ## Java 反序列化基础
 
