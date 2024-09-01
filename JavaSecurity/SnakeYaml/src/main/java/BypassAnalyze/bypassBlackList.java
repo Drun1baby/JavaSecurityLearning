@@ -15,7 +15,7 @@ public class bypassBlackList {
 
         try {
             for (String riskyToken : RISKY_STR_ARR) {
-                if (payload.contains("!!")) {
+                if (payload.contains(riskyToken)) {
                     System.out.println("can not has malicious remote script");
                     return "failed";
                 }
