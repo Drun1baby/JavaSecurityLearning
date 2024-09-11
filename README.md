@@ -153,6 +153,8 @@ Springboot 文件上传 RCE https://github.com/LandGrey/spring-boot-upload-file-
 
 [Java反序列化Fastjson篇05-写给自己看的一些源码深入分析](https://drun1baby.github.io/2022/10/19/Java反序列化Fastjson篇05-写给自己看的一些源码深入分析/)
 
+JS 引擎攻防 https://xz.aliyun.com/t/8697
+
 ## Struts2 系列漏洞
 
 这块应该是目前学习的重点之一
