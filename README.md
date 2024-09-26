@@ -183,6 +183,8 @@ https://y4tacker.github.io/2023/12/27/year/2023/12/Apache-OFBiz%E6%9C%AA%E6%8E%8
 
 ## CodeQL
 
+新版本的 CodeQL 对于 Java 已经不需要编译了
+
 [CodeQL 入门](https://drun1baby.top/2023/09/03/CodeQL-%E5%85%A5%E9%97%A8/)
 
 [CodeQL 官方文档学习](https://drun1baby.top/2023/07/31/CodeQL-%E5%AD%A6%E4%B9%A0/)
