@@ -139,6 +139,8 @@ Springboot 文件上传 RCE https://github.com/LandGrey/spring-boot-upload-file-
 
 ## 查漏补缺
 
+- 其实链子没必要跟太多了，实战才是最重要的。
+
 [Java反序列化之C3P0链](https://drun1baby.github.io/2022/10/06/Java反序列化之C3P0链/)
 
 [Java OWASP 中的 XXE 代码审计](https://drun1baby.github.io/2022/09/16/Java-OWASP-中的-XXE-代码审计/)
