@@ -173,6 +173,8 @@ JS 引擎攻防 https://xz.aliyun.com/t/8697
 
 [Jackson 反序列化（三）CVE-2017-17485](https://drun1baby.top/2023/12/07/Jackson-反序列化（三）CVE-2017-17485/)
 
+Jackson 反序列化 —— https://boogipop.com/2023/06/20/Jackson%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E9%80%9A%E6%9D%80Web%E9%A2%98/
+
 ## Apache
 
 ### Apache DolphinScheduler
