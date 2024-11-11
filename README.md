@@ -1,6 +1,6 @@
 # JavaSecurityLearning
 
-项目的初衷是为了让更多师傅在学习 Java 安全的时候能够有一条比较清晰的学习路线，也希望师傅们通过这个项目学习 Java 安全时有能够所收获。感觉现在 go 用的真的很多，java 系列可能暂时断更了
+项目的初衷是为了让更多师傅在学习 Java 安全的时候能够有一条比较清晰的学习路线，也希望师傅们通过这个项目学习 Java 安全时有能够所收获。
 
 项目文件夹中包含了部分用于漏洞调试的代码（如果有些东西打不通可以直接看代码），对应文章记录在博客中。
 
@@ -199,6 +199,8 @@ https://y4tacker.github.io/2023/12/27/year/2023/12/Apache-OFBiz%E6%9C%AA%E6%8E%8
 
 Tabby 的使用：https://github.com/wh1t3p1g/tabby
 
+## 后记
+感觉现在 go 用的真的很多，java 系列可能暂时断更了，或许在不久的将来会出一个 golangSecurityLearning
 
 <picture>
   <source
