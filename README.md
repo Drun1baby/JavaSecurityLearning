@@ -3,9 +3,7 @@
 随着点 Star 的师傅越来越多，希望给师傅们提供一个交流的平台。
 同时平常有一些师傅会加我好友问问题，问的人越来越多，于是决定建个群，也可以让师傅们在群里交流。
 
-![image](https://github.com/user-attachments/assets/97629157-ef89-462f-af28-e2bac4b0af02)
-
-若二维码过期可加 VX DrunkbabySec
+> 可加 VX DrunkbabySec
 
 # JavaSecurityLearning
 
