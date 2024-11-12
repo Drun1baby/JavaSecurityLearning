@@ -1,13 +1,3 @@
-- 交流群
-
-随着点 Star 的师傅越来越多，希望给师傅们提供一个交流的平台。
-同时平常有一些师傅会加我好友问问题，问的人越来越多，于是决定建个群，也可以让师傅们在群里交流。
-
-> 可加 VX DrunkbabySec
-
-![image](https://github.com/user-attachments/assets/82bc78aa-b68a-4e29-bb08-a68f641bf923)
-
-
 # JavaSecurityLearning
 
 项目的初衷是为了让更多师傅在学习 Java 安全的时候能够有一条比较清晰的学习路线，也希望师傅们通过这个项目学习 Java 安全时有能够所收获。
@@ -230,3 +220,12 @@ Tabby 的使用：https://github.com/wh1t3p1g/tabby
     src="https://api.star-history.com/svg?repos=Drun1baby/JavaSecurityLearning&type=Timeline"
   />
 </picture>
+
+- 交流群
+
+随着点 Star 的师傅越来越多，希望给师傅们提供一个交流的平台。
+同时平常有一些师傅会加我好友问问题，问的人越来越多，于是决定建个群，也可以让师傅们在群里交流。
+
+> 可加 VX DrunkbabySec
+
+![image](https://github.com/user-attachments/assets/82bc78aa-b68a-4e29-bb08-a68f641bf923)
