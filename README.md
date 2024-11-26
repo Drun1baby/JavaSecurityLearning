@@ -12,7 +12,7 @@
 
 学完这两个之后可以自己过一个小项目[【实战】基于SpringBoot+Vue开发的前后端分离博客项目完整教学](https://www.bilibili.com/video/BV1PQ4y1P7hZ?vd_source=a4eba559e280bf2f1aec770f740d0645)
 
-- 学完这些内容最多花费两个月。
+- 学完这些内容最多花费两个月
 
 推荐的 Java 基础，哪块不懂看哪块，[二倍速【狂神说Java】Java零基础学习视频通俗易懂](https://www.bilibili.com/video/BV12J41137hu?spm_id_from=333.337.search-card.all.click)
 
