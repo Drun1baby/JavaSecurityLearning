@@ -18,7 +18,7 @@
 
 ## Java 安全基础
 
-可以看b站白日梦组长视频，讲的非常好。
+可以看b站白日梦组长视频，讲的非常好
 
 - [Java反序列化漏洞专题-基础篇(21/09/05更新类加载部分)](https://www.bilibili.com/video/BV16h411z7o9?spm_id_from=333.788.top_right_bar_window_custom_collection.content.click)
 - [Java-IO流](https://drun1baby.github.io/2022/05/30/Java-IO流/)
