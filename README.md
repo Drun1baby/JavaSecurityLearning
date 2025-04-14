@@ -228,7 +228,7 @@ Tabby 的使用：https://github.com/wh1t3p1g/tabby
 
 > 可加 VX DrunkbabySec
 
-![image](https://github.com/user-attachments/assets/5d8ce965-39d5-4572-9d6f-bebfa0afe072)
+![image](https://github.com/user-attachments/assets/3541e7fb-7ce1-419b-876d-cdc2a4207ad9)
 
 
 
